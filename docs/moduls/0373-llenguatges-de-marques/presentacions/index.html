@@ -18,13 +18,18 @@
       </div>
     </header>
 
-    <div class="search-row">
-      <!-- <input id="search" type="search" placeholder="Cerca per títol o descripció…">
-      <select id="sort" class="sort-select" aria-label="Ordena"> -->
-        <!-- <option value="order">Ordena: número</option>
-        <option value="title">Ordena: títol (A→Z)</option> -->
-      </select>
+    <!-- Controls -->
+    <div class="toolbar">
+    <input id="search" type="search" placeholder="Cerca per títol o descripció…">
+    <select id="sort" class="sort-select" aria-label="Ordena">
+        <option value="title-az">Títol A → Z</option>
+        <option value="title-za">Títol Z → A</option>
+        <option value="date-new">Data (recent primer)</option>
+        <option value="date-old">Data (antic primer)</option>
+    </select>
     </div>
+
+
 
     <main>
       <section id="grid" class="grid" aria-live="polite"></section>
