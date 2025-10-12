@@ -1,0 +1,14 @@
+{
+  "module": {
+    "code": "0221",
+    "name": "Muntatge i manteniment d'equips"
+  },
+  "presentations": [
+    {
+      "order": 0,
+      "title": "Components d’un ordinador digital",
+      "src": "slides/components-d-un-ordinador-digital.reveal",
+      "description": "Components d’un ordinador digital"
+    }
+  ]
+}
