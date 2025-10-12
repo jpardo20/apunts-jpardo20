@@ -9,7 +9,7 @@
       "title": "Tema 1: Introducció a Bases de Dades",
       "description": "",
       "src": "slides/001_Introduccio_Bases_Dades.reveal",
-      "theme": "black",
+      "theme": "white",
       "tags": [
         "BBDD"
       ]
@@ -19,7 +19,7 @@
       "title": "Tema 2: Conceptes bàsics: de Bases de Dades",
       "description": "",
       "src": "slides/002_Conceptes_Basics_Bases_Dades.reveal",
-      "theme": "black",
+      "theme": "white",
       "tags": [
         "BBDD"
       ]
@@ -29,7 +29,7 @@
       "title": "Tema 3: Model Entitat-Relació (MER)",
       "description": "",
       "src": "slides/003_MER_Model_Entitat_Relacio.reveal",
-      "theme": "black",
+      "theme": "white",
       "tags": [
         "BBDD"
       ]
@@ -39,7 +39,7 @@
       "title": "Comanda `JOIN` a SQL",
       "description": "",
       "src": "slides/004_Join.reveal",
-      "theme": "black",
+      "theme": "white",
       "tags": [
         "BBDD"
       ]
@@ -49,7 +49,7 @@
       "title": "Pres_004_Relacions_MER",
       "description": "",
       "src": "slides/004_Relacions_MER.reveal",
-      "theme": "black",
+      "theme": "white",
       "tags": [
         "BBDD"
       ]
@@ -59,7 +59,7 @@
       "title": "Pres_005_Claus_MER",
       "description": "",
       "src": "slides/005_Claus_MER.reveal",
-      "theme": "black",
+      "theme": "white",
       "tags": [
         "BBDD"
       ]
