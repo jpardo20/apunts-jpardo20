@@ -76,7 +76,12 @@
 ## Factors de Forma més populars
 
 - ATX
+
+![factor-de-forma-atx.png](../../../assets/img/factor-de-forma-atx.png)
+
 - Micro-ATX
+
+![factor-de-forma-micro-atx.png](../../../assets/img/factor-de-forma-micro-atx.png)
 
 ---
 
@@ -98,8 +103,16 @@
 ## Factors de Forma més populars
 
 - BTX
+
+![factor-de-forma-btx.png](../../../assets/img/factor-de-forma-btx.png)
+
 - Micro-BTX
+
+![factor-de-forma-micro-btx.png](../../../assets/img/factor-de-forma-micro-btx.png)
+
 - Pico-BTX
+
+![factor-de-forma-pico-btx.png](../../../assets/img/factor-de-forma-pico-btx.png)
 
 ---
 
@@ -108,7 +121,11 @@
 ## Factors de Forma més populars
 
 - ATX vs BTX
+
+![atx-vs-btx.png](../../../assets/img/atx-vs-btx.png)
+
 - La CPU a ATX està sota la font d’alimentació
+
 - La CPU a BTX està davant la caixa.
 
 ---
@@ -121,6 +138,8 @@
   - Derivat del ATX.
   - Orientat a equips d’alt rendiment (servidors, workstation).
   - Contempla la possibilitat de connectar més d’un socket (per a més d’un processador).
+
+![factor-de-forma-wtx.png](../../../assets/img/factor-de-forma-wtx.png)
 
 ---
 
@@ -135,6 +154,8 @@
     - Per tant, permet connectar-hi components dissenyats per qualssevol altre ordinador.
   - Factors disponibles:
     - Mini-ITX, Nano ITX i Pico ITX
+
+![Mini-ITX-Nano-ITX-Pico-ITX](../../../assets/img/Mini-ITX-Nano-ITX-Pico-ITX.png)
 
 ---
 
