@@ -1,4 +1,8 @@
 {
+  "module": {
+    "code": "0373",
+    "name": "Llenguatges de marques"
+  },
   "presentations": [
     {
       "order": 0,
@@ -6,7 +10,7 @@
       "src": "slides/introduccio.reveal",
       "description": "Introducció · Mòdul 0373 - Llenguatges de marques"
     },
-        {
+    {
       "order": 0,
       "title": "Introducció XML · Mòdul 0373 - Llenguatges de marques",
       "src": "slides/002_Introduccio_XML.reveal",

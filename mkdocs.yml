@@ -4,16 +4,19 @@ site_url: https://jpardo20.github.io/apunts-jpardo20/
 
 nav:
   - Inici: index.md
-  - Presentacions: presentacions/index.html
+  - Presentacions (totes): presentacions/index.html
+  - Mòduls:
+      - 0373 - Llenguatges de marques:
+          - Presentacions: moduls/0373-llenguatges-de-marques/presentacions/index.html
+      - 0484 - Bases de dades:
+          - Presentacions: moduls/0484-bases-de-dades/presentacions/index.html
+
 theme:
   name: material
   language: ca
   features:
     - navigation.indexes
     - navigation.sections
-    - navigation.instant
-    - navigation.tracking
-    - content.code.copy
 
 extra_css:
   - assets/styles.css

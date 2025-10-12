@@ -43,6 +43,7 @@ jobs:
 
       - name: Build site with MkDocs
         run: |
+          python scripts/build_catalog.py
           mkdocs build --strict
 
       - name: Upload Pages artifact
