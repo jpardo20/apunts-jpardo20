@@ -5,10 +5,52 @@
   },
   "presentations": [
     {
-      "order": 0,
+      "order": 1,
       "title": "Components d’un ordinador digital",
-      "src": "slides/components-d-un-ordinador-digital.reveal",
+      "src": "slides/001-components-d-un-ordinador-digital-ra1.reveal",
       "description": "Components d’un ordinador digital"
+    },
+    {
+      "order": 2,
+      "title": "Factors de Forma",
+      "src": "slides/002-factors-de-forma-ra1.reveal",
+      "description": "Factors de Forma"
+    },
+    {
+      "order": 3,
+      "title": "Plaques Base",
+      "src": "slides/003-plaques-base-ra1.reveal",
+      "description": "Plaques Base"
+    },
+    {
+      "order": 4,
+      "title": "Chipset",
+      "src": "slides/004-chipset-ra1.reveal",
+      "description": "Chipset"
+    },
+    {
+      "order": 5,
+      "title": "Processadors",
+      "src": "slides/005-processadors-ra1.reveal",
+      "description": "Chipset"
+    },
+    {
+      "order": 6,
+      "title": "RAM",
+      "src": "slides/006-ram-ra1.reveal",
+      "description": "RAM"
+    },
+    {
+      "order": 7,
+      "title": "Sistemes d'emmagatzematge",
+      "src": "slides/007-sistemes-d_emmagatzematge-ra1.reveal",
+      "description": "Sistemes d'emmagatzematge"
+    },
+    {
+      "order": 8,
+      "title": "Sistemes de refrigeració",
+      "src": "slides/008-sistemes-de-refrigeraci-ra1.reveal",
+      "description": "Sistemes de refrigeració"
     }
   ]
 }
