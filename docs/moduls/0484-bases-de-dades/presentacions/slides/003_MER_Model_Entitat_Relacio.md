@@ -4,7 +4,7 @@
 <br>
 UD01 - Introducció a les Bases de Dades
 
-![data-base.png](./assets/img/data-base.png)
+![data-base.png](../../../../assets/img/data-base.png)
 
 ---
 
@@ -34,7 +34,7 @@ A principis dels setanta (70’ s), [Donald D. Chamberlin](https://en.wikipedia.
 
 ## 3 àmbits: realitat, conceptualització i representació
 
-![alt text](./assets/img/3-ambits.png)
+![alt text](../../../../assets/img/3-ambits.png)
 
 ---
 
@@ -47,14 +47,14 @@ el nom acostuma a ser en plural i
 es representen amb un rectangle.
 
 
-![alt text](./assets/img/entitat.png)
+![alt text](../../../../assets/img/entitat.png)
 
 ---
 
 ## Objectes MER - Entitat exemple
 
 
-![alt text](./assets/img/exemple-obj-mer.png)
+![alt text](../../../../assets/img/exemple-obj-mer.png)
 ---
 
 ## Objectes MER - Atribut
@@ -65,7 +65,7 @@ Atributs o camps
 són les unitats d'informació que descriuen les propietats de les entitats,
 es representen com a un oval o el·lipse.
 
-![alt text](./assets/img/atribut.png)
+![alt text](../../../../assets/img/atribut.png)
 
 ---
 
@@ -77,7 +77,7 @@ el nom,
 el nif,
 la data naixement
 
-![alt text](./assets/img/atributs-exemple.png)
+![alt text](../../../../assets/img/atributs-exemple.png)
 
 ---
 
@@ -88,7 +88,7 @@ la data naixement
 És l’associació de diferents entitats. Tenen com a nom un verb
 es representen mitjançant un rombe
 
-![alt text](./assets/img/relacio.png)
+![alt text](../../../../assets/img/relacio.png)
 
 ---
 
@@ -98,7 +98,7 @@ Els ALUMNES estan matriculats a un CURS,
 
 Un CURS pot tenir cap o molts ALUMNES que estiguin matriculats.
 
-![alt text](./assets/img/relacio-exemple)
+![alt text](../../../../assets/img/relacio-exemple.png)
 
 ---
 
@@ -109,7 +109,7 @@ clau primària o identificador
 
 es representen subratllant el nom de l'atribut.
 
-![alt text](./assets/img/clau-primaria.png)
+![alt text](../../../../assets/img/clau-primaria.png)
 
 
 ---
@@ -121,7 +121,7 @@ es representen subratllant el nom de l'atribut.
 A l'entitat ALUMNES, 
 l'atribut codi és la clau primària, ja que identifica, sense possibilitat de repetició, ni d'error, a un alumne en concret.
 
-![alt text](./assets/img/clau-primaria-exemple.png)
+![alt text](../../../../assets/img/clau-primaria-exemple.png)
 
 ---
 
@@ -132,7 +132,7 @@ l'atribut codi és la clau primària, ja que identifica, sense possibilitat de r
 A l'entitat ALUMNES
 l'atribut codi és un nombre enter i correlatiu.
 
-![alt text](./assets/img/tipus-de-dades.png)
+![alt text](../../../../assets/img/tipus-de-dades.png)
 
 
 ---
@@ -145,7 +145,7 @@ Domini:
 A l'entitat ALUMNES,
 l'atribut nom és un text de 50 caràcters.
 
-![alt text](./assets/img/tipus-de-dades-exemple.png)
+![alt text](../../../../assets/img/tipus-de-dades-exemple.png)
 
 
 

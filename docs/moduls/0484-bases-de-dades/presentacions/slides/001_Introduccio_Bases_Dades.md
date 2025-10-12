@@ -3,7 +3,7 @@
 <br>
 UD01 - Introducció a les Bases de Dades
 
-![data-base.png](./assets/img/data-base.png)
+![data-base.png](../../../../assets/img/data-base.png)
 
 ---
 

@@ -4,7 +4,7 @@
 <br>
 UD01 - Introducció a les Bases de Dades
 
-![data-base.png](./assets/img/data-base.png)
+![data-base.png](../../../../assets/img/data-base.png)
 
 ---
 
@@ -18,7 +18,7 @@ UD01 - Introducció a les Bases de Dades
 
 --
 
-![alt text](./assets/img/representacio-dades.png)
+![alt text](../../../../assets/img/representacio-dades.png)
 
 ---
 
@@ -63,7 +63,7 @@ Finalment, aquests atributs adoptaran uns valors concrets com ara, i respectivam
 
 ## Exemple d'entitat, atributs i valors (2/4)
 
-![alt text](./assets/img/exemple-entitat-atribut-valor.png)
+![alt text](../../../../assets/img/exemple-entitat-atribut-valor.png)
 
 font [imdb.com](https://www.imdb.com/)
 
@@ -82,7 +82,7 @@ Sabrem que l'entitat té una certa propietat, però en desconeixerem el valor, i
 
 ## Exemple d'entitat, atributs i valors (4/4)
 
-![alt text](./assets/img/exemple-entitat-atribut-valor-amb-buits.png)
+![alt text](../../../../assets/img/exemple-entitat-atribut-valor-amb-buits.png)
 
 font [imdb.com](https://www.imdb.com/)
 
@@ -96,7 +96,7 @@ font [imdb.com](https://www.imdb.com/)
 
 --
 
-![alt text](./assets/img/entitat-tipus.png)
+![alt text](../../../../assets/img/entitat-tipus.png)
 
 ---
 
@@ -122,7 +122,7 @@ Aquest atribut podria emmagatzemar dades de tipus enter. I també se'n podria li
 
 ## Exemple de domini (2/2)
 
-![alt text](./assets/img/exemple-domini.png)
+![alt text](../../../../assets/img/exemple-domini.png)
 
 ---
 
@@ -153,7 +153,7 @@ No confondre valor nul amb el zero, o amb l'espai en blanc.
 
 ## Exemple de valor `nul` (2/2)
 
-![alt text](./assets/img/exemple-valor-null.png)
+![alt text](../../../../assets/img/exemple-valor-null.png)
 
 ---
 
@@ -177,7 +177,7 @@ L'atribut dni pot servir molt bé per identificar les instàncies d'una entitat 
 
 ## Exemple d'atribut identificador (clau primaria `PK`) (2/2)
 
-![alt text](./assets/img/exemple-atribut-identificador.png)
+![alt text](../../../../assets/img/exemple-atribut-identificador.png)
 
 ---
 
@@ -207,7 +207,7 @@ Per tal de diferenciar les instàncies d'una entitat que vol reflectir les notes
 ## Exemple d'Atributs identificadors (clau primària `PK`) (2/2)
 
 
-![alt text](./assets/img/exemple-atribut-identificadors-2.png)
+![alt text](../../../../assets/img/exemple-atribut-identificadors-2.png)
 
 ---
 
@@ -238,13 +238,13 @@ Les informacions són conceptualitzacions obtingudes a partir de l'observació d
                 **`Marca`**
 
 
-![alt text](./assets/img/representacions-tabulars.png)
+![alt text](../../../../assets/img/representacions-tabulars.png)
 
 
 ---
 
 ## Representacions tabulars i la seva implementació (1/2)
 
-./assets/img/representacions-tabulars
+../../../../assets/img/representacions-tabulars
 
-![alt text](./assets/img/representacions-tabulars-2.png)
+![alt text](../../../../assets/img/representacions-tabulars-2.png)
