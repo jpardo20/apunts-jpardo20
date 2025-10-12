@@ -1,10 +1,11 @@
-site_name: Mòdul 0373 - Llenguatges de marques
+site_name: Apunts
 site_description: Publicació progressiva des d'un sol repositori
 site_url: https://jpardo20.github.io/apunts-jpardo20/
 
 nav:
   - Inici: index.md
   - Presentacions: presentacions.md
+  - Continguts: continguts.md
 
 theme:
   name: material
