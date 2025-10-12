@@ -5,7 +5,6 @@ site_url: https://jpardo20.github.io/apunts-jpardo20/
 nav:
   - Inici: index.md
   - Presentacions: presentacions/index.html
-  
 theme:
   name: material
   language: ca
