@@ -4,7 +4,6 @@ site_url: https://jpardo20.github.io/apunts-jpardo20/
 
 nav:
   - Inici: index.md
-  - Presentacions (totes): presentacions/index.html
   - Mòduls:
       - 0373 - Llenguatges de marques:
           - Presentacions: moduls/0373-llenguatges-de-marques/presentacions/index.html
