@@ -2,11 +2,11 @@
 
 # UD 01. Introducción a aplicaciones ofimáticas
 
-![banner](./media/banner.png){ .center width="900" }
-![short-line](./media/short-line.png){ width="320" }
+<!-- ![banner](../../../../assets/banner.png){ .center width="900" }
+![short-line](./media/short-line.png){ width="320" } -->
 
 ### Autores: <u>Sergi García Barea</u>, <u>Gloria Muñoz González</u>
-![Licència CC BY-NC-SA](./media/image-BY-NC-SA.png){ width="180" }
+<!-- ![Licència CC BY-NC-SA](./media/image-BY-NC-SA.png){ width="180" } -->
 
 Actualizado Septiembre 2022
 

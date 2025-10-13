@@ -2,19 +2,19 @@
 
 # UD 01. Introducción a aplicaciones ofimáticas
 
-![banner](./media/banner.png)
+<!-- ![banner](./media/banner.png)
 
-![short-line](./media/short-line.png)
+![short-line](./media/short-line.png) -->
 
 ### Autores: <u>Sergi García Barea</u>, <u>Gloria Muñoz González</u>
-### ![image-BY-NC-SA.png](./media/image-BY-NC-SA.png)
+<!-- ### ![image-BY-NC-SA.png](./media/image-BY-NC-SA.png) -->
 
 Actualizado Septiembre 2022
 
 ### Licencia
 
 > [!CAUTION]**Reconocimiento - No comercial - CompartirIgual** (BY-NC-SA): No se permite un uso comercial de la obra original ni de las posibles obras derivadas, la distribución de las cuales se ha de hacer con una licencia igual a la que regula la obra original.
-> ![image-BY-NC-SA.png](./media/image-BY-NC-SA.png)
+<!-- > ![image-BY-NC-SA.png](./media/image-BY-NC-SA.png) -->
 
 ----
 

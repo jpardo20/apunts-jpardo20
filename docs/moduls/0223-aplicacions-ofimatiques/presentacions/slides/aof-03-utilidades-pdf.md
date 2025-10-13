@@ -205,7 +205,8 @@ c. Hay distintas formas de subrayar. Aquí tienes algunas sugerencias:
 
 ----
 
-![alt text](../../../assets/img/image.png)
+
+![alt text](../../../../assets/img/image.png)
 
 ---
 
@@ -216,7 +217,7 @@ A continuación, podemos ver un ejemplo de texto subrayado y anotado.
 
 ----
 
-![alt text](](../../../assets/img/image-1.png)
+![alt text](../../../../assets/img/image-1.png)
 
 ---
 
