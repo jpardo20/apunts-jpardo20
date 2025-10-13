@@ -8,49 +8,57 @@
       "order": 1,
       "title": "Components d’un ordinador digital",
       "src": "slides/001-components-d-un-ordinador-digital-ra1.reveal",
-      "description": "Components d’un ordinador digital"
+      "description": "Components d’un ordinador digital",
+      "status": "active"
     },
     {
       "order": 2,
       "title": "Factors de Forma",
       "src": "slides/002-factors-de-forma-ra1.reveal",
-      "description": "Factors de Forma"
+      "description": "Factors de Forma",
+      "status": "active"
     },
     {
       "order": 3,
       "title": "Plaques Base",
       "src": "slides/003-plaques-base-ra1.reveal",
-      "description": "Plaques Base"
+      "description": "Plaques Base",
+      "status": "inactive"
     },
     {
       "order": 4,
       "title": "Chipset",
       "src": "slides/004-chipset-ra1.reveal",
-      "description": "Chipset"
+      "description": "Chipset",
+      "status": "inactive"
     },
     {
       "order": 5,
       "title": "Processadors",
       "src": "slides/005-processadors-ra1.reveal",
-      "description": "Chipset"
+      "description": "Chipset",
+      "status": "inactive"
     },
     {
       "order": 6,
       "title": "RAM",
       "src": "slides/006-ram-ra1.reveal",
-      "description": "RAM"
+      "description": "RAM",
+      "status": "inactive"
     },
     {
       "order": 7,
       "title": "Sistemes d'emmagatzematge",
       "src": "slides/007-sistemes-d_emmagatzematge-ra1.reveal",
-      "description": "Sistemes d'emmagatzematge"
+      "description": "Sistemes d'emmagatzematge",
+      "status": "inactive"
     },
     {
       "order": 8,
       "title": "Sistemes de refrigeració",
       "src": "slides/008-sistemes-de-refrigeraci-ra1.reveal",
-      "description": "Sistemes de refrigeració"
+      "description": "Sistemes de refrigeració",
+      "status": "inactive"
     }
   ]
 }
