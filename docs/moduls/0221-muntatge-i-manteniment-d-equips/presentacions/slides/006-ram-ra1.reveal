@@ -1,14 +1,12 @@
-# Components d’un equip microinformàtic
+### Components d’un equip microinformàtic
 
-
-- Memòria RAM
+# Memòria RAM
 
 ---
 
-- ¡Todo, TODO sobre la RAM! - Parte 1&2 | Nate Labs
-- https://www.youtube.com/watch?v=yRNwl24l39E
-- https://www.youtube.com/watch?v=OZCEHXlHY4E
+[¡Todo, TODO sobre la RAM! - Parte 1 (Nate Gentile) - 18.24 min - 24/jun/2020](https://www.youtube.com/watch?v=OZCEHXlHY4E)
 
+[¿Cómo funciona la RAM por dentro? - Todo, TODO sobre la RAM pt. 2 (Nate Gentile) - 18.14 min - 8/nov/2020](https://www.youtube.com/watch?v=OZCEHXlHY4E)
 
 ## La memòria RAM
 
@@ -19,18 +17,18 @@
 
 
 
-## Característiques
+## Característiques (1/3)
 
 - Volatilitat
   - És una característica de les memòries RAM que determina el temps que romanen les dades abans de desaparèixer.
   - RAM dinàmiques (DRAM) Condensadors. Emmagatzemen la informació per un temps i necessita ser realimentada (refrescada) per conservar les dades.
   - RAM estàtica (SRAM) Biestables. Constantment estan alimentades i no necessiten cicles de refresc.
 
----
+----
 
 
 
-## Característiques
+## Característiques (2/3)
 
 - Capacitat
   - Quantitat de dades que es poden emmagatzemar en memòria. Es mesura en múltiples de byte (MB, GB, etc.).
@@ -41,11 +39,9 @@
 - Latència
   - És el retard produït en cada accés a memòria.
 
----
+----
 
-
-
-## Característiques
+## Característiques (3/3)
 
 - Taxa de transferència o ample de banda
   - Representa el nombre de dades que es poden llegir o escriure per unitat de temps. Es mesura en MB/s o GB/s.
@@ -58,99 +54,101 @@
 
 
 
-## Càlcul de latències
+## Càlcul de latències (1/3)
 
 - Fórmules:
   - Taxa de transferència = Freqüència  efectiva(MHz) x Ample bus de dades(bytes)
   - Freqüència efectiva = Velocitat de rellotge (MHz) x Nº d’accessos per cicle
+  
+  ----
+
+## Càlcul de latències (2/3)
+
   - Taxa de transferència = Velocitat de rellotge (MHz) x
   - Nº d’accessos per cicle x
   - Ample de bus (bytes)
 
----
+----
 
-
-
-## Càlcul de latències
+## Càlcul de latències (3/3)
 
 - Taxa de transferència = Velocitat de rellotge (MHz) x
 - Nº d’accessos per cicle x
 - Ample de bus (bytes)
 - Nombre d'accessos per cicle:
-  - SDR: 1n accés/cicle
-  - DDR: 2n accessos/cicle
-  - DDR2: 4n accessos/cicle
-  - DDR3: 8n accessos/cicle
-  - DDR4: 8n accessos x nº grups-banks/cicle (es pot considerar 16n )
+  - **`SDR`**:  1n accés/cicle
+  - **`DDR`**:  2n accessos/cicle
+  - **`DDR2`**: 4n accessos/cicle
+  - **`DDR3`**: 8n accessos/cicle
+  - **`DDR4`**: 8n accessos x nº grups-banks/cicle (es pot considerar 16n )
 - Ample de bus:
-  - 64bits 🡪 64/8 = 8 Bytes
-- DDR: Double Data Rate (Doble taxa de dades)
+  - 64bits => 64/8 = 8 Bytes
+- **`DDR`**: *Double Data Rate* (**Doble taxa de dades**)
 
 ---
 
+## Prefetch (accessos per cicle) (1/2)
+
+![alt text](prefetch-accessos-per-cicle.png)
+
+----
+
+## Prefetch (accessos per cicle) (2/2)
 
 
-## Prefetch (accessos per cicle)
-
+![alt text](prefetch-accessos-per-cicle-ddr4.png)
 
 ---
-
-
 
 ## Exemple 1 de càlcul de latències
 
 - Calcula l’equivalència d’una memòria DDR3-1600:
-  - DDR3🡪PC3🡪8 accessos/cicle
-  - 1600 🡪 1600 MHz de freqüència efectiva
-  - Ample de bus = 8Bytes
-  - Taxa transferència = Freq. Efectiva x Ample de bus
-  - = 1600 x 8 = 12800 MB/s
-  - Equivalència 🡪 PC3 – 12800
+  - DDR3 => PC3 => 8 accessos/cicle
+  - 1600 => 1600 MHz de freqüència efectiva
+  - Ample de bus = 8 Bytes
+  - Taxa transferència  => Freq. Efectiva x Ample de bus
+  -     = 1600 x 8 = 12800 MB/s
+  - Equivalència => PC3 – 12800
   - Velocitat de rellotge = Freq. efectiva/accessos = 1600/8= 200MHz
 
----
-
-
+----
 
 ## Exemple 2 de càlcul de latències
 
 - Calcula l’equivalència d’una memòria PC2-3200
-  - PC2🡪DDR2🡪 4 accessos/cicle
-  - 3200🡪3200 MB/s de taxa de transferència
-  - Ample de bus = 8Bytes
+  - DDR2 => PC2 => 4 accessos/cicle
+  - 3200 => 3200 MB/s de taxa de transferència
+  - Ample de bus = 8 Bytes
   - Taxa transferència = Freq. Efectiva x Ample de bus
-  - 🡪 Freq. Efectiva = 3200 / 8 = 400 MHz
+  - => Freq. Efectiva = 3200 / 8 = 400 MHz
   - Equivalència: DDR2-400
   - Velocitat rellotge = Freq. Efectiva / accessos = 400/4 = 100 Mhz
 
 ---
 
-
-
-## Tipus de Mòduls
+## Tipus de Mòduls (1/4)
 
 - Hi ha diferents tipus de mòduls, per a diferents sòcols.
 
----
+![alt text](tipus-moduls-ram.png)
 
+----
 
-
-## Tipus de Mòduls
+## Tipus de Mòduls (2/4)
 
 - Hi ha diferents tipus de mòduls, per a diferents sòcols.
 
+![alt text](tipus-moduls-ram-2.png)
+
 ---
-
-
 
 ## Evolució
 
+![alt text](evolucio.png)
 
 ---
 
-
-
-## Tipus de Mòduls
+## Tipus de Mòduls (3/4)
 
 - Hi ha diferents tipus de mòduls, per a diferents sòcols.
   - SIMM
@@ -162,11 +160,9 @@
   - Micro-DIMM
     - Actuals (Netbooks). 144, 172 i 214 contactes.
 
----
+----
 
-
-
-## Tipus de Mòduls
+## Tipus de Mòduls (4/4)
 
 - Hi ha diferents tipus de mòduls, per a diferents sòcols.
   - SIMM
@@ -180,22 +176,18 @@
 
 ---
 
-
-
-## Tipus de memòria RAM
+## Tipus de memòria RAM (1/3)
 
 - SRAM
   - Memòria RAM estàtica. Manté la informació mentre estigui alimentada. Ocupen més, tenen menys capacitat i són més cares i ràpides que les DRAM. Es fan servir com a cau
 - DRAM
   - És la memòria principal dels ordinadors. Es diu dinàmica per que la seva informació es reescriu constantment.
-    - SDRAM: se sincronitza amb el rellotge del sistema per llegir i escriure
-    - RDRAM:  Antigues memòries de gama alta desenvolupades per Rambus Inc. En desús.
+    - **SDRAM**: se sincronitza amb el rellotge del sistema per llegir i escriure
+    - **RDRAM**:  Antigues memòries de gama alta desenvolupades per Rambus Inc. En desús.
 
----
+----
 
-
-
-## Tipus de memòria RAM
+## Tipus de memòria RAM (2/3)
 
 - SDRAM
   - SDR SDRAM
@@ -209,12 +201,12 @@
 - DDR4 SDRAM
   - Millora sobre la DDR3 SDRAM que aumenta la velocitat, la capacitat i redueix el consum.
 
----
+----
+
+## Tipus de memòria RAM (3/3)
 
 
-
-## Tipus de memòria RAM
-
+![alt text](tipus-memoria-ram.png)
 
 ---
 
