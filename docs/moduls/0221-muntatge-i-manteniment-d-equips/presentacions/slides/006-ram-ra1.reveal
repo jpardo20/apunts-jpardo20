@@ -43,8 +43,9 @@
   - Representa el nombre de dades que es poden llegir o escriure per unitat de temps. Es mesura en MB/s o GB/s.
 - Voltatge
   - És la tensió que necessita la RAM per funcionar. Com menys voltatge, menys consum.
-- ECC (Error Checking and Correction)
-  - Totes les RAMs experimenten errors. Les memòria ECC són capaces de detectar i corregir alguns dels errors.
+- **ECC** (***Error Checking and Correction***)
+  - Totes les **`RAM`**'s experimenten errors.
+    - Les memòria ECC són capaces de detectar i corregir alguns dels errors.
 
 ---
 
@@ -70,13 +71,13 @@
 - Nº d’accessos per cicle x
 - Ample de bus (bytes)
 - Nombre d'accessos per cicle:
-  - **`SDR`**:  1n accés/cicle
-  - **`DDR`**:  2n accessos/cicle
-  - **`DDR2`**: 4n accessos/cicle
-  - **`DDR3`**: 8n accessos/cicle
-  - **`DDR4`**: 8n accessos x nº grups-banks/cicle (es pot considerar 16n )
+  - **`SDR`**:  **`1n` accés/cicle**
+  - **`DDR`**:  **`2n` accessos/cicle**
+  - **`DDR2`**: **`4n` accessos/cicle**
+  - **`DDR3`**: **`8n` accessos/cicle**
+  - **`DDR4`**: **`8n` accessos x nº grups-banks/cicle (es pot considerar `16n`)**
 - Ample de bus:
-  - 64bits &#x27A1; 64/8 = 8 Bytes
+  - **`64 bits`** &#x27A1; 64/8 = **`8 Bytes`**
 - **`DDR`**: *Double Data Rate* (**Doble taxa de dades**)
 
 ---
@@ -96,31 +97,43 @@
 
 ## Exemple 1 de càlcul de latències
 
-- Calcula l’equivalència d’una memòria DDR3-1600:
+- Calcula l’equivalència d’una memòria **`DDR3-1600`**:
   - **`DDR3`** &#x27A1; **`PC3`** &#x27A1; **`8` accessos/cicle**
   - **`1600`** &#x27A1; **`1600 MHz` de freqüència efectiva**
   - Ample de bus = **`8` Bytes**
 
-### Taxa transferència = Freq. Efectiva x Ample de bus
+<br>
 
-  - &#x27A1; **`1600` x `8` = `12800` MB/s**
+> **Taxa transferència = Freq. Efectiva x Ample de bus**
+
+  - **`1600` x `8` = `12800` MB/s**
   - Equivalència &#x27A1; **`PC3`** – **`12800`**
 
-### Velocitat de rellotge = Freq. efectiva/accessos
+<br>
+
+> **Velocitat de rellotge = Freq. efectiva/accessos**
+
   - **`1600`/`8` = `200` MHz**
 
 ----
 
 ## Exemple 2 de càlcul de latències
 
-- Calcula l’equivalència d’una memòria PC2-3200
-  - DDR2 &#x27A1; PC2 &#x27A1; 4 accessos/cicle
-  - 3200 &#x27A1; 3200 MB/s de taxa de transferència
+- Calcula l’equivalència d’una memòria **`PC2-3200`**
+  - **`DDR2`** &#x27A1; **`PC2`** &#x27A1; **`4` accessos/cicle**
+  - **`3200`** &#x27A1; **`3200` MB/s de taxa de transferència**
   - Ample de bus = 8 Bytes
-  - Taxa transferència = Freq. Efectiva x Ample de bus
-  - &#x27A1; Freq. Efectiva = 3200 / 8 = 400 MHz
-  - Equivalència: DDR2-400
-  - Velocitat rellotge = Freq. Efectiva / accessos = 400/4 = 100 Mhz
+
+  <br>
+
+> **Taxa transferència = Freq. Efectiva x Ample de bus**
+  - &#x27A1; Freq. Efectiva = **`3200` / `8` = `400` MHz**
+  - Equivalència: **`DDR2-400`**
+
+<br>
+
+> **Velocitat de rellotge = Freq. efectiva/accessos**
+  - **`400`/`4` = `100` Mhz**
 
 ---
 
@@ -140,64 +153,59 @@
 
 ---
 
-## Evolució
+## Tipus de Mòduls (3/4)
+
+### Evolució
 
 ![alt text](../../../assets/img/evolucio.png)
 
 ---
 
-## Tipus de Mòduls (3/4)
-
-- Hi ha diferents tipus de mòduls, per a diferents sòcols.
-  - SIMM
-    - Antic (PCs 32bits). 30 o 72 contactes.
-  - DIMM
-    - Actuals (PCs 64bits). 168, 184, 240, 288 contactes.
-  - SO-DIMM
-    - Actuals (Portàtils). 144, 200, 204 contactes.
-  - Micro-DIMM
-    - Actuals (Netbooks). 144, 172 i 214 contactes.
-
-----
-
 ## Tipus de Mòduls (4/4)
 
 - Hi ha diferents tipus de mòduls, per a diferents sòcols.
-  - SIMM
-    - Antic (PCs 32bits). 30 o 72 contactes.
-  - DIMM
-    - Actuals (PCs 64bits). 168, 184 i 240 contactes. (SDR, DDR/DDR2, DDR3,DDR4)
-  - SO-DIMM
-    - Actuals (Portàtils). 144, 200, 204 contactes. (SDR, DDR/DDR2, DDR3,DDR4)
-  - Micro-DIMM
-    - Actuals (Netbooks). 144, 172 i 214 contactes. (SDR, DDR/DDR2, DDR3)
+  - **`SIMM`**
+    - Antic (PCs 32 bits). 30 o 72 contactes.
+  - **`DIMM`**
+    - Actuals (PCs 64 bits). 168, 184 i 240 contactes
+    - **`SDR`**, **`DDR/DDR2`**, **`DDR3`**, i **`DDR4`**
+  - **`SO-DIMM`**
+    - Actuals (Portàtils). 144, 200, 204 contactes.
+    - **`SDR`**, **`DDR/DDR2`**, **`DDR3`**, i **`DDR4`**
+  - **`Micro-DIMM`**
+    - Actuals (Netbooks). 144, 172 i 214 contactes.
+    - **`SDR`**, **`DDR/DDR2`**, i **`DDR3`**
 
 ---
 
 ## Tipus de memòria RAM (1/3)
 
-- SRAM
-  - Memòria RAM estàtica. Manté la informació mentre estigui alimentada. Ocupen més, tenen menys capacitat i són més cares i ràpides que les DRAM. Es fan servir com a cau
-- DRAM
-  - És la memòria principal dels ordinadors. Es diu dinàmica per que la seva informació es reescriu constantment.
-    - **SDRAM**: se sincronitza amb el rellotge del sistema per llegir i escriure
-    - **RDRAM**:  Antigues memòries de gama alta desenvolupades per Rambus Inc. En desús.
+- **`SRAM`**
+  - Memòria RAM estàtica.
+    * Manté la informació mentre estigui alimentada.
+    * Ocupen més, tenen menys capacitat i són més cares i ràpides que les DRAM.
+    * Es fan servir com a cau
+- **`DRAM`**
+  - És la memòria principal dels ordinadors.
+    * Es diu dinàmica per que la seva informació es reescriu constantment.
+    - **SDRAM**: Se sincronitza amb el rellotge del sistema per llegir i escriure
+    - **RDRAM**: Antigues memòries de gama alta desenvolupades per Rambus Inc. En desús.
 
 ----
 
 ## Tipus de memòria RAM (2/3)
 
-- SDRAM
-  - SDR SDRAM
-    - Antigues, PCs antics 32bits.
-  - DDR SDRAM
-    - Millora sobre les memòries SDRAM que incorpora doble taxa de transferència de dades.
-  - DDR2 SDRAM
-    - Millora sobre la DDR SDRAM que aumenta la velocitat, la capacitat i redueix el consum.
-  - DDR3 SDRAM
-    - Millora sobre la DDR2 SDRAM que aumenta la taxa de transferència, la capacitat i redueix el consum.
-- DDR4 SDRAM
-  - Millora sobre la DDR3 SDRAM que aumenta la velocitat, la capacitat i redueix el consum.
+- **`SDRAM`**
+  - **`SDR SDRAM`**
+    - Antigues, PCs antics 32 bits.
+  - **`DDR SDRAM`**
+    - Millora sobre les memòries **`SDRAM`** que incorpora doble taxa de transferència de dades.
+  - **`DDR2 SDRAM`**
+    - Millora sobre la **`DDR`** **`SDRAM`** que aumenta la velocitat, la capacitat i redueix el consum.
+  - **`DDR3 SDRAM`**
+    - Millora sobre la **`DDR2`** **`SDRAM`** que aumenta la taxa de transferència, la capacitat i redueix el consum.
+  - **`DDR4 SDRAM`**
+    - Millora sobre la **`DDR3`** **`SDRAM`** que aumenta la velocitat, la capacitat i redueix el consum.
 
 ----
 
