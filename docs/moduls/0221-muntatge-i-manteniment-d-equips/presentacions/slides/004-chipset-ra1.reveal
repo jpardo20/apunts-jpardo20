@@ -1,19 +1,8 @@
----
-layout: page
-title: "Muntatge i manteniment d’equips"
----
-
-> Versió generada automàticament des d'una presentació .pptx el 2025-10-12 21:29.
-
-
 # Muntatge i manteniment d’equips
-
-
-## Muntatge i manteniment d’equips
 
 - Components d’un equip microinformàtic
 - Chipset
-- ‹#›
+---
 
 
 ## Chipset (repàs)
@@ -22,20 +11,20 @@ title: "Muntatge i manteniment d’equips"
 - El chipset acostuma a estar composat de dos ciercuits:
   - Pont Nort (Northbridge)
   - Pont Sud (Southbridge)
-- ‹#›
+---
 
 
 ## Chipset (repàs)
 
 - Quins components gestionava el NorthBridge?
 - Quins components gestionava el SouthBridge?
-- ‹#›
+---
 
 
 ## Chipset (repàs)
 
 - Northbridge (Pont Nord)
-- ‹#›
+---
 - Northbridge
 - CPU
 - Memòria RAM
@@ -46,7 +35,7 @@ title: "Muntatge i manteniment d’equips"
 ## Chipset (repàs)
 
 - Southbridge (Pont Sud)
-- ‹#›
+---
 - Southbridge
 - Northbridge
 - IDE, SATA
@@ -65,14 +54,14 @@ title: "Muntatge i manteniment d’equips"
   - Aquest xips també formen part del chipset.
   - Descarreguen feina als ponts, però qualsevol feina important estarà supervisada pel pont corresponent.
 - Els chips especialitzats s’anomenen controladors.
-- ‹#›
+---
 
 
 ## Controladors auxiliars del Chipset
 
 - Controlador d'àudio.	-	Controlador ethernet.
 - Controlador SATA	-	Controlador Firewire
-- ‹#›
+---
 
 
 ## Nous Chipsets
@@ -83,12 +72,12 @@ title: "Muntatge i manteniment d’equips"
   - Nehalem
   - Sandy Bridge
   - Haswell
-- ‹#›
+---
 
 
 ## Noves generacions de Chipset
 
-- ‹#›
+---
 
 
 ## Noves generacions de Chipset
@@ -97,9 +86,9 @@ title: "Muntatge i manteniment d’equips"
   - El pont nord  desapareix i la majoria de funcions passen al microprocessador.
   - Es crea un nou xip anomenat PCH, que substitueix al pont sud. Assumeix totes les seves funcions i algunes del pont nord.
   - El canal de comunicació del PCH amb el microprocessador és el DMI
-- ‹#›
+---
 
 
 ## Noves generacions de Chipset
 
-- ‹#›
+---

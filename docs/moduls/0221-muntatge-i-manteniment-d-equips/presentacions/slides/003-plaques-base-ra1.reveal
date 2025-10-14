@@ -1,10 +1,3 @@
----
-layout: page
-title: "Components d’un equip microinformàtic"
----
-
-> Versió generada automàticament des d'una presentació .pptx el 2025-10-12 21:29.
-
 
 # Components d’un equip microinformàtic
 
@@ -12,17 +5,17 @@ title: "Components d’un equip microinformàtic"
 ## Components d’un equip microinformàtic
 
 - Plaques Base
-- ‹#›
+---
 
 
 ## Elements de la placa
 
-- ‹#›
+---
 
 
 ## Placa Base
 
-- ‹#›
+---
 
 
 ## Funcions dels elements de la placa
@@ -37,7 +30,7 @@ title: "Components d’un equip microinformàtic"
   - Per connectar Discos durs IDE o lectors de CD i DVD.
 - Connectors Floppy
   - Per connectar les antigues disqueteres.
-- ‹#›
+---
 
 
 ## Funcions dels elements de la placa
@@ -52,7 +45,7 @@ title: "Components d’un equip microinformàtic"
   - Ajuda a que el processador es comuniqui amb els dispositius connectats a la placa base i els controlin.
 - Socket Microprocesador
   - Serveix per connectar-hi el microprocesador.
-- ‹#›
+---
 
 
 ## Funcions dels elements de la placa
@@ -69,7 +62,7 @@ title: "Components d’un equip microinformàtic"
   - Hi connectem la memòria RAM.
 - Connectors d’energia
   - Serveixen per connectar la placa a la font d’alimentació per obtenir l’energia necessària per funcionar.
-- ‹#›
+---
 
 
 ## Socket
@@ -78,7 +71,7 @@ title: "Components d’un equip microinformàtic"
   - ZIF: El micro porta els pins, que es connecten al socket foradat.
   - LGA: El socket porta els pins en comptes del micro.
     - Millor sistema de distribució d’energia i majors velocitats de bus.
-- ‹#›
+---
 
 
 ## Ranures de memòria
@@ -92,7 +85,7 @@ title: "Components d’un equip microinformàtic"
   - 184 pins: per a DDR
 - S’agrupen en bancs d’1, 2, 4 o 6
 - ¿En què consisteix el dual channel?
-- ‹#›
+---
 
 
 ## Ranures de expansió
@@ -108,7 +101,7 @@ title: "Components d’un equip microinformàtic"
   - PCI-E 2.0/2.1 dobla la taxa a 500MB/s.
   - PCI-E 3.0 torna a doblar a 1GB/s
   - PCI-E permet connectar targes sense necessitat d’apagar l’ordinador.
-- ‹#›
+---
 
 
 ## Chipset
@@ -118,7 +111,7 @@ title: "Components d’un equip microinformàtic"
   - Controla les transmissions (dades, instruccions i senyals de control) entre la CPU i la resta d’elements del sistema.
   - Controla la transferència de dades entre la CPU, la memòria i els perifèrics.
   - Ofereix suport al bus d’Entrada/Sortida.
-- ‹#›
+---
 
 
 ## Chipset
@@ -126,7 +119,7 @@ title: "Components d’un equip microinformàtic"
 - Està dividit en:
   - Northbridge (Pont Nord)
   - Southbridge (Pont Sud)
-- ‹#›
+---
 
 
 ## Chipset
@@ -142,13 +135,13 @@ title: "Components d’un equip microinformàtic"
     - Velocitat del bus frontal FSB.
     - Tipus i quantitat de memòria RAM suportat.
     - Controladora gràfica integrada
-- ‹#›
+---
 
 
 ## Chipset
 
 - Northbridge (Pont Nord)
-- ‹#›
+---
 - Northbridge
 - CPU
 - Memòria RAM
@@ -167,13 +160,13 @@ title: "Components d’un equip microinformàtic"
     - Controladors de ports per a perifèrics: USB, Firewire.
     - Funcions d’administració d’energia.
     - Controlador de teclat, interrupcions.
-- ‹#›
+---
 
 
 ## Chipset
 
 - Southbridge (Pont Sud)
-- ‹#›
+---
 - Southbridge
 - Northbridge
 - IDE, SATA
@@ -189,7 +182,7 @@ title: "Components d’un equip microinformàtic"
 - BIOS (Basic Input/Output System)
 - És un conjunt de programes molt elementals, desats en un chip de la placa base que s’encarrega de realitzar les operacions necessàries per a que l’ordinador arrenqui.
 - La tarja gràfica també te una bios que procura realitzar totes les tasques necessàries per a que es pugui fer servir la pantalla durant el procés d'arrencada del PC.
-- ‹#›
+---
 
 
 ## La BIOS
@@ -202,7 +195,7 @@ title: "Components d’un equip microinformàtic"
   - La BIOS detecta els dispositius connectats (unitat de discos, CD-ROM...)
   - Configuració dels dispositius Plug-and-play
   - Resum de dades i dona pas al Sistema Operatiu.
-- ‹#›
+---
 
 
 ## La BIOS
@@ -215,4 +208,4 @@ title: "Components d’un equip microinformàtic"
   - Es poden esborrar les dades del CMOS amb:
     - Resetejador de CMOS (CMOS-Reset-Jumper).
     - Retirant la PILA de la placa base.
-- ‹#›
+---

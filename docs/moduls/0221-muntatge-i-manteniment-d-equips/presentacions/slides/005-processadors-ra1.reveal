@@ -1,11 +1,3 @@
----
-layout: page
-title: "Muntatge i manteniment d’equips"
----
-
-> Versió generada automàticament des d'una presentació .pptx el 2025-10-12 21:29.
-
-
 # Muntatge i manteniment d’equips
 
 
@@ -13,7 +5,8 @@ title: "Muntatge i manteniment d’equips"
 
 - Components d’un equip microinformàtic
 - El Processador
-- 1
+
+---
 
 
 ## El processador
@@ -22,7 +15,8 @@ title: "Muntatge i manteniment d’equips"
 - Dirigeix i controla tots els components.
 - S'encarrega de dur a terme les operacions matemàtiques i lògiques en un curt període de temps.
 - Decodifica i executa les instruccions dels programes carregats en la memòria RAM.
-- 2
+
+---
 
 
 ## Arquitectura dels microprocesadors
@@ -39,7 +33,8 @@ title: "Muntatge i manteniment d’equips"
   - Poques operacions (joc d’instruccions)
   - Operacions molt bàsiques i molt ràpides.
   - Circuitería del micro molt més senzilla que CISC
-- 3
+
+---
 
 
 ## Característiques
@@ -53,7 +48,8 @@ title: "Muntatge i manteniment d’equips"
 - Memòria cache
 - Nombre de nuclis
 - TDP (potencia de disseny tèrmic)
-- 4
+
+---
 
 
 ## Característiques – Nivell d’integració
@@ -66,7 +62,8 @@ title: "Muntatge i manteniment d’equips"
   - Major freqüència de rellotge.
   - Menor consum d’energia.
   - Més escalfor generada.
-- 5
+
+---
 
 
 ## Característiques – Freqüència de rellotge
@@ -74,7 +71,8 @@ title: "Muntatge i manteniment d’equips"
 - És el nombre de cicles de rellotge que es poden realitzar per unitat de temps.
 - Amb aquest paràmetre s’identifica la potència del micro.
   - És mesura en Gigahertz (GHz)
-- 6
+
+---
 
 
 ## Característiques – Velocitats
@@ -85,14 +83,16 @@ title: "Muntatge i manteniment d’equips"
   - És la velocitat a la que el micro es comunica amb memòria RAM.
   - És mesura igual que la freqüència de rellotge de la CPU.
     - A major velocitat del canal, major rendiment del sistema.
-- 7
+
+---
 
 
 ## Característiques – Joc d’instruccions
 
 - Cada processador disposa d’un conjunt d’instruccions que pot executar.
 - Més instruccions 🡪 major complexitat de disseny
-- 8
+
+---
 
 
 ## Característiques – Longitud de paraula
@@ -100,7 +100,8 @@ title: "Muntatge i manteniment d’equips"
 - És la quantitat màxima d’informació que es pot llegir o escriure en un accés a la memòria.
 - Longitud de paraula micros actuals: 32, 64bits
 - El terme d’arquitectura 32 i 64 bits fa referència a l’amplada dels registres amb els que treballa la UAL, o l’amplada dels busos de dades o d’adreces.
-- 9
+
+---
 
 
 ## Característiques – Arquitectures 32 i 64 bits
@@ -112,7 +113,8 @@ title: "Muntatge i manteniment d’equips"
   - Límit de memòria a 4 GB
     - L’arquitectura de 32 bits no pot controlar l’assignació per sobre de 4GB de memòria RAM.
   - Ara mateix s’imposen els processadors de 64 bits, tot i això encara hi ha aplicacions dissenyades per a 32 bits que no milloraran el seu rendiment fent servir micros de 64 bits.
-- 10
+
+---
 
 
 ## Característiques - Memòria cau
@@ -122,7 +124,8 @@ title: "Muntatge i manteniment d’equips"
 - Tots els processadors actuals tenen una caché de nivell 1 (L1), una segona de nivell 2 (L2) i a vegades també un nivel 3 (L3).
   - Capacitat				L3>L2>L1
   - Velocitat (lectura i escriptura)  	L1>L2>L3
-- 11
+
+---
 
 
 ## Característiques – Nombre de nuclis
@@ -135,34 +138,40 @@ title: "Muntatge i manteniment d’equips"
   - És una línia d’execució.
   - Actualment els nuclis d’un micro poden executar diversos threads simultàniament.
   - 1 nucli amb 2 thread es pot interpretar com a 2 nuclis virtuals.
-- 12
+
+---
 
 
 ## Característiques - TDP
 
 - TDP (potencia de disseny tèrmic)
 - És la màxima quantitat de potencia que el sistema de refrigeració pot dissipar sense excedir el límit de temperatura del microprocessador.
-- 13
+
+---
 
 
 ## Portàtils Intel
 
-- 14
+
+---
 
 
 ## Portàtils Intel
 
-- 15
+
+---
 
 
 ## Ordinadors Intel
 
-- 16
+
+---
 
 
 ## Ordinadors Intel
 
-- 17
+
+---
 
 
 ## Snapdragon 805 (32b)
@@ -170,8 +179,10 @@ title: "Muntatge i manteniment d’equips"
 - Quad-core Krait 450 CPU at up to 2.7 GHz per core
 - ARMv7-A
 - 16 KiB / 16 KiB L1 cache per core
-- 2 MiB L2 cache
-- 4K UHD video upscale & play
+
+--- MiB L2 cache
+
+---K UHD video upscale & play
 - Dual camera image signal processor supporting up to 55 Megapixel, stereoscopic 3D
 - Adreno 420 GPU
 - LPDDR3 25.6 GB/s memory bandwidth
@@ -182,11 +193,13 @@ title: "Muntatge i manteniment d’equips"
 - UFS V2.0
 - BT4.1, 802.11ac Wi-Fi
 - 28 nm HPm (high performance mobile)
-- 18
+
+---
 
 
 ## Família de processadors Intel® Core™
 
 - https://www.intel.es/content/www/es/es/products/processors/core.html
 - Família de processadors MD Ryzen™
-- 19
+
+---

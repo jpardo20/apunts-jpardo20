@@ -1,18 +1,10 @@
----
-layout: page
-title: "Components d’un equip microinformàtic"
----
-
-> Versió generada automàticament des d'una presentació .pptx el 2025-10-12 21:29.
-
-
 # Components d’un equip microinformàtic
 
 
-## Components d’un equip microinformàtic
-
 - Memòria RAM
-- ‹#›
+
+---
+
 - ¡Todo, TODO sobre la RAM! - Parte 1&2 | Nate Labs
 - https://www.youtube.com/watch?v=yRNwl24l39E
 - https://www.youtube.com/watch?v=OZCEHXlHY4E
@@ -22,7 +14,9 @@ title: "Components d’un equip microinformàtic"
 
 - És un dispositiu on s’emmagatzemen les dades i les instruccions necessàries per executar el software de l’equip.
 - Són volàtils, és a dir, necessiten estar constantment alimentades. Si perden l’alimentació, perden la informació.
-- ‹#›
+
+---
+
 
 
 ## Característiques
@@ -31,7 +25,9 @@ title: "Components d’un equip microinformàtic"
   - És una característica de les memòries RAM que determina el temps que romanen les dades abans de desaparèixer.
   - RAM dinàmiques (DRAM) Condensadors. Emmagatzemen la informació per un temps i necessita ser realimentada (refrescada) per conservar les dades.
   - RAM estàtica (SRAM) Biestables. Constantment estan alimentades i no necessiten cicles de refresc.
-- ‹#›
+
+---
+
 
 
 ## Característiques
@@ -44,7 +40,9 @@ title: "Components d’un equip microinformàtic"
   - És el nombre d'accessos a memòria que es poden realitzar en 1 segon. Es mesura en Hertz (Hz).
 - Latència
   - És el retard produït en cada accés a memòria.
-- ‹#›
+
+---
+
 
 
 ## Característiques
@@ -55,7 +53,9 @@ title: "Components d’un equip microinformàtic"
   - És la tensió que necessita la RAM per funcionar. Com menys voltatge, menys consum.
 - ECC (Error Checking and Correction)
   - Totes les RAMs experimenten errors. Les memòria ECC són capaces de detectar i corregir alguns dels errors.
-- ‹#›
+
+---
+
 
 
 ## Càlcul de latències
@@ -66,7 +66,9 @@ title: "Components d’un equip microinformàtic"
   - Taxa de transferència = Velocitat de rellotge (MHz) x
   - Nº d’accessos per cicle x
   - Ample de bus (bytes)
-- ‹#›
+
+---
+
 
 
 ## Càlcul de latències
@@ -83,12 +85,16 @@ title: "Components d’un equip microinformàtic"
 - Ample de bus:
   - 64bits 🡪 64/8 = 8 Bytes
 - DDR: Double Data Rate (Doble taxa de dades)
-- ‹#›
+
+---
+
 
 
 ## Prefetch (accessos per cicle)
 
-- ‹#›
+
+---
+
 
 
 ## Exemple 1 de càlcul de latències
@@ -101,7 +107,9 @@ title: "Components d’un equip microinformàtic"
   - = 1600 x 8 = 12800 MB/s
   - Equivalència 🡪 PC3 – 12800
   - Velocitat de rellotge = Freq. efectiva/accessos = 1600/8= 200MHz
-- ‹#›
+
+---
+
 
 
 ## Exemple 2 de càlcul de latències
@@ -114,24 +122,32 @@ title: "Components d’un equip microinformàtic"
   - 🡪 Freq. Efectiva = 3200 / 8 = 400 MHz
   - Equivalència: DDR2-400
   - Velocitat rellotge = Freq. Efectiva / accessos = 400/4 = 100 Mhz
-- ‹#›
 
+---
 
-## Tipus de Mòduls
-
-- Hi ha diferents tipus de mòduls, per a diferents sòcols.
-- ‹#›
 
 
 ## Tipus de Mòduls
 
 - Hi ha diferents tipus de mòduls, per a diferents sòcols.
-- ‹#›
+
+---
+
+
+
+## Tipus de Mòduls
+
+- Hi ha diferents tipus de mòduls, per a diferents sòcols.
+
+---
+
 
 
 ## Evolució
 
-- ‹#›
+
+---
+
 
 
 ## Tipus de Mòduls
@@ -145,7 +161,9 @@ title: "Components d’un equip microinformàtic"
     - Actuals (Portàtils). 144, 200, 204 contactes.
   - Micro-DIMM
     - Actuals (Netbooks). 144, 172 i 214 contactes.
-- ‹#›
+
+---
+
 
 
 ## Tipus de Mòduls
@@ -159,7 +177,9 @@ title: "Components d’un equip microinformàtic"
     - Actuals (Portàtils). 144, 200, 204 contactes. (SDR, DDR/DDR2, DDR3,DDR4)
   - Micro-DIMM
     - Actuals (Netbooks). 144, 172 i 214 contactes. (SDR, DDR/DDR2, DDR3)
-- ‹#›
+
+---
+
 
 
 ## Tipus de memòria RAM
@@ -170,7 +190,9 @@ title: "Components d’un equip microinformàtic"
   - És la memòria principal dels ordinadors. Es diu dinàmica per que la seva informació es reescriu constantment.
     - SDRAM: se sincronitza amb el rellotge del sistema per llegir i escriure
     - RDRAM:  Antigues memòries de gama alta desenvolupades per Rambus Inc. En desús.
-- ‹#›
+
+---
+
 
 
 ## Tipus de memòria RAM
@@ -186,9 +208,13 @@ title: "Components d’un equip microinformàtic"
     - Millora sobre la DDR2 SDRAM que aumenta la taxa de transferència, la capacitat i redueix el consum.
 - DDR4 SDRAM
   - Millora sobre la DDR3 SDRAM que aumenta la velocitat, la capacitat i redueix el consum.
-- ‹#›
+
+---
+
 
 
 ## Tipus de memòria RAM
 
-- ‹#›
+
+---
+
