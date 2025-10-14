@@ -15,8 +15,6 @@
 
 ---
 
-
-
 ## Característiques (1/3)
 
 - Volatilitat
@@ -25,8 +23,6 @@
   - RAM estàtica (SRAM) Biestables. Constantment estan alimentades i no necessiten cicles de refresc.
 
 ----
-
-
 
 ## Característiques (2/3)
 
@@ -80,7 +76,7 @@
   - **`DDR3`**: 8n accessos/cicle
   - **`DDR4`**: 8n accessos x nº grups-banks/cicle (es pot considerar 16n )
 - Ample de bus:
-  - 64bits => 64/8 = 8 Bytes
+  - 64bits &#x27A1; 64/8 = 8 Bytes
 - **`DDR`**: *Double Data Rate* (**Doble taxa de dades**)
 
 ---
@@ -101,24 +97,28 @@
 ## Exemple 1 de càlcul de latències
 
 - Calcula l’equivalència d’una memòria DDR3-1600:
-  - DDR3 => PC3 => 8 accessos/cicle
-  - 1600 => 1600 MHz de freqüència efectiva
-  - Ample de bus = 8 Bytes
-  - Taxa transferència  => Freq. Efectiva x Ample de bus
-  -     = 1600 x 8 = 12800 MB/s
-  - Equivalència => PC3 – 12800
-  - Velocitat de rellotge = Freq. efectiva/accessos = 1600/8= 200MHz
+  - **`DDR3`** &#x27A1; **`PC3`** &#x27A1; **`8` accessos/cicle**
+  - **`1600`** &#x27A1; **`1600 MHz` de freqüència efectiva**
+  - Ample de bus = **`8` Bytes**
+
+### Taxa transferència = Freq. Efectiva x Ample de bus
+
+  - &#x27A1; **`1600` x `8` = `12800` MB/s**
+  - Equivalència &#x27A1; **`PC3`** – **`12800`**
+
+### Velocitat de rellotge = Freq. efectiva/accessos
+  - **`1600`/`8` = `200` MHz**
 
 ----
 
 ## Exemple 2 de càlcul de latències
 
 - Calcula l’equivalència d’una memòria PC2-3200
-  - DDR2 => PC2 => 4 accessos/cicle
-  - 3200 => 3200 MB/s de taxa de transferència
+  - DDR2 &#x27A1; PC2 &#x27A1; 4 accessos/cicle
+  - 3200 &#x27A1; 3200 MB/s de taxa de transferència
   - Ample de bus = 8 Bytes
   - Taxa transferència = Freq. Efectiva x Ample de bus
-  - => Freq. Efectiva = 3200 / 8 = 400 MHz
+  - &#x27A1; Freq. Efectiva = 3200 / 8 = 400 MHz
   - Equivalència: DDR2-400
   - Velocitat rellotge = Freq. Efectiva / accessos = 400/4 = 100 Mhz
 
