@@ -4,9 +4,9 @@
 
 ---
 
-[¡Todo, TODO sobre la RAM! - Parte 1 (Nate Gentile) - 18.24 min - 24/jun/2020](https://www.youtube.com/watch?v=OZCEHXlHY4E)
+[¡Todo, TODO sobre la RAM! - Parte 1 (Nate Gentile) - 18.24 min - 24/jun/2020](../../../assets/img/https://www.youtube.com/watch?v=OZCEHXlHY4E)
 
-[¿Cómo funciona la RAM por dentro? - Todo, TODO sobre la RAM pt. 2 (Nate Gentile) - 18.14 min - 8/nov/2020](https://www.youtube.com/watch?v=OZCEHXlHY4E)
+[¿Cómo funciona la RAM por dentro? - Todo, TODO sobre la RAM pt. 2 (Nate Gentile) - 18.14 min - 8/nov/2020](../../../assets/img/https://www.youtube.com/watch?v=OZCEHXlHY4E)
 
 ## La memòria RAM
 
@@ -52,15 +52,13 @@
 
 ---
 
-
-
 ## Càlcul de latències (1/3)
 
 - Fórmules:
   - Taxa de transferència = Freqüència  efectiva(MHz) x Ample bus de dades(bytes)
   - Freqüència efectiva = Velocitat de rellotge (MHz) x Nº d’accessos per cicle
   
-  ----
+----
 
 ## Càlcul de latències (2/3)
 
@@ -89,14 +87,14 @@
 
 ## Prefetch (accessos per cicle) (1/2)
 
-![alt text](prefetch-accessos-per-cicle.png)
+![alt text](../../../assets/img/prefetch-accessos-per-cicle.png)
 
 ----
 
 ## Prefetch (accessos per cicle) (2/2)
 
 
-![alt text](prefetch-accessos-per-cicle-ddr4.png)
+![alt text](../../../assets/img/prefetch-accessos-per-cicle-ddr4.png)
 
 ---
 
@@ -130,7 +128,7 @@
 
 - Hi ha diferents tipus de mòduls, per a diferents sòcols.
 
-![alt text](tipus-moduls-ram.png)
+![alt text](../../../assets/img/tipus-moduls-ram.png)
 
 ----
 
@@ -138,13 +136,13 @@
 
 - Hi ha diferents tipus de mòduls, per a diferents sòcols.
 
-![alt text](tipus-moduls-ram-2.png)
+![alt text](../../../assets/img/tipus-moduls-ram-2.png)
 
 ---
 
 ## Evolució
 
-![alt text](evolucio.png)
+![alt text](../../../assets/img/evolucio.png)
 
 ---
 
@@ -206,7 +204,7 @@
 ## Tipus de memòria RAM (3/3)
 
 
-![alt text](tipus-memoria-ram.png)
+![alt text](../../../assets/img/tipus-memoria-ram.png)
 
 ---
 
