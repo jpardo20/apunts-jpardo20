@@ -1,11 +1,18 @@
-# Apunts d'en Joan Pardo per DigiTechFP
+<!-- <img src="https://digitechfp.com/wp-content/uploads/2023/12/VERT-01-SIN-CAJA-BLANCO-RGB@2x-768x593.png)" width="200" height="auto" style="background-color: #009de0; padding: 14px;"> -->
 
-En aquesta web publicaré els apunts dels meus mòduls per DigiTechFP
+## Mòduls de SMX
 
-- [Presentacions del mòdul 0221 - Muntatge i manteniment d’equips](moduls/0221-muntatge-i-manteniment-d-equips/presentacions/index.html)
+### [Presentacions del mòdul 0221 - Muntatge i manteniment d’equips](moduls/0221-muntatge-i-manteniment-d-equips/presentacions/index.html)
 
-- [Presentacions del mòdul 0373 - Llenguatges de marques](moduls/0223-aplicacions-ofimatiques/presentacions/index.html)
+### [Presentacions del mòdul 0223 Aplicacions ofimàtiques](moduls/0223-aplicacions-ofimatiques/presentacions/index.html)
 
-- [Presentacions del mòdul 0373 - Llenguatges de marques](moduls/0373-llenguatges-de-marques/presentacions/index.html)
+<hr>
 
-- [Presentacions del mòdul 0484 - Bases de dades](moduls/0484-bases-de-dades/presentacions/index.html)
+
+## Mòduls de DAM
+
+### [Presentacions del mòdul 0373 - Llenguatges de marques](moduls/0373-llenguatges-de-marques/presentacions/index.html)
+
+### [Presentacions del mòdul 0484 - Bases de dades](moduls/0484-bases-de-dades/presentacions/index.html)
+
+<hr>
