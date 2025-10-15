@@ -4,12 +4,16 @@
 
 ---
 
+##### Components d’un equip microinformàtic
+#### Plaques Base
+
 ## Elements de la placa
 
 ![alt text](../../../assets/img/elements-de-la-placa-base.png)
 
 ---
-
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
 ## Placa Base
 
@@ -17,8 +21,10 @@
 
 ---
 
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
-## Funcions dels elements de la placa
+## Funcions dels elements de la placa (1/3)
 
 - Connectors E/S:
   - Proporciona connectors d’entrada i sortida per a perifèrics.
@@ -30,10 +36,12 @@
   - Per connectar Discos durs IDE o lectors de CD i DVD.
 - Connectors Floppy
   - Per connectar les antigues disqueteres.
----
 
+----
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
-## Funcions dels elements de la placa
+## Funcions dels elements de la placa (2/3)
 
 - Connectores SATA
   - Per connectar els nous discos durs SATA
@@ -45,10 +53,13 @@
   - Ajuda a que el processador es comuniqui amb els dispositius connectats a la placa base i els controlin.
 - Socket Microprocesador
   - Serveix per connectar-hi el microprocesador.
+
 ---
 
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
-## Funcions dels elements de la placa
+## Funcions dels elements de la placa (3/3)
 
 - Ranures PCI
   - Serveix per connectar targes d'expansió.
@@ -64,15 +75,39 @@
   - Serveixen per connectar la placa a la font d’alimentació per obtenir l’energia necessària per funcionar.
 ---
 
-## Socket
+##### Components d’un equip microinformàtic
+#### Plaques Base
+
+## Socket (1/3)
 
 - Dos tipus principals
   - ZIF: El micro porta els pins, que es connecten al socket foradat.
-  ![alt text](../../../assets/img/socket-zif.png)
   - LGA: El socket porta els pins en comptes del micro.
-  ![alt text](../../../assets/img/socket-lga.png)
     - Millor sistema de distribució d’energia i majors velocitats de bus.
+
+----
+##### Components d’un equip microinformàtic
+#### Plaques Base
+
+## Socket (2/3)
+
+  - ZIF: El micro porta els pins, que es connecten al socket foradat.
+
+  ![alt text](../../../assets/img/socket-zif.png)
+
+----
+##### Components d’un equip microinformàtic
+#### Plaques Base
+
+## Socket (3/3)
+
+  - LGA: El socket porta els pins en comptes del micro.
+    - Millor sistema de distribució d’energia i majors velocitats de bus.
+
+  ![alt text](../../../assets/img/socket-lga.png)
 ---
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
 ## Ranures de memòria (1/3)
 
@@ -82,6 +117,8 @@
   - DIMM: Connectors actuals.
 
 ----
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
 ## Ranures de memòria (2/3)
 
@@ -91,6 +128,8 @@
 - S’agrupen en bancs d’1, 2, 4 o 6
 
 ----
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
 ## Ranures de memòria (1/3)
 
@@ -100,6 +139,8 @@
 
 ---
 
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
 ## Ranures de expansió
 
@@ -117,6 +158,8 @@
 
 ---
 
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
 ## Chipset (1/7)
 
@@ -127,6 +170,8 @@
   - Ofereix suport al bus d’Entrada/Sortida.
 
 ----
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
 ## Chipset (2/7)
 
@@ -135,6 +180,8 @@
   - ***Southbridge*** (**Pont Sud**)
 
 ----
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
 ## Chipset (3/7)
 
@@ -151,6 +198,8 @@
     - Controladora gràfica integrada
 
 ----
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
 ## Chipset (4/7)
 
@@ -159,6 +208,8 @@
 ![alt text](../../../assets/img/northbridge-Pont-Nord.png)
 
 ----
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
 ## Chipset (5/7)
 
@@ -171,7 +222,9 @@
     - Controladors de ports per a perifèrics: USB, Firewire.
     - Funcions d’administració d’energia.
     - Controlador de teclat, interrupcions.
----
+----
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
 ## Chipset (6/7)
 
@@ -179,7 +232,9 @@
 
 ![alt text](../../../assets/img/southbridge-pont-sud.png)
 
----
+----
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
 ## Chipset (7/7)
 
@@ -195,13 +250,18 @@
 - Altres dispositius
 
 ---
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
 ## La BIOS (1/3)
 
 - BIOS (Basic Input/Output System)
 - És un conjunt de programes molt elementals, desats en un chip de la placa base que s’encarrega de realitzar les operacions necessàries per a que l’ordinador arrenqui.
 - La tarja gràfica també te una bios que procura realitzar totes les tasques necessàries per a que es pugui fer servir la pantalla durant el procés d'arrencada del PC.
----
+----
+
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
 
 ## La BIOS (1/3)
@@ -214,8 +274,9 @@
   - La BIOS detecta els dispositius connectats (unitat de discos, CD-ROM...)
   - Configuració dels dispositius Plug-and-play
   - Resum de dades i dona pas al Sistema Operatiu.
----
-
+----
+##### Components d’un equip microinformàtic
+#### Plaques Base
 
 ## La BIOS (1/3)
 
@@ -227,4 +288,3 @@
   - Es poden esborrar les dades del CMOS amb:
     - Resetejador de CMOS (CMOS-Reset-Jumper).
     - Retirant la PILA de la placa base.
----
