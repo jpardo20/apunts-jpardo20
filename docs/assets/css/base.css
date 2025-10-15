@@ -67,11 +67,11 @@ footer.footnote {
     gap: 16px;
     padding: 6px 12px;
     z-index: 1000;
-    font-size: .95rem;
+    /* font-size: .95rem; */
 }
 
 .topbar a {
-    color: #fff;
+    color: #009de0;
     text-decoration: underline;
     font-weight: 600;
 }
@@ -117,5 +117,5 @@ footer.footnote {
   grid-column: 2;
   justify-self: center;                /* centrat real */
   text-align: center;
-  size: 10px;
+  font-size: 25px;
 }
