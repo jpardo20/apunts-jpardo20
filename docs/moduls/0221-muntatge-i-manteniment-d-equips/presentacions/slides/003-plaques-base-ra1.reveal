@@ -1,19 +1,19 @@
+### Components d’un equip microinformàtic
 
-# Components d’un equip microinformàtic
+# Plaques Base
 
-
-## Components d’un equip microinformàtic
-
-- Plaques Base
 ---
 
-
 ## Elements de la placa
+
+![alt text](../../../assets/img/elements-de-la-placa-base.png)
 
 ---
 
 
 ## Placa Base
+
+![alt text](../../../assets/img/placa-base.png)
 
 ---
 
@@ -64,27 +64,40 @@
   - Serveixen per connectar la placa a la font d’alimentació per obtenir l’energia necessària per funcionar.
 ---
 
-
 ## Socket
 
 - Dos tipus principals
   - ZIF: El micro porta els pins, que es connecten al socket foradat.
+  ![alt text](../../../assets/img/socket-zif.png)
   - LGA: El socket porta els pins en comptes del micro.
+  ![alt text](../../../assets/img/socket-lga.png)
     - Millor sistema de distribució d’energia i majors velocitats de bus.
 ---
 
-
-## Ranures de memòria
+## Ranures de memòria (1/3)
 
 - Connectors per a la memòria RAM
 - Dos tipus:
   - SIMM: Sistema antic en desús.
   - DIMM: Connectors actuals.
+
+----
+
+## Ranures de memòria (2/3)
+
 - DIMM
   - 240 pins: per a DDR2 i DDR3
   - 184 pins: per a DDR
 - S’agrupen en bancs d’1, 2, 4 o 6
-- ¿En què consisteix el dual channel?
+
+----
+
+## Ranures de memòria (1/3)
+
+![alt text](../../../assets/img/ranures-de-memoria.png)
+
+#### ¿En què consisteix el dual channel?
+
 ---
 
 
@@ -101,30 +114,31 @@
   - PCI-E 2.0/2.1 dobla la taxa a 500MB/s.
   - PCI-E 3.0 torna a doblar a 1GB/s
   - PCI-E permet connectar targes sense necessitat d’apagar l’ordinador.
+
 ---
 
 
-## Chipset
+## Chipset (1/7)
 
 - El Chipset és un conjunt de circuits (chips) que ajuden a que el processador es comuniqui amb els dispositius connectats a la placa base.
 - Funcions:
   - Controla les transmissions (dades, instruccions i senyals de control) entre la CPU i la resta d’elements del sistema.
   - Controla la transferència de dades entre la CPU, la memòria i els perifèrics.
   - Ofereix suport al bus d’Entrada/Sortida.
----
 
+----
 
-## Chipset
+## Chipset (2/7)
 
 - Està dividit en:
-  - Northbridge (Pont Nord)
-  - Southbridge (Pont Sud)
----
+  - ***Northbridge*** (**Pont Nord**)
+  - ***Southbridge*** (**Pont Sud**)
 
+----
 
-## Chipset
+## Chipset (3/7)
 
-- Northbridge (Pont Nord)
+- **Northbridge (Pont Nord)**
   - És el responsable de la connexió del bus frontal (FSB) de la CPU amb els components d’alta velocitat del sistema
     - Memòria RAM
     - Bus AGP o PCI Express
@@ -135,23 +149,20 @@
     - Velocitat del bus frontal FSB.
     - Tipus i quantitat de memòria RAM suportat.
     - Controladora gràfica integrada
----
 
+----
 
-## Chipset
+## Chipset (4/7)
 
-- Northbridge (Pont Nord)
----
-- Northbridge
-- CPU
-- Memòria RAM
-- Southbridge
-- Bus AGP o PCI Express
+### **Northbridge (Pont Nord)**
 
+![alt text](../../../assets/img/northbridge-Pont-Nord.png)
 
-## Chipset
+----
 
-- Southbridge (Pont Sud)
+## Chipset (5/7)
+
+- **Southbridge (Pont Sud)**
   - És el responsable de la connexió de la CPU amb els components mes lents del sistema.
   - No està connectada a la CPU. Es comunica amb ella a través del Northbridge.
   - El chip southbridge ofereix les següents característiques:
@@ -162,8 +173,15 @@
     - Controlador de teclat, interrupcions.
 ---
 
+## Chipset (6/7)
 
-## Chipset
+### **Southbridge (Pont Sud)**
+
+![alt text](../../../assets/img/southbridge-pont-sud.png)
+
+---
+
+## Chipset (7/7)
 
 - Southbridge (Pont Sud)
 ---
@@ -176,8 +194,9 @@
 - USB, Firewire
 - Altres dispositius
 
+---
 
-## La BIOS
+## La BIOS (1/3)
 
 - BIOS (Basic Input/Output System)
 - És un conjunt de programes molt elementals, desats en un chip de la placa base que s’encarrega de realitzar les operacions necessàries per a que l’ordinador arrenqui.
@@ -185,7 +204,7 @@
 ---
 
 
-## La BIOS
+## La BIOS (1/3)
 
 - Passos de la BIOS al engegar el PC:
   - Test de tots els components del hardware (POST).
@@ -198,7 +217,7 @@
 ---
 
 
-## La BIOS
+## La BIOS (1/3)
 
 - CMOS Setup BIOS
   - Programa d’Ajuda de Configuració CMOS.
