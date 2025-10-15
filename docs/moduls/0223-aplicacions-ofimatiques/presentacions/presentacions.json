@@ -9,7 +9,7 @@
       "title": "1. Introducción a aplicaciones ofimáticas",
       "src": "slides/ud01-iao.reveal",
       "description": "Introducción a aplicaciones ofimáticas",
-      "status": "inactive"
+      "status": "active"
     },
     {
       "order": 2,
@@ -38,13 +38,6 @@
       "src": "slides/aof-ud01-1a-actividad-evaluable.reveal",
       "description": "actividad",
       "status": "inactive"
-    },
-    {
-      "order": 9,
-      "title": "Glosario",
-      "src": "slides/aof-ud01-glosario.reveal",
-      "description": "Glosario",
-      "status": "active"
     }
   ]
 }
