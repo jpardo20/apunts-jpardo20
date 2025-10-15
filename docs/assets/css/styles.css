@@ -1,0 +1,17 @@
+/* Esquema clar */
+:root,
+[data-md-color-scheme="default"]{
+  --md-primary-fg-color: #009de0;        /* color principal (barra superior, etc.) */
+  --md-primary-fg-color--light: #2a7ad6; /* opcional */
+  --md-primary-fg-color--dark:  #0d4a94; /* opcional */
+  --md-accent-fg-color: #009de0;         /* opcional */
+}
+
+/* Esquema fosc, si el fas servir */
+[data-md-color-scheme="slate"]{
+  --md-primary-fg-color: #009de0;
+  --md-accent-fg-color: #009de0;
+}
+
+/* Si només vols forçar NOMÉS la barra: */
+/* .md-header { background: #009de0; } */

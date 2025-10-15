@@ -4,11 +4,12 @@ site_url: https://jpardo20.github.io/apunts-jpardo20/
 
 nav:
   - Inici: index.md
-  - Mòduls:
+  - Mòduls de SMX:
       - 0221 - Muntatge i manteniment d’equips:
           - Presentacions: moduls/0221-muntatge-i-manteniment-d-equips/presentacions/index.html
       - 0223 - Aplicacions Ofimàtiques:
           - Presentacions: moduls/0223-aplicacions-ofimatiques/presentacions/index.html
+  - Mòduls de DAM:
       - 0373 - Llenguatges de marques:
           - Presentacions: moduls/0373-llenguatges-de-marques/presentacions/index.html
       - 0484 - Bases de dades:
@@ -16,13 +17,15 @@ nav:
 
 theme:
   name: material
+  logo: https://digitechfp.com/wp-content/uploads/2023/12/VERT-01-SIN-CAJA-BLANCO-RGB@2x-768x593.png
+  favicon: https://digitechfp.com/wp-content/uploads/2023/12/cropped-cropped-VERT-01-BLANCO-RGB-copia-150x150.png
   language: ca
   features:
     - navigation.indexes
     - navigation.sections
 
 extra_css:
-  - assets/styles.css
+  - assets/css/styles.css
 
 markdown_extensions:
   - admonition
