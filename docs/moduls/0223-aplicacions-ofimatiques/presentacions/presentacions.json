@@ -6,38 +6,38 @@
   "presentations": [
     {
       "order": 1,
-      "title": "Introducción a aplicaciones ofimáticas",
+      "title": "1. Introducción a aplicaciones ofimáticas",
       "src": "slides/ud01-iao.md",
       "description": "Introducción a aplicaciones ofimáticas",
       "status": "inactive"
     },
     {
       "order": 2,
-      "title": "Organización individual y Colectiva",
+      "title": "2. Organización individual y Colectiva",
       "src": "slides/organizacio.md",
       "description": "Organización individual y Colectiva",
       "status": "active"
     },
     {
       "order": 3,
-      "title": "Utilidades PDF",
+      "title": "3. Utilidades PDF",
       "src": "slides/aof-03-utilidades-pdf.md",
       "description": "Utilidades PDF",
       "status": "active"
     },
     {
       "order": 4,
-      "title": "Organización individual y Colectiva",
+      "title": "4. Organización individual y Colectiva",
       "src": "slides/ud02-oiicap.md",
       "description": "Organización individual y Colectiva",
-      "status": "active"
+      "status": "inactive"
     },
     {
       "order": 8,
       "title": "actividad",
       "src": "slides/aof-ud01-1a-actividad-evaluable.md",
       "description": "actividad",
-      "status": "active"
+      "status": "inactive"
     },
     {
       "order": 9,
