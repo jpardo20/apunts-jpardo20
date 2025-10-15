@@ -60,7 +60,7 @@ footer.footnote {
     top: 0;
     left: 0;
     right: 0;
-    background: #115eaf;
+    background: #009de0; /* #115eaf; */
     color: #fff;
     display: flex;
     align-items: center;
