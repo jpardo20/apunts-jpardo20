@@ -70,42 +70,56 @@
 ##### Components d’un equip microinformàtic
 #### RAM
 
-## Càlcul de latències (1/3)
+## Fórmules de latències (1/4)
 
-- Fórmules:
-  - Taxa de transferència = Freqüència  efectiva(MHz) x Ample bus de dades(bytes)
-  - Freqüència efectiva = Velocitat de rellotge (MHz) x Nº d’accessos per cicle
-  
-----
-
-##### Components d’un equip microinformàtic
-#### RAM
-
-## Càlcul de latències (2/3)
-
-  - Taxa de transferència = Velocitat de rellotge (MHz) x
-  - Nº d’accessos per cicle x
-  - Ample de bus (bytes)
+- Taxa de transferència = Freqüència  efectiva(MHz) x Ample bus de dades(bytes)
+=> TaxaTran = FreqEfec x AmpleBus
 
 ----
 
 ##### Components d’un equip microinformàtic
 #### RAM
 
-## Càlcul de latències (3/3)
+## Fórmules de latències (2/4)
+
+- Freqüència efectiva = Velocitat de rellotge (MHz) x Nº d’accessos per cicle
+
+&#x27A1; FreqEfec = VelClock x QtatAccxCicle
+
+----
+
+##### Components d’un equip microinformàtic
+#### RAM
+
+## Fórmules de latències (3/4)
 
 - Taxa de transferència = Velocitat de rellotge (MHz) x
-- Nº d’accessos per cicle x
-- Ample de bus (bytes)
-- Nombre d'accessos per cicle:
+Nº d’accessos per cicle x
+Ample de bus (bytes)
+
+&#x27A1; TaxaTran = VelClock x QtatAccxCicle x AmpleBus
+
+----
+
+##### Components d’un equip microinformàtic
+#### RAM
+
+## Fórmules de latències (4/4)
+
+&#x27A1; TaxaTran = VelClock x QtatAccxCicle x AmpleBus
+
+- ***Nombre d'accessos per cicle***:
   - **`SDR`**:  **`1n` accés/cicle**
   - **`DDR`**:  **`2n` accessos/cicle**
   - **`DDR2`**: **`4n` accessos/cicle**
   - **`DDR3`**: **`8n` accessos/cicle**
   - **`DDR4`**: **`8n` accessos x nº grups-banks/cicle (es pot considerar `16n`)**
-- Ample de bus:
-  - **`64 bits`** &#x27A1; 64/8 = **`8 Bytes`**
-- **`DDR`**: *Double Data Rate* (**Doble taxa de dades**)
+
+> **`SDR`**: *Single Data Rate* (**Simple taxa de dades**)
+> **`DDR`**: *Double Data Rate* (**Doble taxa de dades**)
+
+- ***Ample de bus***:
+  - **`64 bits`** &#x27A1; `64/8` = **`8 Bytes`**
 
 ---
 
@@ -131,7 +145,7 @@
 ##### Components d’un equip microinformàtic
 #### RAM
 
-## Exemple 1 de càlcul de latències
+## Exemple 1 de Fórmules de latències
 
 - Calcula l’equivalència d’una memòria **`DDR3-1600`**:
   - **`DDR3`** &#x27A1; **`PC3`** &#x27A1; **`8` accessos/cicle**
@@ -156,7 +170,7 @@
 ##### Components d’un equip microinformàtic
 #### RAM
 
-## Exemple 2 de càlcul de latències
+## Exemple 2 de Fórmules de latències
 
 - Calcula l’equivalència d’una memòria **`PC2-3200`**
   - **`DDR2`** &#x27A1; **`PC2`** &#x27A1; **`4` accessos/cicle**
