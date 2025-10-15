@@ -4,9 +4,18 @@
 
 ---
 
-[¡Todo, TODO sobre la RAM! - Parte 1 (Nate Gentile) - 18.24 min - 24/jun/2020](../../../assets/img/https://www.youtube.com/watch?v=OZCEHXlHY4E)
+##### Components d’un equip microinformàtic
+#### RAM
 
-[¿Cómo funciona la RAM por dentro? - Todo, TODO sobre la RAM pt. 2 (Nate Gentile) - 18.14 min - 8/nov/2020](../../../assets/img/https://www.youtube.com/watch?v=OZCEHXlHY4E)
+|Nom vídeo| Durada | Data | Enllaç |
+|------------------|-----|-----|-----|
+|¡Todo, TODO sobre la RAM! Parte 1<br>***Nate Gentile***|18.24 min|24/jun/2020|[¡Todo, TODO sobre la RAM! - Parte 1 (Nate Gentile) - 18.24 min - 24/jun/2020](../../../assets/img/https://www.youtube.com/watch?v=OZCEHXlHY4E)|
+|¿Cómo funciona la RAM por dentro?<br>Todo, TODO sobre la RAM pt. 2<br>**Nate Gentile**|18.14 min|8/nov/2020|[¿Cómo funciona la RAM por dentro? - Todo, TODO sobre la RAM pt. 2 (Nate Gentile) - 18.14 min - 8/nov/2020](../../../assets/img/https://www.youtube.com/watch?v=OZCEHXlHY4E)|
+
+---
+
+##### Components d’un equip microinformàtic
+#### RAM
 
 ## La memòria RAM
 
@@ -14,6 +23,9 @@
 - Són volàtils, és a dir, necessiten estar constantment alimentades. Si perden l’alimentació, perden la informació.
 
 ---
+
+##### Components d’un equip microinformàtic
+#### RAM
 
 ## Característiques (1/3)
 
@@ -23,6 +35,9 @@
   - RAM estàtica (SRAM) Biestables. Constantment estan alimentades i no necessiten cicles de refresc.
 
 ----
+
+##### Components d’un equip microinformàtic
+#### RAM
 
 ## Característiques (2/3)
 
@@ -37,6 +52,9 @@
 
 ----
 
+##### Components d’un equip microinformàtic
+#### RAM
+
 ## Característiques (3/3)
 
 - Taxa de transferència o ample de banda
@@ -49,6 +67,9 @@
 
 ---
 
+##### Components d’un equip microinformàtic
+#### RAM
+
 ## Càlcul de latències (1/3)
 
 - Fórmules:
@@ -57,6 +78,9 @@
   
 ----
 
+##### Components d’un equip microinformàtic
+#### RAM
+
 ## Càlcul de latències (2/3)
 
   - Taxa de transferència = Velocitat de rellotge (MHz) x
@@ -64,6 +88,9 @@
   - Ample de bus (bytes)
 
 ----
+
+##### Components d’un equip microinformàtic
+#### RAM
 
 ## Càlcul de latències (3/3)
 
@@ -82,11 +109,17 @@
 
 ---
 
+##### Components d’un equip microinformàtic
+#### RAM
+
 ## Prefetch (accessos per cicle) (1/2)
 
 ![alt text](../../../assets/img/prefetch-accessos-per-cicle.png)
 
 ----
+
+##### Components d’un equip microinformàtic
+#### RAM
 
 ## Prefetch (accessos per cicle) (2/2)
 
@@ -94,6 +127,9 @@
 ![alt text](../../../assets/img/prefetch-accessos-per-cicle-ddr4.png)
 
 ---
+
+##### Components d’un equip microinformàtic
+#### RAM
 
 ## Exemple 1 de càlcul de latències
 
@@ -117,6 +153,9 @@
 
 ----
 
+##### Components d’un equip microinformàtic
+#### RAM
+
 ## Exemple 2 de càlcul de latències
 
 - Calcula l’equivalència d’una memòria **`PC2-3200`**
@@ -137,6 +176,9 @@
 
 ---
 
+##### Components d’un equip microinformàtic
+#### RAM
+
 ## Tipus de Mòduls (1/4)
 
 - Hi ha diferents tipus de mòduls, per a diferents sòcols.
@@ -144,6 +186,9 @@
 ![alt text](../../../assets/img/tipus-moduls-ram.png)
 
 ----
+
+##### Components d’un equip microinformàtic
+#### RAM
 
 ## Tipus de Mòduls (2/4)
 
@@ -153,6 +198,9 @@
 
 ---
 
+##### Components d’un equip microinformàtic
+#### RAM
+
 ## Tipus de Mòduls (3/4)
 
 ### Evolució
@@ -160,6 +208,9 @@
 ![alt text](../../../assets/img/evolucio.png)
 
 ---
+
+##### Components d’un equip microinformàtic
+#### RAM
 
 ## Tipus de Mòduls (4/4)
 
@@ -177,6 +228,8 @@
     - **`SDR`**, **`DDR/DDR2`**, i **`DDR3`**
 
 ---
+##### Components d’un equip microinformàtic
+#### RAM
 
 ## Tipus de memòria RAM (1/3)
 
@@ -192,6 +245,9 @@
     - **RDRAM**: Antigues memòries de gama alta desenvolupades per Rambus Inc. En desús.
 
 ----
+
+##### Components d’un equip microinformàtic
+#### RAM
 
 ## Tipus de memòria RAM (2/3)
 
@@ -209,10 +265,10 @@
 
 ----
 
+##### Components d’un equip microinformàtic
+#### RAM
+
 ## Tipus de memòria RAM (3/3)
 
 
 ![alt text](../../../assets/img/tipus-memoria-ram.png)
-
----
-

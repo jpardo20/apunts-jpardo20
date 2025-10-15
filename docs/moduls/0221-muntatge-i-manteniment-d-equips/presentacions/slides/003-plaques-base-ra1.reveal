@@ -109,7 +109,7 @@
 ##### Components d’un equip microinformàtic
 #### Plaques Base
 
-## Ranures de memòria (1/3)
+## Ranures de memòria (1/4)
 
 - Connectors per a la memòria RAM
 - Dos tipus:
@@ -120,7 +120,7 @@
 ##### Components d’un equip microinformàtic
 #### Plaques Base
 
-## Ranures de memòria (2/3)
+## Ranures de memòria (2/4)
 
 - DIMM
   - 240 pins: per a DDR2 i DDR3
@@ -131,9 +131,16 @@
 ##### Components d’un equip microinformàtic
 #### Plaques Base
 
-## Ranures de memòria (1/3)
+## Ranures de memòria (3/4)
 
 ![alt text](../../../assets/img/ranures-de-memoria.png)
+
+----
+
+##### Components d’un equip microinformàtic
+#### Plaques Base
+
+## Ranures de memòria (4/4)
 
 #### ¿En què consisteix el dual channel?
 
@@ -170,6 +177,7 @@
   - Ofereix suport al bus d’Entrada/Sortida.
 
 ----
+
 ##### Components d’un equip microinformàtic
 #### Plaques Base
 
@@ -180,6 +188,7 @@
   - ***Southbridge*** (**Pont Sud**)
 
 ----
+
 ##### Components d’un equip microinformàtic
 #### Plaques Base
 
@@ -198,6 +207,7 @@
     - Controladora gràfica integrada
 
 ----
+
 ##### Components d’un equip microinformàtic
 #### Plaques Base
 
@@ -208,6 +218,7 @@
 ![alt text](../../../assets/img/northbridge-Pont-Nord.png)
 
 ----
+
 ##### Components d’un equip microinformàtic
 #### Plaques Base
 
@@ -222,7 +233,9 @@
     - Controladors de ports per a perifèrics: USB, Firewire.
     - Funcions d’administració d’energia.
     - Controlador de teclat, interrupcions.
+
 ----
+
 ##### Components d’un equip microinformàtic
 #### Plaques Base
 
@@ -233,6 +246,7 @@
 ![alt text](../../../assets/img/southbridge-pont-sud.png)
 
 ----
+
 ##### Components d’un equip microinformàtic
 #### Plaques Base
 
@@ -250,6 +264,7 @@
 - Altres dispositius
 
 ---
+
 ##### Components d’un equip microinformàtic
 #### Plaques Base
 
@@ -258,11 +273,11 @@
 - BIOS (Basic Input/Output System)
 - És un conjunt de programes molt elementals, desats en un chip de la placa base que s’encarrega de realitzar les operacions necessàries per a que l’ordinador arrenqui.
 - La tarja gràfica també te una bios que procura realitzar totes les tasques necessàries per a que es pugui fer servir la pantalla durant el procés d'arrencada del PC.
+
 ----
 
 ##### Components d’un equip microinformàtic
 #### Plaques Base
-
 
 ## La BIOS (1/3)
 
@@ -274,7 +289,9 @@
   - La BIOS detecta els dispositius connectats (unitat de discos, CD-ROM...)
   - Configuració dels dispositius Plug-and-play
   - Resum de dades i dona pas al Sistema Operatiu.
+
 ----
+
 ##### Components d’un equip microinformàtic
 #### Plaques Base
 
