@@ -94,3 +94,22 @@ footer.footnote {
     width: 100%;
     margin: 0;
 }
+
+/* Topbar: títol centrat i link a la dreta */
+.topbar{
+  display: grid;                       /* sobreescriu el flex anterior */
+  grid-template-columns: 1fr auto 1fr; /* buit | títol | enllaç */
+  align-items: center;
+}
+
+#topbar-title{
+  grid-column: 2;
+  justify-self: center;                /* centrat real */
+  text-align: center;
+}
+
+.topbar a{
+  grid-column: 3;
+  justify-self: end;                   /* a la dreta */
+  white-space: nowrap;                 /* evita que es trenqui el text */
+}
