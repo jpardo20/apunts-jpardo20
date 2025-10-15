@@ -7,42 +7,42 @@
     {
       "order": 1,
       "title": "1. Introducción a aplicaciones ofimáticas",
-      "src": "slides/ud01-iao.md",
+      "src": "slides/ud01-iao.reveal",
       "description": "Introducción a aplicaciones ofimáticas",
       "status": "inactive"
     },
     {
       "order": 2,
       "title": "2. Organización individual y Colectiva",
-      "src": "slides/organizacio.md",
+      "src": "slides/organizacio.reveal",
       "description": "Organización individual y Colectiva",
       "status": "active"
     },
     {
       "order": 3,
       "title": "3. Utilidades PDF",
-      "src": "slides/aof-03-utilidades-pdf.md",
+      "src": "slides/aof-03-utilidades-pdf.reveal",
       "description": "Utilidades PDF",
       "status": "active"
     },
     {
       "order": 4,
       "title": "4. Organización individual y Colectiva",
-      "src": "slides/ud02-oiicap.md",
+      "src": "slides/ud02-oiicap.reveal",
       "description": "Organización individual y Colectiva",
       "status": "inactive"
     },
     {
       "order": 8,
       "title": "actividad",
-      "src": "slides/aof-ud01-1a-actividad-evaluable.md",
+      "src": "slides/aof-ud01-1a-actividad-evaluable.reveal",
       "description": "actividad",
       "status": "inactive"
     },
     {
       "order": 9,
       "title": "Glosario",
-      "src": "slides/aof-ud01-glosario.md",
+      "src": "slides/aof-ud01-glosario.reveal",
       "description": "Glosario",
       "status": "active"
     }
