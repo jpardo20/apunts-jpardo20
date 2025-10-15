@@ -73,7 +73,8 @@
 ## Fórmules de latències (1/4)
 
 - Taxa de transferència = Freqüència  efectiva(MHz) x Ample bus de dades(bytes)
-=> TaxaTran = FreqEfec x AmpleBus
+
+&#x27A1; **`TaxaTran = FreqEfec x AmpleBus`**
 
 ----
 
@@ -84,7 +85,7 @@
 
 - Freqüència efectiva = Velocitat de rellotge (MHz) x Nº d’accessos per cicle
 
-&#x27A1; FreqEfec = VelClock x QtatAccxCicle
+&#x27A1; **`FreqEfec = VelClock x QtatAccxCicle`**
 
 ----
 
@@ -97,7 +98,7 @@
 Nº d’accessos per cicle x
 Ample de bus (bytes)
 
-&#x27A1; TaxaTran = VelClock x QtatAccxCicle x AmpleBus
+&#x27A1; **`TaxaTran = VelClock x QtatAccxCicle x AmpleBus`**
 
 ----
 
@@ -105,8 +106,6 @@ Ample de bus (bytes)
 #### RAM
 
 ## Fórmules de latències (4/4)
-
-&#x27A1; TaxaTran = VelClock x QtatAccxCicle x AmpleBus
 
 - ***Nombre d'accessos per cicle***:
   - **`SDR`**:  **`1n` accés/cicle**
@@ -136,7 +135,6 @@ Ample de bus (bytes)
 #### RAM
 
 ## Prefetch (accessos per cicle) (2/2)
-
 
 ![alt text](../../../assets/img/prefetch-accessos-per-cicle-ddr4.png)
 
