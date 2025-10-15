@@ -115,6 +115,7 @@ Ample de bus (bytes)
   - **`DDR4`**: **`8n` accessos x nº grups-banks/cicle (es pot considerar `16n`)**
 
 > **`SDR`**: *Single Data Rate* (**Simple taxa de dades**)
+>
 > **`DDR`**: *Double Data Rate* (**Doble taxa de dades**)
 
 - ***Ample de bus***:
@@ -208,7 +209,7 @@ Ample de bus (bytes)
 
 ![alt text](../../../assets/img/tipus-moduls-ram-2.png)
 
----
+----
 
 ##### Components d’un equip microinformàtic
 #### RAM
@@ -219,7 +220,7 @@ Ample de bus (bytes)
 
 ![alt text](../../../assets/img/evolucio.png)
 
----
+----
 
 ##### Components d’un equip microinformàtic
 #### RAM
@@ -240,6 +241,7 @@ Ample de bus (bytes)
     - **`SDR`**, **`DDR/DDR2`**, i **`DDR3`**
 
 ---
+
 ##### Components d’un equip microinformàtic
 #### RAM
 
