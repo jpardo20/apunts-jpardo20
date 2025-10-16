@@ -4,8 +4,8 @@
 <br>
 UD01 - Introducció a les Bases de Dades
 
-![data-base.png](../../../../assets/img/data-base.png)
-
+![data-base.png](../../../assets/img/data-base.png)
+![data-base.png](../../../assets/img/data-base.png)
 ---
 
 ## Definició
@@ -16,9 +16,9 @@ UD01 - Introducció a les Bases de Dades
 
 **món de les interpretacions**: representacions informàtiques, o dades, del món conceptual, necessàries per poder treballar.
 
---
+----
 
-![alt text](../../../../assets/img/representacio-dades.png)
+![alt text](../../../assets/img/representacio-dades.png)
 
 ---
 
@@ -59,15 +59,15 @@ D'aquesta pel·lícula concreta ens interessaran alguns aspectes, que anomenarem
 
 Finalment, aquests atributs adoptaran uns valors concrets com ara, i respectivament, Paths of glory, Stanley Kubrick i 1957.
 
---
+----
 
 ## Exemple d'entitat, atributs i valors (2/4)
 
-![alt text](../../../../assets/img/exemple-entitat-atribut-valor.png)
+![alt text](../../../assets/img/exemple-entitat-atribut-valor.png)
 
 font [imdb.com](https://www.imdb.com/)
 
---
+----
 
 ## Exemple d'entitat, atributs i valors (3/4)
 
@@ -78,11 +78,11 @@ desconeixerem quin atribut (propietat) de l'entitat adopta el valor obtingut, la
 
 Sabrem que l'entitat té una certa propietat, però en desconeixerem el valor, i per tant aquest coneixement difícilment ens resultarà útil.
 
---
+----
 
 ## Exemple d'entitat, atributs i valors (4/4)
 
-![alt text](../../../../assets/img/exemple-entitat-atribut-valor-amb-buits.png)
+![alt text](../../../assets/img/exemple-entitat-atribut-valor-amb-buits.png)
 
 font [imdb.com](https://www.imdb.com/)
 
@@ -94,9 +94,9 @@ font [imdb.com](https://www.imdb.com/)
 
 **entitat instància**: es refereix a la conceptualització d'un objecte concret del món real, com ara un cotxe concret, distingible dels altres objectes del mateix tipus, gràcies a alguna propietat (com podria ser el valor de l'atribut Matrícula).
 
---
+----
 
-![alt text](../../../../assets/img/entitat-tipus.png)
+![alt text](../../../assets/img/entitat-tipus.png)
 
 ---
 
@@ -104,7 +104,7 @@ font [imdb.com](https://www.imdb.com/)
 
 **tipus de dada**: defineix un conjunt de valors amb unes característiques comunes que els fan compatibles, per la qual cosa també defineix una sèrie d'operacions admissibles sobre aquests valors.
 
---
+----
 
 ## Exemple de tipus de dada
 
@@ -118,11 +118,11 @@ Imaginem que, en l'àmbit d'uns estudis determinats, s'exigeix un mínim d'assis
 Imaginem que s'admet, durant tot el curs acadèmic, un màxim de vint faltes injustificades. Doncs bé, hi podria haver un atribut de l'entitat ALUMNES, anomenat, per exemple, nombreFaltes, que recollís aquesta circumstància.
 Aquest atribut podria emmagatzemar dades de tipus enter. I també se'n podria limitar el domini de 0 (per indicar que no hi ha hagut cap inassistència) a 20 faltes injustificades, ja que en arribar a aquest límit es produiria l'expulsió de l'alumne.
 
---
+----
 
 ## Exemple de domini (2/2)
 
-![alt text](../../../../assets/img/exemple-domini.png)
+![alt text](../../../assets/img/exemple-domini.png)
 
 ---
 
@@ -153,7 +153,7 @@ No confondre valor nul amb el zero, o amb l'espai en blanc.
 
 ## Exemple de valor `nul` (2/2)
 
-![alt text](../../../../assets/img/exemple-valor-null.png)
+![alt text](../../../assets/img/exemple-valor-null.png)
 
 ---
 
@@ -177,7 +177,7 @@ L'atribut dni pot servir molt bé per identificar les instàncies d'una entitat 
 
 ## Exemple d'atribut identificador (clau primaria `PK`) (2/2)
 
-![alt text](../../../../assets/img/exemple-atribut-identificador.png)
+![alt text](../../../assets/img/exemple-atribut-identificador.png)
 
 ---
 
@@ -207,7 +207,7 @@ Per tal de diferenciar les instàncies d'una entitat que vol reflectir les notes
 ## Exemple d'Atributs identificadors (clau primària `PK`) (2/2)
 
 
-![alt text](../../../../assets/img/exemple-atribut-identificadors-2.png)
+![alt text](../../../assets/img/exemple-atribut-identificadors-2.png)
 
 ---
 
@@ -238,7 +238,7 @@ Les informacions són conceptualitzacions obtingudes a partir de l'observació d
                 **`Marca`**
 
 
-![alt text](../../../../assets/img/representacions-tabulars.png)
+![alt text](../../../assets/img/representacions-tabulars.png)
 
 
 ---
@@ -247,4 +247,4 @@ Les informacions són conceptualitzacions obtingudes a partir de l'observació d
 
 ../../../../assets/img/representacions-tabulars
 
-![alt text](../../../../assets/img/representacions-tabulars-2.png)
+![alt text](../../../assets/img/representacions-tabulars-2.png)
