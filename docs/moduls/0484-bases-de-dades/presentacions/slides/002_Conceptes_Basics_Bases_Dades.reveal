@@ -5,7 +5,6 @@
 UD01 - Introducció a les Bases de Dades
 
 ![data-base.png](../../../assets/img/data-base.png)
-![data-base.png](../../../assets/img/data-base.png)
 ---
 
 ## Definició
@@ -189,9 +188,6 @@ Per tant, hi haurà casos en què caldrà més d'un atribut per poder identifica
 
 Per definició, ni els atributs identificadors ni els que formen part d'una clau poden admetre mai el valor nul, perquè aleshores no servirien per distingir les entitats instància sense valor en un dels tipus d'atribut esmentat de la resta.
 
-
-
-
 ---
 
 ## Exemple d'Atributs identificadors (clau primària `PK`) (1/2)
@@ -245,6 +241,4 @@ Les informacions són conceptualitzacions obtingudes a partir de l'observació d
 
 ## Representacions tabulars i la seva implementació (1/2)
 
-../../../../assets/img/representacions-tabulars
-
-![alt text](../../../assets/img/representacions-tabulars-2.png)
+![representacions-tabulars-2.png](../../../assets/img/representacions-tabulars-2.png)

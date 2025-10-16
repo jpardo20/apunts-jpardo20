@@ -1,0 +1,15 @@
+{
+  "module": {
+    "code": "0225",
+    "name": "Xarxes locals"
+  },
+  "presentations": [
+    {
+      "order": 1,
+      "title": "Adreça IP i màscara de subxarxa",
+      "src": "slides/presentacio-ip-mascara.reveal",
+      "description": "Adreça IP i màscara de subxarxa",
+      "status": "active"
+    }
+  ]
+}
