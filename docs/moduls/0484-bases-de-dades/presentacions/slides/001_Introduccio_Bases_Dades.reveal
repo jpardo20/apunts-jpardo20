@@ -26,7 +26,7 @@ exemple: en una biblioteca, els llibres estan relacionats amb els socis que els 
 
 * **Disseny físic**: Etapa en què es transforma el disseny lògic a les ordres específiques del SGBD a emprar.
 
---
+----
 
 ## Conceptes  (2/4)
 
@@ -39,7 +39,7 @@ exemple: en una biblioteca, els llibres estan relacionats amb els socis que els 
 * **Entitat**
 Una entitat és un objecte del món real que podem distingir de la resta d'objectes de manera única.
 
---
+----
 
 ## Conceptes  (3/4)
 
@@ -52,7 +52,7 @@ Un atribut identificador és el que permet distingir inequívocament cada regist
 
 és el conjunt de valors que un atribut determinat pot prendre.
 
---
+----
 
 ## Conceptes  (4/4)
 
