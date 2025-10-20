@@ -5,6 +5,12 @@
   },
   "presentations": [
     {
+        "order":0,
+        "title": "0 - prova",
+        "src": "slides/prova.reveal",
+        "description": "Això és una prova!"
+    },
+    {
       "order": 1,
       "title": "1. Introducció",
       "src": "slides/introduccio.reveal",
@@ -15,6 +21,12 @@
       "title": "2. Introducció XML",
       "src": "slides/002_Introduccio_XML.reveal",
       "description": "Introducció al concepte XML"
+    },
+    {
+      "order": 3,
+      "title": "HTML — Introducció i elements essencials",
+      "src": "slides/0373_001_HTML_Basics.reveal",
+      "description": "HTML — Introducció i elements essencials"
     }
   ]
 }

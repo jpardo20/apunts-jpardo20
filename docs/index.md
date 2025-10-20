@@ -18,3 +18,8 @@
 ### [0484 - Bases de dades](moduls/0484-bases-de-dades/presentacions/index.html)
 
 <hr>
+
+## Mòduls de DAM 0373 - Llenguatges de marques
+
+### [RA (Resultats d'Aprenentatge)](moduls/0373-llenguatges-de-marques/apunts/index.html)
+### [Presentacions](moduls/0373-llenguatges-de-marques/presentacions/index.html)
