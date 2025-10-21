@@ -17,6 +17,13 @@
 
 ### [0484 - Bases de dades](moduls/0484-bases-de-dades/presentacions/index.html)
 
+ - [Activitats](moduls/0484-bases-de-dades/activitats/files/index.html)
+
+
+### [0483 - Sistemes Informàtics](moduls/0483-sistemes-informatics/presentacions/index.html)
+
+ - [Activitats](moduls/0483-sistemes-informatics/presentacions/index.html)
+
 <hr>
 
 ## Mòduls de DAM 0373 - Llenguatges de marques
