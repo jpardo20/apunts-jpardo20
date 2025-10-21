@@ -15,7 +15,7 @@
 
 ## [Activitat de traducció per seguir amb la teoria](##3-activitat-de-traducció-per-seguir-amb-la-teoria)
 
-## [**`AcRA1`**: Activitat 1: Contenidor final fet amb de Docker (dilluns 7 d'octubre de 2024 i dimarts 8 d'octubre de 2024)](#4-acra1-activitat-1-contenidor-final-fet-amb-de-docker-dilluns-7-doctubre-de-2024-i-dimarts-8-doctubre-de-2024)
+<!-- ## [**`AcRA1`**: Activitat 1: Contenidor final fet amb de Docker (dilluns 7 d'octubre de 2024 i dimarts 8 d'octubre de 2024)](#4-acra1-activitat-1-contenidor-final-fet-amb-de-docker-dilluns-7-doctubre-de-2024-i-dimarts-8-doctubre-de-2024) -->
 
 <hr>
 
