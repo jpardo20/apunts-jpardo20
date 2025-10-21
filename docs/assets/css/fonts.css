@@ -1,6 +1,7 @@
 .codi{
-    background-color:PowderBlue;
+    background-color:lightgray;
     font-family: monospace;
+    color: blue;
 }
 
 .negreta{
@@ -8,9 +9,13 @@
 }
 
 .petit{
-    font-size: smaller;
+    font-size: 30px;
 }
 
 .vermell{
     color: red;
+}
+
+.minuscules{
+    text-transform: lowercase;
 }
