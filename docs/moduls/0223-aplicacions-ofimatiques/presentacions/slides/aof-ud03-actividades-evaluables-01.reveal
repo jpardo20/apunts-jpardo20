@@ -210,28 +210,28 @@ uso. Puedes utilizar viñetas/guiones si lo crees necesario.
 
 Realiza las siguientes operaciones utilizando [www.ilovepdf.com](www.ilovepdf.com):
 
-*  Une en un solo PDF los documentos:
-**`<PrimerApellidoAlumno>-aof-ud03-ae01-2a-ent.pdf`** y
-**`<PrimerApellidoAlumno>-aof-ud03-ae01-3a-ent.pdf`**
+*  Une en un solo PDF (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent.pdf`**) los documentos:
 
-*  Divide el PDF del enunciado de esta unidad, incluyendo solo páginas pares.
+- [Prevención de riesgos en el uso de portátiles](https://www.unileon.es/intranet/prevencion/pvd_portatiles.pdf).
+- [combined_parent_al_guides.pdf](https://jpardo20.github.io/apunts-jpardo20/assets/files/combined_parental_guides.pdf).
 
-*  Convierte el PDF de los enunciados de esta unidad a Word (.docx).
+*  Divide el PDF que acabáis de crear (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent.pdf`**), incluyendo solo páginas pares, con el nombre (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent-pares.pdf`**).
 
-*  Añade al PDF con los enunciados de esta unidad una marca de agua con tu nombre (sin apellidos).
+*  Convierte el PDF **`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent.pdf`** a Word (.docx), y guárdalo con el nombre (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent-word.docx`**).
 
-*  Protege el PDF con los enunciados de esta unidad.
+*  Añade al PDF (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent.pdf`**) una marca de agua con tu nombre (sin apellidos), y guárdalo con el nombre (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent-marca.pdf`**).
 
+*  Protege el PDF , y guárdalo con el nombre (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent.pdf`**), y guárdalo con el nombre (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent-protegido.pdf`**).
 ----
 
 > <hr>
 > 
 > ### A entregar
-> 1. Deberás subir a tu repositorio los cinco documentos PDF's con las actividades propuestas. El nombre de cada PDF será:
+> 1. Deberás subir a tu repositorio un fichero comprimido con los cinco documentos PDF's con las actividades propuestas. El nombre del fichero comprimido será:
 > 
-> **`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent-XXXXX.pdf`** (**todo en minúsculas**), donde “XXXXX” es el tipo de PDF generado.
+> **`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent.zip`** (**todo en minúsculas**).
 >
-> En el documento **`README.md`** de tu repositorio local, bajo el título `## 4a entrega`, debes de crear un enlaces a cada uno de los documentos pdf que acabas de crear y subir.
+> En el documento **`README.md`** de tu repositorio local, bajo el título `## 4a entrega`, debes de crear un enlaces a cada uno de los documentos pdf que acabas de crear y subir, incluido el fichero comprimido.
 > <hr>
 
 
