@@ -125,19 +125,17 @@ Aquest atribut podria emmagatzemar dades de tipus enter. I també se'n podria li
 
 ---
 
-## Valor `nul` dels atributs
+## Valor `null` dels atributs
 
-De vegades, el valor d'un atribut és desconegut o, fins i tot, no existeix. Per representar aquesta circumstància, l'atribut en qüestió haurà d'admetre el valor nul.
+De vegades, el valor d'un atribut és desconegut o, fins i tot, no existeix.
+
+Per representar aquesta circumstància, l'atribut en qüestió haurà d'admetre el valor **`null`**.
 
 L'expressió valor nul indica que no hi ha cap valor associat a un atribut determinat d'una entitat instància concreta.
 
-
-
-
-
 ---
 
-## Exemple de valor `nul` (1/2)
+## Exemple de valor `null` (1/2)
 
 Considerem ara que l'entitat ALUMNES disposa d'un atribut anomenat telefon.
 
@@ -150,7 +148,7 @@ No confondre valor nul amb el zero, o amb l'espai en blanc.
 
 ---
 
-## Exemple de valor `nul` (2/2)
+## Exemple de valor `null` (2/2)
 
 ![alt text](../../../assets/img/exemple-valor-null.png)
 

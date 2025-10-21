@@ -46,7 +46,7 @@
     },
     {
       "id": "004_Relacions_MER",
-      "title": "Pres_004_Relacions_MER",
+      "title": "Relacions (MER)",
       "description": "",
       "src": "slides/004_Relacions_MER.reveal",
       "theme": "white",
@@ -56,9 +56,29 @@
     },
     {
       "id": "005_Claus_MER",
-      "title": "Pres_005_Claus_MER",
+      "title": "Claus (MER)",
       "description": "",
       "src": "slides/005_Claus_MER.reveal",
+      "theme": "white",
+      "tags": [
+        "BBDD"
+      ]
+    },
+    {
+      "id": "Activitat_1_creacio_entitat",
+      "title": "Activitat 1:Creació Entitat",
+      "description": "",
+      "src": "files/DAM_base-de-dades-act-001-creacioEntitat.pdf",
+      "theme": "white",
+      "tags": [
+        "BBDD"
+      ]
+    },
+    {
+      "id": "Activitat_2-analisi-pet-flix",
+      "title": "2:Anàlisi PET-Flix",
+      "description": "",
+      "src": "files/DAM_base-de-dades-act-002_PET_Flix.pdf",
       "theme": "white",
       "tags": [
         "BBDD"

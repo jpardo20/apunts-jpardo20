@@ -1,94 +1,81 @@
-# Pres_005_Claus_MER
-
-## Diapositiva 1
-
-DAM1 MP02 BDS
-
-UF01 - Introducció a les
-Bases de Dades
-
-Claus (MER)
+# Claus (**`MER`**)
 
 ---
 
-## Diapositiva 2
+## Claus primàries (<span class="codi">PK</span> - `Primary Key`)
 
-La clau primària o identificador:
-és el conjunt d'atributs que identifiquen de forma única a cada registre d'una entitat
-Normalment s'utilitzen codis, referències, dates (quan no hi hagi dues de repetides)...
-no utilitzar:
-noms,
-descripcions,
-ni qualsevol altre conjunt d'alfanumèrics
+* La **clau primària** o identificador:
 
-Claus primàries
-(PK - Primary Key)
+  * és el conjunt d'atributs que identifiquen de **forma única** a cada registre d'una entitat
 
-‹#› de 12
+* Normalment s'utilitzen **codis**, **referències**, **dates** (<u>quan no hi hagi dues de repetides</u>)...
 
----
+* no utilitzar:
 
-## Diapositiva 3
-
-Una clau alternativa és un atribut que és alternatiu a la clau primària, però pot no identificar únicament a un registre.
-
-Serveix per identificar noms, descripcions, adreces...
-
-Claus alternatives
-
-‹#› de 12
+  * noms,
+    
+  * descripcions,
+    
+  * ni qualsevol altre **conjunt d'alfanumèrics**
 
 ---
 
-## Diapositiva 4
+## Claus alternatives
 
-És l’atribut o conjunt d’atributs d’una entitat que fan referència a  la clau primària d’una altra entitat.
+* Una **clau alternativa** és un **atribut** que és alternatiu a la **clau primària**, però **pot no identificar únicament** a un registre.
 
-Les claus secundàries es troben reflectides a les cardinalitats de les relacions en el model entitat-relació.
+*   Serveix per identificar **noms**, **descripcions**, **adreces**...
 
-Claus Secundàries(FK - Foreing Key)
 
-‹#› de 12
+
+
 
 ---
 
-## Diapositiva 5
+## Claus Secundàries (<span class="codi">FK</span> - `Foreing Key`)
 
-A una relació 1:N, l’entitat que té com a cardinalitat N és la que té la clau secundària.
+És l’**atribut** o **conjunt d’atributs** d’una *entitat* que fan referència a la **clau primària** d’una altra *entitat*.
+
+Les **`claus secundàries`** es troben reflectides a les cardinalitats de les relacions en el **model entitat-relació**.
+
+
+
+
+---
+
+## Claus secundàries Relacions <span class="codi">1:N</span> <span class="petit minuscules">(1 de 2)</span>
+
+A una **relació** <span class="codi">1:N</span>, l’**entitat** que té com a **cardinalitat** **`N`** és la que té la **clau secundària**.
 En un curs hi ha molts alumnes
 (1,n)
 un alumne està només en un curs
 (1,1)
 
-Claus secundàriesRelacions 1:N 	 					  (1 de 2)
 
-‹#› de 12
+![alt text](image.png)
 
 ---
 
-## Diapositiva 6
-
-Claus secundàries
-Relacions 1:N 	 					  (2 de 2)
-
+## Claus secundàries Relacions <span class="codi">1:N</span> <span class="petit minuscules">(2 de 2)</span>
+    
 CURSOS
 Codi, descripció del curs, durada
 
 ALUMNES
 DNI, Nom, IdCurs
 
-‹#› de 12
+
 
 ---
 
 ## Diapositiva 7
 
 Claus secundàries
-Relacions 1:N 	 					  (2 de 2)
+Relacions <span class="codi">1:N</span> 	 					  (2 de 2)
 
 CURSOS
 
-‹#› de 12
+
 
 ALUMNES
 
@@ -101,7 +88,7 @@ A relacions N:M, generen una taula que té com a nom el nom de les dues taules i
 Claus secundàries
 Relacions N:M	 					  (1 de 3)
 
-‹#› de 12
+
 
 ---
 
@@ -110,7 +97,7 @@ Relacions N:M	 					  (1 de 3)
 Claus secundàries
 Relacions N:M	 					  (3 de 3)
 
-‹#› de 12
+
 
 CARRETERES
 CodiCarretera, distància, nivell de perillositat.
@@ -124,11 +111,11 @@ IdCarretera, CodiTerme,
 ## Diapositiva 10
 
 Claus secundàries
-Relacions 1:N 	 					  (2 de 2)
+Relacions <span class="codi">1:N</span> 	 					  (2 de 2)
 
 CARRETERES
 
-‹#› de 12
+
 
 TERMESMUNICIPALS
 
@@ -137,11 +124,11 @@ TERMESMUNICIPALS
 ## Diapositiva 11
 
 Claus secundàries
-Relacions 1:N 	 					  (2 de 2)
+Relacions <span class="codi">1:N</span> 	 					  (2 de 2)
 
 CARRETERESTERMESMUNICIPALS
 
-‹#› de 12
+
 
 ---
 
@@ -156,7 +143,7 @@ interessa conèixer el rang de km de cada municipi, km d'entrada i km de sortida
 Claus secundàries
 Relacions N:M	 					  (2 de 3)
 
-‹#› de 12
+
 
 ---
 
@@ -165,7 +152,7 @@ Relacions N:M	 					  (2 de 3)
 Claus secundàries
 Relacions N:M	 					  (3 de 3)
 
-‹#› de 12
+
 
 CARRETERES
 CodiCarretera, distància, nivell de perillositat.
@@ -187,7 +174,7 @@ Són primaris els identificadors de les taules que aporten un molts a la relaci�
 Claus secundàries
 Relacions de grau 3 o més	 		(1 de 3)
 
-‹#› de 12
+
 
 ---
 
@@ -200,7 +187,7 @@ Un curs, en un mòdul té matriculats com a mínim a un alumne.				(1,n)
 Claus secundàries
 Relacions de grau 3 o més	 		(2 de 3)
 
-‹#› de 12
+
 
 ---
 
@@ -218,7 +205,7 @@ IdAlumne, IdModul, IdCurs, nota
 Claus secundàries
 Relacions de grau 3 o més	 		(3 de 3)
 
-‹#› de 12
+
 
 ---
 
@@ -226,4 +213,3 @@ Relacions de grau 3 o més	 		(3 de 3)
 
 TRADUCCIÓ MER a Model relacional
 
-‹#› de 12
