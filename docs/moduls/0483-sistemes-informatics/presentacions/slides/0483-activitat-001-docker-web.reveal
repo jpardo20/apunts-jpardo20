@@ -261,7 +261,14 @@ Com ha de quedar
 ```bash
 docker compose down
 tar czf projecte_web.tar.gz ~/projectes/docker-nginx
+python3 -m http.server 8000
 ```
+
+Al PC (Windows):
+
+Obre el navegador i ves a:
+http://192.168.56.118:8000/
+
 
 ----
 
