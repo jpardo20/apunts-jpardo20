@@ -215,13 +215,34 @@ Realiza las siguientes operaciones utilizando [www.ilovepdf.com](www.ilovepdf.co
 - [Prevención de riesgos en el uso de portátiles](https://www.unileon.es/intranet/prevencion/pvd_portatiles.pdf).
 - [combined_parent_al_guides.pdf](https://jpardo20.github.io/apunts-jpardo20/assets/files/combined_parental_guides.pdf).
 
+
+----
+
+## 4a entrega dividir
+
 *  Divide el PDF que acabáis de crear (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent.pdf`**), incluyendo solo páginas pares, con el nombre (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent-pares.pdf`**).
+
+----
+
+## 4a entrega convertir a **`docx`**
+
 
 *  Convierte el PDF **`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent.pdf`** a Word (.docx), y guárdalo con el nombre (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent-word.docx`**).
 
+----
+
+## 4a entrega añadir marca de agua
+
+
 *  Añade al PDF (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent.pdf`**) una marca de agua con tu nombre (sin apellidos), y guárdalo con el nombre (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent-marca.pdf`**).
 
+----
+
+## 4a entrega proteger
+
+
 *  Protege el PDF , y guárdalo con el nombre (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent.pdf`**), y guárdalo con el nombre (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent-protegido.pdf`**).
+
 ----
 
 > <hr>
@@ -233,7 +254,6 @@ Realiza las siguientes operaciones utilizando [www.ilovepdf.com](www.ilovepdf.co
 >
 > En el documento **`README.md`** de tu repositorio local, bajo el título `## 4a entrega`, debes de crear un enlaces a cada uno de los documentos pdf que acabas de crear y subir, incluido el fichero comprimido.
 > <hr>
-
 
 ---
 
