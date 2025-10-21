@@ -20,7 +20,13 @@
 <h3>0373 - Llenguatges de marques</h3>
 <ul><li><p><a href="moduls/0373-llenguatges-de-marques/presentacions/index.html">Presentacions</a></p></li></ul>
 <h3>0484 - Bases de dades</h3>
-<ul><li><p><a href="moduls/0484-bases-de-dades/presentacions/index.html">Presentacions</a></p></li></ul>
+<ul>
+<li><p><a href="moduls/0484-bases-de-dades/presentacions/index.html">Presentacions</a></p></li>
+<li><p><a href="moduls/0484-bases-de-dades/activitats/0484-aof-ud03-ae02-interactiva.html">Activitat <u>`0484-aof-ud03-ae02`</u>: Treballem les JOIN</a></p></li>
+
+</ul>
+
+
 <h3>0483 - Sistemes Informàtics</h3>
 <ul><li><p><a href="moduls/0483-sistemes-informatics/presentacions/index.html">Presentacions</a></p></li></ul>
 
