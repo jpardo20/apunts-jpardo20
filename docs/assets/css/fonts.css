@@ -19,3 +19,7 @@
 .minuscules{
     text-transform: lowercase;
 }
+
+h3+a {
+    color: pink!important;
+}

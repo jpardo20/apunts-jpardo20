@@ -5,28 +5,33 @@ site_url: https://jpardo20.github.io/apunts-jpardo20/
 nav:
   - Inici: index.md
   - Mòduls de SMX:
-      - 0221 - Muntatge i manteniment d’equips:
-          - Presentacions: moduls/0221-muntatge-i-manteniment-d-equips/presentacions/index.html
-      - 0223 - Aplicacions Ofimàtiques:
-          - Presentacions: moduls/0223-aplicacions-ofimatiques/presentacions/index.html
-      - 0225 - Xarxes locals:
-          - Presentacions: moduls/0225-xarxes-locals/presentacions/index.html
+    - 0221 Muntatge i manteniment d’equips moduls:
+      - Presentacions:
+        - Presentacions:  moduls/0221-muntatge-i-manteniment-d-equips/presentacions/index.html
+    - 0223 Aplicacions ofimàtiques:
+      - Presentacions:
+        - Presentacions:  moduls/0223-aplicacions-ofimatiques/presentacions/index.html
+    - 0225 Xarxes locals:
+      - Presentacions:
+        - Presentacions:  moduls/0223-aplicacions-ofimatiques/presentacions/index.html
   - Mòduls de DAM:
-      - 0373 - Llenguatges de marques:
-          - Presentacions: moduls/0373-llenguatges-de-marques/presentacions/index.html
-      - 0484 - Bases de dades:
-          - Presentacions: moduls/0484-bases-de-dades/presentacions/index.html
-          - Activitats: moduls/0484-bases-de-dades/activitats/files/index.html
-      - 0483 - Sistemes Informàtics:
-          - Activitats: moduls/0483-sistemes-informatics/activitats/files/index.html
-
-  - <h3>Mòduls de DAM</h3>:
-  
     - 0373 - Llenguatges de marques:
-        - Resultats d'Aprenentatge (RA): 
-          - apunts: moduls/0373-llenguatges-de-marques/apunts/index.html
-        - Presentacions:
-          - Presentacions:  moduls/0373-llenguatges-de-marques/presentacions/index.html
+      - Presentacions:
+        - Presentacions:  moduls/0373-llenguatges-de-marques/presentacions/index.html
+    - 0484 - Bases de dades:
+      - Presentacions:
+        - Presentacions:  moduls/0484-bases-de-dades/presentacions/index.html
+    - 0483 - Sistemes Informàtics:
+      - Presentacions:
+        - Presentacions:  moduls/0483-sistemes-informatics/presentacions/index.html 
+
+  # - <h3>Mòduls de DAM</h3>:
+  
+  #   - 0373 - Llenguatges de marques:
+  #       - Resultats d'Aprenentatge (RA): 
+  #         - apunts: moduls/0373-llenguatges-de-marques/apunts/index.html
+  #       - Presentacions:
+  #         - Presentacions:  moduls/0373-llenguatges-de-marques/presentacions/index.html
 
   
 
