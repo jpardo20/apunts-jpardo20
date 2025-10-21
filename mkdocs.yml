@@ -16,11 +16,10 @@ nav:
           - Presentacions: moduls/0373-llenguatges-de-marques/presentacions/index.html
       - 0484 - Bases de dades:
           - Presentacions: moduls/0484-bases-de-dades/presentacions/index.html
-          - Activitat 1:Creació Entitat: : moduls/0484-bases-de-dades/files/DAM_base-de-dades-act-001-creacioEntitat.pdf
-          - Activitat 2:Anàlisi PET-Flix: moduls/0484-bases-de-dades/files/DAM_base-de-dades-act-002_PET_Flix.pdf
-
+          - Activitats: moduls/0484-bases-de-dades/activitats/files/index.html
 
   - <h3>Mòduls de DAM</h3>:
+  
     - 0373 - Llenguatges de marques:
         - Resultats d'Aprenentatge (RA): 
           - apunts: moduls/0373-llenguatges-de-marques/apunts/index.html
