@@ -251,6 +251,12 @@ Repeteix aquesta comanda, mentre apareguin contenidors aturats:
 
 ----
 
+Com ha de quedar
+
+![alt text](image.png)
+
+----
+
 4.2. Quan funcioni, fes:
 ```bash
 docker compose down

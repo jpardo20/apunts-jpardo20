@@ -10,6 +10,13 @@
       "src": "slides/presentacio-ip-mascara.reveal",
       "description": "Adreça IP i màscara de subxarxa",
       "status": "active"
+    },
+    {
+      "order": 2,
+      "title": "Activitat",
+      "src": "slides/activitats/activitat.html",
+      "description": "Adreça IP i màscara de subxarxa",
+      "status": "active"
     }
   ]
 }

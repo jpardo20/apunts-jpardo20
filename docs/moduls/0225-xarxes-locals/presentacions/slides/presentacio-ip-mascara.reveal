@@ -256,7 +256,7 @@ Note:
 - L'activitat genera un fitxer `.json` per pujar a l'aula virtual.
 
 **Entra a l'activitat:**  
-<a class="button" href="activitats/ip-mascara/activitat.html">Obrir activitat (ip-mascara)</a>
+<a class="button" href="../../activitats/activitat.html">Obrir activitat (ip-mascara)</a>
 
 Note:
 - Explica que l'activitat calcula la nota automàticament i aplica una penalització del 10% a partir del 2n intent (per alumne).
