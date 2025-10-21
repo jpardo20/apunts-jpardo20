@@ -94,7 +94,7 @@ Repeteix aquesta comanda, mentre apareguin contenidors aturats:
 1.7. Comprova si tens la imatge de **nginx** descarregada:
 
    ```bash
-   docker image nginx
+   docker image ls
    ```
 ----
 
@@ -104,15 +104,15 @@ Repeteix aquesta comanda, mentre apareguin contenidors aturats:
    ```
 ----
 
-1.9. Executa-la exposant el **port `8080`**:
+1.9. Executa-la exposant el **port `8888`**:
    ```bash
-   docker run -d -p 8080:80 --name web1 nginx
+   docker run -d -p 8888:80 --name web1 nginx
    ```
 ----
 
 1.10. Comprova el funcionament:  
    - Obre el navegador del teu equip i escriu:  
-      `http://192.168.56.101:8080`  
+      `http://192.168.56.101:8888`  
    - Hauries de veure la pàgina per defecte de Nginx.
 
 ----
@@ -125,8 +125,8 @@ Repeteix aquesta comanda, mentre apareguin contenidors aturats:
 
 1.12. Atura i elimina el contenidor:
    ```bash
-   docker stop web1
-   docker rm web1
+   docker container stop web1
+   docker container rm web1
    ```
 
 ---
@@ -151,14 +151,14 @@ Repeteix aquesta comanda, mentre apareguin contenidors aturats:
 
 2.3. Executa Nginx amb un volum:
    ```bash
-   docker run -d -p 8080:80    -v ~/projectes/docker-nginx/html:/usr/share/nginx/html    --name web2 nginx
+   docker run -d -p 8888:80    -v ~/projectes/docker-nginx/html:/usr/share/nginx/html    --name web2 nginx
    ```
 
 ----
 
 
 2.4. Comprova al navegador:  
-   `http://192.168.56.101:8080`  
+   `http://192.168.56.101:8888`  
    Ara hauries de veure la teva pròpia pàgina.
 
 ----
@@ -174,8 +174,8 @@ Repeteix aquesta comanda, mentre apareguin contenidors aturats:
 
 2.6. Atura i elimina el contenidor:
    ```bash
-   docker stop web2
-   docker rm web2
+   docker container stop web2
+   docker container rm web2
    ```
 
 ---
@@ -189,7 +189,7 @@ Repeteix aquesta comanda, mentre apareguin contenidors aturats:
      web:
        image: nginx
        ports:
-         - "8080:80"
+         - "8888:80"
        volumes:
          - ./html:/usr/share/nginx/html
    ```
@@ -213,7 +213,7 @@ Repeteix aquesta comanda, mentre apareguin contenidors aturats:
 ----
 
 3.4. Obre el navegador:  
-   `http://192.168.56.101:8080`  
+   `http://192.168.56.101:8888`  
 
 
 ----
