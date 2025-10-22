@@ -126,10 +126,10 @@
 
     <!-- Exercici 5 -->
     <section data-auto-animate>
-      <h3>Exercici 5 — Bonus (opcional)</h3>
+      <h3>Exercici 5</h3>
       <div class="card">
         <p class="q">Per a cada client, mostra el <strong>nom</strong> i el <strong>total de comandes</strong> que ha fet.</p>
-        <label for="q5sql">Consulta SQL (opcional)</label>
+        <label for="q5sql">Consulta SQL</label>
         <textarea id="q5sql" placeholder="Escriu aquí la teva consulta SQL…"></textarea>
       </div>
     </section>
@@ -236,14 +236,16 @@
     if (!p.answers[1].sql) errors.push({ id: 'q2sql', msg: 'SQL exercici 2' });
     if (!p.answers[2].sql) errors.push({ id: 'q3sql', msg: 'SQL exercici 3' });
     if (!p.answers[3].sql) errors.push({ id: 'q4sql', msg: 'SQL exercici 4' });
+    if (!p.answers[3].sql) errors.push({ id: 'q5sql', msg: 'SQL exercici 4' });
     if (!p.answers[0].answer) errors.push({ id: 'q1ans', msg: 'Resposta curta exercici 1' });
     if (!p.answers[1].answer) errors.push({ id: 'q2ans', msg: 'Resposta curta exercici 2' });
     if (!p.answers[2].answer) errors.push({ id: 'q3ans', msg: 'Resposta curta exercici 3' });
     if (!p.answers[3].answer) errors.push({ id: 'q4ans', msg: 'Resposta curta exercici 4' });
+    if (!p.answers[4].answer) errors.push({ id: 'q5ans', msg: 'Resposta curta exercici 5' });
     return errors;
   }
   function clearInvalids(){
-    ['alumneSelect','q1sql','q1ans','q2sql','q2ans','q3sql','q3ans','q4sql','q4ans','q5sql'].forEach(id => byId(id)?.classList.remove('invalid'));
+    ['alumneSelect','q1sql','q1ans','q2sql','q2ans','q3sql','q3ans','q4sql','q4ans','q5sql','q5ans'].forEach(id => byId(id)?.classList.remove('invalid'));
   }
   function markInvalids(errors){ errors.forEach(e => byId(e.id)?.classList.add('invalid')); }
 
@@ -271,7 +273,7 @@
     byId('msg').innerHTML = `<span class="ok">Fitxer descarregat:</span> <span class="kbd">${filename}</span>`;
   });
   byId('btnReset')?.addEventListener('click', () => {
-    ['q1sql','q1ans','q2sql','q2ans','q3sql','q3ans','q4sql','q4ans','q5sql'].forEach(id => { const el = byId(id); if(el) el.value = ''; });
+    ['q1sql','q1ans','q2sql','q2ans','q3sql','q3ans','q4sql','q4ans','q5sql','q5ans'].forEach(id => { const el = byId(id); if(el) el.value = ''; });
     byId('msg').textContent=''; clearInvalids();
   });
 

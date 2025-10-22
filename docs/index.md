@@ -1,5 +1,3 @@
-<!-- <img src="https://digitechfp.com/wp-content/uploads/2023/12/VERT-01-SIN-CAJA-BLANCO-RGB@2x-768x593.png)" width="200" height="auto" style="background-color: #009de0; padding: 14px;"> -->
-
 <h3><strong>Mòduls de SMX</u></strong></h3>
 
 <details>

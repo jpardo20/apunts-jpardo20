@@ -24,15 +24,15 @@
 
 |Grup|Tema|Alumne|Nom repositori|
 |----|----|----|----|
-|A|DHCP|Kristina|`velkovska-dhcp-0225-xlo-ae02-protocols`|
-|B|DNS|Lorena|`cracana-dns-0225-xlo-ae02-protocols`|
-|C|HTTP/HTTPS + TLS|Merouan|`kiass-http-0225-xlo-ae02-protocols`|
-|D|SMTP/IMAP/POP3|Pau|`diaz-smtp-0225-xlo-ae02-protocols`|
-|E|FTP/FTPS/SFTP|Joao|`depaiva-ftp-0225-xlo-ae02-protocols`|
-|F|VLAN 802.1Q|Clemente|`ramos-vlan-0225-xlo-ae02-protocols`|
-|G|SNMP & NTP|Marc|`lopez-0225-snmp-xlo-ae02-protocols`|
+|A|DHCP|Kristina|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-kristina-2008`|
+|B|DNS|Lorena|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-Lorena639`|
+|C|HTTP/HTTPS + TLS|Merouan|`kiass`|
+|D|SMTP/IMAP/POP3|Pau|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-Paudiazlopez`|
+|E|FTP/FTPS/SFTP|Joao|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-jdanioliv.git`|
+|F|VLAN 802.1Q|Clemente|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-clemente825.git`|
+|G|SNMP & NTP|Marc|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-marcl-3`|
 
----
+git@github.com:SMX-2025-2027/presentacio-protocols-
 
 ## 2) Què ha de contenir **cada presentació** (8–10 diapositives)
 
