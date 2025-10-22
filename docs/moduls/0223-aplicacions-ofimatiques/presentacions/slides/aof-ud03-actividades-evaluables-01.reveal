@@ -41,6 +41,8 @@ Antes de empezar, instala en tu sistema <a href="https://okular.kde.org/es/" tar
 
 ----
 
+#### 1a entrega
+
 * **Paso 3**
 
 Descarga el siguiente fichero
@@ -54,8 +56,8 @@ Descarga el siguiente fichero
 > #### ¿Se pueden realizar anotaciones?
 > <hr>
 
-
 ----
+#### 1a entrega
 
 > <hr>
 >
@@ -70,6 +72,7 @@ Dado las características de este documento (todos los datos son todo datos púb
 Utilizaremos la web [www.ilovepdf.com](www.ilovepdf.com) para desbloquearlo y permitir su edición.
 
 ----
+#### 1a entrega
 
 ><hr> 
 >
@@ -86,7 +89,9 @@ Utilizaremos la web [www.ilovepdf.com](www.ilovepdf.com) para desbloquearlo y pe
 
 ----
 
-No oldives de hacer los comandos de **`git`**
+#### 1a entrega
+
+No oldives de hacer los comandos de **`git`** para subir tus canvios y ficheros a tulrepositorio remoto
 
 ```git
 git add README.md # y otros ficheros, como los ficheros de las capturas
@@ -105,6 +110,8 @@ Suponiendo que debieras estudiar el documento de la actividad anterior para un e
 
 ----
 
+#### 2a entrega
+
 En este caso, debe realizarse al menos estos tipos de anotaciones, incluyendo para cada una al menos dos usos, con distinto color y opacidad:
 
 *  Subrayado/resaltado.
@@ -119,6 +126,8 @@ En este caso, debe realizarse al menos estos tipos de anotaciones, incluyendo pa
 
 ----
 
+#### 2a entrega
+
 > <hr>
 >
 > ### Importante
@@ -127,6 +136,8 @@ En este caso, debe realizarse al menos estos tipos de anotaciones, incluyendo pa
 > <hr>
 
 ----
+#### 2a entrega
+
 
 > <hr>
 > 
@@ -141,6 +152,9 @@ En este caso, debe realizarse al menos estos tipos de anotaciones, incluyendo pa
 
 ----
 
+#### 2a entrega
+
+
 > <hr>
 > 
 > ### TIP
@@ -149,7 +163,21 @@ En este caso, debe realizarse al menos estos tipos de anotaciones, incluyendo pa
 >
 > <hr>
 
----
+----
+
+#### 2a entrega
+
+No oldives de hacer los comandos de **`git`** para subir tus canvios y ficheros a tulrepositorio remoto
+
+```git
+git add README.md # y otros ficheros, como los ficheros de las capturas
+
+git commit -m "un comentario indicando los canvios realizados."
+
+git push -u origin main
+
+```
+
 
 ## 3a entrega
 
@@ -161,8 +189,9 @@ Como el texto está **en inglés**, las anotaciones deben realizarse **en inglé
 
 ----
 
-En este caso, debe realizarse al menos estos tipos de anotaciones, incluyendo para cada una al menos dos usos, con distinto color y opacidad:
+#### 3a entrega
 
+En este caso, debe realizarse al menos estos tipos de anotaciones, incluyendo para cada una al menos dos usos, con distinto color y opacidad:
 
 *  Resaltado.
 
@@ -176,6 +205,8 @@ En este caso, debe realizarse al menos estos tipos de anotaciones, incluyendo pa
 
 ----
 
+#### 3a entrega
+
 Finalmente, realiza un texto donde resuma los principales consejos del documento.
 
 > <hr>
@@ -187,6 +218,8 @@ Finalmente, realiza un texto donde resuma los principales consejos del documento
 
 ----
 
+#### 3a entrega
+
 Este texto deberá constar de:
 
 *  Un párrafo introductorio (Ejemplo: párrafo explicando de que vais a hablar).
@@ -196,6 +229,8 @@ uso. Puedes utilizar viñetas/guiones si lo crees necesario.
 
 ----
 
+#### 3a entrega
+
 > <hr>
 > 
 > ### A entregar
@@ -203,6 +238,19 @@ uso. Puedes utilizar viñetas/guiones si lo crees necesario.
 >
 > En el documento **`README.md`** de tu repositorio local, bajo el título `## 3a entrega`, debes de crear un enlace al documento pdf que acabas de crear y subir.
 > <hr>
+
+----
+
+#### 3a entrega
+
+No oldives de hacer los comandos de **`git`** para subir tus canvios y ficheros a tulrepositorio remoto
+
+```git
+git add README.md # y otros ficheros, como los ficheros de las capturas
+
+git commit -m "un comentario indicando los canvios realizados."
+
+git push -u origin main
 
 ---
 
@@ -218,32 +266,34 @@ Realiza las siguientes operaciones utilizando [www.ilovepdf.com](www.ilovepdf.co
 
 ----
 
-## 4a entrega dividir
+#### 4a entrega dividir
 
 *  Divide el PDF que acabáis de crear (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent.pdf`**), incluyendo solo páginas pares, con el nombre (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent-pares.pdf`**).
 
 ----
 
-## 4a entrega convertir a **`docx`**
+#### 4a entrega convertir a **`docx`**
 
 
 *  Convierte el PDF **`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent.pdf`** a Word (.docx), y guárdalo con el nombre (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent-word.docx`**).
 
 ----
 
-## 4a entrega añadir marca de agua
+#### 4a entrega añadir marca de agua
 
 
 *  Añade al PDF (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent.pdf`**) una marca de agua con tu nombre (sin apellidos), y guárdalo con el nombre (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent-marca.pdf`**).
 
 ----
 
-## 4a entrega proteger
+#### 4a entrega proteger
 
 
 *  Protege el PDF , y guárdalo con el nombre (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent.pdf`**), y guárdalo con el nombre (**`<PrimerApellidoAlumno>-aof-ud03-ae01-4a-ent-protegido.pdf`**).
 
 ----
+
+#### 4a entrega proteger
 
 > <hr>
 > 
@@ -254,6 +304,19 @@ Realiza las siguientes operaciones utilizando [www.ilovepdf.com](www.ilovepdf.co
 >
 > En el documento **`README.md`** de tu repositorio local, bajo el título `## 4a entrega`, debes de crear un enlaces a cada uno de los documentos pdf que acabas de crear y subir, incluido el fichero comprimido.
 > <hr>
+
+----
+
+#### 4a entrega
+
+No oldives de hacer los comandos de **`git`** para subir tus canvios y ficheros a tulrepositorio remoto
+
+```git
+git add README.md # y otros ficheros, como los ficheros de las capturas
+
+git commit -m "un comentario indicando los canvios realizados."
+
+git push -u origin main
 
 ---
 
@@ -292,7 +355,7 @@ Utiliza las herramientas de anotación para editar ese PDF. En este caso, debe r
 > <hr>
 > 
 > ### A entregar
-> 1. Deberás entregar los PDFs de la entrega anotados, en un fichero comprimido 
+> Deberás entregar los PDFs de la entrega anotados, en un fichero comprimido 
 > **`<PrimerApellidoAlumno>-aof-ud03-ae01-5a-ent.zip`** (**todo en minúsculas**)
 >
 > teniendo cada uno el título
@@ -300,6 +363,19 @@ Utiliza las herramientas de anotación para editar ese PDF. En este caso, debe r
 >
 > En el documento **`README.md`** de tu repositorio local, bajo el título `## 5a entrega`, debes de crear un enlaces a cada uno de los documentos pdf que acabas de crear y subir.
 > <hr>
+
+----
+
+#### 5a entrega
+
+No oldives de hacer los comandos de **`git`** para subir tus canvios y ficheros a tulrepositorio remoto
+
+```git
+git add README.md # y otros ficheros, como los ficheros de las capturas
+
+git commit -m "un comentario indicando los canvios realizados."
+
+git push -u origin main
 
 ---
 
