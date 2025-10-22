@@ -263,15 +263,15 @@ En el siguiente enlace <a href="https://github.com/sergarb1/documentostutoriacic
 
 Utiliza las herramientas de anotación para editar ese PDF. En este caso, debe realizarse al menos estos tipos de anotaciones, incluyendo para cada una al menos dos usos, con distinto color y opacidad:
 
-*  Subrayado/resaltado.
+*  Subrayado/resaltado. (**`XXXXX`** = **`marca`**)
 
-*  Añadir texto.
+*  Añadir texto. (**`XXXXX`** = **`afegir`**)
 
-*  Nota en línea (Post-it siempre visibles).
+*  Nota en línea (Post-it siempre visibles).  (**`XXXXX`** = **`nota-linea`**)
 
-*  Nota emergente (Post-it no visibles, se muestran cuando hacemos clic).
+*  Nota emergente (Post-it no visibles, se muestran cuando hacemos clic). (**`XXXXX`** = **`nota-emer`**)
 
-*  Flechas y formas.
+*  Flechas y formas.  (**`XXXXX`** = **`flechas`**)
 
 ----
 
@@ -292,10 +292,13 @@ Utiliza las herramientas de anotación para editar ese PDF. En este caso, debe r
 > <hr>
 > 
 > ### A entregar
-> 1. Deberás entregar los PDFs de tutoría anotados, teniendo cada uno el título
+> 1. Deberás entregar los PDFs de tutoría anotados, en un fichero comprimido 
+> **`<PrimerApellidoAlumno>-aof-ud03-ae01-5a-ent.zip`** (**todo en minúsculas**)
+>
+> teniendo cada uno el título
 > **`<PrimerApellidoAlumno>-aof-ud03-ae01-5a-ent-XXXXX.pdf`** (**todo en minúsculas**), donde “XXXXX” indica que PDF es.
 >
-> En el documento **`README.md`** de tu repositorio local, bajo el título `## 4a entrega`, debes de crear un enlaces a cada uno de los documentos pdf que acabas de crear y subir.
+> En el documento **`README.md`** de tu repositorio local, bajo el título `## 5a entrega`, debes de crear un enlaces a cada uno de los documentos pdf que acabas de crear y subir.
 > <hr>
 
 ---
