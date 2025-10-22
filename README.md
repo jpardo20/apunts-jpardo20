@@ -1,2 +1,0 @@
-# apunts-jpardo20
-
