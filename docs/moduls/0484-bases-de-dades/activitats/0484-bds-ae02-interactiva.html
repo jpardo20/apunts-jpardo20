@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>0484-aof-ud03-ae02 · Activitat JOIN (botiga)</title>
+  <title>0484-bds-ae02 · Activitat JOIN (botiga)</title>
   <style>
     /* --- Tema clar --- */
     :root {
@@ -137,7 +137,7 @@
       <h1>Activitat · JOIN en SQL (BD <code>botiga</code>)</h1>
       <div class="sub">
         Mòdul 0484 — Bases de Dades (DAM).<br>
-        Codi: <strong>0484-aof-ud03-ae02</strong><br>
+        Codi: <strong>0484-bds-ae02</strong><br>
         Respon les preguntes i descarrega el teu fitxer <code>.json</code> per lliurar a l'aula virtual.
       </div>
 
@@ -284,7 +284,7 @@
       const studentName = nameFromSel || '';
 
       const payload = {
-        activity_code: '0484-aof-ud03-ae02',
+        activity_code: '0484-bds-ae02',
         activity_title: 'Treballem les JOIN (botiga)',
         version: 1,
         submitted_at: new Date().toISOString(),
@@ -379,7 +379,7 @@
 
     function downloadJSON(payload) {
       const email = payload.student.email?.replace(/[^a-zA-Z0-9_.-]/g, '_') || 'alumne';
-      const filename = `${email}_0484-aof-ud03-ae02_respostes.json`;
+      const filename = `${email}_0484-bds-ae02_respostes.json`;
       const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');

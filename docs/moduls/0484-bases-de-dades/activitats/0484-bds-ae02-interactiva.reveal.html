@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>0484-aof-ud03-ae02 · Activitat JOIN (reveal.js)</title>
+  <title>0484-bds-ae02 · Activitat JOIN (reveal.js)</title>
 
   <!-- Reveal.js from CDN -->
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/reveal.css">
@@ -53,7 +53,7 @@
     <!-- Portada -->
     <section data-auto-animate>
       <h2>Activitat · JOIN en SQL <span class="pill">botiga</span></h2>
-      <p class="muted">Mòdul 0484 — Bases de Dades (DAM)<br>Codi: <strong>0484-aof-ud03-ae02</strong></p>
+      <p class="muted">Mòdul 0484 — Bases de Dades (DAM)<br>Codi: <strong>0484-bds-ae02</strong></p>
       <div class="card">
         <p>Respon les preguntes i, al final, descarrega el fitxer <span class="kbd">.json</span> per lliurar a l’aula virtual.</p>
         <ul>
@@ -138,7 +138,7 @@
     <section data-auto-animate>
       <h3>Descarrega les teves respostes</h3>
       <div class="card">
-        <p>Quan acabis, fes clic al botó: validarem els camps i es generarà el fitxer <span class="kbd">&lt;email&gt;_0484-aof-ud03-ae02_respostes.json</span>.</p>
+        <p>Quan acabis, fes clic al botó: validarem els camps i es generarà el fitxer <span class="kbd">&lt;email&gt;_0484-bds-ae02_respostes.json</span>.</p>
         <div class="btns">
           <button class="ghost" id="btnReset" type="button">Neteja respostes</button>
           <button class="primary" id="btnExport" type="button">Descarrega respostes (.json)</button>
@@ -213,7 +213,7 @@
     const emailFromSel = sel.value ? decodeURIComponent(sel.value) : '';
     const nameFromSel = sel.selectedOptions[0]?.dataset?.name ? decodeURIComponent(sel.selectedOptions[0].dataset.name) : '';
     return {
-      activity_code: '0484-aof-ud03-ae02',
+      activity_code: '0484-bds-ae02',
       activity_title: 'Treballem les JOIN (botiga) — reveal',
       version: 1,
       submitted_at: new Date().toISOString(),
@@ -263,7 +263,7 @@
     clearInvalids();
     if (errors.length) { markInvalids(errors); showModal(errors); return; }
     const email = payload.student.email?.replace(/[^a-zA-Z0-9_.-]/g,'_') || 'alumne';
-    const filename = `${email}_0484-aof-ud03-ae02_respostes.json`;
+    const filename = `${email}_0484-bds-ae02_respostes.json`;
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a'); a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove();

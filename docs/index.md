@@ -22,7 +22,7 @@
 <h3>0484 - Bases de dades</h3>
 <ul>
 <li><p><a href="moduls/0484-bases-de-dades/presentacions/index.html">Presentacions</a></p></li>
-<li><p><a href="moduls/0484-bases-de-dades/activitats/0484-aof-ud03-ae02-interactiva.html">Activitat <u>`0484-aof-ud03-ae02`</u>: Treballem les JOIN</a></p></li>
+<li><p><a href="moduls/0484-bases-de-dades/activitats/0484-bds-ae02-interactiva.html">Activitat <u>`0484-bds-ae02`</u>: Treballem les JOIN</a></p></li>
 
 </ul>
 
