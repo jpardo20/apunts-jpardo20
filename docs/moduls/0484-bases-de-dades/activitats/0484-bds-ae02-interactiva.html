@@ -99,7 +99,7 @@
     .footer { text-align: center; color: var(--muted); font-size: 12px; margin: 22px 0 6px; }
     details > summary { cursor: pointer; }
 
-    /* Modal */
+    /* Modal base */
     .modal {
       position: fixed; inset: 0; display: none; place-items: center;
       background: rgba(2,6,23,.45); z-index: 50; padding: 16px;
@@ -122,6 +122,13 @@
       border: 1px solid #fecaca; border-radius: 999px;
       padding: 4px 10px; font-weight: 700; font-size: 12px;
     }
+    .badge-info {
+      display:inline-flex; align-items:center; gap:8px;
+      background: #e0f2fe; color: #0369a1; /* Sky-100/700 */
+      border: 1px solid #bae6fd;
+      border-radius: 999px;
+      padding: 4px 10px; font-weight: 700; font-size: 12px;
+    }
     .modal-title { font-size: 18px; margin: 0; }
     .modal-body { margin-top: 12px; color: var(--muted); }
     .modal-body ul { margin: 8px 0 0 20px; }
@@ -133,7 +140,7 @@
 
 <body>
   <div class="wrap">
-    <div class="card">
+    <div class="card nocopy">
       <h1>Activitat · JOIN en SQL (BD <code>botiga</code>)</h1>
       <div class="sub">
         Mòdul 0484 — Bases de Dades (DAM).<br>
@@ -160,7 +167,7 @@
         <p class="q">Mostra el <strong>nom del client</strong>, la <strong>ciutat</strong> i la
           <strong>data de comanda</strong> per a totes les comandes existents.</p>
         <label for="q1sql">Consulta SQL</label>
-        <textarea id="q1sql" placeholder="Escriu aquí la teva consulta SQL…"></textarea>
+        <textarea id="q1sql" spellcheck="false" placeholder="Escriu aquí la teva consulta SQL…"></textarea>
         <label for="q1ans">Resposta curta · Quants clients diferents han fet comandes?</label>
         <input id="q1ans" type="text" placeholder="Nombre de clients" />
       </section>
@@ -172,7 +179,7 @@
         <p class="q">Mostra el <strong>nom</strong> i <strong>cognom</strong> de l’empleat, amb el
           <strong>número de comanda</strong> que ha gestionat.</p>
         <label for="q2sql">Consulta SQL</label>
-        <textarea id="q2sql" placeholder="Escriu aquí la teva consulta SQL…"></textarea>
+        <textarea id="q2sql" spellcheck="false" placeholder="Escriu aquí la teva consulta SQL…"></textarea>
         <label for="q2ans">Resposta curta · Quin empleat ha gestionat més comandes?</label>
         <input id="q2ans" type="text" placeholder="Nom i cognom" />
       </section>
@@ -183,7 +190,7 @@
         <h2>Exercici 3 — Clients sense comandes (LEFT JOIN)</h2>
         <p class="q">Mostra <strong>tots els clients</strong> i, si han fet alguna comanda, indica l’<code>IdComanda</code>.</p>
         <label for="q3sql">Consulta SQL</label>
-        <textarea id="q3sql" placeholder="Escriu aquí la teva consulta SQL…"></textarea>
+        <textarea id="q3sql" spellcheck="false" placeholder="Escriu aquí la teva consulta SQL…"></textarea>
         <label for="q3ans">Resposta curta · Quins clients surten amb <code>IdComanda = NULL</code>?</label>
         <textarea id="q3ans" placeholder="Pots llistar noms separats per comes"></textarea>
       </section>
@@ -194,7 +201,7 @@
         <h2>Exercici 4 — Productes sense vendes</h2>
         <p class="q">Mostra els <strong>productes</strong> que <strong>no s’han venut mai</strong>.</p>
         <label for="q4sql">Consulta SQL</label>
-        <textarea id="q4sql" placeholder="Escriu aquí la teva consulta SQL…"></textarea>
+        <textarea id="q4sql" spellcheck="false" placeholder="Escriu aquí la teva consulta SQL…"></textarea>
         <label for="q4ans">Resposta curta · Quants productes no tenen cap comanda associada?</label>
         <input id="q4ans" type="text" placeholder="Nombre de productes" />
       </section>
@@ -205,17 +212,11 @@
         <p class="q">Per a cada client, mostra el <strong>nom</strong> i el <strong>total de comandes</strong> que ha fet.</p>
 
         <label for="q5sql">Consulta SQL</label>
-        <textarea id="q5sql" placeholder="Escriu aquí la teva consulta SQL…"></textarea>
+        <textarea id="q5sql" spellcheck="false" placeholder="Escriu aquí la teva consulta SQL…"></textarea>
 
         <label for="q5ans">Resposta llarga · Explica com ho has resolt</label>
         <textarea id="q5ans" placeholder="Ex: JOIN Clients-Comandes + GROUP BY ClientId + COUNT(*)"></textarea>
         </section>
-      <!-- <section>
-        <h2>Exercici 5</h2>
-        <p class="q">Per a cada client, mostra el <strong>nom</strong> i el <strong>total de comandes</strong> que ha fet.</p>
-        <label for="q5sql">Consulta SQL</label>
-        <textarea id="q5ans" placeholder="Escriu aquí la teva consulta SQL…"></textarea>
-      </section> -->
 
       <div class="btns">
         <button class="ghost" id="btnReset" type="button">Neteja respostes</button>
@@ -242,6 +243,22 @@
       <div class="modal-footer">
         <button class="outline" id="btnCloseModal" type="button">Tanca</button>
         <button class="danger" id="btnGotoError" type="button">Anar al primer error</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal informatiu (per a bloqueig d'enganxar) -->
+  <div id="modalInfo" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalInfoTitle" aria-describedby="modalInfoBody">
+    <div class="modal-card">
+      <div class="modal-header">
+        <span class="badge-info">Avís</span>
+        <h3 class="modal-title" id="modalInfoTitle">Acció no permesa</h3>
+      </div>
+      <div class="modal-body">
+        <p id="modalInfoBody">Enganxar deshabilitat. Escriu la resposta amb les teves paraules.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="outline" id="btnCloseInfo" type="button">D'acord</button>
       </div>
     </div>
   </div>
@@ -274,7 +291,7 @@
         sel.innerHTML = '<option value="">— Selecciona el teu nom —</option>' +
           alumnes.map(a => {
             const name = `${a.firstname ?? ''} ${a.lastname ?? ''}`.trim();
-            const label = `${name || a.email} (${a.email})`;
+            const label = `${name || a.email} (${a.email})`; 
             const val = a.email || label;
             return `<option value="${encodeURIComponent(val)}" data-name="${encodeURIComponent(name)}">${label}</option>`;
           }).join('');
@@ -291,7 +308,7 @@
       const nameFromSel = sel.selectedOptions[0]?.dataset?.name ? decodeURIComponent(sel.selectedOptions[0].dataset.name) : '';
       const studentEmail = emailFromSel;
       const studentName = nameFromSel || '';
-        debugger;
+
       const payload = {
         activity_code: '0484-bds-ae02',
         activity_title: 'Treballem les JOIN (botiga)',
@@ -335,7 +352,7 @@
       errors.forEach(e => byId(e.id)?.classList.add('invalid'));
     }
 
-    // --- Modal helpers ---
+    // --- Modal d'errors helpers ---
     const modal = byId('modal');
     const errList = byId('errList');
     const errCount = byId('errCount');
@@ -367,6 +384,26 @@
         el?.focus();
         el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
+    });
+
+    // --- Modal informatiu helpers ---
+    const modalInfo = byId('modalInfo');
+    const modalInfoBody = byId('modalInfoBody');
+    const btnCloseInfo = byId('btnCloseInfo');
+    let lastInfoAt = 0;
+
+    function showInfo(message) {
+      const now = Date.now();
+      if (now - lastInfoAt < 1200) return; // anti-spam
+      lastInfoAt = now;
+      modalInfoBody.textContent = message || 'Acció no permesa.';
+      modalInfo.classList.add('show');
+      btnCloseInfo.focus();
+    }
+    function hideInfo(){ modalInfo.classList.remove('show'); }
+    btnCloseInfo.addEventListener('click', hideInfo);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modalInfo.classList.contains('show')) hideInfo();
     });
 
     // --- Botons principals ---
@@ -401,5 +438,109 @@
 
     window.addEventListener('DOMContentLoaded', loadAlumnes);
   </script>
+  <style>
+  /* No selecció per defecte als enunciats */
+  .nocopy {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  /* Permetre selecció a les respostes */
+  .allow-copy, textarea, input[type="text"], input[type="search"] {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+</style>
+
+<script>
+(() => {
+  // Ajusta aquestes opcions:
+  const BLOCK_PASTE = false;       // ara activat: bloqueja "enganxar" a les respostes amb modal
+  const USE_FULLSCREEN = false;   // posa-ho a true si vols el botó d'inici amb pantalla completa
+  const MAX_BLURS = 2;            // # cops que pot perdre el focus abans d’avisar/bloquejar
+
+  // 1) Bloquejar copiar fora de les respostes
+  const isAnswerField = (el) =>
+    el?.closest('textarea, input[type="text"], input[type="search"], .allow-copy');
+
+  document.addEventListener('copy', (e) => {
+    if (!isAnswerField(e.target)) {
+      e.preventDefault();
+      // info modal, no errors
+      const modalInfoBody = document.getElementById('modalInfoBody');
+      modalInfoBody.textContent = 'Copiar deshabilitat mentre respons l\'activitat.';
+      document.getElementById('modalInfo').classList.add('show');
+      document.getElementById('btnCloseInfo').focus();
+    }
+  });
+
+  document.addEventListener('contextmenu', (e) => {
+    if (!isAnswerField(e.target)) e.preventDefault();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    const k = e.key.toLowerCase();
+    const mod = e.ctrlKey || e.metaKey;
+    // Evita Ctrl/Cmd+C, Ctrl/Cmd+X, Ctrl/Cmd+S, Ctrl/Cmd+P fora de respostes
+    const blocked = ['c','x','s','p','u','a']; // copia, retalla, desa, imprimeix, view-source, select all
+    if (!isAnswerField(e.target) && mod && blocked.includes(k)) {
+      e.preventDefault();
+      // Mostrar modal informatiu només per C o X
+      if (['c','x'].includes(k)) {
+        const modalInfoBody = document.getElementById('modalInfoBody');
+        modalInfoBody.textContent = 'Acció no permesa en aquesta zona.';
+        document.getElementById('modalInfo').classList.add('show');
+        document.getElementById('btnCloseInfo').focus();
+      }
+    }
+  });
+
+  // 2) (Opcional) Bloquejar enganxar a les respostes
+  if (BLOCK_PASTE) {
+    document.addEventListener('paste', (e) => {
+      if (isAnswerField(e.target)) {
+        e.preventDefault();
+        const modalInfoBody = document.getElementById('modalInfoBody');
+        modalInfoBody.textContent = 'Enganxar deshabilitat. Escriu la resposta amb les teves paraules.';
+        document.getElementById('modalInfo').classList.add('show');
+        document.getElementById('btnCloseInfo').focus();
+      }
+    });
+  }
+
+  // 3) (Opcional) Pantalla completa + monitor d’atenció
+  if (USE_FULLSCREEN) {
+    const btn = document.createElement('button');
+    btn.textContent = 'Inicia activitat (Pantalla completa)';
+    btn.style = 'position:sticky; top:0; z-index:9999; padding:.6rem 1rem; margin:.5rem;';
+
+    let blurCount = 0;
+
+    btn.addEventListener('click', async () => {
+      try { await document.documentElement.requestFullscreen(); } catch {}
+      btn.disabled = true;
+    });
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        blurCount++;
+        if (blurCount === 1) {
+          const modalInfoBody = document.getElementById('modalInfoBody');
+          modalInfoBody.textContent = 'Has sortit de la finestra de l\'activitat. Si torna a passar massa vegades, es bloquejarà el lliurament.';
+          document.getElementById('modalInfo').classList.add('show');
+          document.getElementById('btnCloseInfo').focus();
+        }
+        // Ex.: si supera el límit, desactivar el botó de lliurament
+        if (blurCount > MAX_BLURS) {
+          const submitBtn = document.querySelector('#btnExport, #descarrega-json, #btn-enviar, button[type="submit"]');
+          if (submitBtn) submitBtn.disabled = true;
+        }
+      }
+    });
+
+    document.body.prepend(btn);
+  }
+})();
+</script>
+
 </body>
 </html>
