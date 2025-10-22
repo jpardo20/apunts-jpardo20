@@ -200,13 +200,22 @@
       </section>
 
       <div class="hr"></div>
+        <section>
+        <h2>Exercici 5 — Total de comandes per client</h2>
+        <p class="q">Per a cada client, mostra el <strong>nom</strong> i el <strong>total de comandes</strong> que ha fet.</p>
 
-      <section>
+        <label for="q5sql">Consulta SQL</label>
+        <textarea id="q5sql" placeholder="Escriu aquí la teva consulta SQL…"></textarea>
+
+        <label for="q5ans">Resposta llarga · Explica com ho has resolt</label>
+        <textarea id="q5ans" placeholder="Ex: JOIN Clients-Comandes + GROUP BY ClientId + COUNT(*)"></textarea>
+        </section>
+      <!-- <section>
         <h2>Exercici 5</h2>
         <p class="q">Per a cada client, mostra el <strong>nom</strong> i el <strong>total de comandes</strong> que ha fet.</p>
-        <label for="q5sql">Consulta SQL (opcional)</label>
-        <textarea id="q5sql" placeholder="Escriu aquí la teva consulta SQL…"></textarea>
-      </section>
+        <label for="q5sql">Consulta SQL</label>
+        <textarea id="q5ans" placeholder="Escriu aquí la teva consulta SQL…"></textarea>
+      </section> -->
 
       <div class="btns">
         <button class="ghost" id="btnReset" type="button">Neteja respostes</button>
@@ -282,7 +291,7 @@
       const nameFromSel = sel.selectedOptions[0]?.dataset?.name ? decodeURIComponent(sel.selectedOptions[0].dataset.name) : '';
       const studentEmail = emailFromSel;
       const studentName = nameFromSel || '';
-
+        debugger;
       const payload = {
         activity_code: '0484-bds-ae02',
         activity_title: 'Treballem les JOIN (botiga)',
@@ -294,7 +303,7 @@
           { id: 'ex2', sql: byId('q2sql').value.trim(), answer: byId('q2ans').value.trim() },
           { id: 'ex3', sql: byId('q3sql').value.trim(), answer: byId('q3ans').value.trim() },
           { id: 'ex4', sql: byId('q4sql').value.trim(), answer: byId('q4ans').value.trim() },
-          { id: 'ex5', sql: byId('q5sql').value.trim(), answer: '' }
+          { id: 'ex5', sql: byId('q5sql').value.trim(), answer: byId('q5ans').value.trim() }
         ]
       };
       return payload;
@@ -308,15 +317,17 @@
       if (!payload.answers[1].sql) errors.push({ id: 'q2sql', msg: 'SQL exercici 2' });
       if (!payload.answers[2].sql) errors.push({ id: 'q3sql', msg: 'SQL exercici 3' });
       if (!payload.answers[3].sql) errors.push({ id: 'q4sql', msg: 'SQL exercici 4' });
+      if (!payload.answers[4].sql) errors.push({ id: 'q5sql', msg: 'SQL exercici 5' });
       if (!payload.answers[0].answer) errors.push({ id: 'q1ans', msg: 'Resposta curta exercici 1' });
       if (!payload.answers[1].answer) errors.push({ id: 'q2ans', msg: 'Resposta curta exercici 2' });
       if (!payload.answers[2].answer) errors.push({ id: 'q3ans', msg: 'Resposta curta exercici 3' });
       if (!payload.answers[3].answer) errors.push({ id: 'q4ans', msg: 'Resposta curta exercici 4' });
+      if (!payload.answers[4].answer) errors.push({ id: 'q5ans', msg: 'Resposta llarga exercici 5' });
       return errors;
     }
 
     function clearInvalids() {
-      ['alumneSelect','q1sql','q1ans','q2sql','q2ans','q3sql','q3ans','q4sql','q4ans','q5sql']
+      ['alumneSelect','q1sql','q1ans','q2sql','q2ans','q3sql','q3ans','q4sql','q4ans','q5sql','q5ans']
         .forEach(id => byId(id)?.classList.remove('invalid'));
     }
 
@@ -372,7 +383,7 @@
     });
 
     byId('btnReset').addEventListener('click', () => {
-      ['q1sql','q1ans','q2sql','q2ans','q3sql','q3ans','q4sql','q4ans','q5sql'].forEach(id => byId(id).value = '');
+      ['q1sql','q1ans','q2sql','q2ans','q3sql','q3ans','q4sql','q4ans','q5sql','q5ans'].forEach(id => byId(id).value = '');
       byId('msg').textContent = '';
       clearInvalids();
     });
