@@ -1,0 +1,122 @@
+title: Python – Consolidació 01 (1r SMX)
+author: Docent SMX
+date: 2025-10-23
+theme: white
+
+# Python – Consolidació 01
+### 1r SMX · Robòtica i Programació en Python
+
+---
+
+## Objectius de la sessió
+- Variables amb inicialització buida i anotacions de tipus
+- Entrada / sortida i validació d'errors
+- Condicionals i bucles
+- **Mini-simulació**: lògica d'un robot segons distància
+
+---
+
+## Escalfament (5’)
+- Què fa `input()`? Què retorna?
+- Per què inicialitzem així? `nom: str = ""`, `edat: int = 0`
+- Recordatori: convertir l'entrada a `int`/`float` abans de fer càlculs
+
+---
+
+## A1. Fitxa persona (20’) – Enunciat
+1. Declara `nom: str = ""` i `edat: int = 0`
+2. Demana `nom` i `edat`
+3. Valida que `edat` sigui un enter > 0 (bucle)
+4. Calcula l'any de naixement i mostra-ho amb **f-strings**
+5. Indica si és **major d'edat** (>=18)
+
+---
+
+## A1. Plantilla (fitxer d'inici)
+```python
+from datetime import date
+
+nom: str = ""
+edat: int = 0
+# Demana nom i edat
+# Valida que edat sigui > 0
+# Calcula any de naixement i mostra missatges
+```
+➤ Consulteu `materials/01_fitxa_persona_inici.py`
+
+---
+
+## A1. Solució (referència)
+➤ Mireu `materials/01_fitxa_persona_solucio.py`
+
+---
+
+## A2. Classificador de notes (25’) – Enunciat
+- Demana una **nota** (0–10), permetent punt o coma
+- Valida el rang amb `while + try/except`
+- Mostra la menció:
+  - ≥9 **Excel·lent** · ≥7 **Notable** · ≥5 **Aprovat** · <5 **Suspès**
+
+---
+
+## A2. Plantilla
+```python
+nota: float = 0.0
+# Llegeix la nota (0-10) i valida
+# Calcula i mostra la menció
+```
+➤ Consulteu `materials/02_classificador_notes_inici.py`
+
+---
+
+## A2. Solució (referència)
+➤ Mireu `materials/02_classificador_notes_solucio.py`
+
+---
+
+## A3. Semàfor del robot (20’) – Enunciat
+- Llindars: STOP < 20 · LENT 20–50 · RÀPID > 50
+- Bucle fins que l’alumne escrigui **q**
+- Mostra l'acció resultant
+
+---
+
+## A3. Plantilla
+```python
+DISTANCIA: int = 0
+LLINDAR_STOP: int = 20
+LLINDAR_LENT: int = 50
+accio: str = ""
+# Llegeix distància o 'q', valida, i decideix acció
+```
+➤ Consulteu `materials/03_semafor_robot_inici.py`
+
+---
+
+## A3. Solució (referència)
+➤ Mireu `materials/03_semafor_robot_solucio.py`
+
+---
+
+## Autoavaluació (5’)
+- [ ] He declarat variables amb tipus i valor inicial
+- [ ] He validat l’entrada a cada programa
+- [ ] He fet servir f-strings per a la sortida
+- [ ] Les condicions cobreixen tots els casos (incloent límits)
+- [ ] He provat entrades vàlides i invàlides
+
+---
+
+## Rúbrica (10 punts)
+- Declaració disciplinada: **2**
+- Validació i gestió d'errors: **3**
+- Lògica i condicions: **3**
+- Presentació (missatges clars, f-strings): **1**
+- Neteja del codi: **1**
+
+---
+
+## Recursos i entrega
+- Fitxa per a l'alumnat: `alumnes/fitxa_activitat.md`
+- Fitxers d'inici i solucions a `materials/`
+- **Entrega**: pugeu els 3 fitxers resolts al vostre repositori

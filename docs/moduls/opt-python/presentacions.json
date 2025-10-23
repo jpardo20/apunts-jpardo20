@@ -1,0 +1,15 @@
+{
+  "module": {
+    "code": "0225",
+    "name": "Xarxes locals"
+  },
+  "presentations": [
+    {
+      "order": 1,
+      "title": "Python – Consolidació",
+      "src": "slides/001-python-consolidacio-01.reveal",
+      "description": "AdrPython – Consolidació",
+      "status": "active"
+    }
+  ]
+}
