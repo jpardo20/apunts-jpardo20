@@ -104,9 +104,9 @@ Ajuda que mostra **VSC** de  <kbd class="minus codi">input()</kbd>
 
 ---
 
-## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(1/6)</span>
+## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(1/9)</span>
 
-### Què són les <kbd class="minus codi">f-strings</kbd>?
+Què són les <kbd class="minus codi">f-strings</kbd>?
 - Des de **Python 3.6**: cadenes amb prefix  <kbd class="minus codi">f</kbd> que permeten posar **expressions** entre claus <kbd class="minus codi">{</kbd> <kbd class="minus codi">}</kbd>.
 - Fan el codi **més curt i llegible** que concatenar amb <kbd class="minus codi">+</kbd> o usar <kbd class="minus codi">format()</kbd>.
 
@@ -119,9 +119,9 @@ print(f"Hola, {nom}! Tens {edat} anys.")
 
 ----
 
-## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(2/6)</span>
+## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(2/9)</span>
 
-### Sintaxi bàsica
+Sintaxi bàsica
 
 - Escriu <kbd class="minus codi">f"..."</kbd> (o <kbd class="minus codi">f'...'</kbd>) i col·loca **expressions** dins <kbd class="minus codi">{expressio}</kbd>.
 
@@ -141,9 +141,10 @@ print(f"El primer és {nums[0]}")    # 10
 
 ----
 
-## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(3/6)</span>
+## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(3/9)</span>
 
-### Expressions típiques dins  <kbd class="minus codi">{ }</kbd>
+Expressions típiques dins  <kbd class="minus codi">{</kbd> <kbd class="minus codi">}</kbd>
+
 - Variables: <kbd class="minus codi">{nom}</kbd>, <kbd class="minus codi">{edat}</kbd>
 - Operacions: <kbd class="minus codi">{preu * quantitat}</kbd>, <kbd class="minus codi">{(a+b)/2}</kbd>
 - Crides a funcions: <kbd class="minus codi">{abs(-7)}</kbd>, <kbd class="minus codi">{len(text)}</kbd>
@@ -157,9 +158,9 @@ print(f"Total: {preu * q} €")  # Total: 37.5 €
 
 ----
 
-## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(4/8)</span>
+## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(4/9)</span>
 
-### Format numèric
+Format numèric
 
 | Especificador | Exemple | Sortida | Ús |
 |---|---:|---:|---|
@@ -168,20 +169,29 @@ print(f"Total: {preu * q} €")  # Total: 37.5 €
 |<kbd class="minus codi petit">:>8</kbd> |<kbd class="minus codi petit">f"{42:>8}"</kbd>|<kbd class="minus codi petit">      42</kbd>| alineat a la dreta |
 |<kbd class="minus codi petit">:<8</kbd> |<kbd class="minus codi petit">f"{42:<8}"</kbd>|<kbd class="minus codi petit">42     <kbd class="minus codi petit"> | alineat a l’esquerra |
 |<kbd class="minus codi petit">:^8</kbd> |<kbd class="minus codi petit">f"{42:^8}"</kbd>|<kbd class="minus codi petit">   42  <kbd class="minus codi petit"> | centrat |
-|<kbd class="minus codi petit">:,</kbd>  |<kbd class="minus codi petit">f"{12000:,}"</kbd>|<kbd class="minus codi petit">12,000</kbd>| separador de milers* |
+
+----
+
+## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(4/9)</span>
+
+Format numèric
+
+| Especificador | Exemple | Sortida | Ús |
+|---|---:|---:|---|
+|<kbd class="minus codi petit">:,</kbd>  |<kbd class="minus codi petit">f"{12000:,}"</kbd>|<kbd class="minus codi petit">12,000</kbd>| separador de milers <span class="minus petit" style="background-color: LightBlue">(1)</span> |
 |<kbd class="minus codi petit">:.1%</kbd>|<kbd class="minus codi petit">f"{0.875:.1%}"</kbd>|<kbd class="minus codi petit">87.5%</kbd>| percentatge |
 |<kbd class="minus codi petit">:b</kbd>  |<kbd class="minus codi petit">f"{13:b}"</kbd>|<kbd class="minus codi petit">1101</kbd>| binari |
 |<kbd class="minus codi petit">:x</kbd>  |<kbd class="minus codi petit">f"{255:x}"</kbd>|<kbd class="minus codi petit">ff</kbd>| hexadecimal minúsc. |
 
 <p style="font-size: smaller; background-color:ivory; border: 1px blue dotted;">
-*Per defecte, Python usa el format anglosaxó per milers/decimals. Si vols control absolut, construeix el format manualment o usa llibreries de localització.
+<span class="minus petit" style="background-color:LightBlue">(1)</span> Per defecte, Python usa el format anglosaxó per milers/decimals. Si vols control absolut, construeix el format manualment o usa llibreries de localització.
 </p>
 
 ----
 
-## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(5/8)</span>
+## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(5/9)</span>
 
-### Dates i hores amb **`f-strings`**
+Dates i hores amb **`f-strings`**
 
 ```python
 from datetime import datetime
@@ -196,9 +206,9 @@ Docs: <a href="https://docs.python.org/3/library/datetime.html#strftime-and-strp
 </p>
 ----
 
-## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(6/8)</span>
+## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(6/9)</span>
 
-### Errors típics (i com evitar-los) (1/3)
+Errors típics (i com evitar-los) (1/3)
 
 - ❌ Oblidar el **prefix `f`**:
 
@@ -213,9 +223,9 @@ Docs: <a href="https://docs.python.org/3/library/datetime.html#strftime-and-strp
 
 ----
 
-## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(7/8)</span>
+## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(7/9)</span>
 
-### Errors típics (i com evitar-los) (2/3)
+Errors típics (i com evitar-los) (2/3)
 
 - ❌ No convertir l’entrada d’usuari:
 ```python
@@ -234,9 +244,9 @@ TypeError: can only concatenate str (not "int") to str
 
 ----
 
-## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(8/8)</span>
+## Concepte <kbd class="minus codi">f-strings</kbd> <span class="petit">(8/9)</span>
 
-### Errors típics (i com evitar-los) (3/3)
+Errors típics (i com evitar-los) (3/3)
 
 - ❌ Expressions massa llargues dins <kbd class="minus codi">{</kbd> <kbd class="minus codi">}</kbd> → calcula-ho abans en variables.
 
@@ -263,7 +273,6 @@ print(text.rstrip())   # "   Hola SMX!"
 ----
 
 ## Comanda <kbd class="minus codi">.strip()</kbd> <span class="petit">(2/4)</span>
-
 
 <p style="font-size: smaller; background-color:ivory; border: 1px blue dotted;">
 <strong>Important:</strong> <code>strip(chars)</code> elimina <em>qualsevol</em> dels caràcters de <code>chars</code> als extrems, no la paraula sencera.

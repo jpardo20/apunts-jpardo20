@@ -1,0 +1,15 @@
+{
+  "module": {
+    "code": "mopt1",
+    "name": "Robòtica- Python"
+  },
+  "presentations": [
+    {
+      "order": 1,
+      "title": "Python Apunts",
+      "src": "slides/mopt1-python-apunts-02.reveal",
+      "description": "Python Apunts",
+      "status": "active"
+    }
+  ]
+}
