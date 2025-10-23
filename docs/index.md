@@ -9,7 +9,13 @@
 <ul><li><p><a href="moduls/0223-aplicacions-ofimatiques/presentacions/index.html">Presentacions</a></p></li></ul>
 <h3>0225 Xarxes locals</h3>
 <ul><li><p><a href="moduls/0225-xarxes-locals/presentacions/index.html">Presentacions</a></p></li></ul>
+<h3>OPTA Programació Python</h3>
+<ul>
+    <li><p><a href="moduls/opt-python/presentacions/index.html">Presentacions</a></p></li>
+    <li><p><a href="https://jpardo20.github.io/apunts-jpardo20/moduls/opt-python/presentacions/presentador.html?src=slides%2F001-python-consolidacio-01.reveal&title=Python%20%E2%80%93%20Consolidaci%C3%B3#/md-section">Presentacions</a></p></li>
+</ul>
 </details>
+
 
 <h3><strong>Mòduls de DAM</u></strong></h3>
 <details>
