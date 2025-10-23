@@ -119,3 +119,16 @@ footer.footnote {
   text-align: center;
   font-size: 25px;
 }
+
+
+.minus{
+    text-transform: lowercase;
+}
+
+.codi{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.petit{
+    font-size:smaller;
+}
