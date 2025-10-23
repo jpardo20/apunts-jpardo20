@@ -1,7 +1,15 @@
-### Optativa Programació en Python
+### Optativa: Robòtica i Programació en Python
 
-# Python – Consolidació 01
-### Robòtica i Programació en Python
+# Python – Consolidació **`print`**, **`input`**, i explicació nous mètodes.
+
+
+1. **`.strip()`**
+
+1. **`.isdigit()`**
+
+1. **`date.today().year`**
+
+1. **`f-strings`**
 
 ---
 
@@ -31,7 +39,7 @@ nota = float()  # float -> Decimals (número amb decimals)
 - Què fa?
    - Mostra el text que rep per paràmetre per consola.
 
-<p style="font-size: smaller; background-color:ivory; border: 1px blue dotted;">Per més info sobre la funció <a href="https://docs.python.org/3/library/functions.html#print" target=_blank"><u><kbd>print()</kbd></u> (docs.python.org)</a> de Pyhton</p>
+<p style="font-size: smaller; background-color:ivory; border: 1px blue dotted;"  target="_blank" rel="noopener noreferrer">Per més info sobre la funció <a href="https://docs.python.org/3/library/functions.html#print" target=_blank"><u><kbd>print()</kbd></u> (docs.python.org)</a> de Pyhton</p>
 
 ----
 
@@ -67,7 +75,7 @@ Ajuda que mostra **VSC** de  <kbd>print()</kbd>
 - Què fa?
    - Llegeix el que l'usuari escriu per consola fins a trobar un **salt de línia** (<kbd>Enter</kbd>).
 
-<p style="font-size: smaller; background-color:ivory; border: 1px blue dotted;">Per més info sobre la funció <a href="https://docs.python.org/3/library/functions.html#input" target=_blank"><u><kbd>input()</kbd></u> (docs.python.org)</a> de Pyhton</p>
+<p style="font-size: smaller; background-color:ivory; border: 1px blue dotted;"  target="_blank" rel="noopener noreferrer">Per més info sobre la funció <a href="https://docs.python.org/3/library/functions.html#input" target=_blank"><u><kbd>input()</kbd></u> (docs.python.org)</a> de Pyhton</p>
 
 ----
 
@@ -84,6 +92,7 @@ Ajuda que mostra **VSC** de  <kbd>input()</kbd>
 
 
 ----
+
 ## Comanda <kbd>input()</kbd> (3/3)
 
 Ajuda que mostra **VSC** de  <kbd>input()</kbd>
@@ -96,6 +105,120 @@ Ajuda que mostra **VSC** de  <kbd>input()</kbd>
     ```
 
 > **Recordatori**: convertir l'entrada a `int`/`float` abans de fer càlculs
+
+
+---
+
+## Concepte <kbd>f-strings</kbd> (1/6)
+
+### Què són les **f-strings**?
+- Des de **Python 3.6**: cadenes amb prefix **`f`** que permeten posar **expressions** entre claus **`{ }`**.
+- Fan el codi **més curt i llegible** que concatenar amb `+` o usar `format()`.
+
+```python
+nom: str = "Laia"
+edat: int = 17
+print(f"Hola, {nom}! Tens {edat} anys.")
+# Sortida per conmsola ->  Hola, Laia! Tens 17 anys.
+```
+
+----
+
+## Concepte <kbd>f-strings</kbd> (2/6)
+
+### Sintaxi bàsica
+
+- Escriu **`f"..."`** (o **`f'...'**`) i col·loca **expressions** dins `{expressio}`.
+
+```python
+a: int = 5
+b: int = 3
+print(f"{a} + {b} = {a + b}")  # 5 + 3 = 8
+
+nums = [10, 20, 30]
+print(f"El primer és {nums[0]}")    # 10
+```
+> <hr>
+> Recorda: dins `{ }` hi van **expressions** (variables, operacions, crides a funció...).
+> 
+> No s'hi fan assignacions ni bucles.
+> <hr>
+
+----
+
+## Concepte <kbd>f-strings</kbd> (3/6)
+
+### Expressions típiques dins **`{ }`**
+- Variables: **`{nom}`**, **`{edat}`**
+- Operacions: **`{preu * quantitat}`**, **`{(a+b)/2}`**
+- Crides a funcions: **`{abs(-7)}`**, **`{len(text)}`**
+- Índexos i atributs: **`{llista[2]}`**, **`{usuari.nom}`**
+
+```python
+preu: float = 12.5
+q: int = 3
+print(f"Total: {preu * q} €")  # Total: 37.5 €
+```
+
+----
+
+## Concepte <kbd>f-strings</kbd> (4/6)
+
+### Format numèric
+
+| Especificador | Exemple | Sortida | Ús |
+|---|---:|---:|---|
+| `:.2f` | `f"{3.14159:.2f}"` | `3.14` | 2 decimals |
+| `:05d` | `f"{42:05d}"` | `00042` | farcit amb zeros |
+| `:>8`  | `f"{42:>8}"` | `      42` | alineat a la dreta |
+| `:<8`  | `f"{42:<8}"` | `42      ` | alineat a l’esquerra |
+| `:^8`  | `f"{42:^8}"` | `   42   ` | centrat |
+| `:,`   | `f"{12000:,}"` | `12,000` | separador de milers* |
+| `:.1%` | `f"{0.875:.1%}"` | `87.5%` | percentatge |
+| `:b`   | `f"{13:b}"` | `1101` | binari |
+| `:x`   | `f"{255:x}"` | `ff` | hexadecimal minúsc. |
+
+<p style="font-size: smaller; background-color:ivory; border: 1px blue dotted;">
+*Per defecte, Python usa el format anglosaxó per milers/decimals. Si vols control absolut, construeix el format manualment o usa llibreries de localització.
+</p>
+
+
+----
+
+## Concepte <kbd>f-strings</kbd> (5/6)
+
+### Dates i hores amb **`f-strings`**
+
+```python
+from datetime import datetime
+ara = datetime.now()
+print(f"Avui és {ara:%d/%m/%Y} i són les {ara:%H:%M}")
+# → Avui és 23/10/2025 i són les 09:15
+```
+- Després dels **`:`** pots usar codis de **`strftime`** (**`%Y`**, **`%m`**, **`%d`**, **`%H`**, **`%M`**, ...).
+
+<p style="font-size: smaller; background-color:ivory; border: 1px blue dotted;">
+Docs: <a href="https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes" target="_blank" rel="noopener noreferrer">Codi de format de dates</a>
+</p>
+----
+
+## Concepte <kbd>f-strings</kbd> (6/6)
+
+### Errors típics (i com evitar-los)
+- ❌ Oblidar el **prefix `f`**:
+  ```python
+  print("Hola, {nom}")   # literal, no s’avalua
+  ```
+  ✅ `print(f"Hola, {nom}")`
+
+- ❌ No convertir l’entrada d’usuari:
+  ```python
+  edat_text = input("Edat? ")
+  print(f"L'any vinent: {edat_text + 1}")  # ERROR
+  ```
+  ✅ `edat = int(edat_text); print(f"L'any vinent: {edat + 1}")`
+
+- ❌ Expressions massa llargues dins `{ }` → calcula-ho abans en variables.
 
 
 ---
