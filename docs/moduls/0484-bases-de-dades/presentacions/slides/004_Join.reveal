@@ -27,14 +27,14 @@ Exemple:
 
 “Vull veure les comandes amb el nom del client."
 
-![alt text](image.png)
+![alt text](../../../assets/img/image.png)
 
 ----
 
 “Vull veure les comandes amb el nom del client."
 
 
-![alt text](image-1.png)
+![alt text](../../../assets/img/image-1.png)
 
 ---
 
@@ -55,7 +55,7 @@ Amb una JOIN podem obtenir:
 
 ----
 
-![alt text](image-2.png)
+![alt text](../../../assets/img/image-2.png)
 
 
 
@@ -80,7 +80,7 @@ ON Comandes.IdClient = Clients.IdClient;
 Mostra només les files que **tenen coincidència** a totes dues taules.
 
 
-![alt text](image-3.png)
+![alt text](../../../assets/img/image-3.png)
 
 ----
 
@@ -168,7 +168,7 @@ ON Taula1.clau = Taula2.clau;
 Mostra **totes** les files de la taula de l’esquerra,
 i les de la dreta **només si hi ha coincidència**.
 
-![alt text](image-4.png)
+![alt text](../../../assets/img/image-4.png)
 
 ---
 
