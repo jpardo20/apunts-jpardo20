@@ -16,9 +16,7 @@ exemple: en una biblioteca, els llibres estan relacionats amb els socis que els 
 
 ---
 
-## Conceptes (1/4)
-
-* **Món real**: Està constituït pels objectes de la realitat que ens interessen i amb els quals haurem de treballar.
+## Conceptes <span class="petit">(1/4)</span>
 
 * **Món conceptual**: Està format pel conjunt d’informacions obtingudes gràcies a l'observació de la part del món real que ens interessa. 
 
@@ -28,45 +26,31 @@ exemple: en una biblioteca, els llibres estan relacionats amb els socis que els 
 
 ----
 
-## Conceptes  (2/4)
+## Conceptes <span class="petit">(2/4)</span>
 
-* **Dada**
-és tota la informació que un ordinador registra i emmagatzema.
+* **Dada** és tota la informació que un ordinador registra i emmagatzema.
 
-* **Informació**
-és el resultat de la transformació de les dades perquè aportin coneixement.
+* **Informació** és el resultat de la transformació de les dades perquè aportin coneixement.
 
-* **Entitat**
-Una entitat és un objecte del món real que podem distingir de la resta d'objectes de manera única.
+* **Entitat** és un objecte del món real que podem distingir de la resta d'objectes de manera única.
 
 ----
 
-## Conceptes  (3/4)
+## Conceptes <span class="petit">(3/4)</span>
 
-* **Atributs**
+* **Atributs** són les característiques que defineixen o identifiquen una entitat. Un atribut identificador és el que permet distingir inequívocament cada registre de la resta.
 
-són les característiques que defineixen o identifiquen una entitat. 
-Un atribut identificador és el que permet distingir inequívocament cada registre de la resta.
-
-* **Domini**
-
-és el conjunt de valors que un atribut determinat pot prendre.
+* **Domini** és el conjunt de valors que un atribut determinat pot prendre.
 
 ----
 
-## Conceptes  (4/4)
+## Conceptes <span class="petit">(4/4)</span>
 
-* **Registre**
-
-també anomenat **fila** o **tupla**, representa un element únic de dades d'una entitat
+* **Registre** també anomenat **fila** o **tupla**, representa un element únic de dades d'una entitat
  
-* **Arxiu de dades**
+* **Arxiu de dades** col·lecció d'informació relacionada
 
-col·lecció d'informació relacionada
-
-* **Consulta** (***query***) pot ser
-la recerca d'un registre específic o
-de tots els registres que satisfacin un conjunt de criteris.
+* **Consulta** (***query***) pot ser la recerca d'un registre específic o de tots els registres que satisfacin un conjunt de criteris.
 
 * **Informe** (report)
 és un llistat ordenat dels camps i registres seleccionats en un format fàcil de llegir.
@@ -77,22 +61,15 @@ de tots els registres que satisfacin un conjunt de criteris.
 
 * És un conjunt de programes que permeten l'emmagatzematge, modificació i extracció de la informació d'una base de dades, a més a més proporciona eines per afegir, esborrar, modificar i analitzar les dades.
 
-
 ---
 
 ## Definició, format i composició
 
-* **fitxer o arxiu**
+* **fitxer o arxiu** és la quantitat d'informació estructurada i sobre un mateix tema que es tracta com una unitat d’emmagatzematge.
 
-és la quantitat d'informació estructurada i sobre un mateix tema que es tracta com una unitat d’emmagatzematge.
+* **format i tipus de fitxer** determina com interpretar la informació que conté.
 
-* **format i tipus de fitxer**
-
-determina com interpretar la informació que conté.
-
-* **arxius de bases de dades** 
-
-es componen de registres homogenis que contenen informació relativa a cada objecte de la base de dades. A cada element d'informació del registre es denomina camp.
+* **arxius de bases de dades** es componen de registres homogenis que contenen informació relativa a cada objecte de la base de dades. A cada element d'informació del registre es denomina camp.
 
 
 ---
@@ -115,21 +92,13 @@ es componen de registres homogenis que contenen informació relativa a cada obje
 
 ## Organització dels arxius de dades
 
-* **Seqüencial**
+* **Seqüencial** Registres emmagatzemats de forma contigua.
 
-Registres emmagatzemats de forma contigua.
+* **Encadenada** Cada registre conté un punter que apunta al registre següent.
 
-* **Encadenada**
+* **Indexada** A part del fitxer de dades al qual s’accedeix de forma directa, també tenim un fitxer d'índexs al qual s’accedeix de forma seqüencial.
 
-Cada registre conté un punter que apunta al registre següent.
-
-* **Indexada**
-
-A part del fitxer de dades al qual s’accedeix de forma directa, també tenim un fitxer d'índexs al qual s’accedeix de forma seqüencial.
-
-* **Directa**
-
-Es calcula la posició en l’arxiu de dades en funció a un adreçament.
+* **Directa** Es calcula la posició en l’arxiu de dades en funció a un adreçament.
 
 ---
 
