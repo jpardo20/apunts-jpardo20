@@ -155,7 +155,7 @@ No confondre valor nul amb el zero, o amb l'espai en blanc.
 
 ---
 
-## Atributs identificadors (clau primària PK) <span class="petit">(1/6)</span>
+## Atributs identificadors (<span class="minus">clau primària</span> <kbd class="codi">PK</kbd>) <span class="petit">(1/6)</span>
 
 * **atribut identificador**: és l'atribut o atributs que permet distingir inequívocament cada entitat instància de la resta, pel fet que el seu valor és únic, i no es repeteix en diferents entitats instància.
 
@@ -163,7 +163,7 @@ No confondre valor nul amb el zero, o amb l'espai en blanc.
 
 ----
 
-## Atributs identificadors (clau primària PK) <span class="petit">(2/6)</span>
+## Atributs identificadors (<span class="minus">clau primària</span> <kbd class="codi">PK</kbd>) <span class="petit">(2/6)</span>
 
 * Tot atribut o conjunt d'atributs que permeten identificar inequívoca.
 
@@ -186,13 +186,13 @@ L'atribut dni pot servir molt bé per identificar les instàncies d'una entitat 
 
 ----
 
-## Exemple d'Atributs identificadors (clau primària <kbd class="codi">PK</kbd>) <span class="petit">(5/6)</span>
+## Exemple d'Atributs identificadors (<span class="minus">clau primària</span> <kbd class="codi">PK</kbd>) <span class="petit">(5/6)</span>
 
 Per tal de diferenciar les instàncies d'una entitat que vol reflectir les notes finals dels alumnes en cada assignatura en què s'hagin matriculat, cal combinar els valors de dos atributs: un que designi l'alumne de què es tracti (típicament, el DNI), i un altre que indiqui l'assignatura a la qual correspon la nota (que podria ser una cosa com ara CodiAssignatura).
 
 ----
 
-## Exemple d'Atributs identificadors (clau primària <kbd class="codi">PK</kbd>) <span class="petit">(6/6)</span>
+## Exemple d'Atributs identificadors (<span class="minus">clau primària</span> <kbd class="codi">PK</kbd>) <span class="petit">(6/6)</span>
 
 ![alt text](../../../assets/img/exemple-atribut-identificadors-2.png)
 
