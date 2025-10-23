@@ -1,0 +1,37 @@
+{
+  "activity_code": "0484-bds-ae02",
+  "activity_title": "Treballem les JOIN (botiga)",
+  "version": 1,
+  "submitted_at": "2025-10-22T08:14:11.994Z",
+  "student": {
+    "name": "Joan Pardo",
+    "email": "jpardo20      @digitechfp.com"
+  },
+  "answers": [
+    {
+      "id": "ex1",
+      "sql": "asfdasdf",
+      "answer": "asdfasdf"
+    },
+    {
+      "id": "ex2",
+      "sql": "asdfasdfas",
+      "answer": "asdfasdf"
+    },
+    {
+      "id": "ex3",
+      "sql": "asdfasdf",
+      "answer": "asdfasdf"
+    },
+    {
+      "id": "ex4",
+      "sql": "asdfasdf",
+      "answer": "asdfasdf"
+    },
+    {
+      "id": "ex5",
+      "sql": "asdfasdf",
+      "answer": "asdfasdf"
+    }
+  ]
+}

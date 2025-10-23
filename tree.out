@@ -1,0 +1,110 @@
+.
+├── apunts-jpardo20-per-comprovar-ok.zip
+├── assets
+│   ├── css
+│   │   ├── base.css
+│   │   ├── fonts.css
+│   │   ├── portal.css
+│   │   ├── style.css
+│   │   └── tema.css
+│   ├── data
+│   │   └── presentations.json
+│   ├── img
+│   │   ├── data-base.png
+│   │   ├── Logo_Campus_GMQTECH_5.png
+│   │   ├── Logo_DIGIQTECH_343x99.png
+│   │   └── representacio-dades.png
+│   └── js
+│       ├── presentador.js
+│       ├── reveal-init.js
+│       └── script.js
+├── _backup_presentacions_md
+│   └── presentacions.md
+├── docs
+│   ├── assets
+│   │   ├── css
+│   │   │   ├── base.css
+│   │   │   ├── fonts.css
+│   │   │   ├── portal.css
+│   │   │   ├── style.css
+│   │   │   └── tema.css
+│   │   ├── img
+│   │   │   ├── 3-ambits.png
+│   │   │   ├── atribut.png
+│   │   │   ├── atributs-exemple.png
+│   │   │   ├── clau-primaria-exemple.png
+│   │   │   ├── clau-primaria.png
+│   │   │   ├── data-base.png
+│   │   │   ├── entitat.png
+│   │   │   ├── entitat-tipus.png
+│   │   │   ├── exemple-atribut-identificador.png
+│   │   │   ├── exemple-atribut-identificadors-2.png
+│   │   │   ├── exemple-domini.png
+│   │   │   ├── exemple-entitat-atribut-valor-amb-buits.png
+│   │   │   ├── exemple-entitat-atribut-valor.png
+│   │   │   ├── exemple-obj-mer.png
+│   │   │   ├── exemple-valor-null.png
+│   │   │   ├── Logo_Campus_GMQTECH_5.png
+│   │   │   ├── Logo_DIGIQTECH_343x99.png
+│   │   │   ├── relacio-exemple.png
+│   │   │   ├── relacio.png
+│   │   │   ├── representacio-dades.png
+│   │   │   ├── representacions-tabulars-2.png
+│   │   │   ├── representacions-tabulars.png
+│   │   │   ├── tipus-de-dades-exemple.png
+│   │   │   └── tipus-de-dades.png
+│   │   └── js
+│   │       ├── presentador.js
+│   │       ├── reveal-init.js
+│   │       └── script.js
+│   ├── continguts.md
+│   ├── index.md
+│   ├── moduls
+│   │   ├── 0221-muntatge-i-manteniment-d-equips
+│   │   │   ├── index.html
+│   │   │   ├── presentacions.json
+│   │   │   ├── presentador.html
+│   │   │   └── slides
+│   │   │       └── components-d-un-ordinador-digital.reveal
+│   │   ├── 0373-llenguatges-de-marques
+│   │   │   └── presentacions
+│   │   │       ├── index.html
+│   │   │       ├── presentacions.json
+│   │   │       ├── presentador.html
+│   │   │       └── slides
+│   │   │           ├── 002_Introduccio_XML.reveal
+│   │   │           └── introduccio.reveal
+│   │   └── 0484-bases-de-dades
+│   │       └── presentacions
+│   │           ├── index.html
+│   │           ├── presentacions.json
+│   │           ├── presentador.html
+│   │           └── slides
+│   │               ├── 001_Introduccio_Bases_Dades.reveal
+│   │               ├── 002_Conceptes_Basics_Bases_Dades.reveal
+│   │               ├── 003_MER_Model_Entitat_Relacio.reveal
+│   │               ├── 004_Join.reveal
+│   │               ├── 004_Relacions_MER.reveal
+│   │               └── 005_Claus_MER.reveal
+│   └── presentacions
+│       ├── all.json
+│       ├── presentacions.json
+│       ├── presentador.html
+│       └── slides
+│           ├── 002_Introduccio_XML.reveal
+│           └── introduccio.reveal
+├── LICENSE-CODE
+├── LICENSE-CONTENT
+├── LICENSE.md
+├── mkdocs.yml
+├── publish.yaml
+├── README.md
+├── scripts
+│   ├── build_catalog.py
+│   └── publish_selected.py
+├── slides
+│   ├── 002_Introduccio_XML.reveal
+│   └── introduccio.reveal
+└── tree.out
+
+24 directories, 83 files
