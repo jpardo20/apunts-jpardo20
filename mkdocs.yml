@@ -8,13 +8,15 @@ nav:
     - 0221 Muntatge i manteniment d’equips moduls:
       - Presentacions:
         - Presentacions:  moduls/0221-muntatge-i-manteniment-d-equips/presentacions/index.html
+      - Activitats:
+        - Activitat mim-ud01-ae01: moduls/0221-muntatge-i-manteniment-d-equips/presentacions/mim-ud01-ae01.reveal
     - 0223 Aplicacions ofimàtiques:
       - Presentacions:
         - Presentacions:  moduls/0223-aplicacions-ofimatiques/presentacions/index.html
     - 0225 Xarxes locals:
       - Presentacions:
         - Presentacions:  moduls/0225-xarxes-locals/presentacions/index.html
-    - OPTA Programació Python:
+    - MOPT1 Programació Python:
       - Presentacions:
         - Presentacions:  moduls/mopt1-robotica-python/presentacions/index.html
   - Mòduls de DAM:
