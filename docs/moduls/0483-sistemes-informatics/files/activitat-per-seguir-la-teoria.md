@@ -2,11 +2,6 @@
 
 <!-- Seguirem el següent enllaç [**Sample application** (docs.docker)](https://docs.docker.com/get-started/02_our_app/) -->
 
-<!-- # Index
-
-[Visió general](./README.md#visió-general)
-[Què és un **```contenidor```**?](./README.md#què-és-un-contenidor) -->
-
 # Índex
 
 ## [Teoria de **```Docker```**](#1-teoria-de-docker)
