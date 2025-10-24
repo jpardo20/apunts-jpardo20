@@ -125,10 +125,27 @@ footer.footnote {
     text-transform: lowercase;
 }
 
-.codi{
-    font-family: 'Courier New', Courier, monospace;
+.codi,.entitat,.atribut{
+    font-family: monospace;
+    background-color:lightgray;
+    color: blue;
+    font-weight: bolder;
 }
 
 .petit{
     font-size:x-large;
+}
+
+
+.entitat, .atribut{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.entitat{
+    text-transform: uppercase;
+}
+
+.atribut{
+    text-transform: lowercase;
 }

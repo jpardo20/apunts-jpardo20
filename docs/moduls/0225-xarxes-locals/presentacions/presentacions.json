@@ -6,11 +6,25 @@
   "presentations": [
     {
       "order": 1,
+      "title": "Introducció a les xarxes",
+      "src": "slides/xlo-pre00-introduccio-a-les-xarxes.reveal",
+      "description": "Introducció a les xarxes",
+      "status": "active"
+    },
+    {
+      "order": 1,
       "title": "Adreça IP i màscara de subxarxa",
       "src": "slides/presentacio-ip-mascara.reveal",
       "description": "Adreça IP i màscara de subxarxa",
       "status": "active"
     },
+    {
+      "order": 1,
+      "title": "Adreça IP i màscara de subxarxa",
+      "src": "slides/presentacio-ip-mascara.reveal",
+      "description": "Adreça IP i màscara de subxarxa",
+      "status": "active"
+    }
     {
       "order": 2,
       "title": "Activitat",
