@@ -26,7 +26,7 @@
 |----|----|----|----|
 |A|DHCP|Kristina|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-kristina-2008`|
 |B|DNS|Lorena|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-Lorena639`|
-|C|HTTP/HTTPS + TLS|Merouan|`kiass`|
+|C|HTTP/HTTPS + TLS|Merouan|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-merouan208`|
 |D|SMTP/IMAP/POP3|Pau|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-Paudiazlopez`|
 |E|FTP/FTPS/SFTP|Joao|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-jdanioliv.git`|
 |F|VLAN 802.1Q|Clemente|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-clemente825.git`|
