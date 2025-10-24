@@ -13,7 +13,7 @@ nav:
         - Presentacions:  moduls/0223-aplicacions-ofimatiques/presentacions/index.html
     - 0225 Xarxes locals:
       - Presentacions:
-        - Presentacions:  moduls/0223-aplicacions-ofimatiques/presentacions/index.html
+        - Presentacions:  moduls/0225-xarxes-locals/presentacions/index.html
     - OPTA Programació Python:
       - Presentacions:
         - Presentacions:  moduls/mopt1-robotica-python/presentacions/index.html
@@ -41,9 +41,8 @@ nav:
 
 theme:
   name: material
-  logo: https://digitechfp.com/wp-content/uploads/2023/12/VERT-01-SIN-CAJA-BLANCO-RGB@2x-768x593.png
-  favicon: https://digitechfp.com/wp-content/uploads/2023/12/cropped-cropped-VERT-01-BLANCO-RGB-copia-150x150.png
-  language: ca
+  logo: docs/assets/img/VERT-01-SIN-CAJA-BLANCO-RGB@2x-768x593.png
+  favicon: docs/assets/img/cropped-cropped-VERT-01-BLANCO-RGB-copia-150x150.png
   features:
     - navigation.indexes
     - navigation.sections

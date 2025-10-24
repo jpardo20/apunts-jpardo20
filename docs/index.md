@@ -11,7 +11,7 @@
 <ul><li><p><a href="moduls/0225-xarxes-locals/presentacions/index.html">Presentacions</a></p></li></ul>
 <h3>OPTA Programació Python</h3>
 <ul>
-    <li><p><a href="moduls/opt-python/presentacions/index.html">Teoria</a></p></li>
+    <li><p><a href="moduls/mopt1-robotica-python/presentacions/index.html">Teoria</a></p></li>
 </ul>
 </details>
 
