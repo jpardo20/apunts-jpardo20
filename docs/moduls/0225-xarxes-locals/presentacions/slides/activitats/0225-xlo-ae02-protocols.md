@@ -32,7 +32,6 @@
 |F|VLAN 802.1Q|Clemente|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-clemente825.git`|
 |G|SNMP & NTP|Marc|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-marcl-3`|
 
-git@github.com:SMX-2025-2027/presentacio-protocols-
 
 ## 2) Què ha de contenir **cada presentació** (8–10 diapositives)
 
