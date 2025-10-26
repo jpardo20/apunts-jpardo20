@@ -10,6 +10,10 @@ L'ajuntament de Granollers vol fer el cadastre del seu municipi, per aquest moti
 
  * Una **persona** pot ser **<span class="underline">habitant</span>**, propietari o ambdues coses d'un **habitatge**.
 
+----
+
+#### Activitat: Cadastre de Granollers (cont...)
+
  * Un habitatge pot ser de dos tipus, o pis o casa particular.
 
  * De les persones ens interessa conèixer el DNI (clau primària), el nom i els cognoms.
@@ -18,11 +22,11 @@ L'ajuntament de Granollers vol fer el cadastre del seu municipi, per aquest moti
 
  * Dels **habitatges** ens interessa conèixer el carrer, el número, el codi postal, els metres quadrats habitables, el tipus (pis o casa), la planta i la porta.
 
+----
+
 ### Es demana:
 
- * Dissenyar un esquema **M**odel **E**ntitat **R**elació (**MER**) que reculli la informació del cadastre.
-
- * Fes el disseny lògic del cadastre anterior.
+ * Dissenyar un esquema **M**odel **E**ntitat **R**elació (**MER**) que reculli la informació de l'enunciat.
 
 ---
 
@@ -38,11 +42,16 @@ Es vol dissenyar una base de dades que contingui la informació relativa a totes
 
  * Hi ha una sèrie d'àrees en què s'agrupen els trams, cada un dels quals no pot pertànyer a més d'una àrea
 
+----
+
+#### Activitat: Carreteres del País  (cont...)
+
+
 ### Es demana:
 
- * Dissenyar un esquema **M**odel **E**ntitat **R**elació (**MER**) que reculli la informació de totes les carreteres del país.
+ * Dissenyar un esquema **M**odel **E**ntitat **R**elació (**MER**) que reculli la informació de l'enunciat.
 
----
+<!-- ---
 
 ## Activitat: Informatització entitat bancària
 
@@ -402,4 +411,4 @@ L'empresa "X" té la intenció de portar un control dels seus departaments, empl
 
  * Es desitja conèixer les regions per on es troba repartides les diferents seus de l’empresa. Cada regio serà gestionada per un representant de vendes.
 
- * En la realització d'un projecte no hi pot haver involucrats més de 5 enginyers. Tot enginyer ha d'estar associat a 1 projecte com a mínim i a 2 com a màxim.
+ * En la realització d'un projecte no hi pot haver involucrats més de 5 enginyers. Tot enginyer ha d'estar associat a 1 projecte com a mínim i a 2 com a màxim. -->
