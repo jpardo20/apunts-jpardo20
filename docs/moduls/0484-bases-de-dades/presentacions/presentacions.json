@@ -55,10 +55,10 @@
       ]
     },
     {
-      "id": "005_Claus_MER",
-      "title": "6 Claus (MER)",
-      "description": "",
-      "src": "slides/005_Claus_MER.reveal",
+      "id": "DAM_Act_004_MER_14_Enunciats",
+      "title": "Enunciats: Model Entitat-Relació (MER)",
+      "description": "Enunciats: Model Entitat-Relació (MER)",
+      "src": "slides/DAM_Act_004_MER_14_Enunciats.reveal",
       "theme": "white",
       "tags": [
         "BBDD"
