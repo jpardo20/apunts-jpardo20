@@ -11,7 +11,13 @@
       "title": "Resum Docker — 0483 Sistemes informàtics (1r DAM)",
       "src": "slides/0483-resum-docker.reveal",
       "description": "Resum Docker — 0483 Sistemes informàtics (1r DAM)"
-    }
+    },
+    {
+      "order": 3,
+      "title": "exemple2.reveal",
+      "src": "slides/exemple2.reveal",
+      "description": "exemple2.reveal"
+    }    
     
   ]
 }
