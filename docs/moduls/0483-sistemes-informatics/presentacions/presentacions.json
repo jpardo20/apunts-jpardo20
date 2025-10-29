@@ -14,9 +14,9 @@
     },
     {
       "order": 3,
-      "title": "exemple2.reveal",
-      "src": "slides/exemple2.reveal",
-      "description": "exemple2.reveal"
+      "title": "Activitat: phpMyAdmin + MySQL amb docker compose",
+      "src": "slides/docker-compose-phhmyadmin-mysql.reveal",
+      "description": "Activitat: phpMyAdmin + MySQL amb docker compose"
     }    
     
   ]

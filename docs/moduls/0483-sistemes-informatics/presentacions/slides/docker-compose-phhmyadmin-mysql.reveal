@@ -9,7 +9,8 @@
 mkdir -p ~/projectes/docker-lamp && cd ~/projectes/docker-lamp
 ```
 
---- 
+---- 
+
 
 2) Crea un fitxer **`docker-compose.yml`** amb aquest contingut:
 ```yaml
