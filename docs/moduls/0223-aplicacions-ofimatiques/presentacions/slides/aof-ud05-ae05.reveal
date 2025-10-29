@@ -86,7 +86,7 @@ Los elementos son:    (2/2)
 >
 > ###### Donde **`<PrimerApellidoAlumno>`** es solo el primer apellido del alumno, sin el nombre.
 >
-> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05`**</b></u></kbd>.
+> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-1a-ent.docx`**</b></u></kbd>.
 >
 > En en el documento **`README.md`** de tu repositorio local, bajo el título <kbd>## 1a entrega<kbd>, crear un enlace para descargar el documento docx, que habéis subido.
 >
@@ -104,6 +104,8 @@ Los elementos son:    (2/2)
 
 * Para facilitar la creación, se adjunta en el aula virtual videos con trucos recopilados de TikTok que facilitan crear la revista.
 
+----
+
 Si no se te ocurre ninguna idea, te damos algunas:
 
  * Revistas sobre algún deporte que te guste.
@@ -113,6 +115,8 @@ Si no se te ocurre ninguna idea, te damos algunas:
  * Revistas sobre comics/manga que te gusten.
 
  * Revista sobre novedades tecnológicas o algún tutorial tecnológico.
+
+----
 
 La revista tendrá los siguientes elementos:
 
@@ -126,6 +130,8 @@ La revista tendrá los siguientes elementos:
     
      * Te recomiendo usar **los trucos 06, 07 y 08 de TikTok** para poner encabezado y pie de página.
 
+----
+
  * **Artículos de opinión:** la primera página de la revista en sí, debe contener mínimo dos artículos de opinión. Antes de comenzar, el artículo debe haber una imagen de quien es el autor del artículo de opinión y un texto que sea el título de artículo hecho de forma que resalte (jugando con tamaños, tipografía, negrita, etc.). El texto debe estar en alineación “Justificada”.
     
      * ¿No sabes como es un artículo de opinión a varias columnas? Prueba a hacer búsquedas en Google similares a “artículo opinión doble columna” para poder ver referencias de como debe quedar.
@@ -138,9 +144,13 @@ La revista tendrá los siguientes elementos:
     
      * En la versión de escritorio, puedes crear textos multi-columna usando **los trucos 13 y 14 de TikTok**.
 
+----
+
  * **Noticia:** la segunda página puede ser una noticia. **Utiliza un estilo diferente al usado en los artículos de opinión.** Esta página debe tener imágenes, texto multi-columna y viñetas.
     
      * Te recomiendo **los trucos 15, 16 y 17 de TikTok** para crear el texto multi-columna
+
+----
 
  * **Contraportada**: debe ser bonita, atractiva y descriptiva. No debe contener encabezado ni pie de página. Debe también tener el precio en código de barras y QR.
     
@@ -148,13 +158,47 @@ La revista tendrá los siguientes elementos:
     
      * En la versión de escritorio puedes usar **los trucos 18 y 19 de TikTok** para generar el código de barras y QR.
 
-📕 **A entregar:** documento con la revista.
+----
 
-# Actividad 03 (English)
+### 2a entrega:
 
-Realiza con **Microsoft Word 365** una “Cheat Sheet” atractiva, en formato apaisado, resumiendo los elementos descritos en el apartado anterior e indicando qué **<span class="underline">atajos de teclado</span>** existen para los elementos indicando en la actividad anterior. **<span class="underline">La “Cheat Sheet” debe realizarse en inglés.</span>**
+><hr> 
+>
+> ### A entregar
+>
+> * Subir a vuentro repositorio el documento con la revista con el nombre <u><b>**`<PrimerApellidoAlumno>-aof-ud05-ae05-2a-ent.docx`**</b></u><br>(<u>**todo en minúsculas**</u>).
+>
+> ###### Donde **`<PrimerApellidoAlumno>`** es solo el primer apellido del alumno, sin el nombre.
+>
+> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-2a-ent`**</b></u></kbd>.
+>
+> En en el documento **`README.md`** de tu repositorio local, bajo el título <kbd>## 2a entrega<kbd>, crear un enlace para descargar el documento docx, que habéis subido.
+>
 
-📕 **A entregar:** entregar el documento generado y además enseñar en persona al profesorado el documento para que dé una calificación de apto. Recuerda el formato apaisado y que es en inglés.
+---
+
+# Actividad 03
+
+* Realiza con **Microsoft Word 365** una “Cheat Sheet” atractiva, en formato apaisado, resumiendo los elementos descritos en el apartado anterior e indicando qué **<span class="underline">atajos de teclado</span>** existen para los elementos indicando en la actividad anterior. Recuerda el formato apaisado.
+
+----
+
+### 3a entrega:
+
+><hr> 
+>
+> ### A entregar
+>
+> * Subir a vuentro repositorio el documento con la revista con el nombre <u><b>**`<PrimerApellidoAlumno>-aof-ud05-ae05-3a-ent.docx`**</b></u><br>(<u>**todo en minúsculas**</u>).
+>
+> ###### Donde **`<PrimerApellidoAlumno>`** es solo el primer apellido del alumno, sin el nombre.
+>
+> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-3a-ent`**</b></u></kbd>.
+>
+> En en el documento **`README.md`** de tu repositorio local, bajo el título <kbd>## 3a entrega<kbd>, crear un enlace para descargar el documento docx, que habéis subido.
+>
+
+---
 
 # Actividad 04
 
