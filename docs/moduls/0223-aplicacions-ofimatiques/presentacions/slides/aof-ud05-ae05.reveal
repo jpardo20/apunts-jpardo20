@@ -1,0 +1,205 @@
+# Aplicaciones Oﬁmáticas
+
+#### UD 05. Procesador de texto
+
+#### AOF - UD05 - Actividad evaluable 5
+##### (`aof-ud05-ae05`)
+
+---
+
+* **Paso 1**
+
+Crea en tu cuenta de **`github`** el repositorio<br><u><b>**`<PrimerApellidoAlumno>-aof-ud05-ae05`**</b></u><br>(<u>**todo en minúsculas**</u>), haz que sea <u>**privado**</u>, e invita  al usuario <u>**jpardo20**</u>.
+
+><hr>
+>
+> ###### Donde **`<PrimerApellidoAlumno>`** es solo el primer apellido del alumno, sin el nombre.
+>
+> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del repositorio sería <kbd><u><b>**`einstein-aof-ud05-ae05`**</b></u></kbd>.
+>
+><hr>
+
+----
+
+* **Paso 2**
+
+Una vez tengas el repositorio remoto (el de tu cuenta de github) debes de clonarlo en tu ordenador.
+
+```git
+git clone <URL de tu repositorio remoto>
+```
+
+Con el repositorio remoto, clonado, debes de seguir los pasos que se detallan a continuación.
+
+---
+
+## 1a entrega
+
+
+* Realiza un documento con **Microsoft Word 365** que muestre un ejemplo de uso de elementos de **Microsoft Word 365**, seguidos de uno o dos párrafos explicándolos.
+
+* Pueden ayudarte para esta tarea tanto los tutoriales recomendados de la unidad como los trucos de TikTok proporcionados.
+
+----
+
+Los elementos son:    (1/2)
+
+ * Viñetas de los tipos puntos y numeradas. Estas viñetas deben incluir subniveles.
+
+ * Cursiva.
+
+ * Negrita/Subrayado/Tachado.
+
+ * Enlaces.
+
+ * Sangría.
+
+ * Imágenes.
+
+ * Cuadros de Texto.
+
+----
+
+Los elementos son:    (2/2)
+
+ * Alineado el texto del título de forma “centrada”.
+
+ * Alineado el texto de los contenidos de forma “justificada”.
+
+ * Estilos.
+
+ * Encabezado.
+
+ * Pie de página.
+
+ * Números de página.
+
+----
+
+### 1a entrega:
+
+><hr> 
+>
+> ### A entregar
+>
+> * Subir a vuentro repositorio el documento generado con el nombre <u><b>**`<PrimerApellidoAlumno>-aof-ud05-ae05-1a-ent.docx`**</b></u><br>(<u>**todo en minúsculas**</u>).
+>
+> ###### Donde **`<PrimerApellidoAlumno>`** es solo el primer apellido del alumno, sin el nombre.
+>
+> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05`**</b></u></kbd>.
+>
+> En en el documento **`README.md`** de tu repositorio local, bajo el título <kbd>## 1a entrega<kbd>, crear un enlace para descargar el documento docx, que habéis subido.
+>
+
+---
+
+
+## 2a entrega
+
+* Para esta actividad vamos a crear una **revista digital** utilizando Microsoft Word 365.
+
+* Dejamos la <u>temática libre</u> siempre que sea algo legal, respetuoso con compañeros y con la gente en general.
+
+* No vamos a hacer la revista entera, solo las partes indicadas.
+
+* Para facilitar la creación, se adjunta en el aula virtual videos con trucos recopilados de TikTok que facilitan crear la revista.
+
+Si no se te ocurre ninguna idea, te damos algunas:
+
+ * Revistas sobre algún deporte que te guste.
+
+ * Revista sobre videojuegos (o sobre algún videojuego en concreto).
+
+ * Revistas sobre comics/manga que te gusten.
+
+ * Revista sobre novedades tecnológicas o algún tutorial tecnológico.
+
+La revista tendrá los siguientes elementos:
+
+ * **Portada**: debe ser bonita, atractiva y descriptiva. Debe contener el nombre de la revista, el nombre del autor y no contener número de página. Te recomiendo usar **los trucos 01 y 02 de TikTok** para hacer la portada.
+    
+     * En la versión escritorio podéis usar **el truco 03 de TikTok** para guardar la portada como “plantilla de portada” (no es necesario hacerlo para la entrega).
+
+ * **Índice, encabezado y pie de página**: en la siguiente página a la portada se debe crear un índice automático de la revista. A partir de esta página, todas las páginas deben llevar encabezado y pie de página. Estos dos deben ser bonitos. En el encabezado debe estar el nombre del alumno y de la revista. En el pie de página simplemente el número de página.
+    
+     * Te recomiendo **los trucos 04 y 05 de TikTok** para hacer el índice.
+    
+     * Te recomiendo usar **los trucos 06, 07 y 08 de TikTok** para poner encabezado y pie de página.
+
+ * **Artículos de opinión:** la primera página de la revista en sí, debe contener mínimo dos artículos de opinión. Antes de comenzar, el artículo debe haber una imagen de quien es el autor del artículo de opinión y un texto que sea el título de artículo hecho de forma que resalte (jugando con tamaños, tipografía, negrita, etc.). El texto debe estar en alineación “Justificada”.
+    
+     * ¿No sabes como es un artículo de opinión a varias columnas? Prueba a hacer búsquedas en Google similares a “artículo opinión doble columna” para poder ver referencias de como debe quedar.
+    
+     * Podéis inventarios el texto del artículo sacándolo de alguno que os guste o generándolo con webs tipo [<span class="underline">https://www.blindtextgenerator.com/es</span>](https://www.blindtextgenerator.com/es)
+    
+     * Te recomiendo **los trucos 09 y 10 de TikTok** para crear el título.
+    
+     * Te recomiendo **los trucos 11 y 12 de TikTok** para insertar la imagen.
+    
+     * En la versión de escritorio, puedes crear textos multi-columna usando **los trucos 13 y 14 de TikTok**.
+
+ * **Noticia:** la segunda página puede ser una noticia. **Utiliza un estilo diferente al usado en los artículos de opinión.** Esta página debe tener imágenes, texto multi-columna y viñetas.
+    
+     * Te recomiendo **los trucos 15, 16 y 17 de TikTok** para crear el texto multi-columna
+
+ * **Contraportada**: debe ser bonita, atractiva y descriptiva. No debe contener encabezado ni pie de página. Debe también tener el precio en código de barras y QR.
+    
+     * Para la versión en la nube, simplemente utilizará algún generador online (buscando “generador QR” y/o generador código de barras”) impórtalo como imagen.
+    
+     * En la versión de escritorio puedes usar **los trucos 18 y 19 de TikTok** para generar el código de barras y QR.
+
+📕 **A entregar:** documento con la revista.
+
+# Actividad 03 (English)
+
+Realiza con **Microsoft Word 365** una “Cheat Sheet” atractiva, en formato apaisado, resumiendo los elementos descritos en el apartado anterior e indicando qué **<span class="underline">atajos de teclado</span>** existen para los elementos indicando en la actividad anterior. **<span class="underline">La “Cheat Sheet” debe realizarse en inglés.</span>**
+
+📕 **A entregar:** entregar el documento generado y además enseñar en persona al profesorado el documento para que dé una calificación de apto. Recuerda el formato apaisado y que es en inglés.
+
+# Actividad 04
+
+Realiza un documento con **Microsoft Word 365** preparado como plantilla para realizar trabajos en el ciclo formativo, con textos de ejemplo de contenidos básicos.
+
+La entrega debe tener:
+
+ * Portada bonita con nombre y fecha. Se debe guardar como plantilla de portada
+
+ * Número de unidad a la que pertenece el trabajo hecho con un campo (variable). Este número se mostrará en portada junto a la fecha.
+
+ * Índice generado a partir de estilos aplicados para puntos principales y sub puntos.
+
+ * Números de página a partir de la segunda página.
+
+ * Cabecera y pie de página a partir de la segunda página.
+
+ * Estilo específico para definir el texto normal.
+
+ * Estilo específico para definir los puntos principales.
+
+ * Estilo específico para definir los sub-puntos.
+
+Además, en los ejemplos de contenido, se debe mostrar:
+
+ * Estilos anteriormente nombrados, aplicados a los ejemplos.
+
+ * Viñetas de los tipos puntos y numeradas. Estas viñetas deben incluir subniveles.
+
+ * Negrita.
+
+ * Cursiva.
+
+ * Subrayado.
+
+ * Tachado.
+
+ * Enlaces.
+
+ * Imágenes.
+
+ * Cuadros de Texto.
+
+ * Alineado el texto del título de forma “centrada”.
+
+ * Alineado el texto de los contenidos de forma “justificada”.
+
+📕 **A entregar:** entregar el documento generado y enseñar en persona al profesorado el documento generado para que dé una calificación de apto.
