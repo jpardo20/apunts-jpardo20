@@ -109,7 +109,7 @@ docker compose down    # Aturar i eliminar contenidors/serveis
 
 ## 6. Control i diagnosi
 
-- Veure estat de contenidors: <pre>docker ps</pre>
+- Veure estat de contenidors: <pre>docker container ps</pre>
 
 
 - Consultar informació detallada: <pre>docker inspect &lt;id_contenidor></pre>
