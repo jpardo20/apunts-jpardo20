@@ -5,6 +5,13 @@
       "title": "0483-activitat-001-docker-web",
       "src": "slides/0483-activitat-001-docker-web.reveal",
       "description": "Activitat 1: Desplega un servei web amb Docker"
+    },
+    {
+      "order": 2,
+      "title": "Resum Docker — 0483 Sistemes informàtics (1r DAM)",
+      "src": "slides/0483-resum-docker.reveal",
+      "description": "Resum Docker — 0483 Sistemes informàtics (1r DAM)"
     }
+    
   ]
 }
