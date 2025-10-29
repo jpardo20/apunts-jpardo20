@@ -5,6 +5,17 @@
   },
   "presentations": [
     {
+      "id": "0484-aof-ud03-ae01",
+      "title": "Informació caòtica (**`0484-aof-ud03-ae01`**)",
+      "description": "",
+      "src": "slides/bases-de-dades-activitat-dades-caotiques.reveal",
+      "theme": "white",
+      "tags": [
+        "BBDD", "activitat"
+      ]
+        
+    },
+    {
       "id": "001_Introduccio_Bases_Dades",
       "title": "1: Introducció a Bases de Dades",
       "description": "",
