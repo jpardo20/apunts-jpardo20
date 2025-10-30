@@ -51,7 +51,7 @@ Es vol dissenyar una base de dades que contingui la informació relativa a totes
 
  * Dissenyar un esquema **M**odel **E**ntitat **R**elació (**MER**) que reculli la informació de l'enunciat.
 
-<!-- ---
+ ---
 
 ## Activitat: Informatització entitat bancària
 
@@ -73,6 +73,8 @@ Es desitja informatitzar parcialment una determinada entitat bancària amb els s
 
  * Els clients poden tenir atorgats préstecs (ha d’estar associat a algun dels seus comptes corrents). Cada préstec s'atorga a nom d'un sol client i a un client se li pot atorgar més d'un préstec.
 
+
+<!--
 ##   
 
 ## Activitat: Agència de viatges
