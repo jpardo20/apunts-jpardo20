@@ -10,6 +10,15 @@
       "src": "slides/mopt1-python-apunts-02.reveal",
       "description": "Python Apunts",
       "status": "active"
+    },
+
+    {
+      "order": 2,
+      "title": "Python Apunts mopt1-python-intro-def",
+      "src": "slides/mopt1-python-intro-def.reveal",
+      "description": "Python Apunts mopt1-python-intro-def",
+      "status": "active"
     }
+    
   ]
 }
