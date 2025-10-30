@@ -53,7 +53,7 @@ Es vol dissenyar una base de dades que contingui la informació relativa a totes
 
 ---
 
-## Activitat: Informatització entitat bancària
+## Activitat: Informatització entitat bancària (1/2)
 
 Es desitja informatitzar parcialment una determinada entitat bancària amb els següents supòsits (fes el disseny del model E/R):
 
@@ -64,6 +64,10 @@ Es desitja informatitzar parcialment una determinada entitat bancària amb els s
  * Per tant, el número de compte es compon de:
 
 **número de banc + número de sucursal + número de compte**
+
+----
+
+## Activitat: Informatització entitat bancària (2/2)
 
  * Un compte corrent pot tenir associats un o diversos clients. Com que els clients poden ser titulars o signatures autoritzades, és possible que les operacions que poden realitzar els clients amb signatura autoritzada amb el compte siguin molt menys.
 
