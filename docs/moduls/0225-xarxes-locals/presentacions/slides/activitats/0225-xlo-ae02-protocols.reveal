@@ -10,49 +10,49 @@
 
 ---
 
-## 1) Assignacions (7 protocols) (1/4)
+## 1) Assignacions (7 protocols) (1/7)
 
 | Alumne | Protocol (focus) | Objectiu clau | Idea de demo breu (≤10’) | Eines suggerides |
 |---|---|---|---|---|
 | Kristina | **DHCP** (DORA, lloguers, relay) | Adreçament automàtic i opcions | `ipconfig /renew` o `dhclient`, aixecar un DHCP (p.ex. dnsmasq) i veure el cicle DORA amb Wireshark (`bootp`) | Wireshark, dnsmasq/ISC-DHCP, CLI |
 
 ----
-## 1) Assignacions (7 protocols) (2/4)
+## 1) Assignacions (7 protocols) (2/7)
 
 | Alumne | Protocol (focus) | Objectiu clau | Idea de demo breu (≤10’) | Eines suggerides |
 |---|---|---|---|---|
 | Lorena | **DNS** (A/AAAA, CNAME, MX, TTL, recurse/caching) | Resoldre noms i interpretar registres | Fer `dig/nslookup` a diversos dominis, canviar TTL i observar caché | `dig`, `nslookup`, Pi-hole o bind, Wireshark (`dns`) |
 
 ----
-## 1) Assignacions (7 protocols) (2/4)
+## 1) Assignacions (7 protocols) (3/7)
 
 | Alumne | Protocol (focus) | Objectiu clau | Idea de demo breu (≤10’) | Eines suggerides |
 |---|---|---|---|---|
 | Merouan | **HTTP/HTTPS + TLS** (mètodes, codis, capçaleres, handshake TLS) | Funcionament web i seguretat bàsica | `curl -I http://` vs `https://`, DevTools, `openssl s_client`, paquets TLS | curl, navegador, OpenSSL, Wireshark (`http`,`tls`) |
 
 ----
-## 1) Assignacions (7 protocols) (2/4)
+## 1) Assignacions (7 protocols) (4/7)
 
 | Alumne | Protocol (focus) | Objectiu clau | Idea de demo breu (≤10’) | Eines suggerides |
 |---|---|---|---|---|
 | Pau | **SMTP/IMAP/POP3** (flux correu, ports, STARTTLS) | Entrega i lectura de correu | Enviar correu entre dos comptes; `telnet` a SMTP; llegir via IMAP; captures | Client correu, telnet/netcat, Wireshark (`smtp`,`imap`) |
 
 ----
-## 1) Assignacions (7 protocols) (2/4)
+## 1) Assignacions (7 protocols) (5/7)
 
 | Alumne | Protocol (focus) | Objectiu clau | Idea de demo breu (≤10’) | Eines suggerides |
 |---|---|---|---|---|
 | Joao | **FTP/FTPS/SFTP** (actiu/passiu, seguretat) | Diferenciar protocols i modes | Servidor FTP, pujar fitxer amb FileZilla en actiu/passiu; comparar amb SFTP | vsftpd/FileZilla, SSH, Wireshark (`ftp`) |
 
 ----
-## 1) Assignacions (7 protocols) (2/4)
+## 1) Assignacions (7 protocols) (6/7)
 
 | Alumne | Protocol (focus) | Objectiu clau | Idea de demo breu (≤10’) | Eines suggerides |
 |---|---|---|---|---|
 | Clemente | **VLAN 802.1Q** (etiquetatge, access/trunk, PVID) | Segmentació L2 i etiquetatge **802.1Q** | Configurar **VLANs** en switch (o Linux subinterfaces), provar connectivitat i capturar el **tag 802.1Q** | Packet Tracer/GNS3 o switch gestionable, Linux `ip link`, Wireshark (`vlan`) |
 
 ----
-## 1) Assignacions (7 protocols) (2/4)
+## 1) Assignacions (7 protocols) (7/7)
 
 | Alumne | Protocol (focus) | Objectiu clau | Idea de demo breu (≤10’) | Eines suggerides |
 |---|---|---|---|---|
@@ -223,22 +223,6 @@
 ## 6) Recursos i “snippets” útils
 
 **Eines lleugeres de lab**: dnsmasq (DHCP/DNS), bind, vsftpd, snmpd, OpenSSL, FileZilla, Packet Tracer/GNS3.
-
----
-
-## 7) Planificació en 2 hores
-
-- **1a hora**: A–D (4 exposicions ≈ 48’ + transicions)  
-- **2a hora**: E–G (3 exposicions ≈ 36’) + 15’ per fer 1 activitat ràpida de la fitxa de cada expositor
-
----
-
-## 8) Ús de la plantilla (resum)
-
-1. Descarrega el **ZIP de la plantilla** del Classroom.  
-2. Edita **`slides.md`** i afegeix imatges a `assets/img/`.  
-3. Obre **`index.html`** per comprovar la presentació.  
-4. Exporta a **PDF** (Imprimeix → Desa com a PDF, horitzontal, fons activats).
 
 ---
 
