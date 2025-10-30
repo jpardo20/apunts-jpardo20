@@ -6,7 +6,21 @@
 
 * **Durada de l’exposició:** 8–10 minuts + 2 minuts de preguntes  
 
-* **Format recomanat:** plantilla Reveal.js (proporcionada al Classroom)
+* **Format obligatori:** plantilla **`reveal.js`** (proporcionada al Classroom)
+
+---
+
+### Assignació:
+
+|Grup|Tema|Alumne|Nom repositori|
+|----|----|----|----|
+|A|DHCP|Kristina|[repo](https://github.com/SMX-2025-2027/presentacio-protocols-reveal-kristina-2008)|
+|B|DNS|Lorena|[repo](https://github.com/SMX-2025-2027/presentacio-protocols-reveal-Lorena639)|
+|C|HTTP/HTTPS + TLS|Merouan|[repo](https://github.com/SMX-2025-2027/presentacio-protocols-reveal-merouan208)|
+|D|SMTP/IMAP/POP3|Pau|[repo](https://github.com/SMX-2025-2027/presentacio-protocols-reveal-Paudiazlopez)|
+|E|FTP/FTPS/SFTP|Joao|[repo](https://github.com/SMX-2025-2027/presentacio-protocols-reveal-jdanioliv.git)|
+|F|VLAN 802.1Q|Clemente|[repo](https://github.com/SMX-2025-2027/presentacio-protocols-reveal-clemente825.git)|
+|G|SNMP & NTP|Marc|[repo](https://github.com/SMX-2025-2027/presentacio-protocols-reveal-marcl-3)|
 
 ---
 
@@ -58,19 +72,6 @@
 |---|---|---|---|---|
 | Marc | **SNMP & NTP** (monitoratge i temps) | Monitorització i sincronització horària | `snmpwalk` sobre `snmpd`; comprovar NTP amb `timedatectl`; perquè el temps coherent importa | snmpd/snmpwalk, `timedatectl`/`w32tm`, Wireshark (`snmp`,`ntp`) |
 
----
-
-### Assignació:
-
-|Grup|Tema|Alumne|Nom repositori|
-|----|----|----|----|
-|A|DHCP|Kristina|[repo](`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-kristina-2008`)|
-|B|DNS|Lorena|[repo](`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-Lorena639`)|
-|C|HTTP/HTTPS + TLS|Merouan|[repo](`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-merouan208`)|
-|D|SMTP/IMAP/POP3|Pau|[repo](`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-Paudiazlopez`)|
-|E|FTP/FTPS/SFTP|Joao|[repo](`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-jdanioliv.git`)|
-|F|VLAN 802.1Q|Clemente|[repo](`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-clemente825.git`)|
-|G|SNMP & NTP|Marc|[repo](`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-marcl-3`)|
 
 ---
 
