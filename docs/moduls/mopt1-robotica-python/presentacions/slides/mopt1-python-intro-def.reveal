@@ -22,6 +22,9 @@ details[open] > summary { background: #e3e3e3; }
 - Escriure **scripts** senzills (fitxers `.py`) amb `print()` i `input()`.
 - Evitar **errors freqüents** (nom no definit, divisió per zero, barreges `str`/`int`, etc.).
 
+---
+
+
 ## Índex
 1. [Introducció](#introducció)  
 2. [Entorn de treball](#entorn-de-treball)  
@@ -40,6 +43,8 @@ details[open] > summary { background: #e3e3e3; }
 ## Introducció
 Fa segles, “computer” era la persona que **computava**. Els ordinadors actuals automatitzen aquest càlcul i permeten programes que, per sota, fan **moltes operacions amb nombres**. En aquesta unitat consolidem la base numèrica de Python per poder avançar cap a **lògica, control del temps** i petites **simulacions** de robòtica.
 
+---
+
 ## Números: enters i reals
 **Tipus**:
 - `int`: enters, sense part decimal — p. ex. `-3`, `0`, `42`.
@@ -50,6 +55,8 @@ type(2)     # <class 'int'>
 type(2.0)   # <class 'float'>
 type(2.)    # <class 'float'>
 ```
+
+----
 
 **Operadors**: `+`, `-`, `*`, `/`, `//`, `%`, `**` (potència).  
 **Precedència**: `**` → `* / // %` → `+ -`. Usa parèntesis per deixar clar l’ordre.
@@ -62,6 +69,9 @@ type(2.)    # <class 'float'>
 (2 + 3) * 4  # 20
 ```
 
+----
+
+
 **Conversió i imprecisions**:
 ```python
 int(3.9)     # 3  (talla)
@@ -70,6 +80,8 @@ float(5)     # 5.0
 ```
 
 > Quan cal exactitud en **diners/mesures**, considera `decimal.Decimal` i format amb 2 decimals.
+
+----
 
 ## Variables, acumuladors i constants
 Una **variable** guarda un valor identificat per un **nom** vàlid (no pot començar per número).
@@ -80,6 +92,9 @@ x = x + 4      # 10
 x += 3         # 13 (assignació composta)
 ```
 
+----
+
+
 **Acumulador**: patró per anar sumant/mesurant.
 ```python
 total = 0.0
@@ -88,6 +103,8 @@ for nota in [6.5, 7.0, 5.25]:
 mitjana = total / 3
 ```
 
+----
+
 **Constants**: estil en MAJÚSCULES per valors “fixos” al codi.
 ```python
 PI = 3.141592653
@@ -95,11 +112,15 @@ radi = 8
 area = PI * (radi ** 2)
 ```
 
+----
+
 > Python distingeix **majúscules/minúscules**: `pi` i `PI` són noms diferents.
 
 ## Llegibilitat: espais i sagnat
 Python ignora **espais** entre operadors, però llegeix millor `2 + 4 + -5` que no pas variants compactes.  
 El **sagnat** (espais al principi) és significatiu a les estructures de control; al REPL, una línia amb espais al principi pot provocar `IndentationError`.
+
+----
 
 ## Text: `str`, cometes i línies múltiples
 ```python
@@ -110,6 +131,9 @@ type('Hi!')       # cometes simples o dobles
 dos
 tres"""           # literal multilínia; conté '\n'
 ```
+
+----
+
 
 Si el text conté apòstrof (`'`), és còmode usar cometes dobles: `"L'ombra..."`.
 
@@ -122,6 +146,8 @@ f"Em dic {nom} i tinc {edat} anys."
 a = 2/3
 f"Amb dos decimals: {a:.2f}"   # -> 'Amb dos decimals: 0.67'
 ```
+
+----
 
 ## De l’intèrpret a l’script
 Un **script** (`.py`) és una seqüència de sentències guardades en fitxer.
@@ -138,6 +164,8 @@ Execució:
 python hello.py
 # 135
 ```
+----
+
 
 Exemple amb entrada d’usuari (`input()`):
 ```python
@@ -150,18 +178,31 @@ print(f"Àrea amb radi {radi}: {area}")
 
 > Recorda **desar** (`Ctrl + S`) abans d’executar.
 
+---
+
 ## Activitats ràpides
 1) Reescriu amb bona llegibilitat: `+4++6-+6+-10`  
    **Pista**: separa tokens amb espais.
 
+----
+
 2) f-string: amb `usuari = "Miquel"` i `lliure = 125.5999`, mostra  
    `L'usuari Miquel té 125.60 MB d'espai lliure` (arrodonit a 2 decimals).
 
+----
+
 3) Percentatges: amb `p = 0.8` i `n = 99`, mostra `El 80.0 % de 99 és 79.2` amb una sola línia `print(...)` i càlcul dins d’un f-string.
+
+----
 
 4) Scripts: amplia `circle.py` perquè imprimeixi **perímetre** i una línia final resum: `radi=X, àrea=..., perímetre=...`.
 
+----
+
+
 5) Converteix segons totals a `h:mm:ss` usant `//` i `%` (sense llibreries).
+
+---
 
 ## Errors típics i com interpretar-los
 - **NameError** — variable no definida. Defineix abans d’usar:
@@ -177,9 +218,14 @@ print(f"Àrea amb radi {radi}: {area}")
   int(x) + y  # 8
   ```
 
+---
+
+
 ## Crèdit i enllaços
 - “Python — Computació”, xtec.dev (consulta per a temari i exemples). Lloc amb llicència **CC BY‑NC‑ND 4.0**.  
 - Aquest material ha estat **reescrit** per a ús educatiu dins l’aula SMX, evitant la còpia literal de textos i exercicis.
+
+---
 
 **Activitat**  
 Escriu aquesta sentència de manera que es pugui entendre fàcilment: `+4++6-+6+-10`
