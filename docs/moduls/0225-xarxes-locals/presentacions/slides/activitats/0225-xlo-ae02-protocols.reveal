@@ -1,37 +1,78 @@
 
-# Activitat: Presentacions de Protocols (SMX) (`0225-xlo-ae02-protocols`)
+# Activitat: Presentacions de Protocols (SMX)
+##### (`0225-xlo-ae02-protocols`)
 
-**Objectiu de l’activitat**: cada alumne prepararà i exposarà **un protocol de xarxa** seguint una **plantilla comuna** i una **rúbrica única**. L’enfoc és pràctic, amb **demo breu** i **captures de paquets**.
+* **Objectiu de l’activitat**: cada alumne prepararà i exposarà **un protocol de xarxa** seguint una **plantilla comuna** i una **rúbrica única**. L’enfoc és pràctic, amb **demo breu** i **captures de paquets**.
 
-> **Durada de l’exposició:** 8–10 minuts + 2 minuts de preguntes  
-> **Format recomanat:** plantilla Reveal.js (proporcionada al Classroom)
+* **Durada de l’exposició:** 8–10 minuts + 2 minuts de preguntes  
+
+* **Format recomanat:** plantilla Reveal.js (proporcionada al Classroom)
 
 ---
 
-## 1) Assignacions (7 protocols)
+## 1) Assignacions (7 protocols) (1/4)
 
 | Alumne | Protocol (focus) | Objectiu clau | Idea de demo breu (≤10’) | Eines suggerides |
 |---|---|---|---|---|
 | Kristina | **DHCP** (DORA, lloguers, relay) | Adreçament automàtic i opcions | `ipconfig /renew` o `dhclient`, aixecar un DHCP (p.ex. dnsmasq) i veure el cicle DORA amb Wireshark (`bootp`) | Wireshark, dnsmasq/ISC-DHCP, CLI |
+
+----
+## 1) Assignacions (7 protocols) (2/4)
+
+| Alumne | Protocol (focus) | Objectiu clau | Idea de demo breu (≤10’) | Eines suggerides |
+|---|---|---|---|---|
 | Lorena | **DNS** (A/AAAA, CNAME, MX, TTL, recurse/caching) | Resoldre noms i interpretar registres | Fer `dig/nslookup` a diversos dominis, canviar TTL i observar caché | `dig`, `nslookup`, Pi-hole o bind, Wireshark (`dns`) |
+
+----
+## 1) Assignacions (7 protocols) (2/4)
+
+| Alumne | Protocol (focus) | Objectiu clau | Idea de demo breu (≤10’) | Eines suggerides |
+|---|---|---|---|---|
 | Merouan | **HTTP/HTTPS + TLS** (mètodes, codis, capçaleres, handshake TLS) | Funcionament web i seguretat bàsica | `curl -I http://` vs `https://`, DevTools, `openssl s_client`, paquets TLS | curl, navegador, OpenSSL, Wireshark (`http`,`tls`) |
+
+----
+## 1) Assignacions (7 protocols) (2/4)
+
+| Alumne | Protocol (focus) | Objectiu clau | Idea de demo breu (≤10’) | Eines suggerides |
+|---|---|---|---|---|
 | Pau | **SMTP/IMAP/POP3** (flux correu, ports, STARTTLS) | Entrega i lectura de correu | Enviar correu entre dos comptes; `telnet` a SMTP; llegir via IMAP; captures | Client correu, telnet/netcat, Wireshark (`smtp`,`imap`) |
+
+----
+## 1) Assignacions (7 protocols) (2/4)
+
+| Alumne | Protocol (focus) | Objectiu clau | Idea de demo breu (≤10’) | Eines suggerides |
+|---|---|---|---|---|
 | Joao | **FTP/FTPS/SFTP** (actiu/passiu, seguretat) | Diferenciar protocols i modes | Servidor FTP, pujar fitxer amb FileZilla en actiu/passiu; comparar amb SFTP | vsftpd/FileZilla, SSH, Wireshark (`ftp`) |
+
+----
+## 1) Assignacions (7 protocols) (2/4)
+
+| Alumne | Protocol (focus) | Objectiu clau | Idea de demo breu (≤10’) | Eines suggerides |
+|---|---|---|---|---|
 | Clemente | **VLAN 802.1Q** (etiquetatge, access/trunk, PVID) | Segmentació L2 i etiquetatge **802.1Q** | Configurar **VLANs** en switch (o Linux subinterfaces), provar connectivitat i capturar el **tag 802.1Q** | Packet Tracer/GNS3 o switch gestionable, Linux `ip link`, Wireshark (`vlan`) |
+
+----
+## 1) Assignacions (7 protocols) (2/4)
+
+| Alumne | Protocol (focus) | Objectiu clau | Idea de demo breu (≤10’) | Eines suggerides |
+|---|---|---|---|---|
 | Marc | **SNMP & NTP** (monitoratge i temps) | Monitorització i sincronització horària | `snmpwalk` sobre `snmpd`; comprovar NTP amb `timedatectl`; perquè el temps coherent importa | snmpd/snmpwalk, `timedatectl`/`w32tm`, Wireshark (`snmp`,`ntp`) |
+
+---
 
 ### Assignació:
 
 |Grup|Tema|Alumne|Nom repositori|
 |----|----|----|----|
-|A|DHCP|Kristina|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-kristina-2008`|
-|B|DNS|Lorena|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-Lorena639`|
-|C|HTTP/HTTPS + TLS|Merouan|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-merouan208`|
-|D|SMTP/IMAP/POP3|Pau|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-Paudiazlopez`|
-|E|FTP/FTPS/SFTP|Joao|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-jdanioliv.git`|
-|F|VLAN 802.1Q|Clemente|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-clemente825.git`|
-|G|SNMP & NTP|Marc|`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-marcl-3`|
+|A|DHCP|Kristina|[repo](`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-kristina-2008`)|
+|B|DNS|Lorena|[repo](`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-Lorena639`)|
+|C|HTTP/HTTPS + TLS|Merouan|[repo](`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-merouan208`)|
+|D|SMTP/IMAP/POP3|Pau|[repo](`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-Paudiazlopez`)|
+|E|FTP/FTPS/SFTP|Joao|[repo](`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-jdanioliv.git`)|
+|F|VLAN 802.1Q|Clemente|[repo](`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-clemente825.git`)|
+|G|SNMP & NTP|Marc|[repo](`https://github.com/SMX-2025-2027/presentacio-protocols-reveal-marcl-3`)|
 
+---
 
 ## 2) Què ha de contenir **cada presentació** (8–10 diapositives)
 
@@ -56,11 +97,15 @@
 - **Ports**: 67/68 UDP. **Filtre Wireshark**: `bootp`.  
 - **Mini-activitat**: canvia la durada del lloguer i comprova la renovació en una VM.
 
+----
+
 ### DNS
 - **Registres** (A/AAAA, CNAME, MX, TXT), **TTL**, **caché** i **recursió**.  
 - **Demo**: `dig` a diversos registres; modifica un TTL al teu servidor i observa la caché.  
 - **Ports**: 53 UDP/TCP. **Filtre Wireshark**: `dns`.  
 - **Mini-activitat**: compara temps de resposta amb i sense caché local.
+
+----
 
 ### HTTP/HTTPS + TLS
 - **Mètodes** (GET/POST/HEAD), **codis** (2xx/3xx/4xx/5xx), **capçaleres**. **TLS**: SNI, certificats, handshake.  
@@ -68,17 +113,23 @@
 - **Ports**: 80/443 TCP. **Filtres**: `http`, `tls.handshake`.  
 - **Mini-activitat**: forçar un error de certificat i identificar-lo.
 
+----
+
 ### SMTP/IMAP/POP3
 - **Flux**: subministrament (SMTP) → bústia (IMAP/POP3). **STARTTLS**/TLS, autenticació.  
 - **Demo**: `telnet host 25` i conversa SMTP bàsica; llegir correu via IMAP.  
 - **Ports**: 25/587/465 (SMTP), 143/993 (IMAP), 110/995 (POP3). **Filtres**: `smtp`, `imap`.  
 - **Mini-activitat**: enviar un missatge amb capçaleres personalitzades i llegir-les.
 
+----
+
 ### FTP/FTPS/SFTP
 - **Modes**: **actiu** vs **passiu**; **FTPS** (TLS) vs **SFTP** (sobre SSH).  
 - **Demo**: servidor FTP (vsftpd), pujar/descarregar fitxer en actiu/passiu; comparar amb SFTP.  
 - **Ports**: 21 TCP (+ dinàmics), **SFTP**: 22 TCP. **Filtre**: `ftp`.  
 - **Mini-activitat**: bloqueja ports dinàmics i explica perquè falla mode actiu.
+
+----
 
 ### VLAN 802.1Q
 - **Concepte**: segmentació **L2**, **tag 802.1Q** (TPID `0x8100`), **VID**, **PCP**, **DEI**.  
@@ -101,6 +152,8 @@
 - **Ethertype**: 0x8100. **Filtre Wireshark**: `vlan`.  
 - **Mini-activitat**: configura un **trunk** i mostra un paquet amb **tag VLAN**; explica **PVID** en un port access.
 
+----
+
 ### SNMP & NTP
 - **SNMP**: versions (v1/v2c/v3), **OIDs**, **get/walk**, seguretat bàsica.  
 - **NTP**: servidors, estrats, offset, drift, importància del temps coherent.  
@@ -118,13 +171,22 @@
 - **Full de comandes** utilitzades (1 pàgina).  
 - **Bibliografia** (mínim **3** fonts).
 
-**Nomenclatura de fitxers**: `<PrimerCognomAlmne>-xlo-ud01-ae01.pdf` i `<PrimerCognomAlmne>-xlo-ud01-ae01.zip`
+----
+
+**Nomenclatura de fitxers**:
+
+* `<PrimerCognomAlmne>-xlo-ud01-ae01.pdf` i
+* `<PrimerCognomAlmne>-xlo-ud01-ae01.zip`
 
 ><hr>
 >
 > ###### On **`<PrimerCognomAlmne>`** és només el primer cognom de l'alumne, sense el nom.
 >
-> ###### Per exemple en el caso de l'alumne <b><u>Albert Einstein</u></b>, el nom de la carpeta seria <kbd><u><b>**`einstein--xlo-ud01-ae01`**</b></u></kbd>.
+> ###### Per exemple en el caso de l'alumne <b><u>Albert Einstein</u></b>, el nom de la carpeta seria:
+> 
+> 1. <kbd><u><b>**`einstein-xlo-ud01-ae01.pdf`**</b></u></kbd>.
+>
+> 1. <kbd><u><b>**`einstein-xlo-ud01-ae01.zip`**</b></u></kbd>.
 >
 ><hr>
 
@@ -147,10 +209,18 @@
 **Filtres Wireshark**:  
 `dns` · `bootp` · `http` · `tls.handshake` · `smtp` · `imap` · `ftp` · `snmp` · `ntp` · `vlan`
 
+----
+
+## 6) Recursos i “snippets” útils
+
 **Comandes útils**:  
 - **Windows**: `ipconfig /all`, `ipconfig /renew`, `arp -a`, `tracert`, `w32tm /query /status`  
 - **Linux**: `ip addr`, `dhclient -v`, `ip link add ... type vlan id N`, `arp -n`, `ping`, `traceroute`, `timedatectl`, `dig`, `curl -I`, `openssl s_client`  
 - **TCPDump**: `tcpdump -i <if> -en vlan`, `tcpdump -i <if> port 53`, `tcpdump -i <if> port 67 or port 68`
+
+----
+
+## 6) Recursos i “snippets” útils
 
 **Eines lleugeres de lab**: dnsmasq (DHCP/DNS), bind, vsftpd, snmpd, OpenSSL, FileZilla, Packet Tracer/GNS3.
 
