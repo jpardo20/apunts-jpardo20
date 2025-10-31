@@ -1,39 +1,4 @@
-<style>
-details > summary {
-  cursor: pointer; padding: .5rem .8rem; border-radius: .5rem;
-  background: #eee; font-weight: 600; display: inline-block;
-}
-details[open] > summary { background: #e3e3e3; }
-</style>
 
-
-
-
-<!-- 
-## Objectius
-- Entendre per què els ordinadors destaquen en el **càlcul numèric**.
-- Utilitzar els **tipus numèrics** de Python (`int`, `float`) i els principals **operadors**.
-- Declarar i usar **variables**, constants i **assignacions** "compostes" (`+=`, `-=`, …).
-- Escriure **scripts** senzills (fitxers `.py`) amb `print()` i `input()`.
-- Evitar **errors freqüents** (nom no definit, divisió per zero, barreges `str**`/`**int`, etc.).
- -->
-
-<!--
----
-
-## Índex
-1. [Introducció](#introducció)  
-2. [Entorn de treball](#entorn-de-treball)  
-3. [Números: enters i reals](#números-enters-i-reals)  
-4. [Variables, acumuladors i constants](#variables-acumuladors-i-constants)  
-5. [Llegibilitat: espais i sagnat](#llegibilitat-espais-i-sagnat)  
-6. [Text: `str`, cometes i línies múltiples](#text-str-cometes-i-línies-múltiples)  
-7. [f-strings i format numèric](#f-strings-i-format-numèric)  
-8. [De l’intèrpret a l’script](#de-lintèrpret-a-lscript)  
-9. [Activitats ràpides](#activitats-ràpides)  
-10. [Errors típics i com interpretar-los](#errors-típics-i-com-interpretar-los)  
-11. [Crèdit i enllaços](#crèdit-i-enllaços)
--->
 
 # MOPT1 — Python
 
