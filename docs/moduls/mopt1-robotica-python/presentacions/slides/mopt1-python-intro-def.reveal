@@ -8,22 +8,18 @@ details[open] > summary { background: #e3e3e3; }
 
 
 
-# MOPT1 — Python · Computació (versió docent SMX)
 
-> **Document original i de síntesi**, elaborat per a l’optativa *Robòtica i programació en Python* (SMX).  
-> Basat en els temes tractats a “Python — Computació” (xtec.dev), llicència **CC BY‑NC‑ND 4.0**. Aquesta és **una re‑escriptura didàctica**, no una còpia ni adaptació literal.
-
----
-
+<!-- 
 ## Objectius
 - Entendre per què els ordinadors destaquen en el **càlcul numèric**.
 - Utilitzar els **tipus numèrics** de Python (`int`, `float`) i els principals **operadors**.
-- Declarar i usar **variables**, constants i **assignacions** “compostes” (`+=`, `-=`, …).
+- Declarar i usar **variables**, constants i **assignacions** "compostes" (`+=`, `-=`, …).
 - Escriure **scripts** senzills (fitxers `.py`) amb `print()` i `input()`.
-- Evitar **errors freqüents** (nom no definit, divisió per zero, barreges `str`/`int`, etc.).
+- Evitar **errors freqüents** (nom no definit, divisió per zero, barreges `str**`/`**int`, etc.).
+ -->
 
+<!--
 ---
-
 
 ## Índex
 1. [Introducció](#introducció)  
@@ -37,18 +33,56 @@ details[open] > summary { background: #e3e3e3; }
 9. [Activitats ràpides](#activitats-ràpides)  
 10. [Errors típics i com interpretar-los](#errors-típics-i-com-interpretar-los)  
 11. [Crèdit i enllaços](#crèdit-i-enllaços)
+-->
 
----
+# MOPT1 — Python
 
 ## Introducció
-Fa segles, “computer” era la persona que **computava**. Els ordinadors actuals automatitzen aquest càlcul i permeten programes que, per sota, fan **moltes operacions amb nombres**. En aquesta unitat consolidem la base numèrica de Python per poder avançar cap a **lògica, control del temps** i petites **simulacions** de robòtica.
+Fa segles, "computer" era la persona que **computava**. Els ordinadors actuals automatitzen aquest càlcul i permeten programes que, per sota, fan **moltes operacions amb nombres**. En aquesta unitat consolidem la base numèrica de Python per poder avançar cap a **lògica, control del temps** i petites **simulacions** de robòtica.
+
+----
+
+Validem la versió que tenim instal·lade de Pyton.
+
+1. Obriu una sessió de **`cmd`**
+
+1. executeu: <kbd>python3 --version</kbd> per veure la versió que teniu instal·lada de Python.
+
+```cmd
+joan@jpc-ThinkPad ~ $ python3 --version
+Python 3.10.12
+joan@jpc-ThinkPad ~ $
+```
+
+----
+
+Comencem excutant comandes directament a l’intèrpret de Pyton.
+
+
+1. Obriu una sessió de **`cmd`**, (si no la teniu ja oberta).
+
+1. executeu: <kbd>python3</kbd> per a l’intèrpret de Pyton.
+
+```cmd
+joan@jpc-ThinkPad ~ $ python3
+Python 3.10.12 (main, Aug 15 2025, 14:32:43) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+```
+
+Per sortir de a l’intèrpret de Pyton cal executar <kbd>quit()</kbd>
+
+```cmd
+>>> quit()
+joan@jpc-ThinkPad ~ $ 
+```
 
 ---
 
 ## Números: enters i reals
 **Tipus**:
-- `int`: enters, sense part decimal — p. ex. `-3`, `0`, `42`.
-- `float`: reals amb decimals — p. ex. `3.14`, `2.0`.
+- **`int`**: enters, sense part decimal — p. ex. **`-3`**, **`0`**, **`42`**.
+- **`float`**: reals amb decimals — p. ex. **`3.14`**, **`2.0`**.
 
 ```python
 type(2)     # <class 'int'>
@@ -58,15 +92,26 @@ type(2.)    # <class 'float'>
 
 ----
 
-**Operadors**: `+`, `-`, `*`, `/`, `//`, `%`, `**` (potència).  
-**Precedència**: `**` → `* / // %` → `+ -`. Usa parèntesis per deixar clar l’ordre.
+### La comanda **`type()`**
+
+* **`type()`**: ens mostra de quin tipus és l'objecte que li passem com argument.
+
+![alt text](../../../assets/img/info-vsc-python-type.png)
+
+Més informació de [**`type()`**](https://docs.python.org/3/reference/simple_stmts.html#type)
+
+----
+
+**Operadors**: **`+`**, **`-`**, **`*`**, **`/`**, **`//`**, **`%`**, **`**`** (potència).  
+**Precedència**: **`**`** → **`*`**, **`/`**, **`//`**, **`%`** → **`+`**, **`-`**. Usa parèntesis per deixar clar l’ordre.
 
 ```python
-5 / 2      # 2.5 (float)
-5 // 2     # 2   (part sencera)
-5 % 2      # 1   (resta)
-2 ** 4     # 16
-(2 + 3) * 4  # 20
+5 / 2        # 2.5 el resultat és decimal => float.
+5 // 2       # 2   mostra només la part sencera, NO arrodoneix.
+5 % 2        # 1   mostra la resta de la divisió 5 entre 2.
+2 ** 4       # 16  mostra la potencia de 2 elevat a 4.
+(2 + 3) * 4  # 20  mostra el resultat canviant l'ordre de Precedència
+2 + 3 * 4    # 14  mostra el resultat sense canviar l'ordre de Precedència
 ```
 
 ----
@@ -76,14 +121,16 @@ type(2.)    # <class 'float'>
 ```python
 int(3.9)     # 3  (talla)
 float(5)     # 5.0
-0.1 + 0.2    # 0.30000000000000004  (representació binària dels floats)
 ```
 
-> Quan cal exactitud en **diners/mesures**, considera `decimal.Decimal` i format amb 2 decimals.
+---
+
+## Variables, acumuladors i constants
 
 ----
 
-## Variables, acumuladors i constants
+## Variables
+
 Una **variable** guarda un valor identificat per un **nom** vàlid (no pot començar per número).
 
 ```python
@@ -94,8 +141,10 @@ x += 3         # 13 (assignació composta)
 
 ----
 
+## Acumuladors
 
 **Acumulador**: patró per anar sumant/mesurant.
+
 ```python
 total = 0.0
 for nota in [6.5, 7.0, 5.25]:
@@ -105,14 +154,17 @@ mitjana = total / 3
 
 ----
 
-**Constants**: estil en MAJÚSCULES per valors “fixos” al codi.
+## Constants
+
+**Constants**: estil en MAJÚSCULES per valors "fixos" al codi.
+
 ```python
 PI = 3.141592653
 radi = 8
 area = PI * (radi ** 2)
 ```
 
-----
+---
 
 > Python distingeix **majúscules/minúscules**: `pi` i `PI` són noms diferents.
 
@@ -133,7 +185,6 @@ tres"""           # literal multilínia; conté '\n'
 ```
 
 ----
-
 
 Si el text conté apòstrof (`'`), és còmode usar cometes dobles: `"L'ombra..."`.
 
@@ -170,13 +221,12 @@ python hello.py
 Exemple amb entrada d’usuari (`input()`):
 ```python
 # circle.py
-radi = int(input("Radi? "))
+print("Entra el radi? ", end="")
+radi = int(input())
 PI = 3.141592653
 area = PI * (radi ** 2)
 print(f"Àrea amb radi {radi}: {area}")
 ```
-
-> Recorda **desar** (`Ctrl + S`) abans d’executar.
 
 ---
 
@@ -200,7 +250,7 @@ print(f"Àrea amb radi {radi}: {area}")
 ----
 
 
-5) Converteix segons totals a `h:mm:ss` usant `//` i `%` (sense llibreries).
+5) Converteix segons totals a `h:mm:ss` usant **`//`** i **`%`** (sense llibreries).
 
 ---
 
@@ -217,13 +267,6 @@ print(f"Àrea amb radi {radi}: {area}")
   x = "5"; y = 3
   int(x) + y  # 8
   ```
-
----
-
-
-## Crèdit i enllaços
-- “Python — Computació”, xtec.dev (consulta per a temari i exemples). Lloc amb llicència **CC BY‑NC‑ND 4.0**.  
-- Aquest material ha estat **reescrit** per a ús educatiu dins l’aula SMX, evitant la còpia literal de textos i exercicis.
 
 ---
 
