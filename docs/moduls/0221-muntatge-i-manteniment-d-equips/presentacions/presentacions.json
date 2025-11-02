@@ -83,8 +83,8 @@
     },
     {
       "order": 12,
-      "title": "1. Mesura de paràmetres elèctrics. Fonts d’alimentació",
-      "src": "slides/mim-electricvitat-intro.reveal",
+      "title": "12. Mesura de paràmetres elèctrics. Fonts d’alimentació",
+      "src": "slides/mim-electricitat-intro.reveal",
       "description": "1. Mesura de paràmetres elèctrics. Fonts d’alimentació",
       "status": "active"
     }
