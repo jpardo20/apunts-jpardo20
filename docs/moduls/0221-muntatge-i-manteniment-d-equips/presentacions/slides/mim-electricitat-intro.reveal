@@ -566,6 +566,8 @@ En el sistema internacional de mesures:
 
 ----
 
+##### El circuit elèctric
+
 Començarem fent un símil amb un circuit hidràulic.
 
 <img src="../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p15_block439_537.png" height="200">
@@ -576,18 +578,23 @@ Començarem fent un símil amb un circuit hidràulic.
 
 ----
 
+##### El circuit elèctric
+
 * Si a aquest símil hidràulic, en què heu pogut comprovar que quan els dos dipòsits estan al mateix nivell el corrent desapareix, afegim algun element que mantingui la diferència de potencial, el corrent d'aigua des del dipòsit A ﬁns al B no s'aturarà.
 
 ----
 
+##### El circuit elèctric
+
 <img src="../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p15_block439_652.png" height="400">
 
-> **Figura 6B**: La ***bomba hidràulica*** representa el generador elèctric-
+> **Figura 6B**: La ***bomba hidràulica*** representa el generador elèctric
 
 ----
 
-<img src="../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p15_block439_652.png" height="200">
+##### El circuit elèctric
 
+<img src="../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p15_block439_652.png" height="200">
 
 * Aquest element, que podria ser una **bomba**, també el podríem anomenar **generador de diferència de potencial**.
 
@@ -595,13 +602,17 @@ Començarem fent un símil amb un circuit hidràulic.
 
 ----
 
-* Observeu en la **ﬁgura 1.5** que el comportament del circuit elèctric és molt semblant a l'hidràulic.
+##### El circuit elèctric
 
+* Observeu en la **ﬁgura 1.5** que el comportament del circuit elèctric és molt semblant a l'hidràulic.
 
 ![fp_smx_m01_u1_pdfindex_p16_block272_81.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p16_block272_81.png)
 > **Figura 1.5**: El corrent recorre el circuit elèctric com l'aigua el circuit hidràulic
 
 ----
+
+##### El circuit elèctric
+
 
 > ###### Sentits convencional i real del corrent elèctric
 > 
@@ -609,8 +620,10 @@ Començarem fent un símil amb un circuit hidràulic.
 > 
 > Després es va veure que la realitat és diferent, és a dir, que el que es mou són els electrons.
 
-
 ----
+
+##### El circuit elèctric
+
 
 > ###### Interruptor obert i tancat
 > 
@@ -621,6 +634,9 @@ Començarem fent un símil amb un circuit hidràulic.
 > En el **circuit a** l’interruptor **obert** impedeix el pas del corrent. En el **circuit b** l’interruptor **tanca** el circuit i permet el pas del corrent.
 
 ----
+
+##### El circuit elèctric
+
 
 * El circuit elèctric està format per una pila, que fa les funcions de generador mantenint la diferència de potencial, i uns elements conductors que connecten un pol del generador amb l'element receptor (el que transforma l'energia elèctrica en altres formes d'energia), i aquest amb l'altre pol del generador, i d'aquesta manera es tanca el circuit.
 
@@ -634,12 +650,11 @@ Començarem fent un símil amb un circuit hidràulic.
 
 ##### Generadors elèctrics
 
-![fp_smx_m01_u1_pdfindex_p16_block42_688.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p16_block42_688.png)
-> Centrals tèrmiques
-
 * Els generadors elèctrics són elements imprescindibles en qualsevol circuit elèctric. L'energia elèctrica es pot generar de diferents maneres. Segons el tipus de procediment emprat trobem:
 
 ----
+
+##### Generadors elèctrics
 
 ###### Generadors electromagnètics:
 
@@ -649,6 +664,9 @@ Començarem fent un símil amb un circuit hidràulic.
 
 * Utilitzen cèl·lules formades per elements semiconductors que tenen la propietat de, sotmetent-los a l'exposició de la llum solar, ser capaços de generar unes petites diferències de potencial entre els seus extrems. La combinació de múltiples cèl·lules permet aconseguir diferències de potencial d'uns valors suﬁcients per a poder ser utilitzades.
 
+----
+
+##### Generadors elèctrics
 
 ###### Generadors químics:
 
@@ -656,13 +674,7 @@ Començarem fent un símil amb un circuit hidràulic.
 
 ----
 
-![fp_smx_m01_u1_pdfindex_p17_block439_66.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p17_block439_66.png)
-> Plaques solars
-
-![fp_smx_m01_u1_pdfindex_p17_block439_179.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p17_block439_179.png)
-> Piles i bateries
-
-----
+##### Generadors elèctrics
 
 * En qualsevol cas, cal tenir present el principi de conservació de l'energia.
 
@@ -678,6 +690,8 @@ Començarem fent un símil amb un circuit hidràulic.
 
 ----
 
+##### Conductors
+
 #### 1.1.3 Magnituds elèctriques i les seves unitats
 
 * Diferents magnituds, amb les seves respectives unitats i múltiples i submúltiples, intervenen en els circuits elèctrics.
@@ -689,6 +703,7 @@ Començarem fent un símil amb un circuit hidràulic.
 > <hr>
 
 ----
+##### Conductors
 
 ###### Diferència de potencial (**`ddp`**)
 
@@ -702,6 +717,8 @@ Començarem fent un símil amb un circuit hidràulic.
 
 ----
 
+##### Conductors
+
 ![fp_smx_m01_u1_pdfindex_p16_block272_81.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p16_block272_81.png)
 > **Figura 1.5**: El corrent recorre el circuit elèctric com l'aigua el circuit hidràulic
 
@@ -710,6 +727,8 @@ Començarem fent un símil amb un circuit hidràulic.
    * Si no hi ha aquesta diferència de tensió elèctrica el corrent no circula.
 
 ----
+
+##### Conductors
 
 * Aquesta **diferència de tensió elèctrica** s'anomena normalment **diferència de potencial (`ddp`)**, la seva unitat en el sistema internacional (SI) és el **`volt`** i es representa de manera abreujada amb una **`V`** majúscula.
 
@@ -726,6 +745,8 @@ Començarem fent un símil amb un circuit hidràulic.
 * La **força electromotriu** s'acostuma a representar amb la lletra **`E`** i es mesura, igual que la diferència de potencial, en **volts** (**`V`**).
 
 ----
+
+##### Força electromotriu (**`fem`**)
 
 > <hr>
 >
@@ -749,15 +770,17 @@ Començarem fent un símil amb un circuit hidràulic.
 
 ----
 
-* És la manera més comuna de fer referència a la **diferència de potencial**, i també a la **força electromotriu**. Es pot deﬁnir com la **diferència de nivell elèctric que hi ha entre dos punts qualsevol d'un circuit elèctric**. S'acostuma a representar com a **`V`**. La tensió es mesura també en **volts** (**`V`**). L'aparell per a mesurar els nivells de tensió s'anomena **voltímetre**.
+##### Tensió elèctrica
 
+* És la manera més comuna de fer referència a la **diferència de potencial**, i també a la **força electromotriu**. Es pot deﬁnir com la **diferència de nivell elèctric que hi ha entre dos punts qualsevol d'un circuit elèctric**. S'acostuma a representar com a **`V`**. La tensió es mesura també en **volts** (**`V`**). L'aparell per a mesurar els nivells de tensió s'anomena **voltímetre**.
 
 * De vegades cal indicar valors molt més grans que la unitat (**`volt`**) o, al contrari, molt més petits, i això ens obliga a utilitzar múltiples i submúltiples.
 
 ----
 
-A la taula 1.2 podeu consultar els valors equivalents en volts d'aquests múltiples i submúltiples.
+##### Tensió elèctrica
 
+A la taula 1.2 podeu consultar els valors equivalents en volts d'aquests múltiples i submúltiples.
 
 |Múltiples|Submúltiples|Equivalència|
 |----|----|----|
@@ -771,6 +794,8 @@ A la taula 1.2 podeu consultar els valors equivalents en volts d'aquests múltip
 
 ----
 
+##### Tensió elèctrica
+
 *  **`220 kV = 220 × 103 V = 220.000 V`**
 
 *  **`135 mV = 135 × 10-3 V = 0,135 V`**
@@ -779,6 +804,8 @@ A la taula 1.2 podeu consultar els valors equivalents en volts d'aquests múltip
 
 ----
 
+##### Tensió elèctrica
+
 > ###### Corrent elèctric sense bifurcacions
 > 
 > * Per a entendre el concepte de corrent elèctric sense bifurcacions, us pot ajudar pensar en un passadís sense portes als costats i sense possibilitat de tirar enrere.
@@ -786,7 +813,6 @@ A la taula 1.2 podeu consultar els valors equivalents en volts d'aquests múltip
 ----
 
 ##### Intensitat del corrent
-
 
 > <img src="../../../assets/img/mim/../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p19_block439_82.png" height="400">
 >
@@ -802,11 +828,15 @@ A la taula 1.2 podeu consultar els valors equivalents en volts d'aquests múltip
 
 ----
 
+##### Intensitat del corrent
+
 > <img src="../../../assets/img/mim/../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p19_block439_197.png" height="400">
 
 * La unitat del corrent elèctric en el sistema internacional és l'ampere (A), que és la intensitat d'un corrent que transporta un **`coulomb`** en cada segon.
 
 ----
+
+##### Intensitat del corrent
 
 La intensitat del corrent elèctric en un circuit que no tingui bifurcacions és sempre la mateixa en qualsevol punt del circuit, ja que el nombre d'electrons que passen en un segon per un punt del circuit serà el mateix si els mesurem en un altre punt del mateix circuit; així, en la ﬁgura 1.11, el corrent en el punt A i en el punt B és el mateix.
 
