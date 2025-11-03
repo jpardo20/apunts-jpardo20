@@ -45,6 +45,13 @@
       "src": "slides/aof-ud05-ae05.reveal",
       "description": "Actividad evaluable (Procesadores de texto): 5 (`aof-ud05-ae05`)",
       "status": "active"
+    },
+    {
+      "order": 7,
+      "title": "7. Recursos para maquetar una revista en Word",
+      "src": "slides/recursos.reveal",
+      "description": "Recursos exprés (estilo TikTok/Shorts) para maquetar una revista en Word",
+      "status": "active"
     }
   ]
 }
