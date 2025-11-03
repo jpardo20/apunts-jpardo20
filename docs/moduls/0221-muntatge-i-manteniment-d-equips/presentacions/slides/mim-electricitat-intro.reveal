@@ -132,7 +132,7 @@
 ---
 
 
-## 1. Mesura de paràmetres elèctrics. Fonts d'alimentació.
+## 1. Mesura de paràmetres elèctrics.
 
 * En aquest apartat es donarà una visió general del funcionament i mesurament de l'electricitat.
 
@@ -711,7 +711,11 @@ Començarem fent un símil amb un circuit hidràulic.
 
   * En el símil hidràulic equival a tenir una diferència de nivell entre els dipòsits.
 
-* Si tornem al circuit hidràulic de la ﬁgura 6, la bomba tenia per objecte establir una diferència de pressió entre tots dos dipòsits perquè l'aigua pogués circular en el sentit de més pressió (dipòsit A) a menys pressió (dipòsit B).
+----
+
+##### Conductors
+
+* Si tornem al circuit hidràulic de la **ﬁgura 6**, la bomba tenia per objecte establir una diferència de pressió entre tots dos dipòsits perquè l'aigua pogués circular en el sentit de més pressió (dipòsit A) a menys pressió (dipòsit B).
 
 <img src="../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p15_block439_537.png" height="400">
 
@@ -722,9 +726,7 @@ Començarem fent un símil amb un circuit hidràulic.
 ![fp_smx_m01_u1_pdfindex_p16_block272_81.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p16_block272_81.png)
 > **Figura 1.5**: El corrent recorre el circuit elèctric com l'aigua el circuit hidràulic
 
-* De la mateixa manera, la pila del circuit de la ﬁgura 1.5 té per objecte establir una diferència de tensió entre els extrems del circuit.
-
-   * Si no hi ha aquesta diferència de tensió elèctrica el corrent no circula.
+* De la mateixa manera, la pila del circuit de la ﬁgura 1.5 té per objecte establir una diferència de tensió entre els extrems del circuit. Si no hi ha aquesta diferència de tensió elèctrica el corrent no circula.
 
 ----
 
@@ -830,7 +832,6 @@ A la taula 1.2 podeu consultar els valors equivalents en volts d'aquests múltip
 
 ##### Intensitat del corrent
 
-> <img src="../../../assets/img/mim/../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p19_block439_197.png" height="400">
 
 * La unitat del corrent elèctric en el sistema internacional és l'ampere (A), que és la intensitat d'un corrent que transporta un **`coulomb`** en cada segon.
 
@@ -838,323 +839,409 @@ A la taula 1.2 podeu consultar els valors equivalents en volts d'aquests múltip
 
 ##### Intensitat del corrent
 
-La intensitat del corrent elèctric en un circuit que no tingui bifurcacions és sempre la mateixa en qualsevol punt del circuit, ja que el nombre d'electrons que passen en un segon per un punt del circuit serà el mateix si els mesurem en un altre punt del mateix circuit; així, en la ﬁgura 1.11, el corrent en el punt A i en el punt B és el mateix.
+* La intensitat del corrent elèctric en un circuit que no tingui bifurcacions és sempre la mateixa en qualsevol punt del circuit, ja que el nombre d'electrons que passen en un segon per un punt del circuit serà el mateix si els mesurem en un altre punt del mateix circuit. Així, en la següent ﬁgura, el corrent en el **`punt A`** i en el **`punt B`** és el mateix.
 
-Quan parlem de circuits elèctrics domèstics, els que hi ha a les instal·lacions dels nostres habitatges, la unitat ampere és una unitat força adequada.
+> <img src="../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p19_block439_197.png" height="350">
+
+----
+
+##### Intensitat del corrent
+
+* Quan parlem de circuits elèctrics domèstics, els que hi ha a les instal·lacions dels nostres habitatges, la unitat ampere és una unitat força adequada.
 
 * Ara bé, quan parlem de circuits d'equips electrònics, en la majoria dels casos és una unitat força gran i, per aquest motiu, en aquest cas només farem referència a submúltiples.
 
+----
+
+##### Intensitat del corrent
+
 * A la taula 1.3 hi podeu consultar els valors equivalents dels submúltiples de l'ampere.
+
+|Submúltiples | Equivalència|
+|----|----|
+|mil·liamper (mA) | 10-3 A|
+|microamper (µA) | 10-6 A|
+|nanoamper (nA) | 10-9 A|
+|picoamper (pA) | 10-12 A|
+> Taula 1.3 - Múltiples i submúltiples de l'Ampère
 
 * L'aparell per mesurar la quantitat de corrent s'anomena amperímetre.
 
-Taula 1.3 - Múltiples i submúltiples de l'Ampère
+----
 
-Submúltiples Equivalència
+##### Intensitat del corrent
 
-mil·liamper (mA) 10-3 A
+Una magnitud associada al corrent elèctric és la **densitat de corrent** (**`J`**), que és la relació entre el corrent elèctric que circula i la secció del conductor.
 
-microamper (µA) 10-6 A
 
-nanoamper (nA) 10-9 A
+![alt text](../../../assets/img/mim/intensitat-del-corrent.png)
 
-picoamper (pA) 10-12 A
+----
 
-Una magnitud associada al corrent elèctric és la densitat de corrent (J), que és la relació entre el corrent elèctric que circula i la secció del conductor.
-
-J = Intensitat
-
-Seccio [amperes
-
-mm2 ]
+##### Intensitat del corrent
 
 Exemple de càlcul de la densitat del corrent
 
-Calculeu la densitat de corrent en un conductor de 2,5 mm2 si el corrent que circula és de 5 amperes.
+* Calculeu la densitat de corrent en un conductor de <strong>2,5 mm<sup>2</sup></strong> si el corrent que circula és de <strong>5 amperes</strong>.
 
-Si apliquem la fórmula de la densitat de corrent (J) tindrem:
+* Si apliquem la fórmula de la densitat de corrent (**`J`**) tindrem:
 
-J = Intensitat
+![alt text](../../../assets/img/mim/exemple-intensitat-del-corrent.png)
 
-Secc.
+----
 
-* = 5A 2, 5mm2 = 2A/mm2
+##### Intensitat del corrent
 
-La densitat màxima de corrent que pot suportar un conductor dependrà:
+* La densitat màxima de corrent que pot suportar un conductor dependrà:
 
-* del material amb què hagi estat fabricat,
+  * del material amb què hagi estat fabricat,
 
-* de la seva secció i
+  * de la seva secció i
 
-20
+  * de si es tracta d'un conductor amb coberta d'aïllant o sense.
+----
 
-Conductors i aïllants perfectes
+##### Conductors i aïllants perfectes
 
-No hi ha conductors ni aïllants perfectes, sinó que depenen de les circumstàncies.
+><hr>
+>
+> * No hi ha conductors ni aïllants perfectes, sinó que depenen de les circumstàncies.
+> 
+>    * L'aire és un aïllant, entre els dos cables d'una línia d'alta tensió no salta l'arc elèctric (no es tanca el circuit), en canvi, si es tracta d'una tempesta amb una gran càrrega elèctrica, sí que salta l'arc entre el núvol i la terra (llamp).
+> 
+>    * L'aire és un aïllant, però no és un aïllant perfecte.
+>
+><hr>
 
-* L'aire és un aïllant, entre els dos cables d'una línia d'alta tensió no salta l'arc elèctric (no es tanca el circuit), en canvi, si es tracta d'una tempesta amb una gran càrrega elèctrica, sí que salta l'arc entre el núvol i la terra (llamp).
 
-* L'aire és un aïllant, però no és un aïllant perfecte.
+----
 
-Unitat de resistència
+##### Unitat de resistència
 
-De la mateixa manera que hi ha la deﬁnició del patró del metre, també es va deﬁnir l'ohm patró.
+* De la mateixa manera que hi ha la deﬁnició del patró del metre, també es va deﬁnir l'**`ohm`** patró.
 
-* Un ohm és la resistència elèctrica d'una columna de mercuri de 106,3 cm de longitud i 1 mm2 de secció a la temperatura de 0 °C.
+  * Un **ohm** és la resistència elèctrica d'una columna de mercuri de **`106,3 cm`** de longitud i <strong>1 mm<sup>2</sup></strong> de secció a la temperatura de **`0 °C`**.
 
-* de si es tracta d'un conductor amb coberta d'aïllant o sense.
+
+----
+
+##### Unitat de resistència
 
 A tall d'exemple, en la taula 1.4 s'indica la densitat màxima de corrent en conductors de coure, sense aïllament i amb aïllament.
 
-Taula 1.4 - Densitat màxima de corrent en conductors de coure en (A/mm2)
 
-Secció mm2 Conductor sense aïllament
+|Secció mm<sup>2</sup>|Conductor<br>sense<br>aïllament|Conductor<br>aïllat<br>(plàstic)|Secció mm<sup>2</sup>|Conductor<br>sense<br>aïllament|Conductor aïllat (plàstic)|
+|:----:|:----:|:----:|:----:|:----:|:----:|
+|0,75|8,0|6,0|50|3,0|2,2|
+|1,50|7,5|5,6|95|2,1|1,6|
+|4|6,1|4,6|120|1,9|1,4|
+|10|5,1|3,8|200|1,7|1,3|
+|25|3,8|2,8|400|1,5|1,1|
+> Taula 1.4 - Densitat màxima de corrent en conductors de coure en (A/mm<sup>2</sup>)
 
-Conductor aïllat (plàstic)
+----
+##### Unitat de resistència
 
-Secció mm2 Conductor sense aïllament
+* En principi, i segons la taula, si per exemple es tractés d'un conductor de coure d'1,5 mm<sup>2</sup> de secció i amb aïllament de tipus plàstic, el corrent màxim que podria suportar seria:
 
-Conductor aïllat (plàstic)
+    1,5 mm<sup>2</sup> × 5,6 A/mm<sup>2</sup> = 8,4 amperes
 
-0,75 8,0 6,0 50 3,0 2,2
+* Tot i això, també caldria tenir present si es tracta d'un conductor exposat a l'aire o encastat directament o sota la protecció d'un tub.
 
-1,50 7,5 5,6 95 2,1 1,6
+----
 
-4 6,1 4,6 120 1,9 1,4
-
-10 5,1 3,8 200 1,7 1,3
-
-25 3,8 2,8 400 1,5 1,1
-
-En principi, i segons la taula, si per exemple es tractés d'un conductor de coure d'1,5 mm2
-
-de secció i amb aïllament de tipus plàstic, el corrent màxim que podria suportar seria: 1,5 mm2 × 5,6 A/mm2 = 8,4 amperes
-
-Tot i això, també caldria tenir present si es tracta d'un conductor exposat a l'aire o encastat directament o sota la protecció d'un tub.
+##### Unitat de resistència
 
 * En qualsevol cas, el fabricant ens donarà tots aquests paràmetres.
 
-![fp_smx_m01_u1_pdfindex_p20_block42_226.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p20_block42_226.png) Cables elèctrics.
-
 * Han de ser conductors per transportar el corrent amb les mínimes pèrdues.
 
-Resistència
+----
 
-Els materials que connecten els diferents elements del circuit han de diﬁcultar el mínim possible el pas del corrent elèctric.
+##### Resistència
 
-* Els metalls, en general, tenen aquesta característica, per això es diu que són bons conductors.
+* Els materials que connecten els diferents elements del circuit han de diﬁcultar el mínim possible el pas del corrent elèctric.
 
-Des del punt de vista d'un circuit elèctric, els materials es classiﬁquen, bàsicament, en els següents:
+  * Els metalls, en general, tenen aquesta característica, per això es diu que són bons conductors.
 
-* Conductors: són els que no ofereixen gaire resistència al pas del corrent
-elèctric.
+* Des del punt de vista d'un circuit elèctric, els materials es classiﬁquen, bàsicament, en els següents:
 
-* Aïllants: són els que ofereixen molta resistència al pas del corrent elèctric.
+  * Conductors: són els que no ofereixen gaire resistència al pas del corrent elèctric.
 
-Semiconductors
+  * Aïllants: són els que ofereixen molta resistència al pas del corrent elèctric.
 
-Encara que, des del punt de vista d'un circuit elèctric, classiﬁquem els materials en conductors i aïllants, hi ha un tercer grup, anomenat semiconductors.
+----
 
-Els semiconductors no són materials mig conductors o mig aïllants, sinó que en determinades circumstàncies es comporten com a conductors i en d'altres, com a aïllants.
+##### Semiconductors
 
-La resistència (R) és la diﬁcultat que ofereix un circuit elèctric al pas d'un corrent elèctric.
+* Encara que, des del punt de vista d'un circuit elèctric, classiﬁquem els materials en conductors i aïllants, hi ha un tercer grup, anomenat semiconductors.
 
-* La seva unitat és l'ohm ().
+* Els semiconductors no són materials mig conductors o mig aïllants, sinó que en determinades circumstàncies es comporten com a conductors i en d'altres, com a aïllants.
 
-Un ohm és la resistència que, quan en un circuit s'estableix una diferència de potencial d'1 volt, deixa passar un corrent d'1 ampere.
+* La resistència (**`R`**) és la diﬁcultat que ofereix un circuit elèctric al pas d'un corrent elèctric.
 
-21
+  * La seva unitat és l'**ohm** (**`Ω`**).
 
-Factor de proporcionalitat
+* Un ohm és la resistència que, quan en un circuit s'estableix una diferència de potencial d'1 volt, deixa passar un corrent d'1 ampere.
 
-La resistivitat o resistència especíﬁca depèn del material amb què estigui fet el conductor, ja que cada tipus de material ofereix una diﬁcultat diferent al pas del corrent elèctric.
+----
 
-Quan parlem de circuits elèctrics domèstics o industrials, la unitat ohm es pot considerar com una unitat gran; ara bé, en els circuits que formen els equips electrònics trobem molt sovint valors de resistència força més elevats, la qual cosa ens obliga a treballar amb múltiples.
+##### Factor de proporcionalitat
 
-Taula 1.5 - Múltiples de l'ohm Múltiples Equivalència
+* La **resistivitat** o resistència especíﬁca depèn del material amb què estigui fet el conductor, ja que cada tipus de material ofereix una diﬁcultat diferent al pas del corrent elèctric.
 
-Megaohm (MΩ) 106 ohm
+* Quan parlem de circuits elèctrics domèstics o industrials, la unitat ohm es pot considerar com una unitat gran; ara bé, en els circuits que formen els equips electrònics trobem molt sovint valors de resistència força més elevats, la qual cosa ens obliga a treballar amb múltiples.
 
-Kiloohm (kΩ) 103 ohm
+Taula 1.5 - Múltiples de l'ohm
 
-L'aparell per a mesurar la resistència s'anomena ohmímetre o òhmmetre.
+|Múltiples|Equivalència|
+|-----|-----|
+|Megaohm (MΩ)|10<sup>6</sup> ohm|
+|Kiloohm (kΩ)|10<sup>3</sup> ohm|
 
-En els circuits elèctrics, la resistència no la ofereix només el receptor, sinó que també hi intervenen els conductors.
+----
 
-Resistència dels conductors
+##### Factor de proporcionalitat
 
-La resistència elèctrica d'un conductor és la diﬁcultat que ofereix al pas del corrent elèctric.
+* L'aparell per a mesurar la resistència s'anomena ohmímetre o òhmmetre.
 
-* El seu valor dependrà del material del conductor i serà directament proporcional a la seva longitud (L) i inversament proporcional a la seva secció (S).
+* En els circuits elèctrics, la resistència no la ofereix només el receptor, sinó que també hi intervenen els conductors.
 
-R = ρL
+----
 
-S
+##### Resistència dels conductors
 
-És fàcil d'entendre que com més llarg sigui el conductor, i també com més estret, més diﬁcultat tindran els electrons per a desplaçar-se.
+* La resistència elèctrica d'un conductor és la diﬁcultat que ofereix al pas del corrent elèctric.
 
-La constant de proporcionalitat s'anomena resistivitat o resistència especíﬁca del conductor, i indica la resistència del conductor (en ohms) per unitat de longitud (en metres) i per unitat de secció (en mm2).
+  * El seu valor dependrà del material del conductor i serà directament proporcional a la seva longitud (L) i inversament proporcional a la seva secció (S).
 
-El valor de resistivitat s'acostuma a indicar a la temperatura de 20 ºC, però aquest es pot veure afectat per les variacions de temperatura.
+![alt text](../../../assets/img/mim/resistencia-electrica-d-un-conductor.png)
 
-* Si la resistivitat varia en funció de la temperatura, és evident que això afectarà la resistència del conductor.
+----
 
-En la taula 1.6 podeu veure la resistivitat d'alguns materials emprats en els circuits elèctrics.
+##### Resistència dels conductors
 
-Taula 1.6 - Resistivitat d'alguns materials
+* És fàcil d'entendre que com més llarg sigui el conductor, i també com més estret, més diﬁcultat tindran els electrons per a desplaçar-se.
 
-Material Resistivitat en Ω· mm2/m × m Coeﬁcient de variació amb la temperatura α per cada °C
+* La constant de proporcionalitat s'anomena **resistivitat** o **resistència especíﬁca del conductor**, i indica la resistència del conductor (en ohms) per unitat de longitud (en metres) i per unitat de secció (en mm<sup>2</sup>).
 
-Argent 0,016 (1,6 × 10-2) 0,0037
+* El valor de **resistivitat** s'acostuma a indicar a la temperatura de 20 ºC, però aquest es pot veure afectat per les variacions de temperatura.
 
-Coure 0,017 (1,7 × 10-2) 0,0039
+  * Si la **resistivitat** varia en funció de la temperatura, és evident que això afectarà la resistència del conductor.
 
-Alumini 0,028 (2,8 × 10-2) 0,0037
+----
 
-Ferro 0,12 (12 × 10-2) 0,0047
+##### Resistència dels conductors
 
-Plom 0,22 (22 × 10-2) 0,0043
+En la taula 1.6 podeu veure la **resistivitat** d'alguns materials emprats en els circuits elèctrics.
 
-Manganina 0,43 (43 × 10-2) Negligible
 
-Constantà 0,49 (49 × 10-2) Negligible
+----
 
-Mercuri 0,94 (94 × 10-2) 0,00088
+##### Resistència dels conductors
 
-22
+|Material|**resistivitat** en<br>Ω&nbsp;·&nbsp;mm<sup>2</sup>/m&nbsp;×&nbsp;m|Coeﬁcient de variació<br>amb la temperatura<br> α per cada °C|
+|-----|------:|------:|
+|Argent|0,016 (1,6 × 10<sup>-2</sup>)|0,0037|
+|Coure|0,017 (1,7 × 10<sup>-2</sup>)|0,0039|
+|Alumini|0,028 (2,8 × 10<sup>-2</sup>)|0,0037|
+|Ferro|0,12 (12 × 10<sup>-2</sup>)|0,0047|
+|Plom|0,22 (22 × 10<sup>-2</sup>)|0,0043|
+|Manganina|0,43 (43 × 10<sup>-2</sup>)|Despreciable|
 
-Resistència i temperatura
+> Taula 1.6 - **resistivitat** d'alguns materials (continua)
 
-Com heu pogut observar en la taula, la resistivitat de tots els materials indicats, tret del carbó (coeﬁcient negatiu), augmenta amb la temperatura, per tant, podem aﬁrmar que la resistència dels conductors augmenta amb la temperatura.
+----
 
-Galvanòmetre
+##### Resistència dels conductors (cont...)
 
-El galvanòmetre és l'element base dels aparells analògics (amb agulla) de mesures elèctriques.
+|Material|**resistivitat** en<br>Ω&nbsp;·&nbsp;mm<sup>2</sup>/m&nbsp;×&nbsp;m|Coeﬁcient de variació<br>amb la temperatura<br> α per cada °C|
+|-----|------:|------:|
+|Constantà|0,49 (49 × 10<sup>-2</sup>)|Despreciable|
+|Mercuri|0,94 (94 × 10<sup>-2</sup>)|0,00088|
+|Llautó|7|0,0002|
+|Nicrom|100|0,0004|
+|Carbó|3500|0,0005|
 
-* Cada vegada més s'utilitzen aparells digitals, que ens donen la lectura numèrica de la magnitud mesurada.
+> Taula 1.6 - **resistivitat** d'alguns materials
 
-Taula 1.6 - (continuació)
+----
 
-Material Resistivitat en Ω· mm2/m × m Coeﬁcient de variació amb la temperatura α per cada °C
+> 
+> <hr>
+> 
+> ##### Resistència i temperatura
+>
+> * Com heu pogut observar en la taula, la **resistivitat** de tots els materials indicats, tret del carbó (coeﬁcient negatiu), augmenta amb la temperatura, per tant, podem aﬁrmar que la resistència dels conductors augmenta amb la temperatura.
+>
+> <hr>
 
-Llautó 7 0,0002
+----
 
-Nicrom 100 0,0004
+##### Coeﬁcient de **resistivitat**
 
-Carbó 3500 0,0005
+Per a conèixer el coeﬁcient de **resistivitat** del material a una temperatura diferent de la de referència (20 °C), cal aplicar la fórmula següent:
 
-Per a conèixer el coeﬁcient de resistivitat del material a una temperatura diferent de la de referència (20 °C), cal aplicar la fórmula següent:
+![alt text](../../../assets/img/mim/coeﬁcient-de-resistivitat.png)
 
-ρt = ρ20(1 + α∆t)
 
 En què:
 
-* ρtés la temperatura a la qual volem conèixer el coeﬁcient de resistivitat;
+* **`ρt`** és la temperatura a la qual volem conèixer el coeﬁcient de **resistivitat**;
 
-* ρ20és la resistivitat a 20 °C;
+* **`ρ20`** és la **resistivitat** a 20 °C;
 
-* α és el coeﬁcient de variació amb la temperatura;
+* **`α`** és el coeﬁcient de variació amb la temperatura;
 
-* ∆t és la diferència de temperatura respecte a 20 °C.
+* **`∆t`** és la diferència de temperatura respecte a 20 °C.
 
-Exemple de càlcul de la resistivitat d'un conductor
+----
 
-Si volem conèixer la resistivitat d'un conductor de coure a una temperatura de 38 °C, aplicant la fórmula tindrem que:
+##### Coeﬁcient de **resistivitat**
 
-ρt = ρ20(1 + α∆t) = 0, 017Ωmm2
+Exemple de càlcul de la **resistivitat** d'un conductor
 
-m (1 + 0,0039
+Si volem conèixer la **resistivitat** d'un conductor de coure a una temperatura de 38 °C, aplicant la fórmula tindrem que:
 
-C
-* 18oC) =
+![alt text](../../../assets/img/mim/exemple-de-calcul-de-la-resistivitat.png)
 
-= 0, 017(1 + 0, 0702) = 0, 01812Ω· mm2/m
 
-Per acabar aquest apartat podeu veure un exemple de càlcul de la resistència d'un conductor:
+----
 
-Volem conèixer la resistència d'un conductor de coure de secció 1,5 mm2 i d'una llargada de 30 m.
+##### Coeﬁcient de **resistivitat**
 
-Aplicarem la fórmula per calcular la resistència d'un conductor i substituirem les variables pels seus valors.
+* Per acabar aquest apartat podeu veure un exemple de càlcul de la resistència d'un conductor:
 
-R = ρ L
+* Volem conèixer la resistència d'un conductor de coure de secció 1,5 mm<sup>2</sup> i d'una llargada de 30 m.
 
-S = 0, 017Ωmm2
+* Aplicarem la fórmula per calcular la resistència d'un conductor i substituirem les variables pels seus valors.
 
-m · 30m 1,5mm2 = 0, 34Ω
+
+![alt text](../../../assets/img/mim/solucio-de-calcul-de-la-resistivitat.png)
 
 La resistència d'aquest conductor serà de 0,34; en principi, pot semblar molt baixa, però més endavant veureu que té els seus efectes, ja que com més gran sigui la resistència més gran serà la caiguda de tensió i, per tant, la pèrdua de diferència de potencial en el circuit.
 
-1.2 Mesura de paràmetres elèctrics bàsics.
+----
+
+><hr>
+>
+> ##### Galvanòmetre
+> 
+> El galvanòmetre és l'element base dels aparells analògics (amb agulla) de mesures elèctriques. Cada vegada més s'utilitzen aparells digitals, que ens donen la lectura numèrica de la magnitud mesurada.
+>
+> <hr>
+
+----
+
+><hr>
+>
+> ##### L'oscil·loscopi
+> És un aparell de mesura que permet visualitzar senyals elèctrics en temps real, tant continus com alterns. Generalment es representa una tensió (eix vertical) en funció del temps (eix horitzontal).
+>
+> <hr>
+
+![fp_smx_m01_u1_pdfindex_p23_block439_421.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p23_block439_421.png) 
+
+----
+
+#### 1.2 Mesura de paràmetres elèctrics bàsics.
 
 * Instruments de mesura
 
-Els instruments de mesura elèctrics es basen en la mesura del corrent elèctric a partir del camp magnètic que genera el pas d'aquest corrent.
+  * Els instruments de mesura elèctrics es basen en la mesura del corrent elèctric a partir del camp magnètic que genera el pas d'aquest corrent.
 
-23
 
-Sobre l'amperímetre, podeu veure consultar la secció Recursos de contingut d'aquesta unitat en el web del crèdit.
+* El galvanòmetre és un instrument d'alta sensibilitat que permet detectar, comparar i mesurar, petits corrents elèctrics.
 
-L'oscil·loscopi
+----
 
-És un aparell de mesura que permet visualitzar senyals elèctrics en temps real, tant continus com alterns.
+* Un galvanòmetre està format per dues parts:
 
-* Generalment es representa una tensió (eix vertical) en funció del temps (eix horitzontal).
+![fp_smx_m01_u1_pdfindex_p23_block439_115.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p23_block439_115.png)
 
-El galvanòmetre és un instrument d'alta sensibilitat que permet detectar, comparar i mesurar, petits corrents elèctrics.
+* **a)** Una part ﬁxa, consistent en un imant permanent, en forma de ferradura que produeix entre els seus pols N i S un camp magnètic uniforme.
 
-Un galvanòmetre està format per dues parts:
+* **b)** Una part mòbil, una sèrie d'espires muntades a l'aire, per on passa el corrent, de manera que puguin girar dins del camp magnètic de l'imant permanent.
 
-![fp_smx_m01_u1_pdfindex_p23_block439_115.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p23_block439_115.png) a) Una part ﬁxa, consistent en un imant permanent, en forma de ferradura que produeix entre els seus pols N i S un camp magnètic uniforme.
+----
 
-b) Una part mòbil, una sèrie d'espires muntades a l'aire, per on passa el corrent, de manera que puguin girar dins del camp magnètic de l'imant permanent.
+##### Galvanòmetre
 
-Quan passa el corrent elèctric, les espires tendeixen a situar-se de manera que les línies de força entrin per la cara sud, on es troba a l'oposició de la torsió del ﬁl, llavors s'estableix un equilibri entre el parell de la força magnètica i el parell de la força de torsió.
+* Quan passa el corrent elèctric, les espires tendeixen a situar-se de manera que les línies de força entrin per la cara sud, on es troba a l'oposició de la torsió del ﬁl, llavors s'estableix un equilibri entre el parell de la força magnètica i el parell de la força de torsió.
 
-* L'angle format serà més gran com més elevat sigui el corrent.
+  * L'angle format serà més gran com més elevat sigui el corrent.
 
-* Aquest angle associat a una agulla i una escala graduada ens donarà la mesura del corrent elèctric.
+  * Aquest angle associat a una agulla i una escala graduada ens donarà la mesura del corrent elèctric.
 
-Amb algunes modiﬁcacions, aquest galvanòmetre es pot convertir en voltímetre, amperímetre i òhmmetre.
+* Amb algunes modiﬁcacions, aquest galvanòmetre es pot convertir en voltímetre, amperímetre i òhmmetre.
 
-En un altre àmbit, un tècnic que hagi de mesurar magnituds elèctriques en el camp de la informàtica haurà de conèixer un aparell com el polímetre, també conegut com a multímetre o veriﬁcador per al seu treball diari.
+----
 
-* En un taller d'electrònica es podrien trobar més aparells, com poden ser l'oscil·loscopi, el generador de funcions o les fonts d'alimentació variables.
+##### Polímetre, o multímetre
 
-![fp_smx_m01_u1_pdfindex_p23_block439_421.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p23_block439_421.png) Aquest dispositiu permetrà comprovar el funcionament correcte de components fonamentals com la font d'alimentació o l'alimentació elèctrica, i en alguns casos ﬁns i tot el funcionament correcte de components electrònics individuals d'una placa de circuit imprès com pot ser la placa base.
+* En un altre àmbit, un tècnic que hagi de mesurar magnituds elèctriques en el camp de la informàtica haurà de conèixer un aparell com el polímetre, també conegut com a multímetre o veriﬁcador per al seu treball diari.
 
-Encara que hi ha molts models de multímetres, el seu funcionament i característiques són molt similars en tots els casos i, per tant, l'aprenentatge de les funcions en un d'aquests aparells ens permetrà manejar sense problemes aparells semblants.
+ * En un taller d'electrònica es podrien trobar més aparells, com poden ser l'oscil·loscopi, el generador de funcions o les fonts d'alimentació variables.
 
-1.2.1 Característiques dels aparells de mesura
+* Aquest dispositiu permetrà comprovar el funcionament correcte de components fonamentals com la font d'alimentació o l'alimentació elèctrica, i en alguns casos ﬁns i tot el funcionament correcte de components electrònics individuals d'una placa de circuit imprès com pot ser la placa base.
 
-Abans d'utilitzar un instrument heu de tenir en compte les característiques de l'aparell que determinaran el mesurament.
+----
 
-Les característiques més importants dels aparells de mesura són les següents:
+##### Polímetre, o multímetre
 
-24
+* Encara que hi ha molts models de multímetres, el seu funcionament i característiques són molt similars en tots els casos i, per tant, l'aprenentatge de les funcions en un d'aquests aparells ens permetrà manejar sense problemes aparells semblants.
 
-Hi ha molts models i diferents marques de polímetres.
+----
 
-El polímetre també es coneix com a tester o multímetre.
+### 1.2.1 Característiques dels aparells de mesura
 
-a) Exactitud: Aproximació amb què la lectura d'un instrument de mesura s'acosta al valor real de la variable mesurada.
+* Abans d'utilitzar un instrument heu de tenir en compte les característiques de l'aparell que determinaran el mesurament.
 
-* b) Precisió: Capacitat d'un instrument de mesura de donar els resultats amb exactitud.
+* Les característiques més importants dels aparells de mesura són les següents:
 
-* c) Apreciació: Valor de la fracció mínima de la unitat de mesura que es pot llegir en un instrument.
+> 
+> <hr>
+> 
+> Hi ha molts models i diferents marques de polímetres.
+> 
+> El polímetre també es coneix com a tester o multímetre.
+> <hr>
+> 
 
-* d) Sensibilitat: Resposta d'un instrument respecte a un canvi en la variable mesurada.
+----
 
-Polímetre
+#### Aparells de mesura
 
-El polímetre és un aparell de mesura que pot mesurar diferents magnituds elèctriques com la tensió contínua i alterna, la resistència i la intensitat també contínua i alterna, encara que en l'actualitat hi ha polímetres amb capacitat per a mesurar altres magnituds (capacitats, comprovació de díodes, comprovació de transistors, etc.).
+* a) **Exactitud**: Aproximació amb què la lectura d'un instrument de mesura s'acosta al valor real de la variable mesurada.
+
+* b) **Precisió**: Capacitat d'un instrument de mesura de donar els resultats amb exactitud.
+
+* c) **Apreciació**: Valor de la fracció mínima de la unitat de mesura que es pot llegir en un instrument.
+
+* d) **Sensibilitat**: Resposta d'un instrument respecte a un canvi en la variable mesurada.
+
+----
+
+##### Polímetre
+
+* El polímetre és un aparell de mesura que pot mesurar diferents magnituds elèctriques com la tensió contínua i alterna, la resistència i la intensitat també contínua i alterna, encara que en l'actualitat hi ha polímetres amb capacitat per a mesurar altres magnituds (capacitats, comprovació de díodes, comprovació de transistors, etc.).
 
 * Aquest instrument, per la seva exactitud i pel preu, és el preferit dels professionals de l'electrònica.
 
-Figura 1.7.
+----
+
+##### Polímetre
+
 
 * Polímetre digital i polímetre analògic
 
-![fp_smx_m01_u1_pdfindex_p24_block222_364.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p24_block222_364.png) Tipus de polímetres
+![fp_smx_m01_u1_pdfindex_p24_block222_364.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p24_block222_364.png) 
+
+> **Figura 1.7**: Tipus de polímetres
+
+----
+
+##### Polímetre
 
 Hi ha dos tipus de polímetres, tal com podem veure en la ﬁgura 1.7:
 
@@ -1164,19 +1251,24 @@ damunt d'una escala i indica el valor de la magnitud mesurada.
 * Els polímetres digitals, que són els més utilitzats, s'identiﬁquen per una
 pantalla numèrica en què es fa la lectura del valor mesurat.
 
-Comandaments bàsics
+----
 
-Normalment els polímetres disposen del següent:
+##### Polímetre
 
-* Interruptor: per a posar en marxa l'aparell.
+###### Comandaments bàsics
 
-25
+* Normalment els polímetres disposen del següent:
 
-Òhmetre: aparell per a mesurar la resistència elèctrica d'un circuit.
+  * Interruptor: per a posar en marxa l'aparell.
 
-Amperímetre: aparell que només mesura la intensitat o corrent.
+  * Òhmetre: aparell per a mesurar la resistència elèctrica d'un circuit.
 
-La diferència de potencial en un circuit elèctric també s'anomena tensió o voltatge.
+  * Amperímetre: aparell que només mesura la intensitat o corrent.
+
+* La diferència de potencial en un circuit elèctric també s'anomena tensió o voltatge.
+----
+
+##### Polímetre
 
 * Selector de funcions: per a escollir el tipus de mesura que es realitzarà
 (resistència, voltatge en corrent altern, corrent continu...).
@@ -1185,574 +1277,94 @@ La diferència de potencial en un circuit elèctric també s'anomena tensió o v
 
 * Entrada: per a connectar-hi les puntes de mesura.
 
-Precaucions generals
+----
+
+##### Polímetre
+
+###### Precaucions generals
 
 Per a no deteriorar l'instrument, és molt important respectar la selecció de funcions adequades i escales per a cada mesura.
 
 * Si no se sap el nivell d'escala a seleccionar inicialment, utilitzarem la més gran i baixarem d'escala progressivament ﬁns a obtenir el resultat.
 
-Tècniques de mesura
+----
+
+##### Polímetre
+
+###### Tècniques de mesura
 
 Hi ha un seguit de pautes que hem de tenir en compte a l'hora de fer el mesurament, amb un polímetre, de les resistències, tensions i intensitats contínues i alternes en un circuit elèctric.
 
 * Vegem-les:
 
-a)Mesures de resistències
+  a) **Mesures de resistències**
 
-Les resistències s'han de mesurar sense tensió.
+     Les resistències s'han de mesurar sense tensió.
 
-* Seleccionarem la funció (ohms) i actuarem sobre l'escala ﬁns a obtenir el valor de la mesura (l'opció AC/DC és inoperant i no inﬂueix en la mesura).
+     Seleccionarem la funció (ohms) i actuarem sobre l'escala ﬁns a obtenir el valor de la mesura (l'opció AC/DC és inoperant i no inﬂueix en la mesura).
 
-b)Mesures d'intensitat o corrent
+----
 
-Per a mesurar la intensitat elèctrica, l'aparell s'ha de connectar interrompent el circuit, fent que el corrent o la intensitat hi circuli.
+##### Polímetre
 
-* És a dir, l'aparell sempre s'ha de connectar en sèrie.
+* Vegem-les: (cont...)
 
-S'ha de seleccionar l'escala d'intensitat (amperes), i s'ha de tenir en compte l'opció AC si voleu mesurar intensitat alterna, i DC si voleu mesurar intensitat contínua.
+  b) **Mesures d'intensitat o corrent**
 
-No s'han de mesurar intensitats més elevades que les que suporta l'instrument.
+    Per a mesurar la intensitat elèctrica, l'aparell s'ha de connectar interrompent el circuit, fent que el corrent o la intensitat hi circuli.
 
-c)Mesures de tensió
+    És a dir, l'aparell sempre s'ha de connectar en sèrie.
 
-Per a mesurar en un circuit elèctric la tensió, tant alterna com contínua, heu de seleccionar l'escala de tensió (volts) alterna o contínua (AC/DC), segons quina sigui la seva naturalesa, i connectar el polímetre entre els dos punts on volem fer el mesurament.
+* S'ha de seleccionar l'escala d'intensitat (amperes), i s'ha de tenir en compte l'opció AC si voleu mesurar intensitat alterna, i DC si voleu mesurar intensitat contínua.
+
+* No s'han de mesurar intensitats més elevades que les que suporta l'instrument.
+
+----
+
+##### Polímetre
+
+* Vegem-les: (cont...)
+
+  c) **Mesures de tensió**
+
+    Per a mesurar en un circuit elèctric la tensió, tant alterna com contínua, heu de seleccionar l'escala de tensió (volts) alterna o contínua (AC/DC), segons quina sigui la seva naturalesa, i connectar el polímetre entre els dos punts on volem fer el mesurament.
 
 * Per tant, per a mesurar a tensions hem de connectar l'aparell en paral·lel.
 
-d)Mesura de capacitats
+----
 
-Les dues potes del condensador s'insereixen en els oriﬁcis corresponents del polímetre i situem el selector en l'escala de capacitats.
+##### Polímetre
 
-26
+* Vegem-les: (cont...)
 
-La mesura només es pot realitzar amb el condensador descarregat, per tant, abans del mesurament l'hem de comprovar.
+  d) **Mesura de capacitats**
 
-e)Comprovació de díodes
+    Les dues potes del condensador s'insereixen en els oriﬁcis corresponents del polímetre i situem el selector en l'escala de capacitats.
 
-Seleccionem la funció de comprovació de díodes i apliquem els terminals del polímetre a les potes del díode desconnectat del circuit; en un sentit, ens donarà una resistència pràcticament nul·la, i en l'altre, una resistència molt gran.
+* La mesura només es pot realitzar amb el condensador descarregat, per tant, abans del mesurament l'hem de comprovar.
+
+----
+
+##### Polímetre
+
+* Vegem-les: (cont...)
+
+  e) Comprovació de díodes
+
+    Seleccionem la funció de comprovació de díodes i apliquem els terminals del polímetre a les potes del díode desconnectat del circuit; en un sentit, ens donarà una resistència pràcticament nul·la, i en l'altre, una resistència molt gran.
 
 * És freqüent que quan la resistència és baixa, l'aparell ho indiqui amb un xiulet.
 
-La funció de comprovació de díodes també es pot utilitzar per a comprovar continuïtats.
+* La funció de comprovació de díodes també es pot utilitzar per a comprovar continuïtats.
 
-f)Comprovació de transistors
+----
 
-Les tres potes del transistor s'insereixen en els oriﬁcis corresponents del polímetre i situem el selector en l'escala de H fe, respectant el seu tipus (NPN o PNP) i els terminals (base, emissor, col·lector).
+##### Polímetre
+
+* Vegem-les: (cont...)
+
+  f) Comprovació de transistors
+
+    Les tres potes del transistor s'insereixen en els oriﬁcis corresponents del polímetre i situem el selector en l'escala de H fe, respectant el seu tipus (NPN o PNP) i els terminals (base, emissor, col·lector).
 
 * En la pantalla apareix el guany del transistor.
-
-1.2.2 Fonts d'alimentació
-
-La font d'alimentació (ﬁgura 1.8) és un aparell encarregat de transformar la tensió alterna de la xarxa elèctrica en una tensió contínua.
-
-Utilitzem fonts d'alimentació perquè la majoria de circuits electrònics requereixen una tensió contínua per a alimentar-se; quan no convé utilitzar piles o bateries, hem de recórrer a la tensió alterna de què disposem en els endolls de casa nostra i convertir-la en contínua mitjançant les fonts d'alimentació .
-
-Figura 1.8.
-
-* Font d'alimentació per a laboratori d'electrònica
-
-![fp_smx_m01_u1_pdfindex_p26_block257_524.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p26_block257_524.png) 27
-
-Un ordinador sempre apagat amb font ATX...
-
-continua consumint 2W de manera contínua.
-
-* El consum standby pot comportar el 15% de la despesa energètica en una casa.
-
-1.3 La font d'alimentació d'un ordinador
-
-La font d'alimentació és l'encarregada de subministrar el voltatge continu necessari per a cadascun dels elements que es connecten a l'ordinador, com també la intensitat que necessiten.
-
-* Rep una tensió alterna de 230 V i 50 Hz de la xarxa de distribució elèctrica i la transforma en una tensió contínua de +5, -5, +12, -12 i +3,3 V (aquesta última només en els models ATX).
-
-* A part dels circuits electrònics necessaris per a rectiﬁcar i estabilitzar la tensió alterna, la font d'alimentació també disposa d'un petit ventilador que refrigera els components i evita que puguin assolir temperatures excessivament elevades que podrien fer-los malbé (ﬁgura 1.9).
-
-![fp_smx_m01_u1_pdfindex_p27_block439_285.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p27_block439_285.png) Interior d'una font d'alimentació
-
-Figura 1.9.
-
-* Font d'alimentació d'un ordinador
-
-![fp_smx_m01_u1_pdfindex_p27_block133_281.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p27_block133_281.png)
-![fp_smx_m01_u1_pdfindex_p27_block439_399.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p27_block439_399.png) Detall del ventilador Els dos tipus de fonts que podem trobar quan obrim un ordinador són AT o ATX.
-
-* Les fonts d'alimentació AT es van utilitzar ﬁns que va aparèixer el Pentium MMX, moment en què es van començar a utilitzar fonts d'alimentació ATX.
-
-Els connectors a placa base utilitzats en les fonts AT varien dels utilitzats en les fonts ATX, i no són tan segurs, ja que la font s'activa per mitjà d'un interruptor, i en aquest interruptor hi ha un voltatge de 230 V, cosa que comporta un cert risc a l'hora de manipular el PC.
-
-![fp_smx_m01_u1_pdfindex_p27_block439_496.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p27_block439_496.png) Cables d'alimentació d'una font AT La font ATX sempre és activa i, encara que l'ordinador no estigui funcionant, sempre està alimentada amb una tensió petita en estat d'espera.
-
-Les fonts ATX disposen d'un botó connectat a la placa base, la qual s'encarrega d'engegar la font; això ens permet fer connexions/desconnexions per a programari.
-
-En principi, la font ve com una part ﬁxa de la carcassa de l'ordinador.
-
-* Si haguéssim d'instal·lar-la, n'hi hauria prou a col·locar-la en el buit de la carcassa destinat a aquest efecte, posar els cargols de la part posterior i connectar els diversos cables d'alimentació.
-
-* En el mateix costat on està situat el ventilador, també hi ha l'endoll del cable que va connectat a la xarxa elèctrica.
-
-* Aquest endoll mascle té tres connexions: per dues es rep l'energia elèctrica i per la tercera, la central, es rep la línia de terra.
-
-* Al costat d'aquest connector, se sol trobar un altre connector femella amb les mateixes connexions, i que és utilitzat per a prolongar l'alimentació ﬁns
-
-28
-
-al monitor: no és que la font d'alimentació treballi per al monitor, sinó que simplement prolonga l'endoll de la paret ﬁns aquí, de manera que el monitor es pot endollar indistintament aquí o a l'endoll de la paret.
-
-1.3.1 Els connectors
-
-Els connectors que vénen inclosos en la font d'alimentació estan normalitzats tant per als models AT com per als ATX.
-
-* En aquests, com a norma general, els ﬁls de color negre són de massa (zero volts), els de color vermell porten +5 volts, els de color groc porten +12 volts, els de color blau porten -12 volts i els de color blanc (o gris) porten -5 volts, tots referits al ﬁl de color negre.
-
-* Hi ha dos connectors de sis contactes que surten de la font d'alimentació, anomenats P8 i P9 en els models AT, i que van connectats un al costat de l'altre al connector d'alimentació de la placa mare (ﬁgura 1.10).
-
-* Per a connectar-los correctament, els cables negres han de quedar junts.
-
-* Les ﬁgures 12 a 15 mostren els connectors bàsics d'una font.
-
-De manera més detallada, els connectors són els següents:
-
-![fp_smx_m01_u1_pdfindex_p28_block42_376.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p28_block42_376.png) Connector P9
-
-![fp_smx_m01_u1_pdfindex_p28_block42_503.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p28_block42_503.png) Conector d'alimentació ATX
-
-![fp_smx_m01_u1_pdfindex_p28_block42_645.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p28_block42_645.png) ATX 12 V
-
-* Connector d'alimentació principal del PC (normalment anomenat P1).
-
-* És
-el connector que proporciona energia a la placa base.
-
-* El connector té vint o vint-i-quatre pins.
-
-* Una de les clavilles pertany al cable PS-ON (generalment és de color verd).
-
-* Aquest connector és el més gran dels que hi ha a la font.
-
-* En la majoria de fonts d'alimentació d'AT, aquest connector es va dividir en dos: P8 i P9.
-
-* En cas de disposar d'una font d'alimentació amb un connector de vint-i-quatre pins, la pot connectar igualment a una placa base amb connector de vint pins.
-
-* En els casos en què la placa base disposa d'un connector de vint-i-quatre pins, algunes fonts d'alimentació vénen amb dos connectors (un de vint pins i un altre amb quatre pins), que es poden utilitzar per a formar el connector de vint-i-quatre pins.
-
-* Connector d'alimentació ATX12V de quatre pins (també anomenat connec-
-tor d'alimentació P4).
-
-* Es tracta d'un segon connector que va a la placa base (a més del principal de vint-i-quatre pins) per al subministrament d'energia especíﬁca per al processador.
-
-* Per a plaques base de gamma alta i transformadors, es requereix més potència, per tant, també hi ha EPS12V de vuit pins.
-
-* Connectors d'alimentació de perifèrics de quatre pins (generalment amb el
-nom del seu fabricant Molex).
-
-* Aquests són connectors menuts que van a les diferents unitats de disc de l'ordinador.
-
-* La majoria tenen quatre cables: dos de negres, un de vermell i un de groc.
-
-* A diferència de la xarxa de cable elèctric estàndard de codiﬁcació de color, els cables negres són de terra, el cable roig és de +5 V i el cable groc és de +12 V.
-
-* En alguns casos, aquests també s'utilitzen per a proporcionar més energia a targetes PCI o FireWire 800.
-
-* Connector d'alimentació de quatre pins Berg (generalment anomenat con-
-nector mini o minimolex).
-
-* Aquest és un dels connectors més petits que
-
-29
-
-s'utilitza per a la disquetera.
-
-* En alguns casos, es pot utilitzar com un connector auxiliar per a les targetes de vídeo AGP.
-
-* La seva conﬁguració és similar a la del cable de perifèrics.
-
-* Connector d'alimentació auxiliar.
-Hi ha diversos tipus de connectors auxiliars dissenyats per a proporcionar energia addicional si és necessari.
-
-* Connectors d'alimentació Serial ATA.
-
-* Es tracta d'un connector de quinze
-pins per als components que utilitzen interfície SATA.
-
-* Aquest connector subministra alimentació als tres voltatges: 3,3, 5 i 12 volts.
-
-* Connectors de sis pins:
-La majoria de fonts d'alimentació modernes inclouen aquests connectors, que generalment es fan servir per a targetes de gràﬁcs PCI Express, però la majoria portaran el connector més nou de vuit pins.
-
-* Cada connector de sis pins pot donar un màxim de 75 W.
-
-* Connectors 6 + 2 pins.
-
-* Per a assegurar la compatibilitat, alguns connectors
-dissenyats per a ser utilitzats amb targetes de gràﬁcs PCI Express tenen aquest tipus de conﬁguració de pins.
-
-* Permeten connectar una targeta de sis pins o de vuit utilitzant dos mòduls de connexió per cable en la mateixa beina: un de sis pins i un altre de dos pins.
-
-* Connector IEC C14 amb un cable C13.
-
-* S'utilitza per a connectar la font
-d'alimentació a la xarxa elèctrica local.
-
-Connector P8
-
-![fp_smx_m01_u1_pdfindex_p29_block439_182.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p29_block439_182.png) Connector Molex IDE
-
-![fp_smx_m01_u1_pdfindex_p29_block439_321.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p29_block439_321.png) Connector disquetera
-
-Figura 1.10.
-
-* Connectors P8 i P9 d'una font d'alimentació AT
-
-![fp_smx_m01_u1_pdfindex_p29_block121_425.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p29_block121_425.png) La resta dels connectors que surten de la font d'alimentació són de quatre contactes i serveixen per a alimentar les unitats del disc o qualsevol altra part del dispositiu que instal·lem a l'ordinador.
-
-* D'aquests connectors n'hi ha un de més petit que solament és vàlid per a alimentar les disqueteres de 3 1/2”.
-
-30
-
-Figura 1.11.
-
-* Connector d'alimentació d'una font ATX
-
-![fp_smx_m01_u1_pdfindex_p30_block234_72.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p30_block234_72.png) Figura 1.12.
-
-* Connectors Molex d'alimentació de disc dur i disquetera.
-
-* Connector d'alimentació SATA
-
-![fp_smx_m01_u1_pdfindex_p30_block234_274.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p30_block234_274.png) En les següents taules s'indiquen els colors dels ﬁls d'aquests connectors i el voltatge associat a cada un.
-
-Taula 1.7 - Connectors de la font d'alimentació
-
-Pin Color Voltatge
-
-1 Taronja Font correcta
-
-2 Roig +5 V
-
-3 Groc +12V
-
-4 Blau -12V
-
-5 Negre Terra
-
-6 Negre Terra
-
-Connector tipus P8 en model AT
-
-Taula 1.8 - Connector tipus P9 en model AT
-
-Pin Color Voltatge
-
-1 Negre Terra
-
-2 Negre Terra
-
-3 Blanc -5V
-
-4 Roig +5V
-
-5 Roig +5V
-
-6 Roig +5V
-
-31
-
-Taula 1.9 - Connector d'alimentació en models ATX
-
-Pin Color Voltatge
-
-1 Taronja 3,3V
-
-2 Taronja 3,3V
-
-3 Negre Terra
-
-4 Roig +5V
-
-5 Negre Terra
-
-6 Roig +5V
-
-7 Negre Terra
-
-8 Gris Font correcta
-
-9 Violeta +5V standby
-
-10 Groc 12V
-
-11 Taronja 12V
-
-12 Blau 3,3V
-
-13 Negre 3,3V
-
-14 Verd -12V
-
-15 Negre Terra
-
-16 Negre PS_ON (0V)
-
-17 Negre Terra
-
-18 Blanc Terra
-
-19 Vermell Terra
-
-20 Vermell -5V
-
-És una de les grans millores de les fonts ATX respecte de les AT.
-
-* Inclou més cables però està més ben organitzat.
-
-Taula 1.10 - Connector ATX 12 V
-
-Pin Color Voltatge
-
-21 Roig +5V
-
-22 Roig +5V
-
-23 Roig +5V
-
-24 Negre Terra
-
-S'utilitza per a alimentar el processador i no sobrecarregar el connector ATX.
-
-Taula 1.11 - Connector ATX AUX
-
-Pin Color Voltatge
-
-1 Negre Terra
-
-2 Negre Terra
-
-3 Negre Terra
-
-4 Taronja +3,3V
-
-5 Taronja +3,3V
-
-32
-
-A l'hora de reparar un ordinador personal, no oblideu comprovar la font d'alimentació amb un multímetre.
-
-* D'aquesta manera podreu descartar que el problema sigui una font defectuosa.
-
-El propòsit de la font d'alimentació...
-
-...és convertir el corrent altern a 220 V proporcionat per la xarxa elèctrica en corrent continu que el PC pugui utilitzar per a funcionar.
-
-* Normalment es converteix en voltatges de 12,5 V i 3,3 V (CC).
-
-* Els 12 V s'utilitzen per a dispositius amb motors, com els discos durs o unitats òptiques.
-
-* Els 5 V i 3,3 V s'usen per a la resta de dispositius de la placa.
-
-Taula 1.11 - (continuació)
-
-Pin Color Voltatge
-
-6 Roig +5V
-
-S'utilitza com a línia de reforç per a alimentar alguns circuits i la memòria de l'equip.
-
-Taula 1.12 - Connector d'unitats de 3 1
-
-2
-
-Pin Color Voltatge
-
-1 Roig +5V
-
-2 Negre Terra
-
-3 Negre Terra
-
-4 Groc +12V
-
-1.3.2 Mesura de valors de tensió en fonts d'alimentació (FA) típiques
-
-Una pràctica molt interessant i a la vegada un mètode de veriﬁcació de fonts ﬁable és mesurar tots els voltatges de la font d'alimentació i assegurar-se que es troben dins els marges acceptables per a un bon funcionament.
-
-* Hem de tenir en compte que molts dels problemes amb què ens trobem a l'hora de reparar un ordinador són deguts a fonts d'alimentació defectuoses.
-
-* El fet que una font no funcioni correctament o hagi deixat de fer-ho a causa del temps d'ús no sempre vol dir que l'ordinador ja no arrencarà.
-
-* En molts casos l'ordinador pot semblar que arrenqui sense problemes, però quedar-se bloquejat al cap d'una estona.
-
-* D'altres vegades es pot reiniciar sense previ avís o es pot apagar en un moment determinat a causa d'una pujada de la despesa energètica.
-
-Per això, abans de passar a altres punts, cal tenir en compte si la font d'alimentació és el problema.
-
-* Una manera d'assegurar-nos del funcionament correcte d'aquesta consisteix a mesurar els voltatges que la font ha de donar segons les seves especiﬁcacions, per a assegurar-nos que aquests són correctes.
-
-Malgrat que encara podem trobar alguns ordinadors amb fonts d'alimentació AT en funcionament, la majoria tindran fonts ATX (AT extended).
-
-* Com hem vist en aquest apartat, la diferència principal entre l'una i l'altra és el nombre i tipus de connectors.
-
-* Independentment de la font de què parlem, totes tenen els mateixos components bàsics: el primer és la conexió d'energia, que és per on la font es connecta amb l'endoll elèctric.
-
-* A continuació tenim el connector a la placa base, que té la forma d'un conjunt de cables que surten de la font.
-
-* Les fonts d'alimentació també tenen un ventilador (el funcionament del qual es pot comprovar fàcilment simplement comprovant que està en marxa).
-
-33
-
-Amb compte!
-
-El millor mètode per a comprovar la xarxa elèctrica sense risc d'electrocució és connectar el multímetre a un lladre o regleta desendollada i llavors conectar-lo al corrent.
-
-Diagnosi de la font
-
-Per a començar la diagnosi de la font, cal assegurar-se que està desendollada de la xarxa elèctrica i que la posició del selector de voltatge posterior, si en té, està a 220 V.
-
-![fp_smx_m01_u1_pdfindex_p33_block439_137.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p33_block439_137.png) Assegureu-vos que la font està ajustada a 220 V.
-
-Seguidament, si el ventilador de la font es troba en funcionament, no hi ha dubte que l'alimentació de la font és correcta.
-
-* En cas contrari, o bé el ventilador està espatllat o bé el connector a la xarxa general no està rebent electricitat.
-
-* Per veure si el problema és aquesta connexió poseu el multímetre al valor de voltatge AC superior a 220 V i comproveu la connexió, com es mostra en la ﬁgura 1.13 .
-
-Figura 1.13.
-
-* Comprovació de la connexió a la xarxa elèctrica
-
-![fp_smx_m01_u1_pdfindex_p33_block96_249.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p33_block96_249.png) Si l'endoll està subministrant la potència adequada, podem passar a fer un test de continuïtat al cable d'alimentació, com es mostra en la ﬁgura 1.14.
-
-* Si tant l'endoll com el cable funcionen, podem aﬁrmar que el ventilador no funciona i, per tant, caldrà substituïr la font d'alimentació.
-
-* El multímetre es podrà col·locar en un valor de resistència baix o, si disposa d'avisador acústic, el podrem utilitzar per a assegurar la continuïtat.
-
-* És convenient fer la comprovació també per al cable de terra.
-
-Figura 1.14.
-
-* Feu un test de continuïtat al cable d'alimentació.
-
-![fp_smx_m01_u1_pdfindex_p33_block96_575.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p33_block96_575.png) 34
-
-Vegeu el sub-subapartat “Els connectors” en aquesta unitat.
-
-Recordeu
-
-En el cas de les fonts ATX, la circuiteria interna n'impedeix el funcionament si la font no es troba connectada a la placa base i el pin PSON està enviant un senyal d'engegat.
-
-Podeu mesurar també els voltatges directament en els connectors de perifèric.
-
-El pas següent és la comprovació de valors a la placa base.
-
-* Depenent de si es tracta d'una font AT o ATX, disposareu d'un o dos connectors que connecten la font d'alimentació a la placa base.
-
-* Sigui quin sigui el tipus de font, desconnecteu el sistema de la xarxa elèctrica abans de comprovar els valors a la placa base.
-
-En el cas d'una font AT (que gairebé ja no s'utilitza), disposareu de dos connectors, anomenats P8 i P9, que connecten la font a la placa base.
-
-* Desenganxeu els connectors P8 i P9 de la placa base però assegureu-vos de recordar-ne la posició correcta.
-
-* Encara que els dos connectors estan marcats per a evitar que es col·loquin incorrectament, és possible col·locar-los de manera inversa incorrectament.
-
-* Aquest error podria destruir la placa base i també la font d'alimentació.
-
-* Quan torneu a posar els connectors P8 i P9 a la placa base, recordeu que els conectors de massa (negres) haurien de ser l'un al costat de l'altre.
-
-El conector d'una font ATX usa un connector individual anomenat P1 en lloc dels conectors P8 i P9.
-
-* En la ﬁgura 1.12 podem veure el connector ATX-P1, un conjunt de cables connectats a un connector de vint pins.
-
-* En la ﬁgura 18, podem veure un diagrama del signiﬁcat de cadascun dels pins.
-
-* Aquest connector està marcat per a evitar connectar-lo a l'inrevés.
-
-Tant les fonts AT com les ATX subministren a la placa base nivells de voltatge de 12, 5 i 3,3 volts.
-
-* La raó per a aquests diferents valors és que els diversos components de la placa base requereixen diferents nivells de voltatge per al seu funcionament.
-
-Comprovació dels valors
-
-1.
-
-* El primer pas és assegurar-se de quin és cada pin amb l'ajuda de la ﬁgura 18.
-La presència d'un clip al connector P1 fa que això resulti més fàcil del que es pot preveure en un principi.
-
-* El clip es troba entre els pins 15 i 16.
-
-* D'aquesta manera és més fàcil trobar la situació de la resta de pins.
-
-![fp_smx_m01_u1_pdfindex_p34_block42_465.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p34_block42_465.png)
-2.
-
-* Si mesurem amb el multímetre una font ATX, el pin 9 ha de donar un valor de 5
-V (de corrent continu) sempre que l'ordinador estigui endollat.
-
-* Això es produirà tant si l'ordinador està engegat com no.
-
-* Habitualment el pin 9 és de color púrpura.
-
-* Aquesta comprovació és una bona manera de començar a comprovar la font, ja que així ens assegurem que la placa base està rebent potència.
-
-3.
-
-* Un cop comprovat el pin 9, cal comprovar el voltatge als diversos circuits on han
-d'arribar 12 V.
-
-* Com veiem en la ﬁgura 1.12, hi ha diversos cables negres i grocs al connector P1.
-
-* Els cables grocs indiquen circuits de 12 VDC.
-
-* Per a comprovar-los cal ajustar el multímetre a l'escala de 15/20 VDC (contínua) depenent del model de multímetre.
-
-* Seguidament, amb l'ordinador engegat, situareu el mesurador actiu del multímetre en un cable groc del connector P1 i tot seguit el mesurador negre en un cable negre.
-
-* Com que l'ordinador ha d'estar en marxa, el connector P1 ha d'estar conectat a la placa base.
-
-* Per tant, cal col·locar els mesuradors com mostra la ﬁgura 1.15.
-
-35
-
-Es pot considerar que els valors correctes per al voltatge de la font no han de ser un 10% més grans o més petits que el valor nominal.
-
-Figura 1.15.
-
-* Connecteu la sonda roja a cada cable de color i la negra a un cable negre.
-
-![fp_smx_m01_u1_pdfindex_p35_block96_81.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p35_block96_81.png)
-![fp_smx_m01_u1_pdfindex_p35_block439_80.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p35_block439_80.png) Diagrama d'un connector P1Disseny del connector d'una font ATX
-
-![fp_smx_m01_u1_pdfindex_p35_block439_307.png](../../../assets/img/mim/fp_smx_m01_u1_pdfindex_p35_block439_307.png)
-4.
-
-* Un cop els mesuradors estan connectats, el multímetre hauria d'indicar un
-voltatge entre 11 VDC i 13 VDC.
-
-* Si la font d'alimentació no té un funcionament estable sinó que ja ha provocat problemes, el voltatge pot estar per sota d'aquest nivell.
-
-* Si el voltatge es troba entre 10,5 VDC i 11 VDC, el PC necessita una nova font d'alimentació.
-
-* Si el valor és inferior a 10,5 VDC probablement l'ordinador ni tan sols arrencarà.
-
-5.
-
-* De la mateixa manera s'han de comprovar els circuits de 5 VDC i 3,3 VDC.
-En aquest cas, la possible caiguda de tensió serà més baixa perquè els valors de tensió són més petits.
-
-* Per tant, és aconsellable fer les proves inicialment amb el connector de 12 V.
-
-En conclusió, una font d'alimentació defectuosa no és el component més fàcil de detectar, i molts cops es passa de llarg en favor d'altres components com la placa base, la targeta gràﬁca o altres.
-
-* Malgrat això, amb un multímetre podem comprovar ràpidament si els valors que ha de donar la font són correctes quant a voltatge i corrent.
-
-* La major part dels problemes en una font provoquen errors aleatoris a la placa base, de manera que amb aquest test podem descartar la font com a responsable.
-
-37
-
-Voltatge i freqüència del senyal elèctric
-
-El voltatge en la xarxa elèctrica catalana és de 230 V, i la freqüència del senyal és de 50 Hz.
-
-* Però, a d'altres països, el senyal elèctric pot tenir unes característiques de voltatge i freqüència diferents.
-
-* Per exemple, als Estats Units, el senyal elèctric és generalment de 120 V a 60 Hz.
-
-
