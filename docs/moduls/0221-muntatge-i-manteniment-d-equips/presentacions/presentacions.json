@@ -87,13 +87,6 @@
       "src": "slides/mim-electricitat-intro.reveal",
       "description": "1. Mesura de paràmetres elèctrics",
       "status": "active"
-    },
-    {
-      "order": 13,
-      "title": "13. Qüestionari — Introducció a l'electricitat.",
-      "src": "slides/electricitat-intro-quiz.html",
-      "description": "1. Mesura de paràmetres elèctrics",
-      "status": "active"
     }
   ]
 }
