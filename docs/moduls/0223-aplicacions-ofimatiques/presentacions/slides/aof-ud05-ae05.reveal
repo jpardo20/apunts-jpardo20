@@ -196,7 +196,7 @@ La revista tendrá los siguientes elementos:
 >
 > ###### Donde **`<PrimerApellidoAlumno>`** es solo el primer apellido del alumno, sin el nombre.
 >
-> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-2a-ent`**</b></u></kbd>.
+> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-2a-ent.docx`**</b></u></kbd>.
 >
 > En en el documento **`README.md`** de tu repositorio local, bajo el título <kbd>## 2a entrega</kbd>, crear un enlace para descargar el documento docx, que habéis subido.
 >
@@ -219,7 +219,7 @@ La revista tendrá los siguientes elementos:
 >
 > ###### Donde **`<PrimerApellidoAlumno>`** es solo el primer apellido del alumno, sin el nombre.
 >
-> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-3a-ent`**</b></u></kbd>.
+> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-3a-ent.docx`**</b></u></kbd>.
 >
 > En en el documento **`README.md`** de tu repositorio local, bajo el título <kbd>## 3a entrega</kbd>, crear un enlace para descargar el documento docx, que habéis subido.
 >
@@ -296,7 +296,7 @@ Además, en los ejemplos de contenido, se debe mostrar:
 >
 > ###### Donde **`<PrimerApellidoAlumno>`** es solo el primer apellido del alumno, sin el nombre.
 >
-> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-4a-ent`**</b></u></kbd>.
+> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-4a-ent.docx`**</b></u></kbd>.
 >
 > En en el documento **`README.md`** de tu repositorio local, bajo el título <kbd>## 4a entrega</kbd>, crear un enlace para descargar el documento docx, que habéis subido.
 >
