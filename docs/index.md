@@ -10,7 +10,7 @@
             <a href="moduls/0221-muntatge-i-manteniment-d-equips/presentacions/index.html">Presentacions</a>
         </p>
     </li>
-    <li><p><a href="http://127.0.0.1:5501/docs/moduls/0221-muntatge-i-manteniment-d-equips/presentacions/slides/coavaluacio-presentacions-rubrica.html">Correció: coavaluacio presentacions rúbrica</a>
+    <li><p><a href="https://jpardo20.github.io/apunts-jpardo20/moduls/0221-muntatge-i-manteniment-d-equips/presentacions/slides/coavaluacio-presentacions-rubrica.html">Correció: coavaluacio presentacions rúbrica</a>
         </p>
         </li>
         </ul>
