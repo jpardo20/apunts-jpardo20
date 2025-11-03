@@ -4,7 +4,17 @@
   <summary>Desplega per veure els mòduls de SMX</summary>
 
 <h3>0221 Muntatge i manteniment d’equips</h3>
-<ul><li><p><a href="moduls/0221-muntatge-i-manteniment-d-equips/presentacions/index.html">Presentacions</a></p></li></ul>
+<ul>
+    <li>
+        <p>
+            <a href="moduls/0221-muntatge-i-manteniment-d-equips/presentacions/index.html">Presentacions</a>
+        </p>
+    </li>
+    <li><p><a href="http://127.0.0.1:5501/docs/moduls/0221-muntatge-i-manteniment-d-equips/presentacions/slides/coavaluacio-presentacions-rubrica.html">Correció: coavaluacio presentacions rúbrica</a>
+        </p>
+        </li>
+        </ul>
+
 <h3>0223 Aplicacions ofimàtiques</h3>
 <ul><li><p><a href="moduls/0223-aplicacions-ofimatiques/presentacions/index.html">Presentacions</a></p></li></ul>
 <h3>0225 Xarxes locals</h3>
