@@ -15,7 +15,7 @@ Crea en tu cuenta de **`github`** el repositorio<br><u><b>**`<PrimerApellidoAlum
 >
 > ###### Donde **`<PrimerApellidoAlumno>`** es solo el primer apellido del alumno, sin el nombre.
 >
-> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del repositorio sería <kbd><u><b>**`einstein-aof-ud05-ae05`**</b></u></kbd>.
+> ###### Por ejemplo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del repositorio sería <kbd><u><b>**`einstein-aof-ud05-ae05`**</b></u></kbd>.
 >
 ><hr>
 
@@ -66,9 +66,9 @@ Los elementos son:    (1/2)
 
 Los elementos son:    (2/2)
 
- * Alineado el texto del título de forma “centrada”.
+ * Alineado el texto del título de forma "centrada".
 
- * Alineado el texto de los contenidos de forma “justificada”.
+ * Alineado el texto de los contenidos de forma "justificada".
 
  * Estilos.
 
@@ -86,13 +86,13 @@ Los elementos son:    (2/2)
 >
 > ### A entregar
 >
-> Subir a vuestro repositorio el documento generado con el nombre <u><b>**`<PrimerApellidoAlumno>-aof-ud05-ae05-1a-ent.docx`**</b></u><br>(<u>**todo en minúsculas**</u>).
+> * Subir a vuestro repositorio el documento generado con el nombre <u><b>**`<PrimerApellidoAlumno>-aof-ud05-ae05-1a-ent.docx`**</b></u><br>(<u>**todo en minúsculas**</u>).
 >
 > ###### Donde **`<PrimerApellidoAlumno>`** es solo el primer apellido del alumno, sin el nombre.
 >
-> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-1a-ent.docx`**</b></u></kbd>.
+> ###### Por ejemplo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-1a-ent.docx`**</b></u></kbd>.
 >
-> En en el documento **`README.md`** de tu repositorio local, bajo el título <kbd>## 1a entrega</kbd>, crear un enlace para descargar el documento docx, que habéis subido.
+> #### En en el documento **`README.md`** de tu repositorio local, bajo el título <kbd>## 1a entrega</kbd>, crear un enlace para descargar el documento docx, que habéis subido.
 >
 
 ---
@@ -130,7 +130,7 @@ La revista tendrá los siguientes elementos:
 
  * **Portada**: debe ser bonita, atractiva y descriptiva. Debe contener el nombre de la revista, el nombre del autor y no contener número de página. Te recomiendo usar **los trucos 01 y 02 de TikTok** para hacer la portada.
     
-     * En la versión escritorio podéis usar **el truco 03 de TikTok** para guardar la portada como “plantilla de portada” (no es necesario hacerlo para la entrega).
+     * En la versión escritorio podéis usar **el truco 03 de TikTok** para guardar la portada como "plantilla de portada" (no es necesario hacerlo para la entrega).
 
  * **Índice, encabezado y pie de página**: en la siguiente página a la portada se debe crear un índice automático de la revista. A partir de esta página, todas las páginas deben llevar encabezado y pie de página. Estos dos deben ser bonitos. En el encabezado debe estar el nombre del alumno y de la revista. En el pie de página simplemente el número de página.
 
@@ -146,13 +146,13 @@ La revista tendrá los siguientes elementos:
 
 #### 2a entrega:
 
- * **Artículos de opinión:** la primera página de la revista en sí, debe contener mínimo dos artículos de opinión. Antes de comenzar, el artículo debe haber una imagen de quien es el autor del artículo de opinión y un texto que sea el título de artículo hecho de forma que resalte (jugando con tamaños, tipografía, negrita, etc.). El texto debe estar en alineación “Justificada”.
+ * **Artículos de opinión:** la primera página de la revista en sí, debe contener mínimo dos artículos de opinión. Antes de comenzar, el artículo debe haber una imagen de quien es el autor del artículo de opinión y un texto que sea el título de artículo hecho de forma que resalte (jugando con tamaños, tipografía, negrita, etc.). El texto debe estar en alineación "Justificada".
 
 ----
 
 #### 2a entrega:
 
-* ¿No sabes como es un artículo de opinión a varias columnas? Prueba a hacer búsquedas en Google similares a “artículo opinión doble columna” para poder ver referencias de como debe quedar.
+* ¿No sabes como es un artículo de opinión a varias columnas? Prueba a hacer búsquedas en Google similares a "artículo opinión doble columna" para poder ver referencias de como debe quedar.
 
 * Podéis inventarios el texto del artículo sacándolo de alguno que os guste o generándolo con webs tipo [<span class="underline">https://www.blindtextgenerator.com/es</span>](https://www.blindtextgenerator.com/es)
 
@@ -180,7 +180,7 @@ La revista tendrá los siguientes elementos:
 
  * **Contraportada**: debe ser bonita, atractiva y descriptiva. No debe contener encabezado ni pie de página. Debe también tener el precio en código de barras y QR.
     
-     * Para la versión en la nube, simplemente utilizará algún generador online (buscando “generador QR” y/o generador código de barras”) impórtalo como imagen.
+     * Para la versión en la nube, simplemente utilizará algún generador online (buscando "generador QR" y/o generador código de barras") impórtalo como imagen.
     
      * En la versión de escritorio puedes usar **los trucos 18 y 19 de TikTok** para generar el código de barras y QR.
 
@@ -196,16 +196,16 @@ La revista tendrá los siguientes elementos:
 >
 > ###### Donde **`<PrimerApellidoAlumno>`** es solo el primer apellido del alumno, sin el nombre.
 >
-> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-2a-ent.docx`**</b></u></kbd>.
+> ###### Por ejemplo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-2a-ent.docx`**</b></u></kbd>.
 >
-> En en el documento **`README.md`** de tu repositorio local, bajo el título <kbd>## 2a entrega</kbd>, crear un enlace para descargar el documento docx, que habéis subido.
+> #### En en el documento **`README.md`** de tu repositorio local, bajo el título <kbd>## 2a entrega</kbd>, crear un enlace para descargar el documento docx, que habéis subido.
 >
 
 ---
 
 ## 3a entrega:
 
-* Realiza con **Microsoft Word 365** una “Cheat Sheet” atractiva, en formato apaisado, resumiendo los elementos descritos en el apartado anterior e indicando qué **<span class="underline">atajos de teclado</span>** existen para los elementos indicando en la actividad anterior. Recuerda el formato apaisado.
+* Realiza con **Microsoft Word 365** una "Cheat Sheet" atractiva, en formato apaisado, resumiendo los elementos descritos en el apartado anterior e indicando qué **<span class="underline">atajos de teclado</span>** existen para los elementos indicando en la actividad anterior. Recuerda el formato apaisado.
 
 ----
 
@@ -219,18 +219,18 @@ La revista tendrá los siguientes elementos:
 >
 > ###### Donde **`<PrimerApellidoAlumno>`** es solo el primer apellido del alumno, sin el nombre.
 >
-> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-3a-ent.docx`**</b></u></kbd>.
+> ###### Por ejemplo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-3a-ent.docx`**</b></u></kbd>.
 >
-> En en el documento **`README.md`** de tu repositorio local, bajo el título <kbd>## 3a entrega</kbd>, crear un enlace para descargar el documento docx, que habéis subido.
+> #### En en el documento **`README.md`** de tu repositorio local, bajo el título <kbd>## 3a entrega</kbd>, crear un enlace para descargar el documento docx, que habéis subido.
 >
 
 ---
 
 ## 4a entrega:
 
-Realiza un documento con **Microsoft Word 365** preparado como plantilla para realizar trabajos en el ciclo formativo, con textos de ejemplo de contenidos básicos.
+* Realiza un documento con **Microsoft Word 365** preparado como plantilla para realizar trabajos en el ciclo formativo, con textos de ejemplo de contenidos básicos.
 
-La entrega debe tener:
+* La entrega debe tener:  (1/2)
 
  * Portada bonita con nombre y fecha. Se debe guardar como plantilla de portada
 
@@ -244,6 +244,8 @@ La entrega debe tener:
 
 #### 4a entrega:
 
+* La entrega debe tener:  (2/2)
+
  * Cabecera y pie de página a partir de la segunda página.
 
  * Estilo específico para definir el texto normal.
@@ -256,7 +258,7 @@ La entrega debe tener:
 
 #### 4a entrega:
 
-Además, en los ejemplos de contenido, se debe mostrar:
+Además, en los ejemplos de contenido, se debe mostrar: (1/2)
 
  * Estilos anteriormente nombrados, aplicados a los ejemplos.
 
@@ -274,15 +276,17 @@ Además, en los ejemplos de contenido, se debe mostrar:
 
 #### 4a entrega:
 
+Además, en los ejemplos de contenido, se debe mostrar: (2/2)
+
  * Enlaces.
 
  * Imágenes.
 
  * Cuadros de Texto.
 
- * Alineado el texto del título de forma “centrada”.
+ * Alineado el texto del título de forma "centrada".
 
- * Alineado el texto de los contenidos de forma “justificada”.
+ * Alineado el texto de los contenidos de forma "justificada".
 
 ----
 
@@ -296,7 +300,7 @@ Además, en los ejemplos de contenido, se debe mostrar:
 >
 > ###### Donde **`<PrimerApellidoAlumno>`** es solo el primer apellido del alumno, sin el nombre.
 >
-> ###### Por ejempo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-4a-ent.docx`**</b></u></kbd>.
+> ###### Por ejemplo en el caso del alumno <b><u>Albert Einstein</u></b>, el nombre del fichero sería <kbd><u><b>**`einstein-aof-ud05-ae05-4a-ent.docx`**</b></u></kbd>.
 >
-> En en el documento **`README.md`** de tu repositorio local, bajo el título <kbd>## 4a entrega</kbd>, crear un enlace para descargar el documento docx, que habéis subido.
+> #### En en el documento **`README.md`** de tu repositorio local, bajo el título <kbd>## 4a entrega</kbd>, crear un enlace para descargar el documento docx, que habéis subido.
 >
