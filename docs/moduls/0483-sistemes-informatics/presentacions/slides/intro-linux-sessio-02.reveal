@@ -188,5 +188,3 @@ chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_ed25519
 - Processos i jobs (`ps`, `top`, `kill`, `bg/fg`, `nice`/`renice`)
 - APT (o DNF), `systemctl` i `journalctl`
 - Xarxa (IP/ports, `ssh`, `scp`, `curl`), disc (`df`, `du`, `lsblk`)
-
-> **Consell docent**: vincula cada demostració a un RA i fes una prova ràpida “fes-ho tu” de 2–3 minuts per cada bloc.

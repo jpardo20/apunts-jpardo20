@@ -1,13 +1,15 @@
-# 0483 · Sistemes informàtics — linux
+# 0483 · Sistemes informàtics
+## Introducció a Linux — **Sessió 01**
 
-## Guia d’introducció a comandes bàsiques
-
-* **Objectiu:** tenir un resum pràctic de les comandes essencials de Linux per començar a treballar amb el terminal.  
-* **Com s’usa:** llegeix la descripció, prova els exemples en un directori de prova i fixa’t en els flags més útils.
+**Objectius d’aprenentatge (RA 0483)**  
+- Operar amb solvència en entorns **CLI** (navegació, cerca, filtres, pipes i redireccions).  
+- Gestionar **permisos, propietats, usuaris i processos**.  
+- Controlar **paquets**, **serveis**, **xarxa** i **emmagatzematge** bàsic.  
+- Automatitzar tasques i preparar **scripts** simples.  
 
 ---
 
-## Taula ràpida de referència (1/2)
+## Taula ràpida de referència (1/3)
 
 | Comanda | Què fa | Exemple ràpid |
 |---|---|---|
@@ -18,18 +20,24 @@
 | `mv` | Mou o reanomena | `mv informe.txt docs/` |
 | `cp` | Copia fitxers/carpetes | `cp -r src/ backup/` |
 | `rm` | Elimina fitxers/carpetes | `rm -r tmp/` |
-| `touch` | Crea fitxers buits o actualitza dates | `touch notes.txt` |
 
 ----
 
-## Taula ràpida de referència (2/2)
+## Taula ràpida de referència (2/3)
 
 | Comanda | Què fa | Exemple ràpid |
 |---|---|---|
+| `touch` | Crea fitxers buits o actualitza dates | `touch notes.txt` |
 | `ln` | Crea enllaços (hard/soft) | `ln -s /opt/app bin/app` |
 | `clear` | Neteja la pantalla | `clear` |
 | `cat` | Mostra contingut de fitxers | `cat README.md` |
 | `echo` | Imprimeix text o variables | `echo $HOME` |
+----
+
+## Taula ràpida de referència (3/3)
+
+| Comanda | Què fa | Exemple ràpid |
+|---|---|---|
 | `less` | Visualitza per pàgines | `less /etc/services` |
 | `man` | Manual d’ajuda | `man tar` |
 | `uname` | Info bàsica del sistema | `uname -a` |
