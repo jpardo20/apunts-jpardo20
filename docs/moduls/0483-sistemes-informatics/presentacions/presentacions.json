@@ -7,6 +7,12 @@
       "description": "intro-linux"
     },
     {
+      "order": 2,
+      "title": "intro-linux-2",
+      "src": "slides/intro-linux-sessio-02.reveal",
+      "description": "intro-linux-2"
+    },
+    {
       "order": 10,
       "title": "0483-activitat-001-docker-web",
       "src": "slides/0483-activitat-001-docker-web.reveal",

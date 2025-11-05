@@ -1,0 +1,192 @@
+# 0483 · Sistemes informàtics
+## Introducció a Linux — **Sessió 02** (CLI intermig)
+
+**Objectius d’aprenentatge (RA 0483)**  
+- Operar amb solvència en entorns **CLI** (navegació, cerca, filtres, pipes i redireccions).  
+- Gestionar **permisos, propietats, usuaris i processos**.  
+- Controlar **paquets**, **serveis**, **xarxa** i **emmagatzematge** bàsic.  
+- Automatitzar tasques i preparar **scripts** simples.  
+
+> Prerequisits: sessió 01 (fitxers/directoris, llistats, moviment, còpia, tar, grep bàsic).
+
+---
+
+## 1) Redireccions i *pipes* (E/S)
+Operadors clau:
+- `>` redirigeix **STDOUT** (sobrescriu) · `>>` afegeix · `<` llegeix d’un fitxer
+- `|` envia la sortida a una altra comanda (*pipe*)
+- `2>` redirigeix **STDERR** · `&>` envia STDOUT+STDERR
+- `tee` escriu a fitxer **i** a la consola
+
+**Exemples**
+```bash
+ls -la /etc > ll_estc.txt          # a fitxer
+grep -i "ssh" /etc/* 2> errors.log # errors a un fitxer
+dmesg | grep -i usb | tee usb.log  # pipe + tee
+```
+
+---
+
+## 2) Cerca i filtres potents
+Comandes i opcions útils:
+- `find RUTA -type f -name "*.log" -size +10M -mtime -7 -delete`
+- `locate nginx.conf` (*cal* `updatedb` prèviament en algunes distros)
+- `grep -Rin --color=never "patró" .` (recursiu, n° de línia, insensible a majúscules)
+- `head`, `tail -n 50`, `tail -f fitxer.log` (seguiment en temps real)
+- `cut -d: -f1 /etc/passwd` (columns)
+- `sort`, `uniq -c`, `wc -l`, `xargs`
+
+**Exemple combinat**
+```bash
+find . -type f -name "*.txt" -print0 | xargs -0 cat | grep -i "error" | sort | uniq -c
+```
+
+---
+
+## 3) Permisos i propietats
+- `chmod` simbòlic (`u+rwx,g+rx,o-r`) o octal (`750`, `644`)
+- `chown usuari:grup fitxer` · `chgrp grup fitxer`
+- `umask` defineix permisos **per defecte** (p. ex. `umask 022` → fitxers `644`)
+
+**Exemples habituals**
+```bash
+chmod +x script.sh            # fer executable
+chmod -R 750 ~/projecte       # recursiu
+chown root:www-data /var/www # propietari i grup
+umask 027                     # per sessions actuals
+```
+
+> Recordatori: `r=4, w=2, x=1`. Per `750`: user=7(rwx), group=5(r-x), others=0(---).
+
+---
+
+## 4) Usuaris i grups
+- Info ràpida: `id`, `who`, `w`, `groups`, `getent passwd usuari`
+- Alta i canvis (Debian/Ubuntu): `sudo adduser nom`, `sudo passwd nom`, `sudo usermod -aG grup nom`
+- Baixa: `sudo deluser nom` (o `sudo userdel -r nom`)
+- Grups: `sudo groupadd docents`
+
+**Exemple**
+```bash
+sudo adduser marta
+sudo usermod -aG docker marta
+id marta
+```
+
+---
+
+## 5) Processos i treballs
+- Llistat: `ps aux | grep nom`, `top` (o `htop` si instal·lat)
+- Senyals: `kill -15 PID` (**TERM**), `kill -9 PID` (**KILL**), `pkill nom`
+- *Jobs* en segon pla: `comanda &` · `jobs` · `fg %1` · `bg %1`
+- Prioritat: `nice -n 10 comanda` · `renice +5 PID`
+
+**Exemple**
+```bash
+sleep 300 &   # job en 2n pla
+jobs; fg %1   # tornar-lo a 1r pla
+```
+
+---
+
+## 6) Paquets i actualitzacions
+**Debian/Ubuntu (APT):**
+```bash
+sudo apt update
+sudo apt install htop
+apt search nginx
+apt show nginx | less
+sudo apt remove nginx        # manté config
+sudo apt purge nginx         # elimina inclosa config
+sudo dpkg -i paquet.deb      # instal·lació manual
+```
+
+**Equivalències (resum)**
+
+| Acció | APT (Debian/Ubuntu) | DNF / YUM (Fedora/RHEL) |
+|---|---|---|
+| Actualitza catàleg | `apt update` | `dnf check-update` |
+| Instal·la | `apt install nom` | `dnf install nom` |
+| Elimina | `apt remove nom` | `dnf remove nom` |
+| Cerca | `apt search text` | `dnf search text` |
+
+---
+
+## 7) Xarxa bàsica
+- IP i rutes: `ip a`, `ip r`
+- Connectivitat: `ping -c 4 8.8.8.8`, `curl -I https://example.org`
+- Ports i sockets: `ss -tulpn` (llista serveis escoltant)
+- Descàrrega: `wget URL` o `curl -O URL`
+- Accés remot: `ssh usuari@host` · còpia segura: `scp fitxer usuari@host:/destí`
+
+**Exemple**
+```bash
+ssh alumne@192.168.56.101
+scp prova.tar.gz alumne@192.168.56.101:/home/alumne/
+```
+
+---
+
+## 8) Emmagatzematge i ús de disc
+- Espai: `df -h` (per sistema de fitxers), `du -sh *` (per directori)
+- Dispositius: `lsblk`, `blkid`
+- Muntatge: `sudo mount /dev/sdb1 /mnt/usb` · `sudo umount /mnt/usb`
+
+**Exemple ràpid**
+```bash
+du -sh ~/Downloads/*
+df -h | grep -E "Filesystem|/dev/"
+```
+
+---
+
+## 9) Serveis i *logs* (systemd)
+- Serveis: `systemctl status nginx`, `sudo systemctl start|stop|restart nginx`, `sudo systemctl enable nginx`
+- Registre: `journalctl -xe`, `journalctl -u nginx --since "10 min ago"`
+
+---
+
+## 10) Variables d’entorn i scripts
+- Mostrar: `env` · Exportar: `export PORT=8080`
+- PATH: `echo $PATH` · Afegir temporalment: `export PATH=$PATH:$HOME/bin`
+- Script bàsic `bash`:
+```bash
+cat > hola.sh <<'EOF'
+#!/usr/bin/env bash
+echo "Hola $(whoami)!"
+EOF
+chmod +x hola.sh
+./hola.sh
+```
+- **Cron** (tasques periòdiques): `crontab -e` → exemple cada dia a les 19:05
+```
+5 19 * * * /home/alumne/backup.sh >> /home/alumne/backup.log 2>&1
+```
+
+---
+
+## 11) Compressió alternativa
+- `gzip fitxer` / `gunzip fitxer.gz`
+- `zip -r arxiu.zip carpeta/` · `unzip arxiu.zip`
+
+---
+
+## 12) SSH i claus
+```bash
+ssh-keygen -t ed25519 -C "alumne@centre"
+ssh-copy-id alumne@host
+chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_ed25519
+```
+
+---
+
+## Apèndix · Xec ràpid de domini (autoavaluació guiada)
+- Redireccions i *pipes* (`>`, `>>`, `|`, `2>`, `tee`)
+- `find` amb *predicates* (`-name`, `-size`, `-mtime`, `-exec … {}`)
+- Permisos octals/simbòlics (`chmod`), propietats (`chown`), `umask`
+- Usuaris i grups (`adduser`, `usermod -aG`, `id`)
+- Processos i jobs (`ps`, `top`, `kill`, `bg/fg`, `nice`/`renice`)
+- APT (o DNF), `systemctl` i `journalctl`
+- Xarxa (IP/ports, `ssh`, `scp`, `curl`), disc (`df`, `du`, `lsblk`)
+
+> **Consell docent**: vincula cada demostració a un RA i fes una prova ràpida “fes-ho tu” de 2–3 minuts per cada bloc.

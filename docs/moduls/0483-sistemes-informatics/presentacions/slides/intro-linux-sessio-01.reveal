@@ -1,12 +1,13 @@
-# 0483 · Sistemes informàtics — Linux (Sessió 01)
-## Guia d’introducció a comandes bàsiques (amb exemples)
+# 0483 · Sistemes informàtics — linux
 
-> **Objectiu:** tenir un resum pràctic de les comandes essencials de Linux per començar a treballar amb el terminal.  
-> **Com s’usa:** llegeix la descripció, prova els exemples en un directori de prova i fixa’t en els flags més útils.
+## Guia d’introducció a comandes bàsiques
+
+* **Objectiu:** tenir un resum pràctic de les comandes essencials de Linux per començar a treballar amb el terminal.  
+* **Com s’usa:** llegeix la descripció, prova els exemples en un directori de prova i fixa’t en els flags més útils.
 
 ---
 
-## Taula ràpida de referència
+## Taula ràpida de referència (1/2)
 
 | Comanda | Què fa | Exemple ràpid |
 |---|---|---|
@@ -18,6 +19,13 @@
 | `cp` | Copia fitxers/carpetes | `cp -r src/ backup/` |
 | `rm` | Elimina fitxers/carpetes | `rm -r tmp/` |
 | `touch` | Crea fitxers buits o actualitza dates | `touch notes.txt` |
+
+----
+
+## Taula ràpida de referència (2/2)
+
+| Comanda | Què fa | Exemple ràpid |
+|---|---|---|
 | `ln` | Crea enllaços (hard/soft) | `ln -s /opt/app bin/app` |
 | `clear` | Neteja la pantalla | `clear` |
 | `cat` | Mostra contingut de fitxers | `cat README.md` |
@@ -213,15 +221,6 @@ dmesg | grep -i "usb"
 
 ---
 
-## Mini reptes (opcionales però recomanables)
-1. Crea un directori `prova`, entra-hi i crea tres fitxers buits (`a.txt`, `b.txt`, `c.txt`) amb `touch`.
-2. Copia’ls a una carpeta `backup` preservant metadades.
-3. Concatena `a.txt` i `b.txt` a `ab.txt` i comprova el resultat amb `cat`.
-4. Crea un enllaç simbòlic `link_ab` que apunti a `ab.txt` i valida’l amb `ls -l`.
-5. Comprimeix `prova/` a `prova.tar.gz` i comprova’n el contingut amb `tar -tf`.
-6. Cerca recursivament amb `grep` totes les línies que contenen “TODO” dins de `prova/`.
-
----
 
 ## Bones pràctiques i consells
 - Amb comandes destructives (`rm`, `mv`, `cp`) usa `-i` o fes **còpies de seguretat** primer.
