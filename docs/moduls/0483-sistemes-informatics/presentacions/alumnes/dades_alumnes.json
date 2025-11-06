@@ -7,58 +7,58 @@
     "alumnes": [
         [
             {
-                "firstname": "LEXTER",
-                "lastname": "ABE ABAG",
+                "firstname": "Lexter",
+                "lastname": "Abe Abag",
                 "email": "teralex142@digitechfp.com"
             },
             {
-                "firstname": "BERTA",
-                "lastname": "ARENAS DEL AMO",
-                "email": "berta.arenas2007@digitechfp.com"
+                "firstname": "Berta",
+                "lastname": "Arenas Del Amo",
+                "email": "Berta.arenas2007@digitechfp.com"
             },
             {
-                "firstname": "DANIEL",
-                "lastname": "CIURANA JIMÉNEZ",
+                "firstname": "Daniel",
+                "lastname": "Ciurana Jiménez",
                 "email": "itzciujis@digitechfp.com"
             },
             {
-                "firstname": "JUAN MANUEL",
-                "lastname": "GALÁN PÉREZ",
+                "firstname": "Juan Manuel",
+                "lastname": "Galán Pérez",
                 "email": "juanmagalan2007@digitechfp.com"
             },
             {
-                "firstname": "LEM GERARDO",
-                "lastname": "QUILCA RODRIGUEZ",
+                "firstname": "Lem Gerardo",
+                "lastname": "Quilca Rodríguez",
                 "email": "lemquilca22@digitechfp.com"
             },
             {
-                "firstname": "HUGO",
-                "lastname": "GONZALEZ ORTEGA",
-                "email": "gonzalezhugoortega@digitechfp.com"
+                "firstname": "Hugo",
+                "lastname": "Gonzalez Ortega",
+                "email": "gonzalezHugoortega@digitechfp.com"
             },
             {
-                "firstname": "HUGO",
-                "lastname": "MARTÍNEZ SANTOS",
+                "firstname": "Hugo",
+                "lastname": "Martínez Santos",
                 "email": "hugomartinez310707@digitechfp.com"
             },
             {
-                "firstname": "DENISE ANDREA",
-                "lastname": "RINCON MENDEZ",
+                "firstname": "Denise Andrea",
+                "lastname": "Name Ramírez",
                 "email": "dnameramirez@digitechfp.com"
             },
             {
-                "firstname": "DAVID SANTIAGO",
-                "lastname": "NAME RAMIREZ",
+                "firstname": "David Santiago",
+                "lastname": "Rincón Mendez",
                 "email": "santisalserin.sr@digitechfp.com"
             },
             {
-                "firstname": "CARLOS",
-                "lastname": "RUIZ MONTESINOS",
+                "firstname": "Carlos",
+                "lastname": "Ruiz Montesinos",
                 "email": "karlosruizmo@digitechfp.com"
             },
             {
-                "firstname": "ROBINSON JAVIER",
-                "lastname": "TITUAÑA CRIOLLO",
+                "firstname": "Robinson Javier",
+                "lastname": "Tituaña Criollo",
                 "email": "itsjavii1610@digitechfp.com"
             }
         ]
