@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Coavaluació — Presentacions individuals (Rúbrica + Tema) v5</title>
+  <title>Coavaluació — Presentacions individuals (Rúbrica + Tema) v7</title>
   <style>
     :root { --bg:#f8fafc; --fg:#0f172a; --muted:#475569; --card:#fff; --brand:#1d4ed8; --border:#e2e8f0; --ok:#0e7a33; --warn:#b45309; --err:#b42318;}
     *{box-sizing:border-box}
@@ -22,6 +22,7 @@
     input[type=number]{text-align:center}
     textarea{min-height:70px}
     .hint{font-size:.85rem;color:var(--muted)}
+    .hint.warn{color:var(--warn);}
     .section-title{font-weight:800;margin:8px 0 6px}
     .topic{font-size:.9rem;color:#334155;margin-bottom:8px}
     .crit{display:grid;grid-template-columns:1.6fr 110px 1fr;gap:10px;align-items:center;padding:8px;border-bottom:1px dashed var(--border)}
@@ -49,7 +50,7 @@
     .fixedbar .inner{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;gap:12px;align-items:center}
     .fixedbar .progress{flex:1;height:10px;background:#e2e8f0;border-radius:999px;overflow:hidden}
     .fixedbar .progress i{display:block;height:100%;background:var(--brand);width:0%;transition:width .2s ease}
-    .fixedbar .pct{min-width:18ch;font-weight:800;color:#1f2937;text-align:right}
+    .fixedbar .pct{min-width:20ch;font-weight:800;color:#1f2937;text-align:right}
   </style>
 </head>
 <body>
@@ -96,9 +97,11 @@
 <script>
 (function(){
   const IND_CRITERIA = [
-    {code:"I1", label:"Domini tècnic del contingut", weight:50, desc:"0=no sap explicar-ho · 5=coneix bàsic · 10=domini profund"},
-    {code:"I2", label:"Expressió i comunicació", weight:30, desc:"0=confús · 5=acceptable · 10=molt clar"},
-    {code:"I3", label:"Interacció i respostes", weight:20, desc:"0=no respon · 5=respon parcial · 10=respon amb criteri"}
+    {code:"C1", label:"Contingut tècnic", weight:40, desc:"<strong>|</strong>&nbsp;0&nbsp;=&nbsp;erroni/superficial&nbsp;<strong>|</strong>&nbsp;5&nbsp;=&nbsp;correcte bàsic&nbsp;<strong>|</strong>&nbsp;10&nbsp;=&nbsp;excel·lent i rigorós&nbsp;<strong>|</strong>"},
+    {code:"C2", label:"Claredat i estructura", weight:20, desc:"<strong>|</strong>&nbsp;0&nbsp;=&nbsp;caòtic&nbsp;<strong>|</strong>&nbsp;5&nbsp;=&nbsp;ordenat però millorable&nbsp;<strong>|</strong>&nbsp;10&nbsp;=&nbsp;molt ben estructurat&nbsp;<strong>|</strong>"},
+    {code:"C3", label:"Comunicació (veu, ritme)", weight:15, desc:"<strong>|</strong>&nbsp;0&nbsp;=&nbsp;molt pobre&nbsp;<strong>|</strong>&nbsp;5&nbsp;=&nbsp;acceptable&nbsp;<strong>|</strong>&nbsp;10&nbsp;=&nbsp;clar i convincent&nbsp;<strong>|</strong>"},
+    {code:"C4", label:"Suport visual/demos", weight:15, desc:"<strong>|</strong>&nbsp;0&nbsp;=&nbsp;inadequat&nbsp;<strong>|</strong>&nbsp;5&nbsp;=&nbsp;adequat&nbsp;<strong>|</strong>&nbsp;10&nbsp;=&nbsp;molt bo i coherent&nbsp;<strong>|</strong>"},
+    {code:"C5", label:"Temps i preguntes", weight:10, desc:"<strong>|</strong>&nbsp;0&nbsp;=&nbsp;malament&nbsp;<strong>|</strong>&nbsp;5&nbsp;=&nbsp;millorable&nbsp;<strong>|</strong>&nbsp;10&nbsp;=&nbsp;perfecte&nbsp;<strong>|</strong>"}
   ];
   const QUICK = [0,5,7,8,9,10];
 
@@ -189,7 +192,7 @@
   function critRow(crit, inputId){
     const row = document.createElement("div"); row.className="crit";
     const txt = document.createElement("div");
-    txt.innerHTML = `<b>${crit.label}</b><div class="hint">${crit.desc} <span class="hint">· Pes: ${crit.weight}%</span></div>`;
+    txt.innerHTML = `<b>${crit.label}</b><span class="hint">Pes: <strong>${crit.weight}%</strong><div class="hint">${crit.desc}</span></div>`;
     const val = document.createElement("div");
     const inp = document.createElement("input");
     inp.type="number"; inp.min="0"; inp.max="10"; inp.step="0.1"; inp.id=inputId;
@@ -247,15 +250,36 @@
     const com = document.createElement("textarea"); com.id = `s_${name}_comment`; card.appendChild(comLab); card.appendChild(com);
     com.addEventListener("input", ()=>{ com.classList.remove("invalid"); checkCompleteness(); });
 
+    const hint = document.createElement("div");
+    hint.className = "hint warn";
+    hint.setAttribute("aria-live", "polite");
+    hint.style.display = "none";
+    hint.textContent = "Has posat alguna nota < 5: cal justificar amb un comentari.";
+    card.appendChild(hint);
+
+    function updateCommentRequirement(){
+      let anyBelow5 = inputs.some(i => {
+        const v = Number(i.el.value);
+        return Number.isFinite(v) && v < 5;
+      });
+      if(anyBelow5){
+        hint.style.display = "";
+      }else{
+        hint.style.display = "none";
+        com.classList.remove("invalid");
+      }
+    }
+
     const recompute = ()=>{
       const arr = inputs.map(i=>Number(i.el.value));
       const sc = weightedScore(arr, IND_CRITERIA);
       val.textContent = (sc==null ? "—" : sc.toFixed(2));
+      updateCommentRequirement();
       checkCompleteness();
     };
     inputs.forEach(i=> i.el.addEventListener("input", recompute));
 
-    return {el: card, inputs, commentEl: com, get: ()=>({scores: inputs.map(i=>Number(i.el.value)), total: Number(val.textContent)||null, comment: com.value.trim()})};
+    return {el: card, inputs, commentEl: com, hintEl: hint, get: ()=>({scores: inputs.map(i=>Number(i.el.value)), total: Number(val.textContent)||null, comment: com.value.trim()})};
   }
 
   function renderStudentsUI(){
@@ -271,7 +295,7 @@
     const rName = state.rater ? (state.rater.firstname + " " + (state.rater.lastname||"")).trim() : "";
     roster.filter(n => n && n !== rName).forEach(name => {
       const blk = studentBlock(name); studentsZone.appendChild(blk.el);
-      state.blocks.push({type:"student", name, criteria:IND_CRITERIA, inputs:blk.inputs, commentEl: blk.commentEl, getter:blk.get});
+      state.blocks.push({type:"student", name, criteria:IND_CRITERIA, inputs:blk.inputs, commentEl: blk.commentEl, hintEl: blk.hintEl, getter:blk.get});
     });
     checkCompleteness();
   }
@@ -294,11 +318,14 @@
         }
       });
       if(anyBelow5){
+        if(b.hintEl){ b.hintEl.style.display = ""; }
         const cval = (b.commentEl?.value || "").trim();
         if(!cval){
           if(highlight && b.commentEl){ b.commentEl.classList.add("invalid"); }
           missing.push(`${path} — Comentari obligatori (hi ha nota < 5)`);
         }
+      }else{
+        if(b.hintEl){ b.hintEl.style.display = "none"; }
       }
     }
     if(!state.rater){ missing.push("Selecció del teu nom (rater)"); }
