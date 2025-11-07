@@ -154,7 +154,9 @@ tres"""           # literal multilínia; conté '\n'
 Si el text conté apòstrof (`'`), és còmode usar cometes dobles: `"L'ombra..."`.
 
 ## f-strings i format numèric
+
 Les **f-strings** incrusten expressions amb `{}`:
+
 ```python
 nom, edat = "Laia", 21
 f"Em dic {nom} i tinc {edat} anys."
@@ -169,6 +171,7 @@ f"Amb dos decimals: {a:.2f}"   # -> 'Amb dos decimals: 0.67'
 Un **script** (`.py`) és una seqüència de sentències guardades en fitxer.
 
 `hello.py`:
+
 ```python
 x = 45
 x += 90
@@ -228,9 +231,11 @@ print(f"L'usuari {usuari} té {lliure:.2f} MB d'espai lliure")
 3) Percentatges: amb `p = 0.8` i `n = 99`, mostra `El 80.0 % de 99 és 79.2` amb una sola línia `print(...)` i càlcul dins d’un f-string.
 
 <details> <summary>Mostra la solució</summary>
+```python
 p, n = 0.8, 99
 print(f"El {p*100:.1f} % de {n} és {p*n:.1f}")
 # → El 80.0 % de 99 és 79.2
+```
 
 </details>
 ----
@@ -239,6 +244,8 @@ print(f"El {p*100:.1f} % de {n} és {p*n:.1f}")
 
 
 <details> <summary>Mostra la solució</summary>
+```python
+
 # circle.py
 PI = 3.141592653
 
@@ -249,29 +256,35 @@ perimetre = 2 * PI * radi
 print(f"Àrea: {area:.2f}")
 print(f"Perímetre: {perimetre:.2f}")
 print(f"resum -> radi={radi:g}, àrea={area:.2f}, perímetre={perimetre:.2f}")
-
+```
 </details>
 ----
 
 
 5) Converteix segons totals a `h:mm:ss` usant **`//`** i **`%`** (sense llibreries).
 <details> <summary>Mostra la solució</summary>
+
+```python
 segons = int(input("Segons totals: "))
 h = segons // 3600
 m = (segons % 3600) // 60
 s = segons % 60
 print(f"{h}:{m:02d}:{s:02d}")
 # Ex.: 3671 → 1:01:11
+```
 
 </details>
 ---
 
 ## Errors típics i com interpretar-los
+
+```python
 - **NameError** — variable no definida. Defineix abans d’usar:
   ```python
   zeta = 5
   2 * zeta  # 10
   ```
+```
 - **SyntaxError** — números amb zero inicial (`03`) o cometes no tancades.
 - **ZeroDivisionError** — divisió per zero (vigila parèntesis!).
 - **TypeError** — barreges `str` i `int` en una suma:
