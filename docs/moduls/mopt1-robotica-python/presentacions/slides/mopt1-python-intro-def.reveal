@@ -196,27 +196,74 @@ print(f"Àrea amb radi {radi}: {area}")
 ---
 
 ## Activitats ràpides
-1) Reescriu amb bona llegibilitat: `+4++6-+6+-10`  
-   **Pista**: separa tokens amb espais.
+Escriu aquesta sentència de manera que es pugui entendre fàcilment: **`+4++6-+6+-10`**
+
+<details>
+  <summary>Mostra la solució</summary>
+
+Solució (llegible):  
+`+4 + +6 - +6 + -10`  
+Opció equivalent més clara: `4 + 6 - 6 - 10`
+</details>
+
 
 ----
 
 2) f-string: amb `usuari = "Miquel"` i `lliure = 125.5999`, mostra  
    `L'usuari Miquel té 125.60 MB d'espai lliure` (arrodonit a 2 decimals).
 
+<details>
+  <summary>Mostra la solució</summary>
+
+```python
+usuari = "Miquel"
+lliure = 125.5999
+print(f"L'usuari {usuari} té {lliure:.2f} MB d'espai lliure")
+# → L'usuari Miquel té 125.60 MB d'espai lliure
+
+</details>
+
 ----
 
 3) Percentatges: amb `p = 0.8` i `n = 99`, mostra `El 80.0 % de 99 és 79.2` amb una sola línia `print(...)` i càlcul dins d’un f-string.
 
+<details> <summary>Mostra la solució</summary>
+p, n = 0.8, 99
+print(f"El {p*100:.1f} % de {n} és {p*n:.1f}")
+# → El 80.0 % de 99 és 79.2
+
+</details>
 ----
 
 4) Scripts: amplia `circle.py` perquè imprimeixi **perímetre** i una línia final resum: `radi=X, àrea=..., perímetre=...`.
 
+
+<details> <summary>Mostra la solució</summary>
+# circle.py
+PI = 3.141592653
+
+radi = float(input("Radi? "))
+area = PI * (radi ** 2)
+perimetre = 2 * PI * radi
+
+print(f"Àrea: {area:.2f}")
+print(f"Perímetre: {perimetre:.2f}")
+print(f"resum -> radi={radi:g}, àrea={area:.2f}, perímetre={perimetre:.2f}")
+
+</details>
 ----
 
 
 5) Converteix segons totals a `h:mm:ss` usant **`//`** i **`%`** (sense llibreries).
+<details> <summary>Mostra la solució</summary>
+segons = int(input("Segons totals: "))
+h = segons // 3600
+m = (segons % 3600) // 60
+s = segons % 60
+print(f"{h}:{m:02d}:{s:02d}")
+# Ex.: 3671 → 1:01:11
 
+</details>
 ---
 
 ## Errors típics i com interpretar-los
