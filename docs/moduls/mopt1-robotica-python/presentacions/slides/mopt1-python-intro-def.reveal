@@ -223,6 +223,7 @@ usuari = "Miquel"
 lliure = 125.5999
 print(f"L'usuari {usuari} té {lliure:.2f} MB d'espai lliure")
 # → L'usuari Miquel té 125.60 MB d'espai lliure
+```
 
 </details>
 
@@ -231,6 +232,7 @@ print(f"L'usuari {usuari} té {lliure:.2f} MB d'espai lliure")
 3) Percentatges: amb `p = 0.8` i `n = 99`, mostra `El 80.0 % de 99 és 79.2` amb una sola línia `print(...)` i càlcul dins d’un f-string.
 
 <details> <summary>Mostra la solució</summary>
+
 ```python
 p, n = 0.8, 99
 print(f"El {p*100:.1f} % de {n} és {p*n:.1f}")
@@ -244,24 +246,23 @@ print(f"El {p*100:.1f} % de {n} és {p*n:.1f}")
 
 
 <details> <summary>Mostra la solució</summary>
+
 ```python
-
-# circle.py
 PI = 3.141592653
-
 radi = float(input("Radi? "))
 area = PI * (radi ** 2)
 perimetre = 2 * PI * radi
-
 print(f"Àrea: {area:.2f}")
 print(f"Perímetre: {perimetre:.2f}")
 print(f"resum -> radi={radi:g}, àrea={area:.2f}, perímetre={perimetre:.2f}")
 ```
+
 </details>
 ----
 
 
 5) Converteix segons totals a `h:mm:ss` usant **`//`** i **`%`** (sense llibreries).
+
 <details> <summary>Mostra la solució</summary>
 
 ```python
@@ -292,16 +293,3 @@ print(f"{h}:{m:02d}:{s:02d}")
   x = "5"; y = 3
   int(x) + y  # 8
   ```
-
----
-
-**Activitat**  
-Escriu aquesta sentència de manera que es pugui entendre fàcilment: `+4++6-+6+-10`
-
-<details>
-  <summary>Mostra la solució</summary>
-
-Solució (llegible):  
-`+4 + +6 - +6 + -10`  
-Opció equivalent més clara: `4 + 6 - 6 - 10`
-</details>
