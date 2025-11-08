@@ -84,7 +84,7 @@ Es desitja informatitzar parcialment una determinada entitat bancària amb els s
 
 ## MER 5: Agència de viatges
 
-Feu el disseny d'una base de dades (MER) i el disseny lògic d'una agència de viatges, que per oferir un millor servei als seus clients, considera d'interès tenir registrada informació referent als diferents *Tours* que pot oferir. Tingueu en compte la següent informació:
+Per oferir un millor servei als seus clients, considera d'interès tenir registrada informació referent als diferents *Tours* que pot oferir.
 
  * Un *Tour* segons la seva finalitat (cultural, històrica, esportiva...) té uns determinats punts de ruta i pot repetir-se diverses vegades en un any (diferents viatges).
 
@@ -92,11 +92,20 @@ Feu el disseny d'una base de dades (MER) i el disseny lògic d'una agència de v
 
  * Els punts de ruta d'un *Tour* poden ser ciutats, monuments, zones geogràfiques, i es consideren de visita només o de visita i estada. En aquest últim cas, el punt de ruta té assignat un lloc o diversos.
 
+----
+
+#### MER 5: Agència de viatges (cont...)
+
  * Entenem per client d'un viatge a la persona que ha decidit fer-ho i ha fet efectiva un senyal.
 
  * Un client pot confirmar la seva participació en més d'un viatge (se sobreentén que en dates diferents).
 
  * Les persones que participen en un viatge poden ser allotjades en el mateix o en diferent hotel en un mateix punt de ruta.
+
+### Es demana:
+
+ * Dissenyar un esquema **M**odel **E**ntitat **R**elació (**MER**) que reculli la informació de l'enunciat.
+
 
 <!--
 
