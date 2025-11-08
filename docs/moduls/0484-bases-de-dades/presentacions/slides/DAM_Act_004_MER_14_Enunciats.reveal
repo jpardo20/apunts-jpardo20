@@ -78,7 +78,6 @@ Es desitja informatitzar parcialment una determinada entitat bancària amb els s
  * Els clients poden tenir atorgats préstecs (ha d’estar associat a algun dels seus comptes corrents). Cada préstec s'atorga a nom d'un sol client i a un client se li pot atorgar més d'un préstec.
 
 
-<!--
 ##   
 
 ## Activitat: Agència de viatges
@@ -96,6 +95,8 @@ Feu el disseny d'una base de dades (MER) i el disseny lògic d'una agència de v
  * Un client pot confirmar la seva participació en més d'un viatge (se sobreentén que en dates diferents).
 
  * Les persones que participen en un viatge poden ser allotjades en el mateix o en diferent hotel en un mateix punt de ruta.
+
+<!--
 
 ## Activitat: Reserves lloguer d'automòbils
 
