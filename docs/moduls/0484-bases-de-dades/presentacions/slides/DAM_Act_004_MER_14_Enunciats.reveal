@@ -1,4 +1,4 @@
-## Activitat: Cadastre de Granollers 
+## MER 1: Cadastre de Granollers 
 
 L'ajuntament de Granollers vol fer el cadastre del seu municipi, per aquest motiu ens ha proporcionat la següent informació:
 
@@ -12,7 +12,7 @@ L'ajuntament de Granollers vol fer el cadastre del seu municipi, per aquest moti
 
 ----
 
-#### Activitat: Cadastre de Granollers (cont...)
+#### MER 2: Cadastre de Granollers (cont...)
 
  * Un habitatge pot ser de dos tipus, o pis o casa particular.
 
@@ -24,13 +24,15 @@ L'ajuntament de Granollers vol fer el cadastre del seu municipi, per aquest moti
 
 ----
 
+#### MER 2: Cadastre de Granollers (cont...)
+
 ### Es demana:
 
  * Dissenyar un esquema **M**odel **E**ntitat **R**elació (**MER**) que reculli la informació de l'enunciat.
 
 ---
 
-## Activitat: Carreteres del País
+## MER 3: Carreteres del País
 
 Es vol dissenyar una base de dades que contingui la informació relativa a totes les carreteres d'un determinat país. Es demana realitzar el disseny en el model E/R, sabent que:
 
@@ -44,7 +46,7 @@ Es vol dissenyar una base de dades que contingui la informació relativa a totes
 
 ----
 
-#### Activitat: Carreteres del País  (cont...)
+#### MER 3: Carreteres del País  (cont...)
 
 
 ### Es demana:
@@ -53,7 +55,7 @@ Es vol dissenyar una base de dades que contingui la informació relativa a totes
 
 ---
 
-## Activitat: Informatització entitat bancària (1/2)
+## MER 4: Informatització entitat bancària
 
 Es desitja informatitzar parcialment una determinada entitat bancària amb els següents supòsits (fes el disseny del model E/R):
 
@@ -67,7 +69,7 @@ Es desitja informatitzar parcialment una determinada entitat bancària amb els s
 
 ----
 
-## Activitat: Informatització entitat bancària (2/2)
+#### MER 4: Informatització entitat bancària (cont ...)
 
  * Un compte corrent pot tenir associats un o diversos clients. Com que els clients poden ser titulars o signatures autoritzades, és possible que les operacions que poden realitzar els clients amb signatura autoritzada amb el compte siguin molt menys.
 
@@ -78,9 +80,9 @@ Es desitja informatitzar parcialment una determinada entitat bancària amb els s
  * Els clients poden tenir atorgats préstecs (ha d’estar associat a algun dels seus comptes corrents). Cada préstec s'atorga a nom d'un sol client i a un client se li pot atorgar més d'un préstec.
 
 
-##   
+---
 
-## Activitat: Agència de viatges
+## MER 5: Agència de viatges
 
 Feu el disseny d'una base de dades (MER) i el disseny lògic d'una agència de viatges, que per oferir un millor servei als seus clients, considera d'interès tenir registrada informació referent als diferents *Tours* que pot oferir. Tingueu en compte la següent informació:
 
