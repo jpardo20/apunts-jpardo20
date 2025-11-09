@@ -74,6 +74,18 @@
       "tags": [
         "BBDD"
       ]
+    },
+    {
+      "id": "0484-bds-activitat-validacio-mer-escenaris.reveal",
+      "title": "0484-bds-activitat-validacio-mer-escenaris.reveal",
+      "description": "Enunciats: Model Entitat-Relació (MER)",
+      "src": "slides/0484-bds-activitat-validacio-mer-escenaris.reveal",
+      "theme": "white",
+      "tags": [
+        "BBDD"
+      ]
     }
+
+    
   ]
 }
