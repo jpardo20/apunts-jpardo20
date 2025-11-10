@@ -3,9 +3,14 @@
 
 **Modalitat:** per parelles
 
+Podeu descarregar el fitxer XML del <a href="../../../assets/files/agencia-viatges-mer.drawio" target="_about">MER inicial de l'Agència de viatges</a>
+
 ### Consigna
 A partir del <a href="../../../assets/img/agencia-viatges-mer.png" target="_about">MER inicial de l'Agència de viatges</a>,
 cal que per a cada escenari, indiqueu:
+
+
+----
 
 1) - **Es pot modelar amb el MER inicial?**
 
@@ -43,25 +48,39 @@ Lliuramnent des del formulari HTML, **genereu el vostre JSON** i pugeu-lo al cam
 
 ---
 
-## Els 10 escenaris (1/10) - Exemple
+## Els 10 escenaris (1/10) Exemple
 
-#### Escenari 1. **Un tour amb diversos viatges**  
+#### Escenari 1.  - Exemple (1/3)
+
+**Un tour amb diversos viatges**  
    L’agència crea el tour *“Itàlia Essencial”* i programa tres viatges (V1, V2, V3) en mesos diferents per al mateix any.
 
-1) - **Es pot modelar amb el MER inicial?** (Sí/No)  
+1) **Es pot modelar amb el MER inicial?** (Sí/No)  
 
 <br>
 
 - [x] Sí
 - [ ] No
 
+----
 
-2) - **On** ho representaríeu (entitats/relacions).  
+## Els 10 escenaris (1/10) Exemple
 
-<img src="../../../assets/img/escenari-001.png" height="300" ></img>
+#### Escenari 1.  - Exemple (2/3)
 
 
-3) - **Justifiqueu** breument la decisió.
+2) **On** ho representaríeu (entitats/relacions).  
+
+<img src="../../../assets/img/escenari-001.png" height="400" ></img>
+
+----
+
+## Els 10 escenaris (1/10) Exemple
+
+#### Escenari 1.  - Exemple (3/3)
+
+
+3) **Justifiqueu** breument la decisió.
 
 > Un tour pot programar diversos viatges en dates diferents i cada viatge pertany a un únic tour; per això és una 1:N.
 >
