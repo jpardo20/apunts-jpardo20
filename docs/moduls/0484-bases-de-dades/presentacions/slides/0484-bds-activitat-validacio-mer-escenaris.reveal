@@ -17,7 +17,9 @@ cal que per a cada escenari, indiqueu:
 2) - **On** ho representaríeu (entitats/relacions).  
     En aquest apartat podeu pujar una captura del MER facilitat,
 
-  ![alt text](image-1.png)
+![data-base.png](../../../assets/img/data-base.png)
+![alt text]((../../../assets/img/escenari-001.png)
+
 
    o bé indicar-ho amb un text,
 
@@ -59,7 +61,7 @@ Lliuramnent des del formulari HTML, **genereu el vostre JSON** i pugeu-lo al cam
 
 2) - **On** ho representaríeu (entitats/relacions).  
 
-  ![alt text]((../../../assets/img/escenari-001.png)
+![alt text]((../../../assets/img/escenari-001.png)
 
 
 3) - **Justifiqueu** breument la decisió.
