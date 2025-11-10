@@ -15,22 +15,19 @@ cal que per a cada escenari, indiqueu:
 ----
 
 2) - **On** ho representaríeu (entitats/relacions).  
+
     En aquest apartat podeu pujar una captura del MER facilitat,
 
-![data-base.png](../../../assets/img/data-base.png)
-![alt text]((../../../assets/img/escenari-001.png)
-
+<img src="../../../assets/img/escenari-001.png" height="300" ></img>
 
    o bé indicar-ho amb un text,
 
   ```bash
   TOURS >|-(1,n)---- <programa-[1:N]> ----(1,n)-|< VIATGES 
   ```
-Només cal que indiqueu una,
 
-* o enganxeu una captura, podeu fer la captura i fent <kbd>Ctrl </kbd> + <kbd>V</kbd>, ja enganxareu la imatge al formulari, 
-
-* o escriviu el text.
+###### Només cal que indiqueu una, o enganxeu una captura, podeu fer la captura i fent
+###### <kbd>Ctrl </kbd> + <kbd>V</kbd>, ja enganxareu la imatge al formulari, o escriviu el text.
 
 ----
 
@@ -61,7 +58,7 @@ Lliuramnent des del formulari HTML, **genereu el vostre JSON** i pugeu-lo al cam
 
 2) - **On** ho representaríeu (entitats/relacions).  
 
-![alt text]((../../../assets/img/escenari-001.png)
+<img src="../../../assets/img/escenari-001.png" height="300" ></img>
 
 
 3) - **Justifiqueu** breument la decisió.
