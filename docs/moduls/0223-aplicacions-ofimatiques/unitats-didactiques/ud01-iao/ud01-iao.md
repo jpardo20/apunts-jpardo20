@@ -2,56 +2,7 @@
 
 # Mòdul 0223 - Aplicacions Ofimàtiques
 
-![banner](./media/banner.png){ .center width="900" }
-![short-line](./media/short-line.png){ width="320" }
-
-### Autores: <u>Sergi García Barea</u>, <u>Gloria Muñoz González</u>
-![Licència CC BY-NC-SA](./media/image-BY-NC-SA.png){ width="180" }
-
-Actualizado Septiembre 2022
-
-### Licencia
-
-> [!CAUTION]**Reconocimiento - No comercial - CompartirIgual** (BY-NC-SA): No se permite un uso comercial de la obra original ni de las posibles obras derivadas, la distribución de las cuales se ha de hacer con una licencia igual a la que regula la obra original.
-> ![image-BY-NC-SA.png](./media/image-BY-NC-SA.png)
-
-### Nomenclatura
-
-A lo largo de este tema se utilizarán diferentes símbolos para distinguir elementos importantes dentro del contenido. Estos símbolos son:
-
-> [!TIP]
-> 📖 **Importante**
-
-> [!TIP]
->❕ **Atención**
-
-> [!TIP]
-> 💬 **Interesante**
-
-> [!TIP]
-> 📕 **A entregar**
-
-----
-
-<details><summary><b>Índice de contenido</b></summary>
-
-**[Introducción](#introducción) 2**
-
-**¿[Qué es una suite ofimática](#qué-es-una-suite-ofimática)? 3**
-
-**[Suites ofimáticas locales vs suites ofimáticas en la nube](#suites-ofimáticas-locales-vs-suites-ofimáticas-en-la-nube) 3**
-
-**[Ergonomía, posturas, fatiga visual y descansos](#ergonomía-posturas-fatiga-visual-y-descansos) 3**
-
-**[Cheat sheets](#cheat-sheets) 4**
-
-**[Búsqueda en Google](#búsqueda-en-google) 4**
-
-**[¿Qué entra para examen?](#qué-entra-para-examen) 4**
-
-</details>
-
-----
+---
 
 # UD 01. Introducción a aplicaciones ofimáticas
 
