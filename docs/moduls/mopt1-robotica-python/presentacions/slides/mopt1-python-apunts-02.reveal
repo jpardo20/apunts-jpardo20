@@ -402,35 +402,29 @@ from datetime import date
 
 ## A2. Classificador de notes (25’) – Enunciat
 - Demana una **nota** (0–10), permetent punt o coma
-- Valida el rang amb `while + try/except`
+- Valida el rang amb `while`
 - Mostra la menció:
-  - ≥9 **Excel·lent** · ≥7 **Notable** · ≥5 **Aprovat** · <5 **Suspès**
+  - ≥9 **Excel·lent**
+  - ≥7 **Notable**
+  - ≥5 **Aprovat**
+  - <5 **Suspès**
 
----
-
-## A2. Plantilla
 ```python
 nota: float = 0.0
 # Llegeix la nota (0-10) i valida
 # Calcula i mostra la menció
 ```
-➤ Consulteu `materials/02_classificador_notes_inici.py`
 
----
-
-## A2. Solució (referència)
-➤ Mireu `materials/02_classificador_notes_solucio.py`
-
----
+----
 
 ## A3. Semàfor del robot (20’) – Enunciat
-- Llindars: STOP < 20 · LENT 20–50 · RÀPID > 50
+- Llindars:
+  - STOP < 20
+  - LENT 20–50
+  - RÀPID > 50
 - Bucle fins que l’alumne escrigui **q**
 - Mostra l'acció resultant
 
----
-
-## A3. Plantilla
 ```python
 DISTANCIA: int = 0
 LLINDAR_STOP: int = 20
@@ -438,34 +432,3 @@ LLINDAR_LENT: int = 50
 accio: str = ""
 # Llegeix distància o 'q', valida, i decideix acció
 ```
-➤ Consulteu `materials/03_semafor_robot_inici.py`
-
----
-
-## A3. Solució (referència)
-➤ Mireu `materials/03_semafor_robot_solucio.py`
-
----
-
-## Autoavaluació (5’)
-- [ ] He declarat variables amb tipus i valor inicial
-- [ ] He validat l’entrada a cada programa
-- [ ] He fet servir f-strings per a la sortida
-- [ ] Les condicions cobreixen tots els casos (incloent límits)
-- [ ] He provat entrades vàlides i invàlides
-
----
-
-## Rúbrica (10 punts)
-- Declaració disciplinada: **2**
-- Validació i gestió d'errors: **3**
-- Lògica i condicions: **3**
-- Presentació (missatges clars, f-strings): **1**
-- Neteja del codi: **1**
-
----
-
-## Recursos i entrega
-- Fitxa per a l'alumnat: `alumnes/fitxa_activitat.md`
-- Fitxers d'inici i solucions a `materials/`
-- **Entrega**: pugeu els 3 fitxers resolts al vostre repositori
