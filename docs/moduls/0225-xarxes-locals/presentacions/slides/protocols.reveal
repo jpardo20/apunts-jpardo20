@@ -1,6 +1,6 @@
-% Protocols de xarxa amb Packet Tracer
-% M0225 – Xarxes locals · 1r SMX
-% Digitech FP
+# Protocols de xarxa amb Packet Tracer
+
+#### M0225 – Xarxes locals · 1r SMX
 
 ---
 
@@ -46,7 +46,7 @@
 
 # DHCP
 
----
+----
 
 ## DHCP – què és?
 
@@ -58,7 +58,7 @@
   - Sigui **més ràpid** connectar nous equips
   - Hi hagi **menys errors** de configuració
 
----
+----
 
 ## DHCP – el famós DORA
 
@@ -71,7 +71,7 @@ Quan un PC s’engega i no té IP:
 
 - Aquest intercanvi és el **DORA**
 
----
+----
 
 ## DHCP – què mirar a Packet Tracer
 
@@ -80,6 +80,8 @@ Quan un PC s’engega i no té IP:
 - 1 router (o servidor) amb servei **DHCP**
 - 1 switch
 - 1 o més PCs com a **clients DHCP**
+
+----
 
 **Al Simulation Mode:**
 
@@ -95,7 +97,7 @@ Quan un PC s’engega i no té IP:
 
 # DNS
 
----
+----
 
 ## DNS – què és?
 
@@ -108,7 +110,7 @@ Quan un PC s’engega i no té IP:
     - “Quina IP té aquest nom?”
   - El DNS respon: “té la IP X.X.X.X”
 
----
+----
 
 ## DNS – com ho veiem a PT
 
@@ -117,6 +119,8 @@ Quan un PC s’engega i no té IP:
 - 1 servidor amb servei **DNS**
 - 1 o més PCs
 - Opcionalment un servidor web per provar el nom de domini
+
+----
 
 **Al Simulation Mode:**
 
@@ -134,7 +138,7 @@ Quan un PC s’engega i no té IP:
 
 # HTTP i HTTPS
 
----
+----
 
 ## HTTP – què és?
 
@@ -145,7 +149,7 @@ Quan un PC s’engega i no té IP:
   - El servidor retorna una **resposta HTTP** (HTML, imatges, etc.)
 - HTTP “normal” **no xifra** el contingut
 
----
+----
 
 ## HTTPS/TLS – idea bàsica
 
@@ -160,7 +164,7 @@ Quan un PC s’engega i no té IP:
 
 *(A Packet Tracer el TLS/HTTPS real no es veu com a Wireshark; és més per entendre el concepte.)*
 
----
+----
 
 ## HTTP – demo a PT
 
@@ -169,6 +173,8 @@ Quan un PC s’engega i no té IP:
 - 1 **Web Server**
 - 1 PC client
 - Potser un switch o router intermedi
+
+----
 
 **Al Simulation Mode:**
 
@@ -182,7 +188,7 @@ Quan un PC s’engega i no té IP:
 
 # SMTP, POP3 i IMAP
 
----
+----
 
 ## Correu electrònic – idea general
 
@@ -195,7 +201,7 @@ Hi ha **dos moments diferents**:
    - Client → servidor
    - Protocols típics: **POP3** o **IMAP**
 
----
+----
 
 ## SMTP – enviar correu
 
@@ -205,7 +211,7 @@ Hi ha **dos moments diferents**:
   - Entre servidors
 - Port típic: **25**
 
----
+----
 
 ## POP3 i IMAP – llegir correu
 
@@ -218,7 +224,7 @@ Hi ha **dos moments diferents**:
 
 *(A 1r ens quedem amb la idea general: POP3 = baixar, IMAP = treballar al servidor.)*
 
----
+----
 
 ## SMTP/POP3 – demo a PT
 
@@ -227,6 +233,8 @@ Hi ha **dos moments diferents**:
 - 1 **Email Server** (SMTP + POP3)
 - 2 PCs-client de correu
 - Mateixa xarxa local o amb router
+
+----
 
 **Al Simulation Mode:**
 
@@ -240,7 +248,7 @@ Hi ha **dos moments diferents**:
 
 # FTP
 
----
+----
 
 ## FTP – què és?
 
@@ -250,7 +258,7 @@ Hi ha **dos moments diferents**:
 - Problema:
   - El trànsit FTP **no està xifrat** (contrasenyes incloses)
 
----
+----
 
 ## FTP – demo a PT
 
@@ -258,6 +266,8 @@ Hi ha **dos moments diferents**:
 
 - 1 **FTP Server**
 - 1 PC client
+
+----
 
 **Al Simulation Mode:**
 
@@ -273,7 +283,7 @@ Hi ha **dos moments diferents**:
 
 # VLAN 802.1Q
 
----
+----
 
 ## VLAN – què és?
 
@@ -286,7 +296,7 @@ Hi ha **dos moments diferents**:
 - Objectiu:
   - Més **seguretat** i **organització** de la xarxa
 
----
+----
 
 ## VLAN – concepte 802.1Q
 
@@ -295,7 +305,7 @@ Hi ha **dos moments diferents**:
   - Les trames porten una **etiqueta VLAN** (VID)
   - Això permet que **diverses VLAN** passin pel mateix cable entre switches
 
----
+----
 
 ## VLAN – demo a PT
 
@@ -310,6 +320,8 @@ Hi ha **dos moments diferents**:
 - Assignar ports a cada VLAN
 - Crear un **trunk** entre switches
 
+----
+
 **Al Simulation Mode:**
 
 - Afegeix filtre de **VLAN**
@@ -323,7 +335,7 @@ Hi ha **dos moments diferents**:
 
 # SNMP i NTP (visió general)
 
----
+----
 
 ## SNMP – idea bàsica
 
@@ -337,7 +349,7 @@ Hi ha **dos moments diferents**:
 
 *A Packet Tracer la part d’SNMP és molt limitada; el fem servir sobretot per entendre el concepte.*
 
----
+----
 
 ## NTP – idea bàsica
 
@@ -350,13 +362,11 @@ Hi ha **dos moments diferents**:
   - Hi ha **servidors NTP**
   - Els equips clients hi consulten l’hora periòdicament
 
-*(A PT podem configurar NTP a IOS, però les PDU no són tan “boniques” com a Wireshark.)*
-
 ---
 
 # Resum final
 
----
+----
 
 ## Què ens hem d’endur
 
@@ -379,5 +389,3 @@ Hi ha **dos moments diferents**:
 4. Per què és perillós fer servir **FTP** en una xarxa oberta?
 
 *(Preneu-vos 2–3 minuts per comentar-ho en parelles, i després posem en comú.)*
-
----
