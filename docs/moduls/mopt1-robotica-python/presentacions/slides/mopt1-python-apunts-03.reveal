@@ -1,0 +1,324 @@
+# Introducció a les funcions en Python
+### 1r de SMX · Programació amb Python
+
+---
+
+## Objectius de la sessió
+
+- Entendre què és una funció.
+- Diferenciar entre **definir** i **cridar** una funció.
+- Veure exemples senzills de funcions en Python.
+- Preparar-nos per escriure programes més ordenats i reutilitzables.
+
+---
+
+## El problema: codi repetit
+
+- Sovint en un programa:
+  - Mostrem el mateix missatge moltes vegades.
+  - Calculem el mateix amb números diferents.
+- Sense funcions → fem **copiar / enganxar** codi:
+
+```python
+print("Benvingut/da al programa!")
+# ... molt codi ...
+print("Benvingut/da al programa!")
+# ... més codi ...
+print("Benvingut/da al programa!")
+```
+
+**Problemes:**
+
+- És pesat de mantenir.
+- És fàcil equivocar-se.
+- Si volem canviar el missatge, l’hem de canviar a molts llocs.
+
+---
+
+## Què és una funció? (Idea intuïtiva)
+
+- Una funció és com:
+  - Una **recepta de cuina**:
+    - Li dones ingredients → segueix uns passos → obtens un plat.
+  - Una **màquina**:
+    - Entra alguna cosa → fa una feina → surt un resultat.
+
+> **Definició simple:**  
+> Una funció és un tros de codi amb nom propi que podem reutilitzar tantes vegades com vulguem.
+
+---
+
+## Parts d’una funció
+
+En general, una funció té:
+
+- **Nom** → com es diu la funció.
+- **Paràmetres (opcionales)** → les dades que entren.
+- **Cos** → les instruccions que s’executen.
+- **Valor de retorn (opcional)** → el resultat que ens torna.
+
+Esquema en Python:
+
+```python
+def nom_de_la_funcio(paràmetres):
+    # cos de la funció
+    ...
+    return resultat  # opcional
+```
+
+---
+
+## Primera funció en Python (sense paràmetres)
+
+```python
+def saluda():
+    print("Hola, benvingut/da a Python!")
+```
+
+**Observa:**
+
+- `def` → paraula clau per **definir** una funció.
+- `saluda` → nom de la funció.
+- `()` → ara no té paràmetres.
+- `:` → indica que comença el cos de la funció.
+- La línia de sota va **amb sagnat** (espais o tabulador).
+
+---
+
+## Definir NO és el mateix que executar
+
+Si només escrivim:
+
+```python
+def saluda():
+    print("Hola, benvingut/da a Python!")
+```
+
+- No es veu res a la pantalla.
+- Només estem **definint** la funció.
+
+Per **fer-la servir**, l’hem de cridar:
+
+```python
+saluda()
+saluda()
+```
+
+Resultat:
+
+```text
+Hola, benvingut/da a Python!
+Hola, benvingut/da a Python!
+```
+
+---
+
+## Funcions amb paràmetres
+
+Ara volem saludar persones diferents:
+
+```python
+def saluda_persona(nom):
+    print("Hola,", nom, "!")
+```
+
+Crides:
+
+```python
+saluda_persona("Marc")
+saluda_persona("Laia")
+```
+
+Resultat:
+
+```text
+Hola, Marc !
+Hola, Laia !
+```
+
+**Idees clau:**
+
+- `nom` és un **paràmetre**.
+- Cada vegada que cridem la funció, li passem un **valor diferent**.
+
+---
+
+## Funcions amb més d’un paràmetre
+
+```python
+def mostra_edat(nom, edat):
+    print(nom, "té", edat, "anys.")
+```
+
+Crides:
+
+```python
+mostra_edat("Anna", 16)
+mostra_edat("Pol", 17)
+```
+
+**Idees clau:**
+
+- Paràmetres separats per comes.
+- L’ordre és important: primer `nom`, després `edat`.
+
+---
+
+## Funcions amb valor de retorn (`return`)
+
+Fins ara, les funcions **mostraven** coses per pantalla.  
+Ara veurem funcions que **calculen i RETORNEN** un resultat.
+
+```python
+def suma(a, b):
+    resultat = a + b
+    return resultat
+```
+
+- `return resultat` → la funció torna el valor perquè el programa el pugui fer servir.
+
+---
+
+## Com utilitzar el valor que retorna una funció
+
+```python
+def suma(a, b):
+    return a + b
+
+x = suma(3, 5)
+print("El resultat és:", x)
+print("El doble és:", x * 2)
+```
+
+**Idees clau:**
+
+- `suma(3, 5)` *val* 8.
+- Podem guardar el resultat en una variable.
+- Podem utilitzar-lo en altres operacions.
+
+---
+
+## Variables locals (dins de la funció)
+
+```python
+def suma(a, b):
+    resultat = a + b
+    return resultat
+
+print(resultat)  # Error!
+```
+
+**Idea important:**
+
+- `resultat` només existeix **dins** de la funció `suma`.
+- És una **variable local**.
+- Fora de la funció, Python no sap què és `resultat`.
+
+---
+
+## Funcions integrades vs funcions pròpies
+
+Ja hem fet servir moltes funcions integrades de Python:
+
+- `print()`
+- `len()`
+- `int()`
+- `input()`
+- ...
+
+Ara, a més:
+
+- Podem **crear les nostres pròpies funcions** amb `def`.
+- Això ens ajuda a:
+  - Estructurar millor el codi.
+  - Evitar repetir codi.
+  - Fer programes més clars i mantenibles.
+
+---
+
+## Errors típics amb funcions
+
+Alguns errors molt freqüents:
+
+- Oblidar els parèntesis en cridar una funció:
+  - ❌ `saluda`
+  - ✅ `saluda()`
+
+- Passar un nombre incorrecte de paràmetres:
+  - Funció: `def suma(a, b):`
+  - ❌ `suma(3)`
+  - ❌ `suma(3, 4, 5)`
+  - ✅ `suma(3, 4)`
+
+- Indentació incorrecta dins la funció:
+  - Barrejar espais i tabuladors.
+  - No posar sagnat després dels `:`.
+
+---
+
+## Resum visual
+
+1. **Definir** una funció:
+
+```python
+def nom(paràmetres):
+    # codi
+    ...
+```
+
+2. **Cridar** la funció:
+
+```python
+nom(valors)
+```
+
+3. Una funció pot:
+   - Mostrar coses per pantalla (`print()`).
+   - Retornar valors (`return`).
+
+---
+
+## Activitat ràpida 1
+
+**Exercici 1: separador**
+
+Escriu una funció `separa()` que imprimeixi una línia de guions:
+
+```python
+--------------
+```
+
+Utilitza-la almenys 3 vegades al teu programa per separar diferents parts de la sortida.
+
+---
+
+## Activitat ràpida 2
+
+**Exercici 2: comprovar si un número és parell**
+
+Escriu una funció `es_parell(n)` que:
+
+- Retorni `True` si `n` és parell.
+- Retorni `False` si `n` és senar.
+
+Exemple d’ús:
+
+```python
+if es_parell(4):
+    print("És parell")
+else:
+    print("És senar")
+```
+
+---
+
+## I a partir d’aquí...
+
+Amb funcions podrem:
+
+- Escriure programes més llargs i ordenats.
+- Dividir un problema gran en problemes més petits.
+- Reutilitzar codi en diferents exercicis i projectes.
+
+**Proper pas:**  
+Combinar funcions i escriure petits programes organitzats per blocs de funcionalitat.
