@@ -5,17 +5,17 @@
   },
   "presentations": [
     {
-      "order": 1,
-      "title": "Python Apunts",
+      "order": 2,
+      "title": "2. Python segona sessió",
       "src": "slides/mopt1-python-apunts-02.reveal",
       "description": "Python Apunts",
       "status": "active"
     },
 
     {
-      "order": 2,
-      "title": "Python Apunts mopt1-python-intro-def",
-      "src": "slides/mopt1-python-intro-def.reveal",
+      "order": 1,
+      "title": "1. Python 1a sessió",
+      "src": "slides/mopt1-python-apunts-01.reveal",
       "description": "Python Apunts mopt1-python-intro-def",
       "status": "active"
     }

@@ -388,16 +388,6 @@ from datetime import date
 
 <p style="font-size: smaller; background-color:ivory; border: 1px blue dotted;">Consulteu <a href="../../../assets/files/01_fitxa_persona_inici.py" target=_blank"><u><kbd class="minus codi">01_fitxa_persona_inici.py</kbd></u></a></p>
 
-
----
-
-## 1a Activitat: Fitxa persona
-
-➤ Mireu `materials/01_fitxa_persona_solucio.py`
-
-
-![alt text](info-vsc-python-input.png)
-
 ---
 
 ## A2. Classificador de notes (25’) – Enunciat
