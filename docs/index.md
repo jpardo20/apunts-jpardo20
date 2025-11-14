@@ -45,6 +45,20 @@
 
 </details>
 
+<h3><strong>Tutoria de SMX i DAM</u></strong></h3>
+<details>
+  <summary>Desplega per veure els mòduls de DAM</summary>
+
+* 07 de novembre -> <a href="https://jpardo20.github.io/apunts-jpardo20/moduls/tutoria/lectura_xataka_datacenters_espai_quiz.html">Lectura i qüestionari: Data centers d'IA a l'espai (Xataka)</a>
+
+* 07 de novembre -> <a href="https://jpardo20.github.io/apunts-jpardo20/moduls/tutoria/lectura_vilaweb_starfinder_quiz.html"> Lectura i qüestionari: Starfinder: Afterlight (VilaWeb)</a>
+
+* 14 de novembre -> <a href="https://jpardo20.github.io/apunts-jpardo20/moduls/tutoria/lectura_quatre_noticies_tecnologia_combo-amb-llista-alumnes.html">Lectura i qüestionari: 4 notícies de tecnologia</a>
+
+
+</details>
+
+
 
 <!-- <hr>
 
