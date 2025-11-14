@@ -19,10 +19,17 @@
       "status": "active"
     },
     {
-      "order": 3,
-      "title": "3. Python Funcions",
+      "order": 4,
+      "title": "4. Python Funcions",
       "src": "slides/mopt1-python-apunts-03.reveal",
       "description": "Python Apunts Funcions",
+      "status": "active"
+    },
+    {
+      "order": 3,
+      "title": "3. Python Funcexercicis-if-elseions",
+      "src": "slides/exercicis-if-else.reveal",
+      "description": "Python exercicis-if-else.reveal",
       "status": "active"
     }
   ]
