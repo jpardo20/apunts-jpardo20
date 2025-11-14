@@ -43,8 +43,8 @@ nav:
 
 theme:
   name: material
-  logo: docs/assets/img/VERT-01-SIN-CAJA-BLANCO-RGB@2x-768x593.png
-  favicon: docs/assets/img/cropped-cropped-VERT-01-BLANCO-RGB-copia-150x150.png
+  logo: assets/img/VERT-01-SIN-CAJA-BLANCO-RGB@2x-768x593.png
+  favicon: assets/img/cropped-cropped-VERT-01-BLANCO-RGB-copia-150x150.png
   features:
     - navigation.indexes
     - navigation.sections
