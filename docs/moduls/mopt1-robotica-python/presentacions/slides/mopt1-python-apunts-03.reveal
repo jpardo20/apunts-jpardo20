@@ -53,14 +53,14 @@ print("Benvingut/da al programa!")
 En general, una funció té:
 
 - **Nom** → com es diu la funció.
-- **Paràmetres (opcionales)** → les dades que entren.
+- **Arguments (opcionals)** → les dades que entren.
 - **Cos** → les instruccions que s’executen.
 - **Valor de retorn (opcional)** → el resultat que ens torna.
 
 Esquema en Python:
 
 ```python
-def nom_de_la_funcio(paràmetres):
+def nom_de_la_funcio(arguemnts):
     # cos de la funció
     ...
     return resultat  # opcional
@@ -79,7 +79,7 @@ def saluda():
 
 - `def` → paraula clau per **definir** una funció.
 - `saluda` → nom de la funció.
-- `()` → ara no té paràmetres.
+- `()` → ara no té arguments.
 - `:` → indica que comença el cos de la funció.
 - La línia de sota va **amb sagnat** (espais o tabulador).
 
@@ -138,12 +138,12 @@ Hola, Laia !
 
 **Idees clau:**
 
-- `nom` és un **paràmetre**.
-- Cada vegada que cridem la funció, li passem un **valor diferent**.
+- `nom` és un **argument**.
+- Cada vegada que cridem la funció, li passem un **valor diferent** (parèmetre).
 
 ---
 
-## Funcions amb més d’un paràmetre
+## Funcions amb més d’un argument
 
 ```python
 def mostra_edat(nom, edat):
@@ -159,8 +159,28 @@ mostra_edat("Pol", 17)
 
 **Idees clau:**
 
-- Paràmetres separats per comes.
+- **Arguments** i **paràmetres** separats per comes.
 - L’ordre és important: primer `nom`, després `edat`.
+
+----
+
+Paràmetres → noms que posem a la definició de la funció.
+
+```python
+def suma(a, b):   # a i b són paràmetres
+    return a + b
+```
+
+Arguments → valors concrets que passem quan cridem la funció.
+
+```python
+resultat = suma(3, 5)   # 3 i 5 són arguments
+```
+
+> 
+> Quan definim la funció en diem **paràmetres**,
+> quan la cridem amb valors concrets en diem **arguments**.
+> Si us confoneu i en dieu **paràmetres**, ara, a tot.. tampoc passa res 😉
 
 ---
 
@@ -238,8 +258,6 @@ Ara, a més:
 
 ## Errors típics amb funcions
 
-Alguns errors molt freqüents:
-
 - Oblidar els parèntesis en cridar una funció:
   - ❌ `saluda`
   - ✅ `saluda()`
@@ -261,7 +279,7 @@ Alguns errors molt freqüents:
 1. **Definir** una funció:
 
 ```python
-def nom(paràmetres):
+def nom(arguments):
     # codi
     ...
 ```
@@ -269,7 +287,7 @@ def nom(paràmetres):
 2. **Cridar** la funció:
 
 ```python
-nom(valors)
+nom(paràmetres)
 ```
 
 3. Una funció pot:
