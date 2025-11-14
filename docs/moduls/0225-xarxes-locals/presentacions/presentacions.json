@@ -25,14 +25,23 @@
       "description": "Adreça IP i màscara de subxarxa",
       "status": "inactive"
     },
-
     {
       "order": 4,
       "title": "4. Activitat",
       "src": "slides/activitats/0225-xlo-ae02-protocols.reveal",
       "description": "Activitat: Presentacions de Protocols (SMX)<br>(<kbd>0225-xlo-ae02-protocols</kbd>)",
       "status": "active"
+    },
+    {
+      "order": 5,
+      "title": "5. Protocols",
+      "src": "slides/protocols.reveal",
+      "description": "Protocols",
+      "status": "active"
     }
+    
+
+
     
   ]
 }
