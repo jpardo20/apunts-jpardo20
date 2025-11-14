@@ -20,3 +20,14 @@ Trieu un color per a un extraterrestre com vau fer a l'exercici **`Colors extrat
 **10 punts**.
 
 • Escriviu una versió d'aquest programa que executi el bloc **`if`** i una altra que executi el bloc **`else`**.
+
+
+## Colors extraterrestres #3:
+
+Converteix la teva cadena **`if-else`** de l'exercici  **`Colors extraterrestres #2`** en una cadena **`if-else`**.
+• Si l'extraterrestre és **`verd`**, escriviu un missatge que el jugador ha guanyat **5 punts**.
+• Si l'extraterrestre és **`groc`**, escriviu un missatge que el jugador ha guanyat **10 punts**.
+• Si l'extraterrestre és **`vermell`**, escriviu un missatge que el jugador ha guanyat **15 punts**.
+• Escriviu tres versions d'aquest programa, assegurant-vos que cada missatge s'imprimeixi per a l'extraterrestre del color adequat.
+
+<!-- file:///home/joan/05-ginebro/nouDAM/python-crash-course.pdf -->
