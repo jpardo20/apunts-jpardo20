@@ -1,4 +1,62 @@
-## MER 1: Cadastre de Granollers 
+ÌNDEX
+
+<details>
+  <summary>De l'1 al 5</summary>
+
+* [MER 1: Cadastre de Granollers ](#mer-1-cadastre-de-granollers)
+
+* [MER 3: Carreteres del País](#mer-3-carreteres-del-país--12)
+
+* [MER 4: Informatització entitat bancària](#mer-4-informatització-entitat-bancària-12)
+
+* [MER 5: Agència de viatges](#mer-5-agència-de-viatges--22)
+
+</details>
+<details>
+  <summary>Del 6 al 10</summary>
+
+* [MER 6: Reserves lloguer d'automòbils](#mer-6-reserves-lloguer-dautomòbils--12)
+
+* [MER 7: Campionat mundial de futbol](#mer-7-campionat-mundial-de-futbol-12)
+
+* [MER 8: Gestió de les línies de metro](#mer-8-gestió-de-les-línies-de-metro--12)
+
+* [MER 9: Empresa de fabricació de motors](#mer-9-empresa-de-fabricació-de-motors-12)
+
+* [MER 10: Organització d'una universitat](#mer-10-organització-duna-universitat)
+
+</details>
+<details>
+  <summary>Del 10 al 15</summary>
+
+* [MER 11: Los Pollos Hermanos](#mer-11-los-pollos-hermanos-13)
+
+* [MER 12: Distribuïdor de cigarrets](#mer-12-distribuïdor-de-cigarrets-13)
+
+* [MER 13: Agència de selecció de personal](#mer-13-agència-de-selecció-de-personal-14)
+
+* [MER 14: Col·lecció de papallones](#mer-14-collecció-de-papallones-13)
+
+* [MER 15: L’esportiu de Barcelona](#mer-15-lesportiu-de-barcelona-13)
+
+</details>
+
+<details>
+  <summary>Del 15 al 19</summary>
+
+* [MER 16: Martínez i fills](#mer-16-martínez-i-fills-13)
+
+* [MER 17: Agències en franquícies a TECHNOHOUSE](#mer-17-agències-en-franquícies-a-technohouse-1)
+
+* [MER 18: Reserves lloguer d'automòbils (segona versió)](#mer-18-reserves-lloguer-dautomòbils-segona-versió-12)
+
+* [MER 19: Control projectes i recursos humans](#mer-19-control-projectes-i-recursos-humans-13)
+
+</details>
+
+---
+
+## MER 1: Cadastre de Granollers (1/3)
 
 L'ajuntament de Granollers vol fer el cadastre del seu municipi, per aquest motiu ens ha proporcionat la següent informació:
 
@@ -12,7 +70,7 @@ L'ajuntament de Granollers vol fer el cadastre del seu municipi, per aquest moti
 
 ----
 
-#### MER 2: Cadastre de Granollers (cont...)
+#### MER 2: Cadastre de Granollers  (2/3)
 
  * Un habitatge pot ser de dos tipus, o pis o casa particular.
 
@@ -24,7 +82,7 @@ L'ajuntament de Granollers vol fer el cadastre del seu municipi, per aquest moti
 
 ----
 
-#### MER 2: Cadastre de Granollers (cont...)
+#### MER 2: Cadastre de Granollers  (3/3)
 
 ### Es demana:
 
@@ -32,7 +90,7 @@ L'ajuntament de Granollers vol fer el cadastre del seu municipi, per aquest moti
 
 ---
 
-## MER 3: Carreteres del País
+## MER 3: Carreteres del País  (1/2)
 
 Es vol dissenyar una base de dades que contingui la informació relativa a totes les carreteres d'un determinat país. Es demana realitzar el disseny en el model E/R, sabent que:
 
@@ -46,7 +104,7 @@ Es vol dissenyar una base de dades que contingui la informació relativa a totes
 
 ----
 
-#### MER 3: Carreteres del País  (cont...)
+#### MER 3: Carreteres del País  (2/2)
 
 
 ### Es demana:
@@ -55,7 +113,7 @@ Es vol dissenyar una base de dades que contingui la informació relativa a totes
 
 ---
 
-## MER 4: Informatització entitat bancària
+## MER 4: Informatització entitat bancària (1/2)
 
 Es desitja informatitzar parcialment una determinada entitat bancària amb els següents supòsits (fes el disseny del model E/R):
 
@@ -69,7 +127,7 @@ Es desitja informatitzar parcialment una determinada entitat bancària amb els s
 
 ----
 
-#### MER 4: Informatització entitat bancària (cont ...)
+#### MER 4: Informatització entitat bancària (2/2)
 
  * Un compte corrent pot tenir associats un o diversos clients. Com que els clients poden ser titulars o signatures autoritzades, és possible que les operacions que poden realitzar els clients amb signatura autoritzada amb el compte siguin molt menys.
 
@@ -79,10 +137,9 @@ Es desitja informatitzar parcialment una determinada entitat bancària amb els s
 
  * Els clients poden tenir atorgats préstecs (ha d’estar associat a algun dels seus comptes corrents). Cada préstec s'atorga a nom d'un sol client i a un client se li pot atorgar més d'un préstec.
 
-
 ---
 
-## MER 5: Agència de viatges
+## MER 5: Agència de viatges (1/3)
 
 Per oferir un millor servei als seus clients, considera d'interès tenir registrada informació referent als diferents *Tours* que pot oferir.
 
@@ -94,7 +151,7 @@ Per oferir un millor servei als seus clients, considera d'interès tenir registr
 
 ----
 
-#### MER 5: Agència de viatges (cont...)
+#### MER 5: Agència de viatges  (2/2)
 
  * Entenem per client d'un viatge a la persona que ha decidit fer-ho i ha fet efectiva un senyal.
 
@@ -108,7 +165,7 @@ Per oferir un millor servei als seus clients, considera d'interès tenir registr
 
 ---
 
-## MER 6: Reserves lloguer d'automòbils
+## MER 6: Reserves lloguer d'automòbils  (1/2)
 
 Es vol dissenyar una base de dades (MER) sobre la informació de les reserves d'una empresa dedicada al lloguer d'automòbils. La informació recollida de l'empresa és la següent i sobre la que es vol guardar
 
@@ -120,6 +177,8 @@ Es vol dissenyar una base de dades (MER) sobre la informació de les reserves d'
 
 ----
 
+#### MER 6: Reserves lloguer d'automòbils  (2/2)
+
  * Per una millor optimització de l’espai, necessitem tenir controlada les places d’aparcament on guardem els cotxes. Tots els cotxes tenen sempre assignat una única plaça de pàrquing que no pot canviar.
 
  * La nostra empresa està dividia en diferents agències distribuïdes per tot el territori per donar així una àmplia cobertura. Una reserva es realitza en una determinada agència. No poden existir dues agències amb una mateixa reserva.
@@ -130,7 +189,7 @@ Es vol dissenyar una base de dades (MER) sobre la informació de les reserves d'
 
 ---
 
-## MER 7: Campionat mundial de futbol
+## MER 7: Campionat mundial de futbol (1/2)
 
 Feu l'esquema E/R per una base de dades en la qual es desitja emmagatzemar la informació relativa a alguns aspectes de campionat mundial de futbol considerant els següents supòsits d’interès per ser guardats en una base de dades:
 
@@ -142,16 +201,17 @@ Feu l'esquema E/R per una base de dades en la qual es desitja emmagatzemar la in
 
 ----
 
+#### MER 7: Campionat mundial de futbol (2/2)
+
  * Un col·legiat pot realitzar, en un partit, una funció i una altra, de diferent, en un altre partit.
 
  * Cada partit involucra dos equips (local i visitant). S'ha de guardar el nombre de gols de cada equip en el partit.
 
  * S'ha de guardar en cada partit a quina fase pertany (fase de grup, vuitens..., final).
 
-
 ---
 
-## MER 8: Gestió de les línies de metro
+## MER 8: Gestió de les línies de metro  (1/2)
 
 Dissenya el MER que reflecteixi tota la informació necessària per a la gestió de les línies de metro d'una determinada ciutat. Els supòsits considerats són els següents:
 
@@ -165,6 +225,8 @@ Dissenya el MER que reflecteixi tota la informació necessària per a la gestió
 
 ----
 
+#### MER 8: Gestió de les línies de metro  (2/2)
+
  * Cada línia té assignada una sèrie de trens, no podent succeir que un tren estigui assignat a més d'una línia, però sí que no estigui assignat a cap. (Per exemple, si es troba en reparació).
 
  * Cada línia té assignats com a mínim tants trens com estacions tingui i com a màxim el doble del nombre d'estacions.
@@ -175,7 +237,7 @@ Dissenya el MER que reflecteixi tota la informació necessària per a la gestió
 
 ---
 
-## MER 9: Empresa de fabricació de motors
+## MER 9: Empresa de fabricació de motors (1/2)
 
 Realitzar el disseny de la base de dades d'una empresa que es dedica a la fabricació de motors. Aquesta empresa té interès a mantenir informació sobre els diferents tipus de motors que fabrica.
 
@@ -184,6 +246,9 @@ Realitzar el disseny de la base de dades d'una empresa que es dedica a la fabric
  * A cada secció se li pot assignar la fabricació d'un o diversos tipus de motors, i hi ha seccions generals (departament d'administració, de procés de dades, etc.) que no tenen assignat cap mena de motor en concret; mai un tipus de motor pot ser fabricat per més d'una secció, ni aquesta pot canviar una vegada que se li ha assignat la fabricació d'un determinat motor.
 
 ----
+
+#### MER 9: Empresa de fabricació de motors (2/2)
+
 
  * Entre els empleats que treballen en un tipus de motor sempre hi haurà un responsable, sent aquesta informació d'interès per a l'empresa. Un empleat pot estar treballant en més d'un tipus de motor.
 
