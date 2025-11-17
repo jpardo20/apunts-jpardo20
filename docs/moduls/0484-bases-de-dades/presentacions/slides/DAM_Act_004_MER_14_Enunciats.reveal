@@ -106,9 +106,6 @@ Per oferir un millor servei als seus clients, considera d'interès tenir registr
 
  * Dissenyar un esquema **M**odel **E**ntitat **R**elació (**MER**) que reculli la informació de l'enunciat.
 
-
-<!--
-
 ## Activitat: Reserves lloguer d'automòbils
 
 Es vol dissenyar una base de dades (MER) sobre la informació de les reserves d'una empresa dedicada al lloguer d'automòbils. La informació recollida de l'empresa és la següent i sobre la que es vol guardar
@@ -126,6 +123,8 @@ Es vol dissenyar una base de dades (MER) sobre la informació de les reserves d'
  * A la base de dades poden existir clients que no hagin fet cap reserva
 
  * Afegeix a cada entitat tres atributs (inclòs la clau primària) a la teva elecció i que tinguin relació amb la informació que es vol guardar.
+
+<!--
 
 ## Activitat: Campionat mundial de futbol
 
