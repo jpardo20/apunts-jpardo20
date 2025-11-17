@@ -6,9 +6,9 @@
   "presentations": [
     {
         "order":0,
-        "title": "0 - prova",
-        "src": "slides/prova.reveal",
-        "description": "Això és una prova!"
+        "title": "Activitat w3css",
+        "src": "slides/activitat-w3css.reveal",
+        "description": "Activitat w3css"
     },
     {
       "order": 1,
