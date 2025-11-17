@@ -106,6 +106,8 @@ Per oferir un millor servei als seus clients, considera d'interès tenir registr
 
  * Dissenyar un esquema **M**odel **E**ntitat **R**elació (**MER**) que reculli la informació de l'enunciat.
 
+---
+
 ## Activitat: Reserves lloguer d'automòbils
 
 Es vol dissenyar una base de dades (MER) sobre la informació de les reserves d'una empresa dedicada al lloguer d'automòbils. La informació recollida de l'empresa és la següent i sobre la que es vol guardar
@@ -115,6 +117,8 @@ Es vol dissenyar una base de dades (MER) sobre la informació de les reserves d'
  * Una reserva la realitza un únic client, però pot involucrar diversos cotxes.
 
  * És important recollir la data de començament i d'acabament de la reserva així com l’import total de la reserva.
+
+----
 
  * Per una millor optimització de l’espai, necessitem tenir controlada les places d’aparcament on guardem els cotxes. Tots els cotxes tenen sempre assignat una única plaça de pàrquing que no pot canviar.
 
