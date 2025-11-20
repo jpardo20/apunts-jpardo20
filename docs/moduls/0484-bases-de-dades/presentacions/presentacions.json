@@ -84,8 +84,16 @@
       "tags": [
         "BBDD"
       ]
+    },
+    {
+      "id": "del-mer-al-model-relacional",
+      "title": "TEORIA: Del MER al model relacional",
+      "description": "TEORIA: Del MER al model relacional",
+      "src": "slides/del-mer-al-model-relacional.reveal",
+      "theme": "white",
+      "tags": [
+        "BBDD"
+      ]
     }
-
-    
   ]
 }
