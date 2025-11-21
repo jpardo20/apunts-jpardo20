@@ -69,6 +69,16 @@ body.portal {
     background: #0f4f93
 }
 
+.button.activitat {
+    background: #5cb85c;
+    color: #fff
+}
+
+.button.activitat:hover {
+    background: #5cb85cde;
+    color: #fff;
+}
+
 .site-footer {
     text-align: center;
     padding: 1rem;

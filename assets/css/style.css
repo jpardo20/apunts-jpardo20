@@ -122,6 +122,16 @@ main {
     background: #0f4f93;
 }
 
+.button.activitat {
+    background: #5cb85c;
+    color: #fff
+}
+
+.button.activitat:hover {
+    background: #5cb85cde;
+    color: #fff;
+}
+
 .button.ghost {
     background: #eef4ff;
     color: #0f3d77;
