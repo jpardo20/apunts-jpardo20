@@ -1,15 +1,10 @@
-title: Del model entitat–relació al model relacional
-separator: ^---
-verticalSeparator: ^--v
-theme: white
-
 # Del MER al model relacional
 
 - M0484 – Bases de dades
-- Del dibuix (MER) a les taules
+- Del diagrama (MER) a les taules
 
-NOTES DEL PROFE:
-- Objectiu de la sessió: que siguin capaços d’agafar un MER senzill i treure’n les taules.
+Note:
+- Objectiu de la sessió: que siguin capaços d'agafar un MER senzill i treure'n les taules.
 - Insisteix: **encara no fem SQL**, només disseny de taules (model lògic).
 - Explica que després, un altre dia, aquest model relacional el passarem a `CREATE TABLE`.
 
@@ -22,12 +17,16 @@ NOTES DEL PROFE:
 - **Relacions** (rombes)
 - **Cardinalitats**: 1, N, (0,N), (1,1)...
 
-NOTES DEL PROFE:
+Note:
 - Aquí pots obrir un MER qualsevol de classe.
 - Pregunta:
   - “Algú em diu una entitat del diagrama?”
-  - “Quina informació guardem d’aquesta entitat (atributs)?”
+  - “Quina informació guardem d'aquesta entitat (atributs)?”
   - “On veieu les relacions?”
+
+----
+
+![../../../assets/img/0484-bases-de-dades/agencia-viatges-mer.png](../../../assets/img/0484-bases-de-dades/agencia-viatges-mer.png)
 
 ---
 
@@ -38,24 +37,30 @@ Volem transformar el MER en **taules**:
 - Cada taula tindrà:
   - Nom de la taula
   - Llista de camps
-  - **Clau primària (PK)**
-  - **Claus foranes (FK)** quan calgui
+  - **Clau primària (***PK***)**
+  - **Claus foranes (***FK***)** quan calgui
 
-NOTES DEL PROFE:
+Note:
 - Explica que això és el **model relacional**.
-- Escriu a la pissarra un exemple de taula simple (p.ex. CLIENT(id_client, nom, email)).
+- Escriu a la pissarra un exemple de taula simple (p.ex. CLIENTS(id_client, nom, email)).
+
+----
+
+![../../../assets/img/0484-bases-de-dades/entitat-forta.png](../../../assets/img/0484-bases-de-dades/entitat-forta.png)
 
 ---
 
 ## Regles generals (resum)
+|Regla|Situació|Dosseny|
+|----|-----|-----|
+|1.|**Entitat forta**|**1 taula**|
+|2.|**Entitat feble**|**1 taula** (***PK*** acostuma a ser composta)|
+|3.|**Relació 1:N** sense atributs|***FK*** al costat de la **N**|
+|4.|**Relació 1:N** amb atributs|***FK*** i camps al costat de la **N**|
+|5.|**Relació 1:1**|***FK*** a una de les dues taules**|
+|6.|**Relació **N:M****|**nova taula** (taula intermitja)|
 
-1. **Entitat forta → 1 taula**
-2. **Entitat feble → 1 taula** (PK acostuma a ser composta)
-3. **Relació 1:N → FK al costat N**
-4. **Relació 1:1 → FK en una de les dues taules**
-5. **Relació N:M → nova taula** (taula intermitja)
-
-NOTES DEL PROFE:
+Note:
 - Digues que avui veureu **cada punt amb un exemple** + fitxer `.xml` perquè ho vegin clar a la pantalla.
 - Explica que després de cada exemple farem la taula corresponent.
 
@@ -63,208 +68,294 @@ NOTES DEL PROFE:
 
 ## 1) Entitat forta
 
-**Definició**
-
 - Existeix per si sola.
-- Té una **PK pròpia** que la identifica.
+- Té una ***PK*** pròpia** que la identifica.
 
 **Exemples típics**
-- CLIENT, PRODUCTE, PROVEÏDOR, EQUIP, CAMP…
+- <kbd style="padding:5px; background-color:lightgrey; color:blue">CLIENTS</kbd>, <kbd style="padding:5px; background-color:lightgrey; color:blue">PRODUCTE</kbd>, <kbd style="padding:5px; background-color:lightgrey; color:blue">PROVEÏDOR</kbd>, <kbd style="padding:5px; background-color:lightgrey; color:blue">EQUIP</kbd>, <kbd style="padding:5px; background-color:lightgrey; color:blue">CAMP</kbd>…
 
-NOTES DEL PROFE:
+Note:
 - Obre el fitxer `exemple-entitat-forta-client.xml` a diagrams.net.
 - Pregunta:
-  - “Quina és l’entitat?”
+  - “Quina és l'entitat?”
   - “Quin atribut és la clau primària?”
 - Escriu a la pissarra (o en una diapositiva nova):
 
-  `CLIENT(id_client PK, nom, email)`
 
----
+----
 
-## 1) Entitat forta → taula
+<kbd style="padding:5px; background-color:lightgrey; color:blue">CLIENTS(**<u>id_client</u>** ***PK***, nom_client, email_client)</kbd>
 
-**Regla**
+<img src="../../../assets/img/0484-bases-de-dades/entitat-forta.png" alt="0484-bases-de-dades/entitat-forta.png" class="logo" height="200" width="auto">
 
-- Entitat forta **→ 1 taula amb el mateix nom** (o molt semblant).
-- Atribut clau subratllat al MER → **PK** de la taula.
+----
+
+## 1a Regla
+
+### una <u>Entitat forta</u> passa a ser una <u>Taula</u>
+
+
+- Entitat forta **→ 1 taula amb el mateix nom**.
+- Atribut clau subratllat al MER → ***PK***** de la taula.
+
+----
 
 **Exemple**
 
-Del MER de CLIENT:
+Del MER de **`CLIENTS`**:
 
-- MER: entitat CLIENT amb atributs id_client, nom, email.
-- Taula: `CLIENT(id_client PK, nom, email)`
+- **MER**: ***entitat*** **`CLIENTS`** <br> amb ***atributs*** <u>**`id_client`**</u>, **`nom_client`**, **`email_client`**.
 
-NOTES DEL PROFE:
-- Torna a mostrar el diagrama de l’exemple i que ells dictin la taula.
+- **Taula**: <kbd style="padding:5px; background-color:lightgrey; color:blue">CLIENTS(**<u>id_client</u>** ***PK***, nom_client, email_client)</kbd>
+
+<img src="../../../assets/img/0484-bases-de-dades/entitat-forta.png" alt="0484-bases-de-dades/entitat-forta.png" class="logo" height="200" width="auto">
+
+Note:
+- Torna a mostrar el diagrama de l'exemple i que ells dictin la taula.
 - Pots fer-los escriure la taula al quadern.
+
+
+
 
 ---
 
 ## 2) Entitat feble
 
-**Idees clau**
-
-- No s’identifica sola.
-- Depèn d’una altra entitat (forta).
-- La seva **PK sol incloure la PK de l’entitat forta**.
+- No s'identifica sola.
+- Depèn d'una altra entitat (forta).
+- La seva ***PK*** sol incloure la ***PK*** de l'**entitat forta**.
 
 **Exemple**
 
-- COMANDA (forta)
-- LINIA_COMANDA (feble) – cada línia depèn d’una comanda.
+- <kbd style="padding:5px; background-color:lightgrey; color:blue">COMANDES</kbd> => Entitat forta
 
-NOTES DEL PROFE:
+- <kbd style="padding:5px; background-color:lightgrey; color:blue">LINIES_COMANDA</kbd>  => Entitat feble – Cada **línia** depèn d'una **comanda**.
+
+<img src="../../../assets/img/0484-bases-de-dades/entitat-feble.png" alt="0484-bases-de-dades/entitat-feble.png" class="logo" height="200" width="auto">
+
+
+Note:
 - Obre `exemple-entitat-feble-comanda-linia.xml`.
 - Pregunta:
   - “Podem identificar una línia de comanda sense saber de quina comanda és?”
-- Escriu a la pissarra:
-  - `COMANDA(id_comanda PK, data)`
-  - `LINIA_COMANDA(id_comanda PK/FK, num_linia PK, producte, quantitat)`
 
----
+----
 
-## 2) Entitat feble → taula
+## 2a Regla
 
-**Regla**
+### una <u>Entitat feble</u> passa a ser una <u>Taula</u>
 
-- Entitat feble → taula amb **PK composta**:
-  - part de la PK ve de l’entitat forta,
-  - part de la PK pot ser un número de línia, etc.
-- La PK de l’entitat forta surt també com a **FK**.
+- Entitat feble → taula amb ***PK*** composta:
+  - una part de la ***PK*** és la <u>pròpia</u>, pot ser un número de línia, etc.
+  - una part de la ***PK*** ve de l'**entitat forta**,
 
-NOTES DEL PROFE:
-- Repassa l’exemple de LINIA_COMANDA:
-  - `id_comanda` forma part de la PK i és alhora FK → COMANDA.
+- La ***PK*** de l'entitat forta es marca també com a ***FK***.
+
+
+Note:
+- Repassa l'exemple de LINIES_COMANDA:
+
+  - **`id_comanda`** forma part de la ***PK*** i és alhora ***FK*** → COMANDES.
 - Subratlla que això apareixerà molt en casos de “línies” (factures, comandes…).
+
+
+----
+
+<img src="../../../assets/img/0484-bases-de-dades/entitat-feble-colors.png" alt="0484-bases-de-dades/entitat-feble-colors.png" class="logo" height="200" width="auto">
+
+
+* <kbd style="padding:5px; background-color:lightgrey; color:blue">COMANDES(**<u>id_comanda</u>** ***PK***, data_comanda)</kbd>
+
+* <kbd style="padding:5px; background-color:lightgrey; color:blue">LINIES_COMANDA(<u>**num_linia**</u> ***PK***, **<u>id_comanda</u>** ***PK*** i ***FK*** <small>(**PK** de COMANDES)</small>, producte, quantitat)</kbd>
+
 
 ---
 
 ## 3) Relació 1:N (sense atributs)
 
-**Definició**
+- Un **registre** de l'**entitat A** <u>pot tenir</u> **molts registres** de l'**entitat B**.
 
-- Un registre d’A pot tenir **molts** de B.
-- Un registre de B pertany **a un sol** A.
+- Un **registre** de l'**entitat B** <u>pertany</u> **a un sol registre** de l'**entitat A**
 
-**Exemple**
+<img src="../../../assets/img/0484-bases-de-dades/relacio-1N-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-client-comanda.png" class="logo" height="150" width="auto">
 
-- CLIENT (1) — FA — COMANDA (N)
-
-NOTES DEL PROFE:
+Note:
 - Obre `exemple-relacio-1N-client-comanda.xml`.
 - Demana que llegeixin la cardinalitat (1,N).
 
----
+----
 
-## 3) Relació 1:N → FK al costat N
+## 3a Regla
 
-**Regla**
+### una <u>Relació</u> <kbd style="padding:5px; background-color:lightgrey; color:blue">1:N</kbd> <u>sense atributs propis</u>
 
-- Relació 1:N **sense atributs propis**:
-  - Es posa una **FK en la taula del costat N**.
+- Es posa una ***FK*** a la taula del costat on hi ha **N**.
 
 **Exemple CLIENT–COMANDA**
 
-- Taules resultants:
+<img src="../../../assets/img/0484-bases-de-dades/relacio-1N-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-client-comanda.png" class="logo" height="150" width="auto">
 
-  - `CLIENT(id_client PK, nom, email)`
-  - `COMANDA(id_comanda PK, data, id_client FK → CLIENT)`
+----
 
-NOTES DEL PROFE:
+<img src="../../../assets/img/0484-bases-de-dades/relacio-1N-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-client-comanda.png" class="logo" height="150" width="auto">
+
+#### Taules resultants:
+
+* <kbd style="padding:5px; background-color:lightgrey; color:blue">CLIENTS(**<u>id_client</u>** ***PK***, nom_client, email_client)</kbd>
+
+* <kbd style="padding:5px; background-color:lightgrey; color:blue">COMANDES(**<u>id_comanda</u>** ***PK***, **<u>id_client</u>** ***PK***, data_comanda)</kbd>
+
+Note:
 - Demana: “On afegiríeu el camp id_client?”
-- Fes-los veure que si poséssim la FK al costat 1 (CLIENT) seria un desastre (molts camps id_comanda, etc.).
+- Fes-los veure que si poséssim la ***FK*** al costat 1 (CLIENTS) seria un desastre (molts camps **`id_comanda`**, etc.).
 
 ---
 
-## 4) Relació 1:1
+## 4) Relació 1:N **amb atributs**
 
-**Definició**
+- Un **registre** de l'**entitat A** <u>pot tenir</u> **molts registres** de l'**entitat B**.
 
-- Un A va amb **un sol** B.
-- Un B va amb **un sol** A.
+- Un **registre** de l'**entitat B** <u>pertany</u> **a un sol registre** de l'**entitat A**
 
-**Exemple**
+- La relació del **registre** de l'**entitat B** <u>amb</u> **el registre** de l'**entitat A**, conté **atributs**.
 
-- PERSONA (1) — TÉ — PASSAPORT (1)
+<img src="../../../assets/img/0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" class="logo" height="150" width="auto">
 
-NOTES DEL PROFE:
+Note:
+- Obre el fitxer `exemple-relacio-1N-amb-atributs-client-comanda.xml`.
+- Demana:
+  - “Aquest ‘descompte’ pertany al CLIENT, a la COMANDA o al vincle FA?”
+- Guia’ls a la idea: és un descompte **d’aquesta comanda concreta**.
+
+----
+
+## 4a Regla
+
+- Es posa una ***FK***, i **TOTS els atributs de la relació** a la taula del costat on hi ha **N**.
+
+- Relació 1:N amb atributs:
+  - FK al costat N.
+  - Atributs de la relació → també a la taula del costat N.
+
+<img src="../../../assets/img/0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" class="logo" height="150" width="auto">
+
+----
+
+<img src="../../../assets/img/0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" class="logo" height="150" width="auto">
+
+#### Taules resultants:
+
+* <kbd style="padding:5px; background-color:lightgrey; color:blue">CLIENTS(**<u>id_client</u>** ***PK***, nom_client, email_client)</kbd>
+
+* <kbd style="padding:5px; background-color:lightgrey; color:blue">COMANDES(**<u>id_comanda</u>** ***PK***, **<u>id_client</u>** ***PK*** i ***FK*** <small>(**PK** de COMANDES)</small>, data_comanda, descompte)</kbd>
+
+Note:
+- Escriu les taules a la pissarra i que les copiïn.
+- Pregunta: “Si fos **N:M** en lloc de 1:N, què hauríem de fer amb descompte?”
+  → resposta: crear una taula nova (p.ex. DETALL_COMANDA) amb id_client, id_comanda i descompte.
+
+---
+
+## 5) Relació 1:1
+
+- Un **registre** de l'**entitat A** <u>va amb</u> **un sol registre** de l'**entitat B**.
+
+- Un **registre** de l'**entitat B** <u>va amb</u> **un sol registre** de l'**entitat A**.
+
+<img src="../../../assets/img/0484-bases-de-dades/relacio-11-persona-passaport.png" alt="0484-bases-de-dades/relacio-11-persona-passaport.png" class="logo" height="150" width="auto">
+
+Note:
 - Obre `exemple-relacio-11-persona-passaport.xml`.
 - Pregunta:
-  - “Què passaria si una persona pogués tenir més d’un passaport? La cardinalitat canviaria.”
+  - “Què passaria si una persona pogués tenir més d'un passaport? La cardinalitat canviaria.”
 
----
+----
 
-## 4) Relació 1:1 → FK en una taula (o fusió)
+## 5a Regla
 
 **Regla bàsica**
 
-- Escollim **una** de les dues taules i hi afegim la **FK**.
+- Escollim **una** de les dues taules i hi afegim la ***FK***.
+
 - Alternativa: **fusionar** les dues entitats en una sola taula (si té sentit).
 
-**Exemple PERSONA–PASSAPORT**
+<img src="../../../assets/img/0484-bases-de-dades/relacio-11-persona-passaport.png" alt="0484-bases-de-dades/relacio-11-persona-passaport.png" class="logo" height="150" width="auto">
 
-Opció 1 (FK a PASSAPORT):
 
-- `PERSONA(id_persona PK, nom, data_naixement, ...)`
-- `PASSAPORT(num_passaport PK, id_persona FK → PERSONA, data_caducitat, ...)`
+----
 
-NOTES DEL PROFE:
+<img src="../../../assets/img/0484-bases-de-dades/relacio-11-persona-passaport.png" alt="0484-bases-de-dades/relacio-11-persona-passaport.png" class="logo" height="150" width="auto">
+
+#### Taules resultants:
+
+* <kbd style="padding:5px; background-color:lightgrey; color:blue">PERSONES(**<u>id_persona</u>** ***PK***, nom_persona, data_naixement)</kbd>
+
+* <kbd style="padding:5px; background-color:lightgrey; color:blue">PASSAPORTS(**<u>num_passaport</u>** ***PK***, **<u>id_client</u>** ***PK***, data_caducitat)</kbd>
+
+Note:
 - Explica que la tria depèn de:
   - Quina entitat és “principal”.
-  - Si sempre hi ha passaport o pot no existir (FK nullable).
+  - Si sempre hi ha passaport o pot no existir (***FK*** nullable).
 - No cal entrar en massa casuística; només que entenguin la idea.
 
 ---
 
-## 5) Relació N:M
+## 6) Relació **N:M**
 
-**Definició**
+- Molts **registres** de l'**entitat A** <u>es relacionen amb</u> **molts registres** de l'**entitat B**.
 
-- Molts A es relacionen amb molts B.
-- Exemple típic: ALUMNE — MATRICULAT — ASSIGNATURA.
+- Molts **registres** de l'**entitat B** <u>es relacionen amb</u> **molts registres** de l'**entitat A**.
 
-NOTES DEL PROFE:
+<img src="../../../assets/img/0484-bases-de-dades/relacio-NM-alumne-assignatura.png" alt="0484-bases-de-dades/relacio-NM-alumne-assignatura.png" class="logo" height="150" width="auto">
+
+Note:
 - Obre `exemple-relacio-NM-alumne-assignatura.xml`.
 - Demana:
   - “Pot un alumne estar en moltes assignatures?”
   - “Pot una assignatura tenir molts alumnes?”
 
----
+----
 
-## 5) Relació N:M → nova taula
+## 6a Regla
 
-**Regla**
-
-- Relació N:M sempre es converteix en **nova taula**.
+- Relació **N:M** sempre es converteix en **nova taula**.
 - La nova taula conté:
-  - FK → A
-  - FK → B
-  - Sovint la **PK** és (FK_A, FK_B).
+  - ***FK*** → A
+  - ***FK*** → B
+  - Sovint la ***PK*** és (***FK_A***, ***FK_B***).
+
+
+----
 
 **Exemple ALUMNE–ASSIGNATURA**
 
-- `ALUMNE(id_alumne PK, nom, ...)`
-- `ASSIGNATURA(id_assig PK, nom, ...)`
-- `MATRICULA(id_alumne FK → ALUMNE, id_assig FK → ASSIGNATURA, data, nota, ...)`
-  - PK habitual: (id_alumne, id_assig)
+* <kbd style="padding:5px; background-color:lightgrey; color:blue">ALUMNES(**<u>id_alumne</u>** ***PK***, nom_alumne, ...)</kbd>
 
-NOTES DEL PROFE:
+* <kbd style="padding:5px; background-color:lightgrey; color:blue">ASSIGNATURES(**<u>id_assig</u>** ***PK***, nom_assig, ...)</kbd>
+
+* <kbd style="padding:5px; background-color:lightgrey; color:blue">MATRICULES(**<u>id_alumne</u>** ***PK*** i ***FK*** <small>(**PK** de ALUMNES)</small>, **<u>id_assig</u>** ***PK*** i ***FK*** <small>(**PK** de ASSIGNATURES)</small>, nota)</kbd>
+
+<img src="../../../assets/img/0484-bases-de-dades/relacio-NM-alumne-assignatura.png" alt="0484-bases-de-dades/relacio-NM-alumne-assignatura.png" class="logo" height="150" width="auto">
+
+
+Note:
 - Subratlla que la relació “MATRICULA” es converteix en una taula normal.
-- Si hi ha **atributs de la relació** (data, nota), aquests viuen a la taula MATRICULA.
+- Si hi ha **atributs de la relació** (data, nota), aquests viuen a la taula MATRICULES.
 
 ---
 
 ## Resum final
 
-- **Entitats → taules**
-- **Relacions 1:N → FK al costat N**
-- **Relacions 1:1 → FK en una taula (o fusió)**
-- **Relacions N:M → taula nova**
-- **Entitats febles → taula amb PK composta + FK**
+|Regla|Situació|Dosseny|
+|----|-----|-----|
+|1.|**Entitat forta**|**1 taula**|
+|2.|**Entitat feble**|**1 taula** (***PK*** acostuma a ser composta)|
+|3.|**Relació 1:N** sense atributs|***FK*** al costat de la **N**|
+|4.|**Relació 1:N** amb atributs|***FK*** i camps al costat de la **N**|
+|5.|**Relació 1:1**|***FK*** a una de les dues taules**|
+|6.|**Relació **N:M****|**nova taula** (taula intermitja)|
 
-NOTES DEL PROFE:
+Note:
 - Torna a les regles generals i repassa-les ràpid.
 - Deixa clar que ara toca **pràctica**.
 
@@ -277,12 +368,12 @@ En grups de 2–3:
 1. Us dono un MER (p.ex. CLIENT–COMANDA–PRODUCTE).
 2. Heu de:
    - Llistar les entitats i les relacions.
-   - Escriure les taules (amb PK i FK).
+   - Escriure les taules (amb ***PK*** i ***FK***).
 3. Després ho corregim a la pissarra.
 
-NOTES DEL PROFE:
-- Pots reutilitzar l’exemple CLIENT–COMANDA–PRODUCTE que ja teniu.
-- Mentre treballen, passa per les taules i mira on s’encallen:
-  - Saben on va la FK en 1:N?
-  - Saben crear la taula de N:M?
+Note:
+- Pots reutilitzar l'exemple CLIENT–COMANDA–PRODUCTE que ja teniu.
+- Mentre treballen, passa per les taules i mira on s'encallen:
+  - Saben on va la ***FK*** en 1:N?
+  - Saben crear la taula de **N:M**?
    
