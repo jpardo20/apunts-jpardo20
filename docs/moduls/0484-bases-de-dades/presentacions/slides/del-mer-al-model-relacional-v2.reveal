@@ -69,7 +69,7 @@ Note:
 ## 1) Entitat forta
 
 - Existeix per si sola.
-- Té una ***PK*** pròpia** que la identifica.
+- Té una ***PK*** pròpia que la identifica.
 
 **Exemples típics**
 - <kbd style="padding:5px; background-color:lightgrey; color:blue">CLIENTS</kbd>, <kbd style="padding:5px; background-color:lightgrey; color:blue">PRODUCTE</kbd>, <kbd style="padding:5px; background-color:lightgrey; color:blue">PROVEÏDOR</kbd>, <kbd style="padding:5px; background-color:lightgrey; color:blue">EQUIP</kbd>, <kbd style="padding:5px; background-color:lightgrey; color:blue">CAMP</kbd>…
@@ -96,7 +96,7 @@ Note:
 
 
 - Entitat forta **→ 1 taula amb el mateix nom**.
-- Atribut clau subratllat al MER → ***PK***** de la taula.
+- Atribut clau subratllat al MER → ***PK*** de la taula.
 
 ----
 
@@ -106,9 +106,9 @@ Del MER de **`CLIENTS`**:
 
 - **MER**: ***entitat*** **`CLIENTS`** <br> amb ***atributs*** <u>**`id_client`**</u>, **`nom_client`**, **`email_client`**.
 
-- **Taula**: <kbd style="padding:5px; background-color:lightgrey; color:blue">CLIENTS(**<u>id_client</u>** ***PK***, nom_client, email_client)</kbd>
-
 <img src="../../../assets/img/0484-bases-de-dades/entitat-forta.png" alt="0484-bases-de-dades/entitat-forta.png" class="logo" height="200" width="auto">
+
+- **Taula**: <kbd style="padding:5px; background-color:lightgrey; color:blue">CLIENTS(**<u>id_client</u>** ***PK***, nom_client, email_client)</kbd>
 
 Note:
 - Torna a mostrar el diagrama de l'exemple i que ells dictin la taula.
