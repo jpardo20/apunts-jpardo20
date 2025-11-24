@@ -1,4 +1,4 @@
-# Del MER al model relacional
+# Del MER al **model relacional**
 
 - M0484 – Bases de dades
 - Del diagrama (MER) a les taules
@@ -6,7 +6,7 @@
 Note:
 - Objectiu de la sessió: que siguin capaços d'agafar un MER senzill i treure'n les taules.
 - Insisteix: **encara no fem SQL**, només disseny de taules (model lògic).
-- Explica que després, un altre dia, aquest model relacional el passarem a `CREATE TABLE`.
+- Explica que després, un altre dia, aquest **model relacional** el passarem a `CREATE TABLE`.
 
 ---
 
@@ -364,7 +364,7 @@ Note:
 <img src="../../../assets/img/0484-bases-de-dades/relacio-NM-alumne-assignatura.png" alt="0484-bases-de-dades/relacio-NM-alumne-assignatura.png" class="logo" height="200" width="auto">
 
 ----
-**Exemple ALUMNE–ASSIGNATURA** (model relacional)
+**Exemple ALUMNE–ASSIGNATURA** (**model relacional**)
 
 * <kbd style="padding:5px; background-color:lightgrey; color:blue">ALUMNES(**<u>id_alumne</u>** <kbd style="padding:5px; background-color:lightgrey; color:blue">PK</kbd>, nom_alumne, ...)</kbd>
 
@@ -401,13 +401,17 @@ Note:
 
 ## Activitat de classe
 
-En grups de 2–3:
+En grups de 2:
 
-1. Us dono un MER (p.ex. CLIENT–COMANDA–PRODUCTE).
-2. Heu de:
+1. A partir del MER que us facilito.
+
+<img src="../../../assets/img/0484-bases-de-dades/mer-CLIENT-COMANDA-PRODUCTE.png" alt="0484-bases-de-dades/mer-CLIENT-COMANDA-PRODUCTE.png" class="logo" height="300" width="auto">
+
+----
+
+2. Heu de fre el **model relacional**:
    - Llistar les entitats i les relacions.
    - Escriure les taules (amb <kbd style="padding:5px; background-color:lightgrey; color:blue">PK</kbd> i <kbd style="padding:5px; background-color:lightgrey; color:blue">FK</kbd>).
-3. Després ho corregim a la pissarra.
 
 Note:
 - Pots reutilitzar l'exemple CLIENT–COMANDA–PRODUCTE que ja teniu.
