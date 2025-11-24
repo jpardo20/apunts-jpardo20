@@ -86,10 +86,10 @@
       ]
     },
     {
-      "id": "del-mer-al-model-relacional",
+      "id": "del-mer-al-model-relacional-v2.",
       "title": "TEORIA: Del MER al model relacional",
       "description": "TEORIA: Del MER al model relacional",
-      "src": "slides/del-mer-al-model-relacional.reveal",
+      "src": "slides/del-mer-al-model-relacional-v2.reveal",
       "theme": "white",
       "tags": [
         "BBDD"
