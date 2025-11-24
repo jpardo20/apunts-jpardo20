@@ -1,7 +1,3 @@
----
-title: "Del model entitat-relació al model relacional"
----
-
 # Del MER al model relacional
 
 M0484 – Bases de dades  
@@ -41,7 +37,7 @@ Note:
   - **Relacions** (ex.: CLIENT *fa* COMANDA).
   - **Cardinalitats** (1:1, 1:N, N:M, opcionalitat).
 
-![Esquema MER senzill](img/mer-exemple-client-comanda.png)
+![Esquema MER senzill](../../../assets/img/0484-bases-de-dades/mer-exemple-client-comanda.png)
 
 Note:
 - Explica que el MER serveix per parlar amb el “client” en llenguatge visual i entendre les dades.
@@ -61,7 +57,7 @@ Note:
   - Zero o més **claus foranes (FK)**.
 - És el pas previ a escriure el **SQL**.
 
-![Esquema model relacional](img/model-relacional-taules.png)
+![Esquema model relacional](../../../assets/img/0484-bases-de-dades/model-relacional-taules.png)
 
 Note:
 - Contrasta el MER (dibuix conceptual) amb el model relacional (taules).
@@ -151,6 +147,8 @@ Note:
     - PK de l’entitat forta
     - + l’atribut clau de l’entitat feble.
 
+----
+
 **Exemple**
 
 - Entitat forta: `CLIENT(id_client, nom, ...)`
@@ -216,6 +214,8 @@ CLIENT 1 ────────< COMANDA
 
 - **Conversió**:
   - L’entitat del costat **N** rep una **FK** que apunta a la PK del costat **1**.
+
+----
 
 **Model relacional**
 
@@ -356,7 +356,7 @@ Note:
   - Té un **equip local** i un **equip visitant**.
 
 *(Esquema suggerit)*  
-![MER equips i partits](img/mer-equips-partits.png)
+![MER equips i partits](../../../assets/img/0484-bases-de-dades/mer-equips-partits.png)
 
 Note:
 - Recorda que aquest exemple s’assembla al que ja van treballar amb el MER d’equips i partits.
