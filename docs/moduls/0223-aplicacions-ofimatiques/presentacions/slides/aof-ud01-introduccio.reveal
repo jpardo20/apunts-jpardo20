@@ -24,9 +24,11 @@ Actualmente, existen gran cantidad de suites ofimáticas locales (es decir, se e
 
 ❕ **Atención:** la nube es realmente “el ordenador de otra persona”. Hay que tener cuidado con lo que se usa en la nube, ya que incluso aunque una aplicación en la nube prometa que no almacenará nada, no tenemos garantía de que así sea y lo usen para algún fin malicioso.
 
+----
+
 Hay que tener muy claro que todo lo que se trabaja en la nube tiene una serie de peligros, además de los mencionados anteriormente. Aquí un enlace con más información al respecto.
 
-[<span class="underline">https://blog.netdatanetworks.com/5-riesgos-en-la-nube-y-como-gestionarlos</span>](https://blog.netdatanetworks.com/5-riesgos-en-la-nube-y-como-gestionarlos)
+[5 riesgos en la nube y cómo gestionarlos](https://blog.netdatanetworks.com/5-riesgos-en-la-nube-y-como-gestionarlos)
 
 ----
 
@@ -40,7 +42,7 @@ Por ejemplo, la legislación española prohíbe almacenar datos personales de te
 
 ❕ **Atención:** evitad la nube cuando tratéis con datos personales. Recordad, además de problemas de robo de datos, puede haber problemas legales.
 
-----
+---
 
 # Ergonomía, posturas, fatiga visual y descansos
 
@@ -48,17 +50,17 @@ En este apartado queremos recordar que trabajar con pantallas de diferentes tipo
 
 Cosas como la correcta luz, descansar la vista (levantándose y dando un paseo un par de minutos cada hora), la posición, etc. son muy importantes.
 
-Si en algún momento queréis saber más de este tema, en las guías de riesgos laborales, a los riesgos asociados con las pantallas se les llama técnicamente riesgos en “**<span class="underline">Pantallas de visualización de datos</span>**”.
+Si en algún momento queréis saber más de este tema, en las guías de riesgos laborales, a los riesgos asociados con las pantallas se les llama técnicamente riesgos en **`Pantallas de visualización de datos (PVD)`**.
 
 ----
 
 Algunos sitios (que no los únicos) donde podéis ampliar información y encontrar consejos son:
 
-  - > [<span class="underline">https://www.saludlaboralymedioambiente.ccooaragon.com/documentacion/pantallas-gs19.pdf</span>](https://www.saludlaboralymedioambiente.ccooaragon.com/documentacion/pantallas-gs19.pdf)
+ * [PANTALLAS DE VISUALIZACIÓN DE DATOS - Guía sindical para reducir riesgos por el uso de Pantallas de visualización de datos](https://www.saludlaboralymedioambiente.ccooaragon.com/documentacion/pantallas-gs19.pdf)
 
-  - > [<span class="underline">https://prevencionar.com/2020/05/17/consejos-para-trabajar-con-pantallas-de-visualizacion-de-datos/</span>](https://prevencionar.com/2020/05/17/consejos-para-trabajar-con-pantallas-de-visualizacion-de-datos/)
+ * [Consejos para trabajar con pantallas de visualización de datos](https://prevencionar.com/2020/05/17/consejos-para-trabajar-con-pantallas-de-visualizacion-de-datos/)
 
-  - > [<span class="underline">https://riesgoslaborales.saludlaboral.org/portal-preventivo/riesgos-laborales/riesgos-relacionados-con-la-hergonomia/pantallas-visualizacion-de-datos-pvd/</span>](https://riesgoslaborales.saludlaboral.org/portal-preventivo/riesgos-laborales/riesgos-relacionados-con-la-hergonomia/pantallas-visualizacion-de-datos-pvd/)
+ * [Riesgos relacionados con la ergonomía - Pantallas Visualización de Datos (PVD)](https://riesgoslaborales.saludlaboral.org/portal-preventivo/riesgos-laborales/riesgos-relacionados-con-la-hergonomia/pantallas-visualizacion-de-datos-pvd/)
 
 ---
 
@@ -76,11 +78,9 @@ Google tiene un poderoso motor de búsqueda, que permite afinar tus búsquedas p
 
 Aquí enlazamos a algunas “Cheat sheets” que contienen los principales comandos de búsqueda del motor de Google.
 
-  - > [<span class="underline">https://www.googleguide.com/print/adv\_op\_ref.pdf</span>](https://www.googleguide.com/print/adv_op_ref.pdf)
+ * [Google Guide Cheat Sheet - Making searching even easier](https://www.googleguide.com/print/adv_op_ref.pdf)
 
-  - > [<span class="underline">https://sites.google.com/site/gwebsearcheducation/goodies</span>](https://sites.google.com/site/gwebsearcheducation/goodies)
-
-  - > [<span class="underline">http://static.googleusercontent.com/media/www.google.com/en//educators/downloads/Tips\_Tricks\_85x11.pdf</span>](http://static.googleusercontent.com/media/www.google.com/en//educators/downloads/Tips_Tricks_85x11.pdf)
+ * [Tips_Tricks8.5x11_rd2 - Better searches. Better Results](http://static.googleusercontent.com/media/www.google.com/en//educators/downloads/Tips_Tricks_85x11.pdf)
 
 ---
 
@@ -88,14 +88,16 @@ Aquí enlazamos a algunas “Cheat sheets” que contienen los principales coman
 
 Le llamamos así a este apartado porque para el alumnado siempre es más atractivo que “¿Qué debo aprender en este tema?” :D. A continuación, indicamos de este tema que deberíais preparar para el examen:
 
-  - > Conocer que es una suite ofimática, tanto local como en la nube (así como algunos ejemplos).
+ * Conocer que es una suite ofimática, tanto local como en la nube (así como algunos ejemplos).
 
-  - > Identificar que datos podrían usarse en suites ofimáticas locales y cuáles en suites ofimáticas en la nube.
+ * Identificar que datos podrían usarse en suites ofimáticas locales y cuáles en suites ofimáticas en la nube.
     
-      - > Esta información se debe aplicar a cualquier aplicación en la nube.
+     * Esta información se debe aplicar a cualquier aplicación en la nube.
 
-  - > Conocer las medidas básicas de ergonomía y descanso para trabajar con ordenadores de sobremesa, portátiles, tablets, móviles.
+----
 
-  - > Conocer que es una “Cheat sheet” y la importancia de estas para ahorrar trabajo.
+ * Conocer las medidas básicas de ergonomía y descanso para trabajar con ordenadores de sobremesa, portátiles, tablets, móviles.
 
-  - > Saber utilizar la búsqueda de Google con sus principales comandos (texto entre comillas, buscar extensiones de ficheros, incluir/excluir sitios donde buscar, establecer rangos de fechas, etc.) para poder afinar tus búsquedas.
+ * Conocer que es una “Cheat sheet” y la importancia de estas para ahorrar trabajo.
+
+ * Saber utilizar la búsqueda de Google con sus principales comandos (texto entre comillas, buscar extensiones de ficheros, incluir/excluir sitios donde buscar, establecer rangos de fechas, etc.) para poder afinar tus búsquedas.
