@@ -3,7 +3,7 @@
       {
         "order": 10,
         "title": "Activitat 1 – Introducció a Docker (0483-ae001)",
-        "src": "https://github.com/jpardo20/apunts-jpardo20/blob/main/docs/moduls/0483-sistemes-informatics/files/Activitat1-0483-ae001.pdf",
+        "src": "slides/0483-ae001-intro-docker.reveal",
         "description": "Activitat 1 – Introducció a Docker (0483-ae001))"
       },
       {
