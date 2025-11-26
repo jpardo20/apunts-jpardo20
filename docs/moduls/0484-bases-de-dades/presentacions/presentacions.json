@@ -5,10 +5,10 @@
   },
   "presentations": [
     {
-      "id": "0484-aof-ud03-ae01",
-      "title": "Informació caòtica (**`0484-aof-ud03-ae01`**)",
+      "id": "0484-bds-ae01",
+      "title": "Informació caòtica (**`0484-bds-ae01`**)",
       "description": "",
-      "src": "slides/bases-de-dades-activitat-dades-caotiques.reveal",
+      "src": "slides/0484-bds-ae01.reveal",
       "theme": "white",
       "tags": [
         "BBDD", "activitat"
