@@ -33,18 +33,16 @@ Cal que dins del vostre repositori creeu una carpeta amb el nom **`docs`** que �
 
 Dins del fitxer **README.md** del vostre repositori cal que per a cada fitxer escribiu una capçalera (**`##`**) amb el nom del document que esteu seguin, sense l'extensió, i a sota, cal que hi hagi un enllaç a cada document que heu creat.
 
+----
+
 Per exemple:
 
 Del document **`ud01-001-teoria-estils-i-plantilles.docs`**
 
 Dins del fitxer **README.md** cal crear una capçalera (**`##`**) amb el text **`ud01-001-teoria-estils-i-plantilles`**, i a sota un enllaça pels diferents documents que us fa crear.
 
-![alt text](image.png)
-
 ![../../../assets/img/0484-bases-de-dades/0223-aof-ae06-docs.png](../../../assets/img/0223-aplicacions-ofimatiques/0223-aof-ae06-docs.png)
 
-
-![alt text](../../../assets/img/0223-aof-ae06-docs.png)
 
 Caldrà que pugeu al repositori el vostre document **`ud01-prac-000-mod.docx`** i que creeu en un enllaç al mateix.
 
