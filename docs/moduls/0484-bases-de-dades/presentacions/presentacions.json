@@ -5,17 +5,6 @@
   },
   "presentations": [
     {
-      "id": "0484-bds-ae01",
-      "title": "Informació caòtica (**`0484-bds-ae01`**)",
-      "description": "",
-      "src": "slides/0484-bds-ae01.reveal",
-      "theme": "white",
-      "tags": [
-        "BBDD", "activitat"
-      ]
-        
-    },
-    {
       "id": "001_Introduccio_Bases_Dades",
       "title": "1: Introducció a Bases de Dades",
       "description": "",
@@ -94,6 +83,29 @@
       "tags": [
         "BBDD"
       ]
+    },
+    {
+      "id": "0484-bds-ae01",
+      "title": "Activitat: Informació caòtica (0484-bds-ae01)",
+      "description": "Codi d'activitat 0484-bds-ae01",
+      "src": "slides/0484-bds-ae01.reveal",
+      "theme": "white",
+      "tags": [
+        "BBDD", "activitat"
+      ] 
+    },
+    {
+      "id": "0484-bds-ae02",
+      "title": "Activitat: Treballem les JOIN 0484-bds-ae02",
+      "description": "Codi d'activitat 0484-bds-ae02",
+      "src": "slides/0484-bds-ae02.reveal",
+      "theme": "white",
+      "tags": [
+        "BBDD", "activitat"
+      ] 
     }
+
+
+    
   ]
 }
