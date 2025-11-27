@@ -1,27 +1,87 @@
-## Colors extraterrestres #1:
+# Condicions <u>Cas 1 de 7</u>
+
+#### Colors extraterrestres (1/2)
 
 * Imagineu-vos que un extraterrestre acaba de ser abatut en un joc.
 
-* Creeu una variable anomenada **`alien_color`** i assigneu-li un valor de '**`verd`**', '**`groc`**' o **'vermell'**.
+* Creeu una variable anomenada **`alien_color`**, demaneu un valor a l'usuari i assigneu el valor que ha entrat l'usuari a la variable **`alien_color`**.
 
 * Escriviu una instrucció **`if`** per comprovar si el color de l'extraterrestre és **`verd`**.
 
-* Si ho és, escriviu un missatge que el jugador acaba de guanyar **5 punts**.
+* Si ho és, mostreu per consola un missatge que digui que el jugador acaba de guanyar **5 punts**.
+
+----
+
+```python
+# nom fitxer: cas_1_de_condicions.py
+# Declaració de variables
+alien_color = str()
+nom_color_correcte = bool()
+
+# Inicialització de variables
+nom_color_correcte = False
+
+while (nom_color_correcte == False):
+    print("Entra el color (verd, groc o vermell): ", end="")
+    alien_color = input()
+    if (alien_color=="verd" or alien_color=="groc" or alien_color=="vermell"):
+      nom_color_correcte = True
+    else:
+        print("OBS!!! El color només pot ser verd, groc o vermell!")
+        print("Si us plau torna a intentar-ho!")
+
+
+if (alien_color == "verd"):
+    print("Enhorabona! Acabes de guanyar 5 punts!!!")
+```
+
+----
+
+# Condicions <u>Cas 1 de 7</u>
+
+#### Colors extraterrestres (2/2)
 
 * Executeu dues versions d'aquest programa:
-  1. que superi la prova **`if`** i 
+
+  **1a execució**: que superi la prova **`if`** i 
   
-  1. una altra que falli. La versió que falla no tindrà cap sortida.
+  **2a execució**:  que falli. La versió que falla no tindrà cap sortida.
+
+----
+
+#### Primera execucció: "que superi la prova **`if`**"
+
+```bash
+Entra el color (verd, groc o vermell): verd
+Enhorabona! Acabes de guanyar 5 punts!!!
+```
+
+----
+
+#### Segona execucció: "que falli. La versió que falla no tindrà cap sortida."
+
+```bash
+Entra el color (verd, groc o vermell): vermell
+```
 
 ---
 
-## Colors extraterrestres #2:
+# Condicions <u>Cas 2 de 7</u>
 
-Trieu un color per a un extraterrestre com vau fer a l'exercici **`Colors extraterrestres #1`** i escriviu una cadena **`if-else`**.
+#### Colors extraterrestres (1/2)
+
+Trieu un color per a un extraterrestre com vau fer a l'anterior exercici, i escriviu una cadena **`if-else`**.
 * Si el color de l'extraterrestre és **`verd`**, escriviu una instrucció que el jugador acaba de guanyar **5 punts per disparar a l'extraterrestre**.
 
 * Si el color de l'extraterrestre no és **`verd`**, escriviu una instrucció que el jugador acaba de guanyar
 **10 punts**.
+
+----
+
+
+# Condicions <u>Cas 2 de 7</u>
+
+#### Colors extraterrestres (2/2)
 
 * Executeu dues versions d'aquest programa:
 
@@ -31,7 +91,7 @@ Trieu un color per a un extraterrestre com vau fer a l'exercici **`Colors extrat
 
 ---
 
-## Colors extraterrestres #3:
+#### Colors extraterrestres Condició 3:
 
 Converteix la teva cadena **`if-else`** de l'exercici  **`Colors extraterrestres #2`** en una cadena **`if-else`**.
 

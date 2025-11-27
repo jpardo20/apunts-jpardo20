@@ -1,3 +1,19 @@
+/* 
+ * styles.css = fulla d'estils unificada
+ * Conté el contingut de:
+ *   - base.css
+ *   - portal.css
+ *   - tema.css
+ *   - fonts.css
+ *   - style.css
+ * Qualsevol canvi nou → fer-lo aquí.
+ */
+
+/* TEST CENTRAL CSS - 2025-11-27 */
+/* * {
+  background-color: #009de018 !important;
+} */
+
 /* Esquema clar */
 :root,
 [data-md-color-scheme="default"]{
@@ -35,4 +51,486 @@
 
 .md-header__title{
     text-align: center;
+}
+/* === BEGIN base.css (merged) === */
+/* Estils base per a totes les presentacions Reveal.js */
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+    font-weight: 700;
+}
+
+.reveal section img {
+    border-radius: 16px;
+}
+
+footer.footnote {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
+    font-size: 16px;
+    opacity: .6;
+}
+
+/* Mini barra superior de navegació */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, .85);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #e5e7eb;
+    padding: .5rem .75rem;
+    z-index: 1000;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.topbar a {
+    text-decoration: none;
+}
+
+.topbar .back {
+    font-weight: 600;
+}
+
+.topbar .spacer {
+    flex: 1;
+}
+
+.reveal {
+    margin-top: 42px;
+}
+
+/* Evita que la topbar tapi el contingut */
+
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff; /* #115eaf; */
+    color: #009de0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 6px 12px;
+    z-index: 1000;
+    /* font-size: .95rem; */
+}
+
+.topbar a {
+    color: #009de0;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.topbar a:hover {
+    text-decoration: none;
+}
+
+:root {
+    --topbar-h: 40px;
+}
+
+.reveal {
+    position: fixed;
+    top: var(--topbar-h);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(100dvh - var(--topbar-h));
+    width: 100%;
+    margin: 0;
+}
+
+/* Topbar: títol centrat i link a la dreta */
+.topbar{
+  display: grid;                       /* sobreescriu el flex anterior */
+  grid-template-columns: 1fr auto 1fr; /* enllaç | títol | logo */
+  align-items: center;
+  border-bottom: 3px solid #009de0;
+}
+
+.topbar img{
+  grid-column: 3;  
+}
+
+.topbar a{
+  grid-column: 1;
+  justify-self: end;                   /* a l'esquerra */
+  white-space: nowrap;                 /* evita que es trenqui el text */
+}
+
+#topbar-title{
+  grid-column: 2;
+  justify-self: center;                /* centrat real */
+  text-align: center;
+  font-size: 25px;
+}
+
+
+.minus{
+    text-transform: lowercase;
+}
+
+.codi,.entitat,.atribut{
+    font-family: monospace;
+    background-color:lightgray;
+    color: blue;
+    font-weight: bolder;
+}
+
+.petit{
+    font-size:x-large;
+}
+
+
+.entitat, .atribut{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.entitat{
+    text-transform: uppercase;
+}
+
+.atribut{
+    text-transform: lowercase;
+}
+
+/* === BEGIN portal.css (merged) === */
+/* portal.css (essencial per a la demo) */
+body.portal {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f7f9fc;
+    color: #222
+}
+
+.site-header {
+    padding: 1rem 2rem;
+    background: #fff;
+    border-bottom: 1px solid #ddd
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+
+.logo {
+    max-height: 80px
+}
+
+.header-row h1 {
+    margin: 0;
+    line-height: 1.25;
+    margin-top: 10px;
+}
+
+.subtitle {
+    margin: 6px 0 0 0
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .05)
+}
+
+.card h2 {
+    margin-top: 0
+}
+
+.button {
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700
+}
+
+.button.primary {
+    background: #115eaf;
+    color: #fff
+}
+
+.button.primary:hover {
+    background: #0f4f93
+}
+
+
+.button.activitat {
+    background: #5cb85c;
+    color: #fff
+}
+
+.button.activitat:hover {
+    background: #5cb85cde;
+    color: #fff;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: .9rem;
+    color: #666
+}
+
+.search-row {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    padding: 0 2rem 1rem
+}
+
+.search-row input {
+    flex: 1;
+    padding: .5rem .75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px
+}
+
+.sort-select {
+    padding: .5rem .75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff
+}
+
+/* --- Inactive/hidden presentations styles (added) --- */
+.card {
+    position: relative;
+}
+
+.card--inactive {
+    filter: grayscale(0.3);
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.card--inactive .button.primary {
+    pointer-events: none;
+}
+
+.badge.badge--soon {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    font-size: .75rem;
+    padding: .2rem .55rem;
+    border-radius: 999px;
+    background: #eee;
+    border: 1px solid rgba(0, 0, 0, .15);
+}
+
+.button.disabled {
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    background: #ddd;
+    color: #666;
+    border: 1px solid rgba(0, 0, 0, .15);
+    text-decoration: none;
+    font-weight: 700;
+}
+/* === BEGIN tema.css (merged) === */
+
+/* Espai per a personalitzar tema específic de curs */
+/* Exemple: mida de lletra lleugerament més gran */
+.reveal .slides section { font-size: 32px; }
+.reveal h1 { font-size: 2.2em; }
+.reveal h2 { font-size: 1.6em; }
+
+/* === BEGIN fonts.css (merged) === */
+.codi{
+    background-color:lightgray;
+    font-family: monospace;
+    color: blue;
+}
+
+.negreta{
+    font-weight: bold;
+}
+
+
+.vermell{
+    color: red;
+}
+
+.minuscules{
+    text-transform: lowercase;
+}
+
+h3+a {
+    color: pink!important;
+}
+/* === BEGIN style.css (merged) === */
+/* ==== Reset i base ==== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    color: #1f2937;
+    background: #f7f9fc;
+}
+
+/* ==== Layout ==== */
+.site-header {
+    background: linear-gradient(180deg, #0f3d77 0%, #115eaf 100%);
+    color: #fff;
+    padding: 2rem 1.25rem 1.5rem;
+    text-align: center;
+}
+
+.site-header h1 {
+    margin: 0 0 .25rem;
+    font-size: clamp(1.4rem, 2.8vw, 2rem);
+    font-weight: 700;
+}
+
+.subtitle {
+    margin: 0 auto 1rem;
+    opacity: .95;
+    max-width: 62ch;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: center;
+}
+
+.toolbar input[type="search"] {
+    width: min(680px, 92vw);
+    padding: .75rem 1rem;
+    border-radius: .75rem;
+    border: none;
+    outline: none;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .15);
+}
+
+/* ==== Grid de targetes ==== */
+main {
+    padding: 2rem 1.25rem 3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.25rem 1.25rem 1.15rem;
+    box-shadow: 0 6px 24px rgba(17, 59, 119, .08);
+    transition: transform .18s ease, box-shadow .18s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(17, 59, 119, .12);
+}
+
+.card h2 {
+    margin: 0 0 .35rem;
+    font-size: 1.12rem;
+    color: #0f3d77;
+}
+
+.card p {
+    margin: 0 0 .85rem;
+    color: #374151;
+    flex: 1;
+}
+
+.card .meta {
+    font-size: .85rem;
+    color: #6b7280;
+    margin-bottom: .75rem;
+}
+
+.card .actions {
+    display: flex;
+    gap: .5rem;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    padding: .6rem .9rem;
+    border-radius: .6rem;
+    font-weight: 600;
+    font-size: .95rem;
+}
+
+.button.primary {
+    background: #115eaf;
+    color: #fff;
+}
+
+.button.primary:hover {
+    background: #0f4f93;
+}
+
+.button.activitat {
+    background: #5cb85c;
+    color: #fff
+}
+
+.button.activitat:hover {
+    background: #5cb85cde;
+    color: #fff;
+}
+.button.ghost {
+    background: #eef4ff;
+    color: #0f3d77;
+}
+
+.button.ghost:hover {
+    background: #e0eaff;
+}
+
+/* ==== Peu ==== */
+.site-footer {
+    border-top: 1px solid #e5e7eb;
+    background: #fff;
+    text-align: center;
+    padding: 1rem;
+    color: #6b7280;
+    font-size: .9rem;
 }
