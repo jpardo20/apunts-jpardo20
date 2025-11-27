@@ -6,9 +6,9 @@
     <title>Apunts Joan Pardo per DigiTechFP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../../assets/css/styles.css">
-    
-    
-    
+
+
+
 </head>
 
 <body class="portal">
@@ -40,7 +40,7 @@
 
     <footer class="site-footer">© 2025 · Apunts Joan Pardo per DigiTechFP</footer>
 
-    <script>
+    <!-- <script>
         const el = (sel) => document.querySelector(sel);
         const grid = el('#grid');
         const searchInput = el('#search');
@@ -84,6 +84,14 @@
                 grid.innerHTML = '<p>No s\'ha pogut carregar el llistat de presentacions.</p>';
                 console.error(err);
             });
+    </script> -->
+    <script src="../../../assets/js/presentacions-grid.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initPresentationsPage({
+                jsonUrl: 'presentacions.json'
+            });
+        });
     </script>
 </body>
 

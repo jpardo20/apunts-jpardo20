@@ -6,9 +6,9 @@
     <title>Apunts Joan Pardo per DigiTechFP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../../assets/css/styles.css">
-    
-    
-    
+
+
+
 </head>
 
 <body class="portal">
@@ -35,13 +35,13 @@
             <option value="date-old">Data (antic primer)</option>
         </select>
     </div>
-<!-- moduls/0484-bases-de-dades/presentacions/presentador.html?src=slides%2F0484-bds-ae01.reveal&title=Informació%20caòtica%20(0484-bds-ae01)&theme=white#/md-section -->
+    <!-- moduls/0484-bases-de-dades/presentacions/presentador.html?src=slides%2F0484-bds-ae01.reveal&title=Informació%20caòtica%20(0484-bds-ae01)&theme=white#/md-section -->
     <main>
         <section id="grid" class="grid" aria-live="polite"></section>
     </main>
 
     <footer class="site-footer">© 2025 · Apunts Joan Pardo per DigiTechFP</footer>
-
+    <!-- 
     <script>
         const el = (sel) => document.querySelector(sel);
         const grid = el('#grid');
@@ -86,6 +86,14 @@
                 grid.innerHTML = '<p>No s\'ha pogut carregar el llistat de presentacions.</p>';
                 console.error(err);
             });
+    </script> -->
+    <script src="../../../assets/js/presentacions-grid.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initPresentationsPage({
+                jsonUrl: 'presentacions.json'
+            });
+        });
     </script>
 </body>
 
