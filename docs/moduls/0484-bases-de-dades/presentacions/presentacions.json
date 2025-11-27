@@ -103,6 +103,36 @@
       "tags": [
         "BBDD", "activitat"
       ] 
+    },
+    {
+      "id": "0484-bds-ae03",
+      "title": "Activitat: Validació d’un MER Agència de viatges 0484-bds-ae03",
+      "description": "Codi d'activitat 0484-bds-ae03",
+      "src": "slides/0484-bds-ae03-act-validacio-mer-escenaris.reveal",
+      "theme": "white",
+      "tags": [
+        "BBDD", "activitat"
+      ] 
+    },
+    {
+      "id": "0484-bds-ae05",
+      "title": "Activitat: Validació d’un MER Agència de viatges 0484-bds-ae05",
+      "description": "Codi d'activitat 0484-bds-ae05",
+      "src": "slides/0484-bds-ae05-creacioEntitat.reveal",
+      "theme": "white",
+      "tags": [
+        "BBDD", "activitat"
+      ] 
+    },
+    {
+      "id": "0484-bds-ae06",
+      "title": "Activitat 2: Anàlisi PET-Flix 0484-bds-ae06",
+      "description": "Codi d'activitat 0484-bds-ae06",
+      "src": "slides/0484-bds-ae06-act-002_PET_Flix.reveal",
+      "theme": "white",
+      "tags": [
+        "BBDD", "activitat"
+      ] 
     }
 
 
