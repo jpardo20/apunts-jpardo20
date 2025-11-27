@@ -462,7 +462,7 @@ main {
 }
 
 .card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
     box-shadow: 0 10px 30px rgba(17, 59, 119, .12);
 }
 
@@ -538,6 +538,12 @@ main {
 /* --- Targetes per tipus (teoria vs activitat) --- */
 
 /* Teoria: podem deixar la .card tal qual o matisar una mica */
+
+
+.card--theory, .card--activity{
+  border: 3px solid;
+
+}
 .card--theory {
   /* opcional: colors específics; si no poses res, fa servir .card per defecte */
   background-color: #009de03e;   /* blau molt clar */
@@ -566,7 +572,7 @@ main {
 
 }
 .badge--theory {
-    color: #009de0;
+    color: #0f4f93;
 }
 
 
@@ -592,4 +598,29 @@ main {
 .button.activitat:focus {
   background-color: #246628;
   border-color: #246628;
+}
+
+/* --- Layout de les targetes: botó a baix i centrat --- */
+
+/* Fem que la card sigui una columna flexible */
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Títol i text normal de la targeta */
+.card h2,
+.card p:not(.card__actions) {
+  margin-bottom: 1rem;
+}
+
+/* Contenidor del botó */
+.card__actions {
+  margin-top: auto;       /* empeny el botó cap avall */
+  text-align: center;     /* centra el botó horitzontalment */
+}
+
+/* Ens assegurem que el botó no s’estiri a tota l’amplada (per si de cas) */
+.card__actions .button {
+  display: inline-block;
 }
