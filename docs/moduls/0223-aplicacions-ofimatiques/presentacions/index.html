@@ -42,7 +42,7 @@
         <section id="grid" class="grid" aria-live="polite"></section>
     </main>
 
-    <main>
+    <!-- <main>
         <section id="grid" class="grid" aria-live="polite">
             <article class="card">
                 <h2>Actividad evaluable <kbd>aof-ud03-ae01</kbd></h2>
@@ -67,7 +67,7 @@
                 <p><a class="button activitat" href="./presentador.html?src=slides%2F0223-aof-ae06-docs.reveal&title=%20Act.%20eval.%20Procesadores%20de%20texto%3A%20aof-ud05-ae05#/md-section">Obrir Activitat</a></p>
             </article>
         </section>
-    </main>
+    </main> -->
 
     <footer class="site-footer">© 2025 · Apunts Joan Pardo per DigiTechFP</footer>
 
@@ -79,22 +79,74 @@
         let items = [];
 
         function cardTemplate(item) {
-            const status = (item.status || 'active').toLowerCase();
-            const desc = item.description ? `<p>${item.description}</p>` : '';
-            const title = item.title || 'Presentació';
-            const href = `./presentador.html?src=${encodeURIComponent(item.src || '')}${item.theme ? `&theme=${encodeURIComponent(item.theme)}` : ''}${item.title ? `&title=${encodeURIComponent(item.title)}` : ''}`;
-            const articleClass = `card${status === 'inactive' ? ' card--inactive' : ''}`;
-            const badge = status === 'inactive' ? `<span class="badge badge--soon">Properament</span>` : '';
-            const button = status === 'inactive'
-                ? `<span class="button disabled" role="link" aria-disabled="true" title="Properament">No disponible</span>`
-                : `<a class="button primary" href="${href}">Obrir presentació</a>`;
-            return `<article class="${articleClass}">
-                ${badge}
-                <h2>${title}</h2>
-                ${desc}
-                <p>${button}</p>
-              </article>`;
-        }
+    const status = (item.status || 'active').toLowerCase();
+    const kind = (item.kind || 'theory').toLowerCase();   // 'theory' o 'activity'
+    const isActivity = kind === 'activity';
+
+    const desc = item.description ? `<p>${item.description}</p>` : '';
+    const title = item.title || 'Presentació';
+
+    // Enllaç:
+    // - si item.href → usem aquesta URL tal qual (per assignments, etc.)
+    // - sinó → com fins ara, via presentador.html + src + title + theme
+    const href = item.href || (
+        `./presentador.html?src=${encodeURIComponent(item.src || '')}` +
+        (item.theme ? `&theme=${encodeURIComponent(item.theme)}` : '') +
+        (item.title ? `&title=${encodeURIComponent(item.title)}` : '')
+    );
+
+    // Classes del <article>
+    const articleClass = [
+        'card',
+        status === 'inactive' ? 'card--inactive' : '',
+        isActivity ? 'card--activity' : 'card--theory'
+    ].filter(Boolean).join(' ');
+
+    // Insígnies
+    const badgeStatus = status === 'inactive'
+        ? `<span class="badge badge--soon">Properament</span>`
+        : '';
+
+    const badgeKind = isActivity
+        ? `<span class="badge badge--activity">Activitat</span>`
+        : `<span class="badge badge--theory">Teoria</span>`;
+
+    // Botó
+    let button;
+    if (status === 'inactive') {
+        button = `<span class="button disabled" role="link" aria-disabled="true" title="Properament">No disponible</span>`;
+    } else {
+        const buttonClass = isActivity ? 'button activitat' : 'button primary';
+        const buttonText = isActivity ? 'Obrir activitat' : 'Obrir presentació';
+        button = `<a class="${buttonClass}" href="${href}" target="_blank">${buttonText}</a>`;
+    }
+
+    return `<article class="${articleClass}">
+        ${badgeStatus} ${badgeKind}
+        <h2>${title}</h2>
+        ${desc}
+        <p>${button}</p>
+      </article>`;
+}
+
+
+        // function cardTemplate(item) {
+        //     const status = (item.status || 'active').toLowerCase();
+        //     const desc = item.description ? `<p>${item.description}</p>` : '';
+        //     const title = item.title || 'Presentació';
+        //     const href = `./presentador.html?src=${encodeURIComponent(item.src || '')}${item.theme ? `&theme=${encodeURIComponent(item.theme)}` : ''}${item.title ? `&title=${encodeURIComponent(item.title)}` : ''}`;
+        //     const articleClass = `card${status === 'inactive' ? ' card--inactive' : ''}`;
+        //     const badge = status === 'inactive' ? `<span class="badge badge--soon">Properament</span>` : '';
+        //     const button = status === 'inactive'
+        //         ? `<span class="button disabled" role="link" aria-disabled="true" title="Properament">No disponible</span>`
+        //         : `<a class="button primary" href="${href}">Obrir presentació</a>`;
+        //     return `<article class="${articleClass}">
+        //         ${badge}
+        //         <h2>${title}</h2>
+        //         ${desc}
+        //         <p>${button}</p>
+        //       </article>`;
+        // }
 
         function render(list) {
             grid.innerHTML = list.map(cardTemplate).join('\n');

@@ -534,3 +534,62 @@ main {
     color: #6b7280;
     font-size: .9rem;
 }
+
+/* --- Targetes per tipus (teoria vs activitat) --- */
+
+/* Teoria: podem deixar la .card tal qual o matisar una mica */
+.card--theory {
+  /* opcional: colors específics; si no poses res, fa servir .card per defecte */
+  background-color: #009de03e;   /* blau molt clar */
+  border-color: #009de0;
+}
+
+/* Activitats (fons verd suau, vora verda) */
+.card--activity {
+  background-color: #e8f5e9;   /* verd molt clar */
+  border-color: #2e7d32;
+}
+
+/* Badge "Activitat" verd */
+.badge--activity, .badge--theory {
+  display: inline-block;
+  font-weight: bold;  /* margin-left: .5rem;
+  padding: 0.1rem 0.5rem; */
+  border-radius: 999px;
+  font-size: 1.35rem;
+  /* background-color: #115eaf; */
+  text-align: center;
+}
+
+.badge--activity{
+    color: #2e7d32;
+
+}
+.badge--theory {
+    color: #009de0;
+}
+
+
+/* Badge "Activitat" verd */
+/* .badge--activity {
+  display: inline-block;
+  margin-left: .5rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  background-color: #2e7d32;
+  color: #;
+} */
+
+/* Botó verd per activitats */
+.button.activitat {
+  background-color: #2e7d32;
+  border-color: #2e7d32;
+  color: #fff;
+}
+
+.button.activitat:hover,
+.button.activitat:focus {
+  background-color: #246628;
+  border-color: #246628;
+}
