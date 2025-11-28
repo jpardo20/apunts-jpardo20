@@ -1,0 +1,458 @@
+<!-- https://script.google.com/macros/s/AKfycbylvxaZe0OL4AIUxUjIpinM15kbb8dpaigbcQo1zijzIEq22RFeWOs2pG-MxkemFwQ2/exec -->
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulari de grups - Robòtica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 1.5rem;
+            background: #f5f5f5;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        h1,
+        h2 {
+            margin-top: 0;
+        }
+
+        form {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 0.35rem 0.5rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 0.95rem;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        button[type="submit"] {
+            background: #2563eb;
+            color: white;
+        }
+
+        button[type="submit"]:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        #missatge {
+            min-height: 1.5em;
+            font-size: 0.9rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 0.4rem 0.5rem;
+        }
+
+        th {
+            background: #f0f0f0;
+            text-align: left;
+        }
+
+        @media (max-width: 600px) {
+
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+
+            th {
+                display: none;
+            }
+
+            tr {
+                margin-bottom: 0.7rem;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+            }
+
+            td {
+                border: none;
+                border-bottom: 1px solid #eee;
+            }
+
+            td:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Formulari de creació de grups – Robòtica</h1>
+        <p>
+            ⚠️ Només <strong>un membre del grup</strong> ha d’enviar aquest formulari (el portaveu).
+            Un cop creat el grup, els seus membres ja no es podran triar en altres grups.
+        </p>
+
+        <section id="formulari">
+            <form id="form-grup">
+                <div>
+                    <label for="nom-grup">Nom del grup</label>
+                    <input type="text" id="nom-grup" required placeholder="p. ex. RobotsOp" />
+                </div>
+
+                <div>
+                    <label for="portaveu">Portaveu del grup (qui envia el formulari)</label>
+                    <select id="portaveu" required></select>
+                </div>
+
+                <p><strong>Altres membres del grup</strong> (opcionals, però el grup ha de tenir mínim 2 persones en
+                    total).</p>
+
+                <div>
+                    <label for="m1">Membre 1</label>
+                    <select class="select-membre" id="m1"></select>
+                </div>
+                <div>
+                    <label for="m2">Membre 2</label>
+                    <select class="select-membre" id="m2"></select>
+                </div>
+                <div>
+                    <label for="m3">Membre 3</label>
+                    <select class="select-membre" id="m3"></select>
+                </div>
+
+                <button type="submit">Enviar grup</button>
+                <p id="missatge" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section id="llista-grups">
+            <h2>Grups ja registrats</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom del grup</th>
+                        <th>Membres</th>
+                    </tr>
+                </thead>
+                <tbody id="taula-grups"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        /**
+         * CONFIGURACIÓ BÀSICA
+         * - ALUMNES_URL: ruta al fitxer dades_alumnes.json
+         * - API_URL: URL del Google Apps Script publicat com a Web App
+         */
+        const ALUMNES_URL = './alumnes/dades_alumnes.json';
+        const API_URL = 'https://script.google.com/macros/s/AKfycbylvxaZe0OL4AIUxUjIpinM15kbb8dpaigbcQo1zijzIEq22RFeWOs2pG-MxkemFwQ2/exec'; // ⬅️ SUBSTITUEIX AIXÒ
+        let alumnes = [];             // { nom, email }
+        let alumnesDisponibles = [];  // alumnes que no estan ja en un grup
+        let usedEmails = new Set();   // correus ja utilitzats en grups
+
+        document.addEventListener('DOMContentLoaded', init);
+
+        async function init() {
+            const missatge = document.getElementById('missatge');
+            try {
+                missatge.textContent = 'Carregant dades d\'alumnes i grups...';
+
+                // Carreguem alumnes i (si es pot) grups
+                const [alumnesResp, grupsResp] = await Promise.all([
+                    fetch(ALUMNES_URL),
+                    fetch(API_URL).catch(err => {
+                        console.warn('No s\'han pogut carregar les dades de grups:', err);
+                        return null;
+                    })
+                ]);
+
+                if (!alumnesResp.ok) {
+                    throw new Error('No s\'ha pogut carregar dades_alumnes.json (HTTP ' + alumnesResp.status + ').');
+                }
+
+                let dadesAlumnes;
+                try {
+                    dadesAlumnes = await alumnesResp.json();
+                } catch (e) {
+                    throw new Error('El fitxer dades_alumnes.json no és un JSON vàlid.');
+                }
+
+                // Processar l'estructura { meta: {...}, alumnes: [...] }
+                if (!dadesAlumnes.alumnes) {
+                    throw new Error('El fitxer dades_alumnes.json no conté el camp "alumnes".');
+                }
+
+                let llistaBruta = dadesAlumnes.alumnes;
+
+                // Si és array d'arrays (per exemple per classes/grups), fem flat
+                if (Array.isArray(llistaBruta) && llistaBruta.length > 0 && Array.isArray(llistaBruta[0])) {
+                    llistaBruta = llistaBruta.flat();
+                }
+
+                // Normalitzem a { nom, email }
+                alumnes = (Array.isArray(llistaBruta) ? llistaBruta : [])
+                    .filter(a => a && typeof a.email === 'string' && a.email.trim() !== '')
+                    .map(a => {
+                        const first = a.firstname || a.nom || '';
+                        const last = a.lastname || a.cognoms || '';
+                        const nomComplet = (first + ' ' + last).trim();
+                        return {
+                            nom: nomComplet || a.email.trim(),
+                            email: a.email.trim()
+                        };
+                    });
+
+                if (alumnes.length === 0) {
+                    throw new Error('No s\'ha trobat cap alumne amb email a dades_alumnes.json.');
+                }
+
+                // Preparem les dades de grups (si l'API respon bé)
+                let grupsData = { used: [], groups: [] };
+                if (grupsResp && grupsResp.ok) {
+                    try {
+                        grupsData = await grupsResp.json();
+                    } catch (e) {
+                        console.warn('La resposta de l\'API de grups no és JSON vàlid:', e);
+                    }
+                } else if (!grupsResp) {
+                    console.warn('No s\'ha pogut contactar amb l\'API de grups (potser encara no està configurada).');
+                } else {
+                    console.warn('Error HTTP en carregar l\'API de grups:', grupsResp.status);
+                }
+
+                usedEmails = new Set(Array.isArray(grupsData.used) ? grupsData.used : []);
+                alumnesDisponibles = alumnes.filter(a => !usedEmails.has(a.email));
+
+                ompleTotsElsSelects();
+                preparaCanviSelects();
+                preparaEnviament();
+                pintaGrups(Array.isArray(grupsData.groups) ? grupsData.groups : []);
+
+                missatge.textContent = '';
+            } catch (err) {
+                console.error(err);
+                const missatge = document.getElementById('missatge');
+                missatge.textContent = 'Error: ' + err.message;
+            }
+        }
+
+        function creaOpcioBuida(text = '-- Tria una opció --') {
+            const opt = document.createElement('option');
+            opt.value = '';
+            opt.textContent = text;
+            return opt;
+        }
+
+        function ompleSelect(select, alumnesLlista) {
+            while (select.firstChild) select.removeChild(select.firstChild);
+            select.appendChild(creaOpcioBuida());
+            alumnesLlista.forEach(al => {
+                const opt = document.createElement('option');
+                opt.value = al.email; // clau única
+                opt.textContent = al.nom + ' (' + al.email + ')';
+                select.appendChild(opt);
+            });
+        }
+
+        function ompleTotsElsSelects() {
+            const selectPortaveu = document.getElementById('portaveu');
+            const selectMembres = document.querySelectorAll('.select-membre');
+
+            ompleSelect(selectPortaveu, alumnesDisponibles);
+            selectMembres.forEach(sel => ompleSelect(sel, alumnesDisponibles));
+
+            actualitzaOpcionsInternes();
+        }
+
+        function preparaCanviSelects() {
+            const totsSelects = document.querySelectorAll('#portaveu, .select-membre');
+            totsSelects.forEach(sel => {
+                sel.addEventListener('change', () => {
+                    actualitzaOpcionsInternes();
+                });
+            });
+        }
+
+        function actualitzaOpcionsInternes() {
+            const totsSelects = document.querySelectorAll('#portaveu, .select-membre');
+
+            const seleccionats = new Set(
+                Array.from(totsSelects)
+                    .map(sel => sel.value)
+                    .filter(v => v)
+            );
+
+            totsSelects.forEach(sel => {
+                const valorActual = sel.value;
+                Array.from(sel.options).forEach(opt => {
+                    if (!opt.value) return;
+
+                    // Bloquegem els que ja estan seleccionats en UN ALTRE select
+                    if (seleccionats.has(opt.value) && opt.value !== valorActual) {
+                        opt.disabled = true;
+                    } else if (usedEmails.has(opt.value) && opt.value !== valorActual) {
+                        // Bloquegem també els que ja estan a altres grups (segons BD)
+                        opt.disabled = true;
+                    } else {
+                        opt.disabled = false;
+                    }
+                });
+            });
+        }
+
+        function preparaEnviament() {
+            const form = document.getElementById('form-grup');
+            const missatge = document.getElementById('missatge');
+
+            form.addEventListener('submit', async (ev) => {
+                ev.preventDefault();
+                missatge.textContent = '';
+
+                const nomGrup = document.getElementById('nom-grup').value.trim();
+                const portaveu = document.getElementById('portaveu').value;
+                const selectMembres = document.querySelectorAll('.select-membre');
+
+                if (!nomGrup) {
+                    missatge.textContent = 'Posa un nom de grup.';
+                    return;
+                }
+                if (!portaveu) {
+                    missatge.textContent = 'Has de triar un portaveu.';
+                    return;
+                }
+
+                const membres = [portaveu];
+                selectMembres.forEach(sel => {
+                    if (sel.value) membres.push(sel.value);
+                });
+
+                const membresUnics = Array.from(new Set(membres));
+
+                if (membresUnics.length < 2) {
+                    missatge.textContent = 'El grup ha de tenir com a mínim 2 persones (incloent el portaveu).';
+                    return;
+                }
+
+                // Comprovació ràpida al client
+                const jaOcupatsClient = membresUnics.filter(m => usedEmails.has(m));
+                if (jaOcupatsClient.length) {
+                    missatge.textContent = 'Algun membre ja estava assignat a un altre grup. Actualitza la pàgina i torna-ho a provar.';
+                    return;
+                }
+
+                if (!API_URL || API_URL.includes('EL_TEU_ID')) {
+                    missatge.textContent = 'L\'API de grups encara no està configurada (API_URL). Avisa al professorat.';
+                    return;
+                }
+
+                missatge.textContent = 'Enviant dades del grup...';
+
+                try {
+                    const resp = await fetch(API_URL, {
+                        method: 'POST',
+                        // ⚠️ Canvi important: text/plain en lloc d'application/json'
+                        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                        body: JSON.stringify({
+                            nomGrup,
+                            membres: membresUnics
+                        })
+                    });
+
+                    if (!resp.ok) {
+                        throw new Error('Error HTTP en enviar el grup (HTTP ' + resp.status + ').');
+                    }
+
+                    const data = await resp.json();
+
+                    if (!data.ok) {
+                        if (data.error === 'ALUMNES_OCUPATS') {
+                            missatge.textContent = 'No s\'ha pogut registrar el grup: algun membre ja està assignat a un altre grup (algú s\'ha avançat).';
+                        } else {
+                            missatge.textContent = 'Error en registrar el grup. Torna-ho a intentar o avisa al professorat.';
+                        }
+                        return;
+                    }
+
+                    missatge.textContent = 'Grup registrat correctament 🎉. No cal tornar a enviar el formulari.';
+                    form.querySelectorAll('input, select, button').forEach(el => el.disabled = true);
+                } catch (err) {
+                    console.error(err);
+                    missatge.textContent = 'Hi ha hagut un problema en enviar el grup. Revisa la connexió o prova més tard.';
+                }
+            });
+        }
+
+        function pintaGrups(grups) {
+            const tbody = document.getElementById('taula-grups');
+            tbody.innerHTML = '';
+
+            if (!grups || !grups.length) {
+                const tr = document.createElement('tr');
+                const td = document.createElement('td');
+                td.colSpan = 2;
+                td.textContent = 'Encara no hi ha cap grup registrat.';
+                tr.appendChild(td);
+                tbody.appendChild(tr);
+                return;
+            }
+
+            grups.forEach(g => {
+                const tr = document.createElement('tr');
+                const tdNom = document.createElement('td');
+                const tdMembres = document.createElement('td');
+
+                const nom = g.nomGrup || g.nom || '(Grup sense nom)';
+                const membres = Array.isArray(g.membres) ? g.membres : [];
+
+                tdNom.textContent = nom;
+                tdMembres.textContent = membres.join(', ');
+
+                tr.appendChild(tdNom);
+                tr.appendChild(tdMembres);
+                tbody.appendChild(tr);
+            });
+        }
+    </script>
+</body>
+
+</html>
