@@ -28,9 +28,10 @@
     {
       "order": 4,
       "title": "4. Activitat",
-      "src": "slides/activitats/0225-xlo-ae02-protocols.reveal",
-      "description": "Activitat: Presentacions de Protocols (SMX)<br>(<kbd>0225-xlo-ae02-protocols</kbd>)",
-      "status": "active"
+      "src": "slides/activitats/0225-xlo-ae001.reveal",
+      "description": "Presentacio protocols<br>(<kbd>0225-xlo-ae001</kbd>)",
+      "status": "active",
+      "kind":"activity"
     },
     {
       "order": 5,
