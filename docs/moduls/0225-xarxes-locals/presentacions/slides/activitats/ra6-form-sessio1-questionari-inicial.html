@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <title>Qüestionari inicial - Seguretat al muntatge de xarxes</title>
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 900px; margin: 0 auto; padding: 1.5rem; line-height: 1.5; }
+    h1, h2 { color: #333; }
+    fieldset { margin-bottom: 1.5rem; padding: 1rem; border-radius: 6px; border: 1px solid #ccc; }
+    legend { font-weight: bold; padding: 0 0.5rem; }
+    label { display: block; margin: 0.25rem 0; }
+    .likert span { margin-right: 0.75rem; }
+    button { padding: 0.5rem 1rem; font-size: 1rem; }
+    #tmpTools { margin-top: 2rem; padding: 1rem; border: 1px dashed #999; border-radius: 6px; }
+    #tmpTools h2 { margin-top: 0; }
+    input[readonly] { background: #f3f3f3; }
+  </style>
+</head>
+<body>
+  <h1>Qüestionari inicial</h1>
+  <p>
+    Aquest qüestionari <strong>no compta per nota</strong>.  
+    Serveix per saber què ja saps sobre seguretat al muntatge de xarxes.
+  </p>
+
+  <form id="formulari" action="" method="post" onsubmit="return false;">
+    <!-- Dades alumne -->
+    <fieldset>
+      <legend>Dades de l'alumne/a</legend>
+
+      <label for="alumneSelect">
+        Alumne/a:
+        <select id="alumneSelect" required>
+          <option value="">-- Selecciona el teu nom --</option>
+        </select>
+      </label>
+
+      <label for="alumneNom">
+        Nom complet:
+        <input type="text" id="alumneNom" readonly>
+      </label>
+
+      <label for="alumneEmail">
+        Correu del centre:
+        <input type="email" id="alumneEmail" readonly>
+      </label>
+    </fieldset>
+
+    <!-- Pregunta 1 -->
+    <fieldset>
+      <legend>1. Has treballat mai muntant cables o manipulant eines de taller (més enllà de tecnologia a l’ESO)?</legend>
+      <label><input type="radio" name="q1" value="si" required> Sí</label>
+      <label><input type="radio" name="q1" value="no"> No</label>
+      <label><input type="radio" name="q1" value="no_ho_recordo"> No ho recordo</label>
+    </fieldset>
+
+    <!-- Pregunta 2 -->
+    <fieldset>
+      <legend>2. Quan talles un cable de xarxa amb el pelacables, quin risc creus que és més probable?</legend>
+      <label><input type="radio" name="q2" value="tallar_dit" required> Tallar-te un dit</label>
+      <label><input type="radio" name="q2" value="rebre_230v"> Rebre 230V</label>
+      <label><input type="radio" name="q2" value="fer_malbe_cable"> Fer malbé el cable</label>
+      <label><input type="radio" name="q2" value="cap_risc"> Cap risc important</label>
+    </fieldset>
+
+    <!-- Pregunta 3 -->
+    <fieldset>
+      <legend>3. En un taller de xarxes, quins EPI creus que poden ser útils? (pots marcar més d’una opció)</legend>
+      <label><input type="checkbox" name="q3_guants" value="guants"> Guants de protecció</label>
+      <label><input type="checkbox" name="q3_ulleres" value="ulleres"> Ulleres de protecció</label>
+      <label><input type="checkbox" name="q3_casc" value="casc"> Casc</label>
+      <label><input type="checkbox" name="q3_taps" value="taps"> Taps per les orelles</label>
+      <label><input type="checkbox" name="q3_calcat" value="calcat"> Calçat de seguretat</label>
+      <label><input type="checkbox" name="q3_cap" value="cap"> Cap d’aquests</label>
+    </fieldset>
+
+    <!-- Pregunta 4 -->
+    <fieldset>
+      <legend>4. “Pots caminar pel taller sense mirar gaire a terra i no passa res”.</legend>
+      <p>Marca com estàs d’acord amb aquesta frase (1 = Totalment en desacord, 5 = Totalment d’acord).</p>
+      <div class="likert">
+        <span><label><input type="radio" name="q4" value="1" required> 1</label></span>
+        <span><label><input type="radio" name="q4" value="2"> 2</label></span>
+        <span><label><input type="radio" name="q4" value="3"> 3</label></span>
+        <span><label><input type="radio" name="q4" value="4"> 4</label></span>
+        <span><label><input type="radio" name="q4" value="5"> 5</label></span>
+      </div>
+    </fieldset>
+
+    <!-- Pregunta 5 -->
+    <fieldset>
+      <legend>5. Trobes un cable pel terra travessant una zona de pas. Què faries?</legend>
+      <label><input type="radio" name="q5" value="el_salto" required> El salto i prou</label>
+      <label><input type="radio" name="q5" value="aviso_profe"> L’aviso al professor/a</label>
+      <label><input type="radio" name="q5" value="recullo_o_aviso"> El recullo o ho aviso perquè ho recullin</label>
+      <label><input type="radio" name="q5" value="el_deixo"> El deixo tal com està</label>
+    </fieldset>
+
+    <!-- Pregunta 6 -->
+    <fieldset>
+      <legend>6. Un switch vell que ja no funciona, on creus que s’ha de llençar?</legend>
+      <label><input type="radio" name="q6" value="escombraries_normals" required> Escombraries normals</label>
+      <label><input type="radio" name="q6" value="punt_verd"> Punt verd / contenidor RAEE</label>
+      <label><input type="radio" name="q6" value="plastic"> Contenidor de plàstic</label>
+      <label><input type="radio" name="q6" value="no_ho_se"> No ho sé</label>
+    </fieldset>
+
+    <!-- Pregunta 7 -->
+    <fieldset>
+      <legend>7. Si un company es fa un tall lleu amb una eina, què creus que és el primer que s’ha de fer?</legend>
+      <label><input type="radio" name="q7" value="netejar" required> Netegar la ferida immediatament</label>
+      <label><input type="radio" name="q7" value="avisar_profe"> Avisar el professor/a</label>
+      <label><input type="radio" name="q7" value="ignorar"> Ignorar-ho, ja se li passarà</label>
+      <label><input type="radio" name="q7" value="tireta_pel_teu_compte"> Buscar una tireta pel teu compte sense avisar ningú</label>
+    </fieldset>
+
+    <!-- Pregunta 8 -->
+    <fieldset>
+      <legend>8. Escriu una situació al taller que et faci respecte o on creus que et podries fer mal.</legend>
+      <textarea name="q8" rows="3" cols="60" placeholder="Ex.: pujar a una escala alta, tallar cables amb pressa, etc."></textarea>
+    </fieldset>
+  </form>
+
+  <section id="tmpTools">
+    <h2>Desar / carregar el qüestionari</h2>
+    <p>
+      1) Omple el formulari i selecciona el teu nom.<br>
+      2) Prem <strong>Descarrega .tmp</strong> o <strong>Descarrega .json</strong> per desar l’arxiu de lliurament.<br>
+      3) Pots tornar a carregar el teu .tmp amb el selector de fitxer per comprovar-lo.
+    </p>
+    <p>
+      <button type="button" id="btnGuardarTmp">Descarrega .tmp</button>
+      <button type="button" id="btnGuardarJson">Descarrega .json (Moodle)</button>
+    </p>
+    <p>
+      <label for="inputTmp">Carrega un fitxer .tmp:</label>
+      <input type="file" id="inputTmp" accept=".tmp,application/json">
+    </p>
+  </section>
+
+  <script>
+    const ACTIVITY_ID = 'RA6-S1-QI';
+    const SALT = 'ra6_sessio1_prl_2025_X3g!7';
+
+    async function computeHash(baseObject) {
+      const canonical = JSON.stringify(baseObject);
+      const encoder = new TextEncoder();
+      const data = encoder.encode(canonical + SALT);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    function collectAnswers() {
+      const form = document.getElementById('formulari');
+      const fd = new FormData(form);
+      const answers = {};
+      fd.forEach((value, key) => {
+        if (!key.startsWith('q')) return;
+        if (answers[key] === undefined) {
+          answers[key] = value;
+        } else {
+          if (!Array.isArray(answers[key])) {
+            answers[key] = [answers[key]];
+          }
+          answers[key].push(value);
+        }
+      });
+      return answers;
+    }
+
+    async function loadAlumnes() {
+      const select = document.getElementById('alumneSelect');
+      try {
+        const res = await fetch('./alumnes/dades_alumnes.json');
+        if (!res.ok) throw new Error('No es pot carregar dades_alumnes.json');
+        const data = await res.json();
+        const llistes = Array.isArray(data.alumnes) ? data.alumnes : [];
+        const tots = llistes.flat();
+        tots.forEach(alumne => {
+          if (!alumne || !alumne.email) return;
+          const nomComplet = (alumne.firstname + ' ' + alumne.lastname).trim();
+          const opt = document.createElement('option');
+          opt.value = alumne.email;
+          opt.textContent = nomComplet + ' (' + alumne.email + ')';
+          opt.dataset.nom = nomComplet;
+          select.appendChild(opt);
+        });
+      } catch (err) {
+        console.error(err);
+        alert('Error carregant el llistat d\'alumnes. Revisa la ruta ./alumnes/dades_alumnes.json');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const select = document.getElementById('alumneSelect');
+      const nomInput = document.getElementById('alumneNom');
+      const emailInput = document.getElementById('alumneEmail');
+
+      loadAlumnes();
+
+      select.addEventListener('change', () => {
+        const opt = select.selectedOptions[0];
+        if (!opt || !opt.value) {
+          nomInput.value = '';
+          emailInput.value = '';
+          return;
+        }
+        nomInput.value = opt.dataset.nom || '';
+        emailInput.value = opt.value;
+      });
+
+      async function construirPayload() {
+        const nom = nomInput.value.trim();
+        const email = emailInput.value.trim();
+        if (!nom || !email) {
+          alert('Cal seleccionar l\'alumne/a abans de desar el fitxer');
+          return null;
+        }
+
+        const answers = collectAnswers();
+        const base = {
+          activityId: ACTIVITY_ID,
+          nom: nom,
+          email: email,
+          timestamp: new Date().toISOString(),
+          answers: answers
+        };
+
+        try {
+          const hash = await computeHash(base);
+          const payload = Object.assign({}, base, { hash: hash });
+          const emailId = email.replace(/@.*/, '').replace(/[^a-zA-Z0-9._-]/g, '');
+          return { payload, emailId };
+        } catch (err) {
+          console.error(err);
+          alert('Error generant el hash del fitxer');
+          return null;
+        }
+      }
+
+      document.getElementById('btnGuardarTmp').addEventListener('click', async () => {
+        const result = await construirPayload();
+        if (!result) return;
+        const { payload, emailId } = result;
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = ACTIVITY_ID + '_' + emailId + '.tmp';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(a.href);
+      });
+
+      document.getElementById('btnGuardarJson').addEventListener('click', async () => {
+        const result = await construirPayload();
+        if (!result) return;
+        const { payload, emailId } = result;
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = ACTIVITY_ID + '_' + emailId + '.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(a.href);
+      });
+
+      document.getElementById('inputTmp').addEventListener('change', (evt) => {
+        const file = evt.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = async (e) => {
+          try {
+            const text = e.target.result;
+            const loaded = JSON.parse(text);
+            if (!loaded.hash) {
+              alert('El fitxer no conté cap hash. Pot estar manipulat.');
+              return;
+            }
+
+            const storedHash = loaded.hash;
+            const base = Object.assign({}, loaded);
+            delete base.hash;
+
+            const expectedHash = await computeHash(base);
+            if (storedHash !== expectedHash) {
+              alert('ATENCIÓ: el fitxer sembla haver estat modificat (hash incorrecte).');
+              return;
+            }
+
+            if (base.activityId !== ACTIVITY_ID) {
+              alert('Aquest fitxer no correspon a aquest qüestionari.');
+              return;
+            }
+
+            const emailTmp = base.email;
+            const emailActual = emailInput.value.trim();
+
+            if (emailActual && emailActual !== emailTmp) {
+              alert('El correu seleccionat no coincideix amb el correu del fitxer');
+              return;
+            }
+
+            // Seleccionar alumne al desplegable, si existeix
+            let matchedOption = null;
+            Array.from(select.options).forEach(opt => {
+              if (opt.value === emailTmp) matchedOption = opt;
+            });
+            if (matchedOption) {
+              select.value = emailTmp;
+              nomInput.value = matchedOption.dataset.nom || base.nom || '';
+              emailInput.value = emailTmp;
+            } else {
+              nomInput.value = base.nom || '';
+              emailInput.value = emailTmp;
+            }
+
+            // Omplir respostes
+            const form = document.getElementById('formulari');
+            const answers = base.answers || {};
+            Object.entries(answers).forEach(([key, value]) => {
+              const els = form.querySelectorAll('[name="' + key + '"]');
+              if (!els.length) return;
+
+              if (Array.isArray(value)) {
+                els.forEach(el => {
+                  if (el.type === 'checkbox' || el.type === 'radio') {
+                    el.checked = value.includes(el.value);
+                  }
+                });
+              } else {
+                const el0 = els[0];
+                if (el0.type === 'radio') {
+                  els.forEach(el => { el.checked = (el.value === value); });
+                } else if (el0.type === 'checkbox') {
+                  els.forEach(el => { el.checked = (el.value === value); });
+                } else if (el0.tagName === 'TEXTAREA' || el0.type === 'text' || el0.type === 'number') {
+                  el0.value = value;
+                }
+              }
+            });
+
+            // Bloquegem el canvi d'alumne per evitar "suplantacions"
+            select.disabled = true;
+
+            alert('Fitxer carregat i verificat correctament.');
+          } catch (err) {
+            console.error(err);
+            alert('Error en llegir o validar el fitxer');
+          }
+        };
+        reader.readAsText(file);
+      });
+    });
+  </script>
+</body>
+</html>
