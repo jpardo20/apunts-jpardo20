@@ -38,6 +38,13 @@
       "src": "slides/protocols.reveal",
       "description": "Protocols",
       "status": "active"
+    },
+    {
+      "order": 56,
+      "title": "PRL i EPI al taller de xarxes",
+      "src": "slides/ra6-sessio1-questionari-pluja.reveal",
+      "description": "PRL i EPI al taller de xarxes",
+      "status": "active"
     }
     
 
