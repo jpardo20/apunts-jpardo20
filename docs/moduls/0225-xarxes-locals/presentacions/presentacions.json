@@ -46,6 +46,14 @@
       "src": "slides/ra6-sessio1-questionari-pluja.reveal",
       "description": "PRL i EPI al taller de xarxes",
       "status": "active"
+    },
+    {
+      "order": 4,
+      "title": "ae001 Activitat Protocols, IP i màscares",
+      "src": "slides/0225-xlo-ae003-protocols-i-mascares.reveal",
+      "description": "Activitat Protocols, IP i màscares<br><kbd>0225-xlo-ae001",
+      "status": "active",
+      "kind":"activity"
     }
     
     
