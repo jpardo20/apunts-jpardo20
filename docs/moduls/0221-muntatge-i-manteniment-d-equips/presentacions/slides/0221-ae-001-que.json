@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "activitat": "0221_electricitat",
+    "versio": "0221-ae-001",
+    "titol": "Electricitat — Mesura i fonts"
+  },
+  "mostra_nota_html": true,
+  "preguntes": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Quina magnitud es mesura en volts (V)?",
+      "options": [
+        "Intensitat",
+        "Resistència",
+        "Tensió",
+        "Potència"
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "multi",
+      "prompt": "Selecciona bones pràctiques amb el multímetre:",
+      "options": [
+        "Mesurar intensitat en paral·lel",
+        "Mesurar tensió en paral·lel",
+        "Començar per l’escala més alta",
+        "Manipular en tensió"
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "match",
+      "prompt": "Relaciona el rail ATX amb la seva funció probable (a/b/c)",
+      "pairs": [
+        {
+          "left": "+12V",
+          "choices": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "left": "+5V",
+          "choices": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "left": "+3.3V",
+          "choices": [
+            "a",
+            "b",
+            "c"
+          ]
+        }
+      ],
+      "legend": {
+        "a": "Motors/PCIe/CPU VRM",
+        "b": "Lògica antiga/USB2",
+        "c": "Xips moderns/slots"
+      }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "PS_ON# a l’ATX és…",
+      "options": [
+        "Senyal per encendre la font des de la placa",
+        "Una línia de +5VSB",
+        "El senyal de PWR_OK",
+        "Un fusible"
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "short",
+      "prompt": "Escriu una bona pràctica de seguretat en treballs elèctrics (resposta breu).",
+      "maxlength": 200
+    }
+  ]
+}

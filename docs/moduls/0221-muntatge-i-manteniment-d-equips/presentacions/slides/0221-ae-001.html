@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activitat</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,sans-serif;max-width:900px;margin:auto;padding:1.5rem;}
+    header{display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin-bottom:1rem}
+    h1{font-size:1.4rem;margin:.2rem 0}
+    .card{border:1px solid #e5e7eb;border-radius:12px;padding:1rem;margin:.75rem 0}
+    .row{display:flex;gap:1rem;flex-wrap:wrap}
+    label{display:block;margin:.25rem 0}
+    .note{color:#64748b}
+    button{padding:.6rem 1rem;border-radius:10px;border:1px solid #cbd5e1;background:#0f172a;color:white;cursor:pointer}
+    select,input,textarea{width:100%;padding:.5rem;border-radius:8px;border:1px solid #cbd5e1}
+    input[type="radio"],input[type="checkbox"]{width:auto;padding:0;border:none;border-radius:0;margin-right:.5rem}
+    textarea{min-height:80px}
+    .ok{color:#065f46}.warn{color:#92400e}.err{color:#991b1b}
+    code{background:#f8fafc;padding:0 .25rem;border-radius:4px}
+  </style>
+</head>
+<body>
+<header>
+  <div>
+    <h1 id="titol">Activitat</h1>
+    <div class="note"><span id="meta_id"></span> · Versió <span id="meta_ver"></span></div>
+  </div>
+  <!-- <div>
+    <a href="../../tasques.html">← Índex activitats</a>
+  </div> -->
+</header>
+
+<section class="card">
+  <div class="row">
+    <div style="flex:2 1 420px">
+      <label>Selecciona el teu nom (roster Moodle)</label>
+      <select id="alumne_sel"></select>
+      
+    </div>
+    <!-- <div style="flex:1 1 220px">
+      <label>Grup (opcional)</label>
+      <input id="grup" placeholder="SMX1A / SMX1B">
+      <div class="note" style="margin-top:.5rem">L'ID d'alumne és el correu.</div>
+    </div> -->
+  </div>
+</section>
+
+<form id="formq"></form>
+
+<section class="card">
+  <div id="feedback" class="note">Respon totes les preguntes i prem «Genera lliurable».</div>
+  <div style="margin-top:.5rem" class="row">
+    <button id="btn_json" type="button">Genera lliurable (.json)</button>
+  </div>
+</section>
+
+<script>
+async function loadJSON(u){ const r = await fetch(u); return await r.json(); }
+function sha1hex(s){ const enc = new TextEncoder().encode(s); return crypto.subtle.digest('SHA-1', enc).then(b=>[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')); }
+function emailFromSelect(){
+  const sel = document.getElementById('alumne_sel');
+  return (sel.value || "").trim();
+}
+function nameFromSelect(){
+  const sel = document.getElementById('alumne_sel');
+  if (!sel.value) return "";
+  const opt = sel.selectedOptions[0];
+  return (opt && opt.dataset && opt.dataset.name) ? opt.dataset.name : "";
+}
+function attemptsKey(DEF){ return `attempts:${DEF.meta.activitat}:${emailFromSelect()}`; }
+
+function renderQuestions(DEF){
+  document.getElementById("titol").textContent = DEF.meta.titol || "Activitat";
+  document.getElementById("meta_id").textContent = DEF.meta.activitat;
+  document.getElementById("meta_ver").textContent = DEF.meta.versio || "1.0";
+  const form = document.getElementById("formq"); form.innerHTML="";
+  DEF.preguntes.forEach((q, idx)=>{
+    const wrap = document.createElement("section"); wrap.className="card";
+    const h = document.createElement("h3"); h.textContent = (idx+1)+". "+q.prompt; wrap.appendChild(h);
+    if(q.type==="single"){
+      q.options.forEach((opt,i)=> wrap.insertAdjacentHTML("beforeend", `<label><input type="radio" name="${q.id}" value="${i}"> ${opt}</label>`));
+    }else if(q.type==="multi"){
+      q.options.forEach((opt,i)=> wrap.insertAdjacentHTML("beforeend", `<label><input type="checkbox" name="${q.id}" value="${i}"> ${opt}</label>`));
+    }else if(q.type==="match"){
+      if(q.legend){ wrap.insertAdjacentHTML("beforeend", "<div class='note'><b>Llegenda</b>: "+Object.entries(q.legend).map(([k,v])=>`<code>${k}</code>: ${v}`).join(" · ")+"</div>"); }
+      q.pairs.forEach(p=> wrap.insertAdjacentHTML("beforeend", `<label>${p.left}: <select name="${q.id}:${p.left}">`+p.choices.map(c=>`<option value="${c}">${c}</option>`).join("")+`</select></label>`));
+    }else if(q.type==="short"){
+      wrap.insertAdjacentHTML("beforeend", `<textarea name="${q.id}" maxlength="${q.maxlength||200}" placeholder="Resposta breu..."></textarea>`);
+    }
+    form.appendChild(wrap);
+  });
+}
+function getAnswers(DEF){
+  const data = {};
+  DEF.preguntes.forEach(q=>{
+    if(q.type==="single"){
+      const v = document.querySelector(`input[name="${q.id}"]:checked`); data[q.id] = v ? parseInt(v.value) : null;
+    }else if(q.type==="multi"){
+      data[q.id] = [...document.querySelectorAll(`input[name="${q.id}"]:checked`)].map(el=>parseInt(el.value));
+    }else if(q.type==="match"){
+      const out = {}; q.pairs.forEach(p=>{ const sel=document.querySelector(`select[name="${q.id}:${p.left}"]`); out[p.left] = sel?sel.value:null; }); data[q.id] = out;
+    }else if(q.type==="short"){
+      const ta = document.querySelector(`textarea[name="${q.id}"]`); data[q.id] = (ta?.value||"").trim();
+    }
+  }); return data;
+}
+function score(DEF, KEY, answers){
+  const weights = KEY.avaluacio?.ponderacions || {};
+  let totalW=0, score=0;
+  DEF.preguntes.forEach(q=>{
+    const w = (typeof weights[q.id]==="number")?weights[q.id]:1; totalW+=w;
+    const corr = KEY.respostes_correctes[q.id]; const ans = answers[q.id];
+    if(q.type==="single"){ if(ans!==null && ans===corr) score+=w; }
+    else if(q.type==="multi"){ if(Array.isArray(ans)&&Array.isArray(corr)){ const ok = ans.length===corr.length && ans.every(v=>corr.includes(v)); if(ok) score+=w; } }
+    else if(q.type==="match"){ const keys=Object.keys(corr||{}); const ok = keys.every(k=>ans&&ans[k]===corr[k]); if(ok) score+=w; }
+    else if(q.type==="short"){
+      const kw = KEY.avaluacio?.rubriques_q5 || {};
+      const text = (ans||"").toLowerCase();
+      let good=false; if(q.id in kw){ const arr=kw[q.id]; good = Array.isArray(arr)&&arr.some(k=>text.includes(k)); } else { good = text.length>5; }
+      if(good) score+=w;
+    }
+  });
+  const grade10 = totalW ? Math.round((score/totalW)*1000)/100 : 0;
+  return {score,totalW,grade10};
+}
+function penalized(grade, DEF){
+  const penal = Number(localStorage.getItem('penalitzacio') || "0.10");
+  let attempts = Number(localStorage.getItem(attemptsKey(DEF)) || "0");
+  attempts += 1; localStorage.setItem(attemptsKey(DEF), String(attempts));
+  const factor = Math.max(0, 1 - penal*(attempts-1));
+  return {attempt_index: attempts, factor, shown: attempts>1? Math.round(grade*factor)/1 : grade};
+}
+
+let DEF, KEY, ROSTER;
+async function init(){
+  [DEF, KEY, ROSTER] = await Promise.all([
+    loadJSON("0221-ae-001-que.json"),
+    loadJSON("0221-ae-001-ans.json"),
+    loadJSON("../alumnes/dades_alumnes.json").catch(()=>({alumnes:[[]]}))
+  ]);
+  renderQuestions(DEF);
+  const sel = document.getElementById('alumne_sel');
+  sel.innerHTML = '<option value="">-- Tria el teu nom --</option>';
+  (ROSTER.alumnes?.[0]||[]).forEach(st=>{
+    const opt = document.createElement('option');
+    opt.value = st.email; opt.textContent = `${st.lastname}, ${st.firstname} — ${st.email}`; opt.dataset.name = `${st.firstname} ${st.lastname}`; sel.appendChild(opt);
+  });
+}
+init();
+
+document.getElementById('btn_json').addEventListener('click', async ()=>{
+  const answers = getAnswers(DEF);
+  const {grade10} = score(DEF, KEY, answers);
+  const {attempt_index, factor, shown} = penalized(grade10, DEF);
+  const email = emailFromSelect(); const nom = nameFromSelect();
+  if(!email){ document.getElementById('feedback').innerHTML = '<span class="err">Falta el correu.</span>'; return; }
+  const now = new Date().toISOString();
+  const payload = {
+    meta: { activitat: DEF.meta.activitat, versio: DEF.meta.versio||"1.0", timestamp: now, attempt_index },
+    alumne: { email, firstname: nom.split(' ')[0]||"", lastname: nom.split(' ').slice(1).join(' '), grup: "" },
+    respostes: answers
+  };
+  const txt = JSON.stringify(payload); const checksum = await sha1hex(txt); payload.checksum = checksum;
+  const email_hash = (await sha1hex(email)).slice(0,8);
+  const fname = `SMX-${DEF.meta.activitat}_${(payload.alumne.lastname||'').replace(/\\s+/g,'')}_${(payload.alumne.firstname||'')}_${email_hash}_${checksum.slice(0,8)}.json`;
+  const blob = new Blob([JSON.stringify(payload,null,2)], {type:'application/json'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = fname; a.click();
+  const msg = attempt_index>1 ? `Nota (amb penalització ${Math.round(factor*100)}%): <b>${shown}</b> / 10` : `Nota (bruta): <b>${shown}</b> / 10`;
+  document.getElementById('feedback').innerHTML = `<span class="ok">Lliurable generat.</span> ${msg} · <span class="note">La nota oficial es calcula amb el corrector.</span>`;
+});
+</script>
+</body>
+</html>

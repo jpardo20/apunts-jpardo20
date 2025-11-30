@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "activitat": "0221_electricitat",
+    "versio": "0221-ae-001"
+  },
+  "avaluacio": {
+    "ponderacions": {
+      "q1": 1,
+      "q2": 2,
+      "q3": 3,
+      "q4": 1,
+      "q5": 3
+    },
+    "rubriques_q5": {
+      "q5": [
+        "desconnect",
+        "tallar corrent",
+        "antielectrost",
+        "polsera",
+        "descàrrega",
+        "no manipular en tensio",
+        "esd",
+        "eines adequades"
+      ]
+    }
+  },
+  "respostes_correctes": {
+    "q1": 2,
+    "q2": [
+      1,
+      2
+    ],
+    "q3": {
+      "+12V": "a",
+      "+5V": "b",
+      "+3.3V": "c"
+    },
+    "q4": 0
+  }
+}
