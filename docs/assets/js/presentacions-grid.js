@@ -40,7 +40,7 @@
 
       const badgeKind = isActivity
         ? `<span class="badge badge--activity">Activitat</span>`
-        : '';
+        : `<span class="badge badge--theory">Teoria</span>`;
 
       let button;
       if (status === 'inactive') {
@@ -48,7 +48,7 @@
       } else {
         const buttonClass = isActivity ? 'button activitat' : 'button primary';
         const buttonText = isActivity ? 'Obrir activitat' : 'Obrir presentació';
-        const target = item.href ? ' target="_blank" rel="noopener noreferrer"' : ' target="_blank"';
+        const target = item.href ? ' target="_blank" rel="noopener noreferrer"' : '';
         button = `<a class="${buttonClass}" href="${href}"${target}>${buttonText}</a>`;
       }
 
@@ -56,8 +56,9 @@
         ${badgeStatus} ${badgeKind}
         <h2>${title}</h2>
         ${desc}
-        <p>${button}</p>
+        <p class="card__actions">${button}</p>
       </article>`;
+
     }
 
     function render(list) {
