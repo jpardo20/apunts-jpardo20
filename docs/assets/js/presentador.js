@@ -6,8 +6,8 @@
       const vsep  = params.get('vsep');
       const nsep  = params.get('notes');
 
-      document.title = title;
-      document.getElementById('topbar-title').textContent = title;
+    //   document.title = title;
+    //   document.getElementById('topbar-title').textContent = title;
       if (theme) document.getElementById('theme').href = `https://unpkg.com/reveal.js/dist/theme/${theme}.css`;
       const sec = document.getElementById('md-section');
       if (src) sec.setAttribute('data-markdown', src);
