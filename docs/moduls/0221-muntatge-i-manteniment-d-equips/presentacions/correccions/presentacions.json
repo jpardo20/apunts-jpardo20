@@ -1,0 +1,362 @@
+{
+  "meta": {
+    "rubric": {
+      "group": [
+        {
+          "code": "C1",
+          "label": "Contingut tècnic",
+          "weight": 40,
+          "desc": "<strong>0</strong> = erroni/superficial&nbsp;&nbsp;|&nbsp;&nbsp;<strong>5</strong> = correcte bàsic&nbsp;&nbsp;|&nbsp;&nbsp;<strong>10</strong> = excel·lent i rigorós"
+        },
+        {
+          "code": "C2",
+          "label": "Claredat i estructura",
+          "weight": 20,
+          "desc": "<strong>0</strong> =  caòtic&nbsp;&nbsp;|&nbsp;&nbsp;<strong>5</strong> = ordenat però millorable&nbsp;&nbsp;|&nbsp;&nbsp;<strong>10</strong> = molt ben estructurat"
+        },
+        {
+          "code": "C3",
+          "label": "Comunicació (veu, ritme)",
+          "weight": 15,
+          "desc": "<strong>0</strong> =  molt pobre&nbsp;&nbsp;|&nbsp;&nbsp;<strong>5</strong> = acceptable&nbsp;&nbsp;|&nbsp;&nbsp;<strong>10</strong> = clar i convincent"
+        },
+        {
+          "code": "C4",
+          "label": "Suport visual/demos",
+          "weight": 15,
+          "desc": "<strong>0</strong> =  inadequat&nbsp;&nbsp;|&nbsp;&nbsp;<strong>5</strong> = adequat&nbsp;&nbsp;|&nbsp;&nbsp;<strong>10</strong> = molt bo i coherent"
+        },
+        {
+          "code": "C5",
+          "label": "Temps i preguntes",
+          "weight": 10,
+          "desc": "<strong>0</strong> =  malament&nbsp;&nbsp;|&nbsp;&nbsp;<strong>5</strong> = millorable&nbsp;&nbsp;|&nbsp;&nbsp;<strong>10</strong> = perfecte"
+        }
+      ],
+      "individual": [
+        {
+          "code": "I1",
+          "label": "Domini tècnic de la seva part",
+          "weight": 50,
+          "desc": "<strong>0</strong> = no sap explicar-ho&nbsp;&nbsp;|&nbsp;&nbsp;<strong>5</strong> = coneix bàsic&nbsp;&nbsp;|&nbsp;&nbsp;<strong>10</strong> = domini profund"
+        },
+        {
+          "code": "I2",
+          "label": "Expressió i comunicació",
+          "weight": 30,
+          "desc": "<strong>0</strong> = confús&nbsp;&nbsp;|&nbsp;&nbsp;<strong>5</strong> = acceptable&nbsp;&nbsp;|&nbsp;&nbsp;<strong>10</strong> = molt clar"
+        },
+        {
+          "code": "I3",
+          "label": "Interacció i respostes",
+          "weight": 20,
+          "desc": "<strong>0</strong> = no respon&nbsp;&nbsp;|&nbsp;&nbsp;<strong>5</strong> = respon parcial&nbsp;&nbsp;|&nbsp;&nbsp;<strong>10</strong> = respon amb criteri"
+        }
+      ]
+    },
+    "curs": "2025-2026",
+    "promocio": "SMX-2025-2027",
+    "centre": "Digitechfp",
+    "generated_at": "2025-11-04T11:16:03.673+01:00"
+  },
+  "rater": {
+    "firstname": "Joan",
+    "lastname": "Pardo",
+    "email": "jpardo20@digitechfp.com",
+    "group": ""
+  },
+  "evaluations": [
+    {
+      "group": "Grup 1",
+      "group_rubric": [
+        {
+          "code": "C1",
+          "label": "Contingut tècnic",
+          "weight": 40,
+          "score": 8
+        },
+        {
+          "code": "C2",
+          "label": "Claredat i estructura",
+          "weight": 20,
+          "score": 8
+        },
+        {
+          "code": "C3",
+          "label": "Comunicació (veu, ritme)",
+          "weight": 15,
+          "score": 7
+        },
+        {
+          "code": "C4",
+          "label": "Suport visual/demos",
+          "weight": 15,
+          "score": 5
+        },
+        {
+          "code": "C5",
+          "label": "Temps i preguntes",
+          "weight": 10,
+          "score": 5
+        }
+      ],
+      "group_total_weighted": 7.1,
+      "group_comment": "",
+      "individuals": [
+        {
+          "name": "Pau",
+          "rubric": [
+            {
+              "code": "I1",
+              "label": "Domini tècnic de la seva part",
+              "weight": 50,
+              "score": 8
+            },
+            {
+              "code": "I2",
+              "label": "Expressió i comunicació",
+              "weight": 30,
+              "score": 5
+            },
+            {
+              "code": "I3",
+              "label": "Interacció i respostes",
+              "weight": 20,
+              "score": 7
+            }
+          ],
+          "total_weighted": 6.9,
+          "comment": "llegeix massa\nRAM emmagatzemmatge????\nQuè volsdir HDD i SSD?\nHDD diferet¡nt WD"
+        },
+        {
+          "name": "Clemente",
+          "rubric": [
+            {
+              "code": "I1",
+              "label": "Domini tècnic de la seva part",
+              "weight": 50,
+              "score": 7
+            },
+            {
+              "code": "I2",
+              "label": "Expressió i comunicació",
+              "weight": 30,
+              "score": 5
+            },
+            {
+              "code": "I3",
+              "label": "Interacció i respostes",
+              "weight": 20,
+              "score": 5
+            }
+          ],
+          "total_weighted": 6,
+          "comment": "parla molt fliux i no mira gaire al public, llegeix massa\nHas paralat de plaques base per portaitlss? NO"
+        }
+      ]
+    },
+    {
+      "group": "Grup 2",
+      "group_rubric": [
+        {
+          "code": "C1",
+          "label": "Contingut tècnic",
+          "weight": 40,
+          "score": 7
+        },
+        {
+          "code": "C2",
+          "label": "Claredat i estructura",
+          "weight": 20,
+          "score": 7
+        },
+        {
+          "code": "C3",
+          "label": "Comunicació (veu, ritme)",
+          "weight": 15,
+          "score": 7
+        },
+        {
+          "code": "C4",
+          "label": "Suport visual/demos",
+          "weight": 15,
+          "score": 8
+        },
+        {
+          "code": "C5",
+          "label": "Temps i preguntes",
+          "weight": 10,
+          "score": 7
+        }
+      ],
+      "group_total_weighted": 7.15,
+      "group_comment": "no se han presentado",
+      "individuals": [
+        {
+          "name": "Merouan",
+          "rubric": [
+            {
+              "code": "I1",
+              "label": "Domini tècnic de la seva part",
+              "weight": 50,
+              "score": 7
+            },
+            {
+              "code": "I2",
+              "label": "Expressió i comunicació",
+              "weight": 30,
+              "score": 7
+            },
+            {
+              "code": "I3",
+              "label": "Interacció i respostes",
+              "weight": 20,
+              "score": 8
+            }
+          ],
+          "total_weighted": 7.2,
+          "comment": "Lee demasiado\nChipset microprocessador ??? --> chipset connecta micro i ram"
+        },
+        {
+          "name": "Kristina",
+          "rubric": [
+            {
+              "code": "I1",
+              "label": "Domini tècnic de la seva part",
+              "weight": 50,
+              "score": 7
+            },
+            {
+              "code": "I2",
+              "label": "Expressió i comunicació",
+              "weight": 30,
+              "score": 7
+            },
+            {
+              "code": "I3",
+              "label": "Interacció i respostes",
+              "weight": 20,
+              "score": 5
+            }
+          ],
+          "total_weighted": 6.6,
+          "comment": "Lee demasiado\nVelocidad MHz?\nCanales?"
+        }
+      ]
+    },
+    {
+      "group": "Grup 3",
+      "group_rubric": [
+        {
+          "code": "C1",
+          "label": "Contingut tècnic",
+          "weight": 40,
+          "score": 8
+        },
+        {
+          "code": "C2",
+          "label": "Claredat i estructura",
+          "weight": 20,
+          "score": 8
+        },
+        {
+          "code": "C3",
+          "label": "Comunicació (veu, ritme)",
+          "weight": 15,
+          "score": 7
+        },
+        {
+          "code": "C4",
+          "label": "Suport visual/demos",
+          "weight": 15,
+          "score": 7
+        },
+        {
+          "code": "C5",
+          "label": "Temps i preguntes",
+          "weight": 10,
+          "score": 8
+        }
+      ],
+      "group_total_weighted": 7.7,
+      "group_comment": "",
+      "individuals": [
+        {
+          "name": "Lorena",
+          "rubric": [
+            {
+              "code": "I1",
+              "label": "Domini tècnic de la seva part",
+              "weight": 50,
+              "score": 8
+            },
+            {
+              "code": "I2",
+              "label": "Expressió i comunicació",
+              "weight": 30,
+              "score": 8
+            },
+            {
+              "code": "I3",
+              "label": "Interacció i respostes",
+              "weight": 20,
+              "score": 8
+            }
+          ],
+          "total_weighted": 8,
+          "comment": "no lee, \ni7 es siempere mejora que un i5?\nMicro ARP??"
+        },
+        {
+          "name": "Joao",
+          "rubric": [
+            {
+              "code": "I1",
+              "label": "Domini tècnic de la seva part",
+              "weight": 50,
+              "score": 8
+            },
+            {
+              "code": "I2",
+              "label": "Expressió i comunicació",
+              "weight": 30,
+              "score": 8
+            },
+            {
+              "code": "I3",
+              "label": "Interacció i respostes",
+              "weight": 20,
+              "score": 8
+            }
+          ],
+          "total_weighted": 8,
+          "comment": "Refrigeración solo para alragatr la vida?\nkquido ventaja solo el pc?"
+        },
+        {
+          "name": "Marc",
+          "rubric": [
+            {
+              "code": "I1",
+              "label": "Domini tècnic de la seva part",
+              "weight": 50,
+              "score": 8
+            },
+            {
+              "code": "I2",
+              "label": "Expressió i comunicació",
+              "weight": 30,
+              "score": 7
+            },
+            {
+              "code": "I3",
+              "label": "Interacció i respostes",
+              "weight": 20,
+              "score": 8
+            }
+          ],
+          "total_weighted": 7.7,
+          "comment": "Nerviós, no llegeuix, gi8ó ok!"
+        }
+      ]
+    }
+  ]
+}
