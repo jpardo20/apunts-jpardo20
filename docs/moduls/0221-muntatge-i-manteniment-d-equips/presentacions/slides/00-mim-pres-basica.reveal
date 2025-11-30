@@ -9,22 +9,20 @@
 Note:
 Objectius: entendre magnituds elèctriques bàsiques, fonts ATX i SAI; PRL i medi ambient. Identificar unitats funcionals, placa base i perifèrics. Hi ha activitats amb correcció automàtica en cada bloc.
 
----
+----
 # Electricitat a l’ordinador
 ### Mesures elèctriques i fonts d’alimentació
 
 <p align="center">
-  <img src="./assets/icona-sobretaula-simbols-electrics.png" alt="Esquema voltímetre" width="300">
+  <img src="../../../assets/img/mim/icona-sobretaula-simbols-electrics.png" alt="Esquema voltímetre" width="300">
 </p>
-
-<!-- [IMATGE: icona estil pla d’un ordinador de sobretaula amb símbols elèctrics (llamp, V, A, Ω) flotant al voltant] -->
 
 Note:
 Aquest bloc ens introdueix a l’electricitat aplicada als ordinadors.  
 La idea és que entengueu com funcionen les fonts d’alimentació i com utilitzar el multímetre per mesurar tensions i intensitats.  
 És la base per després poder diagnosticar errors de maquinari: si un ordinador no encén, moltes vegades el problema és d’alimentació.  
 
---
+----
 
 ## Magnituds elèctriques bàsiques
 - **Tensió (V):** diferència de potencial
@@ -34,7 +32,7 @@ La idea és que entengueu com funcionen les fonts d’alimentació i com utilitz
 - Exemple: bombeta 12V, 5W
 
 <p align="center">
-  <img src="./assets/esquema-voltiemtre.png" alt="Esquema voltímetre" width="300">
+  <img src="../../../assets/img/mim/esquema-voltiemtre.png" alt="Esquema voltímetre" width="300">
 </p>
 
 <!-- [IMATGE: esquema senzill amb una bateria de 12V connectada a una resistència/bombeta i un voltímetre en paral·lel] -->
@@ -46,7 +44,7 @@ Note:
 - La **potència** és l’energia total utilitzada. Exemple: una bombeta de 12V i 5W consumeix 0,42A (I = P/V).  
 Remarca que aquests conceptes els veurem sovint quan diagnostiquem equips.  
 
---
+----
 
 ## Multímetre: funcions principals
 - Mesura de **V** (AC/DC)
@@ -56,7 +54,7 @@ Remarca que aquests conceptes els veurem sovint quan diagnostiquem equips.
 <!-- [IMATGE: multímetre digital groc i negre, pantalla mostrant "12.00 V", amb selector marcat a V i cables de prova vermell i negre] -->
 
 <p align="center">
-  <img src="./assets/imatge-voltimetre.png" alt="Foto voltímetre" width="400">
+  <img src="../../../assets/img/mim/imatge-voltimetre.png" alt="Foto voltímetre" width="400">
 </p>
 
 Note:
@@ -65,7 +63,7 @@ El multímetre és l’eina més bàsica d’un tècnic.
 - Amb ell podem comprovar si una font ATX dóna tensió, si un cable està trencat o si un component condueix.  
 - La funció de **continuïtat** és molt útil: fa un “pip” si el circuit està connectat. Això ens ajuda a comprovar cables ràpidament.  
 
---
+----
 
 ## Com connectar el multímetre
 - **Tensió → paral·lel**
@@ -81,7 +79,7 @@ Note:
 - Per mesurar **resistència**, el circuit ha d’estar apagat, sinó les lectures seran falses o podem fer malbé el multímetre.  
 Exemple pràctic: mesurar la tensió d’una pila AA.  
 
---
+----
 
 ## Fonts ATX: introducció
 - Converteix AC (230V) → DC (12V, 5V, 3.3V)
@@ -90,7 +88,7 @@ Exemple pràctic: mesurar la tensió d’una pila AA.
 <!-- [IMATGE: fotografia realista d’una font ATX oberta, amb el ventilador, transformador i condensadors visibles i etiquetats] -->
 
 <p align="center">
-  <img src="./assets/font-ATX-oberta.png" alt="font-ATX-oberta" width="400">
+  <img src="../../../assets/img/mim/font-ATX-oberta.png" alt="font-ATX-oberta" width="400">
 </p>
 
 Note:
@@ -100,7 +98,7 @@ La font ATX fa aquesta conversió.
 Dins hi trobem transformadors, condensadors i un ventilador.  
 **Seguretat**: no obrir mai una font ATX, perquè els condensadors poden quedar carregats i donar descàrregues fins i tot desconnectada.  
 
---
+----
 
 ## Rails de sortida
 - **+12V:** CPU, GPU, discs
@@ -112,8 +110,8 @@ Dins hi trobem transformadors, condensadors i un ventilador.
 ### Connectors de 20 i de 24 pins
 
 <p align="center">
-  <img src="./assets/esquema-connectors-atx-20-i-24-pins.png" alt="esquema-connectors-atx-20-i-24-pins.png" width="400">
-  <img src="./assets/connectors-atx-20-i-24-pins.png" alt="connectors-atx-20-i-24-pins.png" width="200">
+  <img src="../../../assets/img/mim/esquema-connectors-atx-20-i-24-pins.png" alt="esquema-connectors-atx-20-i-24-pins.png" width="400">
+  <img src="../../../assets/img/mim/connectors-atx-20-i-24-pins.png" alt="connectors-atx-20-i-24-pins.png" width="200">
 </p>
 
 
@@ -127,7 +125,7 @@ La font ATX té diversos “rails”:
 El pin verd (PS_ON#) permet a la placa base engegar la font.  
 El pin gris (PWR_OK) confirma que la tensió és estable.  
 
---
+----
 
 <!-- ## Eficiència energètica
 - **Eficiència = P sortida / P entrada**
@@ -154,7 +152,7 @@ Exemple: un disc dur que consumeix 0,5A a 12V → 6W.
 Les fonts ATX es venen amb potències diferents: 300W, 500W, 750W…  
 Sempre recomanem deixar un **marge del 20–30%** perquè la font no vagi al límit i tingui més vida útil.  
 
---
+----
 
 ## Exercici pràctic
 Calcula el consum total d’un ordinador amb:
@@ -174,7 +172,7 @@ Fem el càlcul pas a pas:
 **Total: 347W**.  
 Amb un marge de seguretat, recomanem una font d’almenys 500W.  
 
----
+----
 
 ## Resum del bloc
 - Multímetre i mesures
@@ -190,12 +188,12 @@ En resum, hem après:
 - La importància de l’eficiència i de calcular bé la potència d’un PC.  
 Amb aquesta base podrem afrontar problemes d’alimentació i fer diagnòstics més segurs.
 
----
+----
 
 **Activitat (lliurable)**  
-<a href="activitats/electricitat/activitat.html" target="_blank">Obrir activitat: Electricitat</a>
+<a href="./0221-ae-001.html target="_blank">Obrir activitat: Electricitat</a>
 
----
+----
 <!-- ## Electricitat
 ### 2. Sistema d’alimentació ininterrompuda (SAI)
 - Tipus: offline / line-interactive / online.
@@ -205,7 +203,7 @@ Amb aquesta base podrem afrontar problemes d’alimentació i fer diagnòstics m
 **Activitat (lliurable)**  
 <a href="activitats/sai/activitat.html" target="_blank">Obrir activitat: SAI</a>
 
----
+----
 ## Electricitat
 ### 3. PRL i protecció ambiental
 - Riscos elèctrics i EPI.
@@ -215,7 +213,7 @@ Amb aquesta base podrem afrontar problemes d’alimentació i fer diagnòstics m
 **Activitat (lliurable)**  
 <a href="activitats/riscos/activitat.html" target="_blank">Obrir activitat: PRL i Medi Ambient</a>
 
----
+----
 ## Bloc 2 · Components d’un equip microinformàtic
 ### 1. Sistemes informàtics i unitats funcionals
 - Von Neumann: UM, UC, UAL, E/S.
@@ -224,7 +222,7 @@ Amb aquesta base podrem afrontar problemes d’alimentació i fer diagnòstics m
 **Activitat (lliurable)**  
 <a href="activitats/unitats_funcionals/activitat.html" target="_blank">Obrir activitat: Unitats funcionals</a>
 
----
+----
 ## Bloc 2 · Components
 ### 2. Placa base: components i configuració
 - Socket, chipset, BIOS/UEFI.
@@ -233,7 +231,7 @@ Amb aquesta base podrem afrontar problemes d’alimentació i fer diagnòstics m
 **Activitat (lliurable)**  
 <a href="activitats/placa_base/activitat.html" target="_blank">Obrir activitat: Placa base</a>
 
----
+----
 ## Bloc 2 · Components
 ### 3. Perifèrics i comunicacions
 - Entrada/sortida/emmagatzematge/comunicació.
@@ -242,7 +240,8 @@ Amb aquesta base podrem afrontar problemes d’alimentació i fer diagnòstics m
 **Activitat (lliurable)**  
 <a href="activitats/periferics/activitat.html" target="_blank">Obrir activitat: Perifèrics</a>
 
---
+----
+
 ## Tancament
 - Lliura tots els JSON al Moodle.
 - Dubtes? Anotem incidències per millorar la pràctica.
