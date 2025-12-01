@@ -1,4 +1,4 @@
-# Condicions <u>Cas 1 de 7</u>
+# Condicions <u>Cas 1 de 3</u>
 
 #### Colors extraterrestres (1/2)
 
@@ -37,7 +37,7 @@ if (alien_color == "verd"):
 
 ----
 
-# Condicions <u>Cas 1 de 7</u>
+# Condicions <u>Cas 1 de 3</u>
 
 #### Colors extraterrestres (2/2)
 
@@ -66,7 +66,7 @@ Entra el color (verd, groc o vermell): vermell
 
 ---
 
-# Condicions <u>Cas 2 de 7</u>
+# Condicions <u>Cas 2 de 3</u>
 
 #### Colors extraterrestres (1/2)
 
@@ -79,7 +79,7 @@ Trieu un color per a un extraterrestre com vau fer a l'anterior exercici, i escr
 ----
 
 
-# Condicions <u>Cas 2 de 7</u>
+# Condicions <u>Cas 2 de 3</u>
 
 #### Colors extraterrestres (2/2)
 
@@ -104,3 +104,63 @@ Converteix la teva cadena **`if-else`** de l'exercici  **`Colors extraterrestres
 * Executeu tres versions d'aquest programa, assegurant-vos que cada missatge s'imprimeixi per a l'extraterrestre del color adequat.
 
 <!-- file:///home/joan/05-ginebro/nouDAM/python-crash-course.pdf -->
+
+---
+
+## Exercicis (1 de 3)
+
+### Comprovador d’edat per a un joc (**`condicio_edat_joc.py`**)
+
+* Creeu un programa que controli si una persona pot jugar a un joc per majors d’edat.
+
+1) Demaneu a l’usuari la seva edat i guardeu-la en una variable anomenada edat.
+
+2) Convertiu el que ha entrat l’usuari a un número enter (int).
+
+3) Escriviu una instrucció if-else:
+
+Si l'edat és igual o superior a 18, mostreu "Pots jugar: ets major d'edat."
+
+* En cas contrari, mostreu: "No pots jugar: no ets major d'edat."
+
+* Proveu el programa amb un valor menor de 18 i amb un valor més gran o igual a 18.
+
+---
+
+## Exercicis (2 de 3)
+
+### Enviament gratuït a la botiga en línia (**`condicio_enviament_botiga.py`**)
+
+* Creeu un programa que decideixi si una comanda té enviament gratuït.
+
+1) Demaneu a l’usuari l’import total de la seva compra i guardeu-lo en una variable anomenada import_total.
+
+2) Convertiu la dada que ha entrat l’usuari a float.
+
+3) Escriviu una instrucció if-else:
+
+* Si import_total és igual o superior a 50, mostreu: "Enviament gratuït activat!"
+
+* Si no, mostreu: "Has de pagar 5 € de despeses d'enviament."
+
+* Proveu el programa amb un valor inferior a 50 i amb un valor superior o igual a 50.
+
+---
+
+## Exercicis (3 de 3)
+
+### Parell o senar? (**`condicio_parell_senar.py`**)
+
+* Creeu un programa que comprovi si un número és parell o senar.
+
+1) Demaneu a l’usuari un número enter i guardeu-lo en una variable anomenada numero.
+
+2) Convertiu el que ha entrat l’usuari a int.
+
+3) Feu una instrucció if-else que comprovi el residu de dividir el número entre 2, amb l’operador %:
+
+* Si numero % 2 és igual a 0, mostreu: "El número és parell."
+
+* Si no, mostreu: "El número és senar."
+
+* Proveu el programa amb un número parell i amb un número senar.
