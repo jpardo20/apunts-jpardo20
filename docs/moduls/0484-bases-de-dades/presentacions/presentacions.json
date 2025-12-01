@@ -100,6 +100,7 @@
       "description": "Codi d'activitat 0484-bds-ae02",
       "src": "slides/0484-bds-ae02.reveal",
       "theme": "white",
+       "kind": "activity",
       "tags": [
         "BBDD", "activitat"
       ] 
@@ -110,13 +111,14 @@
       "description": "Codi d'activitat 0484-bds-ae03",
       "src": "slides/0484-bds-ae03-act-validacio-mer-escenaris.reveal",
       "theme": "white",
+       "kind": "activity",
       "tags": [
         "BBDD", "activitat"
       ] 
     },
     {
       "id": "0484-bds-ae05",
-      "title": "Activitat: Validació d’un MER Agència de viatges 0484-bds-ae05",
+      "title": "Activitat 1: Creació Entitat 0484-bds-ae05",
       "description": "Codi d'activitat 0484-bds-ae05",
       "src": "slides/0484-bds-ae05-creacioEntitat.reveal",
       "theme": "white",
