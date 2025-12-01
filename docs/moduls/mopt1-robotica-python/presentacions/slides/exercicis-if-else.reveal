@@ -123,6 +123,8 @@ Si l'edat és igual o superior a 18, mostreu "Pots jugar: ets major d'edat."
 
 * En cas contrari, mostreu: "No pots jugar: no ets major d'edat."
 
+----
+
 * Proveu el programa amb un valor menor de 18 i amb un valor més gran o igual a 18.
 
 ---
@@ -143,6 +145,8 @@ Si l'edat és igual o superior a 18, mostreu "Pots jugar: ets major d'edat."
 
 * Si no, mostreu: "Has de pagar 5 € de despeses d'enviament."
 
+----
+
 * Proveu el programa amb un valor inferior a 50 i amb un valor superior o igual a 50.
 
 ---
@@ -162,5 +166,6 @@ Si l'edat és igual o superior a 18, mostreu "Pots jugar: ets major d'edat."
 * Si numero % 2 és igual a 0, mostreu: "El número és parell."
 
 * Si no, mostreu: "El número és senar."
+----
 
 * Proveu el programa amb un número parell i amb un número senar.
