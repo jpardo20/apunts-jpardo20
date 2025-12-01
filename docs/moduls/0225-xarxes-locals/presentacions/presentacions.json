@@ -9,21 +9,24 @@
       "title": "1. Introducció a les xarxes",
       "src": "slides/xlo-pre00-introduccio-a-les-xarxes.reveal",
       "description": "TEORIA: Introducció a les xarxes",
-      "status": "active"
+      "status": "active",
+      "kind":"theory"
     },
     {
       "order": 2,
       "title": "2. Adreça IP i màscara de subxarxa",
       "src": "slides/presentacio-ip-mascara.reveal",
       "description": "Adreça IP i màscara de subxarxa",
-      "status": "active"
+      "status": "active",
+      "kind":"theory"
     },
     {
       "order": 3,
       "title": "3. Activitat",
       "src": "slides/activitats/activitat.html",
       "description": "Adreça IP i màscara de subxarxa",
-      "status": "inactive"
+      "status": "inactive",
+      "kind":"activity"
     },
     {
       "order": 4,
@@ -38,14 +41,16 @@
       "title": "5. Protocols",
       "src": "slides/protocols.reveal",
       "description": "Protocols",
-      "status": "active"
+      "status": "active",
+      "kind":"theory"
     },
     {
       "order": 56,
       "title": "PRL i EPI al taller de xarxes",
       "src": "slides/ra6-sessio1-questionari-pluja.reveal",
       "description": "PRL i EPI al taller de xarxes",
-      "status": "active"
+      "status": "active",
+      "kind":"theory"
     },
     {
       "order": 4,

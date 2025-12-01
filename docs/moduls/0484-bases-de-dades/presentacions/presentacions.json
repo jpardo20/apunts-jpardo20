@@ -10,6 +10,7 @@
       "description": "",
       "src": "slides/001_Introduccio_Bases_Dades.reveal",
       "theme": "white",
+       "kind": "theory",
       "tags": [
         "BBDD"
       ]
@@ -20,6 +21,7 @@
       "description": "",
       "src": "slides/002_Conceptes_Basics_Bases_Dades.reveal",
       "theme": "white",
+       "kind": "theory",
       "tags": [
         "BBDD"
       ]
@@ -30,6 +32,7 @@
       "description": "",
       "src": "slides/003_MER_Model_Entitat_Relacio.reveal",
       "theme": "white",
+       "kind": "theory",
       "tags": [
         "BBDD"
       ]
@@ -40,6 +43,7 @@
       "description": "",
       "src": "slides/004_Join.reveal",
       "theme": "white",
+       "kind": "theory",
       "tags": [
         "BBDD"
       ]
@@ -50,6 +54,7 @@
       "description": "",
       "src": "slides/004_Relacions_MER.reveal",
       "theme": "white",
+       "kind": "theory",
       "tags": [
         "BBDD"
       ]
@@ -60,6 +65,7 @@
       "description": "Enunciats: Model Entitat-Relació (MER)",
       "src": "slides/DAM_Act_004_MER_14_Enunciats.reveal",
       "theme": "white",
+       "kind": "activity",
       "tags": [
         "BBDD"
       ]
@@ -70,6 +76,7 @@
       "description": "Enunciats: Model Entitat-Relació (MER)",
       "src": "slides/0484-bds-activitat-validacio-mer-escenaris.reveal",
       "theme": "white",
+       "kind": "activity",
       "tags": [
         "BBDD"
       ]
@@ -80,6 +87,7 @@
       "description": "TEORIA: Del MER al model relacional",
       "src": "slides/del-mer-al-model-relacional-v2.reveal",
       "theme": "white",
+       "kind": "theory",
       "tags": [
         "BBDD"
       ]
@@ -90,6 +98,7 @@
       "description": "Codi d'activitat 0484-bds-ae01",
       "src": "slides/0484-bds-ae01.reveal",
       "theme": "white",
+       "kind": "activity",
       "tags": [
         "BBDD", "activitat"
       ] 
@@ -122,6 +131,7 @@
       "description": "Codi d'activitat 0484-bds-ae05",
       "src": "slides/0484-bds-ae05-creacioEntitat.reveal",
       "theme": "white",
+       "kind": "activity",
       "tags": [
         "BBDD", "activitat"
       ] 
@@ -132,6 +142,7 @@
       "description": "Codi d'activitat 0484-bds-ae06",
       "src": "slides/0484-bds-ae06-act-002_PET_Flix.reveal",
       "theme": "white",
+       "kind": "activity",
       "tags": [
         "BBDD", "activitat"
       ] 
