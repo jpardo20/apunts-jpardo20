@@ -1,5 +1,5 @@
 (function () {
-    debugger
+
   // Relació entre el "slug" de la carpeta i el títol bonic del mòdul
   const MODULE_TITLES = {
     "0221-muntatge-i-manteniment-d-equips": "Apunts 0221 Muntatge i manteniment d'equips",

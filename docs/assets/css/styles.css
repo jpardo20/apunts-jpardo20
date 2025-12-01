@@ -624,3 +624,212 @@ main {
 .card__actions .button {
   display: inline-block;
 }
+
+.portal-header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #0d6efd;
+  padding: 0.75rem 1.5rem;
+}
+
+.portal-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portal-header__back {
+  font-size: .9rem;
+  text-decoration: none;
+}
+
+.portal-header__module {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.portal-header__subtitle {
+  margin: 0;
+  font-size: .95rem;
+  opacity: .8;
+}
+
+/* === PORTAL HEADER UNIFICAT === */
+
+.portal-header {
+  background-color: #ffffff;
+  border-bottom: 3px solid #0d6efd;
+  padding: 0.75rem 1.5rem;
+}
+
+.portal-header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Enllaç "Tornar a l'inici / Tornar a presentacions" */
+.portal-header__back {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #0d6efd;
+}
+
+.portal-header__back:hover,
+.portal-header__back:focus {
+  text-decoration: underline;
+}
+
+/* Títols del mòdul i subtítol (opcional) */
+.portal-header__titles {
+  flex: 1;
+  min-width: 0;
+}
+
+.portal-header__module {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.portal-header__subtitle {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* Marca DIGITECH a la dreta */
+.portal-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #0d6efd;
+}
+
+.portal-header__brand .logo {
+  height: 70px;
+  width: auto;
+  display: block;
+}
+/* --- Capçalera comuna tipus "apunts-jpardo20" --- */
+
+.site-header {
+  background: #009de0;        /* blau tipus Material */
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.site-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.site-header-menu {
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.site-header-menu:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+}
+
+.site-header-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.site-header-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.site-header-spacer {
+  flex: 1;
+}
+
+.site-header-logo {
+  height: 32px;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .site-header-inner {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .site-header-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* --- Toolbar de presentacions --- */
+
+.toolbar {
+  max-width: 900px;
+  margin: 0.75rem auto 1.5rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.portal-search {
+  position: relative;
+  flex: 1 1 260px;
+}
+
+.portal-search-input {
+  width: 100%;
+  padding: 0.6rem 1rem 0.6rem 2.7rem; /* espai per a la icona */
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+}
+
+.portal-search-input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.portal-search-icon {
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+}
+
+.portal-search-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: rgba(0, 0, 0, 0.54);
+}
+
+/* El select ja existent segueix al costat */
+.sort-select {
+  min-width: 150px;
+}
