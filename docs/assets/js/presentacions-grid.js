@@ -18,7 +18,6 @@
       const status = (item.status || 'active').toLowerCase();
       const kind = (item.kind || 'theory').toLowerCase();
       const isActivity = kind === 'activity';
-
       const desc = item.description ? `<p>${item.description}</p>` : '';
       const title = item.title || 'Presentació';
 
