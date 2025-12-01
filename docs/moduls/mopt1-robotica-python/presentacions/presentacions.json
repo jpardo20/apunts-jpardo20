@@ -31,6 +31,15 @@
       "src": "slides/exercicis-if-else.reveal",
       "description": "Python exercicis-if-else.reveal",
       "status": "active"
+    },
+    {
+      "order": 4,
+      "title": "4. Python exercicis-if-else",
+      "src": "slides/003-python-exercicis-condicions.reveal",
+      "description": "Python exercicis-if-else (0223-mopt-ae001)",
+      "status": "active"
     }
   ]
 }
+
+
