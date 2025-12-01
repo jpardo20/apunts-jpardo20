@@ -1,47 +1,51 @@
 {
     "presentations": [
-      {
-        "order": 10,
-        "title": "Activitat 1 – Introducció a Docker (0483-ae001)",
-        "src": "slides/0483-ae001-intro-docker.reveal",
-        "description": "Activitat 1 – Introducció a Docker (0483-ae001))",
-        "kind":"activity"
-      },
-      {
-        "order": 20,
-        "title": "Activitat 2: Desplega un servei web amb Docker (0483-ae002)",
-        "src": "slides/0483-ae002-docker-web.reveal",
-        "description": "Activitat 2: Desplega un servei web amb Docker (0483-ae002)",
-        "kind":"activity"
-      },
-    {
-      "order": 30,
-      "title": "teoria-intro-linux",
-      "src": "slides/intro-linux-sessio-01.reveal",
-      "description": "teoria-intro-linux",
-        "kind":"theory"
-    },
-    {
-      "order": 40,
-      "title": "teoria-intro-linux-2",
-      "src": "slides/intro-linux-sessio-02.reveal",
-      "description": "teoria-intro-linux-2",
-        "kind":"theory"
-    },
-    {
-      "order": 50,
-      "title": "Resum Docker — 0483 Sistemes informàtics (1r DAM)",
-      "src": "slides/0483-resum-docker.reveal",
-      "description": "Resum Docker — 0483 Sistemes informàtics (1r DAM)",
-        "kind":"theory"
-    },
-    {
-      "order": 60,
-      "title": "Activitat: phpMyAdmin + MySQL amb docker compose",
-      "src": "slides/docker-compose-phhmyadmin-mysql.reveal",
-      "description": "Activitat: phpMyAdmin + MySQL amb docker compose",
-        "kind":"activity"
-    }   
-    
-  ]
+        {
+            "order": 10,
+            "title": "Activitat 1 – Introducció a Docker (0483-ae001)",
+            "src": "slides/0483-ae001-intro-docker.reveal",
+            "description": "Activitat 1 – Introducció a Docker (0483-ae001))",
+            "status": "active",
+            "kind": "activity"
+        },
+        {
+            "order": 20,
+            "title": "Activitat 2: Desplega un servei web amb Docker (0483-ae002)",
+            "src": "slides/0483-ae002-docker-web.reveal",
+            "description": "Activitat 2: Desplega un servei web amb Docker (0483-ae002)",
+            "status": "active",
+            "kind": "activity"
+        },
+        {
+            "order": 30,
+            "title": "teoria-intro-linux",
+            "src": "slides/intro-linux-sessio-01.reveal",
+            "description": "teoria-intro-linux",
+            "status": "active",
+            "kind": "theory"
+        },
+        {
+            "order": 40,
+            "title": "teoria-intro-linux-2",
+            "src": "slides/intro-linux-sessio-02.reveal",
+            "description": "teoria-intro-linux-2",
+            "status": "active",
+            "kind": "theory"
+        },
+        {
+            "order": 50,
+            "title": "Resum Docker — 0483 Sistemes informàtics (1r DAM)",
+            "src": "slides/0483-resum-docker.reveal",
+            "description": "Resum Docker — 0483 Sistemes informàtics (1r DAM)",
+            "kind": "theory"
+        },
+        {
+            "order": 60,
+            "title": "Activitat: phpMyAdmin + MySQL amb docker compose",
+            "src": "slides/docker-compose-phhmyadmin-mysql.reveal",
+            "description": "Activitat: phpMyAdmin + MySQL amb docker compose",
+            "status": "active",
+            "kind": "activity"
+        }
+    ]
 }
