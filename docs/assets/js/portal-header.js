@@ -65,7 +65,7 @@
         backHref = "./index.html";
         backText = "← Tornar a Presentacions";
       } else if (ctx.pageType === "module-index") {
-        backHref = "../../index.html";
+        backHref = "../../../index.html";
         backText = "← Tornar a l'inici";
       } else {
         backHref = "../../index.html";
