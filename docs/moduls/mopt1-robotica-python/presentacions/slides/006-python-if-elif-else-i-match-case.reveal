@@ -1,0 +1,274 @@
+# Condicionals en Python: `if-elif-else` i `match-case`
+
+---
+
+## Objectius de la sessió
+
+- Entendre què és una **estructura condicional**
+- Aprendre a utilitzar:
+  - `if`, `elif`, `else`
+  - `match` / `case` (equivalent al `switch` d’altres llenguatges)
+- Practicar amb **exemples reals** de codi en Python
+
+---
+
+## Recordatori: per què fem servir condicionals?
+
+- Els programes han de **prendre decisions**
+- En funció d’una **condició**:
+  - Si es compleix ➜ fem una cosa
+  - Si no es compleix ➜ fem una altra
+- Exemples:
+  - Si la nota és ≥ 5 ➜ “Has aprovat”
+  - Si tens més de 18 anys ➜ “Pots entrar”
+  - Si l’opció del menú és 1 ➜ “Mostrar horari”
+
+---
+
+# Part 1 – `if`, `elif`, `else`
+
+---
+
+## 1.1. Estructura bàsica de `if-else`
+
+```python
+if condicio:
+    # codi si la condició és certa
+else:
+    # codi si la condició NO és certa
+```
+
+- La **condició** és una expressió que dóna `True` o `False`
+- El codi **indentat** (amb espais/tabulador) depèn de l’`if` o de l’`else`
+- Només s’executa **un** dels dos blocs
+
+---
+
+## 1.2. Afegint casos intermedis: `elif`
+
+```python
+if condicio_1:
+    # codi si condicio_1 és certa
+elif condicio_2:
+    # codi si condicio_2 és certa
+elif condicio_3:
+    # codi si condicio_3 és certa
+else:
+    # cap de les condicions anteriors no s'ha complert
+```
+
+- Python comprova les condicions **en ordre**
+- Quan en troba una de certa, **para** i executa només aquell bloc
+- L’`else` és opcional, però útil per al “cas per defecte”
+
+---
+
+## 1.3. Exemple 1 – Classificar temperatura
+
+**Enunciat:**  
+Demana a l’usuari una temperatura (en graus) i classifica-la:
+
+- `temperatura < 10` ➜ “Fa fred”
+- `10 <= temperatura < 25` ➜ “Temperatura agradable”
+- `temperatura >= 25` ➜ “Fa calor”
+
+```python
+temperatura = float(input("Introdueix la temperatura en graus: "))
+
+if temperatura < 10:
+    print("Fa fred.")
+elif temperatura < 25:  # aquí ja sabem que és ≥ 10
+    print("Temperatura agradable.")
+else:
+    print("Fa calor.")
+```
+
+- Fixa’t que al segon `elif` no cal posar `temperatura >= 10`  
+  perquè si fos < 10 ja hauria entrat al primer `if`.
+
+---
+
+## 1.4. Exemple 2 – Nota numèrica a text
+
+**Enunciat:**  
+Demana una nota i mostra un missatge:
+
+- `< 5` ➜ “SUSPÈS”
+- `5 – <6` ➜ “APROVAT”
+- `6 – <7` ➜ “BÉ”
+- `7 – <9` ➜ “NOTABLE”
+- `9 – 10` ➜ “EXCEL·LENT”
+
+```python
+nota = float(input("Introdueix la teva nota (0 a 10): "))
+
+if nota < 5:
+    print("SUSPÈS")
+elif nota < 6:
+    print("APROVAT")
+elif nota < 7:
+    print("BÉ")
+elif nota < 9:
+    print("NOTABLE")
+else:
+    print("EXCEL·LENT")
+```
+
+- Exemple perfecte de **cadena `if-elif-else` amb trams de valors**.
+
+---
+
+## 1.5. Exemple 3 – Despeses d’enviament
+
+**Enunciat:**  
+En una botiga en línia:
+
+- Si l’import és **≥ 50 €** ➜ enviament gratuït
+- Si no ➜ despeses d’enviament de **5 €**
+
+```python
+import_total = float(input("Import de la compra (€): "))
+
+if import_total >= 50:
+    print("Enviament gratuït activat!")
+else:
+    print("Has de pagar 5 € de despeses d'enviament.")
+```
+
+- Només hi ha **dos casos possibles**, per això amb `if-else` n’hi ha prou.
+
+---
+
+# Part 2 – `match` / `case` (tipus `switch`)
+
+---
+
+## 2.1. Què és `match-case` en Python?
+
+- A Python no hi ha `switch`, però des de la versió **3.10** tenim:
+
+```python
+match expressio:
+    case valor1:
+        ...
+    case valor2:
+        ...
+    case _:
+        ...  # cas per defecte
+```
+
+- Serveix per **comparar una expressió** amb **diversos casos** (valors)
+- És ideal per **menús**, codis d’error, opcions, etc.
+- Sembla un `switch` d’altres llenguatges, però és més potent (patrons)
+
+---
+
+## 2.2. Estructura bàsica de `match-case`
+
+```python
+opcio = int(input("Introdueix una opció (1-3): "))
+
+match opcio:
+    case 1:
+        print("Has triat l'opció 1")
+    case 2:
+        print("Has triat l'opció 2")
+    case 3:
+        print("Has triat l'opció 3")
+    case _:
+        print("Opció no vàlida")
+```
+
+- `match opcio:` ➜ diem quina variable volem comparar
+- `case 1:` ➜ què passa si `opcio` val `1`
+- `case _:` ➜ “qualsevol altre valor” (cas per defecte)
+
+---
+
+## 2.3. Exemple 1 – Menú simple
+
+**Enunciat:**  
+Fem un menú senzill amb 4 opcions:
+
+```python
+print("MENÚ PRINCIPAL")
+print("1) Veure horari")
+print("2) Veure proper examen")
+print("3) Calculadora de mitjanes")
+print("4) Sortir")
+
+opcio = int(input("Tria una opció (1-4): "))
+
+match opcio:
+    case 1:
+        print("Mostrant l'horari...")
+    case 2:
+        print("El proper examen és de Xarxes locals.")
+    case 3:
+        print("Obrint la calculadora de mitjanes...")
+    case 4:
+        print("Sortint del programa...")
+    case _:
+        print("Opció no vàlida.")
+```
+
+- Molt més llegible que una cadena llarga de `if-elif-else`.
+
+---
+
+## 2.4. Exemple 2 – Resposta Sí / No / Dubte
+
+**Enunciat:**  
+Demana a l’usuari si està d’acord amb una proposta (`S`, `N` o `?`).
+
+```python
+resposta = input("Estàs d'acord? (S/N/?): ").upper()
+
+match resposta:
+    case "S":
+        print("Has respost que SÍ.")
+    case "N":
+        print("Has respost que NO.")
+    case "?":
+        print("Dubtes? Pots preguntar al professor.")
+    case _:
+        print("Opció desconeguda.")
+```
+
+- Fem servir `.upper()` per acceptar tant `s` com `S`.
+- Cada `case` tracta un **valor concret de text**.
+
+---
+
+## 2.5. Exemple 3 – Diversos valors en un mateix cas
+
+Podem agrupar diversos valors amb `|` (OR):
+
+```python
+dia = int(input("Introdueix un número de dia (1-7): "))
+
+match dia:
+    case 1 | 2 | 3 | 4 | 5:
+        print("És un dia laborable.")
+    case 6 | 7:
+        print("És cap de setmana!")
+    case _:
+        print("Número de dia incorrecte.")
+```
+
+- `1 | 2 | 3 | 4 | 5` ➜ qualsevol d’aquests valors
+- És molt útil per agrupar casos sense haver d’escriure molts `if`
+
+---
+
+## 2.6. Comparant `if-elif-else` i `match-case`
+
+- Podem fer el mateix amb `if-elif-else`, però:
+
+`if-elif-else`:
+- Més flexible per **condicions complexes** (`<`, `>`, `==`, combinacions, etc.)
+- Ideal per treballar amb **rang de valors**
+
+`match-case`:
+- Molt clar quan comparem **un valor concret** (menus, codis, opcions)
+- Codi més net quan hi ha **molts casos diferents** per un mateix valor

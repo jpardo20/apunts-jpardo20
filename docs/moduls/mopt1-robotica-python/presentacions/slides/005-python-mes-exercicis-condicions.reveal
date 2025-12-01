@@ -1,0 +1,90 @@
+# Robòtica i Programació en Python (1r SMX)
+
+## Més exercicis condicions (Python) **`mopt-ae001`**
+
+---
+
+## Tres mòduls del cicle. (**`condicions_3_moduls.py`**)
+
+Crea un programa que controli si un alumne ha aprovat tres mòduls del cicle. 
+
+1) Demana a l’usuari tres notes (de 0 a 10):
+
+* **`nota_m1`** → Mòdul 1
+
+* **`nota_m2`** → Mòdul 2
+
+* **`nota_m3`** → Mòdul 3
+
+2) Converteix les dades a **`float`**.
+
+3) Per cada mòdul, escriu una estructura `if-else` independent:
+
+* Si la nota és igual o superior a 5, mostra: **`Has aprovat el mòdul X`**.
+
+* Si no, mostra: **`Has suspès el mòdul X`**.
+
+4) El programa ha de mostrar 3 missatges, un per a cada mòdul.
+
+---
+
+## Traducció de nota numèrica a text (**`nota_a_text.py`**)
+
+1) Crea un programa que demani una nota numèrica i mostri la qualificació en text segons aquests trams:
+
+* 0 a < 5 → SUSPÈS
+
+* 5 a < 6 → APROVAT
+
+* 6 a < 7 → BÉ
+
+* 7 a < 9 → NOTABLE
+
+* 9 a 10 → EXCEL·LENT
+
+2) Demana una nota (float) a l’usuari i guarda-la a la variable nota.
+
+3) Fes una estructura de condicions amb if i else.
+
+4) Mostra per pantalla només un missatge, per exemple: **`La teva qualificació és: NOTABLE`**
+
+
+---
+
+## Menú amb 7 opcions (**`menu_7_opcions.py`**)
+
+* Volem fer un menú d’aplicació per a una “mini eina d’alumne SMX”. El programa ha de mostrar aquest menú:
+
+1. Veure horari
+2. Veure proper examen
+3. Calculadora de mitjana de notes
+4. Info del centre
+5. Consells d'estudi
+6. Crèdits pendents
+7. Sortir
+
+1) Mostra el menú per pantalla tal com està a dalt.
+
+2) Demana a l’usuari que escrigui una opció (de 1 a 7) i guarda-la en una variable opcio (tipus int).
+
+3) Escriu una estructura de condicions amb if i else.
+
+----
+
+3) Escriu una estructura de condicions amb if i else.
+
+* Si l’usuari tria 1 → mostra el missatge: **`Mostrant l'horari...`**
+
+* Si tria 2  → mostra el missatge **`El proper examen és de Xarxes locals.`**
+
+* Si tria 3 → mostra el missatge **`Aquí aniria una calculadora de mitjana (encara per programar).`**
+
+* Si tria 4 → mostra el missatge **`Centre: Digitechfp - SMX`**
+
+* Si tria 5  → mostra el missatge **`Consell: repassa una mica cada dia, no només abans de l'examen.`**
+
+* Si tria 6  → mostra el missatge **`Et queden X crèdits pendents. (Dada simulada)`**
+
+* Si tria 7  → mostra el missatge **`Sortint del programa...`**
+
+* Si l’usuari escriu un número que no està entre 1 i 7, mostra: **`Opció no vàlida.`**
