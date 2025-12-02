@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>0483 - Formulari Virtualització, CLI i Docker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../../assets/css/formularis.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Barra de progrés fixa -->
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+  <div id="progress-text-wrapper">
+    <span>Progrés: <span id="progress-text">0%</span></span>
+  </div>
+
+  <header>
+    <h1>0483 - Formulari Virtualització, CLI i Docker</h1>
+    <p>1r DAM · Sistemes informàtics</p>
+    <p>Temps orientatiu: 90 minuts · Respon totes les preguntes abans de generar el JSON final.</p>
+  </header>
+
+  <main>
+    <form id="exam-form">
+      <!-- Dades de l'alumne -->
+      <section class="card">
+        <h2>Dades de l'alumne</h2>
+        <p>Selecciona el teu nom de la llista. És obligatori per poder guardar o generar el fitxer JSON.</p>
+        <label for="alumne">Alumne</label>
+        <select id="alumne" name="alumne" required>
+          <option value="">— Selecciona el teu nom —</option>
+          <!-- S'omple automàticament des de ./alumnes/dades_alumnes.json -->
+        </select>
+        <p class="meta-info">
+          Les dades es carreguen des de <code>./alumnes/dades_alumnes.json</code>. Si no es carrega correctament, revisa la ruta o el format del fitxer.
+        </p>
+      </section>
+
+      <!-- Preguntes Virtualització / VirtualBox -->
+      <section class="card">
+        <h2>Bloc 1 · Virtualització i VirtualBox</h2>
+
+        <div class="question" data-question-id="q1" data-type="single" data-required="true">
+          <h2>P1. Objectiu de la virtualització</h2>
+          <p>Quin és un dels objectius principals de la virtualització en un sistema operatiu?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="a"> Fer que el maquinari sigui més ràpid físicament.</label>
+            <label><input type="radio" name="q1" value="b"> Abstraure les aplicacions del maquinari mitjançant màquines virtuals.</label>
+            <label><input type="radio" name="q1" value="c"> Eliminar la necessitat d’un sistema operatiu.</label>
+            <label><input type="radio" name="q1" value="d"> Fer còpies de seguretat automàtiques del disc dur.</label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q2" data-type="single" data-required="true">
+          <h2>P2. Amfitrió i convidat</h2>
+          <p>En una màquina virtual creada amb VirtualBox, què és el <strong>convidat (guest)</strong>?</p>
+          <div class="options">
+            <label><input type="radio" name="q2" value="a"> El sistema operatiu que presta els recursos de maquinari.</label>
+            <label><input type="radio" name="q2" value="b"> El sistema operatiu instal·lat dins la màquina virtual.</label>
+            <label><input type="radio" name="q2" value="c"> El programa VirtualBox.</label>
+            <label><input type="radio" name="q2" value="d"> El processador físic amb extensions IVT/AMD-V.</label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q3" data-type="multi" data-required="true">
+          <h2>P3. Tipus de màquines virtuals</h2>
+          <p>Selecciona totes les afirmacions correctes relacionades amb els <strong>tipus de màquines virtuals</strong>:</p>
+          <div class="options">
+            <label><input type="checkbox" name="q3" value="a"> Les màquines virtuals de sistema permeten executar un sistema operatiu complet com a convidat.</label>
+            <label><input type="checkbox" name="q3" value="b"> Un hypervisor de tipus 1 s’executa directament sobre el maquinari.</label>
+            <label><input type="checkbox" name="q3" value="c"> Les màquines virtuals d’aplicació (com la JVM) només executen un procés concret.</label>
+            <label><input type="checkbox" name="q3" value="d"> Un hypervisor de tipus 2 s’executa sense necessitat de cap sistema operatiu.</label>
+          </div>
+          <small>(Pot haver-hi més d’una resposta correcta.)</small>
+        </div>
+
+        <div class="question" data-question-id="q4" data-type="tf" data-required="true">
+          <h2>P4. Aïllament d’errors</h2>
+          <p>Les màquines virtuals ofereixen recursos virtuals (disc, vídeo, etc.) de forma que si es produeix un error dins la màquina virtual, aquest no afecta el maquinari del sistema real.</p>
+          <div class="options">
+            <label><input type="radio" name="q4" value="true"> Vertader</label>
+            <label><input type="radio" name="q4" value="false"> Fals</label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q5" data-type="single" data-required="true">
+          <h2>P5. Hypervisor</h2>
+          <p>Quina afirmació descriu millor un <strong>hypervisor de tipus 2</strong>?</p>
+          <div class="options">
+            <label><input type="radio" name="q5" value="a"> Corre directament sobre el maquinari i no necessita sistema operatiu.</label>
+            <label><input type="radio" name="q5" value="b"> Corre sobre un sistema operatiu que s’executa sobre el maquinari.</label>
+            <label><input type="radio" name="q5" value="c"> Només permet executar una màquina virtual de Java.</label>
+            <label><input type="radio" name="q5" value="d"> És un altre nom per referir-se a les Guest Additions.</label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q6" data-type="multi" data-required="true">
+          <h2>P6. VirtualBox: funcionalitats</h2>
+          <p>Quines de les opcions següents són funcionalitats reals de VirtualBox o del seu gestor de suports virtuals?</p>
+          <div class="options">
+            <label><input type="checkbox" name="q6" value="a"> Gestió de discos virtuals (VDI) i dispositius òptics virtuals.</label>
+            <label><input type="checkbox" name="q6" value="b"> Assignar un identificador únic (UUID) a cada disc virtual.</label>
+            <label><input type="checkbox" name="q6" value="c"> Exportar una màquina virtual a un arxiu .ova.</label>
+            <label><input type="checkbox" name="q6" value="d"> Editar directament el codi font del nucli de Linux.</label>
+          </div>
+          <small>(Marca totes les que consideris correctes.)</small>
+        </div>
+
+        <div class="question" data-question-id="q7" data-type="single" data-required="true">
+          <h2>P7. Xarxes a VirtualBox</h2>
+          <p>Quin mode de xarxa de VirtualBox permet que la màquina virtual tingui Internet a través de la connexió de l’amfitrió i manté una configuració automàtica (DHCP)?</p>
+          <div class="options">
+            <label><input type="radio" name="q7" value="a"> Xarxa interna</label>
+            <label><input type="radio" name="q7" value="b"> Host-only</label>
+            <label><input type="radio" name="q7" value="c"> NAT</label>
+            <label><input type="radio" name="q7" value="d"> Sense adaptador de xarxa</label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q8" data-type="multi" data-required="true">
+          <h2>P8. Modes de xarxa: Internet i connexions</h2>
+          <p>Marca quines afirmacions sobre els <strong>modes de xarxa</strong> de VirtualBox són correctes:</p>
+          <div class="options">
+            <label><input type="checkbox" name="q8" value="a"> NAT sol tenir connexió a Internet segons l’amfitrió.</label>
+            <label><input type="checkbox" name="q8" value="b"> Host-only no acostuma a tenir connexió a Internet, però permet comunicació amb l’amfitrió.</label>
+            <label><input type="checkbox" name="q8" value="c"> Xarxa interna només permet connexió entre màquines virtuals dins la mateixa xarxa.</label>
+            <label><input type="checkbox" name="q8" value="d"> El mode pont (bridged) impedeix sempre la connexió a altres màquines de la LAN.</label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q9" data-type="open" data-required="true">
+          <h2>P9. NAT vs Pont</h2>
+          <p>Explica amb les teves paraules la diferència principal entre el mode de xarxa <strong>NAT</strong> i el mode <strong>pont (bridged)</strong> a VirtualBox, pensant en com veu la màquina virtual la xarxa.</p>
+          <textarea name="q9" placeholder="Escriu aquí la teva resposta..."></textarea>
+        </div>
+      </section>
+
+      <!-- Preguntes Linux CLI i administració bàsica -->
+      <section class="card">
+        <h2>Bloc 2 · Administració bàsica de Linux (CLI)</h2>
+
+        <div class="question" data-question-id="q10" data-type="single" data-required="true">
+          <h2>P10. Variables d'entorn</h2>
+          <p>Quina comanda et mostra totes les variables d’entorn definides actualment a la shell?</p>
+          <div class="options">
+            <label><input type="radio" name="q10" value="a"> <code>echo $PATH</code></label>
+            <label><input type="radio" name="q10" value="b"> <code>env</code> o <code>printenv</code></label>
+            <label><input type="radio" name="q10" value="c"> <code>ls</code></label>
+            <label><input type="radio" name="q10" value="d"> <code>sudo</code></label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q11" data-type="multi" data-required="true">
+          <h2>P11. Treballant amb variables</h2>
+          <p>Volem definir una variable <code>EL_MEU_NOM</code> i que segueixi disponible en una subshell. Quines passes són correctes?</p>
+          <div class="options">
+            <label><input type="checkbox" name="q11" value="a"> Definir: <code>EL_MEU_NOM="NomCognom"</code></label>
+            <label><input type="checkbox" name="q11" value="b"> Mostrar-la amb: <code>echo $EL_MEU_NOM</code></label>
+            <label><input type="checkbox" name="q11" value="c"> Fer-la visible a subshells amb: <code>export EL_MEU_NOM</code></label>
+            <label><input type="checkbox" name="q11" value="d"> Tancar el terminal i tornar-lo a obrir, sense fer res més.</label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q12" data-type="tf" data-required="true">
+          <h2>P12. Redireccions</h2>
+          <p>La comanda <code>ls /etc &gt; etc.txt</code> crea (o sobreescriu) el fitxer <code>etc.txt</code> amb el llistat del directori <code>/etc</code>.</p>
+          <div class="options">
+            <label><input type="radio" name="q12" value="true"> Vertader</label>
+            <label><input type="radio" name="q12" value="false"> Fals</label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q13" data-type="single" data-required="true">
+          <h2>P13. Redirecció d’errors</h2>
+          <p>Quina comanda redirigeix <strong>només els errors</strong> que es produeixen en executar <code>ls /directori_inexistent</code> al fitxer <code>errors.txt</code>?</p>
+          <div class="options">
+            <label><input type="radio" name="q13" value="a"> <code>ls /directori_inexistent &gt; errors.txt</code></label>
+            <label><input type="radio" name="q13" value="b"> <code>ls /directori_inexistent &gt;&gt; errors.txt</code></label>
+            <label><input type="radio" name="q13" value="c"> <code>ls /directori_inexistent 2&gt; errors.txt</code></label>
+            <label><input type="radio" name="q13" value="d"> <code>ls /directori_inexistent | errors.txt</code></label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q14" data-type="multi" data-required="true">
+          <h2>P14. Comandes de fitxers i directoris</h2>
+          <p>Selecciona totes les comandes que <strong>tenen a veure amb fitxers i directoris</strong> a Linux.</p>
+          <div class="options">
+            <label><input type="checkbox" name="q14" value="a"> <code>ls</code></label>
+            <label><input type="checkbox" name="q14" value="b"> <code>mkdir</code></label>
+            <label><input type="checkbox" name="q14" value="c"> <code>cp</code></label>
+            <label><input type="checkbox" name="q14" value="d"> <code>apt-get</code></label>
+          </div>
+          <small>(Totes les respostes tenen a veure amb el temari, però algunes són d’un altre tipus de tasca.)</small>
+        </div>
+
+        <div class="question" data-question-id="q15" data-type="single" data-required="true">
+          <h2>P15. Gestió de paquets</h2>
+          <p>Per què serveix principalment la comanda <code>apt-get</code> en una distribució com Ubuntu?</p>
+          <div class="options">
+            <label><input type="radio" name="q15" value="a"> Per canviar de directori.</label>
+            <label><input type="radio" name="q15" value="b"> Per gestionar (instal·lar, actualitzar, eliminar) paquets de programari.</label>
+            <label><input type="radio" name="q15" value="c"> Per editar fitxers de text.</label>
+            <label><input type="radio" name="q15" value="d"> Per apagar directament l’ordinador.</label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q16" data-type="tf" data-required="true">
+          <h2>P16. Ús de <code>sudo</code></h2>
+          <p>La comanda <code>sudo</code> permet executar una altra comanda amb privilegis d’un altre usuari (normalment l’usuari administrador).</p>
+          <div class="options">
+            <label><input type="radio" name="q16" value="true"> Vertader</label>
+            <label><input type="radio" name="q16" value="false"> Fals</label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q17" data-type="single" data-required="true">
+          <h2>P17. Aturar o reiniciar el sistema</h2>
+          <p>Quina de les següents comandes <strong>pot</strong> servir per aturar o reiniciar un sistema Linux?</p>
+          <div class="options">
+            <label><input type="radio" name="q17" value="a"> <code>history</code></label>
+            <label><input type="radio" name="q17" value="b"> <code>nano</code></label>
+            <label><input type="radio" name="q17" value="c"> <code>reboot</code></label>
+            <label><input type="radio" name="q17" value="d"> <code>cat</code></label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Preguntes CLI Linux + Windows -->
+      <section class="card">
+        <h2>Bloc 3 · CLI a Linux i Windows</h2>
+
+        <div class="question" data-question-id="q18" data-type="single" data-required="true">
+          <h2>P18. Definició de CLI</h2>
+          <p>Què és el <strong>CLI (Command Line Interface)</strong>?</p>
+          <div class="options">
+            <label><input type="radio" name="q18" value="a"> Un programa gràfic per editar imatges.</label>
+            <label><input type="radio" name="q18" value="b"> L’entorn de terminal on s’executen comandes d’un sistema operatiu.</label>
+            <label><input type="radio" name="q18" value="c"> El nom d’un sistema de fitxers.</label>
+            <label><input type="radio" name="q18" value="d"> Un llenguatge de programació per a jocs.</label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q19" data-type="multi" data-required="true">
+          <h2>P19. Per què és important el CLI?</h2>
+          <p>Selecciona els motius correctes pels quals és important conèixer i utilitzar el CLI.</p>
+          <div class="options">
+            <label><input type="checkbox" name="q19" value="a"> Automatitzar tasques.</label>
+            <label><input type="checkbox" name="q19" value="b"> Fer tasques desassistides (sense estar present).</label>
+            <label><input type="checkbox" name="q19" value="c"> Reduir errors humans i fer processos reproduïbles.</label>
+            <label><input type="checkbox" name="q19" value="d"> Fer que l’ordinador sigui físicament més potent.</label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q20" data-type="single" data-required="true">
+          <h2>P20. Fitxer de configuració de bash</h2>
+          <p>On es desa habitualment la configuració de la shell <strong>bash</strong> per un usuari?</p>
+          <div class="options">
+            <label><input type="radio" name="q20" value="a"> <code>/etc/passwd</code></label>
+            <label><input type="radio" name="q20" value="b"> <code>/home/nom_usuari/.bashrc</code></label>
+            <label><input type="radio" name="q20" value="c"> <code>/var/log/bash.log</code></label>
+            <label><input type="radio" name="q20" value="d"> <code>C:\Users\nom_usuari</code></label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q21" data-type="multi" data-required="true">
+          <h2>P21. Scripts en bash</h2>
+          <p>Selecciona les afirmacions correctes sobre els <strong>scripts en bash</strong>.</p>
+          <div class="options">
+            <label><input type="checkbox" name="q21" value="a"> Tenen sovint la primera línia <code>#!/bin/bash</code>.</label>
+            <label><input type="checkbox" name="q21" value="b"> Es poden executar amb <code>./nom_script.sh</code> si tenen permís d’execució.</label>
+            <label><input type="checkbox" name="q21" value="c"> Es guarden habitualment amb extensió <code>.sh</code>.</label>
+            <label><input type="checkbox" name="q21" value="d"> Només es poden executar des de Windows CMD.</label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q22" data-type="single" data-required="true">
+          <h2>P22. CLI a Windows</h2>
+          <p>Quines són les dues principals aplicacions de CLI a Windows seguint el que heu vist a classe?</p>
+          <div class="options">
+            <label><input type="radio" name="q22" value="a"> CMD i PowerShell</label>
+          <label><input type="radio" name="q22" value="b"> CMD i bash</label>
+          <label><input type="radio" name="q22" value="c"> PowerShell i nano</label>
+          <label><input type="radio" name="q22" value="d"> Terminal i .bashrc</label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q23" data-type="multi" data-required="true">
+          <h2>P23. Cmdlets a PowerShell</h2>
+          <p>Selecciona quines de les següents instruccions són <strong>cmdlets de PowerShell</strong> o comandes utilitzades al seu entorn de scriptting.</p>
+          <div class="options">
+            <label><input type="checkbox" name="q23" value="a"> <code>Get-Date</code></label>
+            <label><input type="checkbox" name="q23" value="b"> <code>Set-Location</code></label>
+            <label><input type="checkbox" name="q23" value="c"> <code>Write-Output</code></label>
+            <label><input type="checkbox" name="q23" value="d"> <code>chmod +x</code></label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q24" data-type="open" data-required="true">
+          <h2>P24. CMD vs PowerShell</h2>
+          <p>Explica breument una diferència important entre <strong>CMD</strong> i <strong>PowerShell</strong> pel que fa a comandes i scripts.</p>
+          <textarea name="q24" placeholder="Escriu aquí la teva resposta..."></textarea>
+        </div>
+      </section>
+
+      <!-- Preguntes Docker -->
+      <section class="card">
+        <h2>Bloc 4 · Docker i contenidors</h2>
+
+        <div class="question" data-question-id="q25" data-type="single" data-required="true">
+          <h2>P25. Què és Docker?</h2>
+          <p>Quina definició s’ajusta millor a <strong>Docker</strong>?</p>
+          <div class="options">
+            <label><input type="radio" name="q25" value="a"> Un sistema operatiu de sobretaula.</label>
+            <label><input type="radio" name="q25" value="b"> Una tecnologia de virtualització de maquinari complet com VirtualBox.</label>
+            <label><input type="radio" name="q25" value="c"> Una plataforma de contenidors per empaquetar i executar aplicacions amb totes les seves dependències.</label>
+            <label><input type="radio" name="q25" value="d"> Un editor de codi.</label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q26" data-type="multi" data-required="true">
+          <h2>P26. Docker vs màquines virtuals</h2>
+          <p>Selecciona totes les característiques que acostumen a ser <strong>avantatges dels contenidors Docker</strong> respecte a les màquines virtuals clàssiques.</p>
+          <div class="options">
+            <label><input type="checkbox" name="q26" value="a"> Són més lleugers perquè comparteixen el mateix kernel de sistema operatiu.</label>
+            <label><input type="checkbox" name="q26" value="b"> S’inicien habitualment més ràpid que una màquina virtual de sistema complet.</label>
+            <label><input type="checkbox" name="q26" value="c"> Poden empaquetar aplicacions amb totes les seves dependències en una imatge.</label>
+            <label><input type="checkbox" name="q26" value="d"> Requereixen sempre un hypervisor de tipus 1 com a mínim.</label>
+          </div>
+        </div>
+
+        <div class="question" data-question-id="q27" data-type="open" data-required="true">
+          <h2>P27. Explicar Docker a un company</h2>
+          <p>Imagina que un company que no n’ha sentit a parlar et pregunta: <em>“Què és Docker?”</em>. Escriu una explicació senzilla amb les teves paraules.</p>
+          <textarea name="q27" placeholder="Escriu aquí la teva explicació..."></textarea>
+        </div>
+
+        <div class="question" data-question-id="q28" data-type="open" data-required="true">
+          <h2>P28. Docker i màquines virtuals</h2>
+          <p>Compara breument Docker amb les màquines virtuals (VMware, VirtualBox, Hyper-V): indica <strong>almenys un avantatge</strong> de Docker i <strong>una limitació o inconvenient</strong> respecte a les màquines virtuals clàssiques.</p>
+          <textarea name="q28" placeholder="Escriu aquí la teva comparació..."></textarea>
+        </div>
+      </section>
+
+      <!-- Accions: guardar temporal, carregar temporal, generar JSON final -->
+      <section class="card">
+        <h2>Guardar i recuperar respostes</h2>
+        <p>
+          Pots <strong>guardar un fitxer temporal</strong> amb l’estat actual de les teves respostes (encara que no les hagis acabat totes) i <strong>recuperar-lo</strong> més endavant.
+          El fitxer inclou una <em>signatura</em> calculada amb una clau secreta al JS per detectar modificacions.
+        </p>
+
+        <div class="btn-row">
+          <button type="button" class="secondary" id="btn-save-temp">Descarrega fitxer temporal</button>
+
+          <div class="file-input-wrapper">
+            <span class="file-input-label">Carrega fitxer temporal...</span>
+            <input type="file" id="load-temp-input" accept=".json,.tmp,.txt,application/json">
+          </div>
+        </div>
+
+        <p id="temp-file-info" class="meta-info"></p>
+      </section>
+
+      <section class="card">
+        <h2>Generar JSON final per pujar al Moodle</h2>
+        <p>
+          Quan hagis respost totes les preguntes, fes clic a <strong>«Descarrega JSON final»</strong>.
+          El formulari comprovarà quines preguntes falten per respondre i les remarcarà.
+        </p>
+        <div class="btn-row">
+          <button type="button" class="primary" id="btn-download-final">Descarrega JSON final</button>
+        </div>
+        <div id="status-message"></div>
+      </section>
+    </form>
+  </main>
+  <script src="../../../assets/js/formularis.js"></script>
+</body>
+</html>
