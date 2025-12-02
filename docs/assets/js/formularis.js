@@ -320,8 +320,14 @@ function onLoadTemp(evt) {
             // Recordem de quin alumne prové aquest fitxer temporal
             LOADED_FILE_OWNER_ID = data.idAlumne;
 
+            // Bloquegem el desplegable d'alumne perquè no es pugui canviar
+            const select = document.getElementById("alumne");
+            if (select) {
+                select.disabled = true;
+            }
+
             info.textContent = "Fitxer temporal carregat: " + file.name;
-            status.textContent = "Respostes carregades correctament des del fitxer temporal.";
+            status.textContent = "Respostes carregades correctament des del fitxer temporal. L’alumne ha quedat fixat segons el fitxer carregat.";
             status.className = "success";
         } catch (err) {
             console.error("Error llegint fitxer temporal:", err);
@@ -347,7 +353,6 @@ function onDownloadFinal() {
 
     const status = document.getElementById("status-message");
     status.className = "";
-    status.textContent = "";
 
     // Si s'ha carregat un fitxer temporal, l'alumne seleccionat ha de ser el mateix
     if (LOADED_FILE_OWNER_ID && idAlumne !== LOADED_FILE_OWNER_ID) {
