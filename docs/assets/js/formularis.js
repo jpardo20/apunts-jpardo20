@@ -2,6 +2,9 @@
 // IMPORTANT: està al client, serveix per detectar canvis bàsics, no és seguretat criptogràfica forta.
 const TMP_SECRET = "0483_TMP_SECRET_form_virtualitzacio_cli_docker_v1";
 
+// Recorda de quin alumne prové el fitxer temporal carregat (si n'hi ha)
+let LOADED_FILE_OWNER_ID = null;
+
 function simpleHash(str) {
     // Hash senzill tipus DJB2 modificat (només per integritat bàsica)
     let hash = 5381;
@@ -314,6 +317,9 @@ function onLoadTemp(evt) {
             updateProgress();
             markUnansweredQuestions();
 
+            // Recordem de quin alumne prové aquest fitxer temporal
+            LOADED_FILE_OWNER_ID = data.idAlumne;
+
             info.textContent = "Fitxer temporal carregat: " + file.name;
             status.textContent = "Respostes carregades correctament des del fitxer temporal.";
             status.className = "success";
@@ -339,6 +345,17 @@ function onDownloadFinal() {
     const idAlumne = select.value;
     const nomAlumne = select.options[select.selectedIndex] ? select.options[select.selectedIndex].text : "";
 
+    const status = document.getElementById("status-message");
+    status.className = "";
+    status.textContent = "";
+
+    // Si s'ha carregat un fitxer temporal, l'alumne seleccionat ha de ser el mateix
+    if (LOADED_FILE_OWNER_ID && idAlumne !== LOADED_FILE_OWNER_ID) {
+        status.textContent = "Has carregat un fitxer temporal que pertany a un altre alumne. No pots enviar aquestes respostes com si fossin d’un alumne diferent.";
+        status.className = "error";
+        return;
+    }
+
     const answers = collectAnswers();
     const signature = computeSignature(idAlumne, answers);
     const nowIso = new Date().toISOString();
@@ -361,12 +378,14 @@ function onDownloadFinal() {
 
     downloadJSON(payload, filename);
 
-    const status = document.getElementById("status-message");
     status.textContent = "JSON final descarregat correctament (" + filename + "). Desa’l i puja’l al Moodle.";
     status.className = "success";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    // En carregar la pàgina, assumim que no hi ha cap fitxer temporal carregat
+    LOADED_FILE_OWNER_ID = null;
+
     loadAlumnes();
     updateProgress();
 
