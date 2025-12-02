@@ -54,7 +54,8 @@
 
 <h3><strong>Tutoria de SMX i DAM</u></strong></h3>
 <details>
-  <summary>Desplega per veure els mòduls de DAM</summary>
+  <summary>Desplega per veure Tutoria de SMX i DAM
+</summary>
 
 <ul>
 <li><p>
@@ -65,7 +66,7 @@ divendres, 07 de novembre -> <a href="https://jpardo20.github.io/apunts-jpardo20
 </li>
 <li><p>
 
-divendres, 14 de novembre -> <a href="https://jpardo20.github.io/apunts-jpardo20/moduls/tutoria/lectura_quatre_noticies_tecnologia_combo-amb-llista-alumnes.html"  target="_blank">Lectura i qüestionari: 4 notícies de tecnologia</a>
+divendres, 14 de novembre -> <a href="https://jpardo20.github.io/apunts-jpardo20/moduls/tutoria/lectura_quatre_noticies_tecnologia.html"  target="_blank">Lectura i qüestionari: 4 notícies de tecnologia</a>
 </li>
 
 </ul>
