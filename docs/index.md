@@ -3,26 +3,28 @@
 <details>
   <summary>Desplega per veure els mòduls de SMX</summary>
 
-<h3>0221 Muntatge i manteniment d’equips</h3>
-<ul>
+<h3><a href="moduls/0221-muntatge-i-manteniment-d-equips/presentacions/index.html">0221 Muntatge i manteniment d’equips</a></h3>
+<!-- <ul>
     <li>
         <p>
             <a href="moduls/0221-muntatge-i-manteniment-d-equips/presentacions/index.html">Presentacions</a>
         </p>
-    </li>
-    <li><p><a href="https://jpardo20.github.io/apunts-jpardo20/moduls/0221-muntatge-i-manteniment-d-equips/presentacions/slides/0221-ae-004.html">Correció: coavaluacio presentacions rúbrica</a>
+    </li> -->
+    <!-- <li><p><a href="https://jpardo20.github.io/apunts-jpardo20/moduls/0221-muntatge-i-manteniment-d-equips/presentacions/slides/0221-ae-004.html">Correció: coavaluacio presentacions rúbrica</a>
         </p>
-        </li>
+        </li> -->
         </ul>
 
-<h3>0223 Aplicacions ofimàtiques</h3>
-<ul><li><p><a href="moduls/0223-aplicacions-ofimatiques/presentacions/index.html">Presentacions</a></p></li></ul>
-<h3>0225 Xarxes locals</h3>
-<ul><li><p><a href="moduls/0225-xarxes-locals/presentacions/index.html">Presentacions</a></p></li></ul>
-<h3>OPTA Programació Python</h3>
-<ul>
+<h3><a href="moduls/0223-aplicacions-ofimatiques/presentacions/index.html">0223 Aplicacions ofimàtiques</a></h3>
+<!-- <ul><li><p><a href="moduls/0223-aplicacions-ofimatiques/presentacions/index.html">Presentacions</a></p></li></ul> -->
+
+<h3><a href="moduls/0225-xarxes-locals/presentacions/index.html">0225 Xarxes locals</a></h3>
+<!-- <ul><li><p><a href="moduls/0225-xarxes-locals/presentacions/index.html">Presentacions</a></p></li></ul> -->
+
+<h3><a href="moduls/mopt1-robotica-python/presentacions/index.html">OPTA Programació Python</a></h3>
+<!-- <ul>
     <li><p><a href="moduls/mopt1-robotica-python/presentacions/index.html">Teoria</a></p></li>
-</ul>
+</ul> -->
 </details>
 
 
@@ -30,18 +32,23 @@
 <details>
   <summary>Desplega per veure els mòduls de DAM</summary>
 
-<h3>0373 - Llenguatges de marques</h3>
-<ul><li><p><a href="moduls/0373-llenguatges-de-marques/presentacions/index.html">Presentacions</a></p></li></ul>
-<h3>0484 - Bases de dades</h3>
+<h3><a href="moduls/0373-llenguatges-de-marques/presentacions/index.html">0373 - Llenguatges de marques</a></h3>
+<!-- <ul><li><p><a href="moduls/0373-llenguatges-de-marques/presentacions/index.html">Presentacions</a></p></li></ul> -->
+<h3></h3>
+<h3><a href="moduls/0484-bases-de-dades/presentacions/index.html">0484 - Bases de dades</a></h3>
+
+<!--
 <ul>
 <li><p><a href="moduls/0484-bases-de-dades/presentacions/index.html">Presentacions</a></p></li>
 <li><p><a href="moduls/0484-bases-de-dades/activitats/0484-bds-ae02-interactiva.html">Activitat <u>`0484-bds-ae02`</u>: Treballem les JOIN</a></p></li>
+</ul> 
+-->
 
-</ul>
 
-
-<h3>0483 - Sistemes Informàtics</h3>
-<ul><li><p><a href="moduls/0483-sistemes-informatics/presentacions/index.html">Presentacions</a></p></li></ul>
+<h3><a href="moduls/0483-sistemes-informatics/presentacions/index.html">0483 - Sistemes Informàtics</a></h3>
+<!--
+<ul><li><p><a href="moduls/0483-sistemes-informatics/presentacions/index.html">Presentacions</a></p></li></ul> 
+-->
 
 </details>
 
