@@ -3,49 +3,6 @@
 
 ---
 
-## 1. Parer sobre el tema de l’ESO
-
-### 1.1. Punts forts del tema “el meu pas per l’ESO”
-
-- És **proper i significatiu** per a l’alumnat: tothom hi pot aportar alguna cosa.
-- Ajuda a treballar **expressió escrita** i reflexió personal.
-- Es deixa estructurar fàcilment en apartats, per exemple:
-  - 1r d’ESO, 2n d’ESO, 3r d’ESO, 4t d’ESO…
-  - Professors, companys, aprenentatges, projectes, etc.
-- Permet connectar amb la seva realitat i experiències recents.
-
-### 1.2. Inconvenients del tema tal com està plantejat
-
-- Pot resultar **massa íntim** (conflictes personals, bullying, problemes familiars…) i potser no és el format adequat per compartir-ho.
-- Es pot percebre com una tasca de “**explicar la vida**” més que no pas una pràctica tècnica de processador de textos.
-- Si no hi ha una guia clara, és fàcil que el resultat sigui un text **molt llarg i desordenat**, amb poc ús conscient d’estils, seccions i estructura.
-
-### 1.3. Proposta de reorientació del tema
-
-En lloc de fer només “el meu pas per l’ESO”, es proposa que el document sigui **útil per a algú**. Per exemple:
-
-- **Opció A – Guia per a futurs alumnes d’ESO**  
-  Una mena de “guia de supervivència” perquè alumnes que comencen l’ESO sàpiguen què esperar i com organitzar-se.
-
-- **Opció B – De l’ESO a SMX**  
-  Una reflexió sobre què ha estat realment útil de l’ESO per arribar a SMX (coneixements, hàbits d’estudi, experiències positives).
-
-D’aquesta manera:
-
-- L’alumne segueix parlant de la seva experiència a l’ESO.
-- L’activitat té un **enfocament més pràctic i funcional**.
-- Es facilita una **estructura clara** per treballar:
-  - títols i subtítols,
-  - llistes,
-  - seccions,
-  - taula de continguts, etc.
-
----
-
-## 2. Enunciat per als alumnes (text per al Classroom / Moodle)
-
-### 2.1. Títol i objectiu de la tasca
-
 **Tasca – Document de text en LibreOffice Writer**
 
 L’objectiu d’aquesta activitat és **demostrar que saps utilitzar les eines bàsiques d’un processador de textos** (LibreOffice Writer):
@@ -94,7 +51,7 @@ Hi poden aparèixer idees com:
 - Allò que hauries volgut **treballar més** a l’ESO.
 - Recomanacions per a alumnes d’ESO que vulguin estudiar **SMX** en el futur.
 
-> ⚠️ **Important:**  
+> **Important:**  
 > No cal explicar detalls molt personals o íntims. Pots parlar en general i posar exemples sense donar informació sensible.
 
 ---
@@ -166,23 +123,21 @@ El document ha de complir **TOTS** aquests punts:
 
 - Nom del fitxer:
 
-  ```text
-  Cognom1_Cognom2_Nom_eso_writer.odt
-  ```
+<u><b>**`<PrimerCognomAlumne>-0223-aof-ae07.odt`**</b></u><br>(<u>**tot en minúscules**</u>).
 
-  Exemple:
+><hr>
+>
+> ###### On **`<PrimerCognomAlumne>`** és <u>només</u> el primer cognom de l'alumne, sense el nom.
+>
+> ###### Per exemple en el cas de l'alumne <b><u>Albert Einstein</u></b>, el nom del fitxer seria <kbd><u><b>**`einstein--0223-aof-ae07.odt`**</b></u></kbd>.
+>
+><hr>
 
-  ```text
-  Lopez_Vives_Marc_eso_writer.odt
-  ```
-
-- Lliura el fitxer al Moodle / Google Classroom a la tasca indicada pel professor.
+ - Lliura el fitxer a l'aula virtual a la tasca indicada pel professor.
 
 ---
 
-### 2.5. Possibles criteris d’avaluació (per al docent)
-
-*(Aquesta part és orientativa per al professorat i es pot convertir en rúbrica.)*
+### 2.5. Criteris d’avaluació
 
 - **Estructura i organització del document**  
   - Ús correcte de títol principal i subtítols (nivell 1 i 2).
@@ -205,6 +160,3 @@ El document ha de complir **TOTS** aquests punts:
   - Adequació al tema (Opció A o B).  
   - Ortografia i presentació general.
 
-*(Es pot ponderar de manera que es valori sobretot la part ofimàtica per sobre del “nivell literari”.)*
-
----
