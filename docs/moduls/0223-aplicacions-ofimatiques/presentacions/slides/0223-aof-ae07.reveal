@@ -1,4 +1,4 @@
-# 0223 – Aplicacions ofimàtiques  
+# 0223 – Aplicacions ofimàtiques
 ## AE07 – Document de text en LibreOffice Writer
 
 **Tasca – Document de text en LibreOffice Writer**
@@ -7,7 +7,7 @@
 
 **Tasca – Document de text en LibreOffice Writer**
 
-L’objectiu d’aquesta activitat és **demostrar que saps utilitzar les eines bàsiques d’un processador de textos** (LibreOffice Writer):
+L'objectiu d'aquesta activitat és **demostrar que saps utilitzar les eines bàsiques d'un processador de textos** (LibreOffice Writer):
 
 - estils de paràgraf i de caràcter,
 - llistes,
@@ -16,25 +16,25 @@ L’objectiu d’aquesta activitat és **demostrar que saps utilitzar les eines 
 - capçaleres i peus de pàgina,
 - taula de continguts automàtica (TOC).
 
-Crearàs un document on **reflexionaràs sobre l’etapa de l’ESO**, però amb un enfocament útil per a altres alumnes.
+Crearàs un document on **reflexionaràs sobre l'etapa de l'ESO**, però amb un enfocament útil per a altres alumnes.
 
 ----
 
 ### 1. Temàtica del document
 
-Escull **una** d’aquestes dues opcions:
+Escull **una** d'aquestes dues opcions:
 
-#### Opció A – Guia de supervivència per a l’ESO
+#### Opció A – Guia de supervivència per a l'ESO
 
 Escriu un document amb un títol semblant a:
 
-- *“Guia de supervivència per a l’ESO”*  
+- *"Guia de supervivència per a l'ESO"*  
   o  
-- *“Consells per sobreviure a l’ESO i no morir en l’intent”*.
+- *"Consells per sobreviure a l'ESO i no morir en l'intent"*.
 
 Al document hi poden aparèixer idees com:
 
-- Què cal saber el **primer dia** d’ESO.
+- Què cal saber el **primer dia** d'ESO.
 - Com **organitzar-se** amb exàmens, deures i treballs.
 - Trucs per **aprofitar millor les classes**.
 - Com portar-se amb **companys i professors** (bones pràctiques).
@@ -42,18 +42,18 @@ Al document hi poden aparèixer idees com:
 
 ----
 
-#### Opció B – De l’ESO a SMX: què m’ha servit
+#### Opció B – De l'ESO a SMX: què m'ha servit
 
 Escriu un document amb un títol semblant a:
 
-- *“De l’ESO a SMX: què m’ha servit de veritat”*.
+- *"De l'ESO a SMX: què m'ha servit de veritat"*.
 
 Hi poden aparèixer idees com:
 
-- Assignatures, projectes o activitats de l’ESO que t’han ajudat a SMX.
+- Assignatures, projectes o activitats de l'ESO que t'han ajudat a SMX.
 - **Habilitats** que vas adquirir (treball en equip, parlar en públic, organització, responsabilitat…).
-- Allò que hauries volgut **treballar més** a l’ESO.
-- Recomanacions per a alumnes d’ESO que vulguin estudiar **SMX** en el futur.
+- Allò que hauries volgut **treballar més** a l'ESO.
+- Recomanacions per a alumnes d'ESO que vulguin estudiar **SMX** en el futur.
 
 ----
 
@@ -72,19 +72,19 @@ El document ha de complir **TOTS** aquests punts:
 - Com a mínim:
   - 1 títol de nivell 1 (títol principal del document).
   - 2 títols de nivell 2 (apartats principals).
-- Pots afegir més nivells si t’ajuda a organitzar millor el contingut.
+- Pots afegir més nivells si t'ajuda a organitzar millor el contingut.
 
 ----
 
 #### 2) Estils de paràgraf i de caràcter
 
 - Utilitza **estils de paràgraf** per:
-  - El cos del text (per exemple, “Cos de text” o similar).
-  - Una zona especial (per exemple, “Cita”, “Nota” o un estil creat per tu).
+  - El cos del text (per exemple, "Cos de text" o similar).
+  - Una zona especial (per exemple, "Cita", "Nota" o un estil creat per tu).
 - Utilitza **estils de caràcter** per:
-  - Ressaltar com a mínim **3 paraules o frases importants** (per exemple, amb l’estil “Èmfasi” o “Fort”).
+  - Ressaltar com a mínim **3 paraules o frases importants** (per exemple, amb l'estil "Èmfasi" o "Fort").
 
-> No es tracta només de posar-ho en negreta o cursiva manualment, sinó d’utilitzar **estils**.
+> No es tracta només de posar-ho en negreta o cursiva manualment, sinó d'utilitzar **estils**.
 
 ----
 
@@ -93,7 +93,7 @@ El document ha de complir **TOTS** aquests punts:
 - Inclou **com a mínim 2 llistes no numerades** (amb vinyetes).
 - Exemples:
   - Llista de consells.
-  - Llista d’errors a evitar.
+  - Llista d'errors a evitar.
   - Llista de recomanacions finals.
 
 ----
@@ -101,13 +101,13 @@ El document ha de complir **TOTS** aquests punts:
 #### 4) Salts de secció i orientació apaïsada
 
 - El document ha de tenir **com a mínim tres seccions**.
-- La segona de les seccions ha d’estar en **orientació apaïsada (horitzontal)**.
+- La segona de les seccions ha d'estar en **orientació apaïsada (horitzontal)**.
 - En la secció apaïsada, inclou-hi:
-  - Una llista de consells en forma d’esquema, **o**
+  - Una llista de consells en forma d'esquema, **o**
   - Una taula resum (recomanat, però opcional) i .
   - Una imatge.
 
-*Això et servirà per practicar els **salts de secció** i el canvi d’orientació només en una part del document.*
+*Això et servirà per practicar els **salts de secció** i el canvi d'orientació només en una part del document.*
 
 ----
 
@@ -125,7 +125,7 @@ El document ha de complir **TOTS** aquests punts:
 #### 6) Taula de continguts (TOC)
 
 - Després de la portada o del títol principal, insereix una **taula de continguts automàtica**.
-- La TOC s’ha de generar a partir dels **estils de títol** que hagis utilitzat.
+- La TOC s'ha de generar a partir dels **estils de títol** que hagis utilitzat.
 - Si canvies títols o afegeixes pàgines, recorda **actualitzar la taula**.
 
 ----
@@ -148,7 +148,7 @@ El document ha de complir **TOTS** aquests punts:
 >
 > ###### On **`<PrimerCognomAlumne>`** és <u>només</u> el primer cognom de l'alumne, sense el nom.
 >
-> ###### Per exemple en el cas de l'alumne <b><u>Albert Einstein</u></b>, el nom del fitxer seria <kbd><u><b>**`einstein--0223-aof-ae07.odt`**</b></u></kbd>.
+> ###### Per exemple en el cas de l'alumne <b><u>Albert Einstein</u></b>, el nom del fitxer seria <kbd><u><b>**`einstein-0223-aof-ae07.odt`**</b></u></kbd>.
 >
 ><hr>
 
@@ -156,15 +156,15 @@ El document ha de complir **TOTS** aquests punts:
 
 ---
 
-### 4. Criteris d’avaluació
+### 4. Criteris d'avaluació
 
 - **Estructura i organització del document**  
   - Ús correcte de títol principal i subtítols (nivell 1 i 2).
   - Coherència entre títols i contingut.
 
-- **Ús d’estils**  
-  - Aplicació d’estils de paràgraf (cos, cita, etc.).  
-  - Ús d’estils de caràcter (èmfasi, destacats).
+- **Ús d'estils**  
+  - Aplicació d'estils de paràgraf (cos, cita, etc.).  
+  - Ús d'estils de caràcter (èmfasi, destacats).
 
 - **Elements de maquetació**  
   - Llistes no numerades correctament aplicades.  
