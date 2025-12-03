@@ -75,6 +75,14 @@
             "description": "Procesadors de texts",
             "status": "active",
             "kind": "activity"
+        },
+        {
+            "order": 29,
+            "title": "Activitat evaluable 0223-aof-ae06-docs",
+            "src": "slides/0223-aof-ae07-docs.reveal",
+            "description": "Procesadors de texts",
+            "status": "active",
+            "kind": "activity"
         }
     ]
 }

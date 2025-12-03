@@ -1,0 +1,210 @@
+# 0223 – Aplicacions ofimàtiques  
+## AE07 – Document de text en LibreOffice Writer
+
+---
+
+## 1. Parer sobre el tema de l’ESO
+
+### 1.1. Punts forts del tema “el meu pas per l’ESO”
+
+- És **proper i significatiu** per a l’alumnat: tothom hi pot aportar alguna cosa.
+- Ajuda a treballar **expressió escrita** i reflexió personal.
+- Es deixa estructurar fàcilment en apartats, per exemple:
+  - 1r d’ESO, 2n d’ESO, 3r d’ESO, 4t d’ESO…
+  - Professors, companys, aprenentatges, projectes, etc.
+- Permet connectar amb la seva realitat i experiències recents.
+
+### 1.2. Inconvenients del tema tal com està plantejat
+
+- Pot resultar **massa íntim** (conflictes personals, bullying, problemes familiars…) i potser no és el format adequat per compartir-ho.
+- Es pot percebre com una tasca de “**explicar la vida**” més que no pas una pràctica tècnica de processador de textos.
+- Si no hi ha una guia clara, és fàcil que el resultat sigui un text **molt llarg i desordenat**, amb poc ús conscient d’estils, seccions i estructura.
+
+### 1.3. Proposta de reorientació del tema
+
+En lloc de fer només “el meu pas per l’ESO”, es proposa que el document sigui **útil per a algú**. Per exemple:
+
+- **Opció A – Guia per a futurs alumnes d’ESO**  
+  Una mena de “guia de supervivència” perquè alumnes que comencen l’ESO sàpiguen què esperar i com organitzar-se.
+
+- **Opció B – De l’ESO a SMX**  
+  Una reflexió sobre què ha estat realment útil de l’ESO per arribar a SMX (coneixements, hàbits d’estudi, experiències positives).
+
+D’aquesta manera:
+
+- L’alumne segueix parlant de la seva experiència a l’ESO.
+- L’activitat té un **enfocament més pràctic i funcional**.
+- Es facilita una **estructura clara** per treballar:
+  - títols i subtítols,
+  - llistes,
+  - seccions,
+  - taula de continguts, etc.
+
+---
+
+## 2. Enunciat per als alumnes (text per al Classroom / Moodle)
+
+### 2.1. Títol i objectiu de la tasca
+
+**Tasca – Document de text en LibreOffice Writer**
+
+L’objectiu d’aquesta activitat és **demostrar que saps utilitzar les eines bàsiques d’un processador de textos** (LibreOffice Writer):
+
+- estils de paràgraf i de caràcter,
+- llistes,
+- títols amb diferents nivells,
+- salts de secció i orientació de pàgina,
+- capçaleres i peus de pàgina,
+- taula de continguts automàtica (TOC).
+
+Crearàs un document on **reflexionaràs sobre l’etapa de l’ESO**, però amb un enfocament útil per a altres alumnes.
+
+---
+
+### 2.2. Temàtica del document
+
+Escull **una** d’aquestes dues opcions:
+
+#### Opció A – Guia de supervivència per a l’ESO
+
+Escriu un document amb un títol semblant a:
+
+- *“Guia de supervivència per a l’ESO”*  
+  o  
+- *“Consells per sobreviure a l’ESO i no morir en l’intent”*.
+
+Al document hi poden aparèixer idees com:
+
+- Què cal saber el **primer dia** d’ESO.
+- Com **organitzar-se** amb exàmens, deures i treballs.
+- Trucs per **aprofitar millor les classes**.
+- Com portar-se amb **companys i professors** (bones pràctiques).
+- **Errors** que tu vas cometre i que recomanes evitar.
+
+#### Opció B – De l’ESO a SMX: què m’ha servit
+
+Escriu un document amb un títol semblant a:
+
+- *“De l’ESO a SMX: què m’ha servit de veritat”*.
+
+Hi poden aparèixer idees com:
+
+- Assignatures, projectes o activitats de l’ESO que t’han ajudat a SMX.
+- **Habilitats** que vas adquirir (treball en equip, parlar en públic, organització, responsabilitat…).
+- Allò que hauries volgut **treballar més** a l’ESO.
+- Recomanacions per a alumnes d’ESO que vulguin estudiar **SMX** en el futur.
+
+> ⚠️ **Important:**  
+> No cal explicar detalls molt personals o íntims. Pots parlar en general i posar exemples sense donar informació sensible.
+
+---
+
+### 2.3. Requisits tècnics del document (OBLIGATORIS)
+
+El document ha de complir **TOTS** aquests punts:
+
+#### 1) Títols en diversos nivells
+
+- Utilitza **estils de títol** (per exemple: *Títol 1*, *Títol 2*).
+- Com a mínim:
+  - 1 títol de nivell 1 (títol principal del document).
+  - 2 títols de nivell 2 (apartats principals).
+- Pots afegir més nivells si t’ajuda a organitzar millor el contingut.
+
+#### 2) Estils de paràgraf i de caràcter
+
+- Utilitza **estils de paràgraf** per:
+  - El cos del text (per exemple, “Cos de text” o similar).
+  - Una zona especial (per exemple, “Cita”, “Nota” o un estil creat per tu).
+- Utilitza **estils de caràcter** per:
+  - Ressaltar com a mínim **3 paraules o frases importants** (per exemple, amb l’estil “Èmfasi” o “Fort”).
+
+> No es tracta només de posar-ho en negreta o cursiva manualment, sinó d’utilitzar **estils**.
+
+#### 3) Llistes no numerades
+
+- Inclou **com a mínim 2 llistes no numerades** (amb vinyetes).
+- Exemples:
+  - Llista de consells.
+  - Llista d’errors a evitar.
+  - Llista de recomanacions finals.
+
+#### 4) Salts de secció i orientació apaïsada
+
+- El document ha de tenir **com a mínim dues seccions**.
+- Una de les seccions ha d’estar en **orientació apaïsada (horitzontal)**.
+- En la secció apaïsada, inclou-hi:
+  - Una llista de consells en forma d’esquema, **o**
+  - Una taula resum (recomanat, però opcional).
+
+*Això et servirà per practicar els **salts de secció** i el canvi d’orientació només en una part del document.*
+
+#### 5) Capçalera i peu de pàgina
+
+- Afegeix una **capçalera** amb, per exemple:
+  - Títol abreujat del document.
+  - El teu nom i cognoms.
+- Afegeix un **peu de pàgina** amb:
+  - Número de pàgina (camp automàtic).
+  - El text fix: `SMX – Aplicacions ofimàtiques`.
+
+#### 6) Taula de continguts (TOC)
+
+- Després de la portada o del títol principal, insereix una **taula de continguts automàtica**.
+- La TOC s’ha de generar a partir dels **estils de títol** que hagis utilitzat.
+- Si canvies títols o afegeixes pàgines, recorda **actualitzar la taula**.
+
+#### 7) Format i extensió mínima
+
+- Mínim **2 pàgines** de contingut real
+  - (no compta una pàgina que només tingui el títol gran al mig).
+- Format de fitxer obligatori: **`.odt`** (LibreOffice Writer).
+
+---
+
+### 2.4. Lliurament
+
+- Nom del fitxer:
+
+  ```text
+  Cognom1_Cognom2_Nom_eso_writer.odt
+  ```
+
+  Exemple:
+
+  ```text
+  Lopez_Vives_Marc_eso_writer.odt
+  ```
+
+- Lliura el fitxer al Moodle / Google Classroom a la tasca indicada pel professor.
+
+---
+
+### 2.5. Possibles criteris d’avaluació (per al docent)
+
+*(Aquesta part és orientativa per al professorat i es pot convertir en rúbrica.)*
+
+- **Estructura i organització del document**  
+  - Ús correcte de títol principal i subtítols (nivell 1 i 2).
+  - Coherència entre títols i contingut.
+
+- **Ús d’estils**  
+  - Aplicació d’estils de paràgraf (cos, cita, etc.).  
+  - Ús d’estils de caràcter (èmfasi, destacats).
+
+- **Elements de maquetació**  
+  - Llistes no numerades correctament aplicades.  
+  - Creació de seccions i orientació apaïsada en una part del document.  
+  - Capçalera i peu de pàgina amb els elements demanats.
+
+- **Taula de continguts automàtica**  
+  - Correcta inserció i actualització de la TOC.
+
+- **Contingut i expressió**  
+  - Claredat de les idees.  
+  - Adequació al tema (Opció A o B).  
+  - Ortografia i presentació general.
+
+*(Es pot ponderar de manera que es valori sobretot la part ofimàtica per sobre del “nivell literari”.)*
+
+---
