@@ -100,11 +100,12 @@ El document ha de complir **TOTS** aquests punts:
 
 #### 4) Salts de secció i orientació apaïsada
 
-- El document ha de tenir **com a mínim dues seccions**.
-- Una de les seccions ha d’estar en **orientació apaïsada (horitzontal)**.
+- El document ha de tenir **com a mínim tres seccions**.
+- La segona de les seccions ha d’estar en **orientació apaïsada (horitzontal)**.
 - En la secció apaïsada, inclou-hi:
   - Una llista de consells en forma d’esquema, **o**
-  - Una taula resum (recomanat, però opcional).
+  - Una taula resum (recomanat, però opcional) i .
+  - Una imatge.
 
 *Això et servirà per practicar els **salts de secció** i el canvi d’orientació només en una part del document.*
 
@@ -131,8 +132,8 @@ El document ha de complir **TOTS** aquests punts:
 
 #### 7) Format i extensió mínima
 
-- Mínim **2 pàgines** de contingut real
-  - (no compta una pàgina que només tingui el títol gran al mig).
+- Mínim **4 pàgines** de contingut real
+  - no compta la portada, ni la pàgina del TOC, ni cap pàgina que només tingui el títol gran al mig.
 - Format de fitxer obligatori: **`.odt`** (LibreOffice Writer).
 
 ---
