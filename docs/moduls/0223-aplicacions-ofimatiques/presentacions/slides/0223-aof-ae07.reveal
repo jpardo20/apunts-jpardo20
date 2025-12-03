@@ -1,6 +1,8 @@
 # 0223 – Aplicacions ofimàtiques  
 ## AE07 – Document de text en LibreOffice Writer
 
+**Tasca – Document de text en LibreOffice Writer**
+
 ---
 
 **Tasca – Document de text en LibreOffice Writer**
@@ -16,9 +18,9 @@ L’objectiu d’aquesta activitat és **demostrar que saps utilitzar les eines 
 
 Crearàs un document on **reflexionaràs sobre l’etapa de l’ESO**, però amb un enfocament útil per a altres alumnes.
 
----
+----
 
-### 2.2. Temàtica del document
+### 1. Temàtica del document
 
 Escull **una** d’aquestes dues opcions:
 
@@ -38,6 +40,8 @@ Al document hi poden aparèixer idees com:
 - Com portar-se amb **companys i professors** (bones pràctiques).
 - **Errors** que tu vas cometre i que recomanes evitar.
 
+----
+
 #### Opció B – De l’ESO a SMX: què m’ha servit
 
 Escriu un document amb un títol semblant a:
@@ -56,7 +60,7 @@ Hi poden aparèixer idees com:
 
 ---
 
-### 2.3. Requisits tècnics del document (OBLIGATORIS)
+### 2 Requisits tècnics del document (OBLIGATORIS)
 
 El document ha de complir **TOTS** aquests punts:
 
@@ -68,6 +72,8 @@ El document ha de complir **TOTS** aquests punts:
   - 2 títols de nivell 2 (apartats principals).
 - Pots afegir més nivells si t’ajuda a organitzar millor el contingut.
 
+----
+
 #### 2) Estils de paràgraf i de caràcter
 
 - Utilitza **estils de paràgraf** per:
@@ -78,6 +84,8 @@ El document ha de complir **TOTS** aquests punts:
 
 > No es tracta només de posar-ho en negreta o cursiva manualment, sinó d’utilitzar **estils**.
 
+----
+
 #### 3) Llistes no numerades
 
 - Inclou **com a mínim 2 llistes no numerades** (amb vinyetes).
@@ -85,6 +93,8 @@ El document ha de complir **TOTS** aquests punts:
   - Llista de consells.
   - Llista d’errors a evitar.
   - Llista de recomanacions finals.
+
+----
 
 #### 4) Salts de secció i orientació apaïsada
 
@@ -96,6 +106,8 @@ El document ha de complir **TOTS** aquests punts:
 
 *Això et servirà per practicar els **salts de secció** i el canvi d’orientació només en una part del document.*
 
+----
+
 #### 5) Capçalera i peu de pàgina
 
 - Afegeix una **capçalera** amb, per exemple:
@@ -105,11 +117,15 @@ El document ha de complir **TOTS** aquests punts:
   - Número de pàgina (camp automàtic).
   - El text fix: `SMX – Aplicacions ofimàtiques`.
 
+----
+
 #### 6) Taula de continguts (TOC)
 
 - Després de la portada o del títol principal, insereix una **taula de continguts automàtica**.
 - La TOC s’ha de generar a partir dels **estils de títol** que hagis utilitzat.
 - Si canvies títols o afegeixes pàgines, recorda **actualitzar la taula**.
+
+----
 
 #### 7) Format i extensió mínima
 
@@ -119,7 +135,7 @@ El document ha de complir **TOTS** aquests punts:
 
 ---
 
-### 2.4. Lliurament
+### 3. Lliurament
 
 - Nom del fitxer:
 
@@ -137,7 +153,7 @@ El document ha de complir **TOTS** aquests punts:
 
 ---
 
-### 2.5. Criteris d’avaluació
+### 4. Criteris d’avaluació
 
 - **Estructura i organització del document**  
   - Ús correcte de títol principal i subtítols (nivell 1 i 2).
@@ -151,6 +167,8 @@ El document ha de complir **TOTS** aquests punts:
   - Llistes no numerades correctament aplicades.  
   - Creació de seccions i orientació apaïsada en una part del document.  
   - Capçalera i peu de pàgina amb els elements demanats.
+
+----
 
 - **Taula de continguts automàtica**  
   - Correcta inserció i actualització de la TOC.
