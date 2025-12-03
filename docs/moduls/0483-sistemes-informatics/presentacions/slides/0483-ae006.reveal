@@ -1,0 +1,337 @@
+# AE006 – Scripts de manteniment en Bash i PowerShell
+## 1r DAM – Proposta d'activitat
+
+Treballareu amb **`scripts de manteniment`** en:
+
+* Bash (Linux)
+
+* PowerShell (Windows)
+
+----
+
+## Objectiu:
+
+Triar **una tasca de manteniment**.
+
+Implementar-la en **`Bash`** i en **`PowerShell`**.
+
+Note:
+Aquesta presentació descriu les 4 idees de scripts de manteniment que poden escollir.
+La idea és que cada alumne/grup en triï una i la implementi en bash i en PowerShell, reutilitzant les eines vistes a la presentació anterior.
+
+---
+
+## Com funciona l'activitat
+
+Escolliu **una** de les 4 idees de scripts:
+
+* Netejar la carpeta de Descàrregues.
+
+* Còpia de seguretat d'una carpeta.
+
+* Afegir la data al nom dels fitxers.
+
+* Informe ràpid d'espai de disc.
+
+----
+
+Feu:
+
+* Un script en **Bash** (**`.sh`**).
+
+* Un script en **PowerShell** (**`.ps1`**).
+
+#### Com a mínim, l'script ha de:
+
+* Fer la tasca sense errors.
+
+* Mostrar algun missatge informatiu.
+
+* Tenir **comentaris** explicant què fa.
+
+Note:
+Remarco que no cal fer un script súper complex.
+És més important que la tasca estigui clara, que el codi sigui entenedor i que hi hagi comentaris.
+Puc deixar clar si vull que tots facin com a mínim un petit log (opcionalment).
+
+---
+
+## Opció 1 – Netejar la carpeta de Descàrregues
+
+* **Idea**: endreçar la carpeta de **Descarregues** movent fitxers a una carpeta d'arxiu dins de la carpeta **Descarregues**.
+
+* Carpeta origen:
+
+  Bash: **`~/Descarregues`** o **`~/Downloads`**
+
+  PowerShell: **`C:\Users\ALUMNE\Downloads`**
+
+* Carpeta destí:
+
+  **arxiu** dins de la carpeta de **Descarregues**.
+
+  Bash: **`~/Descarregues/arxiu`** o **`~/Downloads/arxiu`**
+
+  PowerShell: **`C:\Users\ALUMNE\Downloads\arxiu`**
+
+
+----
+
+La tasca pot ser, per exemple:
+
+ * Moure **tots els fitxers** a **arxiu** o
+   * moure només alguns tipus (p.ex. **`.zip`**, **`.pdf`**, **`.jpg`**).
+
+ * Mostrar un llistat dels fitxers que s'han mogut.
+
+Note:
+Aquesta és probablement la més intuïtiva.
+Poden fer servir: crear carpeta si no existeix, llistar fitxers per extensió, moure fitxers, escriure missatges per pantalla.
+Si vull versió **pro **: que escriguin també un log amb la data i els fitxers moguts.
+
+----
+
+## Opció 1 – Pistes tècniques
+
+* **Bash** (idees):
+
+  - Variables de rutes: **`origen`**, **`desti`**.
+
+  - Crear carpeta Arxiu amb: **`mkdir -p "$desti"`**
+
+  - Llistar fitxers amb: **`ls "$origen"/*.zip`**
+
+  - Bucle **`for`** per recórrer fitxers i moure'ls amb **`mv`**.
+
+----
+
+* **PowerShell** (idees):
+
+  - Variables **`$origen`**, **`$desti`**.
+
+  - Crear carpeta amb: **`New-Item -ItemType Directory -Path $desti -Force`**
+
+  - **`Get-ChildItem -Path $origen -Filter *.zip`**
+
+  - Bucle **`foreach`** amb **`Move-Item`** per moure els fitxers.
+
+Note:
+No cal donar-los el codi fet, però sí aquestes pistes en pantalla perquè recordin quines comandes tenen disponibles.
+Puc animar-los a començar amb un sol tipus de fitxer (p.ex. .zip) i després ampliar-ho.
+
+---
+
+## Opció 2 – Còpia de seguretat d'una carpeta
+
+ **Idea**: fer una còpia de seguretat senzilla d'una carpeta de treball.
+
+Carpeta origen (exemples):
+
+Bash: **`~/Documents/DAM`**
+
+PowerShell: **`C:\Users\ALUMNE\Documents\DAM`**
+
+Carpeta destí (backup):
+
+Bash: **`~/backup-dam`**
+
+PowerShell: **`D:\backup-dam`** (o una altra ruta de prova).
+
+----
+
+La tasca pot ser, per exemple:
+
+ - Copiar tots els fitxers (i opcionalment subcarpetes) de l'origen al destí.
+
+ - Comptar quants fitxers s'han copiat.
+
+ - Mostrar un missatge final del tipus:
+
+   - "S'ha fet la còpia de seguretat de X fitxers."
+
+Note:
+És una versió més “douda” de l'script de backup que hem vist d'exemple.
+Poden decidir si volen copiar només alguns tipus de fitxer o tot el contingut.
+Aquí es pot insistir en l'ús de variables de ruta i, si volem, en l'ús de date / Get-Date per etiquetar el log o la carpeta de destí.
+
+----
+
+## Opció 2 – Pistes tècniques
+
+* **Bash** (idees):
+
+  - Variables **`$origen`**, **`$desti`**..
+
+  - Crear carpeta destí amb: **`mkdir -p "$desti"`**
+
+  - Copiar fitxers amb: cp o cp -r
+
+  - Fer servir **`for`** + **`cp`** per comptar els fitxers copiats.
+
+  - Opcional: escriure en un **`backup.log`** amb redireccions (**'>>'**).
+
+----
+
+* **PowerShell** (idees):
+
+  - Variables **`$origen`**, **`$desti`**.
+
+  - Crear carpeta destí amb: **`New-Item -ItemType Directory -Path $desti -Force`**
+
+  - Copiar amb: **`Copy-Item`** (i **`-Recurse`** si cal).
+
+  - Comptar fitxers amb: **`(Get-ChildItem -Path $origen).Count`**
+
+  - Opcional: escriure en un log amb **`Add-Content`**.
+
+Note:
+Aquí puc demanar una mica més de “professionalitat”: que l'script comprovi si l'origen existeix i, si no, mostri un missatge d'error.
+També puc suggerir que el log tingui la data/hora d'inici i final.
+
+---
+
+## Opció 3 – Afegir la data al nom dels fitxers
+
+ **Idea**: canviar el nom als fitxers perquè incloguin la data al nom, per exemple per a fitxers .log o .txt.
+
+* Carpeta de treball (exemples):
+
+Bash: **`~/logs`**
+
+PowerShell: **`C:\logs`**
+
+Per a cada fitxer **`.log`**:
+
+**`error.log`** → **`error-20251205.log`**
+
+**`servei.log`** → **`servei-20251205.log`**
+
+----
+
+Elements importants:
+
+  - Obtenir la data en format **`YYYYMMDD`**.
+
+  - Recorre tots els fitxers **`.log`**.
+
+  - Canviar-los-hi el nom amb el nou nom.
+
+Note:
+Aquesta opció és ideal per qui va una mica més ràpid.
+Els obliga a treballar amb la data com a variable i amb canviar el nom als fitxers.
+Puc remarcar que això s'assembla al que fan molts sistemes de logs reals.
+
+----
+
+## Opció 3 – Pistes tècniques
+
+* **Bash** (idees):
+
+* Obtenir la data: **`data=$(date +%Y%m%d)`**
+
+* Bucle sobre **`*.log`**: **`for fitxer in "$carpeta"/*.log; do ... done`**
+
+  - Construir el nou nom:
+
+    - **`base=${fitxer%.log}`**
+
+    - **`nou_nom="${base}-${data}.log"`**
+
+  - canviar el nom amb: **`mv "$fitxer" "$nou_nom"`**
+
+----
+
+* **PowerShell** (idees):
+
+  - Obtenir la data:
+
+    - **`$data = Get-Date -Format "yyyyMMdd"`**
+
+    - **`Get-ChildItem -Path $carpeta -Filter *.log`** dins d'un **`foreach`**.
+
+  - Separar nom base i extensió (p.ex. **`$file.BaseName `** i **`$file.Extension`**).
+
+  - Nou nom amb: "**`$($file.BaseName)-$data$($file.Extension)`**".
+
+  - canviar el nom amb: **`Rename-Item`**.
+
+Note:
+Aquí té sentit fer un petit exemple a la pissarra o en directe amb 1 o 2 fitxers abans que ells ho provin.
+És molt bona pràctica per entendre com manipular cadenes amb noms de fitxer.
+
+---
+
+## Opció 4 – Informe ràpid d'espai de disc
+
+ **Idea**: generar un petit informe de manteniment amb informació d'espai de disc i mida d'algunes carpetes.
+
+Possible contingut de l'informe:
+
+* Espai de disc disponible als volums principals.
+
+ * Mida d'una carpeta concreta, per exemple:
+
+Bash: **`~/Documents`**
+
+PowerShell: **`C:\Users\ALUMNE\Documents`**
+
+  - Data i hora en què s'ha generat l'informe.
+
+  - Resultat: Un fitxer **`informe-disc.txt`** amb la informació.
+
+Note:
+Aquesta opció els acosta a scripts de monitoratge.
+No cal que el càlcul de mides sigui súper exacte; el que interessa és que entenguin que poden llançar comandes i redirigir la sortida a un fitxer d'informe.
+Puc proposar-los que afegeixin línies separadores i missatges textuals perquè l'informe sigui llegible.
+
+----
+
+## Opció 4 – Pistes tècniques
+
+* **Bash** (idees):
+
+  - Espai de disc: **`df -h`**
+
+  - Mida carpeta: **`du -sh "$HOME/Documents"`**
+
+  - Redirigir sortida a fitxer:
+
+    - **`df -h > informe-disc.txt`**
+
+    - **`du -sh "$HOME/Documents" >> informe-disc.txt`**
+
+  - Afegir la data amb: **`date >> informe-disc.txt`**
+
+----
+
+* **PowerShell** (idees):
+
+  - Espai de disc: **`Get-PSDrive -PSProvider FileSystem`**
+
+  - Mida carpeta: usar **`Get-ChildItem -Recurse`** i sumar la propietat **`Length`** (aproximació).
+
+  - Escriure a fitxer amb **`Out-File`** i **`Add-Content`**.
+
+  - Afegir la data amb: **`Get-Date | Add-Content -Path informe-disc.txt`**
+
+Note:
+Puc simplificar molt la part de “mida carpeta” si veig que es complica: per exemple, només fer servir alguna comanda que llisti els fitxers i escriure això a l'informe.
+L'important és la idea de “comanda → fitxer d'informe”.
+
+---
+
+## Criteris bàsics d'avaluació (orientatius)
+
+|Criteri|Puntuació|
+|-----|-----:|
+|**Funcionalitat** (la tasca es fa realment)|**`0–4`** punts|
+|**Claredat del codi i comentaris**|**`0–3`** punts|
+|**Ús correcte de Bash i PowerShell** (dues versions)|**`0–2`** punts|
+|**Presentació / informe breu de què fa l'script** |**`0–1`** punt|
+|Total orientatiu|**`10` punts**|
+
+Note:
+Aquesta diapositiva la puc adaptar al sistema d'avaluació del mòdul.
+Serveix per explicar-los què valoraré: que funcioni, que sigui llegible i comentat, que hi hagi les dues versions (bash + PowerShell) i que puguin explicar què fa el seu script.
+
+Quan

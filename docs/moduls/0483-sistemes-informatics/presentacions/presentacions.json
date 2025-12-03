@@ -46,6 +46,23 @@
             "description": "Activitat: phpMyAdmin + MySQL amb docker compose",
             "status": "active",
             "kind": "activity"
+        },
+        {
+            "order": 70,
+            "title": "Resum: codificació en Power Shell i bash",
+            "src": "slides/0483-pautes-scripts-ps-i-bash.reveal",
+            "description": "Resum: codificació en Power Shell i bash",
+            "status": "active",
+            "kind": "theory"
+        },
+        {
+            "order": 60,
+            "title": "Activitat: creació d'script en Power Shell i bash (0483-ae006)",
+            "src": "slides/0483-ae006.reveal",
+            "description": "Activitat: phpMyAdmin + MySQL amb docker compose",
+            "status": "active",
+            "kind": "activity"
         }
     ]
 }
+
