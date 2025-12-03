@@ -1,5 +1,4 @@
 # AE006 – Scripts de manteniment en Bash i PowerShell
-## 1r DAM – Proposta d'activitat
 
 Treballareu amb **`scripts de manteniment`** en:
 
@@ -320,18 +319,13 @@ L'important és la idea de “comanda → fitxer d'informe”.
 
 ---
 
-## Criteris bàsics d'avaluació (orientatius)
+## Criteris d'avaluació
 
-|Criteri|Puntuació|
-|-----|-----:|
-|**Funcionalitat** (la tasca es fa realment)|**`0–4`** punts|
-|**Claredat del codi i comentaris**|**`0–3`** punts|
-|**Ús correcte de Bash i PowerShell** (dues versions)|**`0–2`** punts|
-|**Presentació / informe breu de què fa l'script** |**`0–1`** punt|
-|Total orientatiu|**`10` punts**|
-
-Note:
-Aquesta diapositiva la puc adaptar al sistema d'avaluació del mòdul.
-Serveix per explicar-los què valoraré: que funcioni, que sigui llegible i comentat, que hi hagi les dues versions (bash + PowerShell) i que puguin explicar què fa el seu script.
-
-Quan
+| Criteri | Puntuació |
+|--------|----------------------:|
+|**Funcionalitat bàsica de la tasca triada** <br><small>fa realment el que diu l’enunciat, sense errors greus</small>|**`0–4`** punts|
+|**Qualitat del codi i comentaris**<br><small>ús de variables, codi llegible, comentaris útils</small>|**`0–2`** punts|
+|**Dues versions correctes (Bash + PowerShell)**<br><small>fan el mateix o molt semblant, ben adaptades</small>|**`0–2`** punts|
+|**Ús d’eines vistes a classe**<br><small>bucles, if, logs, comandes específiques, etc.</small>|**`0–1`** punt|
+|**Complexitat / ampliació sobre el mínim**<br><small>millores, tractar més casos, log més complet, etc.</small>|**`0–1`** punt|
+|**Total orientatiu**|**`10` punts**|
