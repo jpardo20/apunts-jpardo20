@@ -1,0 +1,602 @@
+### Scripts de manteniment en Bash i PowerShell  
+
+#### Caixa d’eines per 1r DAM
+
+- Objectiu d’avui:
+  - Veure les **eines bàsiques** per fer scripts de manteniment.
+  - En **Bash (Linux)** i en **PowerShell (Windows)**.
+- Després d’aquesta part:
+  - Podreu crear scripts que:
+    - Netejin carpetes.
+    - Facin còpies de seguretat.
+    - Reanomenin fitxers.
+    - Generin petits informes / logs.
+
+Note:
+Aquesta sessió no és per fer un script concret, sinó per omplir el “Caixa d’eines”.  
+Després, a l’activitat, vosaltres triareu una tasca de manteniment i fareu el vostre script.  
+Treballarem sempre en paral·lel: a l’esquerra Bash (Linux), a la dreta PowerShell (Windows), per veure que els conceptes són els mateixos, només canvia la sintaxi.
+
+---
+
+### Recordatori: CLI i scripts
+
+- CLI = **escriure ordres** a un terminal.
+- Script = fitxer de text amb **un conjunt d’ordres**.
+- Avantatges:
+  - Automatitzar tasques repetitives.
+  - Fer manteniment de forma **ràpida i consistent**.
+- Avui veurem:
+  - Variables
+  - Rutes i carpetes
+  - Llistar, copiar, moure
+  - Recorre fitxers (bucles)
+  - Data i hora
+  - Escriure a fitxers de log
+
+Note:
+Recordo breument què és CLI i què és un script.  
+Un script no és res màgic: és com si escrivíssiu al terminal, però tot seguit en un fitxer.  
+Tot el que veurem avui són “peces de LEGO” que després combinareu per fer el vostre script de manteniment.
+
+---
+
+### Estructura bàsica d’un script
+
+**Bash (Linux)**
+
+```bash
+#!/bin/bash
+# Comentari: aquest script fa X
+
+echo "Hola des de Bash"
+```
+
+PowerShell (Windows)
+
+```powershell
+# Comentari: aquest script fa X
+
+Write-Output "Hola des de PowerShell"
+```
+
+----
+
+### Comentaris:
+
+* Bash: #
+
+* PowerShell: #
+
+----
+
+# Primera línia especial en Bash: shebang (#!/bin/bash)
+
+Note:
+Aquí només vull que vegin que un script és un fitxer de text amb comandes.
+En Bash, acostumem a posar a la primera línia el “shebang”, que indica quin intèrpret s’ha d’usar.
+En PowerShell no fa falta shebang: ja sabem que s’executarà amb PowerShell.
+Segueixo insistint que els comentaris amb # serveixen per explicar què fa el codi.
+
+---
+
+### Variables i missatges
+
+* Bash:
+
+```bash
+#!/bin/bash
+
+nom="DAM"
+echo "Hola, $nom!"
+```
+
+* PowerShell:
+
+```powershell
+$nom = "DAM"
+Write-Output "Hola, $nom!"
+```
+
+----
+
+* Bash:
+
+Definir: `nom="valor"` (sense espais!)
+
+Usar: $nom
+
+* PowerShell:
+
+Definir: $nom = "valor"
+
+Usar: $nom
+
+Note:
+Les variables ens permeten guardar informació (carpetes, noms, dates...).
+En Bash no podem posar espais abans i després del =. En PowerShell sí.
+La idea important: un cop tens la variable, la pots reutilitzar en moltes comandes i si canvies el valor a dalt, tot l’script s’adapta.
+
+---
+
+Variables amb rutes
+
+* Bash: 
+
+```bash
+#!/bin/bash
+
+origen="$HOME/Documents/DAM"
+desti="$HOME/backup-dam"
+
+echo "Origen: $origen"
+echo "Destí:  $desti"
+```
+
+* PowerShell
+
+```powershell
+$origen = "C:\Users\Alumne\Documents\DAM"
+$desti  = "D:\backup-dam"
+
+Write-Output "Origen: $origen"
+Write-Output "Destí:  $desti"
+```
+
+Bona pràctica:
+
+Guardar rutes importants en variables ($origen, $desti).
+
+Així podem canviar-les en un sol lloc.
+
+Note:
+Aquí els connecto directament amb la idea de “còpia de seguretat”: tindrem una carpeta origen i una destí.
+És molt més còmode tenir-les en variables que repetir-les en totes les comandes.
+En Bash faig servir $HOME per indicar la carpeta personal de l’usuari.
+
+---
+
+## Rutes absolutes vs relatives
+
+### Rutes absolutes
+
+* Bash: comencen amb `/`
+
+```bash
+/home/alumne/Documents
+```
+
+* PowerShell `/Windows`: inclouen la unitat
+
+```powershell
+C:\Users\Alumne\Documents
+```
+
+----
+
+### Rutes relatives
+
+Depenen d’on estic (`pwd` / `Get-Location`)
+
+Exemples:
+
+`./Documents`
+
+`..\Documents` (Windows)
+
+Com saber on som?
+
+* Bash: `pwd`
+
+* PowerShell: `Get-Location` o `pwd`
+
+Note:
+Un error molt típic és no saber des d’on s’està executant l’script.
+Recordo que pwd o Get-Location ens diu la carpeta actual.
+Les rutes absolutes són més segures però menys portables; les relatives són més curtes però depenen d’on som.
+Als primers scripts, sovint és més fàcil fer servir rutes absolutes.
+
+---
+
+### Crear carpetes
+
+* Bash: 
+
+```bash
+#!/bin/bash
+
+desti="$HOME/backup-dam"
+
+mkdir -p "$desti"
+```
+
+* PowerShell: 
+
+```powershell
+$desti = "D:\backup-dam"
+
+New-Item -ItemType Directory -Path $desti -Force | Out-Null
+```
+
+----
+
+* Bash:
+
+`mkdir -p` → crea la carpeta i les que faltin (no dóna error si ja existeix).
+
+* PowerShell:
+
+`New-Item -ItemType Directory` → crea carpeta.
+
+`-Force` → si ja existeix, no ens dona guerra.
+
+Note:
+Qualsevol script de manteniment acostuma a tocar carpetes (backup, Arxiu, Logs...).
+Per això és clau saber crear la carpeta si no existeix.
+Explico el -p de Bash i el -Force en PowerShell, i per què envio la sortida a Out-Null per no omplir la pantalla.
+
+---
+
+### Comprovar si una carpeta existeix
+
+* Bash: 
+
+```bash
+#!/bin/bash
+
+if [ -d "$desti" ]; then
+  echo "La carpeta ja existeix."
+else
+  echo "Creant la carpeta..."
+  mkdir -p "$desti"
+fi
+```
+* Bash:
+
+`[ -d "ruta" ]` → comprova si és una carpeta.
+
+----
+
+* PowerShell: 
+
+```powershell
+if (Test-Path -LiteralPath $desti) {
+  Write-Output "La carpeta ja existeix."
+} else {
+  Write-Output "Creant la carpeta..."
+  New-Item -ItemType Directory -Path $desti -Force | Out-Null
+}
+```
+
+* PowerShell:
+
+`Test-Path ruta` → comprova si existeix.
+
+Note:
+Això és útil quan volem que el nostre script sigui “educat”: abans de crear alguna cosa, mira si ja hi és.
+Explico que el if és una estructura bàsica que farem servir molt (p.ex. no intentar moure fitxers si la carpeta origen no existeix).
+
+---
+
+### Llistar fitxers i filtrar per extensió
+
+* Bash: 
+
+```bash
+#!/bin/bash
+
+origen="$HOME/Descàrregues"
+
+# Tots els fitxers
+ls "$origen"
+
+# Només PDFs
+ls "$origen"/*.pdf
+```
+
+* Bash:
+
+Patrons: *.pdf, *.txt, etc.
+
+----
+
+* PowerShell: 
+
+```powershell
+$origen = "C:\Users\Alumne\Downloads"
+
+# Tots els fitxers
+Get-ChildItem -Path $origen
+
+# Només PDFs
+Get-ChildItem -Path $origen -Filter *.pdf
+```
+
+* PowerShell:
+
+Get-ChildItem (alias: ls, dir).
+
+Note:
+Abans de copiar/moure res, hem de saber què hi ha dins d’una carpeta.
+En Bash fem servir patrons com *.pdf.
+En PowerShell el comandament “professional” és Get-ChildItem, tot i que ls i dir també funcionen.
+Ho relaciono amb la idea de scripts com “netejar descàrregues de tots els .zip” o similar.
+
+---
+
+### Copiar fitxers
+
+* Bash: 
+
+```bash
+#!/bin/bash
+
+origen="$HOME/Documents/DAM"
+desti="$HOME/backup-dam"
+
+cp "$origen"/fitxer.txt "$desti"/
+# Còpia recursiva (carpetes)
+cp -r "$origen" "$desti"
+```
+
+* Bash: cp (-r per carpetes)
+
+----
+
+* PowerShell: 
+
+```powershell
+$origen = "C:\Users\Alumne\Documents\DAM"
+$desti  = "D:\backup-dam"
+
+Copy-Item -Path "$origen\fitxer.txt" -Destination $desti
+# Còpia recursiva
+Copy-Item -Path $origen -Destination $desti -Recurse
+```
+
+* PowerShell: `Copy-Item (-Recurse)`
+
+Note:
+Aquesta és la base per fer còpies de seguretat.
+En Bash fem servir cp, i si volem incloure subcarpetes, hi afegim -r.
+En PowerShell és molt semblant amb Copy-Item.
+Insisteixo que es poden fer coses simples: copiar només alguns fitxers o fer la còpia de tot un directori.
+
+---
+
+### Moure i esborrar fitxers
+
+* Bash: 
+
+```bash
+#!/bin/bash
+
+# Moure fitxer
+mv fitxer.txt carpeta_destí/
+
+# Esborrar fitxer
+rm fitxer.txt
+```
+
+* Bash:
+
+mv → mou o reanomena.
+
+rm → esborra (compte!).
+
+----
+
+* PowerShell: 
+
+```powershell
+# Moure fitxer
+Move-Item -Path "fitxer.txt" -Destination "carpeta_destí"
+
+# Esborrar fitxer
+Remove-Item -Path "fitxer.txt"
+```
+
+* PowerShell:
+
+`Move-Item`
+
+`Remove-Item`
+
+Note:
+Aquí connecto directament amb l’script de “netejar Descàrregues”:
+posar fitxers a una carpeta Arxiu (moure) o esborrar-los (rm/Remove-Item).
+Aprofito per remarcar el perill de rm i Remove-Item, sobretot amb opcions recursives.
+
+---
+
+### Recorre tots els fitxers (bucles)
+
+* Bash: 
+
+```bash
+#!/bin/bash
+
+for fitxer in "$origen"/*.pdf; do
+  echo "Tractant: $fitxer"
+done
+```
+
+* Bash:
+
+for fitxer in ...; do ... done
+
+----
+
+* PowerShell: 
+
+```powershell
+foreach ($fitxer in Get-ChildItem -Path $origen -Filter *.pdf) {
+  Write-Output "Tractant: $($fitxer.FullName)"
+}
+```
+
+* PowerShell:
+
+foreach ($fitxer in ...) { ... }
+
+Note:
+Ara passem del “fer una acció sobre un fitxer” a “fer la mateixa acció sobre tots els fitxers d’un tipus”.
+Aquest patró és clau en scripts de manteniment: per cada fitxer .pdf, el moc, el reanomeno, l’apunto en un log...
+No cal que entenguin cada detall, però sí la idea general de “per cada fitxer, fes això”.
+
+---
+
+### Data i hora (timestamps)
+
+* Bash: 
+
+```bash
+#!/bin/bash
+
+data=$(date +%Y%m%d_%H%M)
+echo "Avui és: $data"
+```
+
+* PowerShell: 
+
+```powershell
+$data = Get-Date -Format "yyyyMMdd_HHmm"
+Write-Output "Avui és: $data"
+```
+
+----
+
+#### Format usat:
+
+`AnyMesDia_HoraMinuts` → `20240105_1430`
+
+Útil per:
+
+Afegir la data a noms de fitxer.
+
+Crear noms de logs únics.
+
+Note:
+Per a scripts de backup i logs, és molt útil poder posar la data/hora al nom del fitxer.
+A Bash fem servir date amb un format, i en PowerShell Get-Date -Format.
+Insisteixo que aquest format sense espais ni caràcters estranys és ideal per noms de fitxer.
+
+---
+
+### Escriure a fitxers (logs)
+
+* Bash: 
+
+```bash
+#!/bin/bash
+
+log="backup.log"
+
+echo "Inici del backup" >  "$log"   # Sobreescriu
+echo "Fitxer copiat: X" >> "$log"   # Afegeix línia
+```
+
+* Bash:
+
+> → escriure (sobreescriu).
+
+>> → afegir al final.
+
+----
+
+* PowerShell: 
+
+```powershell
+$log = "backup.log"
+
+"Inici del backup"  | Out-File  -FilePath $log      # Sobreescriu
+"Fitxer copiat: X"  | Add-Content -Path $log        # Afegeix línia
+```
+
+* PowerShell:
+
+Out-File → escriure (sobreescriu per defecte).
+
+Add-Content → afegir al final.
+
+Note:
+Els logs són molt importants per saber què ha fet el nostre script.
+En Bash fem servir les redireccions > i >>.
+En PowerShell hi ha cmdlets específics com Out-File i Add-Content.
+Després, a l’activitat, podran fer un fitxer .log amb els fitxers copiats o processats.
+
+---
+
+### Exemple: mini-log en un bucle
+
+* Bash: 
+
+```bash
+log="backup.log"
+echo "Inici" > "$log"
+
+for fitxer in "$origen"/*.pdf; do
+  echo "Copiant: $fitxer" >> "$log"
+done
+```
+
+* PowerShell: 
+
+```powershell
+$log = "backup.log"
+"Inici" | Out-File -FilePath $log
+
+foreach ($fitxer in Get-ChildItem -Path $origen -Filter *.pdf) {
+  "Copiant: $($fitxer.FullName)" | Add-Content -Path $log
+}
+```
+
+----
+
+#### Patró típic:
+
+Inicialitzar log.
+
+Recorre fitxers.
+
+Escriure una línia per cada fitxer.
+
+Note:
+Aquí ajunto dues coses que ja han vist: bucles i logs.
+Aquest patró és l’esquelet de qualsevol script de manteniment una mica seriós:
+“Per cada fitxer X, fes una acció i apunta-ho al log”.
+Insisteixo que a l’activitat podran adaptar això a la seva tasca (backup, neteja, reanomenar, etc.).
+
+---
+
+### Resum del Caixa d’eines
+
+Hem vist en Bash i PowerShell:
+
+#### Variables (nom, origen, desti, data…)
+
+#### Rutes i carpetes:
+
+* Crear (mkdir, New-Item)
+
+* Comprovar ([ -d ], Test-Path)
+
+#### Fitxers:
+
+* Llistar (ls, Get-ChildItem)
+
+* Copiar (cp, Copy-Item)
+
+* Moure i esborrar (mv/rm, Move-Item/Remove-Item)
+
+#### Bucles sobre fitxers (for, foreach)
+
+* Data i hora (date, Get-Date)
+
+#### Logs (redireccions, Out-File, Add-Content)
+
+Amb això ja podeu atacar qualsevol dels scripts de manteniment que us proposaré!
+
+Note:
+Aquesta diapositiva és per tancar el bloc de teoria-eines.
+Repassem ràpidament les peces que ja tenen al “Caixa d’eines”.
