@@ -56,6 +56,7 @@
 
 * Volem fer un menú d’aplicació per a una “mini eina d’alumne SMX”. El programa ha de mostrar aquest menú:
 
+```
 1. Veure horari
 2. Veure proper examen
 3. Calculadora de mitjana de notes
@@ -63,28 +64,11 @@
 5. Consells d'estudi
 6. Crèdits pendents
 7. Sortir
+```
 
-1) Mostra el menú per pantalla tal com està a dalt.
+1. Mostra el menú per pantalla tal com està a dalt.
 
-2) Demana a l’usuari que escrigui una opció (de 1 a 7) i guarda-la en una variable opcio (tipus int).
-
-<small>(segueix ...)</small>
-
-----
-
-<small>(continuació  ...)</small>
-
-3) Escriu una estructura de condicions amb if i else.
-
-* Si l’usuari tria 1 → mostra el missatge: **`Mostrant l'horari...`**
-
-* Si tria 2  → mostra el missatge **`El proper examen és de Xarxes locals.`**
-
-* Si tria 3 → mostra el missatge **`Aquí aniria una calculadora de mitjana (encara per programar).`**
-
-* Si tria 4 → mostra el missatge **`Centre: Digitechfp - SMX`**
-
-* Si tria 5  → mostra el missatge **`Consell: repassa una mica cada dia, no només abans de l'examen.`**
+2. Demana a l’usuari que escrigui una opció (de 1 a 7) i guarda-la en una variable opcio (tipus int).
 
 <small>(segueix ...)</small>
 
@@ -92,8 +76,26 @@
 
 <small>(continuació  ...)</small>
 
-* Si tria 6  → mostra el missatge **`Et queden X crèdits pendents. (Dada simulada)`**
+3. Escriu una estructura de condicions amb if i else i si l’usuari tria:
 
-* Si tria 7  → mostra el missatge **`Sortint del programa...`**
+|si l’usuari tria<br>l'opció|mostra el missatge|
+|-------------|-----|
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`1`**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=>|  **`Mostrant l'horari...`**|
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`2`**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=>|  **`El proper examen és de Xarxes locals.`**|
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`3`**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=>|  **`Aquí aniria una calculadora de mitjana (encara per programar).`**|
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`4`**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=>|  **`Centre: Digitechfp - SMX`**|
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`5`**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=>|  **`Consell: repassa una mica cada dia, no només abans de l'examen.`**|
 
-* Si l’usuari escriu un número que no està entre 1 i 7, mostra: **`Opció no vàlida.`**
+<small>(segueix ...)</small>
+
+----
+
+<small>(continuació  ...)</small>
+
+|si l’usuari tria<br>l'opció|mostra el missatge|
+|:-----:|-----|
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`6`**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**`Et queden X crèdits pendents. (Dada simulada)`**|
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`7`**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|**`Sortint del programa...`**|
+|**NO està entre<br> `1` i `7`** <small>(1)</small> |**`Opció no vàlida`**|
+
+<small>(1)</small> Si l’usuari escriu un número que no està entre 1 i 7.
