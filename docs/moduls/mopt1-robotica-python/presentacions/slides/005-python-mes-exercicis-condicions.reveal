@@ -22,7 +22,7 @@
    * Si la nota és igual o superior a 5, mostra: **`Has aprovat el mòdul X`**.
    * Si no, mostra: **`Has suspès el mòdul X`**.
 
-4) El programa ha de mostrar 3 missatges, un per a cada mòdul.
+4. El programa ha de mostrar 3 missatges, un per a cada mòdul.
 
 ---
 
@@ -37,6 +37,12 @@
   * **`9`** a **`10`** → **`EXCEL·LENT`**
 
 2) Demana una nota (float) a l’usuari i guarda-la a la variable nota.
+
+<small>(segueix ...)</small>
+
+----
+
+<small>(continuació  ...)</small>
 
 3) Fes una estructura de condicions amb if i else.
 
@@ -62,9 +68,11 @@
 
 2) Demana a l’usuari que escrigui una opció (de 1 a 7) i guarda-la en una variable opcio (tipus int).
 
-3) Escriu una estructura de condicions amb if i else.
+<small>(segueix ...)</small>
 
 ----
+
+<small>(continuació  ...)</small>
 
 3) Escriu una estructura de condicions amb if i else.
 
@@ -77,6 +85,12 @@
 * Si tria 4 → mostra el missatge **`Centre: Digitechfp - SMX`**
 
 * Si tria 5  → mostra el missatge **`Consell: repassa una mica cada dia, no només abans de l'examen.`**
+
+<small>(segueix ...)</small>
+
+----
+
+<small>(continuació  ...)</small>
 
 * Si tria 6  → mostra el missatge **`Et queden X crèdits pendents. (Dada simulada)`**
 
