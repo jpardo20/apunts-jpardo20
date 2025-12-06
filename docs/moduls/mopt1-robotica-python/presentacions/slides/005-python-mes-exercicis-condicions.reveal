@@ -4,54 +4,49 @@
 
 ---
 
-## Tres mòduls del cicle. (**`condicions_3_moduls.py`**)
+## Tres mòduls del cicle.<br><small>**`condicions_3_moduls.py`**</small>
 
-Crea un programa que controli si un alumne ha aprovat tres mòduls del cicle. 
+* Crea un programa que controli si un alumne ha aprovat tres mòduls del cicle. 
 
-1) Demana a l’usuari tres notes (de 0 a 10):
+1. Demana a l’usuari tres notes (de 0 a 10): 
 
-* **`nota_m1`** → Mòdul 1
+   <br>
 
-* **`nota_m2`** → Mòdul 2
+  * **`nota_m1`** → Mòdul 1
+  * **`nota_m2`** → Mòdul 2
+  * **`nota_m3`** → Mòdul 3
 
-* **`nota_m3`** → Mòdul 3
+2. Converteix les dades a **`float`**.
 
-2) Converteix les dades a **`float`**.
-
-3) Per cada mòdul, escriu una estructura `if-else` independent:
-
-* Si la nota és igual o superior a 5, mostra: **`Has aprovat el mòdul X`**.
-
-* Si no, mostra: **`Has suspès el mòdul X`**.
+3. Per cada mòdul, escriu una estructura `if-else` independent: 
+   * Si la nota és igual o superior a 5, mostra: **`Has aprovat el mòdul X`**.
+   * Si no, mostra: **`Has suspès el mòdul X`**.
 
 4) El programa ha de mostrar 3 missatges, un per a cada mòdul.
 
 ---
 
-## Traducció de nota numèrica a text (**`nota_a_text.py`**)
+## Traducció de nota numèrica a text <br><small>**`nota_a_text.py`**</small>
 
-1) Crea un programa que demani una nota numèrica i mostri la qualificació en text segons aquests trams:
+1) Crea un programa que demani una nota numèrica i mostri la qualificació en text segons aquests trams: 
 
-* 0 a < 5 → SUSPÈS
-
-* 5 a < 6 → APROVAT
-
-* 6 a < 7 → BÉ
-
-* 7 a < 9 → NOTABLE
-
-* 9 a 10 → EXCEL·LENT
+  * **`0`** a **`< 5`** → **`SUSPÈS`**
+  * **`5`** a **`< 6`** → **`APROVAT`**
+  * **`6`** a **`< 7`** → **`BÉ`**
+  * **`7`** a **`< 9`** → **`NOTABLE`**
+  * **`9`** a **`10`** → **`EXCEL·LENT`**
 
 2) Demana una nota (float) a l’usuari i guarda-la a la variable nota.
 
 3) Fes una estructura de condicions amb if i else.
 
-4) Mostra per pantalla només un missatge, per exemple: **`La teva qualificació és: NOTABLE`**
-
+4) Mostra per pantalla només un missatge, per exemple:
+  
+  **`La teva qualificació és: NOTABLE`**
 
 ---
 
-## Menú amb 7 opcions (**`menu_7_opcions.py`**)
+## Menú amb 7 opcions <br><small>**`menu_7_opcions.py`**</small>
 
 * Volem fer un menú d’aplicació per a una “mini eina d’alumne SMX”. El programa ha de mostrar aquest menú:
 
