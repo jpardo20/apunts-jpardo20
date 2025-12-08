@@ -1,0 +1,420 @@
+# 1r SMX – Aplicacions ofimàtiques
+
+**Macros a LibreOffice Writer – de la macro gravada al codi “net”**
+
+- **Objectius de la sessió:**
+  - Recordar què fa la macro `BuscarISubstituir` (password → contrasenya).
+  - Veure les limitacions del codi generat pel gravador de macros.
+  - Crear una versió “neteja”: `BuscarISubstituirSimple`.
+  - Fer una macro més flexible: `BuscarISubstituirDemanaDades`.
+  - Introduir una macro de glossari: `MarcarparaulaClauSimple` amb estil de caràcter `paraulaClau`.
+
+---
+
+# Recordatori de macros
+
+## Què vam fer a l'anterior sessió?
+
+- Vam parlar de:
+  - Què és una **macro**.
+  - On es troben les macros a LibreOffice Writer.
+  - Com **activar** el menú **Gravar macro**.
+- Vam gravar la macro **`BuscarISubstituir`**:
+  - Obre el document `perProvarMacros.docx`.
+  - Busca totes les paraules **“password”**.
+  - Les substitueix per **“contrasenya”**.
+
+----
+
+## Per què és útil `BuscarISubstituir`?
+
+- Ens estalvia:
+  - Fer manualment totes les substitucions.
+- Ens permet:
+  - Tornar a aplicar el mateix canvi en altres documents semblants.
+- Però…:
+  - El codi que genera el gravador és **difícil de llegir**.
+  - Avui veurem com fer-ho **més net i entenedor**.
+
+---
+
+# Mirant la macro gravada
+
+----
+
+## El codi que genera el gravador (idea general)
+
+- Si obrim l’editor de macros (LibreOffice Basic) veurem alguna cosa així:
+
+```basic
+Sub BuscarISubstituir
+    dim document   as object
+    dim dispatcher as object
+    dim args1(21) as new com.sun.star.beans.PropertyValue
+
+    document   = ThisComponent.CurrentController.Frame
+    dispatcher = createUnoService("com.sun.star.frame.DispatchHelper")
+
+    ' ... moltes línies configurant args1(0), args1(1), args1(2), ...
+    ' ... paràmetres de cerca i substitució ...
+
+    dispatcher.executeDispatch(document, ".uno:ExecuteSearch", "", 0, args1())
+End Sub
+```
+
+- Moltes línies que **no hem escrit nosaltres**.
+- Més pensat per la màquina que per una persona.
+
+----
+
+## Què hi veiem aquí?
+
+- Coses que podem identificar:
+  - `Sub BuscarISubstituir` … `End Sub`
+  - Variables: `document`, `dispatcher`, `args1(...)`.
+  - Una crida final: `executeDispatch(...)`.
+- Coses que costen més:
+  - Tots els `args1(0)`, `args1(1)`, `args1(2)`…
+  - Propietats amb noms llargs (`SearchItem.*`, flags, etc.).
+- Conclusió:
+  - El gravador és útil per **crear una macro ràpidament**.
+  - Però no és el millor per **aprendre a programar macros netes**.
+
+---
+
+# Macro `BuscarISubstituirSimple`
+
+----
+
+## Objectiu
+
+- Fer una versió **més curta i entenedora** de la macro.
+- Que faci el mateix que la macro gravada:
+  - **Buscar “password”**
+  - **Substituir per “contrasenya”**
+  - Sobre el document actual.
+
+----
+
+## `BuscarISubstituirSimple`
+
+```basic
+Sub BuscarISubstituirSimple
+    Dim oDoc As Object
+    Dim oReempl As Object
+
+    ' Document actual
+    oDoc = ThisComponent
+
+    ' Descriptor de reemplaçament
+    oReempl = oDoc.createReplaceDescriptor()
+    oReempl.SearchString = "password"      ' Què busquem
+    oReempl.ReplaceString = "contrasenya"  ' Amb què ho substituïm
+
+    ' Aplicar la substitució a tot el document
+    oDoc.replaceAll(oReempl)
+End Sub
+```
+
+- Moltes menys línies.
+- Les parts importants són clares:
+  - Document → Descriptor → Buscar/Substituir → `replaceAll`.
+
+----
+
+## Comparant les dues macros
+
+- **Macro gravada**:
+  - Molt codi automàtic.
+  - Difícil de modificar i d’entendre.
+- **`BuscarISubstituirSimple`**:
+  - Escrita a mà.
+  - Es veu clar:
+    - Quin text es busca.
+    - Quin text el substitueix.
+    - On s’aplica (tot el document).
+- Idees clau:
+  - **Menys codi, més claredat.**
+  - És més fàcil de **reutilitzar i adaptar**.
+
+----
+
+## Activitat 1 – Crear `BuscarISubstituirSimple`
+
+- Creeu una **nova macro** anomenada `BuscarISubstituirSimple`.
+- Enganxeu el codi a un **nou mòdul** o dins de `Module1`.
+- Proveu-la en un document (pot ser `perProvarMacros.docx` o un altre):
+  - Assegureu-vos que conté la paraula **“password”**.
+- Executeu `BuscarISubstituirSimple` i comproveu:
+  - Que totes les **“password”** passen a ser **“contrasenya”**.
+
+- Si no us funciona demaneu ajuda al professor.
+
+---
+
+# Macro `BuscarISubstituirDemanaDades`
+
+----
+
+## Per què fer-la més flexible?
+
+- Ara mateix:
+  - `BuscarISubstituirSimple` està “enganxada” a:
+    - Buscar `"password"`.
+    - Substituir `"contrasenya"`.
+- I si volem fer:
+  - `password` → `pwd segura`
+  - `TAULETA` → `ordinador portàtil`
+  - O qualsevol altre canvi?
+- Solució:
+  - Que la macro **pregunti**:
+    - Quin text volem buscar.
+    - Quin text volem posar com a substitució.
+
+----
+
+## Idea de disseny
+
+- Nova macro: `BuscarISubstituirDemanaDades`.
+- Passos:
+  1. Demanar a l’usuari el **text a buscar** (`InputBox`).
+  2. Demanar el **text de substitució** (`InputBox`).
+  3. Si algun camp està buit:
+     - Mostrar un `MsgBox` i parar la macro.
+  4. Crear el descriptor de reemplaçament i aplicar `replaceAll`.
+
+----
+
+## `BuscarISubstituirDemanaDades` (1/3)
+
+```basic
+Sub BuscarISubstituirDemanaDades
+    Dim oDoc As Object
+    Dim oReempl As Object
+    Dim sBuscar As String
+    Dim sSubstituir As String
+
+    ' Demanem el text a buscar
+    sBuscar = InputBox("Escriu el text que vols_
+         buscar:", "Buscar i substituir")
+    If sBuscar = "" Then
+        MsgBox "No has escrit cap text a buscar. La macro_
+         s'atura.", 48, "Buscar i substituir"
+        Exit Sub
+    End If
+----
+
+## `BuscarISubstituirDemanaDades` (2/3)
+
+```basic
+    ' Demanem el text de substitució
+    sSubstituir = InputBox("Escriu el text pel qual_
+     vols substituir """ & sBuscar & """:", "Buscar i substituir")
+    If sSubstituir = "" Then
+        MsgBox "No has escrit cap text de substitució. La_
+         macro s'atura.", 48, "Buscar i substituir"
+        Exit Sub
+    End If
+```
+
+----
+
+## `BuscarISubstituirDemanaDades` (3/3)
+
+```basic
+    ' Document actual
+    oDoc = ThisComponent
+
+    ' Descriptor de substitució
+    oReempl = oDoc.createReplaceDescriptor()
+    oReempl.SearchString = sBuscar
+    oReempl.ReplaceString = sSubstituir
+
+    ' Aplicar a tot el document
+    oDoc.replaceAll(oReempl)
+
+    MsgBox "S'ha fet la substitució de """ & sBuscar _
+        & """ per """ & sSubstituir & """ a tot el _
+        document.", 64, "Buscar i substituir"
+End Sub
+```
+
+----
+
+- Ara la macro és **genèrica**:
+  - La podem reutilitzar per a molts casos diferents.
+- Hem introduït:
+  - `InputBox` (entrada de dades).
+  - `MsgBox` (missatges d’informació/avís).
+  - Validació bàsica d’entrada.
+
+----
+
+## Activitat 2 – Provar `BuscarISubstituirDemanaDades`
+
+- Creeu una nova macro anomenada **`BuscarISubstituirDemanaDades`**.
+- Copieu el codi vist a les diapositives.
+- Proveu-la sobre un document de prova:
+  - Primer: `password` → `contrasenya`.
+  - Després: proveu altres paraules (per exemple, canviar noms, colors, etc.).
+- Fixeu-vos que:
+  - Sempre demana els textos a l’usuari.
+  - No cal modificar el codi per fer nous canvis.
+
+---
+
+# Macro `MarcarparaulaClauSimple`
+
+----
+
+## Per què una macro de “paraulaClau”?
+
+- En documents tècnics (informàtica, programació…) sovint apareixen:
+  - Noms de tecnologies (`Java`, `Git`, `GitHub`…).
+  - Conceptes (`commit`, `issue`, `README`…).
+- Volem que apareguin amb un **format destacat**:
+  - Per exemple, un **estil de caràcter** anomenat `paraulaClau`.
+- Objectiu:
+  - Recórrer un **llistat de paraules** i aplicar l’estil `paraulaClau` a cadascuna.
+
+----
+
+## Prerequisit
+
+- Al document de Writer, cal tenir creat un **estil de caràcter**:
+  - Nom de l’estil: **`paraulaClau`**
+- Exemples de paraules que volem marcar:
+  - `Java`, `Git`, `GitHub`, `JUnit`, `ramas`, `pull request`,
+  - `Kanban`, `POO`, `commit`, `README`, `issue`.
+
+----
+
+## Idea de funcionament
+
+- Crear un **SearchDescriptor**:
+  - Desactivar expressions regulars.
+  - No diferenciar majúscules/minúscules (opcional).
+  - Buscar **paraules senceres** (`SearchWords = True`).
+- Tenir un **array** de paraules clau.
+- Fer un **bucle**:
+  - Per cada paraula:
+    - Buscar-la al document.
+    - A cada coincidència:
+      - Aplicar `CharStyleName = "paraulaClau"`.
+
+----
+
+## `MarcarparaulaClauSimple` (1/3)
+
+```basic
+Sub MarcarparaulaClauSimple
+    Dim oDoc As Object
+    Dim oSearchDesc As Object
+    Dim oFound As Object
+    Dim aParaules As Variant
+    Dim i As Integer
+
+    oDoc = ThisComponent
+
+    ' Descriptor de cerca genèric
+    oSearchDesc = oDoc.createSearchDescriptor()
+    oSearchDesc.SearchRegularExpression = False
+    oSearchDesc.SearchCaseSensitive = False  _
+             ' True si vols respectar majúscules
+    oSearchDesc.SearchWords = True           _
+              ' Només paraules senceres
+```
+
+----
+
+## `MarcarparaulaClauSimple` (2/3)
+
+```basic
+
+    ' Llista de paraules clau
+    aParaules = Array( _
+        "Java", _
+        "Git", _
+        "GitHub", _
+        "JUnit", _
+        "ramas", _
+        "pull request", _
+        "Kanban", _
+        "POO", _
+        "commit", _
+        "README", _
+        "issue" _
+    )
+```
+
+----
+
+## `MarcarparaulaClauSimple` (3/3)
+
+```basic
+    ' Per a cada paraula clau, busquem i apliquem l'estil "paraulaClau"
+    For i = LBound(aParaules) To UBound(aParaules)
+        oSearchDesc.SearchString = aParaules(i)
+        oFound = oDoc.findFirst(oSearchDesc)
+
+        While Not IsNull(oFound)
+            oFound.CharStyleName = "paraulaClau"
+            oFound = oDoc.findNext(oFound.End, oSearchDesc)
+        Wend
+    Next i
+End Sub
+```
+
+----
+
+- Aquest codi:
+  - Recorre totes les paraules de l’array.
+  - Marca cada aparició amb l’estil de caràcter `paraulaClau`.
+- Recorda:
+  - L’estil `paraulaClau` l’has de crear tu des del menú d’estils.
+
+----
+
+## Activitat 3 – Glossari de paraules clau
+
+- Creeu l’estil de caràcter **`paraulaClau`**:
+  - Tipus de lletra diferent, color, negreta… (com vulgueu).
+- Creeu un document amb:
+  - Un petit text on apareguin les paraules:  
+    `Java`, `Git`, `commit`, `README`, `issue`, etc.
+- Afegiu la macro **`MarcarparaulaClauSimple`** i executeu-la.
+- Comproveu que:
+  - Totes aquestes paraules queden amb l’estil `paraulaClau`.
+- Repte extra:
+  - Afegiu una o dues paraules més a l’array i torneu a provar.
+
+---
+
+# Tancament de la sessió
+
+----
+
+## Què hem après avui?
+
+- Hem passat de:
+  - Una **macro gravada** (`BuscarISubstituir`)…
+  - …a una macro **més neta i entenedora** (`BuscarISubstituirSimple`).
+- Hem creat una macro **genèrica**:
+  - `BuscarISubstituirDemanaDades`, que demana a l’usuari què vol buscar i substituir.
+- Hem vist una macro basada en un **llistat de paraules**:
+  - `MarcarparaulaClauSimple`, que aplica un estil de caràcter `paraulaClau`.
+
+----
+
+## I a partir d’aquí…
+
+- Podem seguir explorant:
+  - Macros que treballen amb estils de paràgraf.
+  - Macros que modifiquen taules, llistes, encapçalaments…
+  - Macros que combinen text + format.
+- Idees per a futurs projectes:
+  - Crear una plantilla de document per a 1r SMX amb macros que:
+    - Netegin text.
+    - Apliquin estils.
+    - Marquin paraules tècniques automàticament.
+

@@ -1,0 +1,272 @@
+# 1r SMX – Aplicacions ofimàtiques
+
+## 1a Sessió
+
+**Macros a LibreOffice Writer – Introducció i gravació de `BuscarISubstituir`**
+
+----
+
+- **Objectiu general:**
+  - Entendre què és una macro.
+  - Saber com gravar una macro amb LibreOffice Writer.
+  - Crear la macro `BuscarISubstituir` amb el gravador de macros.
+  - Substituir totes les aparicions de la paraula **“password”** per la paraula **“contrasenya”** al document de prova `perProvarMacros.docx`.
+
+----
+
+# Agenda de la sessió
+
+- Què és una macro?
+- On són les macros a LibreOffice?
+- Activar l’opció **Gravar macro** (si no surt).
+- Gravar pas a pas la macro `BuscarISubstituir`.
+- Provar-la amb el document `perProvarMacros.docx`.
+- Veure el codi que ha generat.
+
+---
+
+# Què és una macro?
+
+----
+
+## Idea clau
+
+- Una **macro** és:
+  - Una **gravació d’accions** que fem al programa.
+  - El programa pot **repetir-les automàticament**.
+- En comptes de:
+  - Fer 10, 20 o 100 cops el mateix,
+  - Fem una vegada la seqüència,
+  - I la macro la repeteix per nosaltres.
+
+----
+
+## Exemple senzill
+
+- Sense macro:
+  - Obrir un document i canviar manualment totes les vegades que surt “password” per “contrasenya”.
+- Amb macro:
+  - Gravem una vegada el procés de **Buscar/Substituir**.
+  - Després, amb un sol clic:
+    - La macro fa totes les substitucions de “password” per “contrasenya”.
+
+---
+
+# On són les macros a LibreOffice?
+
+----
+
+## Menú principal
+
+- En LibreOffice Writer:
+  - Menú **Eines → Macros → Executar macro...**
+  - Menú **Eines → Macros → Organitza les macros → LibreOffice Basic...**
+- Si està activat:
+  - També hi ha l’opció **Eines → Macros → Gravar macro**.
+
+----
+
+# I si l’opció “Gravar macro” NO surt?
+
+----
+
+## Pas 1 – Obrir Opcions
+
+- Anar a:
+  - **Eines → Opcions...**
+- En alguns sistemes pot ser:
+  - **Herramientas → Opciones...**
+
+----
+
+## Pas 2 – Activar gravació de macros
+
+- A la finestra d’**Opcions**:
+  - A l’esquerra, buscar: **LibreOffice → Avançat**  
+    (o **LibreOffice → Avanzado**).
+  - A la part dreta, marcar la casella:
+    - **“Habilita la gravació de macros (limitada)”**
+    - O similar (en castellà: **“Habilitar la grabación de macros (limitado)”**).
+  - Confirmar amb **D’acord / Aceptar**.
+- Tancar i tornar a obrir el document si cal.
+- Ara ja hauria d’aparèixer:
+  - **Eines → Macros → Gravar macro**
+
+---
+
+# Document de prova per a la macro
+
+----
+
+## `perProvarMacros.docx`
+
+- Per aquesta sessió, farem servir el document de prova:
+  - **`perProvarMacros.docx`**
+- Aquest document conté diverses frases amb la paraula **“password”**.
+- L’objectiu de la macro `BuscarISubstituir` serà:
+  - Substituir totes les aparicions de **“password”** per **“contrasenya”**.
+
+---
+
+# Preparació per gravar la macro
+
+----
+
+## Abans de gravar
+
+- Obrir el document **`perProvarMacros.docx`** amb LibreOffice Writer.
+- Llegir una mica el text i localitzar on apareix la paraula **“password”**.
+- Aquest document servirà per comprovar que la macro funciona:
+  - **Abans** d’executar-la, veurem “password”.
+  - **Després**, hauria d’aparèixer “contrasenya”.
+
+---
+
+# Gravem la macro `BuscarISubstituir` (1/3)
+
+
+## Inici de la gravació
+
+1. Amb el document `perProvarMacros.docx` obert:
+2. Anar a **Eines → Macros → Gravar macro**.
+3. A la part inferior de la finestra apareix una **barra petita de gravació**.
+4. A partir d’ara, totes les accions que fem **quedaran gravades**.
+
+----
+
+# Gravem la macro `BuscarISubstituir` (2/3)
+
+----
+
+## Fer el “Buscar i substituir”
+
+1. Amb la gravació en marxa:
+2. Anar a **Edita → Cerca i substitueix...**  
+   (o **Editar → Buscar y reemplazar...**).
+3. Al quadre de diàleg:
+   - **Buscar:** `password`
+   - **Substituir per:** `contrasenya`
+4. Clicar **Substitueix-ho tot**.
+5. Confirmar el missatge que indica quantes vegades s’ha substituït.
+6. Tancar el diàleg de Cerca/Substitució.
+
+----
+
+# Gravem la macro `BuscarISubstituir` (3/3)
+
+## Aturar la gravació i desar-la
+
+1. A la barra de gravació de macros:
+   - Clicar el botó **Atura gravació**.
+2. Apareix la finestra **Desa macro**.
+3. Tria com a destinació:
+   - Normalment: **“Mis macros” / “Les meves macros” → Standard → Module1**
+4. Al camp de nom de macro escriure:
+   - `BuscarISubstituir`
+5. Clicar **D’acord / Aceptar**.
+
+---
+
+# Provar la macro gravada
+
+----
+
+## Execució de prova
+
+1. Tornar a obrir o recuperar una versió del document `perProvarMacros.docx` on encara aparegui **“password”**.
+   - (Per exemple, tornar a descarregar-lo o desfer canvis).
+2. Anar a:
+   - **Eines → Macros → Executar macro...**
+3. A la llista:
+   - Buscar  
+     **“Mis macros / Les meves macros → Standard → Module1 → BuscarISubstituir”**
+4. Clicar **Executar**.
+5. Comprovar que:
+   - Totes les aparicions de **“password”** s’han canviat per **“contrasenya”** al document.
+
+---
+
+# Veure el codi de la macro
+
+----
+
+## LibreOffice Basic
+
+1. Anar a:
+   - **Eines → Macros → Organitza les macros → LibreOffice Basic...**
+2. Escollir:
+   - **Mis macros / Les meves macros → Standard → Module1**
+3. Seleccionar la macro **`BuscarISubstituir`**.
+4. Clicar **Edita / Editar**.
+5. S’obrirà l’editor de codi amb una cosa semblant a:
+
+```basic
+Sub BuscarISubstituir
+    Dim document   As Object
+    Dim dispatcher As Object
+
+    document   = ThisComponent.CurrentController.Frame
+    dispatcher = createUnoService("com.sun.star.frame.DispatchHelper")
+
+    ' Aquí hi haurà tot el codi generat pel gravador
+    ' que fa el Buscar/Substituir de "password" a "contrasenya"
+End Sub
+```
+
+----
+
+## Missatge per a la classe
+
+- De moment **NO tocarem el codi**.
+- Només volem:
+  - Veure que la macro gravada genera un **programa**.
+  - Entendre que cada cop que executem la macro,
+  - LibreOffice està **executant aquest codi** per nosaltres.
+
+---
+
+# Activitat guiada (classe)
+
+----
+
+## Tasca 1 – Gravació bàsica amb `perProvarMacros.docx`
+
+ - Assegureu-vos que teniu el document **`perProvarMacros.docx`** obert.
+ - Activeu (si cal) l’opció **Gravar macro**.
+ - Graveu la macro `BuscarISubstituir` tal com hem fet a classe:
+    - Buscar `password`
+    - Substituir per `contrasenya`
+ - Proveu-la en el document.
+
+* Si no us funciona, demaneu ajuda al professor.
+
+----
+
+## Tasca 2 – Variant de prova
+
+- Feu una **nova gravació** en un document de prova (pot ser un altre document):
+  - Buscar `password`
+  - Substituir per `CONTRASENYA` (tot en majúscules).
+- Guardeu-la amb un altre nom:
+  - `BuscarISubstituirMajus`
+- Pregunta per pensar:
+  - Què canvia entre la macro `BuscarISubstituir` i `BuscarISubstituirMajus`?
+  - (Ho veurem a la pròxima sessió quan mirem codi més net).
+
+---
+
+# Tancament de la sessió
+
+----
+
+## Resum
+
+- Hem vist:
+  - Què és una macro i per a què serveix.
+  - On s’activa i on s’executa una macro a LibreOffice.
+  - Com gravar **pas a pas** una macro amb el gravador.
+  - Com provar la macro amb el document `perProvarMacros.docx`.
+  - Com comprovar que totes les **“password”** passen a ser **“contrasenya”**.
+- A la següent sessió:
+  - Veurem com escriure una macro **més neta** a mà.
+  - I com fer que la macro ens **demani què volem buscar i substituir**.

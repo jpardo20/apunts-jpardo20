@@ -83,6 +83,22 @@
             "description": "Procesadors de texts",
             "status": "active",
             "kind": "activity"
+        },
+        {
+            "order": 131,
+            "title": "31. Introducción a macros",
+            "src": "slides/0223-aof-teoria-macros.reveal",
+            "description": "Macros als procesadors de texts",
+            "status": "active",
+            "kind": "theory"
+        },
+        {
+            "order": 132,
+            "title": "32. Introducción a macros 2a part",
+            "src": "slides/0223-aof-teoria-macros-2.reveal",
+            "description": "Macros als procesadors de texts",
+            "status": "active",
+            "kind": "theory"
         }
     ]
 }
