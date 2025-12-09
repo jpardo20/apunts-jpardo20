@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Qüestionari — Introducció a l'electricitat (SMX)</title>
+  <title>Qüestionari - Introducció a l'electricitat (0221-ae-002)</title>
   <style>
     :root{
       --maxw: 980px;
@@ -67,7 +67,7 @@
 </head>
 <body>
 <div class="container">
-  <h1>Qüestionari — Introducció a l'electricitat (SMX)</h1>
+  <h1>Qüestionari - Introducció a l'electricitat (0221-ae-002)</h1>
   <p class="hint">Una sola resposta per alumne en aquest dispositiu. Es calcula una <b>nota orientativa</b> a partir de les preguntes tancades. Les preguntes obertes (<span class="badge">Q1, Q2, Q8, Q10</span>) <b>cal avaluar-les manualment</b>.</p>
 
   <div class="card">
@@ -91,21 +91,21 @@
   <form id="quiz" class="card">
     <!-- Q1 -->
     <fieldset id="fs-q1" class="q">
-      <legend>1) Resposta curta — Què és la <i>diferència de potencial</i> (tensió)? En quina unitat s’expressa?</legend>
+      <legend>1) Resposta curta - Què és la <i>diferència de potencial</i> (tensió)? En quina unitat s’expressa?</legend>
       <textarea id="q1" placeholder="Escriu la teva resposta aquí"></textarea>
       <small class="hint">Pregunta oberta (correcció manual).</small>
     </fieldset>
 
     <!-- Q2 -->
     <fieldset id="fs-q2" class="q">
-      <legend>2) Resposta curta — Què és la <i>intensitat de corrent</i>? En quina unitat s’expressa?</legend>
+      <legend>2) Resposta curta - Què és la <i>intensitat de corrent</i>? En quina unitat s’expressa?</legend>
       <textarea id="q2" placeholder="Escriu la teva resposta aquí"></textarea>
       <small class="hint">Pregunta oberta (correcció manual).</small>
     </fieldset>
 
     <!-- Q3 -->
     <fieldset id="fs-q3" class="q">
-      <legend>3) Relació — Associa cada instrument amb la magnitud que mesura</legend>
+      <legend>3) Relació - Associa cada instrument amb la magnitud que mesura</legend>
       <table>
         <thead><tr><th>Instrument</th><th>Magnitud</th></tr></thead>
         <tbody>
@@ -149,7 +149,7 @@
 
     <!-- Q4 -->
     <fieldset id="fs-q4" class="q">
-      <legend>4) Procediment — Com es connecta un <b>voltímetre</b> per mesurar la tensió?</legend>
+      <legend>4) Procediment - Com es connecta un <b>voltímetre</b> per mesurar la tensió?</legend>
       <div class="options">
         <label class="opt"><input type="radio" name="q4" value="serie"> En sèrie amb el component</label>
         <label class="opt"><input type="radio" name="q4" value="paralel"> En paral·lel amb el component</label>
@@ -159,7 +159,7 @@
 
     <!-- Q5 -->
     <fieldset id="fs-q5" class="q">
-      <legend>5) Procediment — Com es connecta un <b>amperímetre</b> per mesurar la intensitat?</legend>
+      <legend>5) Procediment - Com es connecta un <b>amperímetre</b> per mesurar la intensitat?</legend>
       <div class="options">
         <label class="opt"><input type="radio" name="q5" value="serie"> En sèrie amb el circuit</label>
         <label class="opt"><input type="radio" name="q5" value="paralel"> En paral·lel amb el circuit</label>
@@ -169,7 +169,7 @@
 
     <!-- Q6 -->
     <fieldset id="fs-q6" class="q">
-      <legend>6) Opció múltiple — Quina és la diferència principal entre <b>CA</b> i <b>CC</b>?</legend>
+      <legend>6) Opció múltiple - Quina és la diferència principal entre <b>CA</b> i <b>CC</b>?</legend>
       <div class="options">
         <label class="opt"><input type="radio" name="q6" value="a"> a) La CA canvia de polaritat periòdicament i la CC manté polaritat constant.</label>
         <label class="opt"><input type="radio" name="q6" value="b"> b) Totes dues mantenen polaritat constant.</label>
@@ -197,14 +197,14 @@
 
     <!-- Q8 -->
     <fieldset id="fs-q8" class="q">
-      <legend>8) Aplicació — Quina funció té un <b>SAI</b> (UPS) en un entorn informàtic? Dona 2 beneficis.</legend>
+      <legend>8) Aplicació - Quina funció té un <b>SAI</b> (UPS) en un entorn informàtic? Dona 2 beneficis.</legend>
       <textarea id="q8" placeholder="Escriu la teva resposta aquí"></textarea>
       <small class="hint">Pregunta oberta (correcció manual).</small>
     </fieldset>
 
     <!-- Q9 -->
     <fieldset id="fs-q9" class="q">
-      <legend>9) Verdader/Fals — “L’aire és sempre aïllant i mai hi pot circular corrent.”</legend>
+      <legend>9) Verdader/Fals - “L’aire és sempre aïllant i mai hi pot circular corrent.”</legend>
       <div class="options">
         <label class="opt"><input type="radio" name="q9" value="V"> Verdader</label>
         <label class="opt"><input type="radio" name="q9" value="F"> Fals</label>
@@ -216,7 +216,7 @@
 
     <!-- Q10 -->
     <fieldset id="fs-q10" class="q">
-      <legend>10) Concepte — Defineix <i>conductor</i> i <i>aïllant</i> i posa un exemple real de cadascun.</legend>
+      <legend>10) Concepte - Defineix <i>conductor</i> i <i>aïllant</i> i posa un exemple real de cadascun.</legend>
       <textarea id="q10" placeholder="Escriu la teva resposta aquí"></textarea>
       <small class="hint">Pregunta oberta (correcció manual).</small>
     </fieldset>
@@ -465,9 +465,9 @@ function unansweredList(){
   if (!(document.getElementById("q10").value || "").trim()) missing.push("Q10");
 
   // Relació (totes 3)
-  if (!document.getElementById("q3v").value) missing.push("Q3 — Voltímetre");
-  if (!document.getElementById("q3a").value) missing.push("Q3 — Amperímetre");
-  if (!document.getElementById("q3o").value) missing.push("Q3 — Ohmímetre");
+  if (!document.getElementById("q3v").value) missing.push("Q3 - Voltímetre");
+  if (!document.getElementById("q3a").value) missing.push("Q3 - Amperímetre");
+  if (!document.getElementById("q3o").value) missing.push("Q3 - Ohmímetre");
 
   // Radio
   if (!document.querySelector('input[name="q4"]:checked')) missing.push("Q4");
