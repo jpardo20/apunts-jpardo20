@@ -1,0 +1,536 @@
+### Muntatge i manteniment d'equips
+
+
+### 1.2.2 Fonts d'alimentació
+
+* La font d'alimentació (ﬁgura 1.8) és un aparell encarregat de transformar la tensió alterna de la xarxa elèctrica en una tensió contínua.
+
+<img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p26_block257_524.png" height="300">
+
+>  **Figura 1.8**: Font d'alimentació per a laboratori d'electrònica
+
+----
+
+### 1.2.2 Fonts d'alimentació
+
+* Utilitzem fonts d'alimentació perquè la majoria de circuits electrònics requereixen una tensió contínua per a alimentar-se; quan no convé utilitzar piles o bateries, hem de recórrer a la tensió alterna de què disposem en els endolls de casa nostra i convertir-la en contínua mitjançant les fonts d'alimentació .
+
+
+> 
+> <hr>
+>
+> Un ordinador sempre apagat amb font ATX...
+>
+> continua consumint 2W de manera contínua.
+>
+> El consum standby pot comportar el 15% de la despesa energètica en una casa.
+> 
+> <hr>
+> 
+
+ ----
+
+### 1.3 La font d'alimentació d'un ordinador
+
+* La font d'alimentació és l'encarregada de subministrar el voltatge continu necessari per a cadascun dels elements que es connecten a l'ordinador, com també la intensitat que necessiten. Rep una tensió alterna de 230 V i 50 Hz de la xarxa de distribució elèctrica i la transforma en una tensió contínua de +5, -5, +12, -12 i +3,3 V (aquesta última només en els models ATX). A part dels circuits electrònics necessaris per a rectiﬁcar i estabilitzar la tensió alterna, la font d'alimentació també disposa d'un petit ventilador que refrigera els components i evita que puguin assolir temperatures excessivament elevades que podrien fer-los malbé (ﬁgura 1.9).
+
+----
+
+![fp_smx_m01_u1_pdfindex_p27_block133_281.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p27_block133_281.png)
+
+> Figura 1.9: Font d'alimentació d'un ordinador
+
+----
+
+|||
+|----|----|
+|Interior d'una font d'alimentació|<img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p27_block439_285.png" height="150">|
+|Detall del ventilador|<img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p27_block439_399.png" height="150">|
+|Cables d'alimentació d'una font AT|<img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p27_block439_496.png" height="150">|
+|||
+
+----
+
+
+Els dos tipus de fonts que podem trobar quan obrim un ordinador són AT o ATX.
+
+* Les fonts d'alimentació AT es van utilitzar ﬁns que va aparèixer el Pentium MMX, moment en què es van començar a utilitzar fonts d'alimentació ATX.
+
+Els connectors a placa base utilitzats en les fonts AT varien dels utilitzats en les fonts ATX, i no són tan segurs, ja que la font s'activa per mitjà d'un interruptor, i en aquest interruptor hi ha un voltatge de 230 V, cosa que comporta un cert risc a l'hora de manipular el PC.
+
+
+La font ATX sempre és activa i, encara que l'ordinador no estigui funcionant, sempre està alimentada amb una tensió petita en estat d'espera.
+
+Les fonts ATX disposen d'un botó connectat a la placa base, la qual s'encarrega d'engegar la font; això ens permet fer connexions/desconnexions per a programari.
+
+En principi, la font ve com una part ﬁxa de la carcassa de l'ordinador.
+
+* Si haguéssim d'instal·lar-la, n'hi hauria prou a col·locar-la en el buit de la carcassa destinat a aquest efecte, posar els cargols de la part posterior i connectar els diversos cables d'alimentació.
+
+* En el mateix costat on està situat el ventilador, també hi ha l'endoll del cable que va connectat a la xarxa elèctrica.
+
+* Aquest endoll mascle té tres connexions: per dues es rep l'energia elèctrica i per la tercera, la central, es rep la línia de terra.
+
+* Al costat d'aquest connector, se sol trobar un altre connector femella amb les mateixes connexions, i que és utilitzat per a prolongar l'alimentació ﬁns
+
+28
+
+al monitor: no és que la font d'alimentació treballi per al monitor, sinó que simplement prolonga l'endoll de la paret ﬁns aquí, de manera que el monitor es pot endollar indistintament aquí o a l'endoll de la paret.
+
+1.3.1 Els connectors
+
+Els connectors que vénen inclosos en la font d'alimentació estan normalitzats tant per als models AT com per als ATX.
+
+* En aquests, com a norma general, els ﬁls de color negre són de massa (zero volts), els de color vermell porten +5 volts, els de color groc porten +12 volts, els de color blau porten -12 volts i els de color blanc (o gris) porten -5 volts, tots referits al ﬁl de color negre.
+
+* Hi ha dos connectors de sis contactes que surten de la font d'alimentació, anomenats P8 i P9 en els models AT, i que van connectats un al costat de l'altre al connector d'alimentació de la placa mare (ﬁgura 1.10).
+
+* Per a connectar-los correctament, els cables negres han de quedar junts.
+
+* Les ﬁgures 12 a 15 mostren els connectors bàsics d'una font.
+
+De manera més detallada, els connectors són els següents:
+
+![fp_smx_m01_u1_pdfindex_p28_block42_376.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p28_block42_376.png) Connector P9
+
+![fp_smx_m01_u1_pdfindex_p28_block42_503.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p28_block42_503.png) Conector d'alimentació ATX
+
+![fp_smx_m01_u1_pdfindex_p28_block42_645.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p28_block42_645.png) ATX 12 V
+
+* Connector d'alimentació principal del PC (normalment anomenat P1).
+
+* És
+el connector que proporciona energia a la placa base.
+
+* El connector té vint o vint-i-quatre pins.
+
+* Una de les clavilles pertany al cable PS-ON (generalment és de color verd).
+
+* Aquest connector és el més gran dels que hi ha a la font.
+
+* En la majoria de fonts d'alimentació d'AT, aquest connector es va dividir en dos: P8 i P9.
+
+* En cas de disposar d'una font d'alimentació amb un connector de vint-i-quatre pins, la pot connectar igualment a una placa base amb connector de vint pins.
+
+* En els casos en què la placa base disposa d'un connector de vint-i-quatre pins, algunes fonts d'alimentació vénen amb dos connectors (un de vint pins i un altre amb quatre pins), que es poden utilitzar per a formar el connector de vint-i-quatre pins.
+
+* Connector d'alimentació ATX12V de quatre pins (també anomenat connec-
+tor d'alimentació P4).
+
+* Es tracta d'un segon connector que va a la placa base (a més del principal de vint-i-quatre pins) per al subministrament d'energia especíﬁca per al processador.
+
+* Per a plaques base de gamma alta i transformadors, es requereix més potència, per tant, també hi ha EPS12V de vuit pins.
+
+* Connectors d'alimentació de perifèrics de quatre pins (generalment amb el
+nom del seu fabricant Molex).
+
+* Aquests són connectors menuts que van a les diferents unitats de disc de l'ordinador.
+
+* La majoria tenen quatre cables: dos de negres, un de vermell i un de groc.
+
+* A diferència de la xarxa de cable elèctric estàndard de codiﬁcació de color, els cables negres són de terra, el cable roig és de +5 V i el cable groc és de +12 V.
+
+* En alguns casos, aquests també s'utilitzen per a proporcionar més energia a targetes PCI o FireWire 800.
+
+* Connector d'alimentació de quatre pins Berg (generalment anomenat con-
+nector mini o minimolex).
+
+* Aquest és un dels connectors més petits que
+
+29
+
+s'utilitza per a la disquetera.
+
+* En alguns casos, es pot utilitzar com un connector auxiliar per a les targetes de vídeo AGP.
+
+* La seva conﬁguració és similar a la del cable de perifèrics.
+
+* Connector d'alimentació auxiliar.
+Hi ha diversos tipus de connectors auxiliars dissenyats per a proporcionar energia addicional si és necessari.
+
+* Connectors d'alimentació Serial ATA.
+
+* Es tracta d'un connector de quinze
+pins per als components que utilitzen interfície SATA.
+
+* Aquest connector subministra alimentació als tres voltatges: 3,3, 5 i 12 volts.
+
+* Connectors de sis pins:
+La majoria de fonts d'alimentació modernes inclouen aquests connectors, que generalment es fan servir per a targetes de gràﬁcs PCI Express, però la majoria portaran el connector més nou de vuit pins.
+
+* Cada connector de sis pins pot donar un màxim de 75 W.
+
+* Connectors 6 + 2 pins.
+
+* Per a assegurar la compatibilitat, alguns connectors
+dissenyats per a ser utilitzats amb targetes de gràﬁcs PCI Express tenen aquest tipus de conﬁguració de pins.
+
+* Permeten connectar una targeta de sis pins o de vuit utilitzant dos mòduls de connexió per cable en la mateixa beina: un de sis pins i un altre de dos pins.
+
+* Connector IEC C14 amb un cable C13.
+
+* S'utilitza per a connectar la font
+d'alimentació a la xarxa elèctrica local.
+
+Connector P8
+
+![fp_smx_m01_u1_pdfindex_p29_block439_182.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p29_block439_182.png) Connector Molex IDE
+
+![fp_smx_m01_u1_pdfindex_p29_block439_321.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p29_block439_321.png) Connector disquetera
+
+Figura 1.10.
+
+* Connectors P8 i P9 d'una font d'alimentació AT
+
+![fp_smx_m01_u1_pdfindex_p29_block121_425.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p29_block121_425.png) La resta dels connectors que surten de la font d'alimentació són de quatre contactes i serveixen per a alimentar les unitats del disc o qualsevol altra part del dispositiu que instal·lem a l'ordinador.
+
+* D'aquests connectors n'hi ha un de més petit que solament és vàlid per a alimentar les disqueteres de 3 1/2”.
+
+30
+
+Figura 1.11.
+
+* Connector d'alimentació d'una font ATX
+
+![fp_smx_m01_u1_pdfindex_p30_block234_72.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p30_block234_72.png) Figura 1.12.
+
+* Connectors Molex d'alimentació de disc dur i disquetera.
+
+* Connector d'alimentació SATA
+
+![fp_smx_m01_u1_pdfindex_p30_block234_274.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p30_block234_274.png) En les següents taules s'indiquen els colors dels ﬁls d'aquests connectors i el voltatge associat a cada un.
+
+Taula 1.7 - Connectors de la font d'alimentació
+
+Pin Color Voltatge
+
+1 Taronja Font correcta
+
+2 Roig +5 V
+
+3 Groc +12V
+
+4 Blau -12V
+
+5 Negre Terra
+
+6 Negre Terra
+
+Connector tipus P8 en model AT
+
+Taula 1.8 - Connector tipus P9 en model AT
+
+Pin Color Voltatge
+
+1 Negre Terra
+
+2 Negre Terra
+
+3 Blanc -5V
+
+4 Roig +5V
+
+5 Roig +5V
+
+6 Roig +5V
+
+31
+
+Taula 1.9 - Connector d'alimentació en models ATX
+
+Pin Color Voltatge
+
+1 Taronja 3,3V
+
+2 Taronja 3,3V
+
+3 Negre Terra
+
+4 Roig +5V
+
+5 Negre Terra
+
+6 Roig +5V
+
+7 Negre Terra
+
+8 Gris Font correcta
+
+9 Violeta +5V standby
+
+10 Groc 12V
+
+11 Taronja 12V
+
+12 Blau 3,3V
+
+13 Negre 3,3V
+
+14 Verd -12V
+
+15 Negre Terra
+
+16 Negre PS_ON (0V)
+
+17 Negre Terra
+
+18 Blanc Terra
+
+19 Vermell Terra
+
+20 Vermell -5V
+
+És una de les grans millores de les fonts ATX respecte de les AT.
+
+* Inclou més cables però està més ben organitzat.
+
+Taula 1.10 - Connector ATX 12 V
+
+Pin Color Voltatge
+
+21 Roig +5V
+
+22 Roig +5V
+
+23 Roig +5V
+
+24 Negre Terra
+
+S'utilitza per a alimentar el processador i no sobrecarregar el connector ATX.
+
+Taula 1.11 - Connector ATX AUX
+
+Pin Color Voltatge
+
+1 Negre Terra
+
+2 Negre Terra
+
+3 Negre Terra
+
+4 Taronja +3,3V
+
+5 Taronja +3,3V
+
+32
+
+A l'hora de reparar un ordinador personal, no oblideu comprovar la font d'alimentació amb un multímetre.
+
+* D'aquesta manera podreu descartar que el problema sigui una font defectuosa.
+
+El propòsit de la font d'alimentació...
+
+...és convertir el corrent altern a 220 V proporcionat per la xarxa elèctrica en corrent continu que el PC pugui utilitzar per a funcionar.
+
+* Normalment es converteix en voltatges de 12,5 V i 3,3 V (CC).
+
+* Els 12 V s'utilitzen per a dispositius amb motors, com els discos durs o unitats òptiques.
+
+* Els 5 V i 3,3 V s'usen per a la resta de dispositius de la placa.
+
+Taula 1.11 - (continuació)
+
+Pin Color Voltatge
+
+6 Roig +5V
+
+S'utilitza com a línia de reforç per a alimentar alguns circuits i la memòria de l'equip.
+
+Taula 1.12 - Connector d'unitats de 3 1
+
+2
+
+Pin Color Voltatge
+
+1 Roig +5V
+
+2 Negre Terra
+
+3 Negre Terra
+
+4 Groc +12V
+
+1.3.2 Mesura de valors de tensió en fonts d'alimentació (FA) típiques
+
+Una pràctica molt interessant i a la vegada un mètode de veriﬁcació de fonts ﬁable és mesurar tots els voltatges de la font d'alimentació i assegurar-se que es troben dins els marges acceptables per a un bon funcionament.
+
+* Hem de tenir en compte que molts dels problemes amb què ens trobem a l'hora de reparar un ordinador són deguts a fonts d'alimentació defectuoses.
+
+* El fet que una font no funcioni correctament o hagi deixat de fer-ho a causa del temps d'ús no sempre vol dir que l'ordinador ja no arrencarà.
+
+* En molts casos l'ordinador pot semblar que arrenqui sense problemes, però quedar-se bloquejat al cap d'una estona.
+
+* D'altres vegades es pot reiniciar sense previ avís o es pot apagar en un moment determinat a causa d'una pujada de la despesa energètica.
+
+Per això, abans de passar a altres punts, cal tenir en compte si la font d'alimentació és el problema.
+
+* Una manera d'assegurar-nos del funcionament correcte d'aquesta consisteix a mesurar els voltatges que la font ha de donar segons les seves especiﬁcacions, per a assegurar-nos que aquests són correctes.
+
+Malgrat que encara podem trobar alguns ordinadors amb fonts d'alimentació AT en funcionament, la majoria tindran fonts ATX (AT extended).
+
+* Com hem vist en aquest apartat, la diferència principal entre l'una i l'altra és el nombre i tipus de connectors.
+
+* Independentment de la font de què parlem, totes tenen els mateixos components bàsics: el primer és la conexió d'energia, que és per on la font es connecta amb l'endoll elèctric.
+
+* A continuació tenim el connector a la placa base, que té la forma d'un conjunt de cables que surten de la font.
+
+* Les fonts d'alimentació també tenen un ventilador (el funcionament del qual es pot comprovar fàcilment simplement comprovant que està en marxa).
+
+33
+
+Amb compte!
+
+El millor mètode per a comprovar la xarxa elèctrica sense risc d'electrocució és connectar el multímetre a un lladre o regleta desendollada i llavors conectar-lo al corrent.
+
+Diagnosi de la font
+
+Per a començar la diagnosi de la font, cal assegurar-se que està desendollada de la xarxa elèctrica i que la posició del selector de voltatge posterior, si en té, està a 220 V.
+
+![fp_smx_m01_u1_pdfindex_p33_block439_137.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p33_block439_137.png) Assegureu-vos que la font està ajustada a 220 V.
+
+Seguidament, si el ventilador de la font es troba en funcionament, no hi ha dubte que l'alimentació de la font és correcta.
+
+* En cas contrari, o bé el ventilador està espatllat o bé el connector a la xarxa general no està rebent electricitat.
+
+* Per veure si el problema és aquesta connexió poseu el multímetre al valor de voltatge AC superior a 220 V i comproveu la connexió, com es mostra en la ﬁgura 1.13 .
+
+Figura 1.13.
+
+* Comprovació de la connexió a la xarxa elèctrica
+
+![fp_smx_m01_u1_pdfindex_p33_block96_249.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p33_block96_249.png) Si l'endoll està subministrant la potència adequada, podem passar a fer un test de continuïtat al cable d'alimentació, com es mostra en la ﬁgura 1.14.
+
+* Si tant l'endoll com el cable funcionen, podem aﬁrmar que el ventilador no funciona i, per tant, caldrà substituïr la font d'alimentació.
+
+* El multímetre es podrà col·locar en un valor de resistència baix o, si disposa d'avisador acústic, el podrem utilitzar per a assegurar la continuïtat.
+
+* És convenient fer la comprovació també per al cable de terra.
+
+Figura 1.14.
+
+* Feu un test de continuïtat al cable d'alimentació.
+
+![fp_smx_m01_u1_pdfindex_p33_block96_575.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p33_block96_575.png) 34
+
+Vegeu el sub-subapartat “Els connectors” en aquesta unitat.
+
+Recordeu
+
+En el cas de les fonts ATX, la circuiteria interna n'impedeix el funcionament si la font no es troba connectada a la placa base i el pin PSON està enviant un senyal d'engegat.
+
+Podeu mesurar també els voltatges directament en els connectors de perifèric.
+
+El pas següent és la comprovació de valors a la placa base.
+
+* Depenent de si es tracta d'una font AT o ATX, disposareu d'un o dos connectors que connecten la font d'alimentació a la placa base.
+
+* Sigui quin sigui el tipus de font, desconnecteu el sistema de la xarxa elèctrica abans de comprovar els valors a la placa base.
+
+En el cas d'una font AT (que gairebé ja no s'utilitza), disposareu de dos connectors, anomenats P8 i P9, que connecten la font a la placa base.
+
+* Desenganxeu els connectors P8 i P9 de la placa base però assegureu-vos de recordar-ne la posició correcta.
+
+* Encara que els dos connectors estan marcats per a evitar que es col·loquin incorrectament, és possible col·locar-los de manera inversa incorrectament.
+
+* Aquest error podria destruir la placa base i també la font d'alimentació.
+
+* Quan torneu a posar els connectors P8 i P9 a la placa base, recordeu que els conectors de massa (negres) haurien de ser l'un al costat de l'altre.
+
+El conector d'una font ATX usa un connector individual anomenat P1 en lloc dels conectors P8 i P9.
+
+* En la ﬁgura 1.12 podem veure el connector ATX-P1, un conjunt de cables connectats a un connector de vint pins.
+
+* En la ﬁgura 18, podem veure un diagrama del signiﬁcat de cadascun dels pins.
+
+* Aquest connector està marcat per a evitar connectar-lo a l'inrevés.
+
+Tant les fonts AT com les ATX subministren a la placa base nivells de voltatge de 12, 5 i 3,3 volts.
+
+* La raó per a aquests diferents valors és que els diversos components de la placa base requereixen diferents nivells de voltatge per al seu funcionament.
+
+Comprovació dels valors
+
+1.
+
+* El primer pas és assegurar-se de quin és cada pin amb l'ajuda de la ﬁgura 18.
+La presència d'un clip al connector P1 fa que això resulti més fàcil del que es pot preveure en un principi.
+
+* El clip es troba entre els pins 15 i 16.
+
+* D'aquesta manera és més fàcil trobar la situació de la resta de pins.
+
+![fp_smx_m01_u1_pdfindex_p34_block42_465.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p34_block42_465.png)
+2.
+
+* Si mesurem amb el multímetre una font ATX, el pin 9 ha de donar un valor de 5
+V (de corrent continu) sempre que l'ordinador estigui endollat.
+
+* Això es produirà tant si l'ordinador està engegat com no.
+
+* Habitualment el pin 9 és de color púrpura.
+
+* Aquesta comprovació és una bona manera de començar a comprovar la font, ja que així ens assegurem que la placa base està rebent potència.
+
+3.
+
+* Un cop comprovat el pin 9, cal comprovar el voltatge als diversos circuits on han
+d'arribar 12 V.
+
+* Com veiem en la ﬁgura 1.12, hi ha diversos cables negres i grocs al connector P1.
+
+* Els cables grocs indiquen circuits de 12 VDC.
+
+* Per a comprovar-los cal ajustar el multímetre a l'escala de 15/20 VDC (contínua) depenent del model de multímetre.
+
+* Seguidament, amb l'ordinador engegat, situareu el mesurador actiu del multímetre en un cable groc del connector P1 i tot seguit el mesurador negre en un cable negre.
+
+* Com que l'ordinador ha d'estar en marxa, el connector P1 ha d'estar conectat a la placa base.
+
+* Per tant, cal col·locar els mesuradors com mostra la ﬁgura 1.15.
+
+35
+
+Es pot considerar que els valors correctes per al voltatge de la font no han de ser un 10% més grans o més petits que el valor nominal.
+
+Figura 1.15.
+
+* Connecteu la sonda roja a cada cable de color i la negra a un cable negre.
+
+![fp_smx_m01_u1_pdfindex_p35_block96_81.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p35_block96_81.png)
+![fp_smx_m01_u1_pdfindex_p35_block439_80.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p35_block439_80.png) Diagrama d'un connector P1Disseny del connector d'una font ATX
+
+![fp_smx_m01_u1_pdfindex_p35_block439_307.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p35_block439_307.png)
+4.
+
+* Un cop els mesuradors estan connectats, el multímetre hauria d'indicar un
+voltatge entre 11 VDC i 13 VDC.
+
+* Si la font d'alimentació no té un funcionament estable sinó que ja ha provocat problemes, el voltatge pot estar per sota d'aquest nivell.
+
+* Si el voltatge es troba entre 10,5 VDC i 11 VDC, el PC necessita una nova font d'alimentació.
+
+* Si el valor és inferior a 10,5 VDC probablement l'ordinador ni tan sols arrencarà.
+
+5.
+
+* De la mateixa manera s'han de comprovar els circuits de 5 VDC i 3,3 VDC.
+En aquest cas, la possible caiguda de tensió serà més baixa perquè els valors de tensió són més petits.
+
+* Per tant, és aconsellable fer les proves inicialment amb el connector de 12 V.
+
+En conclusió, una font d'alimentació defectuosa no és el component més fàcil de detectar, i molts cops es passa de llarg en favor d'altres components com la placa base, la targeta gràﬁca o altres.
+
+* Malgrat això, amb un multímetre podem comprovar ràpidament si els valors que ha de donar la font són correctes quant a voltatge i corrent.
+
+* La major part dels problemes en una font provoquen errors aleatoris a la placa base, de manera que amb aquest test podem descartar la font com a responsable.
+
+37
+
+Voltatge i freqüència del senyal elèctric
+
+El voltatge en la xarxa elèctrica catalana és de 230 V, i la freqüència del senyal és de 50 Hz.
+
+* Però, a d'altres països, el senyal elèctric pot tenir unes característiques de voltatge i freqüència diferents.
+
+* Per exemple, als Estats Units, el senyal elèctric és generalment de 120 V a 60 Hz.
+

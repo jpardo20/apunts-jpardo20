@@ -14,7 +14,7 @@ Objectius: entendre magnituds elèctriques bàsiques, fonts ATX i SAI; PRL i med
 ### Mesures elèctriques i fonts d’alimentació
 
 <p align="center">
-  <img src="../../../assets/img/mim/icona-sobretaula-simbols-electrics.png" alt="Esquema voltímetre" width="300">
+  <img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/icona-sobretaula-simbols-electrics.png" alt="Esquema voltímetre" width="300">
 </p>
 
 Note:
@@ -32,7 +32,7 @@ La idea és que entengueu com funcionen les fonts d’alimentació i com utilitz
 - Exemple: bombeta 12V, 5W
 
 <p align="center">
-  <img src="../../../assets/img/mim/esquema-voltiemtre.png" alt="Esquema voltímetre" width="300">
+  <img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/esquema-voltiemtre.png" alt="Esquema voltímetre" width="300">
 </p>
 
 <!-- [IMATGE: esquema senzill amb una bateria de 12V connectada a una resistència/bombeta i un voltímetre en paral·lel] -->
@@ -54,7 +54,7 @@ Remarca que aquests conceptes els veurem sovint quan diagnostiquem equips.
 <!-- [IMATGE: multímetre digital groc i negre, pantalla mostrant "12.00 V", amb selector marcat a V i cables de prova vermell i negre] -->
 
 <p align="center">
-  <img src="../../../assets/img/mim/imatge-voltimetre.png" alt="Foto voltímetre" width="400">
+  <img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/imatge-voltimetre.png" alt="Foto voltímetre" width="400">
 </p>
 
 Note:
@@ -88,7 +88,7 @@ Exemple pràctic: mesurar la tensió d’una pila AA.
 <!-- [IMATGE: fotografia realista d’una font ATX oberta, amb el ventilador, transformador i condensadors visibles i etiquetats] -->
 
 <p align="center">
-  <img src="../../../assets/img/mim/font-ATX-oberta.png" alt="font-ATX-oberta" width="400">
+  <img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/font-ATX-oberta.png" alt="font-ATX-oberta" width="400">
 </p>
 
 Note:
@@ -110,8 +110,8 @@ Dins hi trobem transformadors, condensadors i un ventilador.
 ### Connectors de 20 i de 24 pins
 
 <p align="center">
-  <img src="../../../assets/img/mim/esquema-connectors-atx-20-i-24-pins.png" alt="esquema-connectors-atx-20-i-24-pins.png" width="400">
-  <img src="../../../assets/img/mim/connectors-atx-20-i-24-pins.png" alt="connectors-atx-20-i-24-pins.png" width="200">
+  <img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/esquema-connectors-atx-20-i-24-pins.png" alt="esquema-connectors-atx-20-i-24-pins.png" width="400">
+  <img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/connectors-atx-20-i-24-pins.png" alt="connectors-atx-20-i-24-pins.png" width="200">
 </p>
 
 
