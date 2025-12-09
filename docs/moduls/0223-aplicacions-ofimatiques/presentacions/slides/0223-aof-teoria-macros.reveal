@@ -1,4 +1,4 @@
-# 1r SMX – Aplicacions ofimàtiques
+# 1r SMX – Aplicacions ofimàtiques - Macros
 
 ## 1a Sessió
 
@@ -101,7 +101,7 @@
 ## `perProvarMacros.docx`
 
 - Per aquesta sessió, farem servir el document de prova:
-  - **`perProvarMacros.docx`**
+  - [**`perProvarMacros.docx`**](perProvarMacros.docx)
 - Aquest document conté diverses frases amb la paraula **“password”**.
 - L’objectiu de la macro `BuscarISubstituir` serà:
   - Substituir totes les aparicions de **“password”** per **“contrasenya”**.
