@@ -63,7 +63,7 @@
     {
       "order": 60,
       "title": "Dispositius d’una xarxa",
-      "src": "slides/xlo-ra3-ra4-01-commutadors.reveal",
+      "src": "slides/xlo-ra3-ra4-01-disp-xarxa.reveal",
       "description": "Dispositius d’una xarxa",
       "status": "active",
       "kind":"theory"
