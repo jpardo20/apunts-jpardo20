@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulari avançat – RA3 AE3001 Mòdem i ADSL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ESTILS AVANÇATS -->
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      margin: 2rem auto;
+      max-width: 900px;
+      padding-bottom: 4rem;
+      line-height: 1.6;
+    }
+    h1 { margin-bottom: 0.3rem; }
+    .subtitle { color: #555; margin-bottom: 1rem; }
+
+    label { font-weight: 600; margin-top: 1.4rem; display: block; }
+
+    input[type=text], textarea, select {
+      width: 100%;
+      padding: 10px;
+      border: 1.8px solid #bbb;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: 0.2s;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: #005bff;
+      outline: none;
+      box-shadow: 0 0 4px #005bff90;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+    th {
+      background: #f0f3f7;
+      text-align: center;
+    }
+    .obligatori {
+      border-left: 4px solid #e60000 !important;
+    }
+
+    .btn {
+      margin-top: 2rem;
+      padding: 12px 20px;
+      font-size: 1.2rem;
+      background: #005bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #003ec9; }
+
+    .danger {
+      background: #cc0000;
+    }
+    .secondary {
+      background: #777;
+    }
+
+    .error {
+      background: #ffe4e4;
+      color: #a10000;
+      padding: 10px;
+      border-left: 4px solid #a10000;
+      margin-top: 1rem;
+      border-radius: 6px;
+      display: none;
+    }
+
+    #jsonPreview {
+      margin-top: 2rem;
+      background: #f7f7f7;
+      padding: 1rem;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 0.9rem;
+      white-space: pre-wrap;
+      display: none;
+    }
+
+    #hashBox {
+      font-family: monospace;
+      margin-top: 1rem;
+      padding: 10px;
+      background: #eef2ff;
+      border-left: 4px solid #495aff;
+      display: none;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<h1>RA3 – Activitat AE3001: Mòdem i ADSL</h1>
+<div class="subtitle">Versió avançada amb autosave, validació i hash de seguretat</div>
+
+<hr>
+
+<div id="errorBox" class="error"></div>
+
+<label for="alumne">Selecciona el teu nom:</label>
+<select id="alumne" required>
+  <option value="">-- Tria alumne --</option>
+</select>
+
+<input type="hidden" id="email">
+
+<hr>
+
+<!-- ====================== PREGUNTES ========================== -->
+
+<label>1. Funcions principals d’un mòdem</label>
+<textarea id="q1" required></textarea>
+
+<label>2. Velocitat màxima amb mòdem antic</label>
+<textarea id="q2" required></textarea>
+
+<label>3. Tres inconvenients del mòdem</label>
+<textarea id="q3" required></textarea>
+
+<label>4. Any d’invenció de l’ADSL</label>
+<textarea id="q4" required></textarea>
+
+<label>5. Diferències entre ADSL i Fibra</label>
+<table>
+  <thead>
+    <tr><th>ADSL</th><th>Fibra</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="obligatori"><input id="adsl1" required></td><td class="obligatori"><input id="fibra1" required></td></tr>
+    <tr><td class="obligatori"><input id="adsl2" required></td><td class="obligatori"><input id="fibra2" required></td></tr>
+    <tr><td><input id="adsl3"></td><td><input id="fibra3"></td></tr>
+    <tr><td><input id="adsl4"></td><td><input id="fibra4"></td></tr>
+  </tbody>
+</table>
+
+<label>6. Tens ADSL a casa? Quina velocitat?</label>
+<textarea id="q6" required></textarea>
+
+<label>7. Velocitat real vs contractada</label>
+<textarea id="q7" required></textarea>
+
+<label>8. Què vol dir tenir 1 GB? I connexió il·limitada?</label>
+<textarea id="q8" required></textarea>
+
+<label>9. Velocitat segons l’app ADSLzone</label>
+<textarea id="q9" required></textarea>
+
+<label>10. Diferència entre velocitat teòrica i real</label>
+<textarea id="q10" required></textarea>
+
+<label>11. Per què les empreses tenen pujada igual que baixada?</label>
+<textarea id="q11" required></textarea>
+
+<label>12. Taula de companyies</label>
+<table>
+  <thead>
+    <tr><th></th><th>Movistar</th><th>Orange</th><th>Vodafone</th><th>Jazztel</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Quota</td>
+        <td><input id="movQuota"></td>
+        <td><input id="orangeQuota"></td>
+        <td><input id="vodafoneQuota"></td>
+        <td><input id="jazztelQuota"></td></tr>
+    <tr><td>Velocitat</td>
+        <td><input id="movVel"></td>
+        <td><input id="orangeVel"></td>
+        <td><input id="vodafoneVel"></td>
+        <td><input id="jazztelVel"></td></tr>
+  </tbody>
+</table>
+
+<label>Quina seria la millor companyia i per què?</label>
+<textarea id="q12" required></textarea>
+
+<!-- ====================== BOTONS ========================== -->
+
+<button class="btn" onclick="generarJSON()">Descarregar JSON</button>
+<button class="btn secondary" onclick="reiniciar()">Reiniciar formulari</button>
+
+<pre id="jsonPreview"></pre>
+<div id="hashBox"></div>
+
+<!-- ====================== SCRIPTS ========================== -->
+<script>
+// ------------------------------------------------------------
+// 1. CARREGAR ALUMNES
+// ------------------------------------------------------------
+fetch('./alumnes/dades_alumnes.json')
+  .then(r => r.json())
+  .then(data => {
+    const sel = document.getElementById('alumne');
+    data.alumnes[0].forEach(a => {
+      const opt = document.createElement('option');
+      opt.value = JSON.stringify(a);
+      opt.textContent = `${a.firstname} ${a.lastname}`;
+      sel.appendChild(opt);
+    });
+  });
+
+// ------------------------------------------------------------
+// 2. AUTOFILL EMAIL
+// ------------------------------------------------------------
+document.getElementById('alumne').addEventListener('change', e => {
+  if (!e.target.value) return;
+  document.getElementById('email').value = JSON.parse(e.target.value).email;
+});
+
+// ------------------------------------------------------------
+// 3. NORMALITZACIÓ DEL NOM PER GENERAR EL FITXER
+// ------------------------------------------------------------
+function slugifyNomCognom(str) {
+  return str
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/ç/g, "c").replace(/ñ/g, "n")
+    .replace(/[^a-zA-Z0-9 ]/g, "")
+    .trim()
+    .toLowerCase()
+    .replace(/ +(\w)/g, (_, c) => c.toUpperCase());
+}
+
+// ------------------------------------------------------------
+// 4. AUTOSAVE
+// ------------------------------------------------------------
+const AUTOSAVE_KEY = "xlo-ra3-ae3001-autosave";
+
+window.addEventListener("input", autosave);
+document.getElementById("alumne").addEventListener("change", autosave);
+
+function autosave() {
+  const data = collectFormData(false);
+  localStorage.setItem(AUTOSAVE_KEY, JSON.stringify(data));
+}
+
+function restoreAutosave() {
+  const saved = localStorage.getItem(AUTOSAVE_KEY);
+  if (!saved) return;
+  const data = JSON.parse(saved);
+
+  if (data.alumneValue) {
+    document.querySelector(`#alumne option[value="${data.alumneValue}"]`)?.setAttribute("selected", "selected");
+    document.getElementById("email").value = data.email;
+  }
+
+  for (const [k, v] of Object.entries(data.respostes)) {
+    const el = document.getElementById(k);
+    if (el) el.value = v;
+  }
+}
+restoreAutosave();
+
+// ------------------------------------------------------------
+// 5. VALIDACIÓ GENERAL
+// ------------------------------------------------------------
+function showError(msg) {
+  const box = document.getElementById("errorBox");
+  box.textContent = msg;
+  box.style.display = "block";
+}
+
+function hideError() {
+  document.getElementById("errorBox").style.display = "none";
+}
+
+// ------------------------------------------------------------
+// 6. COL·LECCIONAR DADES + PREVIEW
+// ------------------------------------------------------------
+function collectFormData(includeHash = true) {
+  const alumneSel = document.getElementById('alumne').value;
+  let alumneObj = alumneSel ? JSON.parse(alumneSel) : null;
+
+  const respostes = {};
+  document.querySelectorAll("textarea, input[type=text]").forEach(el => {
+    respostes[el.id] = el.value.trim();
+  });
+
+  return {
+    alumne: alumneObj ? `${alumneObj.firstname} ${alumneObj.lastname}` : "",
+    alumneValue: alumneSel,
+    email: document.getElementById('email').value,
+    respostes
+  };
+}
+
+// ------------------------------------------------------------
+// 7. GENERAR HASH SHA-256
+// ------------------------------------------------------------
+async function generarHash(str) {
+  const msgUint8 = new TextEncoder().encode(str);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
+// ------------------------------------------------------------
+// 8. GENERAR JSON FINAL I DESCARREGAR
+// ------------------------------------------------------------
+async function generarJSON() {
+  hideError();
+
+  const data = collectFormData();
+  if (!data.alumneValue) return showError("❌ Cal seleccionar el teu nom.");
+
+  // Validació camps obligatoris
+  const obligatoris = ["q1","q2","q3","q4","adsl1","adsl2","fibra1","fibra2","q6","q7","q8","q9","q10","q11","q12"];
+  for (const id of obligatoris) {
+    if (!document.getElementById(id).value.trim()) {
+      return showError(`❌ El camp ${id} és obligatori.`);
+    }
+  }
+
+  // Generar hash
+  const jsonString = JSON.stringify(data.respostes);
+  const hash = await generarHash(jsonString);
+  data.hash = hash;
+
+  // Vista prèvia JSON
+  document.getElementById("jsonPreview").textContent = JSON.stringify(data, null, 2);
+  document.getElementById("jsonPreview").style.display = "block";
+
+  document.getElementById("hashBox").textContent = "SHA256: " + hash;
+  document.getElementById("hashBox").style.display = "block";
+
+  // Nom de fitxer
+  const alumneObj = JSON.parse(data.alumneValue);
+  const nomComplet = slugifyNomCognom(`${alumneObj.lastname} ${alumneObj.firstname}`);
+
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type: "application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `xlo-ra3-ae3001-${nomComplet}-modem-adsl.json`;
+  a.click();
+}
+
+// ------------------------------------------------------------
+// 9. REINICIAR FORMULARI
+// ------------------------------------------------------------
+function reiniciar() {
+  if (!confirm("Segur que vols esborrar totes les dades?")) return;
+  localStorage.removeItem(AUTOSAVE_KEY);
+  window.location.reload();
+}
+
+</script>
+
+</body>
+</html>
