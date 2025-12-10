@@ -1,0 +1,321 @@
+# Dispositius d’una xarxa
+
+Note:
+En aquesta presentació introduirem els dispositius principals que formen una xarxa local.
+L’objectiu és que l’alumnat identifiqui cada dispositiu, entengui quina funció fa i en quina capa del model OSI treballa.
+Aquesta diapositiva inicial serveix per contextualitzar: avui parlarem de la “peça humana” d'una xarxa, és a dir, dels aparells que la fan funcionar.
+
+---
+
+## Nodes d’una xarxa
+
+### Hubs (capa física)
+- Connecten dos segments de xarxa.
+- Reenvien senyals a tots els ports.
+
+### Bridges (capa d’enllaç)
+- Connecten xarxes diferents per adaptar la informació.
+- Filtren trames segons adreces MAC.
+
+### Switches (capa d’enllaç)
+- Interconnecten dos o més segments de xarxa.
+- Commutació per MAC.
+- Alta velocitat i escalabilitat.
+
+----
+
+### Routers (capa de xarxa)
+- Adaptació de paquets entre xarxes diferents.
+
+### Gateway (capa de transport)
+- Interconnecta xarxes amb arquitectures diferents.
+
+Note:
+Aquí expliquem el concepte bàsic de "node": qualsevol dispositiu capaç d’enviar o rebre informació dins la xarxa.
+Guió per explicar cada punt sense por:
+- **Hub**: digueu que és com un “distribuïdor cec”: tot el que rep, ho envia a tots els ports. No té intel·ligència. És antic.
+- **Bridge**: separa xarxes i pren decisions simples segons l’adreça MAC. Millora respecte al hub.
+- **Switch**: és l’evolució del bridge. Treballa ràpid, de forma eficient, crea xarxes molt estables. És el dispositiu central de la majoria de LAN.
+- **Router**: permet que els paquets surtin de la xarxa local. Sense router, només hi hauria comunicació interna.
+- **Gateway**: és un traductor entre tecnologies diferents, sovint integrat al router.
+
+Recorda remarcar a l’alumnat que cada dispositiu treballa en capes diferents del model OSI, i això explica per què fan funcions diferents.
+
+---
+
+## Mòdem
+
+- Conversió analògic–digital.
+- Ús de línies telefòniques analògiques per enviar dades digitals.
+
+Note:
+Un mòdem és un convertidor entre el món analògic i el digital.
+Explica-ho amb l’exemple:
+"El mòdem transforma els senyals per tal que puguin viatjar per la línia telefònica antiga, que és analògica. L’ordinador només entén senyal digital, i per això cal aquesta conversió."
+Afegeix que avui dia els mòdems encara existeixen, però integrats en dispositius més complexos com els routers d’operadora.
+
+---
+
+## ADSL
+
+- Alta velocitat sobre cablejat telefònic existent.
+- Comunicació simultània de veu i dades.
+- Canals de pujada i baixada separats.
+
+Note:
+Explica que ADSL va ser una revolució perquè permetia tenir Internet i telèfon alhora.
+El detall important: separació entre canal de veu i canal de dades.
+Aclareix que ADSL ja és tecnologia “antiga”, però encara serveix per entendre com es transportaven dades sobre infraestructures analògiques.
+
+---
+
+## Atenuació del senyal
+
+- El senyal es degrada amb la distància.
+- Com més llarg el cable, més feble arriba.
+- Solució: repetidors.
+
+Note:
+Aquesta idea és clau: un cable no és perfecte. Com més llarg, més es perd el senyal.
+Exemple per explicar-ho: igual que quan cridem lluny, la veu arriba més fluixa.
+Els repetidors serveixen per restaurar la intensitat del senyal perquè arribi amb qualitat.
+
+---
+
+## Repetidors
+
+- Regeneren el senyal.
+- Capa 1 del model OSI.
+- Ràpids però poc selectius.
+
+Note:
+Un repetidor no pensa, només amplifica. No filtra res.
+Explica-ho de manera senzilla:
+"Un repetidor és com un megàfon: agafa el senyal i l’amplifica, però si el senyal és dolent, l'amplifica igualment."
+
+---
+
+## Hub (concentrador)
+
+- Repetidor multiport.
+- Capa 1 del model OSI.
+- No filtra tràfic.
+
+### Avantatges:
+- No requereix configuració.
+- Reenvia ràpid els senyals.
+
+### Inconvenients:
+- No aïlla tràfic.
+- Pot provocar congestió.
+- No divideix dominis de col·lisió.
+
+Note:
+Remarca la idea clau: **el Hub envia tot a tots**.
+Exemple: "És com si enviéssim un missatge de WhatsApp a TOTA la classe, encara que només fos per una persona".
+Aclareix que és una tecnologia obsoleta i no es fa servir en xarxes modernes.
+
+---
+
+## Bridge (Pont)
+
+- Segmenta xarxes.
+- Decideix reenviar trames segons adreces MAC.
+
+Note:
+El bridge és un dispositiu que millora el hub perquè permet segmentar la xarxa.
+Explica que identifica quins dispositius hi ha a cada segment i només envia les trames on toca.
+Comparació: "El bridge és com un porter que només deixa passar la persona correcta fent una comprovació."
+
+---
+
+## Switch (Commutador)
+
+- Funciona a la capa 2.
+- Reparteix ample de banda.
+- Usa MACs.
+- Transparent i escalable.
+
+### Mètodes de commutació:
+- **Store-and-forward** (actual)
+- **Cut-through** (antic)
+
+Note:
+El switch és el rei de la xarxa local. S’ha de remarcar:
+- Decideix per on enviar les trames.
+- Coneix la xarxa gràcies a la MAC table.
+- Crea un domini de col·lisió per port → fa la xarxa més eficient.
+
+Per explicar store-and-forward:
+"D’entrada, el switch espera a tenir tota la trama, la valida i després l’envia. És més segur i més fiable."
+
+---
+
+## Diferències entre Hub i Switch
+
+- Hub → envia a tots.
+- Switch → envia només al port correcte.
+- Enllaços explicatius (YouTube).
+
+Note:
+Aquí pots fer una pregunta a l’alumnat:
+"Quin creieu que és més segur i eficient?"
+
+Resposta esperada: **el switch**.
+Afegeix una miniexplicació:
+"Si un hub envia tot a tothom, qualsevol dispositiu podria escoltar tràfic que no li toca. Un switch evita això."
+
+---
+
+## Packet Tracer
+
+- Simulador de xarxes.
+- Permet veure trànsit i configuracions.
+
+Note:
+Explica que Packet Tracer és una eina pedagògica, molt útil per practicar sense necessitat de tenir hardware real.
+Pots remarcar que és una eina oficial de Cisco i molt utilitzada a FP i enginyeries.
+
+---
+
+## IOS (Cisco)
+
+- Sistema operatiu dels routers i switchs Cisco.
+- Interfície CLI.
+
+Note:
+Aclareix que no és el mateix que l’iOS d’Apple.
+És important remarcar:
+"Els dispositius professionals no tenen una interfície gràfica, es configuren escrivint comandes."
+
+---
+
+## Cables de xarxa
+
+- Autodetecció moderna.
+- Normalment cable directe.
+
+Note:
+Explica que antigament calia cable creuat per connectar dos dispositius iguals (PC-PC).
+Avui dia, gairebé tot el hardware suporta *auto-MDIX*, que detecta el tipus de connexió i s’adapta.
+
+---
+
+## Modes de treball IOS
+
+### Mode Usuari  
+`Switch>`
+
+### Mode Privilegiat  
+`Switch#`
+
+### Mode Configuració  
+`Switch(config)#`
+
+Note:
+Guió per explicar-ho:
+- El mode usuari permet mirar però no tocar.
+- El mode privilegiat dóna accés a informació més profunda.
+- El mode configuració permet fer canvis reals al dispositiu.
+Recorda que només els dos últims són sensibles.
+
+---
+
+## Comandes de sortida
+
+- `exit`
+- `Ctrl + Z`
+- `Ctrl + Shift + 6`
+
+Note:
+Explica que `Ctrl + Z` és la manera ràpida de tornar a dalt de tot.
+`Ctrl + Shift + 6` serveix per interrompre processos llargs (per exemple un ping continu).
+
+---
+
+## Comandes mode usuari i privilegiat
+
+Llistat de comandes (`enable`, `show`, `copy`, etc.)
+
+Note:
+Explica que:
+- `show` és la comanda més usada: mostra l’estat del dispositiu.
+- `enable` dona accés complet.
+- `copy` i `delete` són molt importants per gestionar configuracions.
+
+---
+
+## MAC Address Table
+
+`show mac address-table`
+
+Note:
+Explica que el switch aprèn automàticament quina MAC hi ha a cada port.
+És com un “mapa de la xarxa” que es crea sol.
+
+---
+
+## Configuració bàsica del switch
+
+- Hostname  
+- Usuari i contrasenya  
+- Veure configuració (`show version`)
+
+Note:
+Digues això literalment:
+"Primer sempre cal posar un nom al dispositiu. Després cal establir credencials perquè ningú pugui accedir-hi sense permís."
+
+---
+
+## Assignar IP al switch
+
+Comandes per configurar VLAN1.
+
+Note:
+Explica que un switch capa 2 no és un router: només té una IP per administrar-lo.
+És la manera que tenim de connectar-nos-hi per telnet/SSH.
+
+---
+
+## Activitats
+
+- Pràctica amb hub  
+- Pràctica amb switch  
+- Configuració bàsica i avançada  
+
+Note:
+Recorda a l’alumnat que Packet Tracer serà clau per entendre-ho abans de fer-ho al taller real.
+
+---
+
+## VLAN
+
+- Xarxes virtuals.
+- Organització flexible.
+- Seguretat millorada.
+
+Note:
+Exemple útil:
+"Una empresa pot separar administració, professors i alumnes en VLANs diferents per evitar que interfereixin entre ells."
+
+---
+
+## Tipus de VLAN
+
+- Per ports  
+- Per MAC  
+- Per protocol  
+
+Note:
+Aclareix que la més usada és la VLAN per ports (nivell 1).
+La VLAN per MAC és més flexible però més pesada de gestionar.
+
+---
+
+## Activitats VLAN
+
+- Creació i configuració de VLANs
+- Pràctica d’empresa
+
+Note:
+Remarca que treballar VLANs és un pas natural cap a l’assignatura de 2n: *Xarxes elèctriques i serveis*.

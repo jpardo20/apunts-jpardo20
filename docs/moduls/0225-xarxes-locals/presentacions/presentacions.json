@@ -59,11 +59,14 @@
       "description": "Activitat Protocols, IP i màscares<br><kbd>0225-xlo-ae001",
       "status": "active",
       "kind":"activity"
+    },
+    {
+      "order": 60,
+      "title": "Dispositius d’una xarxa",
+      "src": "slides/xlo-ra3-ra4-01-commutadors.reveal",
+      "description": "Dispositius d’una xarxa",
+      "status": "active",
+      "kind":"theory"
     }
-    
-    
-
-
-    
   ]
 }
