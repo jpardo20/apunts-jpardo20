@@ -40,6 +40,13 @@
     </style>
   </head>
   <body>
+  <header class="portal-header"
+          data-module="auto"
+          data-back-href="auto"
+          data-back-text="auto"
+          data-subtitle="auto">
+  </header>
+
     <div class="topbar">
         <a href="./index.html">← Tornar a Presentacions</a>
         <span id="topbar-title">Presentació</span>
@@ -69,7 +76,8 @@
       const nsep  = params.get('notes');
 
       document.title = title;
-      document.getElementById('topbar-title').textContent = title;
+      const elTitle = document.getElementById('topbar-title');
+  if (elTitle) { elTitle.textContent = title; }
       if (theme) document.getElementById('theme').href = `https://unpkg.com/reveal.js/dist/theme/${theme}.css`;
       const sec = document.getElementById('md-section');
       if (src) sec.setAttribute('data-markdown', src);
@@ -98,5 +106,6 @@
       const obs = new MutationObserver(setTopbarHeight);
       obs.observe(document.querySelector('.topbar'), { childList: true, subtree: true, characterData: true });
     </script>
-  </body>
+    <script src="../assets/js/portal-header.js"></script>
+</body>
 </html>
