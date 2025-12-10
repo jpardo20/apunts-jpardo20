@@ -5,7 +5,7 @@
   },
   "presentations": [
     {
-      "order": 1,
+      "order": 10,
       "title": "1. Introducció a les xarxes",
       "src": "slides/xlo-pre00-introduccio-a-les-xarxes.reveal",
       "description": "TEORIA: Introducció a les xarxes",
@@ -13,7 +13,7 @@
       "kind":"theory"
     },
     {
-      "order": 2,
+      "order": 20,
       "title": "2. Adreça IP i màscara de subxarxa",
       "src": "slides/presentacio-ip-mascara.reveal",
       "description": "Adreça IP i màscara de subxarxa",
@@ -21,7 +21,7 @@
       "kind":"theory"
     },
     {
-      "order": 3,
+      "order": 30,
       "title": "3. Activitat",
       "src": "slides/activitats/activitat.html",
       "description": "Adreça IP i màscara de subxarxa",
@@ -29,7 +29,7 @@
       "kind":"activity"
     },
     {
-      "order": 4,
+      "order": 40,
       "title": "4. Activitat",
       "src": "slides/activitats/0225-xlo-ae001.reveal",
       "description": "Presentacio protocols<br>(<kbd>0225-xlo-ae001</kbd>)",
@@ -37,7 +37,7 @@
       "kind":"activity"
     },
     {
-      "order": 5,
+      "order": 50,
       "title": "5. Protocols",
       "src": "slides/protocols.reveal",
       "description": "Protocols",
@@ -45,7 +45,7 @@
       "kind":"theory"
     },
     {
-      "order": 56,
+      "order": 60,
       "title": "PRL i EPI al taller de xarxes",
       "src": "slides/ra6-sessio1-questionari-pluja.reveal",
       "description": "PRL i EPI al taller de xarxes",
@@ -53,7 +53,7 @@
       "kind":"theory"
     },
     {
-      "order": 4,
+      "order": 41,
       "title": "ae001 Activitat Protocols, IP i màscares",
       "src": "slides/0225-xlo-ae003-protocols-i-mascares.reveal",
       "description": "Activitat Protocols, IP i màscares<br><kbd>0225-xlo-ae001",
@@ -67,6 +67,14 @@
       "description": "Dispositius d’una xarxa",
       "status": "active",
       "kind":"theory"
+    },
+    {
+      "order": 61,
+      "title": "Activitat: Dispositius d’una xarxa",
+      "src": "slides/xlo-ra3-ae3001-formulari.reveal",
+      "description": "Dispositius d’una xarxa",
+      "status": "active",
+      "kind":"activity"
     }
   ]
 }
