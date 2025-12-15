@@ -213,7 +213,7 @@ Feu l'esquema E/R per una base de dades en la qual es desitja emmagatzemar la in
 
 ## MER 8: Gestió de les línies de metro  (1/2)
 
-Dissenya el MER que reflecteixi tota la informació necessària per a la gestió de les línies de metro d'una determinada ciutat. Els supòsits considerats són els següents:
+<small>Dissenya el MER que reflecteixi tota la informació necessària per a la gestió de les línies de metro d'una determinada ciutat. Els supòsits considerats són els següents:</small>
 
  * Una línia està composta per una sèrie d'estacions en un ordre determinat, sent molt important recollir la informació d'aquest ordre.
 
