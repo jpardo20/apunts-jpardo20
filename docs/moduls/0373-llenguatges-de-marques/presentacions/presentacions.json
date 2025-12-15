@@ -44,6 +44,12 @@
             "src": "slides/0373-json-js.reveal",
             "description": "JSON i JS",
             "kind": "theory"
+        },
+        {
+            "order": 100,
+            "title": "Activitat JSON",
+            "src": "slides/act-json-to-html-amb-js.reveal",
+            "description": "Activitat JSON"
         }
 
         
