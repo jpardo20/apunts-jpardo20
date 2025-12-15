@@ -1,0 +1,14 @@
+{
+  "productes": [
+    {
+      "nom": "Teclat mecànic",
+      "preu": 89.99,
+      "categoria": "Perifèrics"
+    },
+    {
+      "nom": "Ratolí USB",
+      "preu": 19.99,
+      "categoria": "Perifèrics"
+    }
+  ]
+}

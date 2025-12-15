@@ -5,10 +5,11 @@
     },
     "presentations": [
         {
-            "order": 0,
+            "order": 20,
             "title": "Activitat w3css",
             "src": "slides/activitat-w3css.reveal",
-            "description": "Activitat w3css"
+            "description": "Activitat w3css",
+            "kind": "activity"
         },
         {
             "order": 1,
@@ -40,9 +41,9 @@
         },
         {
             "order": 30,
-            "title": "JSON i JS",
+            "title": "JSON i JavaScript",
             "src": "slides/0373-json-js.reveal",
-            "description": "JSON i JS",
+            "description": "JSON i JavaScript",
             "kind": "theory"
         },
         {
