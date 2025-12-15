@@ -25,8 +25,10 @@ El projecte ha de tenir, com a mínim, aquesta estructura:
  ├─ index.html
  ├─ productes.json
  ├─ script.js
- └─ style.css   (opcional)
+ └─ style.css
 ```
+
+Tens tots els fitxers a [0373-ae008-fitxers.zip](https://github.com/jpardo20/apunts-jpardo20/blob/main/docs/moduls/0373-llenguatges-de-marques/files/0373-ae008-fitxers.zip?raw=1)
 
 ---
 
@@ -58,13 +60,13 @@ Aquest fitxer ja el teniu fet (prové de l’XML de l’activitat anterior).
 
 Aquest fitxer ha de contenir:
 
-l’estructura bàsica HTML
+* l’estructura bàsica HTML
 
-una taula buida
+* una taula buida
 
-l’enllaç al fitxer script.js
+* l’enllaç al fitxer script.js
 
-Exemple mínim:
+#### Exemple mínim:
 
 ```html
 <table id="taula-productes">
@@ -83,16 +85,17 @@ Exemple mínim:
 
 No s’han d’escriure files <tr> a mà dins del <tbody>.
 
-[**`index.html`**](https://github.com/jpardo20/apunts-jpardo20/blob/main/docs/moduls/0373-llenguatges-de-marques/files/index.html?raw=1)
-
-
 ---
 
 ## Fitxers javascript
 
-1) [**`script-profe.js`**](https://github.com/jpardo20/apunts-jpardo20/blob/main/docs/moduls/0373-llenguatges-de-marques/files/script-profe.js?raw=1)
+Pots veure el contingut dels fitxers:
 
-1) [**`script-alumne.js`**](https://github.com/jpardo20/apunts-jpardo20/blob/main/docs/moduls/0373-llenguatges-de-marques/files/script-alumne.js?raw=1)
+1) [**`script-profe.js`**](https://github.com/jpardo20/apunts-jpardo20/blob/main/docs/moduls/0373-llenguatges-de-marques/files/script-profe.js?raw=1&download=1)
+
+1) [**`script-alumne.js`**](https://github.com/jpardo20/apunts-jpardo20/blob/main/docs/moduls/0373-llenguatges-de-marques/files/script-alumne.js?raw=1&download=1)
+
+* o descarregar-te [0373-ae008-fitxers.zip](https://github.com/jpardo20/apunts-jpardo20/blob/main/docs/moduls/0373-llenguatges-de-marques/files/0373-ae008-fitxers.zip?raw=1) que conté tots els fitxers.
 
 ---
 
