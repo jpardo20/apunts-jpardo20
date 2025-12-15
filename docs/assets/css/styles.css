@@ -155,7 +155,7 @@ footer.footnote {
   display: grid;                       /* sobreescriu el flex anterior */
   grid-template-columns: 1fr auto 1fr; /* enllaç | títol | logo */
   align-items: center;
-  border-bottom: 3px solid #009de0;
+  /* border-bottom: 3px solid #009de0; */
 }
 
 .topbar img{
