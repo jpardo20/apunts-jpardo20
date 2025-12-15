@@ -1,4 +1,4 @@
-# Activitat: del JSON a la taula HTML amb JavaScript
+#  Activitat: del JSON a la taula HTML amb JavaScript <kbd>0373-ae008</kbd>
 
 ## Objectiu de l’activitat
 
@@ -20,11 +20,13 @@ CSS → presentació
 
 El projecte ha de tenir, com a mínim, aquesta estructura:
 
+```text
 /projecte
  ├─ index.html
  ├─ productes.json
  ├─ script.js
  └─ style.css   (opcional)
+```
 
 ---
 
@@ -83,13 +85,11 @@ No s’han d’escriure files <tr> a mà dins del <tbody>.
 
 ---
 
-## Fitxers ajvascript
+## Fitxers javascript
 
-1) [**`script-profe.js`**](../../files/script-profe.js)
+1) [**`script-profe.js`**](https://github.com/jpardo20/apunts-jpardo20/blob/main/docs/moduls/0373-llenguatges-de-marques/files/script-profe.js?raw=1)
 
-1) [**`script-profe.js`**](../../files/script-profe.js)
-
-1) [**`script-alumne.js`**](../../files/script-alumne.js)
+1) [**`script-alumne.js`**](https://github.com/jpardo20/apunts-jpardo20/blob/main/docs/moduls/0373-llenguatges-de-marques/files/script-alumne.js?raw=1)
 
 ---
 

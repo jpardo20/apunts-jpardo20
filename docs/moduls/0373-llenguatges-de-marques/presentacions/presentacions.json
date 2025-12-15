@@ -47,9 +47,10 @@
         },
         {
             "order": 100,
-            "title": "Activitat JSON",
-            "src": "slides/act-json-to-html-amb-js.reveal",
-            "description": "Activitat JSON"
+            "title": "Activitat JSON - 0373-ae008",
+            "src": "slides/0373-ae008-json-amb-js.reveal",
+            "description": "Activitat: del JSON a la taula HTML amb JavaScript <kbd>0373-ae008</kbd>",
+            "kind": "activity"
         }
 
         
