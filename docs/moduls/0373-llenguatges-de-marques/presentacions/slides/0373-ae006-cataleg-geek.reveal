@@ -1,0 +1,346 @@
+# Mini projecte "Catàleg Geek" <kbd>0373-ae006<kbd>
+
+Dades en XML/JSON + web en HTML/CSS
+
+## 1. Què fareu en aquest projecte
+
+Treballareu per parelles per crear:
+
+1. Un **fitxer de dades** (**`dades.xml`**) amb un **catàleg**:
+   - de **videojocs**, o
+   - de **llibres**, o
+   - de **pel·lícules**, o
+   - de **manga / còmics**.
+2. Una **mini web** en **HTML + CSS** amb:
+   - una pàgina de **llistat** (`index.html`),
+   - una pàgina de **detall** (`detall.html`).
+3. Una **taula de correspondència** entre les dades (XML/JSON) i el que es veu a la web.
+
+**Important:** Llegiu els passos **en ordre** i marqueu el que aneu fent.
+
+---
+
+## 2. Objectiu mínim i opcional
+
+- **Obligatori (mínim):**
+  - `dades.xml`
+  - `index.html`
+  - `detall.html`
+  - `css/estils.css`
+  - Taula de correspondència dades ↔ HTML
+
+---
+
+## 3. Estructura de carpetes que heu de tenir al final
+
+Al final del projecte, la vostra carpeta hauria de semblar-se a això:
+
+```text
+projecte-cataleg/
+ ├─ index.html
+ ├─ detall.html
+ ├─ dades.xml
+ ├─ css/
+ │   └─ estils.css
+ └─ img/          (opcional, per a imatges)
+```
+
+---
+
+## 4. PAS A PAS
+
+### PAS 1 – Trieu la temàtica del catàleg
+
+En grup, decidiu **una** temàtica:
+
+- Videojocs  
+- Llibres  
+- Pel·lícules  
+- Manga / còmics  
+
+> Apunteu la vostra decisió en un full o en un `.txt` (ex.: “Catàleg de videojocs”).
+
+---
+
+### PAS 2 – Dissenyeu els camps de dades
+
+Heu de tenir **mínim 6–8 ítems** (videojocs, llibres, etc.).
+
+Per a **cada ítem**, decidiu quins camps tindrà. Com a mínim, aquests:
+
+- Identificador (codi intern, p.ex. `G001`)
+- Títol
+- Categoria / gènere
+- Any de llançament / publicació
+- Plataforma o format (PC, PS5, llibre físic, ebook, cinema…)
+- Preu aproximat **o** valoració (1–10)
+- Breu descripció (2–3 frases)
+
+**Feu una llista de camps** (en un paper o en un fitxer `camps.txt`).  
+Això us servirà després per a l’XML i l’HTML.
+
+---
+
+### PAS 3 – Creeu la carpeta del projecte
+
+1. Creeu una carpeta amb el nom:  
+   `projecte-cataleg-ELVOSTRENOM`  
+   (per exemple, `projecte-cataleg-anna-marc`).
+2. Entreu dins la carpeta.
+3. Creeu una subcarpeta anomenada `css`.
+4. (Opcional) Creeu una subcarpeta `img` si voleu afegir imatges.
+
+---
+
+### PAS 4 – Creeu el fitxer `dades.xml`
+
+1. Dins la carpeta del projecte, creeu un fitxer nou: `dades.xml`.
+2. Afegiu-hi **l’element arrel**. Per exemple, si feu videojocs:
+
+   ```xml
+   <cataleg>
+   </cataleg>
+   ```
+
+3. Per a cada ítem (joc, llibre, etc.), afegiu un element.  
+   Exemple per a videojocs:
+
+   ```xml
+   <cataleg>
+     <joc id="G001">
+       <titol>Hollow Knight</titol>
+       <genere>Metroidvania</genere>
+       <any>2017</any>
+       <plataforma>PC</plataforma>
+       <preu>15.99</preu>
+       <valoracio>9.5</valoracio>
+       <descripcio>
+         Joc d'acció i exploració en 2D ambientat en un món subterrani.
+       </descripcio>
+     </joc>
+
+     <joc id="G002">
+       <!-- ... dades del segon joc ... -->
+     </joc>
+
+     <!-- Afegiu fins a tenir mínim 6–8 jocs/llibres/etc. -->
+   </cataleg>
+   ```
+
+4. Comproveu que:
+   - Totes les etiquetes **tenen obertura i tancament**.
+   - Hi ha **un sol element arrel** (`<cataleg>`).
+   - Els atributs tenen **cometes** (ex.: `id="G001"`).
+
+---
+
+### PAS 5 – Valideu que el vostre XML és ben format
+
+1. Obriu `dades.xml` amb el navegador.
+2. Si hi ha errors de ben format, el navegador sovint ho indica.
+3. Si teniu internet, podeu enganxar el contingut en un **validador XML online**.
+4. No continueu fins que `dades.xml` sigui **ben format**.
+
+---
+
+### PAS 6 – (Opcional però recomanat) Creeu `dades.json`
+
+1. Creeu un fitxer nou a la mateixa carpeta: `dades.json`.
+2. Convertiu les dades de l’XML a format JSON. Exemple (adaptat al vostre catàleg):
+
+   ```json
+   {
+     "cataleg": [
+       {
+         "id": "G001",
+         "titol": "Hollow Knight",
+         "genere": "Metroidvania",
+         "any": 2017,
+         "plataforma": "PC",
+         "preu": 15.99,
+         "valoracio": 9.5,
+         "descripcio": "Joc d'acció i exploració en 2D ambientat en un món subterrani."
+       }
+       // Afegiu la resta d'ítems separats per comes
+     ]
+   }
+   ```
+
+3. Comproveu:
+   - Comes posades correctament.
+   - Cometes dobles `" "` per als textos.
+4. Si teniu internet, valideu el JSON en un **validador JSON online** (p.ex. jsonlint).
+
+> Si no teniu temps, és millor acabar bé l’XML i la web que deixar-ho tot a mitges.
+
+---
+
+### PAS 7 – Creeu `index.html` (pàgina de llistat)
+
+1. Dins la carpeta del projecte, creeu un fitxer: `index.html`.
+2. Escriure l’esquelet bàsic d’HTML5:
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="ca">
+   <head>
+     <meta charset="UTF-8">
+     <title>Catàleg Geek</title>
+     <link rel="stylesheet" href="css/estils.css">
+   </head>
+   <body>
+     <header>
+       <h1>Catàleg Geek</h1>
+       <p>Mini projecte de 1r DAM</p>
+     </header>
+
+     <main class="llistat">
+       <!-- Aquí aniran les targetes o files del catàleg -->
+     </main>
+
+     <footer>
+       <p>Autors: ...</p>
+     </footer>
+   </body>
+   </html>
+   ```
+
+3. Dins `<main class="llistat">`, creeu una **card** (targeta) per a cada ítem del vostre catàleg. Exemple:
+
+   ```html
+   <article class="card">
+     <h2>Hollow Knight</h2>
+     <p><strong>Gènere:</strong> Metroidvania</p>
+     <p><strong>Any:</strong> 2017</p>
+     <p><strong>Plataforma:</strong> PC</p>
+     <p><strong>Valoració:</strong> 9.5</p>
+     <a href="detall.html">Veure detall</a>
+   </article>
+   ```
+
+4. Copieu aquesta estructura per a tots els ítems, canviant els textos segons les dades del vostre `dades.xml`.
+
+---
+
+### PAS 8 – Creeu `detall.html` (pàgina de fitxa)
+
+1. Creeu un fitxer nou: `detall.html`.
+2. Poseu-hi l’esquelet bàsic HTML5 (similar a `index.html`).
+3. Dins `<main>`, creeu una **fitxa completa** d’un dels ítems (el que vulgueu):
+
+   ```html
+   <main class="detall">
+     <article class="fitxa">
+       <h1>Hollow Knight</h1>
+       <img src="img/hollow-knight.jpg" alt="Portada de Hollow Knight">
+       <p><strong>Gènere:</strong> Metroidvania</p>
+       <p><strong>Any:</strong> 2017</p>
+       <p><strong>Plataforma:</strong> PC</p>
+       <p><strong>Valoració:</strong> 9.5</p>
+       <p><strong>Descripció:</strong> Joc d'acció i exploració en 2D ambientat en un món subterrani.</p>
+       <a href="index.html">← Tornar al catàleg</a>
+     </article>
+   </main>
+   ```
+
+4. Si no teniu imatges, podeu:
+   - No posar `<img>` o
+   - Fer servir una imatge genèrica (`placeholder`) si el professor us n’ha donat.
+
+---
+
+### PAS 9 – Creeu `css/estils.css`
+
+1. Dins la carpeta `css`, creeu el fitxer `estils.css`.
+2. Afegiu-hi alguns estils bàsics. Per exemple:
+
+   ```css
+   body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+   }
+
+   header, footer {
+     text-align: center;
+     padding: 1rem;
+   }
+
+   .llistat {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1rem;
+     padding: 1rem;
+     justify-content: center;
+   }
+
+   .card {
+     border: 1px solid #ccc;
+     padding: 1rem;
+     max-width: 250px;
+   }
+
+   .detall {
+     padding: 1rem;
+   }
+
+   .fitxa img {
+     max-width: 100%;
+     height: auto;
+   }
+
+   @media (max-width: 768px) {
+     .llistat {
+       flex-direction: column;
+       align-items: center;
+     }
+   }
+   ```
+
+3. Proveu la web obrint `index.html` al navegador i ajusteu el CSS com vulgueu (colors, marges, etc.).
+
+---
+
+### PAS 10 – Feu la taula de correspondència dades ↔ HTML
+
+Heu d’explicar **on apareix cada dada** de l’XML (i JSON si el teniu) a la vostra web.
+
+1. Creeu un fitxer nou `README-taula.txt` **o** afegiu la taula al final de `index.html` dins un `<pre>` (com preferiu).
+2. Ompliu una taula com aquesta (pot ser en text):
+
+| Camp de dades (XML)     | Exemple valor         | On es veu a l’HTML?                         |
+|-------------------------|-----------------------|---------------------------------------------|
+| `<titol>`               | Hollow Knight         | `<h2>Hollow Knight</h2>` de la card         |
+| `<genere>`              | Metroidvania          | `<p><strong>Gènere:</strong> Metroidvania`  |
+| `<valoracio>`           | 9.5                   | `<p><strong>Valoració:</strong> 9.5</p>`    |
+| Atribut `id="G001"`     | G001                  | (opc.) Es podria usar per l’enllaç/identificar l’ítem |
+
+3. Afegiu un petit text (5–10 línies) explicant:
+   - Quina és la funció de **XML/JSON** en el projecte (dades).
+   - Quina és la funció de **HTML+CSS** (presentació).
+
+---
+
+### PAS 11 – Revisió final abans d’entregar
+
+Comproveu en grup:
+
+- [ ] Teniu **mínim 6–8 ítems** al `dades.xml`.
+- [ ] L’XML s’obre bé al navegador (sense errors).
+- [ ] `index.html` mostra tots els ítems amb títol, gènere, any, etc.
+- [ ] `detall.html` mostra una fitxa completa d’un ítem.
+- [ ] `css/estils.css` està enllaçat i la web es veu mínimament presentable.
+- [ ] Heu fet la **taula de correspondència** i el text explicatiu.
+- [ ] (Opcional) `dades.json` conté les mateixes dades i és vàlid.
+
+Quan ho tingueu tot:
+
+1. Comprimeix la carpeta `projecte-cataleg-ELVOSTRENOM` en un fitxer `.zip`.
+2. Entregueu-la pel mitjà que us hagi indicat el professor (Moodle, Drive, etc.).
+
+---
+
+Si us quedeu encallats:
+- Reviseu els apunts d’HTML, CSS, XML.
+- Compareu el vostre codi amb els exemples d’aquest README.
+- Ajudeu-vos entre companys, però sense copiar exactament el mateix codi.

@@ -10,65 +10,60 @@
             "src": "slides/0373-ae005-w3css.reveal",
             "description": "Activitat 5: Landing amb W3.CSS 0373-ae005",
             "kind": "activity"
-        },
-        {
+        },{
             "order": 1,
             "title": "1. Introducció",
             "src": "slides/introduccio.reveal",
             "description": "Introducció al mòdul 0373 - Llenguatges de marques",
             "kind": "theory"
-        },
-        {
+        },{
             "order": 2,
             "title": "2. Introducció XML",
             "src": "slides/002_Introduccio_XML.reveal",
             "description": "Introducció al concepte XML",
             "kind": "theory"
-        },
-        {
+        },{
             "order": 3,
             "title": "HTML — Introducció i elements essencials",
             "src": "slides/0373_001_HTML_Basics.reveal",
             "description": "HTML — Introducció i elements essencials",
             "kind": "theory"
-        },
-        {
+        },{
             "order": 3,
             "title": "Resultats d’Aprenentatge",
             "src": "slides/0373-ras.reveal",
             "description": "Resultats d’Aprenentatge",
             "kind": "theory"
-        },
-        {
+        },{
             "order": 30,
             "title": "JSON i JavaScript",
             "src": "slides/0373-json-js.reveal",
             "description": "JSON i JavaScript",
             "kind": "theory"
-        },
-        {
-            "order": 100,
-            "title": "Activitat JSON - 0373-ae008",
-            "src": "slides/0373-ae008-json-amb-js.reveal",
-            "description": "Activitat: del JSON a la taula HTML amb JavaScript <kbd>0373-ae008</kbd>",
+        },{
+            "order": 35,
+            "title": "Activitat 3: Crea la teva pàgina web - 0373-ae003",
+            "src": "slides/0373-ae003-la-teva-web.reveal",
+            "description": "Activitat 3: Crea la teva pàgina web - <kbd>0373-ae003</kbd>",
             "kind": "activity"
-        },
-
-        {
+        },{
             "order": 80,
             "title": "Activitat 4: Activitat amb CSS2 0373-ae004",
             "src": "slides/0373-ae004.reveal",
             "description": "Activitat 4: Activitat amb CSS2 0373-ae004",
             "kind": "activity"
-        },
-        {
-            "order": 10,
-            "title": "Activitat 3: Crea la teva pàgina web - 0373-ae003",
-            "src": "slides/0373-ae003-la-teva-web.reveal",
-            "description": "Activitat 3: Crea la teva pàgina web - <kbd>0373-ae003</kbd>",
+        },{
+            "order": 85,
+            "title": "Mini projecte 'Catàleg Geek' 0373-ae006",
+            "src": "slides/0373-ae006-cataleg-geek.reveal",
+            "description": "Mini projecte 'Catàleg Geek' 0373-ae006",
+            "kind": "activity"
+        },{
+            "order": 100,
+            "title": "Activitat JSON - 0373-ae008",
+            "src": "slides/0373-ae008-json-amb-js.reveal",
+            "description": "Activitat: del JSON a la taula HTML amb JavaScript 0373-ae008",
             "kind": "activity"
         }
-
-        
     ]
 }
