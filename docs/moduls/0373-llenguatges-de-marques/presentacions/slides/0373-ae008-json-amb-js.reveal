@@ -4,6 +4,8 @@
 
 * L’objectiu d’aquesta activitat és entendre com **`JavaScript`** pot llegir dades en format **`JSON`** i crear automàticament una taula **`HTML`**, sense haver d’escriure les dades a mà dins del document.
 
+----
+
 * Treballarem amb:
 
   * **`JSON`** → dades

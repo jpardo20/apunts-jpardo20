@@ -1,0 +1,40 @@
+#  Activitat 3: Crea la teva pàgina web <kbd>0373-ae003</kbd>
+
+Cal que creïs una pàgina web que **parli de vosaltres** amb <kbd>html</kbd> i <kbd>css</kbd> que contingui com a mínim:
+
+<ol>
+    <li>Una <kbd>taula</kbd> de quatre <kbd>columnes</kbd> i sis <kbd>files</kbd>, amb capçalera</li>
+    <li>minim de <u><kbd>7 Títols</kbd></u>, <u>2 de <kbd>h1</kbd></u> i <u>3 de <kbd>h2</kbd></u> i <u>2 de <kbd>h3</kbd></u></li>
+    <li>Que tingui els següents <u>estils</u>:<ol>
+            <li>Color de fons</li>
+            <li>Tipus de lletra (font)</li>
+            <li>Mida de la lletra</li>
+            <li>Vora de la taula que hi hagi tres mides diferents i tres colors diferents</li>
+            <li>Que les vores de la taula estiguin "juntes"</li>
+        </ol>
+    </li>
+</ol>
+
+<small> (continua ...) </small>
+
+----
+
+<small> (continuació ...) </small>
+
+<ol start="4">
+    <li>Que tingui els següents <u>Elements</u>:
+        <ol>
+            <li>tres <kbd>enllaços</kbd></li>
+            <li>dues <kbd>imatges</kbd></li>
+            <li>text amb <kbd>negreta</kbd></li>
+            <li>text amb <kbd>fons de color verd</kbd></li>
+        </ol>
+    </li>
+    <li>Que tingui els següents <u>Estils</u>:
+        <ol>
+            <li>Tots els estils cal que estiguin a un fitxer <kbd>css</kbd> separat del fitxer <kbd>html</kbd>.</li>
+            <li>Com a mínim dues classes aplicades a elements del fitxer <kbd>html</kbd></li>
+        </ol>
+    </li>
+    <li>Cal lliurar un fitxer comprimit (<kbd>.zip</kbd>) amb tots els fitxers que heu creat.</li>
+</ol>

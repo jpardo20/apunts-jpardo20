@@ -6,9 +6,9 @@
     "presentations": [
         {
             "order": 20,
-            "title": "Activitat w3css",
-            "src": "slides/activitat-w3css.reveal",
-            "description": "Activitat w3css",
+            "title": "Activitat 5: Landing amb W3.CSS 0373-ae005",
+            "src": "slides/0373-ae005-w3css.reveal",
+            "description": "Activitat 5: Landing amb W3.CSS 0373-ae005",
             "kind": "activity"
         },
         {
@@ -51,6 +51,21 @@
             "title": "Activitat JSON - 0373-ae008",
             "src": "slides/0373-ae008-json-amb-js.reveal",
             "description": "Activitat: del JSON a la taula HTML amb JavaScript <kbd>0373-ae008</kbd>",
+            "kind": "activity"
+        },
+
+        {
+            "order": 80,
+            "title": "Activitat 4: Activitat amb CSS2 0373-ae004",
+            "src": "slides/0373-ae004.reveal",
+            "description": "Activitat 4: Activitat amb CSS2 0373-ae004",
+            "kind": "activity"
+        },
+        {
+            "order": 10,
+            "title": "Activitat 3: Crea la teva pàgina web - 0373-ae003",
+            "src": "slides/0373-ae003-la-teva-web.reveal",
+            "description": "Activitat 3: Crea la teva pàgina web - <kbd>0373-ae003</kbd>",
             "kind": "activity"
         }
 

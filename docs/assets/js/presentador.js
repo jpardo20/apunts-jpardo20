@@ -15,12 +15,17 @@ if (vsep) sec.setAttribute('data-separator-vertical', vsep);
 if (nsep) sec.setAttribute('data-separator-notes', nsep);
 
 const deck = new Reveal({
+  width: 1400,
+  height: 750,
+  margin: 0.04,
+  center: false,
+
   hash: true,
   plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],  // ⭐ AFEGIT
-  slideNumber: params.get('slideNumber') === 'true',
+  slideNumber: params.get('slideNumber') !== 'true',
   controls: params.get('controls') !== 'false',
   progress: params.get('progress') !== 'true',
-  center: params.get('center') !== 'false'
+  //center: params.get('center') !== 'false'
 });
 
 deck.initialize();
