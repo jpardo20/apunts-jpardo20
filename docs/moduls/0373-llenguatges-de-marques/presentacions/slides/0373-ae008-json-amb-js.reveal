@@ -1,38 +1,38 @@
-#  Activitat: del JSON a la taula HTML amb JavaScript <kbd>0373-ae008</kbd>
+#  Activitat: del **`JSON`** a la taula **`HTML`** amb **`JavaScript`** <kbd>0373-ae008</kbd>
 
 ## Objectiu de l’activitat
 
-L’objectiu d’aquesta activitat és entendre com JavaScript pot llegir dades en format JSON i crear automàticament una taula HTML, sense haver d’escriure les dades a mà dins del document.
+* L’objectiu d’aquesta activitat és entendre com **`JavaScript`** pot llegir dades en format **`JSON`** i crear automàticament una taula **`HTML`**, sense haver d’escriure les dades a mà dins del document.
 
-Treballarem amb:
+* Treballarem amb:
 
-JSON → dades
+  * **`JSON`** → dades
 
-JavaScript → lectura i creació d’HTML
+  * **`JavaScript`** → lectura i creació d’HTML
 
-HTML → estructura final
+  * **`HTML`** → estructura final
 
-CSS → presentació
+  * **`CSS`** → presentació
 
 ---
 
 ## Estructura del projecte
 
-El projecte ha de tenir, com a mínim, aquesta estructura:
+* El projecte ha de tenir, com a mínim, aquesta estructura:
 
 ```text
 /projecte
  ├─ index.html
- ├─ productes.json
+ ├─ productes.JSON
  ├─ script.js
  └─ style.css
 ```
 
-Tens tots els fitxers a [0373-ae008-fitxers.zip](https://github.com/jpardo20/apunts-jpardo20/blob/main/docs/moduls/0373-llenguatges-de-marques/files/0373-ae008-fitxers.zip?raw=1)
+* Tens tots els fitxers a [0373-ae008-fitxers.zip](https://github.com/jpardo20/apunts-jpardo20/blob/main/docs/moduls/0373-llenguatges-de-marques/files/0373-ae008-fitxers.zip?raw=1)
 
 ---
 
-## Fitxer productes.json
+## Fitxer productes **`json`**
 
 Aquest fitxer conté les dades del vostre catàleg, per exemple:
 ```json
@@ -52,19 +52,19 @@ Aquest fitxer conté les dades del vostre catàleg, per exemple:
 }
 ```
 
-Aquest fitxer ja el teniu fet (prové de l’XML de l’activitat anterior).
+Aquest fitxer ja el teniu fet (prové de l'**`XML`** de l’activitat anterior).
 
 ---
 
-## Fitxer index.html
+## Fitxer **`index.html`**
 
 Aquest fitxer ha de contenir:
 
-* l’estructura bàsica HTML
+* l’estructura bàsica **`HTML`**
 
 * una taula buida
 
-* l’enllaç al fitxer script.js
+* l’enllaç al fitxer **`script.js`**
 
 #### Exemple mínim:
 
@@ -78,16 +78,16 @@ Aquest fitxer ha de contenir:
     </tr>
   </thead>
   <tbody>
-    <!-- El JavaScript afegirà aquí les files -->
+    <!-- El **`JavaScript`** afegirà aquí les files -->
   </tbody>
 </table>
 ```
 
-No s’han d’escriure files <tr> a mà dins del <tbody>.
+No s’han d’escriure files **`<tr>`** a mà dins del **`<tbody>`**.
 
 ---
 
-## Fitxers javascript
+## Fitxers **`JavaScript`**
 
 Pots veure el contingut dels fitxers:
 
@@ -95,7 +95,7 @@ Pots veure el contingut dels fitxers:
 
 1) [**`script-alumne.js`**](https://github.com/jpardo20/apunts-jpardo20/blob/main/docs/moduls/0373-llenguatges-de-marques/files/script-alumne.js?raw=1&download=1)
 
-* o descarregar-te [0373-ae008-fitxers.zip](https://github.com/jpardo20/apunts-jpardo20/blob/main/docs/moduls/0373-llenguatges-de-marques/files/0373-ae008-fitxers.zip?raw=1) que conté tots els fitxers.
+1) o descarregar-te [**`0373-ae008-fitxers.zip`**](https://github.com/jpardo20/apunts-jpardo20/blob/main/docs/moduls/0373-llenguatges-de-marques/files/0373-ae008-fitxers.zip?raw=1) que conté tots els fitxers.
 
 ---
 
@@ -103,80 +103,70 @@ Pots veure el contingut dels fitxers:
 
 ### Tasca 1 – Comprovar que funciona
 
-Obriu el projecte al navegador
+1. Obriu el projecte al navegador
 
-Comproveu que:
+2. Comproveu que:
 
-la taula es mostra correctament
+    * la taula es mostra correctament
 
-apareixen tots els productes del vostre JSON
+    * apareixen tots els productes del vostre **`JSON`**
 
----
+----
 
-### Tasca 2 – Relacionar dades i HTML
+### Tasca 2 – Relacionar dades i **`HTML`**
 
 Identifiqueu:
 
-quin camp del JSON es mostra a cada columna
+* quin camp del **`JSON`** es mostra a cada columna
 
-quina part del JavaScript crea:
+* quina part del **`JavaScript`** crea:
 
-la fila
+    * la fila
 
-les cel·les
+    * les cel·les
 
-el text
+    * el text
 
-No cal modificar res, només entendre-ho.
+* No cal modificar res, només entendre-ho.
 
----
+----
 
 ### Tasca 3 – Modificació guiada
 
-Feu una de les següents modificacions (a escollir pel grup):
+* Feu una de les següents modificacions:
 
-🔸 canviar l’ordre de les columnes
+  1. canviar l’ordre de les columnes
 
-🔸 afegir una nova columna si el JSON té més camps
+  1. afegir una nova columna si el **`JSON`** té més camps
 
-🔸 mostrar el preu amb el símbol €
+  1. mostrar el preu amb el símbol **`€`**
 
-🔸 mostrar només els productes d’una categoria concreta
+  1. mostrar només els productes d’una categoria concreta
 
-Aquesta modificació es fa al JavaScript, seguint les indicacions del professor.
+* Aquesta modificació es fa al **`JavaScript`**, seguint les indicacions del professor.
 
----
+----
 
 ### Tasca 4 – Presentació visual
 
-Milloreu l’aspecte de la taula amb CSS:
+* Milloreu l’aspecte de la taula amb **`CSS`**:
 
-colors
+  1. colors
 
-marges
+  1. marges
 
-alineació
+  1. alineació
 
-capçalera destacada
+  1. capçalera destacada
 
 ---
 
 
 ## Lliurament
 
-Cada grup haurà de lliurar:
+Cada alumne haurà de lliurar la carpeta del seu projecte completa amb:
 
-la carpeta del projecte completa
-
-amb:
-
-index.html
-
-productes.json
-
-script-alumnes.js
-
-style.css
-
----
-
+* **`index.html`**
+* **`productes.json`**
+* **`script-alumnes.js`**
+* **`style.css`**
