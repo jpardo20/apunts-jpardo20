@@ -1,0 +1,485 @@
+# 0373 – Llenguatges de marques  
+## JavaScript + JSON  
+### De les dades al document HTML
+
+Note:
+Avui començarem dient clarament als alumnes que aquesta sessió NO és una classe de programació.
+És molt important transmetre tranquil·litat.
+Explica que JavaScript avui serà una eina, no un objectiu.
+L’objectiu és entendre com les dades passen d’un format (JSON) a un document HTML.
+
+---
+
+## Objectiu de la sessió
+
+- Entendre què és **JSON**
+- Veure **què fa JavaScript** amb les dades
+- Entendre com el JS **crea l’HTML automàticament**
+- Relacionar-ho amb el projecte anterior
+
+Note:
+Llegeix literalment aquests punts.
+Remarca que no han de memoritzar codi.
+El que han d’entendre és el procés.
+Digues explícitament que no se’ls demanarà “programar”.
+
+---
+
+## Recordem què ja sabem
+
+- Les **dades** no són l’HTML
+- L’HTML és **estructura**
+- El CSS és **presentació**
+- Abans copiàvem dades **a mà** dins la taula
+
+Note:
+Aquí connectes amb l’activitat anterior.
+Pregunta a classe si recorden haver copiat dades a l’HTML.
+Fes-los veure que això és pesat i poc pràctic.
+
+---
+
+## El problema
+
+- Si canvien les dades → cal tocar l’HTML
+- Si hi ha molts elements → molt repetir
+- Fàcil equivocar-se
+
+**Pregunta clau:**  
+No seria millor que l’ordinador ho fes sol?
+
+Note:
+Atura’t aquí i deixa que responguin.
+Quan algú digui “sí”, introdueix JavaScript com la solució.
+No parlis encara de codi.
+
+---
+
+## Entra en joc JavaScript
+
+JavaScript és el **pont** entre:
+
+<kbd>
+DADES  →  DOCUMENT
+</kbd>
+
+Note:
+Explica-ho molt simple.
+JavaScript no és HTML.
+JavaScript no és CSS.
+JavaScript treballa amb dades i modifica el document.
+
+---
+
+## Què és JSON?
+
+JSON és una manera **d’escriure dades** perquè JavaScript les entengui fàcilment.
+
+Note:
+No parlis de llenguatges ni d’objectes.
+Parla de “forma d’escriure dades”.
+Relaciona-ho amb XML.
+
+----
+
+## Exemple de JSON
+
+```json
+{
+  "nom": "Teclat + ratolí USB Cherry DC2000",
+  "preu": 27.77 ,
+  "categoria": "Perifèrics"
+},
+{
+  "nom": "Ratolí inalàmbric USB Logitech M171 (Blau)",
+  "preu": 19.09 ,
+  "categoria": "Perifèrics"
+},
+{
+  "nom": "Auriculars amb micròfon Hiditec Vortex (Gaming, +bluetooth)",
+  "preu": 25.00 ,
+  "categoria": "Àudio"
+}
+```
+
+Note:
+Explica:
+Les claus són els noms dels camps.
+Els valors són les dades.
+Tot està molt ordenat.
+No hi ha etiquetes com a XML.
+
+----
+
+## JSON i XML serveixen pel mateix
+
+| XML | JSON |
+|-----|------|
+Més llarg | Més curt |
+Etiquetes | Claus i valors |
+Pensat per documents | Pensat per dades |
+
+Note:
+No entris en quin és millor.
+Digues que avui fem servir JSON perquè treballarem amb JavaScript.
+
+----
+
+## Què farà JavaScript avui?
+
+JavaScript farà **3 coses molt concretes**.
+
+Note:
+Digues explícitament que això és el més important de la sessió.
+
+----
+
+## 1️⃣ Llegir les dades
+
+JavaScript **llegeix** el fitxer JSON.
+
+> “Ara el programa té totes les dades.”
+
+Note:
+No expliquis com funciona per dins.
+Només el resultat.
+Insisteix que les dades ara estan “a dins” del programa.
+
+----
+
+## Exemple mínim de JavaScript
+
+```js
+fetch("productes.json")
+```
+
+Note:
+Digues que això vol dir “anar a buscar el fitxer”.
+No expliquis promeses.
+No expliquis asincronia.
+Només: “el JS va a buscar el JSON”.
+
+----
+## Veiem-ho al Console
+
+```js
+fetch("productes.json")
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  });
+```
+
+**Console (DevTools):**
+```text
+▶ Object
+  productes: Array(3)
+```
+
+Note:
+Explica què és el console del navegador.
+Digues que serveix per veure què hi ha dins una variable.
+Assenyala que `data` conté totes les dades del fitxer JSON.
+
+----
+
+## 2️⃣ Mirar les dades una per una
+
+JavaScript mira **cada producte** del catàleg.
+
+> “Ara miro el primer, després el segon…”
+
+Note:
+Explica-ho com si fos una persona.
+No parlis de bucles.
+Parla de repetir una acció.
+
+----
+## Veiem-ho al Console (productes)
+
+```js
+console.log(data.productes);
+```
+
+**Console:**
+```text
+▶ Array(3)
+  0: { nom: "Teclat + ratolí USB Cherry DC2000", preu: 27.77, categoria: "Perifèrics" }
+  1: { nom: "Ratolí inalàmbric USB Logitech M171 (Blau)", preu: 09.09, categoria: "Perifèrics" }
+  2: { nom: "Auriculars amb micròfon Hiditec Vortex (Gaming, +bluetooth)", preu: 25.00, categoria: "Àudio" }
+```
+
+Note:
+Explica que això és la llista completa.
+Cada element és un producte.
+Això és el que abans copiaven a mà a la taula HTML.
+
+----
+
+## 3️⃣ Crear HTML
+
+Per cada producte, JavaScript:
+
+- crea una fila `<tr>`
+- crea cel·les `<td>`
+- posa el text dins
+- ho afegeix a la taula
+
+Note:
+Aquí és on sol fer “clic” als alumnes.
+Relaciona-ho directament amb la taula HTML que ja coneixen.
+
+----
+
+## Exemple 1: crear la fila d'una taula
+
+```js
+const fila = document.createElement("tr");
+```
+
+## Veiem-ho mentalment al Console
+
+```text
+<tr>
+</tr>
+```
+
+----
+
+## Exemple 2: crear la primera cel·la
+
+```js
+const cella = document.createElement("td");
+```
+
+## Veiem-ho mentalment al Console
+
+```text
+<td></td>
+```
+
+
+----
+
+## Exemple 3: a la cel·la afegim amb el nom
+
+```js
+cella.textContent = producte.nom;
+```
+
+## Veiem-ho mentalment al Console
+
+```text
+<td>Teclat + ratolí USB Cherry DC2000</td>
+```
+
+----
+
+## Exemple 4: afegir la cel·la a la fila
+
+```js
+fila.appendChild(cella);
+```
+
+## Veiem-ho mentalment al Console
+
+```text
+<tr>
+  <td>Teclat + ratolí USB Cherry DC2000</td>
+</tr>
+```
+
+Note:
+Explica que ara la cel·la ja forma part de la fila.
+Abans la cel·la estava sola, ara ja està dins la fila.
+Insisteix que encara no està a la taula, només dins la fila.
+
+----
+
+## Exemple 5: crear una segona cel·la (preu)
+
+```js
+const cellaPreu = document.createElement("td");
+cellaPreu.textContent = producte.preu;
+```
+
+## Veiem-ho mentalment al Console
+
+```text
+<td>27.77</td>
+```
+
+Note:
+Explica que és exactament el mateix procés.
+Canvia només la dada que posem.
+Relaciona-ho amb la columna “Preu” de la taula HTML.
+
+----
+
+## Exemple 6: Afegim la cel·la del preu a la fila
+
+```js
+fila.appendChild(cellaPreu);
+```
+
+## Veiem-ho mentalment al Console
+
+```text
+<tr>
+  <td>Teclat + ratolí USB Cherry DC2000</td>
+  <td>27.77</td>
+</tr>
+```
+
+Note:
+Explica que la fila ja té dues columnes.
+És com construir la fila peça a peça.
+
+----
+
+## Exemple 7: crear una tercera cel·la (categoria)
+
+```js
+const cellaCategoria = document.createElement("td");
+cellaCategoria.textContent = producte.categoria;
+```
+
+## Veiem-ho mentalment al Console
+
+```text
+<td>Perifèrics</td>
+```
+
+Note:
+Explica que totes les dades surten del JSON.
+No hi ha res escrit a mà a l’HTML.
+
+----
+
+## Exemple 7: Afegim la cel·la de la categoria a la fila
+
+```js
+fila.appendChild(cellaCategoria);
+```
+
+## Veiem-ho mentalment al Console
+
+```text
+<tr>
+  <td>Teclat + ratolí USB Cherry DC2000</td>
+  <td>27.77</td>
+  <td>Perifèrics</td>
+</tr>
+```
+
+Note:
+Atura’t aquí.
+Fes-los veure que aquesta fila és EXACTAMENT la que abans escrivien a mà en HTML.
+
+----
+
+## Exemple 8: afegir la fila a la taula
+
+```js
+taula.appendChild(fila);
+```
+
+----
+## Què passa ara?
+
+La fila ja **es veu a la web**, dins la taula HTML.
+
+Note:
+Explica que aquest és el moment final.
+Tot el que s’ha construït abans “en memòria”, ara apareix al document.
+Relaciona-ho amb el resultat visual que veuen al navegador.
+
+----
+
+## I això es repeteix…
+
+Aquest procés es repeteix **per cada producte** del JSON.
+
+Note:
+Explica que JavaScript fa exactament el mateix per cada producte.
+No cal explicar bucles.
+Només la idea de repetició.
+
+----
+
+## Afegir la fila a la taula
+
+```js
+taula.appendChild(tr);
+```
+
+Note:
+Explica:
+Ara la fila ja es veu a la web.
+Tot això abans ho fèiem a mà.
+
+---
+
+## Abans vs Ara
+
+**Abans**
+- Copiar dades a mà
+- Molt repetir
+- Fàcil equivocar-se
+
+**Ara**
+- Les dades estan en JSON
+- JavaScript crea l’HTML
+- Canviar dades és fàcil
+
+Note:
+Remarca que el resultat visual és el mateix.
+El que canvia és el procés.
+
+----
+
+## Què NO cal aprendre avui
+
+- Escriure JavaScript des de zero
+- Memoritzar sintaxi
+- Fer algoritmes complicats
+
+Note:
+Això és clau per tranquil·litzar-los.
+Digues que avui només han d’entendre.
+
+----
+
+## Què sí que hem d’entendre
+
+> **JavaScript llegeix un JSON amb dades i crea l’HTML de la taula.**
+
+Note:
+Llegeix aquesta frase literalment.
+Digues que si això ho entenen, ja han fet la feina.
+
+---
+
+## Proper pas
+
+Ara que entenem això…
+
+👉 Farem una **activitat** on:
+- les dades estaran en JSON
+- el JavaScript ja estarà fet
+- ells el modificaran una mica
+
+Note:
+No expliquis encara l’activitat.
+Només crea expectativa.
+Digues que serà molt guiada.
+
+---
+
+## Fi de la presentació
+
+Gràcies 🙂
+
+Note:
+Aquí pots obrir torn de preguntes.
+Si algú pregunta per coses avançades, recorda que això vindrà més endavant.
