@@ -61,7 +61,7 @@ Des del Microsoft Evaluation Center podeu descarregar:
 
 ### Microsoft Evaluation Center (en castellà)
 
- https://www.microsoft.com/es-es/evalcenter
+<a href="https://www.microsoft.com/es-es/evalcenter" target="_blank">https://www.microsoft.com/es-es/evalcenter</a>
 
 > Aquest és **l’únic enllaç que heu de fer servir**.
 
@@ -84,10 +84,11 @@ Dins del portal trobareu una pàgina com aquesta:
 
 Opcions disponibles:
 
-- [Descarga el archivo ISO de Windows 11 Empresas](https://go.microsoft.com/fwlink/p/?linkid=2195682&clcid=0x40A&culture=es-es&country=es)
-- [Descargar el archivo ISO: Windows 11 Enterprise LTSC](https://go.microsoft.com/fwlink/p/?linkid=2195682&clcid=0x40A&culture=es-es&country=es)
+* **Descarga el archivo ISO de Windows 11 Empresas**
 
- **Escolliu sempre ISO**, tret que s’indiqui el contrari.
+* **Descargar el archivo ISO: Windows 11 Enterprise LTSC**
+
+> **Escolliu sempre ISO**, tret que s’indiqui el contrari.
 
 ----
 
@@ -95,7 +96,7 @@ Opcions disponibles:
 
 1. Obre el navegador
 2. Ves a:
-    https://www.microsoft.com/es-es/evalcenter
+    <a href="https://www.microsoft.com/es-es/evalcenter" target="_blank">https://www.microsoft.com/es-es/evalcenter</a>
 3. Cerca el producte indicat (ex: *Windows 11 Empresas*)
 
 ----
@@ -111,7 +112,6 @@ Per descarregar la ISO cal:
   - Institucional
 
 > No cal cap llicència ni clau de producte.
-
 
 ----
 
@@ -145,6 +145,13 @@ El fitxer ocuparà diversos GB.
 
 ---
 
+## Què heu de fer
+
+- Fer servir l’ISO només en **Màquines Virtuals**
+- Conservar la ISO per a pràctiques futures
+- Seguir les instruccions del professorat
+- Eliminar la MV quan caduqui
+
 ## Què NO heu de fer
 
 - No activeu Windows amb cracks
@@ -152,13 +159,6 @@ El fitxer ocuparà diversos GB.
 - No feu servir aquesta versió per producció
 
 Aquestes ISOs són **només per pràctiques i aprenentatge**.
-
-## Què SÍ heu de fer
-
-- Fer servir l’ISO només en **Màquines Virtuals**
-- Conservar la ISO per a pràctiques futures
-- Seguir les instruccions del professorat
-- Eliminar la MV quan caduqui
 
 ---
 
