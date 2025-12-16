@@ -1,8 +1,6 @@
 # Descarregar imatges ISO de Windows (oficials)
 ## Recurs educatiu de Microsoft
 
----
-
 ## Objectiu del recurs
 
 Aquest document explica **l’únic lloc oficial recomanat** des d’on heu de descarregar  
@@ -13,7 +11,7 @@ les **imatges ISO de Windows** que farem servir a classe per:
 - Treballar en **entorns controlats**
 - Sense necessitat de comprar cap llicència
 
----
+----
 
 ## Important abans de començar
 
@@ -25,15 +23,13 @@ Aquest recurs és **legal, segur i pensat per a formació**.
 
 ---
 
-## El recurs “amagat” de Microsoft
+## <a href="https://www.microsoft.com/es-es/evalcenter" target="_blank">**Microsoft Evaluation Center**</a>
 
-Microsoft ofereix versions **d’avaluació oficials** dels seus sistemes operatius a través del:
+<img src="../../../assets/img/0483-sistemes-informatics/microsoft-com-es-es-evalcenter.png" width=750 alt="imatge microsoft.com/es-es/evalcenter">
 
-##  **Microsoft Evaluation Center**
+----
 
 Aquest portal permet descarregar **ISOs originals** directament de Microsoft.
-
----
 
 ## Característiques de les versions d’avaluació
 
@@ -51,6 +47,7 @@ Aquest portal permet descarregar **ISOs originals** directament de Microsoft.
 
 Des del Microsoft Evaluation Center podeu descarregar:
 
+- **Windows 11 Empresas**
 - **Windows Server 2022**
 - **Windows Server 2019**
 - **Windows Server 2025**
@@ -70,27 +67,36 @@ Des del Microsoft Evaluation Center podeu descarregar:
 
 ---
 
-## Exemple: Windows Server 2022
+## Exemple: Windows 11 Empresas
 
 Dins del portal trobareu una pàgina com aquesta:
 
-**Windows Server 2022 – Avaluació (180 dies)**
+**Windows 11 Empresas – Avaluació (180 dies)**
+
+
+<img src="../../../assets/img/0483-sistemes-informatics/img-evalcenter-windows-11-empresas.png" width=750 alt="imatge microsoft.com/es-es/evalcenter">
+
+----
+
+<img src="../../../assets/img/0483-sistemes-informatics/img-evaluate-windows-11-enterprise.png" width=750 alt="imatge microsoft.com/es-es/evalcenter">
+
+----
 
 Opcions disponibles:
-- ISO
-- VHD
-- Azure
+
+- [Descarga el archivo ISO de Windows 11 Empresas](https://go.microsoft.com/fwlink/p/?linkid=2195682&clcid=0x40A&culture=es-es&country=es)
+- [Descargar el archivo ISO: Windows 11 Enterprise LTSC](https://go.microsoft.com/fwlink/p/?linkid=2195682&clcid=0x40A&culture=es-es&country=es)
 
  **Escolliu sempre ISO**, tret que s’indiqui el contrari.
 
----
+----
 
 ## Pas 1 — Accedir al portal
 
 1. Obre el navegador
 2. Ves a:
     https://www.microsoft.com/es-es/evalcenter
-3. Cerca el producte indicat (ex: *Windows Server 2022*)
+3. Cerca el producte indicat (ex: *Windows 11 Empresas*)
 
 ----
 
@@ -106,6 +112,7 @@ Per descarregar la ISO cal:
 
 > No cal cap llicència ni clau de producte.
 
+
 ----
 
 ## Pas 3 — Formulari breu
@@ -119,6 +126,10 @@ Microsoft pot demanar:
 
 ----
 
+<img src="../../../assets/img/0483-sistemes-informatics/dades-per-microsoft-com-es-es-evalcenter.png" width=750 alt="dades-per-microsoft-com-es-es-evalcenter.png">
+
+----
+
 ## Pas 4 — Descarregar la ISO
 
 1. Seleccioneu **ISO**
@@ -127,6 +138,10 @@ Microsoft pot demanar:
 4. Espereu que finalitzi
 
 El fitxer ocuparà diversos GB.
+
+<img src="../../../assets/img/0483-sistemes-informatics/microsoft-com-es-es-evalcenter-iso-win-11.png" width=750 alt="microsoft-com-es-es-evalcenter-iso-win-11.png">
+
+![alt text](microsoft-com-es-es-evalcenter-iso-win-11.png)
 
 ---
 
@@ -137,8 +152,6 @@ El fitxer ocuparà diversos GB.
 - No feu servir aquesta versió per producció
 
 Aquestes ISOs són **només per pràctiques i aprenentatge**.
-
----
 
 ## Què SÍ heu de fer
 
@@ -159,8 +172,6 @@ A classe farem servir aquestes ISOs per:
 - Fer proves de serveis i entorns
 
  **Tots els alumnes han de partir del mateix origen d’ISO.**
-
----
 
 ## Resum final
 
