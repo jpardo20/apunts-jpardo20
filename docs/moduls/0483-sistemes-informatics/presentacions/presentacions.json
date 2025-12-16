@@ -1,10 +1,25 @@
 {
     "presentations": [
+        
         {
             "order": 10,
-            "title": "Activitat 1 – Introducció a Docker (0483-ae001)",
+            "title": "01 Resum de Docker",
+            "src": "slides/0483-00-intro-docker.reveal",
+            "description": "RA4 - Administra sistemes operatius multiusuari",
+            "kind": "theory"
+        },
+        {
+            "order": 10,
+            "title": "01 Resum de Docker",
+            "src": "slides/0483-resum-docker.reveal",
+            "description": "RA4 - Administra sistemes operatius multiusuari",
+            "kind": "theory"
+        },
+        {
+            "order": 10,
+            "title": "Activitat 1 - Introducció a Docker (0483-ae001)",
             "src": "slides/0483-ae001-intro-docker.reveal",
-            "description": "Activitat 1 – Introducció a Docker (0483-ae001))",
+            "description": "Activitat 1 - Introducció a Docker (0483-ae001))",
             "status": "active",
             "kind": "activity"
         },
@@ -32,13 +47,7 @@
             "status": "active",
             "kind": "theory"
         },
-        {
-            "order": 50,
-            "title": "Resum Docker — 0483 Sistemes informàtics (1r DAM)",
-            "src": "slides/0483-resum-docker.reveal",
-            "description": "Resum Docker — 0483 Sistemes informàtics (1r DAM)",
-            "kind": "theory"
-        },
+
         {
             "order": 60,
             "title": "Activitat: phpMyAdmin + MySQL amb docker compose",
@@ -62,6 +71,22 @@
             "description": "Activitat: phpMyAdmin + MySQL amb docker compose",
             "status": "active",
             "kind": "activity"
+        },
+        {
+            "order": 200,
+            "title": "Docker Compose",
+            "src": "slides/docker/compose.reveal",
+            "description": "Docker Compose permet crear un conjunt de serveis de manera declarativa, dient a docker el resultat que volem i que docker s'encarregueu d'executar les ordres corresponents.",
+            "status": "active",
+            "kind": "theory"
+        },
+                {
+            "order": 300,
+            "title": "Descarregar imatges ISO de Windows (oficials)",
+            "src": "slides/descarregar-iso-microfost.reveal",
+            "description": "Aquest document explica l'únic lloc oficial recomanat des d'on heu de descarregar les imatges ISO de Windows que farem servir a classe.",
+            "status": "active",
+            "kind": "theory"
         }
     ]
 }

@@ -1,0 +1,188 @@
+# Descarregar imatges ISO de Windows (oficials)
+## Recurs educatiu de Microsoft
+
+---
+
+## Objectiu del recurs
+
+Aquest document explica **l’únic lloc oficial recomanat** des d’on heu de descarregar  
+les **imatges ISO de Windows** que farem servir a classe per:
+
+- Crear **Màquines Virtuals (MV)**
+- Fer **proves i pràctiques**
+- Treballar en **entorns controlats**
+- Sense necessitat de comprar cap llicència
+
+---
+
+## Important abans de començar
+
+- **NO** descarregueu ISOs de pàgines no oficials  
+- **NO** feu servir torrents ni webs dubtoses  
+- **SÍ** feu servir recursos oficials de Microsoft  
+
+Aquest recurs és **legal, segur i pensat per a formació**.
+
+---
+
+## El recurs “amagat” de Microsoft
+
+Microsoft ofereix versions **d’avaluació oficials** dels seus sistemes operatius a través del:
+
+##  **Microsoft Evaluation Center**
+
+Aquest portal permet descarregar **ISOs originals** directament de Microsoft.
+
+---
+
+## Característiques de les versions d’avaluació
+
+- **ISO oficial de Microsoft**
+- **Sense clau de producte**
+- **Sense llicència**
+- **Ús educatiu, proves i laboratoris**
+- **Caducitat: 180 dies**
+
+> Després de 180 dies, el sistema deixa de ser vàlid si no s’activa amb una llicència real.
+
+---
+
+## Sistemes disponibles (exemples)
+
+Des del Microsoft Evaluation Center podeu descarregar:
+
+- **Windows Server 2022**
+- **Windows Server 2019**
+- **Windows Server 2025**
+- Altres productes Microsoft (SQL Server, etc.)
+
+ Per a classe, **només descarregueu el que indiqui el professorat**.
+
+---
+
+## Enllaç principal
+
+### Microsoft Evaluation Center (en castellà)
+
+ https://www.microsoft.com/es-es/evalcenter
+
+> Aquest és **l’únic enllaç que heu de fer servir**.
+
+---
+
+## Exemple: Windows Server 2022
+
+Dins del portal trobareu una pàgina com aquesta:
+
+**Windows Server 2022 – Avaluació (180 dies)**
+
+Opcions disponibles:
+- ISO
+- VHD
+- Azure
+
+ **Escolliu sempre ISO**, tret que s’indiqui el contrari.
+
+---
+
+## Pas 1 — Accedir al portal
+
+1. Obre el navegador
+2. Ves a:
+    https://www.microsoft.com/es-es/evalcenter
+3. Cerca el producte indicat (ex: *Windows Server 2022*)
+
+----
+
+## Pas 2 — Iniciar sessió
+
+Per descarregar la ISO cal:
+
+- Iniciar sessió amb un **compte Microsoft**
+- Pot ser:
+  - Personal
+  - Educatiu
+  - Institucional
+
+> No cal cap llicència ni clau de producte.
+
+----
+
+## Pas 3 — Formulari breu
+
+Microsoft pot demanar:
+- Nom
+- País
+- Tipus d’ús (avaluació / educatiu)
+
+ Ompliu-lo amb dades reals (no afecta a la descàrrega).
+
+----
+
+## Pas 4 — Descarregar la ISO
+
+1. Seleccioneu **ISO**
+2. Trieu l’idioma (normalment *English* o *Spanish*)
+3. Inicieu la descàrrega
+4. Espereu que finalitzi
+
+El fitxer ocuparà diversos GB.
+
+---
+
+## Què NO heu de fer
+
+- No activeu Windows amb cracks
+- No instal·leu l’ISO en equips reals
+- No feu servir aquesta versió per producció
+
+Aquestes ISOs són **només per pràctiques i aprenentatge**.
+
+---
+
+## Què SÍ heu de fer
+
+- Fer servir l’ISO només en **Màquines Virtuals**
+- Conservar la ISO per a pràctiques futures
+- Seguir les instruccions del professorat
+- Eliminar la MV quan caduqui
+
+---
+
+## Relació amb les pràctiques
+
+A classe farem servir aquestes ISOs per:
+
+- Crear Màquines Virtuals
+- Instal·lar Windows pas a pas
+- Configurar sistemes
+- Fer proves de serveis i entorns
+
+ **Tots els alumnes han de partir del mateix origen d’ISO.**
+
+---
+
+## Resum final
+
+- Lloc oficial: **Microsoft Evaluation Center**
+- ISO originals i segures
+- Durada: **180 dies**
+- Ús educatiu i de pràctiques
+- Ideal per a Màquines Virtuals
+
+---
+
+## Qualsevol dubte
+
+Si tens dubtes sobre:
+- Quin Windows descarregar
+- Quin idioma escollir
+- Quin fitxer fer servir
+
+ **Pregunta abans de descarregar res.**
+
+---
+
+## Fi del document
+
+**Aquest és l’únic recurs autoritzat per descarregar les ISOs de Windows per a classe.**
