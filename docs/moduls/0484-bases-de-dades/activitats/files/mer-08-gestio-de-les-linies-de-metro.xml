@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.2.7">
   <diagram id="page-1" name="MER-8-Gestio-linies-metro">
-    <mxGraphModel dx="859" dy="599" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+    <mxGraphModel dx="1665" dy="689" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -235,6 +235,12 @@
         </mxCell>
         <mxCell id="-tbbCaW0FMPKfbx8fnNe-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;N:M&lt;/b&gt;" vertex="1">
           <mxGeometry height="30" width="60" x="440" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="wnu10sIJfEH_L_YcqXMV-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="&lt;span&gt;1:N&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="330" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="wnu10sIJfEH_L_YcqXMV-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="&lt;span&gt;N:M&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="655" y="240" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
