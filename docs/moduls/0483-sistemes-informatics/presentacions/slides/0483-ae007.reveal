@@ -1,0 +1,125 @@
+# Mòdul 0483 – Sistemes informàtics
+
+## Activitat: Anàlisi i simulació del procés d’arrencada amb Windows 11 (UEFI) 0483-ae007
+
+----
+
+### Objectius d’aprenentatge
+L’alumne serà capaç de:
+- Explicar **pas a pas** el procés d’arrencada d’un sistema Windows modern.
+- Diferenciar **BIOS/MBR** de **UEFI/GPT** amb criteri tècnic.
+- Identificar el paper del **Windows Boot Manager** i de la **BCD**.
+- Relacionar els conceptes teòrics amb una **instal·lació real**.
+- Fer modificacions **controlades** del gestor d’arrencada amb `bcdedit`.
+
+---
+
+### Enunciat
+Creareu una màquina virtual amb **Windows 11** configurada amb **UEFI i GPT**.  
+Un cop instal·lat el sistema:
+
+- Analitzareu el **procés d’arrencada real**.
+- Identificareu les **particions del disc**.
+- Explorareu el **gestor d’arrencada de Windows**.
+- Fareu petites modificacions amb `bcdedit`.
+- Relacionareu cada pas amb la teoria vista a classe.
+
+---
+
+## Desenvolupament de l’activitat
+
+---
+
+### Part A – Preparació de la màquina virtual
+
+1. Crear una nova màquina virtual a VirtualBox:
+   - Tipus: **Windows 11**
+   - Versió: Windows 11 (64-bit)
+   - Activar l’opció **EFI** (Configuració → Sistema → Placa base).
+
+2. Iniciar la instal·lació amb la ISO de Windows 11.
+
+3. Un cop instal·lat el sistema:
+   - Obrir **Administració de discos**.
+   - Identificar i anotar:
+     - Partició **EFI**
+     - Partició **MSR**
+     - Partició **Windows**
+
+ Relaciona aquesta part amb:
+- GPT
+- EFI System Partition
+- Esquemes de particions Windows
+
+----
+
+### Part B – Anàlisi del procés d’arrencada
+
+Completa el següent esquema, indicant **què passa en cada fase**:
+
+| Fase | Què passa | Component implicat |
+|----|----|----|
+| Encès | Inici del sistema | Firmware UEFI |
+| POST | Comprovació del maquinari | UEFI |
+| Firmware | Cerca SO vàlid | Partició EFI |
+| Gestor | Carrega el menú d’arrencada | Windows Boot Manager |
+| Sistema | Arrencada del SO | winload.exe / ntoskrnl.exe |
+
+ Aquesta part és clau: **no memoritzar**, sinó entendre el flux.
+
+----
+
+### Part C – Exploració del gestor d’arrencada (BCDEDIT)
+
+1. Obrir **Símbol del sistema com a administrador**.
+2. Executar:
+   ```bat
+   bcdedit
+   ```
+3. Identificar a la sortida:
+   - `{bootmgr}`
+   - `{current}`
+   - El valor de `timeout`
+
+4. Modificar el temps d’espera del menú d’arrencada:
+   ```bat
+   bcdedit /timeout 10
+   ```
+
+#### Normes:
+- No es permet esborrar entrades.
+- Només consultar i modificar el timeout.
+- L’objectiu és **entendre**, no trencar el sistema.
+
+----
+
+### Part D – Reflexió tècnica (resposta raonada)
+
+Respon de manera breu però clara:
+
+1. Per què **Windows 11 no pot funcionar en mode BIOS antic**?
+2. Quin avantatge té **UEFI + GPT** respecte a BIOS + MBR?
+3. On s’emmagatzema realment la configuració d’arrencada de Windows?
+4. Què passaria si s’esborra la **partició EFI**?
+
+---
+
+## Evidències a lliurar
+
+- Document breu (1–2 pàgines) amb:
+  - Captura de **Administració de discos**
+  - Captura de la sortida de `bcdedit`
+  - Esquema del procés d’arrencada
+  - Respostes a les preguntes de reflexió
+
+---
+
+## Criteris d’avaluació (orientatius)
+
+| Aspecte | Pes |
+|------|----|
+| Comprensió del procés d’arrencada | 40% |
+| Relació teoria – pràctica | 30% |
+| Ús correcte de `bcdedit` | 20% |
+| Claredat i rigor del document | 10% |
+

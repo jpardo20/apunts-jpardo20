@@ -87,7 +87,17 @@
             "description": "Aquest document explica l'únic lloc oficial recomanat des d'on heu de descarregar les imatges ISO de Windows que farem servir a classe.",
             "status": "active",
             "kind": "theory"
+        },
+        {
+            "order": 65,
+            "title": "Activitat: Anàlisi i simulació del procés d’arrencada amb Windows 11 (UEFI) 0483-ae007",
+            "src": "slides/0483-ae007.reveal",
+            "description": "Activitat: Anàlisi i simulació del procés d’arrencada amb Windows 11 (UEFI) 0483-ae007",
+            "status": "active",
+            "kind": "activity"
+            
         }
+        
     ]
 }
 
