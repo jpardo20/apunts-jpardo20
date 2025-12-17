@@ -1,125 +1,198 @@
-# Mòdul 0483 – Sistemes informàtics
+# Repositori base – GitHub Classroom
+## Mòdul 0483 – Sistemes informàtics  
+### Activitat: Procés d’arrencada amb Windows 11 (UEFI) - 0483-ae007
 
-## Activitat: Anàlisi i simulació del procés d’arrencada amb Windows 11 (UEFI) 0483-ae007
+---
+
+## Objectiu de l’Assignment
+
+Aquest repositori és l’**assignment oficial de GitHub Classroom** per a l’activitat sobre el **procés d’arrencada de Windows 11 amb UEFI - 0483-ae007**.
+
+ *  **Tot el que has de fer i lliurar està explicat en aquest repositori.**  
+ *  El professor **avaluarà directament el contingut que entreguis** seguint les instruccions indicades.
+
+---
+
+## Què s’avalua en aquesta activitat
+
+Amb aquesta activitat es valora que siguis capaç de:
+
+- Entendre i explicar el **procés d’arrencada d’un sistema Windows modern**.
+- Diferenciar **BIOS/MBR** de **UEFI/GPT**.
+- Identificar el funcionament del **Windows Boot Manager**.
+- Utilitzar correctament l’eina **bcdedit**.
+- Documentar correctament el teu treball amb evidències reals.
+
+---
+
+## Estructura del repositori (NO la modifiquis)
+
+```text
+0483-arrencada-windows11/
+├── README.md        ← ENUNCIAT (no s’ha de modificar)
+├── respostes.md     ← Document de respostes (obligatori)
+├── reflexio.md      ← Respostes raonades (obligatori)
+└── evidencies/      ← Captures i proves (obligatori)
+    ├── disc-particions.png
+    └── bcdedit.txt
+```
+
+**Important**
+- **NO modifiquis el fitxer `README.md`**.
+- Escriu les teves respostes **només** als fitxers indicats.
+- No canviïs els noms dels fitxers ni carpetes.
+- Repositoris que no respectin aquesta estructura poden no ser avaluats correctament.
+
+---
+
+## Abans de començar
+
+Es dona per fet que:
+- Tens descarregada la **ISO de Windows 11**.
+- Treballes amb **VirtualBox**.
+- Ja s’han explicat a classe:
+  - POST
+  - BIOS vs UEFI
+  - MBR vs GPT
+  - Procés d’arrencada de Windows
+
+**No instal·lis Linux** en aquesta activitat.
+
+---
+
+## Tasca 1 – Preparació de la màquina virtual
+
+1. Crea una màquina virtual amb:
+   - Sistema operatiu: **Windows 11**
+   - Arquitectura: **64 bits**
+   - Firmware: **UEFI (obligatori)**
+
+2. Instal·la Windows 11 utilitzant la ISO.
+
+3. Un cop instal·lat:
+   - Obre **Administració de discos**.
+   - Fes una captura on es vegin clarament les particions.
+   - Desa la captura com:
+     ```
+     evidencies/disc-particions.png
+     ```
 
 ----
 
-### Objectius d’aprenentatge
-L’alumne serà capaç de:
-- Explicar **pas a pas** el procés d’arrencada d’un sistema Windows modern.
-- Diferenciar **BIOS/MBR** de **UEFI/GPT** amb criteri tècnic.
-- Identificar el paper del **Windows Boot Manager** i de la **BCD**.
-- Relacionar els conceptes teòrics amb una **instal·lació real**.
-- Fer modificacions **controlades** del gestor d’arrencada amb `bcdedit`.
+## Tasca 2 – Documentació de les particions
+
+Edita el fitxer **respostes.md** i indica:
+
+- Quin esquema de particions utilitza el sistema (GPT o MBR).
+- Quines particions apareixen i per a què serveixen:
+  - Partició EFI
+  - Partició MSR
+  - Partició Windows
 
 ---
 
-### Enunciat
-Creareu una màquina virtual amb **Windows 11** configurada amb **UEFI i GPT**.  
-Un cop instal·lat el sistema:
+## Tasca 3 – Procés d’arrencada de Windows 11
 
-- Analitzareu el **procés d’arrencada real**.
-- Identificareu les **particions del disc**.
-- Explorareu el **gestor d’arrencada de Windows**.
-- Fareu petites modificacions amb `bcdedit`.
-- Relacionareu cada pas amb la teoria vista a classe.
-
----
-
-## Desenvolupament de l’activitat
-
----
-
-### Part A – Preparació de la màquina virtual
-
-1. Crear una nova màquina virtual a VirtualBox:
-   - Tipus: **Windows 11**
-   - Versió: Windows 11 (64-bit)
-   - Activar l’opció **EFI** (Configuració → Sistema → Placa base).
-
-2. Iniciar la instal·lació amb la ISO de Windows 11.
-
-3. Un cop instal·lat el sistema:
-   - Obrir **Administració de discos**.
-   - Identificar i anotar:
-     - Partició **EFI**
-     - Partició **MSR**
-     - Partició **Windows**
-
- Relaciona aquesta part amb:
-- GPT
-- EFI System Partition
-- Esquemes de particions Windows
-
-----
-
-### Part B – Anàlisi del procés d’arrencada
-
-Completa el següent esquema, indicant **què passa en cada fase**:
+Al fitxer **respostes.md**, completa la taula següent:
 
 | Fase | Què passa | Component implicat |
 |----|----|----|
-| Encès | Inici del sistema | Firmware UEFI |
-| POST | Comprovació del maquinari | UEFI |
-| Firmware | Cerca SO vàlid | Partició EFI |
-| Gestor | Carrega el menú d’arrencada | Windows Boot Manager |
-| Sistema | Arrencada del SO | winload.exe / ntoskrnl.exe |
+| Encès |  |  |
+| POST |  |  |
+| Firmware |  |  |
+| Gestor d’arrencada |  |  |
+| Sistema operatiu |  |  |
 
- Aquesta part és clau: **no memoritzar**, sinó entendre el flux.
+No es valora memoritzar, sinó **entendre i explicar amb paraules pròpies**.
 
 ----
 
-### Part C – Exploració del gestor d’arrencada (BCDEDIT)
+## Tasca 4 – Gestor d’arrencada (BCDEDIT)
 
-1. Obrir **Símbol del sistema com a administrador**.
-2. Executar:
+1. Obre el **Símbol del sistema com a administrador**.
+2. Executa:
    ```bat
    bcdedit
    ```
-3. Identificar a la sortida:
+3. Copia **tota la sortida** de la comanda i desa-la en el fitxer:
+   ```
+   evidencies/bcdedit.txt
+   ```
+
+4. Identifica:
    - `{bootmgr}`
    - `{current}`
    - El valor de `timeout`
 
-4. Modificar el temps d’espera del menú d’arrencada:
+5. Modifica el temps d’espera del menú d’arrencada:
    ```bat
    bcdedit /timeout 10
    ```
 
-#### Normes:
-- No es permet esborrar entrades.
-- Només consultar i modificar el timeout.
-- L’objectiu és **entendre**, no trencar el sistema.
+6. Al fitxer **respostes.md**, indica:
+   - Valor inicial del `timeout`
+   - Valor final
+   - Comanda utilitzada
 
-----
+**No es permet esborrar ni crear entrades del gestor d’arrencada.**
 
-### Part D – Reflexió tècnica (resposta raonada)
+---
 
-Respon de manera breu però clara:
+## Tasca 5 – Reflexió tècnica
+
+Edita el fitxer **reflexio.md** i respon de manera clara i raonada:
 
 1. Per què **Windows 11 no pot funcionar en mode BIOS antic**?
-2. Quin avantatge té **UEFI + GPT** respecte a BIOS + MBR?
-3. On s’emmagatzema realment la configuració d’arrencada de Windows?
+2. Quins avantatges té **UEFI + GPT** respecte BIOS + MBR?
+3. On s’emmagatzema la configuració d’arrencada de Windows?
 4. Què passaria si s’esborra la **partició EFI**?
 
----
-
-## Evidències a lliurar
-
-- Document breu (1–2 pàgines) amb:
-  - Captura de **Administració de discos**
-  - Captura de la sortida de `bcdedit`
-  - Esquema del procés d’arrencada
-  - Respostes a les preguntes de reflexió
+Respostes pròpies, amb vocabulari tècnic.
 
 ---
 
-## Criteris d’avaluació (orientatius)
+## Què s’ha de lliurar (resum)
+
+El repositori ha de contenir obligatòriament:
+
+- `respostes.md` completat
+- `reflexio.md` completat
+- `evidencies/disc-particions.png`
+- `evidencies/bcdedit.txt`
+
+Tot pujat correctament al **repositori de GitHub Classroom**.
+
+---
+
+## Criteris d’avaluació
 
 | Aspecte | Pes |
 |------|----|
-| Comprensió del procés d’arrencada | 40% |
-| Relació teoria – pràctica | 30% |
-| Ús correcte de `bcdedit` | 20% |
-| Claredat i rigor del document | 10% |
+| Procés d’arrencada ben explicat | 40% |
+| Relació teoria – evidències | 30% |
+| Ús correcte de bcdedit | 20% |
+| Claredat, ordre i format | 10% |
+
+---
+
+## Avisos importants
+
+- L’activitat és **individual**.
+- Es revisarà la coherència entre:
+  - Respostes
+  - Evidències
+  - Configuració real del sistema
+- Repositoris incomplets o amb l’enunciat modificat **no es poden avaluar correctament**.
+
+---
+
+## Quan acabes
+
+- Fes un últim **commit** amb un missatge clar (ex.: `Activitat finalitzada`).
+- Assegura’t que **tot està pujat** al repositori.
+- No cal fer cap entrega addicional: **el professor corregirà directament el repositori**.
+
+---
+
+*Aquesta activitat és clau per entendre l’arrencada, el dual boot i la recuperació de sistemes en el mòdul 0483.*
 
