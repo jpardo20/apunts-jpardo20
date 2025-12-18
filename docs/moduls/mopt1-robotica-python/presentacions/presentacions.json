@@ -56,6 +56,14 @@
       "src": "slides/007-python-apunts-funcions.reveal",
       "description": "Python Apunts Funcions",
       "status": "active"
+    },
+    {
+      "order": 80,
+      "title": "8 - Arrencada Projecte ASTI (SMX)",
+      "src": "slides/primera-sessio-asti.reveal",
+      "description": "Arrencada Projecte ASTI (SMX)",
+      "status": "active",
+        "kind": "theory"
     }
   ]
 }
