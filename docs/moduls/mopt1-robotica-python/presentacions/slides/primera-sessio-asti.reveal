@@ -1,5 +1,7 @@
 # 🧭 Arrencada Projecte ASTI (SMX)
 
+Note:
+
 Aquest guió està pensat per a la **primera presa de contacte amb l’alumnat** amb l’objectiu de:
 
 * donar sentit al projecte,
@@ -10,11 +12,11 @@ Durada orientativa: **60–90 minuts**.
 
 ---
 
-## 1️⃣ Obertura (10 min) — Situar el projecte
-
-### Missatge clau del docent
+## 1️⃣ Obertura - Situar el projecte
 
 > *Això no és una activitat curta ni una pràctica puntual. És un projecte llarg, real i cooperatiu, connectat amb una competició estatal i amb la manera com treballen les empreses tecnològiques.*
+
+Note:
 
 Punts a deixar clars verbalment:
 
@@ -27,11 +29,17 @@ Punts a deixar clars verbalment:
 
 ---
 
-## 2️⃣ Què s’avaluarà realment (10 min)
-
-Missatge molt important:
+## 2️⃣ Què s’avaluarà realment
 
 > *No s’avaluarà només si el robot funciona. S’avaluarà sobretot el procés.*
+
+
+## IMPORTANT
+
+> *Un robot que funciona però no està documentat,<br> a efectes d’avaluació, és com si no existís.*
+
+
+Note:
 
 Explicar amb exemples concrets:
 
@@ -47,25 +55,27 @@ Frase clau (literal):
 
 ---
 
-## 3️⃣ El repositori com a diari tècnic (15 min)
+## 3️⃣ El repositori com a diari tècnic
 
-Mostrar el **repo template** (pantalla compartida):
+El **repo template**:
 
 * README.md
 * Carpeta `docs/`
 * Carpeta `evidencies/`
 
-Explicar:
-
 * No és una memòria final.
 * És un **diari tècnic viu**.
 * Cada sessió ha de deixar alguna evidència.
+
+----
 
 Exemples d’evidències vàlides:
 
 * 5–10 línies explicant què s’ha fet
 * una foto del muntatge
 * una prova fallida explicada
+
+----
 
 Exemples NO vàlids:
 
@@ -75,13 +85,11 @@ Exemples NO vàlids:
 
 ---
 
-## 4️⃣ Gestió del projecte: GitHub Project (15 min)
-
-Missatge clar:
+## 4️⃣ Gestió del projecte: GitHub Project
 
 > *Aquest projecte no es pot fer sense organització. Per això farem servir un tauler de projecte.*
 
-Explicar què és un **Kanban**:
+Columnes del **Kanban**:
 
 * Backlog → què queda per fer
 * En curs → què s’està treballant
@@ -94,22 +102,16 @@ Normes bàsiques:
 * Cada issue → assignada a algú
 * Cada issue → com a mínim un commit
 
-Deixar clar:
-
 > *El tauler forma part de l’avaluació.*
 
 ---
 
-## 5️⃣ Què farem avui (sessió 0 o 1) (10–15 min)
-
-Segons el temps disponible, avui han de quedar fets:
+## 5️⃣ Què farem avui
 
 ### Obligatori
 
 * Acceptar l’**assignment de GitHub Classroom**
 * Comprovar que tots els membres tenen accés al repo
-
-### Si hi ha temps
 
 * Crear el **GitHub Project (Kanban)**
 * Afegir les primeres issues:
@@ -120,27 +122,11 @@ Segons el temps disponible, avui han de quedar fets:
 
 ---
 
-## 6️⃣ Tancament (5 min)
+## 6️⃣ Tancament
 
-Missatge final tranquil·litzador:
 
 > *No cal saber-ho tot avui. El que cal és treballar bé des del principi.*
-
-Recordatoris finals:
 
 * Preguntar dubtes és obligatori.
 * Documentar errors és positiu.
 * El projecte és exigent, però **no esteu sols**.
-
----
-
-## 🎯 Objectiu de la sessió
-
-Al final de la sessió, l’alumnat ha d’entendre:
-
-* què és el projecte,
-* com es treballarà,
-* com s’avaluarà,
-* i quin paper tenen ells com a equip.
-
-> 📌 *Si això queda clar el primer dia, el projecte flueix sol.*
