@@ -1,0 +1,280 @@
+<!--
+Guarda aquest fitxer com: sessio_bd_mer_wayground.reveal (o .md si uses reveal-md)
+Separadors (tal com m’has indicat):
+data-separator="^---$"
+data-separator-vertical="^----$"
+data-separator-notes="^Note:"
+data-charset="utf-8"
+-->
+
+# Bases de dades (1r DAM)
+## Sessió 2h: MER → Model relacional  
+### Tornada de Nadal (Mentimeter + Wayground)
+
+Note:
+Objectiu de la sessió: reactivar després de vacances i consolidar MER → relacional.
+Ritme: pensar (5-10’) + fer (45’) + fixar (10’) + consciència (5’).
+Avui NO és examen: avaluació formativa.
+
+---
+
+## Agenda (2 hores)
+1) Activació: Mentimeter (8–10’)  
+2) Activitat: MER (35–45’)  
+3) Transformació: Model relacional (20–25’)  
+4) Fixació: Wayground (8–12’)  
+5) Consciència: Mentimeter final (5–7’)
+
+Note:
+Marca el temps a la pissarra perquè no s’allargui el MER.
+Si els veus molt “peix”, retalla el model relacional (fes-lo més guiat) però mantén Wayground + Mentimeter final.
+
+---
+
+## Normes del joc (avui)
+- Pots equivocar-te: és normal i útil
+- Respostes inicials anònimes (Mentimeter)
+- Treball seriós al MER (paper o editor)
+- Wayground: ritme individual, sense “ranking”
+- L’objectiu és entendre, no memoritzar
+
+Note:
+Frase clau: “Avui construïm pensament de BD: llegir un domini i modelar-lo.”
+Evita corregir “fins al final” a Mentimeter inicial: només observa.
+
+---
+
+## Mentimeter inicial (8–10’)
+Entra a **menti.com** i posa el codi (projectat)
+
+**P1 (Word cloud):** què és una *entitat*?  
+**P2 (Test):** on va la *nota final*?  
+**P3 (Test):** cardinalitat ALUMNE–EDICIÓ?
+
+Note:
+No expliquis encara res en profunditat.
+Només comenta patrons: “Veig idees bones i algunes confusions normals.”
+Objectiu: activació i diagnòstic.
+
+---
+
+## Mentimeter P1 (Word cloud)
+**Pregunta:**  
+“Escriu una paraula o frase curta que defineixi què és una *entitat* en un model ER.”
+
+Note:
+Si apareix “taula” o “excel”, no el penalitzis.
+Diu: “Això després ho matisarem: entitat ≠ taula (encara).”
+Passa ràpid a P2.
+
+---
+
+## Mentimeter P2 (Test)
+**On s’ha de guardar la NOTA FINAL?**
+- A ALUMNE  
+- A EDICIÓ  
+- **A la relació ALUMNE–EDICIÓ** ✅  
+- No cal guardar-la
+
+Note:
+No donis la resposta de cop.
+Diu: “Guardeu aquesta pregunta al cap; quan fem el MER ho veurem clar.”
+
+---
+
+## Mentimeter P3 (Test)
+**La relació entre ALUMNE i EDICIÓ és…**
+- 1:1  
+- 1:N  
+- **N:M** ✅  
+- Depèn del curs
+
+Note:
+Si hi ha dubtes: “Perfecte, avui ho resoldrem amb el MER.”
+Transició immediata a l’enunciat.
+
+---
+
+## Activitat central: ENUNCIAT
+### Gestió d’una acadèmia de formació
+- L’acadèmia ofereix **cursos**
+- Cada curs té **edicions** (data inici/fi, aula)
+- **Alumnes** s’inscriuen a edicions
+- En la inscripció: **data_inscripció** i **nota_final**
+- (Opcional si ho vols afegir més endavant) Un professor imparteix una edició
+
+Note:
+Reparteix l’enunciat imprès o projecta’l.
+Dóna instrucció: “Abans de dibuixar, analitzem 10 minuts.”
+
+---
+
+## Fase 1 — Anàlisi guiada (10’)
+Omple (mentalment o en una taula):
+- Entitats candidates
+- Atributs per entitat
+- Relacions
+- Cardinalitats
+- Dades que depenen d’una relació (!!!)
+
+Note:
+Pregunta a l’aire: “Quines ‘coses’ existeixen al món real aquí?”
+Insisteix: “Si una dada necessita dues coses per tenir sentit, és de la relació.”
+
+---
+
+## Pista 1: diferenciar CURS i EDICIÓ
+- **CURS**: el “producte” (nom, durada, preu…)
+- **EDICIÓ**: una realització concreta (dates, aula…)
+
+Note:
+Error típic: posar data_inici a CURS.
+Diu: “Un curs pot tenir múltiples edicions, per tant les dates no són del curs.”
+
+---
+
+## Pista 2: on van data_inscripció i nota_final?
+Si la nota depèn de…
+- un **alumne**? (no, pot tenir moltes notes)
+- una **edició**? (no, molts alumnes)
+- **alumne + edició**? (sí)
+
+Note:
+Aquesta slide és el “moment aha”.
+Fes-los verbalitzar-ho: “La nota és per a un alumne en una edició concreta.”
+
+---
+
+## Fase 2 — Dibuixa el MER (20–25’)
+Requisits mínims:
+- Entitats + atributs
+- Clau primària marcada
+- Relacions amb nom
+- Cardinalitats
+- Atributs de relació (si n’hi ha)
+
+Note:
+Treball individual recomanat (diagnòstic real).
+Tu vas passant i només fas preguntes, no dones solucions:
+“Què identifica una edició?”
+“Un alumne pot estar a més d’una edició?”
+
+---
+
+## Atenció a les claus (guia ràpida)
+- ALUMNE: DNI (natural)
+- CURS: codi (natural)
+- EDICIÓ: **id_edicio** (surrogat) o (codi_curs + data_inici) si vols composta
+
+Note:
+Per 1r DAM, recomana id_edicio per simplicitat.
+Si algú proposa clau composta, valida-ho si és coherent, però guia cap a id_edicio.
+
+---
+
+## Fase 3 — Correcció guiada (10’)
+Checklist de correcció:
+- CURS 1 —— N EDICIÓ ✅
+- ALUMNE N —— M EDICIÓ ✅
+- INSCRIPCIÓ té atributs: data_inscripció, nota_final ✅
+- No confondre INSCRIPCIÓ amb “atribut” ✅
+
+Note:
+Fes correcció dialogada:
+“Qui ha posat nota_final a ALUMNE? Per què?”
+“Qui ha creat INSCRIPCIÓ com a entitat? Què la justifica?”
+Després dibuixa tu la versió de referència.
+
+---
+
+## MER de referència (resum textual)
+**Entitats**
+- ALUMNE(DNI, nom, cognoms, email, telèfon)
+- CURS(codi, nom, durada_hores, preu)
+- EDICIÓ(id_edicio, data_inici, data_fi, aula)
+
+**Relacions**
+- CURS (1) — (N) EDICIÓ
+- ALUMNE (N) — (M) EDICIÓ  → relació **INSCRIPCIÓ(data_inscripció, nota_final)**
+
+Note:
+Insisteix: “INSCRIPCIÓ és una relació amb atributs.”
+Transició: “Ara ho convertim a taules (model relacional).”
+
+---
+
+## Transformació a model relacional (20–25’)
+Regles ràpides:
+- Entitat → taula
+- 1:N → FK al costat N
+- N:M → taula intermèdia (FK+FK) + atributs de relació
+
+Note:
+No entris en normalització profunda avui.
+Objectiu: que sàpiguen “traduir” el MER a taules amb PK/FK.
+
+---
+
+## Model relacional (proposta)
+- CURS(**codi**, nom, durada_hores, preu)
+- EDICIO(**id_edicio**, data_inici, data_fi, aula, **codi_curs** FK→CURS)
+- ALUMNE(**DNI**, nom, cognoms, email, telefon)
+- INSCRIPCIO(**DNI** FK→ALUMNE, **id_edicio** FK→EDICIO, data_inscripcio, nota_final,  
+  **PK(DNI, id_edicio)**)
+
+Note:
+Explica PK composta a INSCRIPCIO: “un alumne no s’inscriu dues vegades a la mateixa edició.”
+Si algun alumne demana: “i si repetís?” → llavors afegiríem id_inscripcio, però avui no.
+
+---
+
+## Fixació: Wayground (8–12’)
+- Live → Student-paced
+- Sense leaderboard
+- Sense mostrar respostes immediates (recomanat)
+- Objectiu: confirmar conceptes del MER i del relacional
+
+Note:
+Frase d’entrada: “No és examen. És per fixar i veure si ja ho tenim clar.”
+Mentre responen: observa qui acaba molt ràpid i qui s’encalla.
+
+---
+
+## Debrief ràpid (2–3’)
+Quines preguntes han costat més?
+- Nota_final
+- N:M → taula intermèdia
+- FK a 1:N
+
+Note:
+No facis correcció llarga.
+Només 2 idees clau i endavant cap al Mentimeter final.
+
+---
+
+## Mentimeter final (abans/després) (5–7’)
+Repetim (mateixes 2–3 preguntes):
+- On va la nota_final?
+- Cardinalitat ALUMNE–EDICIÓ
+- (Opcional) N:M → taula intermèdia
+
+Note:
+Mostra percentatges i celebra millora:
+“Al principi estava dispers, ara hi ha consens.”
+Això és metacognició: veuen el progrés.
+
+---
+
+## Tancament
+Avui has après a:
+- Llegir un enunciat i identificar entitats/relacions
+- Dibuixar un MER amb cardinalitats i atributs de relació
+- Passar-lo a model relacional (PK/FK)
+- Detectar errors típics
+
+Note:
+Tanca en positiu: “No hem memoritzat: hem modelat.”
+Avanç: “La pròxima sessió, a partir d’aquest model, escriurem SQL (CREATE TABLE + SELECT).”
+Recull evidències: captura resultats Wayground i guarda presentació Mentimeter.
+
+---

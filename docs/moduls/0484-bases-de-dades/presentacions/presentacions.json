@@ -159,6 +159,20 @@
       "tags": [
         "BBDD", "activitat"
       ] 
+    },
+    {
+      "id": "0484-bds-ae07",
+      "title": "Activitat 7: Tornant de Nadal 0484-bds-ae07",
+      "description": "Activitat 7: Tornant de Nadal 0484-bds-ae07",
+      "src": "slides/0484-bds-ae07-tornant-nadal.reveal",
+      "theme": "white",
+       "kind": "activity",
+      "status": "active",
+      "tags": [
+        "BBDD", "activitat"
+      ] 
     }   
   ]
 }
+
+
