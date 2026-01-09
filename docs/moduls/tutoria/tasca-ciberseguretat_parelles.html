@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ciberseguretat bàsica - v1.3.2</title>
+<title>Ciberseguretat bàsica - v1.4 (amb Mòduls extra)</title>
 <style>
   body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 1024px; margin: 0 auto; padding: 24px; }
   h1, h2, h3 { line-height: 1.2; }
@@ -24,13 +24,16 @@
   .hidden { display:none; }
   .drop { border: 2px dashed #bbb; padding: 10px; border-radius: 10px; text-align: center; }
   .status { font-size: .9rem; }
+  details > summary { cursor: pointer; font-weight: 600; }
+  .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background:#f7f7f7; border:1px solid #ddd; padding:2px 6px; border-radius:6px; }
+  pre { background:#f9fafb; border:1px solid #eee; padding:10px; border-radius:8px; overflow:auto; }
+  .module-badge { display:inline-block; font-size:.8rem; border:1px solid #bbb; border-radius:999px; padding:0 8px; margin-left:8px; }
 </style>
 </head>
 <body>
-<h1>Ciberseguretat bàsica <span class="muted">v1.3.2</span></h1>
+<h1>Ciberseguretat bàsica <span class="muted">v1.4</span></h1>
 <p class="muted"><strong>Data</strong>: <span id="todayISO">2026-01-09</span><br>
-    Treball individual o en parella (opcional).<br>
-    Quan acabis, desa el <strong>JSON</strong> i puja’l al Campus Virtual.</p>
+    Treball individual o en parella (opcional). Quan acabis, desa el <strong>JSON</strong> i puja’l al Campus Virtual.</p>
 
 <div class="card">
   <h2>Identificació</h2>
@@ -51,21 +54,19 @@
     <div id="pairCol">
       <label><input type="checkbox" id="pairMode"> Treball en parella</label>
       <div id="pairFields">
-        <label for="alumne2">Segon alumne</label>
+        <label for="alumne2">Segon alumne (opcional)</label>
         <select id="alumne2" disabled></select>
-        <!-- <p class="small muted">Mostra tots els alumnes del cicle <em>excepte</em> el principal.</p> -->
       </div>
     </div>
   </div>
 
-  <!-- Fallback si l'auto-càrrega falla -->
   <div id="fallbackPanel" class="hidden">
     <p class="warn">
       No s’ha pogut carregar automàticament la llista d’alumnes.<br/>
       Prova una d’aquestes opcions:
       <ul>
-        <li>Obre l’HTML amb un servidor local (p.ex. <code>python -m http.server</code>).</li>
-        <li>Afegeix el paràmetre <code>?roster=</code> amb la ruta, p.ex: <code>?roster=../dades_alumnes_per_cicles.json</code></li>
+        <li>Obre l’HTML amb un servidor local (p.ex. <span class="kbd">python -m http.server</span>).</li>
+        <li>Afegeix el paràmetre <span class="kbd">?roster=</span> amb la ruta, p.ex: <span class="kbd">?roster=../dades_alumnes_per_cicles.json</span></li>
         <li>Carrega o enganxa el JSON aquí sota.</li>
       </ul>
     </p>
@@ -84,7 +85,6 @@
   </div>
 </div>
 
-<!-- A) Qüestions ràpides -->
 <div class="card">
   <h2>A) Qüestions ràpides</h2>
   <div class="section">
@@ -126,7 +126,6 @@
   </div>
 </div>
 
-<!-- B) URLs -->
 <div class="card">
   <h2>B) Classifica les URLs (Segura / Riscosa)</h2>
   <p class="muted">Marca si la URL és probablement <strong>segura</strong> o <strong>riscosa</strong>.</p>
@@ -172,20 +171,16 @@
   </div>
 </div>
 
-<!-- C) Passphrases -->
 <div class="card">
   <h2>C) Dissenya 3 frases de pas</h2>
   <p class="muted">Escriu <strong>tres</strong> frases de pas robustes. Recomanat: ≥16 caràcters, varies paraules, números i símbols, i que NO incloguin el vostre nom.</p>
   <div class="row">
     <div><label class="required" for="pass1">C1.</label><input id="pass1" type="text" name="pass1" placeholder="" /></div>
-    <br>
     <div><label class="required" for="pass2">C2.</label><input id="pass2" type="text" name="pass2" placeholder="" /></div>
-    <br>
-    <div><label class="required" for="pass3">C3.</label><input id="pass3" type="text" name="pass3" placeholder=""" /></div>
+    <div><label class="required" for="pass3">C3.</label><input id="pass3" type="text" name="pass3" placeholder="" /></div>
   </div>
 </div>
 
-<!-- D) Backup -->
 <div class="card">
   <h2>D) Còpia de seguretat en un petit negoci</h2>
   <p class="muted">Tria l’opció més adequada per a 10 PCs d’oficina amb documents crítics que canvien cada dia.</p>
@@ -195,11 +190,10 @@
   <label><input type="radio" name="backup_plan" value="c"> Cap còpia; confiem en la sort</label>
 </div>
 
-<!-- E) Phishing -->
 <div class="card">
   <h2>E) Phishing i bones pràctiques</h2>
   <div class="section">
-    <label class="required"><strong>E1.</strong> Marca els <em>indicadors</em> típics de phishing en un correu (tria tots els que corresponguin):</label>
+    <label class="required"><strong>E1.</strong> Indicadors típics de phishing (tria tots els que corresponguin):</label>
     <label><input type="checkbox" name="clues_email" value="from_mismatch"> Remitent/From no coincideix amb el domini oficial</label>
     <label><input type="checkbox" name="clues_email" value="urgent_threat"> Urgència i amenaces</label>
     <label><input type="checkbox" name="clues_email" value="odd_attachments"> Fitxers adjunts sospitosos</label>
@@ -208,11 +202,144 @@
     <label><input type="checkbox" name="clues_email" value="gift_cards"> Petició de targetes regal/cripto</label>
     <label><input type="checkbox" name="clues_email" value="it_signed"> Signatura digital vàlida d’IT</label>
     <label><input type="checkbox" name="clues_email" value="personalized"> Salutació personalitzada amb nom real</label>
-    <p class="muted">Pista: no tot el que sona bé és indicador de phishing.</p>
   </div>
   <div class="section">
     <label class="required" for="open_plan"><strong>E2.</strong> En 4–5 frases, com protegiries el teu compte (MFA, gestor, alertes…)?</label>
     <textarea id="open_plan" name="open_plan" rows="5" data-min="140" placeholder="Escriu la teva resposta (mínim 140 caràcters)"></textarea>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Mòduls extra <span class="module-badge">en tria <u>almenys 2</u></span></h2>
+  <p class="muted">Marca el(s) mòdul(s) que faràs. El botó de descarrega requereix A–E + <strong>mínim 2 mòduls extra</strong>.</p>
+
+  <div class="section">
+    <label><input type="checkbox" id="ex1_toggle"> EX1 · Reptes de phishing (codis)</label>
+    <div id="ex1" class="hidden">
+      <p class="small muted">Per a cada cas, marca l’<em>indicador principal</em> i, si el trobes, escriu el <strong>codi</strong> (3 lletres/números). Completa com a mínim <strong>3 codis</strong>.</p>
+      <ol>
+        <li>
+          <p><strong>EX1‑1.</strong> Correu del “banc” amb remitent <code>seguretat@caixabank-login.com</code> i urgència.</p>
+          <label><input type="radio" name="ex1_1_ind" value="lookalike"> Domini look‑alike</label>
+          <label><input type="radio" name="ex1_1_ind" value="urgency"> Urgència/amenaces</label>
+          <label><input type="radio" name="ex1_1_ind" value="attach"> Adjunt sospitós</label>
+          <input type="text" name="ex1_1_code" placeholder="Codi (opcional)" />
+        </li>
+        <li>
+          <p><strong>EX1‑2.</strong> SMS amb enllaç curt cap a <code>http://appleid.apple.com-resetid.com</code>.</p>
+          <label><input type="radio" name="ex1_2_ind" value="spoofed_link"> Enllaç enganyós</label>
+          <label><input type="radio" name="ex1_2_ind" value="http"> No és https</label>
+          <label><input type="radio" name="ex1_2_ind" value="typos"> Faltes/format estrany</label>
+          <input type="text" name="ex1_2_code" placeholder="Codi (opcional)" />
+        </li>
+        <li>
+          <p><strong>EX1‑3.</strong> Ofertes de feina amb arxiu <code>.zip</code> adjunt.</p>
+          <label><input type="radio" name="ex1_3_ind" value="attach"> Adjunt sospitós</label>
+          <label><input type="radio" name="ex1_3_ind" value="gift"> Petició de targetes regal</label>
+          <label><input type="radio" name="ex1_3_ind" value="from_mismatch"> From no oficial</label>
+          <input type="text" name="ex1_3_code" placeholder="Codi (opcional)" />
+        </li>
+        <li>
+          <p><strong>EX1‑4.</strong> Missatge que diu “verifica el teu compte” amb link que mostra “google.com” però apunta a <code>login.google.com.evil.ru</code>.</p>
+          <label><input type="radio" name="ex1_4_ind" value="spoofed_link"> Enllaç que diu una cosa però apunta a una altra</label>
+          <label><input type="radio" name="ex1_4_ind" value="urgency"> Urgència/amenaces</label>
+          <label><input type="radio" name="ex1_4_ind" value="from_mismatch"> From no oficial</label>
+          <input type="text" name="ex1_4_code" placeholder="Codi (opcional)" />
+        </li>
+        <li>
+          <p><strong>EX1‑5.</strong> Correu d’“IT” amb signatura dubtosa que demana targetes regal.</p>
+          <label><input type="radio" name="ex1_5_ind" value="gift"> Petició de targetes regal</label>
+          <label><input type="radio" name="ex1_5_ind" value="it_signed"> Signatura digital vàlida</label>
+          <label><input type="radio" name="ex1_5_ind" value="typos"> Faltes/format estrany</label>
+          <input type="text" name="ex1_5_code" placeholder="Codi (opcional)" />
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="section">
+    <label><input type="checkbox" id="ex2_toggle"> EX2 · Simulacre d’incident (micro-forense)</label>
+    <div id="ex2" class="hidden">
+      <p class="small muted">Llegeix el log i respon.</p>
+<pre>2025-10-02 08:41:03 auth FAIL user=laia src=10.0.0.12
+2025-10-02 08:41:18 auth FAIL user=laia src=10.0.0.12
+2025-10-02 08:41:39 auth OK   user=laia src=185.34.12.77
+2025-10-02 09:05:07 token MFA user=laia device=android OK
+2025-10-02 09:10:11 auth FAIL user=pau  src=185.34.12.77
+2025-10-02 09:10:41 auth FAIL user=pau  src=185.34.12.77
+2025-10-02 09:11:01 auth FAIL user=pau  src=185.34.12.77
+2025-10-02 09:11:19 auth LOCK user=pau  reason=too_many_fails
+</pre>
+      <div class="section">
+        <label class="required"><strong>EX2‑1.</strong> IP sospitosa principal?</label>
+        <label><input type="radio" name="ex2_q1" value="10.0.0.12"> 10.0.0.12</label>
+        <label><input type="radio" name="ex2_q1" value="185.34.12.77"> 185.34.12.77</label>
+      </div>
+      <div class="section">
+        <label class="required"><strong>EX2‑2.</strong> Usuari amb possible compromís?</label>
+        <label><input type="radio" name="ex2_q2" value="laia"> laia</label>
+        <label><input type="radio" name="ex2_q2" value="pau"> pau</label>
+      </div>
+      <div class="section">
+        <label class="required"><strong>EX2‑3.</strong> Nombre d’intents fallits de pau?</label>
+        <label><input type="radio" name="ex2_q3" value="2"> 2</label>
+        <label><input type="radio" name="ex2_q3" value="3"> 3</label>
+        <label><input type="radio" name="ex2_q3" value="4"> 4</label>
+      </div>
+      <div class="section">
+        <label class="required"><strong>EX2‑4.</strong> Acció immediata recomanada?</label>
+        <label><input type="radio" name="ex2_q4" value="force_pw_reset"> Forçar canvi de contrasenya i revisar MFA</label>
+        <label><input type="radio" name="ex2_q4" value="ignore"> Ignorar</label>
+      </div>
+      <div class="section">
+        <label class="required"><strong>EX2‑5.</strong> La connexió OK de laia sembla…</label>
+        <label><input type="radio" name="ex2_q5" value="normal"> Normal</label>
+        <label><input type="radio" name="ex2_q5" value="anomala"> Anòmala (IP diferent)</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <label><input type="checkbox" id="ex3_toggle"> EX3 · Pla exprés de seguretat del compte</label>
+    <div id="ex3" class="hidden">
+      <div class="row">
+        <div>
+          <label class="required" for="ex3_mfa">MFA triat</label>
+          <select id="ex3_mfa">
+            <option value="">— Tria —</option>
+            <option>App d’autenticació</option>
+            <option>SMS</option>
+            <option>Clau física</option>
+          </select>
+        </div>
+        <div>
+          <label class="required" for="ex3_mgr">Gestor de contrasenyes que faràs servir</label>
+          <input id="ex3_mgr" type="text" placeholder="Bitwarden, 1Password, etc." />
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label class="required" for="ex3_recovery">Mètode de recuperació definit?</label>
+          <select id="ex3_recovery">
+            <option value="">— Tria —</option>
+            <option value="yes">Sí</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div>
+          <label class="required" for="ex3_alerts">Activar alertes de seguretat al correu?</label>
+          <select id="ex3_alerts">
+            <option value="">— Tria —</option>
+            <option value="yes">Sí</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+      </div>
+      <div class="section">
+        <label class="required" for="ex3_plan">Escriu el teu pla (≥120 caràcters)</label>
+        <textarea id="ex3_plan" rows="4" placeholder="Passos concrets: activar MFA, instal·lar gestor, revisar dispositius, establir alertes…"></textarea>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -227,6 +354,7 @@ function slugify(s) { return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').
 function getTodayISO() { return new Date().toISOString().slice(0,10); }
 
 let ROSTER = { DAM: [], SMX: [] };
+const EXTRA_MIN = 2;
 
 function normalizeList(arr) {
   return (arr||[]).map(a => ({ firstname: a.firstname||'', lastname: a.lastname||'', email: a.email||'' }))
@@ -269,7 +397,7 @@ function populateAlumne2() {
   if (!cicle || !ROSTER[cicle] || !ROSTER[cicle].length) return;
   for (const s of ROSTER[cicle]) {
     const val = s.email || (s.lastname+', '+s.firstname);
-    if (val === a1) continue;
+    if (val == a1) continue;
     sel2.appendChild(optionForStudent(s));
   }
 }
@@ -291,6 +419,13 @@ function studentFromSelect(selId) {
     display:   (opt?.textContent||'').trim()
   };
 }
+function selectedExtras() {
+  const arr = [];
+  if (document.getElementById('ex1_toggle').checked) arr.push('EX1');
+  if (document.getElementById('ex2_toggle').checked) arr.push('EX2');
+  if (document.getElementById('ex3_toggle').checked) arr.push('EX3');
+  return arr;
+}
 function validateRequired() {
   const missing = [];
   if (!document.getElementById('cicle').value) missing.push('CICLE');
@@ -301,16 +436,74 @@ function validateRequired() {
   if (!document.querySelector('input[name="backup_plan"]:checked')) missing.push('BACKUP_PLAN');
   const clues = document.querySelectorAll('input[name="clues_email"]:checked'); if (clues.length < 3) missing.push('CLUES_EMAIL (mínim 3)');
   const open = (document.querySelector('textarea[name="open_plan"]').value||'').trim(); if (open.length < 140) missing.push('OPEN_PLAN (mínim 140 caràcters)');
+  const extras = selectedExtras();
+  if (extras.length < 2) missing.push('MÒDULS EXTRA (tria almenys 2)');
+  if (extras.includes('EX1')) {
+    ['ex1_1_ind','ex1_2_ind','ex1_3_ind','ex1_4_ind','ex1_5_ind'].forEach(n => {
+      if (!document.querySelector('input[name="'+n+'"]:checked')) missing.push('EX1:'+n.toUpperCase());
+    });
+    const codes = ['ex1_1_code','ex1_2_code','ex1_3_code','ex1_4_code','ex1_5_code']
+      .map(n => (document.querySelector('[name="'+n+'"]').value||'').trim()).filter(Boolean);
+    if (codes.length < 3) missing.push('EX1: CODIS (mínim 3)');
+  }
+  if (extras.includes('EX2')) {
+    ['ex2_q1','ex2_q2','ex2_q3','ex2_q4','ex2_q5'].forEach(n => {
+      if (!document.querySelector('input[name="'+n+'"]:checked')) missing.push('EX2:'+n.toUpperCase());
+    });
+  }
+  if (extras.includes('EX3')) {
+    if (!document.getElementById('ex3_mfa').value) missing.push('EX3:MFA');
+    if (!(document.getElementById('ex3_mgr').value||'').trim()) missing.push('EX3:GESTOR');
+    if (!document.getElementById('ex3_recovery').value) missing.push('EX3:RECOVERY');
+    if (!document.getElementById('ex3_alerts').value) missing.push('EX3:ALERTES');
+    if ((document.getElementById('ex3_plan').value||'').trim().length < 120) missing.push('EX3:PLA (≥120 caràcters)');
+  }
   return missing;
+}
+function captureExtras() {
+  const extras = { selected: selectedExtras() };
+  if (extras.selected.includes('EX1')) {
+    extras.EX1 = {
+      indicators: {
+        ex1_1_ind: (document.querySelector('input[name="ex1_1_ind"]:checked')||{}).value || "",
+        ex1_2_ind: (document.querySelector('input[name="ex1_2_ind"]:checked')||{}).value || "",
+        ex1_3_ind: (document.querySelector('input[name="ex1_3_ind"]:checked')||{}).value || "",
+        ex1_4_ind: (document.querySelector('input[name="ex1_4_ind"]:checked')||{}).value || "",
+        ex1_5_ind: (document.querySelector('input[name="ex1_5_ind"]:checked')||{}).value || ""
+      },
+      codes: [
+        (document.querySelector('[name="ex1_1_code"]').value||'').trim(),
+        (document.querySelector('[name="ex1_2_code"]').value||'').trim(),
+        (document.querySelector('[name="ex1_3_code"]').value||'').trim(),
+        (document.querySelector('[name="ex1_4_code"]').value||'').trim(),
+        (document.querySelector('[name="ex1_5_code"]').value||'').trim()
+      ]
+    };
+  }
+  if (extras.selected.includes('EX2')) {
+    const ans = {};
+    ['ex2_q1','ex2_q2','ex2_q3','ex2_q4','ex2_q5'].forEach(n => { ans[n] = (document.querySelector('input[name="'+n+'"]:checked')||{}).value || ""; });
+    extras.EX2 = ans;
+  }
+  if (extras.selected.includes('EX3')) {
+    extras.EX3 = {
+      mfa: document.getElementById('ex3_mfa').value,
+      manager: (document.getElementById('ex3_mgr').value||'').trim(),
+      recovery: document.getElementById('ex3_recovery').value,
+      alerts: document.getElementById('ex3_alerts').value,
+      plan: (document.getElementById('ex3_plan').value||'').trim()
+    };
+  }
+  return extras;
 }
 function downloadResults() {
   const status = document.getElementById('status'); const feedback = document.getElementById('feedback');
   status.textContent = ""; feedback.textContent = "";
   const missing = validateRequired();
-  if (missing.length) { status.textContent = "Falten camps: " + missing.join(' · '); status.className = "pill bad"; feedback.textContent = "Revisa les seccions A–E i completa el que falta."; return; }
+  if (missing.length) { status.textContent = "Falten camps: " + missing.join(' · '); status.className = "pill bad"; feedback.textContent = "Completa A–E i, com a mínim, 2 mòduls extra marcats."; return; }
   else { status.textContent = "Tot completat. Descarregant fitxer…"; status.className = "pill ok"; }
   const student1 = studentFromSelect('alumne1');
-  const student2 = studentFromSelect('alumne2');
+  const student2 = (document.getElementById('pairMode').checked ? studentFromSelect('alumne2') : null);
   const payload = {
     meta: { data: getTodayISO(), assignment: "ciberseguretat_60min_v1" },
     cicle: document.getElementById('cicle').value,
@@ -319,20 +512,19 @@ function downloadResults() {
     pair: !!student2,
     answers: {}
   };
-  ['mc_q1','mc_q2','mc_q3','mc_q4','mc_q5','mc_q6'].forEach(n => payload.answers[n] = document.querySelector('input[name="'+n+'"]:checked').value);
-  ['url_01','url_02','url_03','url_04','url_05','url_06','url_07','url_08'].forEach(n => payload.answers[n] = document.querySelector('input[name="'+n+'"]:checked').value);
+  ['mc_q1','mc_q2','mc_q3','mc_q4','mc_q5','mc_q6'].forEach(n => payload.answers[n] = (document.querySelector('input[name="'+n+'"]:checked')||{}).value || "");
+  ['url_01','url_02','url_03','url_04','url_05','url_06','url_07','url_08'].forEach(n => payload.answers[n] = (document.querySelector('input[name="'+n+'"]:checked')||{}).value || "");
   ['pass1','pass2','pass3'].forEach(n => payload.answers[n] = (document.querySelector('[name="'+n+'"]').value||'').trim());
-  payload.answers['backup_plan'] = document.querySelector('input[type="radio"][name="backup_plan"]:checked').value;
+  payload.answers['backup_plan'] = (document.querySelector('input[type="radio"][name="backup_plan"]:checked')||{}).value || "";
   payload.answers['clues_email'] = Array.from(document.querySelectorAll('input[name="clues_email"]:checked')).map(x => x.value);
   payload.answers['open_plan'] = (document.querySelector('textarea[name="open_plan"]').value||'').trim();
+  payload.extras = captureExtras();
   const jsonStr = JSON.stringify(payload, null, 2);
   const blob = new Blob([jsonStr], {type: 'application/json'});
   const who1 = student1?.display || 'alumne';
   const who2 = student2?.display ? "_i_" + slugify(student2.display) : "";
   const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "resultats_ciberseguretat_60min_" + getTodayISO() + "_" + slugify(who1) + who2 + ".json"; a.click(); URL.revokeObjectURL(a.href);
 }
-
-// Helpers: get query param and robust auto-load
 function getParam(name) {
   const url = new URL(window.location.href);
   return url.searchParams.get(name);
@@ -349,7 +541,7 @@ async function tryAutoLoadRoster() {
       if (!resp.ok) { info.textContent = 'HTTP ' + resp.status + ' per ' + p; continue; }
       const obj = await resp.json();
       loadRosterFromJSON(obj);
-      // info.textContent = 'Carregat des de: ' + p;
+      info.textContent = 'Carregat des de: ' + p;
       info.className = 'status ok';
       return;
     } catch (e) {
@@ -359,7 +551,6 @@ async function tryAutoLoadRoster() {
   document.getElementById('fallbackPanel').classList.remove('hidden');
   info.className = 'status bad';
 }
-// Fallback handlers
 function handleUploadCicles(evt) {
   const f = evt.target.files[0];
   if (!f) return;
@@ -387,15 +578,16 @@ function handleDrop(e) {
   };
   reader.readAsText(file, 'utf-8');
 }
-
 window.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('todayISO').textContent = getTodayISO();
-  // inicialment: només amaguem els camps del segon alumne, però el checkbox és visible
+  document.getElementById('todayISO').textContent = "2026-01-09";
   document.getElementById('pairFields').classList.add('hidden');
   document.getElementById('cicle').addEventListener('change', () => { populateAlumne1(); populateAlumne2(); });
   document.getElementById('alumne1').addEventListener('change', populateAlumne2);
   document.getElementById('pairMode').addEventListener('change', handlePairMode);
-  // fallback UI
+  [['ex1_toggle','ex1'],['ex2_toggle','ex2'],['ex3_toggle','ex3']].forEach(([t,sec]) => {
+    const tg = document.getElementById(t), el = document.getElementById(sec);
+    tg.addEventListener('change', ()=> el.classList.toggle('hidden', !tg.checked));
+  });
   const dz = document.getElementById('dropZone');
   if (dz) {
     ['dragenter','dragover','dragleave','drop'].forEach(ev => dz.addEventListener(ev, preventDefaults, false));
