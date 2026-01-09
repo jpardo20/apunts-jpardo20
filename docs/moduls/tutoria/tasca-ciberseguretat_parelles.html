@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ciberseguretat bàsica - v1.3.2</title>
+<style>
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 1024px; margin: 0 auto; padding: 24px; }
+  h1, h2, h3 { line-height: 1.2; }
+  .card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; margin: 16px 0; }
+  .muted { color: #666; font-size: 0.95rem; }
+  .required::after { content:" *"; color:#c00; }
+  .row { display:flex; gap: 12px; flex-wrap: wrap; }
+  .row > div { flex: 1 1 260px; min-width: 260px; }
+  input[type="text"], textarea, select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; }
+  label { display:block; margin: 6px 0; }
+  .section { margin-top: 10px; }
+  .pill { display:inline-block; padding: 3px 8px; border:1px solid #999; border-radius:999px; margin-right:8px; font-size: .85rem; }
+  .ok { color: #0a7; font-weight:600; }
+  .bad { color: #c00; font-weight:600; }
+  .warn { background: #fff7e6; border: 1px solid #f0ad4e; color: #8a6d3b; padding: 8px 12px; border-radius: 8px; }
+  button { padding: 10px 16px; border-radius: 10px; border: 1px solid #ccc; cursor: pointer; }
+  .small { font-size: .9rem; }
+  .hidden { display:none; }
+  .drop { border: 2px dashed #bbb; padding: 10px; border-radius: 10px; text-align: center; }
+  .status { font-size: .9rem; }
+</style>
+</head>
+<body>
+<h1>Ciberseguretat bàsica <span class="muted">v1.3.2</span></h1>
+<p class="muted"><strong>Data</strong>: <span id="todayISO">2026-01-09</span><br>
+    Treball individual o en parella (opcional).<br>
+    Quan acabis, desa el <strong>JSON</strong> i puja’l al Campus Virtual.</p>
+
+<div class="card">
+  <h2>Identificació</h2>
+  <div class="row" id="identRow">
+    <div>
+      <label class="required" for="cicle">Cicle</label>
+      <select id="cicle" required disabled>
+        <option value="">— Tria —</option>
+        <option value="DAM">1r DAM</option>
+        <option value="SMX">1r SMX</option>
+      </select>
+      <p id="rosterInfo" class="status muted">Carregant <code>dades_alumnes_per_cicles.json</code>…</p>
+    </div>
+    <div>
+      <label class="required" for="alumne1">Alumne</label>
+      <select id="alumne1" disabled required></select>
+    </div>
+    <div id="pairCol">
+      <label><input type="checkbox" id="pairMode"> Treball en parella</label>
+      <div id="pairFields">
+        <label for="alumne2">Segon alumne</label>
+        <select id="alumne2" disabled></select>
+        <!-- <p class="small muted">Mostra tots els alumnes del cicle <em>excepte</em> el principal.</p> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Fallback si l'auto-càrrega falla -->
+  <div id="fallbackPanel" class="hidden">
+    <p class="warn">
+      No s’ha pogut carregar automàticament la llista d’alumnes.<br/>
+      Prova una d’aquestes opcions:
+      <ul>
+        <li>Obre l’HTML amb un servidor local (p.ex. <code>python -m http.server</code>).</li>
+        <li>Afegeix el paràmetre <code>?roster=</code> amb la ruta, p.ex: <code>?roster=../dades_alumnes_per_cicles.json</code></li>
+        <li>Carrega o enganxa el JSON aquí sota.</li>
+      </ul>
+    </p>
+    <div class="row">
+      <div>
+        <label>Carrega el fitxer <code>dades_alumnes_per_cicles.json</code></label>
+        <input type="file" id="uploadCicles" accept=".json,application/json" />
+      </div>
+      <div>
+        <label>Enganxa el contingut JSON</label>
+        <textarea id="pasteCicles" rows="6" placeholder='{"alumnes-dam":[...], "alumnes-smx":[...]}'></textarea>
+        <button type="button" id="applyPasted">Aplicar</button>
+      </div>
+    </div>
+    <div class="drop" id="dropZone">Arrossega i deixa anar aquí el fitxer JSON</div>
+  </div>
+</div>
+
+<!-- A) Qüestions ràpides -->
+<div class="card">
+  <h2>A) Qüestions ràpides</h2>
+  <div class="section">
+    <label class="required"><strong>A1.</strong> Quina és la millor opció per gestionar contrasenyes?</label>
+    <label><input type="radio" name="mc_q1" value="a"> Memoritzar-les totes</label>
+    <label><input type="radio" name="mc_q1" value="b"> Apuntar-les en un post-it</label>
+    <label><input type="radio" name="mc_q1" value="c"> Fer servir un gestor de contrasenyes amb contrasenya mestra sòlida</label>
+    <label><input type="radio" name="mc_q1" value="d"> Fer-les totes iguals</label>
+  </div>
+  <div class="section">
+    <label class="required"><strong>A2.</strong> L’MFA/2FA millora la seguretat perquè…</label>
+    <label><input type="radio" name="mc_q2" value="a"> Afegeix un segon factor com SMS, app o clau física</label>
+    <label><input type="radio" name="mc_q2" value="b"> Guarda automàticament les contrasenyes</label>
+    <label><input type="radio" name="mc_q2" value="c"> Evita qualsevol tipus de phishing</label>
+  </div>
+  <div class="section">
+    <label class="required"><strong>A3.</strong> Quin és un exemple de phishing?</label>
+    <label><input type="radio" name="mc_q3" value="a"> Un correu del teu banc amb URL estranya i urgència</label>
+    <label><input type="radio" name="mc_q3" value="b"> Un missatge intern signat digitalment</label>
+    <label><input type="radio" name="mc_q3" value="c"> Una notícia de la web oficial del centre</label>
+  </div>
+  <div class="section">
+    <label class="required"><strong>A4.</strong> Actualitzar el sistema i el programari serveix per…</label>
+    <label><input type="radio" name="mc_q4" value="a"> Afegir anuncis</label>
+    <label><input type="radio" name="mc_q4" value="b"> Tancar vulnerabilitats amb pedaços de seguretat</label>
+    <label><input type="radio" name="mc_q4" value="c"> Fer l’ordinador més lent</label>
+  </div>
+  <div class="section">
+    <label class="required"><strong>A5.</strong> Una Wi‑Fi pública sense xifrat…</label>
+    <label><input type="radio" name="mc_q5" value="a"> És segura si no hi ha molta gent</label>
+    <label><input type="radio" name="mc_q5" value="b"> Pot exposar trànsit; millor VPN/MFA o esperar</label>
+    <label><input type="radio" name="mc_q5" value="c"> És obligatòria per treballar</label>
+  </div>
+  <div class="section">
+    <label class="required"><strong>A6.</strong> El principi de “mínim privilegi” vol dir…</label>
+    <label><input type="radio" name="mc_q6" value="a"> Concedir permisos només quan cal</label>
+    <label><input type="radio" name="mc_q6" value="b"> Donar permisos d’admin a tothom</label>
+    <label><input type="radio" name="mc_q6" value="c"> Treballar sempre desconnectat</label>
+  </div>
+</div>
+
+<!-- B) URLs -->
+<div class="card">
+  <h2>B) Classifica les URLs (Segura / Riscosa)</h2>
+  <p class="muted">Marca si la URL és probablement <strong>segura</strong> o <strong>riscosa</strong>.</p>
+  <div class="section">
+    <label class="required"><strong>B1.</strong> https://www.caixa-bank.com/login</label>
+    <label><input type="radio" name="url_01" value="segura"> Segura</label>
+    <label><input type="radio" name="url_01" value="riscosa"> Riscosa</label>
+  </div>
+  <div class="section">
+    <label class="required"><strong>B2.</strong> http://secure-payments.example.com.evil.ru/</label>
+    <label><input type="radio" name="url_02" value="segura"> Segura</label>
+    <label><input type="radio" name="url_02" value="riscosa"> Riscosa</label>
+  </div>
+  <div class="section">
+    <label class="required"><strong>B3.</strong> https://drive.google.com/u/0/</label>
+    <label><input type="radio" name="url_03" value="segura"> Segura</label>
+    <label><input type="radio" name="url_03" value="riscosa"> Riscosa</label>
+  </div>
+  <div class="section">
+    <label class="required"><strong>B4.</strong> https://support-apple.com-resetid.com/</label>
+    <label><input type="radio" name="url_04" value="segura"> Segura</label>
+    <label><input type="radio" name="url_04" value="riscosa"> Riscosa</label>
+  </div>
+  <div class="section">
+    <label class="required"><strong>B5.</strong> https://intranet.ginebro.cat/portal</label>
+    <label><input type="radio" name="url_05" value="segura"> Segura</label>
+    <label><input type="radio" name="url_05" value="riscosa"> Riscosa</label>
+  </div>
+  <div class="section">
+    <label class="required"><strong>B6.</strong> http://bank-login.example.net/</label>
+    <label><input type="radio" name="url_06" value="segura"> Segura</label>
+    <label><input type="radio" name="url_06" value="riscosa"> Riscosa</label>
+  </div>
+  <div class="section">
+    <label class="required"><strong>B7.</strong> https://microsoft.com-security-update.co/</label>
+    <label><input type="radio" name="url_07" value="segura"> Segura</label>
+    <label><input type="radio" name="url_07" value="riscosa"> Riscosa</label>
+  </div>
+  <div class="section">
+    <label class="required"><strong>B8.</strong> https://github.com/</label>
+    <label><input type="radio" name="url_08" value="segura"> Segura</label>
+    <label><input type="radio" name="url_08" value="riscosa"> Riscosa</label>
+  </div>
+</div>
+
+<!-- C) Passphrases -->
+<div class="card">
+  <h2>C) Dissenya 3 frases de pas</h2>
+  <p class="muted">Escriu <strong>tres</strong> frases de pas robustes. Recomanat: ≥16 caràcters, varies paraules, números i símbols, i que NO incloguin el vostre nom.</p>
+  <div class="row">
+    <div><label class="required" for="pass1">C1.</label><input id="pass1" type="text" name="pass1" placeholder="" /></div>
+    <br>
+    <div><label class="required" for="pass2">C2.</label><input id="pass2" type="text" name="pass2" placeholder="" /></div>
+    <br>
+    <div><label class="required" for="pass3">C3.</label><input id="pass3" type="text" name="pass3" placeholder=""" /></div>
+  </div>
+</div>
+
+<!-- D) Backup -->
+<div class="card">
+  <h2>D) Còpia de seguretat en un petit negoci</h2>
+  <p class="muted">Tria l’opció més adequada per a 10 PCs d’oficina amb documents crítics que canvien cada dia.</p>
+  <label class="required"><strong>D1.</strong> Quin pla esculls?</label>
+  <label><input type="radio" name="backup_plan" value="a"> Còpia manual cada divendres a un pendrive únic</label>
+  <label><input type="radio" name="backup_plan" value="b"> 3-2-1: còpia diària automàtica, 3 còpies, 2 suports diferents, 1 fora de l’oficina</label>
+  <label><input type="radio" name="backup_plan" value="c"> Cap còpia; confiem en la sort</label>
+</div>
+
+<!-- E) Phishing -->
+<div class="card">
+  <h2>E) Phishing i bones pràctiques</h2>
+  <div class="section">
+    <label class="required"><strong>E1.</strong> Marca els <em>indicadors</em> típics de phishing en un correu (tria tots els que corresponguin):</label>
+    <label><input type="checkbox" name="clues_email" value="from_mismatch"> Remitent/From no coincideix amb el domini oficial</label>
+    <label><input type="checkbox" name="clues_email" value="urgent_threat"> Urgència i amenaces</label>
+    <label><input type="checkbox" name="clues_email" value="odd_attachments"> Fitxers adjunts sospitosos</label>
+    <label><input type="checkbox" name="clues_email" value="typos"> Faltes i estil estrany</label>
+    <label><input type="checkbox" name="clues_email" value="spoofed_link"> Enllaç que diu una cosa però apunta a una altra</label>
+    <label><input type="checkbox" name="clues_email" value="gift_cards"> Petició de targetes regal/cripto</label>
+    <label><input type="checkbox" name="clues_email" value="it_signed"> Signatura digital vàlida d’IT</label>
+    <label><input type="checkbox" name="clues_email" value="personalized"> Salutació personalitzada amb nom real</label>
+    <p class="muted">Pista: no tot el que sona bé és indicador de phishing.</p>
+  </div>
+  <div class="section">
+    <label class="required" for="open_plan"><strong>E2.</strong> En 4–5 frases, com protegiries el teu compte (MFA, gestor, alertes…)?</label>
+    <textarea id="open_plan" name="open_plan" rows="5" data-min="140" placeholder="Escriu la teva resposta (mínim 140 caràcters)"></textarea>
+  </div>
+</div>
+
+<div class="card">
+  <button type="button" onclick="downloadResults()">Descarrega resultats (.json)</button>
+  <span id="status" class="pill"></span>
+  <div id="feedback" class="muted"></div>
+</div>
+
+<script>
+function slugify(s) { return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-zA-Z0-9]+/g, '_').replace(/^_+|_+$/g, '').toLowerCase(); }
+function getTodayISO() { return new Date().toISOString().slice(0,10); }
+
+let ROSTER = { DAM: [], SMX: [] };
+
+function normalizeList(arr) {
+  return (arr||[]).map(a => ({ firstname: a.firstname||'', lastname: a.lastname||'', email: a.email||'' }))
+                  .sort((a,b) => (a.lastname.localeCompare(b.lastname,'ca') || a.firstname.localeCompare(b.firstname,'ca')));
+}
+function loadRosterFromJSON(obj) {
+  const dam = Array.isArray(obj['alumnes-dam']) ? obj['alumnes-dam'] : (Array.isArray(obj['alumnes_dam'])?obj['alumnes_dam']:[]);
+  const smx = Array.isArray(obj['alumnes-smx']) ? obj['alumnes-smx'] : (Array.isArray(obj['alumnes_smx'])?obj['alumnes_smx']:[]);
+  ROSTER.DAM = normalizeList(dam);
+  ROSTER.SMX = normalizeList(smx);
+  document.getElementById('cicle').disabled = false;
+  setRosterInfo('Llista carregada correctament.', true);
+}
+function setRosterInfo(msg, ok=false) {
+  const el = document.getElementById('rosterInfo');
+  el.textContent = msg;
+  el.className = 'status ' + (ok ? 'ok' : 'bad');
+}
+function optionForStudent(s) {
+  const opt = document.createElement('option');
+  const ln = (s.lastname||''), fn = (s.firstname||'');
+  opt.value = s.email || (ln+', '+fn);
+  opt.textContent = (ln+', '+fn).trim();
+  opt.dataset.firstname = fn; opt.dataset.lastname = ln; opt.dataset.email = s.email||'';
+  return opt;
+}
+function populateAlumne1() {
+  const cicle = document.getElementById('cicle').value;
+  const sel = document.getElementById('alumne1');
+  sel.innerHTML = '<option value="">— Tria alumne —</option>';
+  if (!cicle || !ROSTER[cicle] || !ROSTER[cicle].length) return;
+  for (const s of ROSTER[cicle]) sel.appendChild(optionForStudent(s));
+  sel.disabled = false;
+}
+function populateAlumne2() {
+  const cicle = document.getElementById('cicle').value;
+  const a1 = document.getElementById('alumne1').value;
+  const sel2 = document.getElementById('alumne2');
+  sel2.innerHTML = '<option value="">— (opcional) Tria segon alumne —</option>';
+  if (!cicle || !ROSTER[cicle] || !ROSTER[cicle].length) return;
+  for (const s of ROSTER[cicle]) {
+    const val = s.email || (s.lastname+', '+s.firstname);
+    if (val === a1) continue;
+    sel2.appendChild(optionForStudent(s));
+  }
+}
+function handlePairMode() {
+  const on = document.getElementById('pairMode').checked;
+  const sel2 = document.getElementById('alumne2');
+  const pairFields = document.getElementById('pairFields');
+  sel2.disabled = !on;
+  pairFields.classList.toggle('hidden', !on);
+}
+function studentFromSelect(selId) {
+  const sel = document.getElementById(selId);
+  if (!sel || !sel.value) return null;
+  const opt = sel.selectedOptions[0];
+  return {
+    firstname: opt?.dataset?.firstname || '',
+    lastname:  opt?.dataset?.lastname || '',
+    email:     opt?.dataset?.email || sel.value,
+    display:   (opt?.textContent||'').trim()
+  };
+}
+function validateRequired() {
+  const missing = [];
+  if (!document.getElementById('cicle').value) missing.push('CICLE');
+  if (!document.getElementById('alumne1').value) missing.push('ALUMNE PRINCIPAL');
+  ['mc_q1','mc_q2','mc_q3','mc_q4','mc_q5','mc_q6'].forEach(n => { if (!document.querySelector('input[name="'+n+'"]:checked')) missing.push(n.toUpperCase()); });
+  ['url_01','url_02','url_03','url_04','url_05','url_06','url_07','url_08'].forEach(n => { if (!document.querySelector('input[name="'+n+'"]:checked')) missing.push(n.toUpperCase()); });
+  ['pass1','pass2','pass3'].forEach(n => { const v = (document.querySelector('[name="'+n+'"]').value||'').trim(); if (!v) missing.push(n.toUpperCase()); });
+  if (!document.querySelector('input[name="backup_plan"]:checked')) missing.push('BACKUP_PLAN');
+  const clues = document.querySelectorAll('input[name="clues_email"]:checked'); if (clues.length < 3) missing.push('CLUES_EMAIL (mínim 3)');
+  const open = (document.querySelector('textarea[name="open_plan"]').value||'').trim(); if (open.length < 140) missing.push('OPEN_PLAN (mínim 140 caràcters)');
+  return missing;
+}
+function downloadResults() {
+  const status = document.getElementById('status'); const feedback = document.getElementById('feedback');
+  status.textContent = ""; feedback.textContent = "";
+  const missing = validateRequired();
+  if (missing.length) { status.textContent = "Falten camps: " + missing.join(' · '); status.className = "pill bad"; feedback.textContent = "Revisa les seccions A–E i completa el que falta."; return; }
+  else { status.textContent = "Tot completat. Descarregant fitxer…"; status.className = "pill ok"; }
+  const student1 = studentFromSelect('alumne1');
+  const student2 = studentFromSelect('alumne2');
+  const payload = {
+    meta: { data: getTodayISO(), assignment: "ciberseguretat_60min_v1" },
+    cicle: document.getElementById('cicle').value,
+    student1: student1,
+    student2: student2,
+    pair: !!student2,
+    answers: {}
+  };
+  ['mc_q1','mc_q2','mc_q3','mc_q4','mc_q5','mc_q6'].forEach(n => payload.answers[n] = document.querySelector('input[name="'+n+'"]:checked').value);
+  ['url_01','url_02','url_03','url_04','url_05','url_06','url_07','url_08'].forEach(n => payload.answers[n] = document.querySelector('input[name="'+n+'"]:checked').value);
+  ['pass1','pass2','pass3'].forEach(n => payload.answers[n] = (document.querySelector('[name="'+n+'"]').value||'').trim());
+  payload.answers['backup_plan'] = document.querySelector('input[type="radio"][name="backup_plan"]:checked').value;
+  payload.answers['clues_email'] = Array.from(document.querySelectorAll('input[name="clues_email"]:checked')).map(x => x.value);
+  payload.answers['open_plan'] = (document.querySelector('textarea[name="open_plan"]').value||'').trim();
+  const jsonStr = JSON.stringify(payload, null, 2);
+  const blob = new Blob([jsonStr], {type: 'application/json'});
+  const who1 = student1?.display || 'alumne';
+  const who2 = student2?.display ? "_i_" + slugify(student2.display) : "";
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "resultats_ciberseguretat_60min_" + getTodayISO() + "_" + slugify(who1) + who2 + ".json"; a.click(); URL.revokeObjectURL(a.href);
+}
+
+// Helpers: get query param and robust auto-load
+function getParam(name) {
+  const url = new URL(window.location.href);
+  return url.searchParams.get(name);
+}
+async function tryAutoLoadRoster() {
+  const info = document.getElementById('rosterInfo');
+  const custom = getParam('roster');
+  const paths = [ custom || 'dades_alumnes_per_cicles.json' ];
+  if (!custom) { paths.push('../dades_alumnes_per_cicles.json'); }
+  for (const p of paths) {
+    try {
+      info.textContent = 'Intentant carregar: ' + p + ' …';
+      const resp = await fetch(p, {cache:'no-store'});
+      if (!resp.ok) { info.textContent = 'HTTP ' + resp.status + ' per ' + p; continue; }
+      const obj = await resp.json();
+      loadRosterFromJSON(obj);
+      // info.textContent = 'Carregat des de: ' + p;
+      info.className = 'status ok';
+      return;
+    } catch (e) {
+      info.textContent = 'Error amb ' + p + ': ' + e.message;
+    }
+  }
+  document.getElementById('fallbackPanel').classList.remove('hidden');
+  info.className = 'status bad';
+}
+// Fallback handlers
+function handleUploadCicles(evt) {
+  const f = evt.target.files[0];
+  if (!f) return;
+  const reader = new FileReader();
+  reader.onload = function() {
+    try { loadRosterFromJSON(JSON.parse(reader.result)); }
+    catch(e) { alert('No s’ha pogut llegir el JSON.'); }
+  };
+  reader.readAsText(f, 'utf-8');
+}
+function handleApplyPasted() {
+  const txt = document.getElementById('pasteCicles').value;
+  try { loadRosterFromJSON(JSON.parse(txt)); } catch(e) { alert('JSON no vàlid.'); }
+}
+function preventDefaults (e) { e.preventDefault(); e.stopPropagation(); }
+function handleDrop(e) {
+  preventDefaults(e);
+  const dt = e.dataTransfer;
+  const file = dt.files && dt.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function() {
+    try { loadRosterFromJSON(JSON.parse(reader.result)); }
+    catch(e) { alert('JSON no vàlid.'); }
+  };
+  reader.readAsText(file, 'utf-8');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('todayISO').textContent = getTodayISO();
+  // inicialment: només amaguem els camps del segon alumne, però el checkbox és visible
+  document.getElementById('pairFields').classList.add('hidden');
+  document.getElementById('cicle').addEventListener('change', () => { populateAlumne1(); populateAlumne2(); });
+  document.getElementById('alumne1').addEventListener('change', populateAlumne2);
+  document.getElementById('pairMode').addEventListener('change', handlePairMode);
+  // fallback UI
+  const dz = document.getElementById('dropZone');
+  if (dz) {
+    ['dragenter','dragover','dragleave','drop'].forEach(ev => dz.addEventListener(ev, preventDefaults, false));
+    dz.addEventListener('drop', handleDrop, false);
+  }
+  const up = document.getElementById('uploadCicles'); if (up) up.addEventListener('change', handleUploadCicles);
+  const ap = document.getElementById('applyPasted'); if (ap) ap.addEventListener('click', handleApplyPasted);
+  tryAutoLoadRoster();
+});
+</script>
+</body>
+</html>
