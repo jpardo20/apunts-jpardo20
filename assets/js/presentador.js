@@ -17,7 +17,7 @@
 
       const deck = new Reveal({
         hash: true,
-        plugins: [ RevealMarkdown, RevealHighlight ],
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes],
         slideNumber: params.get('slideNumber') === 'true',
         controls: params.get('controls') !== 'false',
         progress: params.get('progress') !== 'true',
