@@ -1,0 +1,120 @@
+###############################################################################
+# 📚 .gitignore pedagògic – Projecte apunts-jpardo20
+# Objectiu:
+#  - No versionar dades sensibles (alumnes, notes, coavaluacions)
+#  - No versionar temporals, proves, còpies ni sortides generades
+#  - Mantenir el repo net i pedagògicament coherent
+###############################################################################
+
+
+###############################################################################
+# 🔧 Scripts interns, proves i eines auxiliars
+###############################################################################
+moureFtixersNoUsats.py
+unused_files_report.csv
+noUsats/
+
+scripts/*
+scripts/*.docx
+scripts/*.md
+scripts/*.py
+scripts/*.ppt*
+scripts/media/*
+scripts/assets/*
+scripts/.venv/
+scripts/fp_smx_m01_u1_pdfindex.pdf
+
+
+###############################################################################
+# 🧪 Anàlisi, informes i sortides temporals
+###############################################################################
+analisi-apunts-20251024.md
+tree2.out
+*.out
+*.log
+**/*.bak*
+
+
+###############################################################################
+# 🧑‍🎓 DADES D’ALUMNES (NO VERSIONAR MAI)
+###############################################################################
+**/dades_alumnes*.json
+**/dades_grups*.json
+**/dades_presentacions*.json
+**/*alumnes*.json
+
+docs/moduls/0225-xarxes-locals/presentacions/slides/activitats/alumnes/**
+docs/moduls/0483-sistemes-informatics/presentacions/alumnes/**
+docs/moduls/mopt1-robotica-python/presentacions/slides/dades_alumnes.json
+docs/moduls/tutoria/dades_alumnes_per_cicles-mostra.json
+
+
+###############################################################################
+# 📝 Coavaluacions, rúbriques i documents d’avaluació
+###############################################################################
+**/*Coavaluació*.pdf
+**/coavaluacio-presentacions*.html
+docs/moduls/0221-muntatge-i-manteniment-d-equips/avaluacio_presentacions_SMR_0221.xlsx
+docs/moduls/0221-muntatge-i-manteniment-d-equips/presentacions/Plantilla_avaluacio_presentacions_OfficeForms.xlsx
+docs/moduls/0221-muntatge-i-manteniment-d-equips/presentacions/coavaluacio-presentacions-*.html
+
+
+###############################################################################
+# 📦 Contingut docent TEMPORAL o en procés
+# (proves, versions antigues, materials per revisar)
+###############################################################################
+**/* copy.*
+**/*-old.*
+**/*-tmp.*
+**/*-v*.html
+
+docs/moduls/0221-muntatge-i-manteniment-d-equips/presentacions/slides/00-mim-pres-basica copy.reveal
+docs/moduls/0221-muntatge-i-manteniment-d-equips/presentacions/electricitat-intro-quiz-v*.html
+docs/moduls/0223-aplicacions-ofimatiques/presentacions/slides/ListadoTrucosTikTok.txt
+docs/moduls/0223-aplicacions-ofimatiques/presentacions/slides/recursos.md
+docs/moduls/0483-sistemes-informatics/presentacions/slides/1a-sessio-linux.txt
+docs/moduls/0483-sistemes-informatics/presentacions/slides/*.md
+docs/moduls/0483-sistemes-informatics/presentacions/slides/intro-linux-acti-aval-003*.html
+docs/moduls/0483-sistemes-informatics/presentacions/intro-linux-acti-aval-004.json
+docs/moduls/0484-bases-de-dades/presentacions/slides/peticions-mer-chatgpt.txt
+
+
+###############################################################################
+# 📁 Formats grans o no versionables per defecte
+###############################################################################
+*.pkt
+*.zip
+docs/moduls/opt-python/python-consolidacio-01-reveal.zip
+docs/moduls/opt-python/002-python-f-strings.reveal
+
+
+###############################################################################
+# 🖼️ Diagrames, Draw.io, XML i fitxers d’exportació massiva
+###############################################################################
+# docs/moduls/0484-bases-de-dades/**/*.xml
+# docs/moduls/0484-bases-de-dades/activitats/files/**/*.drawio
+# docs/moduls/0484-bases-de-dades/activitats/files/**/*.png
+# docs/moduls/0484-bases-de-dades/teoria*.drawio
+
+
+###############################################################################
+# 🌐 Formularis HTML generats
+###############################################################################
+docs/assets/forms/0484-bds-activitat-validacio-mer-formulari*.html
+docs/moduls/tutoria/lectura_quatre_noticies_tecnologia-*.html
+docs/moduls/tutoria/tasca-ciberseguretat_*.html
+
+
+###############################################################################
+# ⚙️ Entorns locals i configuració
+###############################################################################
+.vscode/
+site
+public/*
+
+
+###############################################################################
+# 🧹 Altres carpetes genèriques
+###############################################################################
+altres/*.json
+altres/**
