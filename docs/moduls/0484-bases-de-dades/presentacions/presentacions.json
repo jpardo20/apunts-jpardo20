@@ -171,8 +171,18 @@
       "tags": [
         "BBDD", "activitat"
       ] 
+    },
+    {
+      "id": "dedel-model-relacional-asql-ddl.",
+      "title": "TEORIA: Del model relacional a SQL (DDL)",
+      "description": "TEORIA: Del model relacional a SQL (DDL)",
+      "src": "slides/del-model-relacional-asql-ddl.reveal",
+      "theme": "white",
+      "status": "active",
+       "kind": "theory",
+      "tags": [
+        "BBDD"
+      ]
     }   
   ]
 }
-
-
