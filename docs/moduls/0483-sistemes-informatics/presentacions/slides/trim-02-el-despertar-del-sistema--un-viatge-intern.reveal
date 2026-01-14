@@ -1,0 +1,416 @@
+# El Despertar del Sistema
+## El viatge des del *clic* fins a la línia d’ordres
+<!-- .slide: class="portada" data-background-image="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--el-despertar-del-sistema.png" data-background-size="cover" data-background-position="center" data-background-opacity="0.5" -->
+
+Note:
+Temps: 2–3 minuts  
+Temps acumulat: 2–3 minuts
+
+Guió docent:
+“Avui no parlarem encara de Windows ni de Linux.  
+Avui parlarem del **viatge que fa un ordinador des que premem el botó d’encesa fins que apareix el sistema operatiu**.
+
+No és una classe per memoritzar sigles.  
+És una classe per **entendre el flux**, qui passa el control a qui.
+
+Si enteneu aquest viatge:
+- entendreu millor errors d’arrencada
+- entendreu millor màquines virtuals
+- i entendreu per què a vegades *no és culpa del Windows*.”
+
+Missatge clau:
+Penseu-ho com una **cadena**, no com peces soltes.
+
+---
+
+## 1. La Primera Espurna
+### El senyal **Power Good**
+<!-- .slide: class="cols-text-img" -->
+
+<div class="cols">
+<div class="col-left">
+
+- La FA s’estabilitza abans de començar
+- Envia el senyal **Power Good** a la PB
+- Aquest senyal provoca un **reset controlat** de la CPU
+- **Missió**: evitar que el micro arrenqui amb tensions incorrectes
+
+</div>
+<div class="col-right">
+
+<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--la-primera-espurna.png" alt="Power Good" />
+
+</div>
+</div>
+
+Note:
+Temps: 4 minuts  
+Temps acumulat: 6–7 minuts
+
+Guió docent:
+“Aquí encara **no hi ha sistema operatiu**.  
+Ni Windows, ni Linux, ni BIOS fent proves.
+
+La font d’alimentació primer comprova que els voltatges són correctes.  
+Quan tot és estable, envia un senyal que es diu **Power Good**.
+
+Aquest senyal li diu a la CPU:  
+‘Ara sí, pots començar a treballar’.”
+
+Idea clau:
+El **reset aquí és bo**, és un reset controlat.
+
+Frase tranquil·litzadora:
+“No cal recordar el nom del senyal, només el concepte:
+*primer estabilitat, després arrencada*.”
+
+---
+
+## 2. El Chequeig Matinal
+### POST (Power-On Self-Test)
+<!-- .slide: class="cols-text-img" -->
+
+<div class="cols">
+<div class="col-left">
+
+- La CPU executa el **1r codi** des de la BIOS/UEFI
+- Aquest codi inicia el **POST**
+- Es comprova el maquinari essencial:
+  - CPU <span class="ok">✔</span>, RAM <span class="ok">✔</span>, Targeta gràfica <span class="ok">✔</span>
+- Si alguna cosa crítica falla → **xiulets**
+
+</div>
+<div class="col-right">
+
+<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--el-chequeig-matinal.png" alt="POST" />
+
+</div>
+</div>
+
+Note:
+Temps: 5 minuts  
+Temps acumulat: 11–12 minuts
+
+Guió docent:
+“La CPU comença executant **un codi molt petit** que està dins la BIOS o UEFI.
+
+Aquest codi fa el POST:
+una comprovació ràpida del maquinari imprescindible per continuar.
+
+CPU? RAM? Targeta gràfica?
+Si alguna d’aquestes peces falla, **no té sentit continuar**.”
+
+Pregunta clau a classe:
+“Si un ordinador fa xiulets però no mostra res…
+és un problema de Windows?”
+
+Resposta:
+“No. Windows encara **no existeix** en aquest punt.”
+
+---
+
+## 3. On és el mapa?
+### La cerca del sector d’arrencada
+<!-- .slide: class="cols-text-img" -->
+
+<div class="cols">
+<div class="col-left">
+
+- El POST acaba amb **èxit**
+- El sist. sap que maquinari bàsic Ok
+- La BIOS/UEFI busca un dispositiu segons el **Boot Order**
+- Quan el troba (HDD, SSD, USB…):
+  - llegeix el **1r sector (512 bytes)**
+- A on espera trobar el **mapa** per continuar
+ 
+</div>
+<div class="col-right">
+
+<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--on-es-el-mapa.png" alt="Boot sector" />
+
+</div>
+</div>
+
+Note:
+Temps: 4 minuts  
+Temps acumulat: 15–16 minuts
+
+Guió docent:
+“Un cop el POST acaba bé, el sistema diu:
+‘Perfecte, ja puc buscar **on continuar**.’
+
+Ara la BIOS/UEFI segueix l’ordre d’arrencada:
+disc dur, SSD, USB, xarxa…
+
+Quan en troba un, llegeix **només 512 bytes**.
+És molt poc espai, així que aquí **no hi ha cap sistema operatiu**.”
+
+Analogia:
+“Aquest sector és com un **mapa molt petit** que diu:
+‘el següent pas és per aquí’.”
+
+---
+
+## 4. L’Anatomia del Vell Mapa
+### **MBR**
+<!-- .slide: class="cols-text-img" -->
+
+<div class="cols">
+<div class="col-left">
+
+- Sector de **512 bytes** amb 2 funcions:
+  - petit codi d’arrencada
+  - taula de particions
+- Limitacions clares:
+  - màxim **4 particions primàries**
+  - només **una** pot ser activa
+- El codi busca la partició activa per **cedir el control**
+
+</div>
+<div class="col-right">
+
+<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--l-anatomia-del-vell-mapa.png" alt="MBR" />
+
+</div>
+</div>
+
+Note:
+Temps: 4 minuts  
+Temps acumulat: 19–20 minuts
+
+Guió docent:
+“Això és l’MBR, el sistema clàssic d’arrencada.
+
+Té dues feines:
+- guardar la taula de particions
+- i dir quina partició ha de continuar l’arrencada
+
+El problema?
+És antic i té limitacions molt clares.”
+
+Missatge clau:
+L’MBR **no és dolent**, però **ja no és suficient** per als sistemes actuals.
+
+---
+
+## 5. L’Evolució <small>(1/2)</small>
+
+### **MBR vs GPT**
+
+<div class="cols">
+  <div class="col-left img-compare">
+    <img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--evolucio-gpt.png" alt="GPT" />
+  </div>
+
+  <div class="col-right img-compare">
+    <img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--evolucio-mbr.png" alt="MBR" />
+  </div>
+</div>
+
+Note:
+Temps: 4 minuts  
+Temps acumulat: 23–24 minuts
+
+Guió docent:
+“Aquí comparem el món antic amb el món modern.
+
+GPT soluciona tots els problemes greus de l’MBR:
+- més particions
+- discos grans
+- més seguretat
+
+Això no és opinió:
+és **l’estàndard actual**.”
+
+---
+
+## 5. L’Evolució <small>(2/2)</small>
+### **UEFI**
+<!-- .slide: class="bullets" -->
+
+- Substitueix la BIOS clàssica
+- Funciona conjuntament amb **GPT**
+- Utilitza la **partició EFI (ESP)**
+- És l’estàndard actual:
+  - Windows 10
+  - Windows 11
+
+Note:
+Temps: 3 minuts  
+Temps acumulat: 26–27 minuts
+
+Guió docent:
+“UEFI és el firmware modern que substitueix la BIOS.
+
+No va sol:
+UEFI i GPT **van junts**.
+
+Avui dia, si instal·leu Windows 11:
+el més normal és UEFI + GPT.”
+
+---
+
+## 6. El Director d’Orquestra
+### El Gestor d’Arrencada
+<!-- .slide: class="cols-text-img" -->
+
+<div class="cols">
+<div class="col-left">
+
+- L’MBR o GPT ja ha acabat la seva feina
+- El control passa al **gestor d’arrencada**
+- És el primer programa realment “intel·ligent”
+- Missió:
+  - localitzar el **kernel**
+  - carregar-lo a la memòria RAM
+
+</div>
+<div class="col-right">
+
+<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--el-director-d-orquestra.png" alt="Bootloader" />
+
+</div>
+</div>
+
+Note:
+Temps: 4 minuts  
+Temps acumulat: 30–31 minuts
+
+Guió docent:
+“El gestor d’arrencada és com un **director d’orquestra**.
+
+No toca cap instrument,
+però decideix qui comença.”
+
+Idea clau:
+Sense gestor d’arrencada, el kernel **no s’executa**.
+
+---
+
+## 7. L’Arrencada a Windows
+### **BCD**
+<!-- .slide: class="cols-text-img" -->
+
+<div class="cols">
+<div class="col-left">
+
+- Windows utilitza el **Windows Boot Manager**
+- Llegeix la configuració de la **BCD**
+- Substitueix l’antic `boot.ini`
+- Conté:
+  - sistema per defecte
+  - temps d’espera (timeout)
+
+</div>
+<div class="col-right">
+
+<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--l-arrencada-a-windows.png" alt="BCD" />
+
+</div>
+</div>
+
+Note:
+Temps: 3 minuts  
+Temps acumulat: 33–34 minuts
+
+Guió docent:
+“No cal aprendre comandes ara.
+
+Només entendre que Windows també té:
+- un gestor
+- i una configuració d’arrencada.”
+
+---
+
+## 8. L’Arrencada a Linux
+### **GRUB**
+<!-- .slide: class="cols-text-img" -->
+
+<div class="cols">
+<div class="col-left">
+
+- **GRUB** és el gestor d’arrencada més comú a Linux
+- Molt potent i configurable
+- Ideal per sistemes **dual-boot**
+- Detecta altres sistemes (com Windows)
+
+```bash
+sudo nano /etc/default/grub
+sudo update-grub
+```
+
+</div>
+<div class="col-right">
+
+<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--l-arrencada-a-linux.png" alt="GRUB" />
+
+</div>
+</div>
+
+Note:
+Temps: 4 minuts  
+Temps acumulat: 37–38 minuts
+
+Guió docent:
+“GRUB és clau quan treballem amb màquines virtuals o dual-boot.
+
+Aquí connectem teoria amb pràctica real.”
+
+---
+
+## 9. El Nucli Pren el Comandament
+### **Kernel**
+<!-- .slide: class="full-img" -->
+
+**El sistema està despert.**
+<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--el-nucli-pren-el-comandament.png" width="900px" alt="Kernel"  />
+
+Note:
+Temps: 2 minuts  
+Temps acumulat: 39–40 minuts
+
+Guió docent:
+“A partir d’aquí, el sistema ja funciona.
+
+El gestor d’arrencada desapareix.
+Ara mana el kernel.”
+
+---
+
+## Resum del Viatge de l’Arrencada
+<!-- .slide: class="summary" -->
+
+És una **cadena de confiança**:
+cada pas cedeix el control al següent.
+
+<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--resum-del-viatge-de-l-arrencada.png" alt="Resum" />
+
+Note:
+Temps: 3 minuts  
+Temps acumulat: 42–43 minuts
+
+Guió docent:
+“Si enteneu aquest esquema,
+enteneu tota la classe.”
+
+---
+
+## Pregunta final
+<!-- .slide: class="summary" -->
+
+**Si un ordinador s’encén però no mostra res  
+i només fa xiulets…**
+
+En quina fase del viatge creus que s’ha quedat encallat?
+
+<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--resum-del-viatge-de-l-arrencada.png" alt="Resum" />
+
+Note:
+Temps: 2 minuts  
+Temps acumulat: 44–45 minuts
+
+Guió docent:
+“Amb aquesta pregunta tanquem teoria
+i obrim pràctica.”
+
+~~~~
