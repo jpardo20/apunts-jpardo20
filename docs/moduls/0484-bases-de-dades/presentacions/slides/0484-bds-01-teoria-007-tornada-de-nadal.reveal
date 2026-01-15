@@ -1,15 +1,6 @@
-<!--
-Guarda aquest fitxer com: sessio_bd_mer_wayground.reveal (o .md si uses reveal-md)
-Separadors (tal com m’has indicat):
-data-separator="^---$"
-data-separator-vertical="^----$"
-data-separator-notes="^Note:"
-data-charset="utf-8"
--->
-
 # Bases de dades (1r DAM)
-## Sessió 2h: MER → Model relacional  
-### Tornada de Nadal (Mentimeter + Wayground)
+
+### Tornada de Nadal
 
 Note:
 Objectiu de la sessió: reactivar després de vacances i consolidar MER → relacional.

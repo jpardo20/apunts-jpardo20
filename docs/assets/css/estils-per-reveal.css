@@ -122,3 +122,112 @@
   height: auto;
   object-fit: contain;
 }
+
+/* Base comuna per a totes les admonicions */
+.admonition {
+  position: relative;
+  border-left: 6px solid;
+  padding: 1.2em 1em 1em 3.5em; /* espai per a icona + text */
+  margin: 1.2em 0;
+  border-radius: 8px;
+  font-size: 0.95em;
+  background-color: #f9f9f9;
+}
+
+/* Llistes dins de l’admonició */
+.admonition ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+/* ───────── TIP ───────── */
+.admonition.tip {
+  border-color: #2ecc71;
+  background-color: #eafaf1;
+}
+
+.admonition.tip::before {
+  content: "💡 CONSELL";
+  position: absolute;
+  top: 0.8em;
+  left: 1em;
+  font-weight: 700;
+  color: #1e8449;
+}
+
+/* ─────── IMPORTANT ─────── */
+.admonition.important {
+  border-color: #8e44ad;
+  background-color: #f5eef8;
+}
+
+.admonition.important::before {
+  content: "❗ IMPORTANT";
+  position: absolute;
+  top: 0.8em;
+  left: 1em;
+  font-weight: 700;
+  color: #6c3483;
+}
+
+/* ─────── WARNING ─────── */
+.admonition.warning {
+  border-color: #f39c12;
+  background-color: #fef5e7;
+}
+
+.admonition.warning::before {
+  content: "⚠️ AVÍS";
+  position: absolute;
+  top: 0.8em;
+  left: 1em;
+  font-weight: 700;
+  color: #b9770e;
+}
+
+/* ─────── CAUTION ─────── */
+.admonition.caution {
+  border-color: #e74c3c;
+  background-color: #fdecea;
+}
+
+.admonition.caution::before {
+  content: "⛔ ALERTA";
+  position: absolute;
+  top: 0.8em;
+  left: 1em;
+  font-weight: 700;
+  color: #922b21;
+}
+
+
+/* Subtítol dins de l’admonició */
+.admonition .admonition-title {
+  margin: 0 0 0.4em 0;
+  font-weight: 600;
+  color: #145a32;      /* verd fosc coherent amb TIP */
+}
+
+
+ /* codiae és el codi de les activitats avaluables*/
+
+ codiae{
+    padding-left: 15px;
+    padding-right: 15px;
+    color: black;
+    background-color: #009de0;
+}
+
+h1 codiae{
+    font-size: 75%; 
+}
+
+
+h1 codiae::before{
+    content: "( "
+}
+
+
+h1 codiae::after{
+    content: ") "
+}

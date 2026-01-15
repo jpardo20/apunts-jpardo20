@@ -1,9 +1,10 @@
 # De MER a SQL (DDL)  
+
 ## Gestió d’un videojoc online  
-### Creació de taules amb MySQL
 
 Note:
 **Sessió total: 2 hores**
+
 - 0:00–0:30 → Recuperació i preparació del servidor MySQL
 - 0:30–1:15 → Del model relacional a CREATE TABLE
 - 1:15–2:00 → Creació completa de taules + comprovacions
@@ -19,6 +20,7 @@ Note:
 
 Note:
 Aquí deixo clar **què farem avui i què NO**:
+
 - Avui **NO** farem consultes
 - Avui **NO** farem INSERT massius
 - Avui **sí** construïm una base sòlida perquè després tot funcioni
@@ -35,6 +37,7 @@ Sistema de **gestió d’un videojoc online** amb:
 
 Note:
 Recorda’ls que:
+
 - El MER i el model relacional **ja els tenim**
 - Ara toca “baixar a terra” el disseny
 - Si el disseny és bo, el SQL surt gairebé sol
@@ -57,6 +60,7 @@ Temps aproximat: **0:00–0:30**
 
 Note:
 Aquí els faig:
+
 - Obrir terminal / MySQL Workbench
 - Recordar com es connectaven al primer trimestre
 - No dono res per fet, sobretot amb contrasenyes
@@ -71,6 +75,7 @@ mysql -u root -p
 
 Note:
 Insisteixo:
+
 - Si això no funciona, **aturar-se aquí**
 - No avancem fins que tothom estigui connectat
 
@@ -85,6 +90,7 @@ USE videojoc_online;
 
 Note:
 Explico:
+
 - Una BD és un “contenidor”
 - Les taules no poden existir fora d’una BD
 - El `USE` és clau i sovint l’obliden
@@ -100,6 +106,7 @@ SHOW TABLES;
 
 Note:
 Han de veure:
+
 - La base de dades existeix
 - Encara no hi ha cap taula
 - Punt de partida net
@@ -131,6 +138,7 @@ La repeteixo diverses vegades durant la sessió
 ## Entitat JUGADOR → Taula JUGADOR
 
 Atributs:
+
 - idJugador (PK)
 - nomUsuari
 - email
@@ -138,6 +146,7 @@ Atributs:
 
 Note:
 Pregunto:
+
 - Quin tipus per l’id?
 - Pot ser null?
 - Ha de ser únic?
@@ -157,6 +166,7 @@ CREATE TABLE jugador (
 
 Note:
 Explico línia a línia:
+
 - AUTO_INCREMENT
 - NOT NULL
 - Per què VARCHAR i no CHAR
@@ -167,6 +177,7 @@ Explico línia a línia:
 ## Entitat PERSONATGE → Taula PERSONATGE
 
 Atributs:
+
 - idPersonatge (PK)
 - nomPersonatge
 - nivell
@@ -175,6 +186,7 @@ Atributs:
 
 Note:
 Aquí connecto amb el MER:
+
 - Un jugador pot crear molts personatges
 - Cada personatge pertany a un únic jugador
 
@@ -195,6 +207,7 @@ CREATE TABLE personatge (
 
 Note:
 Insisteixo molt en:
+
 - L’ordre de creació de taules
 - No pots referenciar una taula que no existeix
 
@@ -211,12 +224,14 @@ Temps aproximat: **1:15–2:00**
 ## Entitat PARTIDA → Taula PARTIDA
 
 Atributs:
+
 - idPartida (PK)
 - dataHoraInici
 - duradaMinuts
 
 Note:
 Pregunta típica:
+
 - Per què DATETIME aquí sí?
 - Diferència entre DATE i DATETIME
 
@@ -234,6 +249,7 @@ CREATE TABLE partida (
 
 Note:
 Recordo:
+
 - Minuts és un enter
 - No guardem càlculs, guardem dades
 
@@ -266,6 +282,7 @@ CREATE TABLE participa (
 
 Note:
 Explico:
+
 - PK composta
 - Per què no té id propi
 - Per què la puntuació va aquí
@@ -284,6 +301,7 @@ DESCRIBE participa;
 
 Note:
 Aquí comprovo:
+
 - Que totes les taules existeixen
 - Que les claus estan bé
 - Que no hi ha errors silenciosos
@@ -298,6 +316,7 @@ Aquí comprovo:
 
 Note:
 Tanco reforçant:
+
 - “Si això està bé, tot el que ve després és molt més fàcil”
 - “Si això està malament, tot serà dolor”
 

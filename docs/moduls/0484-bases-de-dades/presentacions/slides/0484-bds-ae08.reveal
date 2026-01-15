@@ -1,0 +1,185 @@
+# Activitat: Inserció de dades a la base de dades *videojoc_online* <codiae>0484-bds-ae08</codiae>
+
+---
+
+## Objectiu de l’activitat
+
+Practicar l’ús de les comandes **`INSERT INTO`** en una base de dades relacional, respectant:
+
+- Les **claus primàries** (**`PK`**)
+- Les **claus foranes** (**`FK`**)
+- Les **restriccions d’integritat referencial**
+- L’ús de **subconsultes** per obtenir les claus existents
+
+---
+
+## Context
+
+Disposem de la següent base de dades ja creada al servidor:
+
+- `jugador`
+- `personatge`
+- `partida`
+- `participa`
+
+Aquesta base de dades serà **comuna per a TOTS**, per tant **NO podeu suposar valors concrets d’IDs**, ja que poden variar segons els registres inserits per altres companys/es.
+
+---
+
+Codi per la creació de la base de dades:
+<div style="display:flex; align-items:flex-start;">
+  <div style="flex:1; font-size: smaller;">
+    <pre><code style="font-size: smaller;" class="sql">CREATE DATABASE videojoc_online;
+USE videojoc_online;
+CREATE TABLE jugador (
+  id_jugador INT AUTO_INCREMENT PRIMARY KEY,
+  nom_usuari VARCHAR(50) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  data_registre DATE NOT NULL
+)
+CREATE TABLE personatge (
+  id_personatge INT AUTO_INCREMENT PRIMARY KEY,
+  nom_personatge VARCHAR(50) NOT NULL,
+  nivell INT NOT NULL,
+  classe VARCHAR(30) NOT NULL,
+  id_jugador INT NOT NULL,
+  FOREIGN KEY (id_jugador)
+        REFERENCES jugador(id_jugador)
+);
+</code></pre>
+</div>
+  <div style="flex:1; font-size: smaller;">
+    <pre><code style="font-size: smaller;" class="sql">CREATE TABLE partida (
+  id_partida INT AUTO_INCREMENT,
+  data_hora_inici DATETIME NOT NULL,
+  durada_minuts INT NOT NULL,
+  PRIMARY KEY (id_partida)
+);
+CREATE TABLE participa (
+  id_jugador INT NOT NULL,
+  id_partida INT NOT NULL,
+  puntuacio INT,
+  PRIMARY KEY (id_jugador, id_partida),
+  FOREIGN KEY (id_jugador)
+        REFERENCES jugador(id_jugador),
+  FOREIGN KEY (id_partida)
+        REFERENCES partida(id_partida)
+);
+</code></pre>
+</div>
+
+---
+
+### Tasca a realitzar
+
+Has de lliurar **únicament les comandes SQL `INSERT`** necessàries per afegir:
+
+| Taula        | Registres a inserir |
+|-------------|:---------------------:|
+| **`jugador`**   | **`5`** |
+| **`personatge`**| **`5`** |
+| **`partida`**   | **`5`** |
+| **`participa`** | **`5`** |
+
+Total: **`20` insercions**
+
+---
+
+## Requisits obligatoris
+
+1. **No pots fer servir IDs numèrics escrits a mà** (`id_jugador`, `id_partida`, etc.).
+2. Quan necessitis una clau forana, **has d’utilitzar subconsultes `SELECT`**.
+3. Les dades han de ser **coherents**:
+   - Un `personatge` ha d’estar associat a un `jugador` existent.
+   - Un registre de `participa` ha de fer referència a un `jugador` i una `partida` existents.
+4. Les comandes han de poder executar-se **sense errors** en una base de dades compartida.
+
+---
+
+<div style="display:flex; flex-direction: column; gap:0em;">
+  <div style="flex:2;">
+    <pre><code style="font-size: smaller;" class="sql">
+    INSERT INTO participa (id_jugador, id_partida, puntuacio)
+    VALUES  (   (   SELECT id_jugador
+                    FROM jugador
+                    WHERE nom_usuari = 'perico'
+                ) ,
+                (   SELECT  id_partida
+                    FROM    partida
+                    WHERE   data_hora_inici = '2026-01-10 10:00:00'
+                            AND durada_minuts = 120) ,
+                3520
+            );</code></pre>
+  </div>
+  <div style="flex:1; font-size: smaller;">
+   <div class="admonition tip">
+  <p class="admonition-title">Fixa’t que:</p>
+  <ul>
+    <li>No apareix cap <code>ID</code> escrit manualment.</li>
+    <li>Es fan servir camps descriptius (<code>nom_usuari</code>, <code>data_hora_inici</code>, etc.).</li>
+    <li>Es respecten les relacions entre taules.</li>
+  </ul>
+</div>
+  </div>
+</div>
+
+---
+
+### Format de lliurament
+
+- Un **fitxer `.sql`**
+
+- Ordre recomanat:
+  1. `INSERT jugador`
+  2. `INSERT partida`
+  3. `INSERT personatge`
+  4. `INSERT participa`
+
+---
+
+### Criteris d’avaluació
+
+<div style="display:flex; gap:1em; align-items:flex-start;">
+  <div style="flex:2;">
+    <table>
+      <thead>
+        <tr>
+          <th>Criteri</th>
+          <th style="text-align:right;">Punts</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Ús correcte de <code>INSERT INTO</code></td><td style="text-align:right;">3</td></tr>
+        <tr><td>Ús correcte de subconsultes</td><td style="text-align:right;">3</td></tr>
+        <tr><td>Coherència de les dades</td><td style="text-align:right;">2</td></tr>
+        <tr><td>Respecte de claus foranes</td><td style="text-align:right;">1</td></tr>
+        <tr><td>Absència d’errors d’execució</td><td style="text-align:right;">1</td></tr>
+        <tr><td><strong>Total</strong></td><td style="text-align:right;"><strong>10</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="flex:1; font-size: smaller;">
+    <div class="admonition warning">
+      <p>
+        Si no s’utilitzen subconsultes per obtenir les claus foranes,
+        la puntuació dels criteris relacionats serà <strong>0 punts</strong>,
+        encara que la comanda funcioni.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+### Consell final
+
+  <div style="flex:1; font-size: smaller;">
+    <div class="admonition tip">
+      <p>Abans de lliurar:
+
+- Revisa que **totes les subconsultes retornin un únic valor**
+- Comprova que **els camps utilitzats al <code>WHERE</code> identifiquin correctament el registre**
+      </p>
+    </div>
+  </div>
