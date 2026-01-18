@@ -8,9 +8,9 @@ data-separator-notes="^Note:"
 data-charset="utf-8"
 -->
 
-# Activitat avaluable AE010
+# Activitat: Validació de dades XML amb XSD <codiae>0373-ae010</codiae>
 
-## Validació de dades XML amb XSD  
+##  
 
 **Mòdul 0373 — Llenguatges de marques**
 
@@ -220,8 +220,6 @@ Aquest exercici representa una situació real:
 
 > **No es treballa amb dades  
 > que no han estat validades**
-
----
 
 Note:
 **Aquesta és una activitat avaluable real.**
