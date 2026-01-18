@@ -5,79 +5,99 @@
     },
     "presentations": [
         {
-            "order": 20,
-            "title": "Activitat 5: Landing amb W3.CSS 0373-ae005",
-            "src": "slides/0373-ae005-w3css.reveal",
-            "description": "Activitat 5: Landing amb W3.CSS 0373-ae005",
-            "kind": "activity"
-        },{
             "order": 1,
-            "title": "1. Introducció",
+            "title": "001. Introducció",
             "src": "slides/introduccio.reveal",
             "description": "Introducció al mòdul 0373 - Llenguatges de marques",
             "kind": "theory"
-        },{
-            "order": 2,
-            "title": "2. Introducció XML",
-            "src": "slides/002_Introduccio_XML.reveal",
+            },{
+                "order": 2,
+                "title": "002. Introducció XML",
+                "src": "slides/002_Introduccio_XML.reveal",
             "description": "Introducció al concepte XML",
             "kind": "theory"
-        },{
-            "order": 3,
-            "title": "HTML — Introducció i elements essencials",
-            "src": "slides/0373_001_HTML_Basics.reveal",
-            "description": "HTML — Introducció i elements essencials",
-            "kind": "theory"
-        },{
-            "order": 3,
-            "title": "Resultats d’Aprenentatge",
+            },{
+                "order": 3,
+                "title": "003. HTML — Introducció i elements essencials",
+                "src": "slides/0373_001_HTML_Basics.reveal",
+                "description": "HTML — Introducció i elements essencials",
+                "kind": "theory"
+                },{
+            "order": 0,
+            "title": "000. Resultats d’Aprenentatge",
             "src": "slides/0373-ras.reveal",
             "description": "Resultats d’Aprenentatge",
             "kind": "theory"
-        },{
-            "order": 30,
-            "title": "JSON i JavaScript",
+            },{
+                "order": 20,
+                "title": "020. Activitat 5: Landing amb W3.CSS 0373-ae005",
+                "src": "slides/0373-ae005-w3css.reveal",
+                "description": "Activitat 5: Landing amb W3.CSS 0373-ae005",
+                "kind": "activity"
+            },{
+                "order": 30,
+            "title": "030. JSON i JavaScript",
             "src": "slides/0373-json-js.reveal",
             "description": "JSON i JavaScript",
             "kind": "theory"
-        },{
+            },{
             "order": 35,
-            "title": "Activitat 3: Crea la teva pàgina web - 0373-ae003",
+            "title": "035. Activitat 3: Crea la teva pàgina web - 0373-ae003",
             "src": "slides/0373-ae003-la-teva-web.reveal",
             "description": "Activitat 3: Crea la teva pàgina web - <kbd>0373-ae003</kbd>",
             "kind": "activity"
         },{
             "order": 80,
-            "title": "Activitat 4: Activitat amb CSS2 0373-ae004",
+            "title": "080. Activitat 4: Activitat amb CSS2 0373-ae004",
             "src": "slides/0373-ae004.reveal",
             "description": "Activitat 4: Activitat amb CSS2 0373-ae004",
             "kind": "activity"
         },{
             "order": 85,
-            "title": "Mini projecte 'Catàleg Geek' 0373-ae006",
+            "title": "085. Mini projecte 'Catàleg Geek' 0373-ae006",
             "src": "slides/0373-ae006-cataleg-geek.reveal",
             "description": "Mini projecte 'Catàleg Geek' 0373-ae006",
             "kind": "activity"
         },{
             "order": 100,
-            "title": "Activitat JSON - 0373-ae008",
+            "title": "100. Activitat JSON - 0373-ae008",
             "src": "slides/0373-ae008-json-amb-js.reveal",
             "description": "Activitat: del JSON a la taula HTML amb JavaScript 0373-ae008",
             "kind": "activity"
         },{
             "order": 130,
-            "title": "Repas",
-            "src": "slides/1a-sessio-3-hores.reveal",
+            "title": "130. 1a sessió de Repas",
+            "src": "slides/0373-2ntri-0002-1a-sessio.reveal",
             "description": "Repas",
             "kind": "theory"
         },{
             "order": 150,
-            "title": "Validacio XSD",
+            "title": "150. Validacio XSD",
             "src": "slides/0373-2ntri-0003-xsd-validacio.reveal",
             "description": "Validacio XSD",
             "kind": "theory"
+        },{
+            "order": 151,
+            "title": "151. Validacio XSD - Els erros típics",
+            "src": "slides/0373-2ntri-0004-xsd-erros-tipics.reveal",
+            "description": "Validacio XSD",
+            "kind": "theory"
+        },{
+            "order": 152,
+            "title": "152. Pràctica guiada de XSD (pas a pas)",
+            "src": "slides/0373-2ntri-0005-xsd-act-guiada.reveal",
+            "description": "Pràctica guiada de XSD (pas a pas)",
+            "kind": "theory"
+        },{
+            "order": 170,
+            "title": "153. Activitat XSD - 0373-ae010",
+            "src": "slides/0373-2ntri-0006-0373-ae010.reveal",
+            "description": "Activitat avaluable: 0373-ae010",
+            "kind": "activity"
         }
     ]
 }
+
+
 
 
