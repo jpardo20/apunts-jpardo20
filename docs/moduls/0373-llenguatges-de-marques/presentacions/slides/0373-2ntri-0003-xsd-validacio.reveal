@@ -1,0 +1,316 @@
+<!--
+data-separator="^---$"
+data-separator-vertical="^----$"
+data-separator-notes="^Note:"
+data-charset="utf-8"
+-->
+
+# Validació de dades amb XSD
+## Abans de transformar, cal comprovar
+
+---
+
+## On som?
+- Ja tenim dades en **XML**
+- Ja sabem transformar-les amb **XSLT**
+- Però… **què passa si les dades estan malament?**
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 0 min  
+Temps acumulat sessió: 0 min
+**Objectiu d’aquesta diapositiva:** reconnectar mentalment amb el que ja saben, sense introduir res nou encara.
+
+Dir-ho així, tranquil:
+> “Fins ara hem fet dues coses importants:  
+> tenir dades en XML i transformar-les amb XSLT.”
+
+Afegeix immediatament la pregunta clau:
+> “Però avui ens hem de fer una pregunta incòmoda:  
+> **què passa si les dades estan malament des del principi?**”
+
+No expliquis solucions encara.  
+Només **planteja el problema**.
+
+---
+
+## Problema real
+
+<span class="highlight-green">I si algú envia això, **és correcte**?</span>
+
+```xml
+<preu>abc</preu>
+```
+
+<span style="color: green">Sí</span>
+<!-- .element: class="fragment" data-fragment-index="2" -->
+
+
+<span class="highlight-green">O això, **és correcte**?</span>
+
+<!-- .element: class="fragment" data-fragment-index="3" -->
+
+<span>
+
+```xml
+<llibre>
+  <titol>Clean Code</titol>
+</llibre>
+```
+</span>
+
+<!-- .element: class="fragment" data-fragment-index="3" -->
+
+<span style="color: green">Sí</span>
+<!-- .element: class="fragment" data-fragment-index="4" -->
+
+<span style="color: blue">El format és correcte, però <strong>el contingut, <span style="color: red"> és correcte?</span></strong></span>
+<!-- .element: class="fragment" data-fragment-index="5" -->
+
+<span style="color: red">NO, com a mínim el primer dels casos!</span>
+<!-- .element: class="fragment" data-fragment-index="6" -->
+
+
+Note:
+Temps diapositiva: 4 min  
+Temps acumulat fitxer: 3 min  
+Temps acumulat sessió: 3 min
+Aquí **has de provocar resposta**.
+
+Pregunta literal:
+> “Això l’XSLT ho pot transformar?”
+
+Deixa que responguin.  
+Quan diguin que sí, confirma:
+> “Exacte. L’XSLT transforma igualment.”
+
+I llavors remata:
+> “Però el resultat **no té sentit**.  
+> El problema no és la transformació.  
+> **El problema són les dades.**”
+
+Això prepara el terreny per XSD.
+
+---
+
+<span>Abans de fer res amb un XML:</span>
+
+<span>1. S’ha de comprovar que és correcte</span>
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+<span>2. Que compleix unes regles</span>
+<!-- .element: class="fragment" data-fragment-index="2" -->
+
+<h2>Idea clau</h2>
+<!-- .element: class="fragment" data-fragment-index="3" -->
+
+<h1>Transformar dades incorrectes <u>és perdre el temps!</u></h1>
+<!-- .element: class="fragment" data-fragment-index="4" -->
+
+Note:
+Temps diapositiva: 4 min  
+Temps acumulat fitxer: 7 min  
+Temps acumulat sessió: 7 min
+Aquesta és una **diapositiva d’aturada**.  
+No passis ràpid.
+
+Llegeix la frase literalment:
+> “Transformar dades incorrectes és perdre el temps.”
+
+Després explica:
+> “Si les dades són dolentes,  
+> tot el que fem després també ho serà.”
+
+I tanca amb la idea central:
+> “Abans de transformar, **cal comprovar**.”
+
+Aquest és **el pont mental cap a XSD**.
+
+---
+
+## Què és XSD?
+- Un **document que defineix les regles** d’un XML
+- Diu:
+  - quines etiquetes poden aparèixer
+  - quines són obligatòries
+  - quin tipus de dades tenen
+
+Note:
+Temps diapositiva: 4 min  
+Temps acumulat fitxer: 11 min  
+Temps acumulat sessió: 11 min
+No entris en sintaxi.  
+No entris en fitxers encara.
+
+Explicació literal:
+> “Un XSD és com un contracte.  
+> Diu com han de ser les dades perquè el sistema les accepti.”
+
+Remarca:
+- **no crea dades**
+- **no transforma dades**
+- **només defineix regles**
+
+Això ho reprendràs al `0004`.
+
+---
+
+## Flux complet (ara sí)
+```
+XML
+ ↓
+VALIDACIÓ (XSD)
+ ↓
+XSLT
+ ↓
+HTML
+```
+
+Note:
+Temps diapositiva: 5 min  
+Temps acumulat fitxer: 15 min  
+Temps acumulat sessió: 15 min
+Aquesta és **la diapositiva més important del bloc**.  
+Aquí sí, pausa.
+
+Dir-ho pas a pas, assenyalant:
+> “Primer tenim dades.”  
+> “Després les validem.”  
+> “Només si són correctes, les transformem.”
+
+Remarca fort:
+> “L’XSD **va abans** de l’XSLT.”
+
+Això connecta directament amb la pràctica guiada que faràs després.
+
+---
+
+## Primer exemple
+Tenim aquest XML:
+
+```xml
+<llibres>
+  <llibre>
+    <titol>Clean Code</titol>
+    <preu>32</preu>
+  </llibre>
+</llibres>
+```
+
+<span>És correcte?</span>
+<!-- .element: class="fragment" data-fragment-index="1" -->
+<br>
+<span style="color: green;">
+Depèn de les regles.
+</span>
+<!-- .element: class="fragment" data-fragment-index="2" -->
+
+
+Note:
+Temps diapositiva: 4 min  
+Temps acumulat fitxer: 20 min  
+Temps acumulat sessió: 20 min
+Pregunta literal:
+> “Això està bé o està malament?”
+
+Quan dubtin, respon:
+> “No ho podem saber…  
+> **fins que no definim les regles**.”
+
+Aquesta frase és clau:
+> “Un XML no és correcte o incorrecte per si sol.  
+> Ho és **respecte a unes regles**.”
+
+
+
+---
+
+## Exemple de regla (XSD)
+- Un llibre **ha de tenir**:
+  - títol (text)
+  - autor (text)
+  - preu (número)
+
+Si falta alguna cosa → error.
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 24 min  
+Temps acumulat sessió: 24 min
+Explica-ho com a exigència del sistema, no com a opinió.
+
+Frase literal:
+> “No és que a mi m’agradi així.  
+> És que **el sistema ho exigeix així**.”
+
+Remarca:
+> “Si falta una etiqueta,  
+> encara que el XML estigui ben escrit,  
+> **el sistema no el pot acceptar**.”
+
+Això prepara el cap per la validació real.
+
+---
+
+## Què farem avui?
+- Crear un XSD **molt simple**
+- Validar un XML
+- Veure:
+  - quan és correcte
+  - quan NO ho és
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 27 min  
+Temps acumulat sessió: 27 min
+Marca expectatives clares:
+> “Avui no aprendrem tot l’XSD.”  
+> “Aprendrem **per què existeix** i com s’utilitza.”
+
+Afegeix:
+> “Després veurem errors típics  
+> i finalment ho farem pas a pas.”
+
+Aquí ja estàs connectant mentalment amb el `0004` i el `0005`.
+
+---
+
+## Missatge important
+> **XSD no corregeix errors.  
+> XSD els detecta.**
+
+Note:
+Temps diapositiva: 2 min  
+Temps acumulat fitxer: 30 min  
+Temps acumulat sessió: 30 min
+Llegeix-ho literalment.  
+Pausa.  
+Repeteix si cal.
+
+Explicació curta:
+> “L’XSD no arregla res.  
+> Només diu: això està bé o això està malament.”
+
+Aquesta frase reapareixerà moltes vegades.
+
+---
+
+## Mans a l’obra
+Ara:
+1. Crearem `llibres.xsd`
+2. El vincularem a `llibres.xml`
+3. Provarem errors expressament
+
+Note:
+Temps diapositiva: 2 min  
+Temps acumulat fitxer: 32 min  
+Temps acumulat sessió: 32 min
+Tancament d’aquest fitxer.
+
+Dir-ho així:
+> “Ara ja tenim el perquè.  
+> A continuació veurem **errors típics**  
+> i després ho farem nosaltres pas a pas.”
+
+👉 **No comencis encara la pràctica aquí.**  
+👉 El següent `.reveal` (`0004`) és clau abans de tocar codi.

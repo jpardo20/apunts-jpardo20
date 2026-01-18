@@ -1,0 +1,375 @@
+<!--
+data-separator="^---$"
+data-separator-vertical="^----$"
+data-separator-notes="^Note:"
+data-charset="utf-8"
+-->
+
+# Errors típics en XSD
+## I per què passen
+
+---
+
+## Abans de començar
+Aquests errors:
+- són **normals**
+- els comet **tothom**
+- formen part de l’aprenentatge
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 0 min  
+Temps acumulat sessió: 32 min
+**Objectiu d’aquesta diapositiva:** baixar tensió abans d’entrar en errors.
+
+Dir-ho literalment:
+> “Abans de veure errors, vull deixar una cosa clara:  
+> **aquests errors són normals**.”
+
+Afegeix:
+> “No són errors de no saber.  
+> Són errors d’estar aprenent.”
+
+Remarca:
+> “Si avui us surt algun d’aquests errors,  
+> **vol dir que aneu pel bon camí**.”
+
+Això prepara molt bé la pràctica del `0005`.
+
+---
+
+## Error 1
+### “El meu XML està ben escrit, però no valida”
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 3 min  
+Temps acumulat sessió: 35 min
+Aquesta és **la confusió número u**.
+
+No donis definicions encara.  
+Planteja la situació real:
+> “Això us passarà segur:  
+> el fitxer no té errors de sintaxi,  
+> però l’eina diu que no valida.”
+
+Aquí només volem **activar el record** del que hem dit al `0003`.
+
+---
+
+## Ben format ≠ Vàlid
+
+- **Ben format**: compleix les regles d’XML
+- **Vàlid**: compleix les regles de l’XSD
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 6 min  
+Temps acumulat sessió: 38 min
+Dir-ho **literalment**, amb pausa:
+> “Ben format **no és** el mateix que vàlid.”
+
+Explicació clara:
+> “Un XML pot estar perfectament escrit  
+> i tot i així ser incorrecte  
+> segons el que espera el sistema.”
+
+Pots donar exemples orals (no cal escriure):
+- falta una etiqueta
+- ordre incorrecte
+- tipus de dada incorrecte
+
+👉 Aquesta idea ve directament del `0003`  
+👉 i és imprescindible abans de tocar codi al `0005`.
+
+---
+
+## Error 2
+### “He fet l’XSD però el navegador no diu res”
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 9 min  
+Temps acumulat sessió: 41 min
+Aquest error és **molt frustrant** i cal explicar-lo bé.
+
+Planteja-ho així:
+> “Alguns esperareu veure alguna cosa a la pantalla…  
+> i no veureu res.”
+
+No és un error de l’alumne:
+> “El problema no és que no funcioni.  
+> El problema és **què esperàvem que fes**.”
+
+---
+
+## XSD no es veu
+
+- L’XSD **no mostra res**
+- L’XSD **no transforma**
+- L’XSD **només comprova**
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 12 min  
+Temps acumulat sessió: 44 min
+Llegeix la llista **a poc a poc**.
+
+Després remarca fort:
+> **“XSD no fa res visible.  
+> Només diu si les dades són correctes o no.”**
+
+Afegeix:
+> “L’absència de resultat visual  
+> **NO vol dir que no funcioni**.”
+
+Això evita molta frustració després.
+
+---
+
+## Error 3
+### “He canviat l’XSD i no passa res”
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 15 min  
+Temps acumulat sessió: 47 min
+Aquí introdueixes la idea de **validació conscient**.
+
+Planteja la situació:
+> “Canvio l’XSD, guardo…  
+> i sembla que no ha passat res.”
+
+Pregunta:
+> “Estic validant realment?”
+
+No parlis encara d’eines concretes.
+
+---
+
+## Validar vol dir provar
+
+- Cal:
+  - refrescar
+  - tornar a validar
+  - mirar errors
+- Si no hi ha error visible, pot ser que:
+  - l’XML encara sigui correcte
+  - no s’estigui validant on toca
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 18 min  
+Temps acumulat sessió: 50 min
+Idea clau:
+> “Validar **no és automàtic**.”
+
+Explica:
+> “No és com HTML, que el navegador fa coses sol.  
+> Aquí cal una acció conscient.”
+
+Això connecta directament amb el que faràs al `0005`.
+
+---
+
+## Error 4
+### “L’XSD diu que falta una etiqueta, però jo la veig”
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 21 min  
+Temps acumulat sessió: 53 min
+Aquest error és perfecte per parlar de l’ordre  
+**sense entrar en teoria pesada**.
+
+Planteja la confusió:
+> “Jo veig l’etiqueta…  
+> però l’XSD diu que no.”
+
+Aquí prepara el terreny per la idea següent.
+
+---
+
+## L’ordre importa
+
+En XSD:
+- l’ordre de les etiquetes **és important**
+- no és com HTML
+- si l’ordre no coincideix → error
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 24 min  
+Temps acumulat sessió: 56 min
+Dir-ho molt clar, literalment:
+> **“Per a l’XSD, dues etiquetes correctes  
+> però mal ordenades són un error.”**
+
+Relaciona-ho amb:
+- estructures estrictes
+- dades, no webs
+
+Això després ho veuran claríssim a la pràctica.
+
+---
+
+## Error 5
+### “El tipus de dada no és correcte”
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 27 min  
+Temps acumulat sessió: 59 min
+Aquest error és **molt habitual** amb números.
+
+No el facis sonar com una ximpleria.
+Planteja-ho com una expectativa del sistema:
+> “El sistema espera una cosa  
+> i n’està rebent una altra.”
+
+---
+
+## Els tipus compten
+
+Exemples d’error:
+- `<preu>abc</preu>`
+- `<preu>trenta</preu>`
+
+Si l’XSD espera un número:
+→ **error de validació**
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 30 min  
+Temps acumulat sessió: 62 min
+Remarca literalment:
+> “XSD **no interpreta**.  
+> **Comprova**.”
+
+Explica:
+> “No intenta endevinar què volies dir.  
+> Si no és un número, és un error.”
+
+Això és clau per dades fiables.
+
+---
+
+## Error 6
+### “He canviat l’XML i ara tot falla”
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 33 min  
+Temps acumulat sessió: 65 min
+Aquest error connecta molt bé amb el món real.
+
+Planteja-ho així:
+> “Abans funcionava,  
+> toco una cosa petita,  
+> i ara tot peta.”
+
+Aquí prepara el missatge següent.
+
+---
+
+## XSD és estricte (i ha de ser-ho)
+
+- XSD no perdona:
+  - etiquetes mal escrites
+  - elements inesperats
+  - coses de més o de menys
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 36 min  
+Temps acumulat sessió: 68 min
+Dir-ho literalment:
+> “Això no és dolent.  
+> **És exactament el que volem.**”
+
+Relaciona-ho amb:
+- factures
+- registres
+- dades d’empresa
+
+> “Millor que falli aquí  
+> que no pas quan ja estem treballant amb les dades.”
+
+---
+
+## Error 7
+### “Això és massa estricte…”
+
+Note:
+Temps diapositiva: 3 min  
+Temps acumulat fitxer: 39 min  
+Temps acumulat sessió: 71 min
+Aquí cal un petit canvi de mentalitat.
+
+Planteja la queixa:
+> “Sembla que no deixa passar res.”
+
+I prepara la resposta.
+
+---
+
+## Precisament per això serveix
+
+- Les dades:
+  - no poden ser ambigües
+  - no poden ser lliures
+- XSD garanteix:
+  - coherència
+  - fiabilitat
+  - confiança
+
+Note:
+Temps diapositiva: 2 min  
+Temps acumulat fitxer: 42 min  
+Temps acumulat sessió: 74 min
+Missatge clau:
+> “Les dades **no poden ser creatives**.”
+
+Remata:
+> “Si validen, podem confiar-hi.  
+> Si no, millor aturar-nos.”
+
+Això és molt potent per futurs mòduls.
+
+---
+
+## Missatge final
+
+> **XSD no és per fer bonic el XML.  
+> XSD és per evitar problemes.**
+
+Note:
+Temps diapositiva: 2 min  
+Temps acumulat fitxer: 44 min  
+Temps acumulat sessió: 76 min
+Llegeix-ho literalment.  
+Pausa.  
+Si vols, repeteix-ho.
+
+Aquesta frase val la pena que se la quedin.
+
+---
+
+## Idea per quedar-se
+
+- XML: dades
+- XSD: regles
+- XSLT: transformació
+
+Note:
+Temps diapositiva: 2 min  
+Temps acumulat fitxer: 46 min  
+Temps acumulat sessió: 78 min
+Aquest és **el triangle conceptual** del mòdul.
+
+Dir-ho així:
+> “Si d’aquí només us quedeu amb això,  
+> la sessió ja ha valgut la pena.”
+
+👉 Ara sí:  
+👉 **al següent fitxer (`0005`) ho posarem en pràctica pas a pas.**

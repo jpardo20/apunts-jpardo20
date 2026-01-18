@@ -1,0 +1,540 @@
+<!--
+File: 0373-2ntri-0005-xsd-practica-guiada.reveal
+
+Reveal.js separators:
+data-separator="^---$"
+data-separator-vertical="^----$"
+data-separator-notes="^Note:"
+data-charset="utf-8"
+-->
+
+# Pràctica guiada de XSD (pas a pas)
+
+## Validació de dades amb `llibres.xml` + `llibres.xsd`  
+
+Note:
+Temps diapositiva: 8 min  
+Temps acumulat fitxer: 0 min  
+Temps acumulat sessió: 78 min
+**Objectiu docent d’aquesta sessió (explicar-ho explícitament):**
+
+- Que **tothom**, fins i tot qui va més lent, **arribi a validar un XML amb XSD**.
+- No busquem **memoritzar sintaxi XSD**.
+- Busquem entendre tres idees clau (dir-les així, numerades):
+  1) **Un XML pot estar ben format i tot i així ser incorrecte.**
+  2) **L’XSD defineix regles del joc.**
+  3) **Validar és comprovar abans d’usar o transformar dades.**
+
+**Ritme real de les 3 hores (marca expectatives):**
+
+- **30–40 minuts** d’aterratge + demostració guiada (tots mirant).
+- **60–75 minuts** de pràctica guiada (tots al mateix punt).
+- **45–60 minuts** d’activitat avaluable (ells sols o en parelles).
+
+**Missatge important per tu com a docent:**
+
+* **NO avancis cap a XSLT avui**, encara que algun alumne ho demani.  
+* Avui **XSD és el centre absolut** de la sessió.
+
+---
+
+## Avui NO ...
+
+- No fem XSLT
+- No fem webs
+- No fem “coses boniques”
+  
+## Avui SÍ ...
+
+- Fem **regles**
+- Fem **validació**
+- Fem **detecció d’errors**
+
+Note:
+Temps diapositiva: 5 min  
+Temps acumulat fitxer: 8 min  
+Temps acumulat sessió: 86 min
+Dir-ho **literalment**, sense adorns:
+> “Avui no farem res que es vegi espectacular.  
+> Però farem una cosa **professional**:  
+> **comprovar que les dades estan bé abans de fer res amb elles**.”
+
+Això és clau perquè:
+
+- baixa expectatives de “resultat visual”
+- evita frustració
+- situa la sessió en **context professional real**
+
+Si algú diu “això és avorrit”, no discutir:
+“Sí, però és exactament el que es fa abans de treballar amb dades reals.”
+
+---
+
+## Material de la pràctica
+
+Treballarem amb:
+
+- `llibres.xml` (dades)
+- `llibres.xsd` (regles)
+
+**Important:** mateix directori / carpeta
+
+Note:
+Temps diapositiva: 6 min  
+Temps acumulat fitxer: 13 min  
+Temps acumulat sessió: 91 min
+Fes-los **crear explícitament** una carpeta anomenada, per exemple:
+
+- `xsd-practica-guiada`
+
+Insisteix molt en:
+
+- **nom exacte dels fitxers**
+- **mateixa carpeta XML i XSD**
+
+Digue-ho així:
+
+> “El 50% dels errors d’avui no són d’XSD, són de carpetes i noms.”
+
+---
+
+## Pas 0: Crear carpeta i fitxers
+
+1. Crear carpeta: `xsd-practica-guiada`
+2. Crear fitxer: `llibres.xml`
+3. Crear fitxer: `llibres.xsd`
+
+Note:
+Temps diapositiva: 7 min  
+Temps acumulat fitxer: 19 min  
+Temps acumulat sessió: 97 min
+Aquest pas sembla trivial, però **evita el 80% dels problemes després**.
+
+Estratègia d’aula:
+
+- Si algú va molt lent → posa’l en parella
+- Si algú s’ha perdut → que **copiï del projector**, no improvisi
+
+No avancis fins que **tothom** tingui:
+
+- carpeta
+- dos fitxers creats
+
+---
+
+## Pas 1: Copiar `llibres.xml`
+
+Copia exactament això:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<llibres>
+  <llibre>
+    <titol>Clean Code</titol>
+    <autor>Robert C. Martin</autor>
+    <preu>32</preu>
+  </llibre>
+  <llibre>
+    <titol>Effective Java</titol>
+    <autor>Joshua Bloch</autor>
+    <preu>45</preu>
+  </llibre>
+</llibres>
+```
+
+Note:
+Temps diapositiva: 8 min  
+Temps acumulat fitxer: 26 min  
+Temps acumulat sessió: 104 min
+Remarca **expressament**:
+
+- **NO posem `xml-stylesheet` avui**
+- Això és deliberat:  
+  > “Avui **XSD**, no **XSLT**.”
+
+Fes-los revisar:
+
+- etiquetes ben tancades
+- ordre correcte
+- cap error de sintaxi
+
+Aquest XML **està ben format**, però **encara no sabem si és correcte**.
+
+---
+
+## Pas 2: Què volem validar?
+
+Regles del nostre sistema:
+
+- Arrel: `<llibres>`
+- Conté 1 o més `<llibre>`
+- Cada `<llibre>` té:
+  - `<titol>` text (obligatori)
+  - `<autor>` text (obligatori)
+  - `<preu>` número decimal (obligatori)
+
+Note:
+Temps diapositiva: 6 min  
+Temps acumulat fitxer: 34 min  
+Temps acumulat sessió: 112 min
+Explica-ho com un **contracte de dades**.
+
+Frase literal recomanada:
+> “Aquestes no són idees meves:  
+> són **les regles que el sistema exigeix** per confiar en les dades.”
+
+Afegeix:
+> “Si falta una d’aquestes etiquetes,  
+> **el sistema no pot confiar en el document**.”
+
+---
+
+## Pas 3: Crear `llibres.xsd` (estructura mínima)
+
+Copia exactament això:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+</xs:schema>
+```
+
+Note:
+Temps diapositiva: 6 min  
+Temps acumulat fitxer: 40 min  
+Temps acumulat sessió: 118 min
+Objectiu conceptual (no tècnic):
+
+- Que entenguin que **un XSD també és un XML**
+
+Explica:
+
+- `xs:` és un **prefix**
+- No és màgia
+- No aprofundir en namespaces avui
+
+Si algú pregunta “què és un namespace”:
+“Avui només ens interessa que **funcioni**. Ja ho veurem més endavant.”
+
+---
+
+## Pas 4: Definir l’arrel `<llibres>`
+
+Dins del `xs:schema`, afegeix:
+
+```xml
+<xs:element name="llibres">
+</xs:element>
+```
+
+Note:
+Temps diapositiva: 6 min  
+Temps acumulat fitxer: 46 min  
+Temps acumulat sessió: 124 min
+Missatge clau (dir-ho així):
+> “No estem escrivint dades.  
+> **Estem descrivint com han de ser les dades.**”
+
+Aquest canvi fa que:
+
+- l’XSD **reconegui l’arrel**
+- sense això, **no pot validar res**
+
+---
+
+## Pas 5: Dir que `llibres` conté molts `llibre`
+
+Dins de `<xs:element name="llibres">` posa:
+
+```xml
+<xs:complexType>
+  <xs:sequence>
+    <xs:element name="llibre" maxOccurs="unbounded">
+    </xs:element>
+  </xs:sequence>
+</xs:complexType>
+```
+
+Note:
+Temps diapositiva: 8 min  
+Temps acumulat fitxer: 52 min  
+Temps acumulat sessió: 130 min
+Explicació **molt plana**, sense tecnicismes extra:
+
+- **`complexType`** → té fills
+- **`sequence`** → ordre obligatori
+- **`maxOccurs="unbounded"`** → pot haver-hi molts llibres
+
+**No obris**:
+
+- `choice`
+- `all`
+- altres opcions
+
+Avui **només això**.
+
+---
+
+## Pas 6: Definir què hi ha dins de cada `llibre`
+
+Dins de `<xs:element name="llibre" ...>` posa:
+
+```xml
+<xs:complexType>
+  <xs:sequence>
+    <xs:element name="titol" type="xs:string"/>
+    <xs:element name="autor" type="xs:string"/>
+    <xs:element name="preu" type="xs:decimal"/>
+  </xs:sequence>
+</xs:complexType>
+```
+
+Note:
+Temps diapositiva: 10 min  
+Temps acumulat fitxer: 60 min  
+Temps acumulat sessió: 138 min
+Remarca **amb pausa**:
+
+- **3 etiquetes**
+- **totes obligatòries**
+- **amb tipus definit**
+
+Frase literal:
+> “A partir d’ara, si `preu` no és un número,  
+> **l’XSD ho detectarà automàticament**.”
+
+Això connecta molt bé amb errors reals que ja han vist.
+
+---
+
+## Pas 7: XSD complet (referència final)
+
+El teu `llibres.xsd` ha de quedar així:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="llibres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="llibre" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="titol" type="xs:string"/>
+              <xs:element name="autor" type="xs:string"/>
+              <xs:element name="preu" type="xs:decimal"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+```
+
+Note:
+Temps diapositiva: 10 min  
+Temps acumulat fitxer: 70 min  
+Temps acumulat sessió: 148 min
+Aquesta diapositiva és **punt d’ancoratge**.
+
+Digues:
+> “Si us perdeu, **compareu amb això**.”
+
+No exigeixis:
+
+- indentació perfecta
+
+Sí exigeix:
+
+- estructura correcta
+- sense errors
+
+---
+
+## Pas 8: Vincular XML i XSD
+
+Afegirem atributs a l’arrel del XML.
+
+`llibres.xml` ha de començar així:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<llibres
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="llibres.xsd">
+```
+
+I al final tanca:
+
+```xml
+</llibres>
+```
+
+Note:
+Temps diapositiva: 8 min  
+Temps acumulat fitxer: 80 min  
+Temps acumulat sessió: 158 min
+Explicació literal:
+> “Aquí estem dient al document:  
+> **‘aquest XML es comprova amb aquest XSD’**.”
+
+No entris en teoria de namespaces.
+Només això:
+
+- mateix directori
+- nom correcte del fitxer
+
+---
+
+## Pas 9: Validar (com ho fem?)
+
+Opcions segons entorn:
+
+- **IDE** (IntelliJ / VS Code amb plugin XML)
+- **Eina de validació**
+- **Resultat esperat**: cap error
+
+Note:
+Temps diapositiva: 8 min  
+Temps acumulat fitxer: 88 min  
+Temps acumulat sessió: 166 min
+Aquí adapta’t a l’entorn real.
+
+Missatge clau:
+> “No importa tant l’eina.  
+> Importa que **quan trenquem dades, apareguin errors**.”
+
+Si alguna eina no mostra errors clarament:
+segueix igual, no t’hi encallis.
+
+---
+
+## Pas 10: Prova d’error 1 (falta etiqueta)
+
+Esborra `<autor>` d’un llibre i valida.
+
+**Què ha de passar?**  
+Ha de donar error: falta `autor`.
+
+Note:
+Temps diapositiva: 7 min  
+Temps acumulat fitxer: 96 min  
+Temps acumulat sessió: 174 min
+Aquest és **el moment clic**.
+
+Frase literal:
+> “Veieu?  
+> L’XML està ben format…  
+> **però no compleix les regles**.”
+
+Fes-los:
+
+- arreglar l’error
+- revalidar
+- veure que ara passa
+
+---
+
+## Pas 11: Prova d’error 2 (tipus incorrecte)
+
+Canvia un preu:
+
+```xml
+<preu>abc</preu>
+```
+
+Valida.
+
+**Què ha de passar?**  
+Error: `preu` no és decimal.
+
+Note:
+Temps diapositiva: 7 min  
+Temps acumulat fitxer: 103 min  
+Temps acumulat sessió: 181 min
+Remarca molt clar:
+> “L’XSD **no interpreta**,  
+> **comprova**.”
+
+Això reforça la idea de:
+
+- dades fiables
+- abans de transformar-les
+
+---
+
+## Activitat NO avaluable (`xsd-practica-guiada`)
+
+Ara ja podeu treballar sols:
+
+- `llibres.xsd` complet i correcte
+- `llibres.xml` vinculat a l’XSD
+- Validació sense errors
+- Si **voleu** podeu lliurar un ZIP amb els 2 fitxers
+
+Note:
+Temps diapositiva: 20 min  
+Temps acumulat fitxer: 110 min  
+Temps acumulat sessió: 188 min
+Canvi de rol:
+
+- tu passes taula per taula
+- ajudes puntualment
+- no resols en veu alta
+
+Recorda criteris:
+
+- estructura
+- tipus
+- vinculació
+- valida
+
+---
+
+## Check final (abans de lliurar)
+
+Fitxers:
+
+- `llibres.xml`
+- `llibres.xsd`
+
+XML vinculat:
+
+- `xsi:noNamespaceSchemaLocation="llibres.xsd"`
+
+XSD defineix:
+
+- `llibres` → `llibre` (unbounded)
+- `titol` string
+- `autor` string
+- `preu` decimal
+
+Note:
+Temps diapositiva: 7 min  
+Temps acumulat fitxer: 130 min  
+Temps acumulat sessió: 208 min
+Projecta aquest checklist.
+Fes-los **revisar un per un** abans de comprimir.
+Això redueix errors d’entrega **de manera brutal**.
+
+---
+
+## Tancament (2 minuts)
+
+- XSD = **regles**
+- Validació = **comprovar abans d’usar**
+- Proper dia: només transformarem **dades que validin**
+
+Note:
+Temps diapositiva: 5 min  
+Temps acumulat fitxer: 137 min  
+Temps acumulat sessió: 215 min
+Frase final exacta:
+> “Avui hem fet una cosa professional:  
+> **confiar només en dades correctes**.”
+
+No obris XSLT.
+Deixa la idea clara i tanca aquí.

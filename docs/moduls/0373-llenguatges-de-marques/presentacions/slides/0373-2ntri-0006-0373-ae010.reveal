@@ -1,0 +1,249 @@
+<!--
+File: 0373-2ntri-0006-0373-ae010.reveal
+
+Reveal.js separators:
+data-separator="^---$"
+data-separator-vertical="^----$"
+data-separator-notes="^Note:"
+data-charset="utf-8"
+-->
+
+# Activitat avaluable AE010
+
+## Validació de dades XML amb XSD  
+
+**Mòdul 0373 — Llenguatges de marques**
+
+---
+
+## Objectiu de l’activitat
+
+Validar dades abans d’utilitzar-les.
+
+Aquesta activitat avalua si saps:
+
+- definir **regles amb XSD**
+- vincular un XML a un XSD
+- detectar **errors de dades**
+
+---
+
+## Context
+
+Disposem d’un sistema que treballa amb **dades estructurades**.
+
+Abans de transformar o mostrar dades:
+> **cal comprovar que siguin correctes**
+
+---
+
+## Què cal crear
+
+Has de crear una carpeta amb el nom `0373-ae010`
+
+Dins de la carpeta `0373-ae010`, hauràs de crear **dues subcarpetes**, una per a cada cas escollit.
+
+Cada subcarpeta ha de contenir:
+
+- un fitxer XML amb les dades
+- un fitxer XSD amb les regles
+
+---
+
+## Escull els conjunts de dades
+
+Tria **DUES** de les següents **QUATRE** opcions.
+
+
+<div class="admonition warning">
+<br>
+<p class="admonition-title">Exactament dues.</p>
+</div>
+
+---
+
+## Opció A: Esdeveniments
+
+Sistema de gestió d’esdeveniments.
+
+Cada esdeveniment té:
+- nom
+- data
+- lloc
+
+<div class="admonition tip">
+<br>
+<p class="admonition-title">Nom de la subcarpeta <kbd>gestio</kbd>.</p>
+</div>
+---
+
+## Opció B: Productes
+
+Sistema de control de productes.
+
+Cada producte té:
+- nom
+- categoria
+- preu
+
+<div class="admonition tip">
+<br>
+<p class="admonition-title">Nom de la subcarpeta <kbd>productes</kbd>.</p>
+</div>
+
+---
+
+## Opció C: Pel·lícules
+
+Catàleg de pel·lícules.
+
+Cada pel·lícula té:
+- títol
+- director
+- durada (en minuts)
+
+<div class="admonition tip">
+<br>
+<p class="admonition-title">Nom de la subcarpeta <kbd>pelis</kbd>.</p>
+</div>
+
+---
+
+## Opció D: Sensors
+
+Sistema de monitoratge de sensors.
+
+Cada sensor té:
+- identificador
+- tipus
+- valor
+
+<div class="admonition tip">
+<br>
+<p class="admonition-title">Nom de la subcarpeta <kbd>sensors</kbd>.</p>
+</div>
+
+---
+
+## Regles del sistema
+
+Per a **cada cas escollit**, el sistema exigeix que:
+
+- hi hagi un **element arrel** coherent amb el conjunt de dades
+- contingui **tres o més** elements,
+- cada element tingui **tots els camps obligatoris**
+- els tipus de dades siguin coherents amb la informació
+
+<div class="admonition caution">
+<br>
+<p class="admonition-title">Amb menys de tres elements es suspendrà directament l'activitat</p>
+</div>
+---
+
+## Requisits tècnics
+
+Per **cada carpeta**, el teu treball ha de complir:
+
+- XSD ben format i correcte
+- Tipus de dades adequats
+- Ordre correcte dels elements
+- XML **vinculat** correctament al XSD
+- Validació **sense errors**
+
+---
+
+## Què s’avalua
+
+Es comprovarà que:
+
+- L’XSD defineix correctament l’estructura
+- L’XML compleix totes les regles
+- Els tipus de dades són coherents
+- La validació funciona realment
+- **Els dos casos estan resolts correctament**
+
+---
+
+## Què NO es demana
+
+- NO cal fer XSLT
+- NO cal fer HTML
+- NO cal fer estil ni visualització
+- NO cal afegir camps extres
+
+---
+
+## Lliurament
+
+Has de lliurar:
+
+- Un fitxer ZIP, que contingui **només** la carpeta **`0373-ae010`**
+- Dins hi ha d’haver **dues subcarpetes**, una per cada cas escollit
+- Cada subcarpeta ha de contenir: el fitxer XML i el fitxer XSD
+
+<div class="admonition caution">
+<br>
+<p class="admonition-title">Cap altre fitxer</p>
+</div>
+
+
+---
+
+## Validació
+
+Abans de lliurar, comprova que:
+
+- Els dos XML validen correctament
+- No apareix cap error de validació
+- Les carpetes i fitxers tenen el nom correcte
+
+---
+
+## Temps
+
+Activitat pensada per fer-se:
+- individualment
+- dins del temps de classe
+
+---
+
+## Recordatori important
+
+> **XSD no corregeix errors.  
+> XSD els detecta.**
+
+---
+
+## Final
+
+Aquest exercici representa una situació real:
+
+> **No es treballa amb dades  
+> que no han estat validades**
+
+---
+
+Note:
+**Aquesta és una activitat avaluable real.**
+
+Abans de començar, deixa clar:
+
+- que han d’escollir **dues opcions**
+- que cada opció va en **la seva carpeta**
+- que no hi ha passos guiats
+- que poden consultar apunts
+- que el que s’avalua és la comprensió, no la memòria
+
+Durant l’activitat:
+
+- ajuda només si estan bloquejats
+- no dictis estructures
+- observa si repliquen bé el procés en el segon cas
+
+Correcció:
+
+- molt ràpida
+- mateixa pauta per a tothom
+- fàcilment automatitzable
+
+Aquesta AE tanca el bloc XSD.

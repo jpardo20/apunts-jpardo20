@@ -64,6 +64,20 @@
             "src": "slides/0373-ae008-json-amb-js.reveal",
             "description": "Activitat: del JSON a la taula HTML amb JavaScript 0373-ae008",
             "kind": "activity"
+        },{
+            "order": 130,
+            "title": "Repas",
+            "src": "slides/1a-sessio-3-hores.reveal",
+            "description": "Repas",
+            "kind": "theory"
+        },{
+            "order": 150,
+            "title": "Validacio XSD",
+            "src": "slides/0373-2ntri-0003-xsd-validacio.reveal",
+            "description": "Validacio XSD",
+            "kind": "theory"
         }
     ]
 }
+
+
