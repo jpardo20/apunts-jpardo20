@@ -36,7 +36,7 @@ CREATE TABLE jugador (
   nom_usuari VARCHAR(50) NOT NULL,
   email VARCHAR(100) NOT NULL,
   data_registre DATE NOT NULL
-)
+);
 CREATE TABLE personatge (
   id_personatge INT AUTO_INCREMENT PRIMARY KEY,
   nom_personatge VARCHAR(50) NOT NULL,
