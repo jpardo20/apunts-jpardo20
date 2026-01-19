@@ -187,7 +187,7 @@
     {
       "id": "0484-bds-ae08",
       "title": "Activitat 8: Inserció de dades a la base de dades <code><b>videojoc_online</b></code> (<code><b>0484-bds-ae08</b></code>)",
-      "description": "Practicar l’ús de les comandes <code><b>INSERT INTO</b></code> en una base de dades relacional, respectant:<ul><li>Les claus primàries (<code><b>PK</b></code>)</li>\n<li>Les claus foranes (<code><b>FK</b></code>)</li>\n<li>Les restriccions d’<b>integritat referencial</b></li>\n<li>L’ús de <b>subconsultes</b> per obtenir les claus existents</li></ul>",
+      "description": "Practicar l’ús de les comandes <code><b>INSERT INTO</b></code> en una base de dades relacional.",
       "src": "slides/0484-bds-ae08.reveal",
       "theme": "white",
        "kind": "activity",
