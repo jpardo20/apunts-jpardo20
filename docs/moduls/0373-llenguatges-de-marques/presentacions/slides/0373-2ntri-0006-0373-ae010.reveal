@@ -243,3 +243,58 @@ Correcció:
 - fàcilment automatitzable
 
 Aquesta AE tanca el bloc XSD.
+
+
+---
+
+## Ampliació voluntària (NO avaluable)
+
+Si ja has acabat **correctament** l’activitat:
+
+- els teus XML **validen**
+- els teus XSD **no donen errors**
+- tens **les dues opcions resoltes**
+
+pots fer una ampliació opcional:
+
+---
+
+### Transformació amb XSLT
+
+- Crea **un únic fitxer XSLT**
+- Transforma **un dels teus XML**
+- Mostra les dades en:
+  - una llista (`ul`) **o**
+  - una taula (`table`)
+
+---
+
+**Condicions importants:**
+
+- Només té sentit **si l’XML valida amb el seu XSD**
+- NO és avaluable
+- NO cal estil
+- NO cal HTML complex
+- NO cal JavaScript
+
+> **Si no valida, no es transforma.**
+
+Note:
+Aquesta diapositiva és només per a qui acabi abans.
+
+Explica-ho així, literalment:
+> “Això no és més nota,  
+> és més comprensió.”
+
+Remarca molt clar:
+> “Si l’XML no valida,  
+> **NO es pot transformar**.”
+
+No ajudis amb l’XSLT si:
+- l’XSD no està bé
+- o el problema és de dades
+
+Aquesta ampliació serveix per veure si:
+- entenen el flux complet
+- saben reaprofitar el que ja coneixen
+- respecten l’ordre professional: validar → transformar

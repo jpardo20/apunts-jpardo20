@@ -89,11 +89,18 @@
             "description": "Pràctica guiada de XSD (pas a pas)",
             "kind": "theory"
         },{
-            "order": 170,
+            "order": 153,
             "title": "153. Activitat XSD - 0373-ae010",
             "src": "slides/0373-2ntri-0006-0373-ae010.reveal",
             "description": "Activitat avaluable: 0373-ae010",
             "kind": "activity"
+        },{
+            "order": 155,
+            "title": "155. De XSD a XSLT",
+            "src": "slides/0373-2ntri-0007-xsd-xsl-pont.reveal",
+            "description": "De XSD a XSLT: Només transformem dades correctes",
+            "status": "inactive",
+            "kind": "theory"
         }
     ]
 }

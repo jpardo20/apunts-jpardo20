@@ -1,0 +1,284 @@
+<!--
+File: 0373-2ntri-0007-xsd-xsl-pont.reveal
+
+Reveal.js separators:
+data-separator="^---$"
+data-separator-vertical="^----$"
+data-separator-notes="^Note:"
+data-charset="utf-8"
+-->
+
+# De XSD a XSLT  
+## Només transformem dades correctes
+
+**Mòdul 0373 — Llenguatges de marques**
+
+---
+
+## On som ara?
+
+Ja sabem:
+
+- crear **XML**
+- definir **regles amb XSD**
+- validar dades
+- transformar amb **XSLT**
+
+Però encara falta una cosa important.
+
+Note:
+Objectiu d’aquesta diapositiva: **situar**.
+
+Dir-ho així:
+> “No estem començant res nou.  
+> Tot això ja ho sabeu fer.”
+
+I afegeix:
+> “El que farem avui és **lligar-ho tot**  
+> com ho faria un sistema real.”
+
+---
+
+## La pregunta clau
+
+Quan hem de fer una transformació amb XSLT?
+
+- Sempre?
+- Quan el navegador la mostra bé?
+- O només en alguns casos?
+
+Note:
+Aquí **no contestis encara**.
+
+Pregunta literal:
+> “Transformaríeu qualsevol XML…  
+> encara que tingui errors?”
+
+Deixa que responguin.  
+No corregeixis immediatament.
+
+---
+
+## Recordatori important
+
+> **XSD no corregeix errors.  
+> XSD els detecta.**
+
+Per tant:
+
+- si hi ha errors → les dades **no són fiables**
+- si no són fiables → **no s’haurien d’utilitzar**
+
+Note:
+Aquesta frase ja la coneixen.
+
+Dir-ho així:
+> “Això no és teoria.  
+> És una norma professional.”
+
+---
+
+## Flux correcte de treball
+
+```
+XML
+ ↓
+VALIDACIÓ (XSD)
+ ↓
+TRANSFORMACIÓ (XSLT)
+ ↓
+RESULTAT
+```
+
+Note:
+Assenyala cada pas.
+
+Dir-ho literalment:
+> “L’XSLT **no va primer**.”  
+> “Va després de la validació.”
+
+Remarca:
+> “Si saltem la validació,  
+> el problema no és l’XSLT.”
+
+---
+
+## Exemple real
+
+Tenim:
+
+- un XML
+- un XSD correcte
+- un XSLT senzill
+
+**Pregunta:**  
+Què passa si les dades estan malament?
+
+Note:
+Aquesta diapositiva prepara la demostració.
+
+No expliquis encara què passarà.
+
+---
+
+## Cas 1: Dades correctes
+
+- XML valida amb XSD
+- Transformem amb XSLT
+- Resultat correcte
+
+Tot sembla funcionar.
+
+Note:
+Aquí pots mostrar breument:
+- un XML vàlid
+- una transformació simple (taula, llista…)
+
+No cal codi llarg.
+Només el concepte.
+
+---
+
+## Cas 2: Dades incorrectes
+
+Ara fem això:
+
+```xml
+<preu>abc</preu>
+```
+
+El XML:
+- està **ben format**
+- però **NO valida**
+
+Note:
+Pregunta literal:
+> “Això ho hauríem de transformar?”
+
+Deixa que responguin.
+
+---
+
+## Què passa realment?
+
+- El navegador **pot mostrar resultat**
+- L’XSLT **pot executar-se**
+- Però…
+
+> **El resultat no és fiable**
+
+Note:
+Missatge clau.
+
+Dir-ho clar:
+> “Que una cosa es pugui fer  
+> no vol dir que s’hagi de fer.”
+
+Això els sacseja bastant.
+
+---
+
+## Error molt habitual
+
+> “Funciona igualment, no?”
+
+Resposta professional:
+
+> **No.**
+
+Perquè:
+- el problema **no és tècnic**
+- és de **confiança en les dades**
+
+Note:
+Relaciona-ho amb:
+- factures
+- llistats
+- informes
+- dades d’empresa
+
+---
+
+## Regla d’or
+
+> **Mai es transformen dades  
+> que no han estat validades**
+
+Encara que:
+- el navegador les mostri
+- l’XSLT no doni error
+
+Note:
+Llegeix-ho literalment.
+Pausa.
+
+Aquesta és la idea central de la sessió.
+
+---
+
+## Connexió amb l’activitat AE010
+
+A l’activitat que heu fet:
+
+- primer heu validat
+- després heu comprovat errors
+- només amb dades correctes
+  → el sistema pot confiar-hi
+
+Note:
+Fes-los veure que **no era un exercici aïllat**.
+
+Dir-ho així:
+> “L’AE010 no era per aprendre XSD.  
+> Era per entendre aquest pas.”
+
+---
+
+## Què farem a partir d’ara?
+
+A partir d’ara:
+
+- qualsevol XML:
+  - **es valida primer**
+  - **es transforma després**
+- si no valida:
+  - s’atura el procés
+
+Note:
+Això és canvi de mentalitat.
+
+Relaciona-ho amb:
+- DAM
+- backend
+- aplicacions reals
+
+---
+
+## Missatge final
+
+> **XSLT no arregla dades dolentes.  
+> XSD evita que les fem servir.**
+
+Note:
+Llegeix-ho literalment.
+
+Afegeix:
+> “Això és el que fa un sistema professional.”
+
+---
+
+## Tancament
+
+Avui hem après que:
+
+- XML són dades
+- XSD defineix regles
+- XSLT transforma
+- **l’ordre importa**
+
+Note:
+Última frase exacta:
+> “Primer confiem en les dades.  
+> Després ja les transformarem.”
+
+Aquí tanques la sessió pont.
