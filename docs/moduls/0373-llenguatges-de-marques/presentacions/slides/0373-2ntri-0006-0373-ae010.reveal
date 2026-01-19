@@ -10,8 +10,6 @@ data-charset="utf-8"
 
 # Activitat: Validació de dades XML amb XSD <codiae>0373-ae010</codiae>
 
-##  
-
 **Mòdul 0373 — Llenguatges de marques**
 
 ---
@@ -39,9 +37,9 @@ Abans de transformar o mostrar dades:
 
 ## Què cal crear
 
-Has de crear una carpeta amb el nom `0373-ae010`
+Has de crear una carpeta amb el nom <codiae>0373-ae010</codiae>
 
-Dins de la carpeta `0373-ae010`, hauràs de crear **dues subcarpetes**, una per a cada cas escollit.
+Dins de la carpeta <codiae>0373-ae010</codiae>, hauràs de crear **dues subcarpetes**, una per a cada cas escollit.
 
 Cada subcarpeta ha de contenir:
 
@@ -177,13 +175,13 @@ Es comprovarà que:
 
 Has de lliurar:
 
-- Un fitxer ZIP, que contingui **només** la carpeta **`0373-ae010`**
+- Un fitxer ZIP, que contingui **només** la carpeta **<codiae>0373-ae010</codiae>**
 - Dins hi ha d’haver **dues subcarpetes**, una per cada cas escollit
 - Cada subcarpeta ha de contenir: el fitxer XML i el fitxer XSD
 
 <div class="admonition caution">
 <br>
-<p class="admonition-title">Cap altre fitxer</p>
+<p>Un únic fitxer comprimit, amb dues subcarpetes, el fitxer XML i el fitxer XSD. I <u>cap altre fitxer.</u></p>
 </div>
 
 
