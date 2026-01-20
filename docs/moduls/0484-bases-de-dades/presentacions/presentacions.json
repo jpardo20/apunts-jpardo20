@@ -195,6 +195,21 @@
       "tags": [
         "BBDD", "activitat"
       ] 
-    }   
+    },
+    {
+      "id": "0484-bds-teoria-009-alter-table-duplicats",
+      "title": "TEORIA: ALTER TABLE, duplicats i dades compartides",
+      "description": "TEORIA: ALTER TABLE, duplicats i dades compartides",
+      "src": "slides/0484-bds-teoria-009-alter-table-duplicats.reveal",
+      "theme": "white",
+      "status": "active",
+       "kind": "theory",
+      "tags": [
+        "BBDD"
+      ]
+    }
+    
+    
+
   ]
 }

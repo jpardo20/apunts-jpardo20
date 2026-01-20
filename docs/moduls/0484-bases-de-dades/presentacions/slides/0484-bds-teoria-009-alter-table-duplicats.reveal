@@ -1,0 +1,384 @@
+# ALTER TABLE, còpies de seguretat i duplicats
+## 0484 – Bases de dades (1r DAM)
+
+---
+
+## Abans de fer res: còpia de seguretat
+
+Abans de modificar una base de dades:
+
+- **Sempre** fem una còpia de seguretat
+- Encara que “només” siguin proves
+- Encara que “només” siguin INSERTs
+
+Note:
+Temps: 2 min  
+Temps acumulat: 2 min  
+
+Això és un hàbit professional fonamental.  
+No comencem mai tocant dades directament.  
+Primer ens assegurem que podem tornar enrere si passa qualsevol cosa.
+
+---
+
+## Còpia de seguretat (idea general)
+
+Una còpia de seguretat ens permet:
+
+- Tornar a un estat anterior
+- Desfer errors humans
+- Provar coses **sense por**
+
+> No cal saber-la fer encara, només saber que **existeix**
+
+Note:
+Temps: 2 min  
+Temps acumulat: 4 min  
+
+No entris en detalls tècnics encara.  
+L’objectiu és entendre **per què** es fa, no **com**.  
+
+---
+
+## Sintaxi bàsica de còpia de seguretat
+
+Exemple de còpia completa d’una base de dades:
+
+```bash
+mysqldump videojoc_online > backup_videojoc.sql
+```
+
+- Es crea un fitxer `.sql`
+- Conté l’estructura i les dades
+- Representa l’estat actual de la base de dades
+
+Note:
+Temps: 2 min  
+Temps acumulat: 6 min  
+
+No expliquis opcions ni paràmetres.  
+Remarca que és un exemple **conceptual**.  
+L’important és entendre que tenim un fitxer amb “una foto” de la BD.
+
+---
+
+## Fem un canvi “dolent” a propòsit
+
+Executem un INSERT incorrecte o duplicat
+
+```sql
+INSERT INTO jugador (nom_usuari, email, data_registre)
+VALUES ('alphaWolf', 'alpha@game.com', '2026-01-18');
+```
+
+El nombre de registres **canvia**
+
+Note:
+Temps: 2 min  
+Temps acumulat: 8 min  
+
+Mostra un `COUNT(*)` abans i després.  
+Que vegin clarament que **una sola comanda** pot alterar l’estat de la BD.  
+Aquí encara no arreglem res.
+
+---
+
+## Tornem enrere amb la còpia
+
+Restaurem la còpia de seguretat
+
+```bash
+mysql videojoc_online < backup_videojoc.sql
+```
+
+- El registre “desapareix”
+- Tornem exactament a l’estat anterior
+
+> No l’hem esborrat: **hem restaurat**
+
+Note:
+Temps: 2 min  
+Temps acumulat: 10 min  
+
+Moment clau.  
+Insisteix que no estem “desfent amb SQL”,  
+sinó **tornant en el temps** a un estat anterior.
+
+---
+
+## Context inicial realista
+
+Tots partim d’una base de dades:
+
+- Amb dades prèvies
+- D’activitats anteriors
+- **No buida**
+
+Note:
+Temps: 2 min  
+Temps acumulat: 12 min  
+
+Això és molt important:  
+no estem treballant en una BD neta de laboratori.  
+És una situació **real**.
+
+---
+
+## Abans de continuar: noms de les taules
+
+Actualment les taules es diuen:
+
+- jugador
+- personatge
+- partida
+- participa
+
+Les volem en **majúscules i plural**
+
+Note:
+Temps: 2 min  
+Temps acumulat: 14 min  
+
+No és només estètica.  
+És coherència, llegibilitat i convenció professional.
+
+---
+
+## Canviar el nom d’una taula: alerta
+
+No totes les maneres són igual de segures
+
+- Algunes **respecten les relacions**
+- Altres **trenquen les claus foranes**
+
+Note:
+Temps: 2 min  
+Temps acumulat: 16 min  
+
+Aquí introdueix el concepte de dependències.  
+Les taules estan relacionades entre elles.
+
+---
+
+## Manera correcta (segura)
+
+```sql
+RENAME TABLE jugador TO JUGADORS;
+```
+
+o bé:
+
+```sql
+ALTER TABLE jugador RENAME TO JUGADORS;
+```
+
+✔ Manté dades  
+✔ Manté claus foranes  
+
+Note:
+Temps: 3 min  
+Temps acumulat: 19 min  
+
+Frase clau:  
+Les claus foranes **no són text**, són objectes del sistema.  
+MySQL sap actualitzar-les automàticament.
+
+---
+
+## Manera incorrecta (NO fer-ho)
+
+```sql
+CREATE TABLE JUGADORS (...);
+INSERT INTO JUGADORS SELECT * FROM jugador;
+DROP TABLE jugador;
+```
+
+❌ Relacions trencades  
+❌ Inconsistència  
+
+Note:
+Temps: 3 min  
+Temps acumulat: 22 min  
+
+Això és el que molta gent fa malament.  
+Aquí la base de dades **no ens pot protegir**.  
+No tot el que “funciona” és correcte.
+
+---
+
+## SEGONA còpia de seguretat
+
+Després del canvi estructural:
+
+- Taules ja amb noms definitius
+- Relacions correctes
+- Estat **estable**
+
+👉 Fem una **nova còpia de seguretat**
+
+```bash
+mysqldump videojoc_online > backup_videojoc_estructura.sql
+```
+
+Note:
+Temps: 2 min  
+Temps acumulat: 24 min  
+
+Explica que ara tenim un **nou punt segur**.  
+Aquest és el punt de partida per treballar amb dades.
+
+---
+
+## Dataset comú de la classe
+
+Tots tenim **el mateix script** d’inserció:
+
+- Dades de tots els companys
+- Dades extra
+- Un sol INSERT per taula
+
+Note:
+Temps: 2 min  
+Temps acumulat: 26 min  
+
+Mostra només un fragment.  
+El mateix fitxer per a tothom.
+
+---
+
+## Què passa si l’executem?
+
+Com que ja hi havia dades:
+
+- Primera execució → ❌ **duplicats**
+- Segona execució → ❌ **més duplicats**
+
+Note:
+Temps: 3 min  
+Temps acumulat: 29 min  
+
+El problema apareix **ja a la primera execució**.  
+No depèn de repetir-lo.
+
+---
+
+## Mala solució (expressament)
+
+“Aneu amb compte de no executar-lo més d’un cop”
+
+❌ No fiable  
+❌ No professional  
+❌ No escalable  
+
+Note:
+Temps: 2 min  
+Temps acumulat: 31 min  
+
+Una base de dades no pot confiar en l’usuari.
+
+---
+
+## La pregunta correcta
+
+❓ Com pot la base de dades **impedir sola** els duplicats?
+
+Note:
+Temps: 2 min  
+Temps acumulat: 33 min  
+
+Primer el concepte, després el SQL.
+
+---
+
+## Dir-li a la BD què és únic
+
+Exemples:
+
+- nom_usuari no es pot repetir
+- email no es pot repetir
+- una partida és única per data + durada
+
+Note:
+Temps: 2 min  
+Temps acumulat: 35 min  
+
+Això és disseny.
+
+---
+
+## ALTER TABLE + UNIQUE
+
+```sql
+ALTER TABLE JUGADORS
+ADD CONSTRAINT uq_jugadors_nom UNIQUE (nom_usuari);
+```
+
+La BD **ara sap** què és un duplicat
+
+Note:
+Temps: 3 min  
+Temps acumulat: 38 min  
+
+La base de dades passa a protegir les dades.
+
+---
+
+## Tornem a executar el mateix script
+
+- No falla
+- No duplica
+- El podem executar moltes vegades
+
+Note:
+Temps: 2 min  
+Temps acumulat: 40 min  
+
+Moment “wow”.
+
+---
+
+## Comprovació objectiva
+
+```sql
+SELECT COUNT(*) FROM JUGADORS;
+```
+
+Tots hem d’obtenir **el mateix valor**
+
+Note:
+Temps: 2 min  
+Temps acumulat: 42 min  
+
+El comptador no menteix.
+
+---
+
+## I si vull desfer canvis més fins?
+
+Existeixen mecanismes com:
+
+- **ROLLBACK**
+- **Transaccions**
+
+> Ho veurem més endavant
+
+Note:
+Temps: 2 min  
+Temps acumulat: 44 min  
+
+Només plantar la llavor.
+
+---
+
+## Missatge final
+
+> Una base de dades ben dissenyada  
+> **no confia en l’usuari**  
+>
+> **es protegeix sola**
+
+Note:
+Temps: 2 min  
+Temps acumulat: 46 min  
+
+Aquesta és la idea clau de la sessió.
