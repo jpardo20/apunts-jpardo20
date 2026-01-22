@@ -172,8 +172,8 @@ o bé:
 ALTER TABLE jugador RENAME TO JUGADORS;
 ```
 
-✔ Manté dades  
-✔ Manté claus foranes  
+Manté dades  
+Manté claus foranes  
 
 Note:
 Temps: 3 min  
@@ -193,8 +193,8 @@ INSERT INTO JUGADORS SELECT * FROM jugador;
 DROP TABLE jugador;
 ```
 
-❌ Relacions trencades  
-❌ Inconsistència  
+Relacions trencades  
+Inconsistència  
 
 Note:
 Temps: 3 min  
@@ -214,11 +214,12 @@ Després del canvi estructural:
 - Relacions correctes
 - Estat **estable**
 
-👉 Fem una **nova còpia de seguretat**
+Fem una **nova còpia de seguretat**
 
 ```bash
-mysqldump videojoc_online > backup_videojoc_estructura.sql
+mysqldump -u root -p videojoc_online > backup_videojoc_estructura.sql
 ```
+
 
 Note:
 Temps: 2 min  
@@ -250,8 +251,8 @@ El mateix fitxer per a tothom.
 
 Com que ja hi havia dades:
 
-- Primera execució → ❌ **duplicats**
-- Segona execució → ❌ **més duplicats**
+- Primera execució → **duplicats**
+- Segona execució → **més duplicats**
 
 Note:
 Temps: 3 min  
@@ -266,9 +267,9 @@ No depèn de repetir-lo.
 
 “Aneu amb compte de no executar-lo més d’un cop”
 
-❌ No fiable  
-❌ No professional  
-❌ No escalable  
+No fiable  
+No professional  
+No escalable  
 
 Note:
 Temps: 2 min  
@@ -280,7 +281,7 @@ Una base de dades no pot confiar en l’usuari.
 
 ## La pregunta correcta
 
-❓ Com pot la base de dades **impedir sola** els duplicats?
+Com pot la base de dades **impedir sola** els duplicats?
 
 Note:
 Temps: 2 min  
