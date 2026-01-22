@@ -45,7 +45,7 @@ L’objectiu és entendre **per què** es fa, no **com**.
 Exemple de còpia completa d’una base de dades:
 
 ```bash
-mysqldump videojoc_online > backup_videojoc.sql
+mysqldump -u root -p videojoc_online > backup_videojoc.sql
 ```
 
 - Es crea un fitxer `.sql`
@@ -88,7 +88,7 @@ Aquí encara no arreglem res.
 Restaurem la còpia de seguretat
 
 ```bash
-mysql videojoc_online < backup_videojoc.sql
+mysql -u root -p videojoc_online < backup_videojoc.sql
 ```
 
 - El registre “desapareix”
