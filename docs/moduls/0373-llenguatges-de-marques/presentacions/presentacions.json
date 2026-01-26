@@ -101,10 +101,13 @@
             "description": "De XSD a XSLT: Només transformem dades correctes",
             "status": "inactive",
             "kind": "theory"
+        },{
+            "order": 160,
+            "title": "160. XSD, XSLT i decisions de sistema",
+            "src": "slides/0373-2ntri-0007-xsd-xsl-pipeline.reveal",
+            "description": "XSD, XSLT i decisions de sistema: Validar no és corregir. Transformar no és decidir",
+            "status": "active",
+            "kind": "theory"
         }
     ]
 }
-
-
-
-

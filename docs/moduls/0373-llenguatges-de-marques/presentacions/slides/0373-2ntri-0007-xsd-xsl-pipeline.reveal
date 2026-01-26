@@ -1,0 +1,284 @@
+# XSD, XSLT i decisions de sistema
+
+Validar no és corregir  
+Transformar no és decidir
+
+Note:
+Avui no aprendrem res nou.
+Avui entendrem què passa realment quan treballem amb dades.
+Ens posarem en el paper del sistema, no del programador ni de l’alumne.
+
+---
+
+## Objectiu de la sessió
+
+Avui ens posarem en el paper del **SISTEMA**.
+
+Tenim:
+- un XML
+- un XSD
+- un XSLT
+
+El sistema ha de **decidir què fer**.
+
+Note:
+Insisteix molt en la paraula decidir.
+No parlis encara de Mentimeter.
+Només crea el marc mental de la sessió.
+
+---
+
+## Com treballarem avui
+
+Per cada cas haureu de decidir:
+
+**1)**  Valida o no valida?  
+
+**2)** Quin és el problema?  
+
+**3)** El sistema hauria de continuar?
+
+Note:
+No és un examen.
+No hi ha trampes.
+No és qüestió de sintaxi sinó de criteri.
+
+---
+
+<section class="cas">
+
+## CAS 1
+
+
+<div class="r-hstack items-start">
+<div style="width: 30%; padding-right: 1rem;  font-size: 0.85em;">
+
+**XML**
+
+```xml
+<persona>
+  <edat>25</edat>
+  <nom>Anna</nom>
+</persona>
+```
+
+</div>
+
+
+<div class="column" style="width: 70%;   font-size: 0.85em; ">
+
+**XSD**
+
+```xml
+<xs:sequence>
+  <xs:element name="nom" type="xs:string"/>
+  <xs:element name="edat" type="xs:integer"/>
+</xs:sequence>
+```
+
+</div>
+</div>
+
+<div class="menti-footer">
+Des del mòbil <codiae>menti.com</codiae> amb el codi <codiae>7221 9502</codiae>
+</div>
+
+Note:
+Cas clàssic per començar.
+Molts alumnes pensen que “hi és tot” i per tant hauria de validar.
+Ideal per parlar d’ordre i de regles estrictes.
+
+</section>
+
+---
+
+<section class="cas">
+
+## CAS 2
+
+
+<div class="r-hstack items-start">
+<div style="width: 30%; padding-right: 1rem;  font-size: 0.85em;">
+
+**XML**
+
+```xml
+<producte>
+  <preu>deu</preu>
+</producte>
+```
+
+</div>
+<div class="column" style="width: 70%; font-size: 0.85em; ">
+
+**XSD**
+
+```xml
+<xs:element name="preu" type="xs:decimal"/>
+```
+
+</div>
+</div>
+
+<div class="menti-footer">
+Des del mòbil <codiae>menti.com</codiae> amb el codi <codiae>7221 9502</codiae>
+</div>
+
+Note:
+Aquest cas dona seguretat al grup.
+La majoria detectarà l’error.
+Serveix per reforçar la idea de tipus de dades.
+
+</section>
+
+---
+
+<section class="cas">
+
+
+## CAS 3
+
+
+<div class="r-hstack items-start">
+<div style="width: 30%; padding-right: 1rem;  font-size: 0.7em;">
+
+**XML**
+
+```xml
+<llibre>
+  <titol>1984</titol>
+</llibre>
+```
+
+</div>
+<div class="column" style="width: 70%; font-size: 0.85em; ">
+
+
+**XSD**
+
+```xml
+<xs:sequence>
+  <xs:element name="titol" type="xs:string"/>
+  <xs:element name="autor" type="xs:string"/>
+</xs:sequence>
+```
+
+</div>
+</div>
+
+<div class="menti-footer">
+Des del mòbil <codiae>menti.com</codiae> amb el codi <codiae>7221 9502</codiae>
+</div>
+
+
+Note:
+Bon moment per parlar de dades incompletes.
+No és que estigui “mal escrit”, és que no compleix els mínims.
+
+</section>
+
+---
+
+<section class="cas">
+
+## CAS 4
+
+
+<div class="r-hstack items-start">
+<div style="width: 30%; padding-right: 1rem;  font-size: 0.85em;">
+
+**XML**
+
+```xml
+<sensor>
+  <valor>-5</valor>
+</sensor>
+```
+
+</div>
+<div class="column" style="width: 70%;">
+
+**XSD**
+
+```xml
+<xs:element name="valor">
+  <xs:simpleType>
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+```
+
+</div>
+</div>
+
+<div class="menti-footer">
+Des del mòbil <codiae>menti.com</codiae> amb el codi <codiae>7221 9502</codiae>
+</div>
+
+Note:
+Cas clau conceptualment.
+Perfecte per reforçar:
+“Ben format no vol dir acceptable”.
+
+</section>
+
+---
+
+## CAS 5
+
+Suposem que aquest XML **NO valida**.
+
+El sistema hauria de continuar cap a XSLT?
+
+Note:
+Aquí encara no mostres cap resultat real.
+Només decisió i criteri.
+És un cas totalment conceptual.
+
+---
+
+## Què fa REALMENT el sistema?
+
+**Realitat:**
+
+XSD **NO atura** res  
+XSLT **NO valida** res  
+
+Un XML **invàlid pot transformar-se igualment**.
+
+Note:
+Aquest és el cop de realitat.
+Deixa uns segons de silenci.
+Frase clau: “El llenguatge no decideix”.
+
+---
+
+## El pipeline professional
+
+Un sistema ben dissenyat funciona així:
+
+```
+XML → VALIDACIÓ → DECISIÓ → TRANSFORMACIÓ
+```
+
+Note:
+Aquí pots mencionar eines com xmllint.
+No entris en comandes.
+Només idea mental de pipeline.
+
+---
+
+## Missatge final
+
+Validar **no és opcional**  
+Transformar **no és automàtic**
+
+**Si no valida, no es transforma**  
+**PERQUÈ EL SISTEMA HO DECIDEIX**
+
+Note:
+Tancament fort.
+Repeteix la frase final si cal.
+Aquesta és la idea que han de recordar del bloc.

@@ -231,3 +231,19 @@ h1 codiae::before{
 h1 codiae::after{
     content: ") "
 }
+
+
+.reveal section.cas pre code {
+  font-size: 1.6em;
+  line-height: 1.35;
+}
+
+.menti-footer {
+  position: fixed;
+  bottom: 150px;
+  right: 140px;
+  font-size: 0.7em;
+  color: #555;
+  opacity: 0.8;
+}
+
