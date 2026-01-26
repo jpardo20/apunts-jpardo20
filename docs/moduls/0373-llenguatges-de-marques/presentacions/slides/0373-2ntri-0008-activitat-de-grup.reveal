@@ -1,5 +1,4 @@
-## Activitat de grup  
-### *“Decideix com actua el sistema”*
+## Activitat de grup “Decideix com actua el sistema”
 
 Treballareu **en parelles**.
 
@@ -66,7 +65,8 @@ L’important és **la decisió**, no la dificultat.
 
 ## Estructura recomanada del document
 
-```
+```xml
+
 CAS 1
 XML:
 ...
@@ -74,17 +74,17 @@ XML:
 XSD:
 ...
 
----
+===
 
 CAS 2
 ...
 
----
+===
 
 CAS 3
 ...
 
----
+===
 
 CAS 4
 ...
