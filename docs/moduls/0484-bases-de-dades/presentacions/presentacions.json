@@ -207,9 +207,18 @@
       "tags": [
         "BBDD"
       ]
+    },
+    {
+      "id": "0484-bds-teoria-010-gestio-escape-rooms",
+      "title": "TEORIA: Plataforma de gestió d’Escape Rooms i experiències immersives",
+      "description": "TEORIA: Plataforma de gestió d’Escape Rooms i experiències immersives",
+      "src": "slides/0484-bds-teoria-010-gestio-escape-rooms.reveal",
+      "theme": "white",
+      "status": "active",
+       "kind": "theory",
+      "tags": [
+        "BBDD"
+      ]
     }
-    
-    
-
   ]
 }

@@ -1,0 +1,230 @@
+## Plataforma de gestió d’Escape Rooms i experiències immersives
+
+---
+
+## Context general
+
+Una empresa especialitzada en **escape rooms i experiències immersives** vol desenvolupar una base de dades pròpia per gestionar tota la seva activitat.
+
+L’empresa disposa de diverses **seus** repartides en diferents ciutats.  
+A cada seu s’ofereixen diverses **sales d’escape room**, cadascuna amb una temàtica concreta i un nivell de dificultat determinat.
+
+⬇️
+
+----
+
+Els clients formen **equips** per participar en les experiències. Cada equip fa una **reserva**, realitza l’activitat i obté un **resultat** que permet a l’empresa analitzar el rendiment, l’èxit de les sales i el comportament dels participants.
+
+La base de dades haurà de permetre:
+
+- gestionar tota la informació operativa,
+- registrar l’activitat històrica,
+- i explotar les dades mitjançant consultes SQL simples i avançades.
+
+---
+
+## Seus
+
+De cada seu es vol guardar la informació següent:
+
+- identificador de la seu
+- nom de la seu
+- ciutat
+- adreça
+- telèfon de contacte
+
+⬇️
+
+----
+
+Una seu:
+
+- pot tenir diverses sales
+- pot organitzar moltes reserves al llarg del temps
+
+---
+
+## Sales
+
+Cada seu disposa de diverses sales d’escape room.
+
+De cada sala es vol guardar:
+
+- identificador de la sala
+- nom de la sala
+- temàtica (misteri, terror, ciència-ficció, històric, etc.)
+- nivell de dificultat (fàcil, mitjà, difícil)
+- durada màxima en minuts
+- nombre màxim de participants
+- seu on es troba la sala
+
+⬇️
+
+----
+
+
+Una sala:
+
+- pertany a una única seu
+- pot ser utilitzada en moltes reserves diferents
+
+---
+
+## Equips
+
+Els participants s’organitzen en equips per realitzar una experiència.
+
+De cada equip es vol guardar:
+
+- identificador de l’equip
+- nom de l’equip
+- data de creació
+- nombre total de participants
+
+
+⬇️
+
+----
+
+Un equip:
+
+- pot fer diverses reserves en diferents dates
+- pot participar en sales diferents
+
+---
+
+## Participants
+
+Cada equip està format per diversos participants.
+
+De cada participant es vol guardar:
+
+- identificador del participant
+- nom
+- cognoms
+- correu electrònic
+- data de naixement
+
+⬇️
+
+----
+
+
+Un participant:
+
+- pot formar part de diferents equips al llarg del temps
+- pot participar en moltes experiències
+
+---
+
+## Relació equip – participant
+
+Cal registrar quins participants formen part de cada equip.
+
+Aquesta relació ha de permetre saber:
+
+- a quin equip pertany cada participant
+- en quina data s’hi va incorporar
+
+---
+
+## Reserves
+
+Una reserva representa la participació d’un equip en una sala en una data i hora concretes.
+
+De cada reserva es vol guardar:
+
+- identificador de la reserva
+- data i hora de la reserva
+- sala reservada
+- equip que fa la reserva
+- nombre de participants
+- estat de la reserva (realitzada, cancel·lada, pendent)
+
+⬇️
+
+----
+
+
+Una reserva:
+
+- correspon a una única sala
+- correspon a un únic equip
+- pot tenir associat un resultat
+
+---
+
+## Resultats
+
+Quan una reserva es realitza, es registra el resultat de l’experiència.
+
+De cada resultat es vol guardar:
+
+- identificador del resultat
+- reserva associada
+- temps utilitzat en minuts
+- èxit o fracàs (sí o no)
+- puntuació obtinguda
+- nombre de pistes utilitzades
+
+⬇️
+
+----
+
+
+Un resultat:
+
+- correspon a una única reserva
+- permet analitzar el rendiment de l’equip i la dificultat de la sala
+
+<!-- ---
+
+## Objectius del projecte
+
+A partir d’aquest enunciat, l’alumnat haurà de ser capaç de:
+
+1. Analitzar el problema i identificar totes les entitats.
+2. Dissenyar el Model Entitat-Relació (MER), indicant:
+   - entitats
+   - atributs
+   - relacions
+   - cardinalitats
+3. Transformar el MER en un model relacional.
+4. Crear l’estructura de la base de dades amb SQL (`CREATE TABLE`).
+5. Definir correctament:
+   - claus primàries
+   - claus foranes
+   - restriccions d’integritat
+6. Inserir dades coherents a totes les taules (`INSERT INTO`).
+7. Executar consultes SQL per:
+   - obtenir llistats simples
+   - combinar dades de diverses taules
+   - calcular estadístiques i rànquings
+   - analitzar resultats i rendiment
+
+---
+
+## Possibilitats de treball amb SQL (orientatiu)
+
+Aquest projecte permet treballar, entre d’altres:
+
+- consultes simples amb `SELECT`
+- filtres amb `WHERE`
+- ordenacions amb `ORDER BY`
+- agregacions (`COUNT`, `AVG`, `MAX`, `MIN`, `SUM`)
+- agrupacions amb `GROUP BY` i `HAVING`
+- consultes amb `JOIN`
+- subconsultes
+- anàlisi de dades històriques
+
+---
+
+## Nota final
+
+La base de dades s’ha de dissenyar pensant que:
+
+- s’hi afegiran moltes dades amb el temps
+- les consultes han de ser clares i eficients
+- les relacions entre taules han de reflectir fidelment la realitat del sistema
+
+Aquest projecte es treballarà de manera progressiva al llarg de diverses sessions. -->
