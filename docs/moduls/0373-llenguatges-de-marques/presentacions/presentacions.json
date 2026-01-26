@@ -108,6 +108,17 @@
             "description": "XSD, XSLT i decisions de sistema: Validar no és corregir. Transformar no és decidir",
             "status": "active",
             "kind": "theory"
+        },{
+            "order": 161,
+            "title": "161. XSD, XSLT i decisions de sistema => Activitat de grup",
+            "src": "slides/0373-2ntri-0008-activitat-de-grup.reveal",
+            "description": "XSD, XSLT i decisions de sistema: Activitat de grup Decideix com actua el sistema",
+            "status": "active",
+            "kind": "theory"
         }
+
+
+
+        
     ]
 }

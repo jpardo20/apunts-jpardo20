@@ -1,0 +1,113 @@
+## Activitat de grup  
+### *“Decideix com actua el sistema”*
+
+Treballareu **en parelles**.
+
+Cada parella ha de crear **4 casos** formats per:
+- un **fragment d’XML**
+- el seu **fragment d’XSD associat**
+
+Aquests casos **no són per a vosaltres**, sinó perquè  
+**la resta de companys** decideixin què faria el sistema.
+
+---
+
+## Per a cada cas, la classe haurà de decidir:
+
+1️⃣ **Valida o no valida?**  
+2️⃣ **Quin és el problema (si n’hi ha)?**  
+3️⃣ **El sistema hauria de continuar o aturar-se?**
+
+No cal donar la resposta al document.  
+La decisió la prendrà la classe.
+
+---
+
+## Idea clau (molt important)
+
+⚠️ **No es tracta de buscar errors tècnics sofisticats.**
+
+👉 Es tracta de crear **casos que facin dubtar a un sistema**.
+
+Penseu en:
+- què pot saber el sistema
+- què no pot saber
+- fins on arriba una validació XSD
+- quan cal aturar-se i quan no
+
+💡 **No tots els casos han de provocar una aturada.**
+
+---
+
+## Requisits tècnics
+
+- Els fragments poden ser **simples**
+- L’XML ha d’estar **ben format**
+  *(excepte si el vostre objectiu és justament demostrar el contrari)*
+- No cal un document XML complet
+- No cal XSDs llargs ni complexos
+
+L’important és **la decisió**, no la dificultat.
+
+---
+
+## Format d’entrega
+
+📄 **Format lliure** (el que considereu més oportú):
+- Google Docs
+- LibreOffice / Word
+- Markdown
+- Text pla
+- qualsevol format que es pugui **mostrar a classe**
+
+⚠️ Ho haureu de **projectar**, perquè la resta de companys decideixin.
+
+---
+
+## Estructura recomanada del document
+
+```
+CAS 1
+XML:
+...
+
+XSD:
+...
+
+---
+
+CAS 2
+...
+
+---
+
+CAS 3
+...
+
+---
+
+CAS 4
+...
+```
+
+❌ No escriviu la solució  
+✅ Només plantegeu els casos
+
+---
+
+## Dinàmica a classe
+
+1️⃣ Una parella mostra **un cas**  
+2️⃣ La classe decideix:
+- valida / no valida  
+- continuar / aturar  
+3️⃣ La parella explica quin era l’objectiu del cas  
+4️⃣ Comentem la decisió com a **sistema**, no com a persones
+
+---
+
+## Recorda
+
+**Validar no és corregir**  
+**Transformar no és decidir**  
+**Pensar com un sistema és l’objectiu**
