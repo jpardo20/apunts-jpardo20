@@ -1,0 +1,294 @@
+# Usuaris, permisos i processos
+## Conceptes fonamentals de sistemes operatius
+
+---
+
+## Objectius de la sessió
+
+Al final d’aquesta classe, l’alumnat ha de ser capaç de:
+
+- Entendre què és un **usuari** dins d’un sistema operatiu
+- Diferenciar **usuari**, **grup** i **administrador**
+- Comprendre el concepte de **permís**
+- Entendre què és un **procés** i a quin usuari pertany
+- Relacionar usuaris, permisos i processos
+
+Note:
+Temps: 2 min  
+Sessió: 1 hora
+
+---
+
+## Idea clau (abans de començar)
+
+> Un sistema operatiu modern **no confia en programes**,  
+> confia en **usuaris i permisos**.
+
+Aquesta idea és vàlida per:
+- Linux
+- Windows
+- macOS
+- Sistemes servidors
+
+---
+
+## Què és un usuari?
+
+Un **usuari** és una **identitat del sistema**.
+
+No és necessàriament:
+- una persona real
+- algú assegut davant l’ordinador
+
+Pot ser:
+- una persona
+- un servei
+- una aplicació
+- el propi sistema
+
+---
+
+## Sistemes multiusuari
+
+Un sistema multiusuari permet:
+
+- Diverses identitats
+- Diferents permisos
+- Aïllament entre processos
+- Seguretat i control
+
+Això és cert tant en:
+- ordinadors personals
+- servidors
+- màquines virtuals
+
+---
+
+## Tipus d’usuaris (conceptual)
+
+De manera general, trobem:
+
+- **Administrador**
+  - Pot fer qualsevol acció
+- **Usuari estàndard**
+  - Accions limitades
+- **Usuaris del sistema**
+  - Executen serveis i processos interns
+
+Els noms canvien segons el SO, però el concepte és el mateix.
+
+---
+
+## Exemple pràctic (Windows / Linux)
+
+Accions que **només pot fer un administrador**:
+
+- Instal·lar programari
+- Crear o eliminar usuaris
+- Canviar configuració global
+- Accedir a fitxers protegits
+
+Accions que **un usuari normal NO pot fer**.
+
+---
+
+## Què és un grup?
+
+Un **grup** és un conjunt d’usuaris.
+
+Serveix per:
+- Assignar permisos de forma col·lectiva
+- Evitar configurar usuari per usuari
+- Simplificar l’administració
+
+Un usuari pot pertànyer a:
+- un grup
+- diversos grups
+
+---
+
+## Per què existeixen els grups?
+
+Sense grups:
+- permisos repetits
+- mala gestió
+- errors freqüents
+
+Amb grups:
+- control centralitzat
+- seguretat
+- escalabilitat
+
+Això és clau en entorns professionals.
+
+---
+
+## Què són els permisos?
+
+Els **permisos** defineixen:
+
+> Qui pot fer **què** sobre **quin recurs**
+
+Recursos típics:
+- fitxers
+- carpetes
+- dispositius
+- processos
+
+---
+
+## Model bàsic de permisos
+
+La majoria de sistemes operatius fan servir un model similar:
+
+- **Propietari**
+- **Grup**
+- **Altres**
+
+I tres accions bàsiques:
+- llegir
+- escriure
+- executar
+
+---
+
+## Permisos: idea important
+
+Els permisos **no depenen del programa**,  
+depenen de **qui executa el programa**.
+
+Aquesta idea és clau per entendre:
+- errors de permisos
+- seguretat
+- serveis
+
+---
+
+## Exemple conceptual
+
+Pregunta:
+> Si un programa intenta accedir a un fitxer,  
+> qui decideix si pot?
+
+Resposta:
+> **Els permisos del fitxer i l’usuari del procés**
+
+No el programa.  
+No la intenció.  
+No l’usuari “humà”.
+
+---
+
+## Què és un procés?
+
+Un **procés** és:
+> Un programa en execució
+
+Quan un programa s’executa:
+- el sistema crea un procés
+- li assigna un identificador
+- li assigna un usuari
+
+---
+
+## Processos i usuaris
+
+Cada procés:
+- pertany a **un usuari**
+- té uns permisos associats
+- només pot fer allò que permet l’usuari
+
+Un administrador pot:
+- veure tots els processos
+- controlar-los
+
+Un usuari normal:
+- només els seus
+
+---
+
+## Exemple pràctic (conceptual)
+
+Situació:
+- Usuari A executa un programa
+- Usuari B intenta aturar-lo
+
+Resultat:
+- ❌ no permès
+
+Excepte si:
+- Usuari B és administrador
+
+---
+
+## Per què això és tan important?
+
+Perquè explica:
+
+- Per què un servei falla
+- Per què cal executar com a administrador
+- Per què existeix `sudo`
+- Per què Windows demana confirmació
+- Per què Linux bloqueja accions
+
+---
+
+## Relació clau (resum)
+
+```
+Usuari
+  └── Processos
+        └── Accés a recursos
+              └── Permisos
+```
+
+Tot el sistema gira al voltant d’això.
+
+---
+
+## Proves pràctiques possibles (classe)
+
+Durant la sessió o després:
+
+- Executar accions com a usuari normal
+- Provar accions d’administrador
+- Veure processos actius
+- Comparar comportament a Windows i Linux
+
+Els conceptes són els mateixos.
+
+---
+
+## Error típic d’alumnes
+
+> “El programa no funciona”
+
+Quan en realitat:
+> “L’usuari no té permisos”
+
+Aquest canvi de mentalitat és fonamental.
+
+---
+
+## Missatge final
+
+> Entendre usuaris, permisos i processos  
+> és entendre **com funciona realment un sistema operatiu**.
+
+Sense això:
+- no hi ha seguretat
+- no hi ha administració
+- no hi ha sistemes fiables
+
+---
+
+## Proper pas
+
+A partir d’aquí:
+- treballarem comandes concretes
+- farem pràctiques guiades
+- veurem errors reals
+- connectarem amb serveis i xarxa
+
+Note:
+Fi de la sessió

@@ -2,21 +2,29 @@
     "presentations": [
         {
             "order": 10,
-            "title": "01 Resum de Docker",
+            "title": "10 Resum de Docker",
             "src": "slides/0483-00-intro-docker.reveal",
             "description": "RA4 - Administra sistemes operatius multiusuari",
             "kind": "theory"
         },
         {
-            "order": 10,
-            "title": "01 Resum de Docker",
+            "order": 11,
+            "title": "11 Resum de Docker",
             "src": "slides/0483-resum-docker.reveal",
             "description": "RA4 - Administra sistemes operatius multiusuari",
             "kind": "theory"
         },
         {
-            "order": 10,
-            "title": "Activitat 1 - Introducció a Docker (0483-ae001)",
+            "order": 12,
+            "title": "12 Docker Compose",
+            "src": "slides/docker/compose.reveal",
+            "description": "Docker Compose permet crear un conjunt de serveis de manera declarativa, dient a docker el resultat que volem i que docker s'encarregueu d'executar les ordres corresponents.",
+            "status": "active",
+            "kind": "theory"
+        },
+        {
+            "order": 13,
+            "title": "13 - Activitat 1 - Introducció a Docker (0483-ae001)",
             "src": "slides/0483-ae001-intro-docker.reveal",
             "description": "Activitat 1 - Introducció a Docker (0483-ae001))",
             "status": "active",
@@ -24,7 +32,7 @@
         },
         {
             "order": 20,
-            "title": "Activitat 2: Desplega un servei web amb Docker (0483-ae002)",
+            "title": "20 - Activitat 2: Desplega un servei web amb Docker (0483-ae002)",
             "src": "slides/0483-ae002-docker-web.reveal",
             "description": "Activitat 2: Desplega un servei web amb Docker (0483-ae002)",
             "status": "active",
@@ -32,31 +40,31 @@
         },
         {
             "order": 30,
-            "title": "teoria-intro-linux",
+            "title": "30 - Introducció a Linux sessió 1",
             "src": "slides/intro-linux-sessio-01.reveal",
-            "description": "teoria-intro-linux",
+            "description": "Introducció a Linux sessió 1",
             "status": "active",
             "kind": "theory"
         },
         {
             "order": 40,
-            "title": "teoria-intro-linux-2",
+            "title": "40 - Introducció a Linux sessió 2",
             "src": "slides/intro-linux-sessio-02.reveal",
-            "description": "teoria-intro-linux-2",
+            "description": "Introducció a Linux sessió 2",
             "status": "active",
             "kind": "theory"
         },
         {
-            "order": 60,
-            "title": "Activitat: phpMyAdmin + MySQL amb docker compose",
+            "order": 50,
+            "title": "50 - Activitat: phpMyAdmin + MySQL amb docker compose",
             "src": "slides/docker-compose-phhmyadmin-mysql.reveal",
             "description": "Activitat: phpMyAdmin + MySQL amb docker compose",
             "status": "active",
             "kind": "activity"
         },
         {
-            "order": 70,
-            "title": "Resum: codificació en Power Shell i bash",
+            "order": 55,
+            "title": "55 - Resum: codificació en Power Shell i bash",
             "src": "slides/0483-pautes-scripts-ps-i-bash.reveal",
             "description": "Resum: codificació en Power Shell i bash",
             "status": "active",
@@ -64,41 +72,41 @@
         },
         {
             "order": 60,
-            "title": "Activitat: creació d'script en Power Shell i bash (0483-ae006)",
+            "title": "60 Activitat: creació d'script en Power Shell i bash (0483-ae006)",
             "src": "slides/0483-ae006.reveal",
             "description": "Activitat: phpMyAdmin + MySQL amb docker compose",
             "status": "active",
             "kind": "activity"
         },
         {
-            "order": 200,
-            "title": "Docker Compose",
-            "src": "slides/docker/compose.reveal",
-            "description": "Docker Compose permet crear un conjunt de serveis de manera declarativa, dient a docker el resultat que volem i que docker s'encarregueu d'executar les ordres corresponents.",
-            "status": "active",
-            "kind": "theory"
-        },
-        {
-            "order": 300,
-            "title": "Descarregar imatges ISO de Windows (oficials)",
+            "order": 70,
+            "title": "70 - Descarregar imatges ISO de Windows (oficials)",
             "src": "slides/descarregar-iso-microfost.reveal",
             "description": "Aquest document explica l'únic lloc oficial recomanat des d'on heu de descarregar les imatges ISO de Windows que farem servir a classe.",
             "status": "active",
             "kind": "theory"
         },
         {
-            "order": 65,
-            "title": "Activitat: Anàlisi i simulació del procés d’arrencada amb Windows 11 (UEFI) 0483-ae007",
+            "order": 80,
+            "title": "80 - Activitat: Anàlisi i simulació del procés d’arrencada amb Windows 11 (UEFI) 0483-ae007",
             "src": "slides/0483-ae007.reveal",
             "description": "Activitat: Anàlisi i simulació del procés d’arrencada amb Windows 11 (UEFI) 0483-ae007",
             "status": "active",
             "kind": "activity"
         },
         {
-            "order": 350,
-            "title": "El Despertar del Sistema",
+            "order": 75,
+            "title": "75 - El Despertar del Sistema",
             "src": "slides/trim-02-el-despertar-del-sistema--un-viatge-intern.reveal",
             "description": "Per entendre què passa dins de l’ordinador quan l’engeguem.",
+            "status": "active",
+            "kind": "theory"
+        },
+        {
+            "order": 80,
+            "title": "80 - Usuaris, permisos i processos",
+            "src": "slides/usuaris.reveal",
+            "description": "Usuaris, permisos i processos.",
             "status": "active",
             "kind": "theory"
         }
