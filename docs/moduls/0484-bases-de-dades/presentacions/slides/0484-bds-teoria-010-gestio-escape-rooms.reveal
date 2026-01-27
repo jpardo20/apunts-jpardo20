@@ -177,6 +177,38 @@ Un resultat:
 - correspon a una única reserva
 - permet analitzar el rendiment de l’equip i la dificultat de la sala
 
+---
+
+### Aclariment important: nombre de participants
+
+<div class="admonition important">
+<p class="admonition-title">Atenció</p>
+
+En el model hi apareixen **dos camps diferents** relacionats amb el nombre de participants, i **no representen el mateix concepte**.
+
+<ul>
+  <li>
+    <strong>EQUIP.num_participants</strong><br>
+    Indica el <em>nombre total de persones que formen l’equip</em>.
+  </li>
+  <li>
+    <strong>RESERVA.num_participants</strong><br>
+    Indica el <em>nombre real de persones que participen en una reserva concreta</em>.
+  </li>
+</ul>
+
+</div>
+
+<div class="admonition tip">
+<p class="admonition-title">Exemple</p>
+
+Un equip pot estar format per <strong>5 persones</strong>, però en una reserva concreta poden participar-hi només <strong>3 o 4</strong>.
+</div>
+
+---
+
+
+
 <!-- ---
 
 ## Objectius del projecte
