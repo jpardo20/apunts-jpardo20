@@ -109,6 +109,14 @@
             "description": "Usuaris, permisos i processos.",
             "status": "active",
             "kind": "theory"
+        },
+        {
+            "order": 90,
+            "title": "90. Activitat: Dual boot i gestors d’arrencada | 0483-ae009",
+            "src": "0483-form-dualboot-arrencada-0483-ae009.reveal",
+            "description": "90. Activitat: Dual boot i gestors d’arrencada | 0483-ae009",
+            "status": "active",
+            "kind": "activity"
         }
     ]
 }
