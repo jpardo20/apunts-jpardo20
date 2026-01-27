@@ -207,10 +207,6 @@ Un equip pot estar format per <strong>5 persones</strong>, però en una reserva 
 
 ---
 
-
-
-<!-- ---
-
 ## Objectius del projecte
 
 A partir d’aquest enunciat, l’alumnat haurà de ser capaç de:
@@ -222,6 +218,11 @@ A partir d’aquest enunciat, l’alumnat haurà de ser capaç de:
    - relacions
    - cardinalitats
 3. Transformar el MER en un model relacional.
+
+⬇️
+
+----
+
 4. Crear l’estructura de la base de dades amb SQL (`CREATE TABLE`).
 5. Definir correctament:
    - claus primàries
@@ -259,4 +260,4 @@ La base de dades s’ha de dissenyar pensant que:
 - les consultes han de ser clares i eficients
 - les relacions entre taules han de reflectir fidelment la realitat del sistema
 
-Aquest projecte es treballarà de manera progressiva al llarg de diverses sessions. -->
+Aquest projecte es treballarà de manera progressiva al llarg de diverses sessions. 
