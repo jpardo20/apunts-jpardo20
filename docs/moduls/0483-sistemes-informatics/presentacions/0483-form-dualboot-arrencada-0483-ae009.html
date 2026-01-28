@@ -1,291 +1,321 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Activitat: Dual boot i gestors d’arrencada - 0483-ae009</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../../../assets/css/formularis.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>Activitat: Dual boot i gestors d’arrencada - 0483-ae009</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../../assets/css/formularis.css" rel="stylesheet" />
 </head>
+
 <body>
 
-  <!-- Barra de progrés fixa -->
-  <div id="progress-container">
-    <div id="progress-bar"></div>
-  </div>
-  <div id="progress-text-wrapper">
-    <span>Progrés: <span id="progress-text">0%</span></span>
-  </div>
+    <!-- Barra de progrés fixa -->
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+    <div id="progress-text-wrapper">
+        <span>Progrés: <span id="progress-text">0%</span></span>
+    </div>
 
-<div class="form-wrapper">
+    <div class="form-wrapper">
 
-  <header>
-    <h1>0483 - Dual boot i gestors d’arrencada</h1>
-    <hr>
-    <h3>Activitat: Dual boot i gestors d’arrencada | <codiae>0483-ae009</codiae></h3>
-  </header>
+        <header>
+            <h1>0483 - Dual boot i gestors d’arrencada</h1>
+            <hr>
+            <h3>Activitat: Dual boot i gestors d’arrencada | <codiae>0483-ae009</codiae>
+            </h3>
+        </header>
 
-  <main>
-    <form id="exam-form">
+        <main>
+            <form id="exam-form">
 
-      <p class="required-note">
-        <strong>*</strong> Indica que la pregunta és obligatòria.
-      </p>
+                <p class="required-note">
+                    <strong>*</strong> Indica que la pregunta és obligatòria.
+                </p>
 
-      <!-- Dades de l'alumne -->
-      <section class="card">
-        <h2>Dades de l'alumne</h2>
-        <p>Selecciona el teu nom. Aquesta dada s’utilitza per identificar el fitxer i evitar còpies.</p>
+                <!-- Dades de l'alumne -->
+                <section class="card">
+                    <h2>Dades de l'alumne</h2>
+                    <p>Selecciona el teu nom. Aquesta dada s’utilitza per identificar el fitxer i evitar còpies.</p>
 
-        <label for="alumne">Alumne</label>
-        <select id="alumne" name="alumne" required>
-          <option value="">— Selecciona el teu nom —</option>
-        </select>
+                    <label for="alumne">Alumne</label>
+                    <select id="alumne" name="alumne" required>
+                        <option value="">— Selecciona el teu nom —</option>
+                    </select>
 
-        <p class="meta-info">
-          Les dades es carreguen des de <code>./alumnes/dades_alumnes.json</code>.
-        </p>
-      </section>
+                    <p class="meta-info">
+                        Les dades es carreguen des de <code>./alumnes/dades_alumnes.json</code>.
+                    </p>
+                </section>
 
-      <!-- Bloc 1: Observació inicial -->
-      <section class="card">
-        <h2>Bloc 1 · Observació del dual boot</h2>
+                <!-- Bloc 1: Observació inicial -->
+                <section class="card">
+                    <h2>Bloc 1 · Observació del dual boot</h2>
 
-        <div class="question" data-question-id="q1" data-type="single" data-required="true">
-          <h2>P1. Gestor d’arrencada visible</h2>
-          <p>Quin gestor d’arrencada apareix en iniciar la màquina virtual?</p>
-          <div class="options">
-            <label><input type="radio" name="q1" value="grub"> GRUB</label>
-            <label><input type="radio" name="q1" value="windows"> Windows Boot Manager</label>
-            <label><input type="radio" name="q1" value="cap"> No apareix cap menú</label>
-            <label><input type="radio" name="q1" value="ns"> No ho sé</label>
-          </div>
-        </div>
+                    <div class="question" data-question-id="q1" data-type="single" data-required="true">
+                        <h2>P1. Gestor d’arrencada visible</h2>
+                        <p>Quin gestor d’arrencada apareix en iniciar la màquina virtual?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q1" value="grub"> GRUB</label>
+                            <label><input type="radio" name="q1" value="windows"> Windows Boot Manager</label>
+                            <label><input type="radio" name="q1" value="cap"> No apareix cap menú</label>
+                            <label><input type="radio" name="q1" value="ns"> No ho sé</label>
+                        </div>
+                    </div>
 
-        <div class="question" data-question-id="q2" data-type="single" data-required="true">
-          <h2>P2. Sistema per defecte</h2>
-          <p>Quin sistema operatiu arrenca per defecte?</p>
-          <div class="options">
-            <label><input type="radio" name="q2" value="ubuntu"> Ubuntu</label>
-            <label><input type="radio" name="q2" value="windows"> Windows 11</label>
-            <label><input type="radio" name="q2" value="altre"> Un altre / depèn del darrer ús</label>
-          </div>
-        </div>
+                    <div class="question" data-question-id="q2" data-type="single" data-required="true">
+                        <h2>P2. Sistema per defecte</h2>
+                        <p>Quin sistema operatiu arrenca per defecte?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q2" value="ubuntu"> Ubuntu</label>
+                            <label><input type="radio" name="q2" value="windows"> Windows 11</label>
+                            <label><input type="radio" name="q2" value="altre"> Un altre / depèn del darrer ús</label>
+                        </div>
+                    </div>
 
-        <div class="question" data-question-id="q3" data-type="open" data-required="true">
-          <h2>P3. Temps d’espera inicial</h2>
-          <p>Indica aproximadament el temps d’espera (timeout) del menú d’arrencada en segons.</p>
-          <input type="number" name="q3" min="0" step="1">
-        </div>
-      </section>
+                    <div class="question" data-question-id="q3" data-type="open" data-required="true">
+                        <h2>P3. Temps d’espera inicial</h2>
+                        <p>Indica aproximadament el temps d’espera (timeout) del menú d’arrencada en segons.</p>
+                        <input type="number" name="q3" min="0" step="1">
+                    </div>
+                </section>
 
-      <!-- Bloc 2: GRUB -->
-      <section class="card">
-        <h2>Bloc 2 · Gestor d’arrencada de Linux (GRUB)</h2>
+                <!-- Bloc 2: GRUB -->
+                <section class="card">
+                    <h2>Bloc 2 · Gestor d’arrencada de Linux (GRUB)</h2>
 
-        <div class="question" data-question-id="q4" data-type="single" data-required="true">
-          <h2>P4. Fitxer principal de configuració</h2>
-          <p>Quin és el fitxer principal on es defineixen les opcions bàsiques de GRUB?</p>
-          <div class="options">
-            <label><input type="radio" name="q4" value="/etc/default/grub"> <code>/etc/default/grub</code></label>
-            <label><input type="radio" name="q4" value="/boot/grub/grub.cfg"> <code>/boot/grub/grub.cfg</code></label>
-            <label><input type="radio" name="q4" value="/etc/grub.conf"> <code>/etc/grub.conf</code></label>
-            <label><input type="radio" name="q4" value="altre"> Un altre</label>
-          </div>
-        </div>
+                    <div class="question" data-question-id="q4" data-type="single" data-required="true">
+                        <h2>P4. Fitxer principal de configuració</h2>
+                        <p>Quin és el fitxer principal on es defineixen les opcions bàsiques de GRUB?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q4" value="/etc/default/grub">
+                                <code>/etc/default/grub</code></label>
+                            <label><input type="radio" name="q4" value="/boot/grub/grub.cfg">
+                                <code>/boot/grub/grub.cfg</code></label>
+                            <label><input type="radio" name="q4" value="/etc/grub.conf">
+                                <code>/etc/grub.conf</code></label>
+                            <label><input type="radio" name="q4" value="altre"> Un altre</label>
+                        </div>
+                    </div>
 
-        <div class="question" data-question-id="q5" data-type="open" data-required="true">
-          <h2>P5. Timeout abans del canvi</h2>
-          <p>Indica el valor del timeout de GRUB abans de fer cap modificació.</p>
-          <input type="number" name="q5" min="0" step="1">
-        </div>
+                    <div class="question" data-question-id="q5" data-type="open" data-required="true">
+                        <h2>P5. Timeout abans del canvi</h2>
+                        <p>Indica el valor del timeout de GRUB abans de fer cap modificació.</p>
+                        <input type="number" name="q5" min="0" step="1">
+                    </div>
 
-        <div class="question" data-question-id="q6" data-type="open" data-required="true">
-          <h2>P6. Timeout després del canvi</h2>
-          <p>Indica el valor del timeout de GRUB després de la modificació.</p>
-          <input type="number" name="q6" min="0" step="1">
-        </div>
+                    <div class="question" data-question-id="q6" data-type="open" data-required="true">
+                        <h2>P6. Timeout després del canvi</h2>
+                        <p>Indica el valor del timeout de GRUB després de la modificació.</p>
+                        <input type="number" name="q6" min="0" step="1">
+                    </div>
 
-        <div class="question" data-question-id="q7" data-type="tf" data-required="true">
-          <h2>P7. Comprovació del canvi</h2>
-          <p>Has aplicat el canvi i l’has comprovat reiniciant el sistema?</p>
-          <div class="options">
-            <label><input type="radio" name="q7" value="true"> Sí</label>
-            <label><input type="radio" name="q7" value="false"> No</label>
-          </div>
-        </div>
-      </section>
+                    <div class="question" data-question-id="q7" data-type="tf" data-required="true">
+                        <h2>P7. Comprovació del canvi</h2>
+                        <p>Has aplicat el canvi i l’has comprovat reiniciant el sistema?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q7" value="true"> Sí</label>
+                            <label><input type="radio" name="q7" value="false"> No</label>
+                        </div>
+                    </div>
+                </section>
 
-      <!-- Bloc 3: Windows Boot Manager -->
-      <section class="card">
-        <h2>Bloc 3 · Gestor d’arrencada de Windows</h2>
+                <!-- Bloc 3: Windows Boot Manager -->
+                <section class="card">
+                    <h2>Bloc 3 · Gestor d’arrencada de Windows</h2>
 
-        <div class="question" data-question-id="q8" data-type="open" data-required="true">
-          <h2>P8. Timeout abans del canvi</h2>
-          <p>Indica el temps d’espera del gestor d’arrencada de Windows abans del canvi.</p>
-          <input type="number" name="q8" min="0" step="1">
-        </div>
+                    <div class="question" data-question-id="q8" data-type="open" data-required="true">
+                        <h2>P8. Timeout abans del canvi</h2>
+                        <p>Indica el temps d’espera del gestor d’arrencada de Windows abans del canvi.</p>
+                        <input type="number" name="q8" min="0" step="1">
+                    </div>
 
-        <div class="question" data-question-id="q9" data-type="open" data-required="true">
-          <h2>P9. Timeout després del canvi</h2>
-          <p>Indica el temps d’espera del gestor d’arrencada de Windows després del canvi.</p>
-          <input type="number" name="q9" min="0" step="1">
-        </div>
+                    <div class="question" data-question-id="q9" data-type="open" data-required="true">
+                        <h2>P9. Timeout després del canvi</h2>
+                        <p>Indica el temps d’espera del gestor d’arrencada de Windows després del canvi.</p>
+                        <input type="number" name="q9" min="0" step="1">
+                    </div>
 
-        <div class="question" data-question-id="q10" data-type="tf" data-required="true">
-          <h2>P10. Comprovació del canvi</h2>
-          <p>Has aplicat correctament el canvi al gestor d’arrencada de Windows?</p>
-          <div class="options">
-            <label><input type="radio" name="q10" value="true"> Sí</label>
-            <label><input type="radio" name="q10" value="false"> No</label>
-          </div>
-        </div>
-      </section>
+                    <div class="question" data-question-id="q10" data-type="tf" data-required="true">
+                        <h2>P10. Comprovació del canvi</h2>
+                        <p>Has aplicat correctament el canvi al gestor d’arrencada de Windows?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q10" value="true"> Sí</label>
+                            <label><input type="radio" name="q10" value="false"> No</label>
+                        </div>
+                    </div>
+                </section>
 
-      <!-- Bloc 4: Comparació i reflexió -->
-      <section class="card">
-        <h2>Bloc 4 · Comparació i reflexió</h2>
+                <!-- Bloc 4: Comparació i reflexió -->
+                <section class="card">
+                    <h2>Bloc 4 · Comparació i reflexió</h2>
 
-        <div class="question" data-question-id="q11" data-type="single" data-required="true">
-          <h2>P11. Control de l’arrencada</h2>
-          <p>Quin gestor controla realment l’arrencada del sistema?</p>
-          <div class="options">
-            <label><input type="radio" name="q11" value="grub"> GRUB</label>
-            <label><input type="radio" name="q11" value="windows"> Windows Boot Manager</label>
-            <label><input type="radio" name="q11" value="usuari"> Depèn de l’usuari</label>
-            <label><input type="radio" name="q11" value="so"> Depèn del sistema operatiu</label>
-          </div>
-        </div>
+                    <div class="question" data-question-id="q11" data-type="single" data-required="true">
+                        <h2>P11. Control de l’arrencada</h2>
+                        <p>Quin gestor controla realment l’arrencada del sistema?</p>
+                        <div class="options">
+                            <label><input type="radio" name="q11" value="grub"> GRUB</label>
+                            <label><input type="radio" name="q11" value="windows"> Windows Boot Manager</label>
+                            <label><input type="radio" name="q11" value="usuari"> Depèn de l’usuari</label>
+                            <label><input type="radio" name="q11" value="so"> Depèn del sistema operatiu</label>
+                        </div>
+                    </div>
 
-        <div class="question" data-question-id="q12" data-type="open" data-required="true">
-          <h2>P12. Riscos</h2>
-          <p>Quin risc principal té modificar incorrectament el gestor d’arrencada?</p>
-          <textarea name="q12" placeholder="Resposta breu (2–3 frases)"></textarea>
-        </div>
+                    <div class="question" data-question-id="q12" data-type="open" data-required="true">
+                        <h2>P12. Riscos</h2>
+                        <p>Quin risc principal té modificar incorrectament el gestor d’arrencada?</p>
+                        <textarea name="q12" placeholder="Resposta breu (2–3 frases)"></textarea>
+                    </div>
 
-        <div class="question" data-question-id="q13" data-type="open" data-required="true">
-          <h2>P13. Instal·lar un nou Windows</h2>
-          <p>Què pot passar si instal·lem un altre Windows en aquest mateix disc?</p>
-          <textarea name="q13" placeholder="Explica-ho breument"></textarea>
-        </div>
-      </section>
+                    <div class="question" data-question-id="q13" data-type="open" data-required="true">
+                        <h2>P13. Instal·lar un nou Windows</h2>
+                        <p>Què pot passar si instal·lem un altre Windows en aquest mateix disc?</p>
+                        <textarea name="q13" placeholder="Explica-ho breument"></textarea>
+                    </div>
+                </section>
 
-      <!-- Evidències -->
-      <section class="card">
-        <h2>Evidències de la màquina virtual</h2>
-        <p>
-          Aquesta activitat requereix evidències del treball realitzat a la màquina virtual.
-          Les captures de pantalla <strong>NO s’inclouen</strong> dins del fitxer JSON i s’han
-          de pujar a Moodle juntament amb ell.
-        </p>
-        <ul>
-          <li>Captura del menú GRUB amb els dos sistemes visibles.</li>
-          <li>Captura del fitxer <code>/etc/default/grub</code> amb el timeout configurat.</li>
-          <li>Captura de la configuració d’arrencada de Windows.</li>
-        </ul>
-      </section>
+                <!-- Evidències -->
+                <section class="card">
+                    <h2>Evidències de la màquina virtual</h2>
+                    <p>
+                        Aquesta activitat requereix evidències del treball realitzat a la màquina virtual.
+                        Les captures de pantalla <strong>NO s’inclouen</strong> dins del fitxer JSON i s’han
+                        de pujar a Moodle juntament amb ell.
+                    </p>
+                    <ul>
+                        <li style="margin: 10px;">Captura del menú GRUB amb els dos sistemes visibles.&nbsp;&nbsp;<span
+                                style="background-color: LightBlue; border: 2px solid blue; border-radius: 10px; padding-left: 5px; padding-right: 10px;"><strong>Codi
+                                    imatge = <codiEspecial>dos-sistemes</codiEspecial></strong></span></li>
+                        <li style="margin: 10px;">Captura del fitxer <code>/etc/default/grub</code> amb el timeout
+                            configurat.&nbsp;&nbsp;<span
+                                style="background-color: LightBlue; border: 2px solid blue; border-radius: 10px; padding-left: 5px; padding-right: 10px;"><strong>Codi
+                                    imatge = <codiEspecial>fitxer-grub</codiEspecial></strong></span></li>
+                        <li style="margin: 10px;">Captura de la configuració d’arrencada de Windows.&nbsp;&nbsp;<span
+                                style="background-color: LightBlue; border: 2px solid blue; border-radius: 10px; padding-left: 5px; padding-right: 10px;"><strong>Codi
+                                    imatge = <codiEspecial>conf-win</codiEspecial></strong></span></li>
+                    </ul>
+                </section>
 
-      <!-- Bloc nou: evidències declarades -->
-      <section class="card">
-        <h2>Evidències declarades (obligatori)</h2>
+                <!-- Bloc nou: evidències declarades -->
+                <section class="card">
+                    <h2>Evidències declarades (obligatori)</h2>
 
-        <p>
-          Has d’indicar el <strong>nom exacte dels fitxers</strong> que has pujat a Moodle.
-          Aquesta informació s’inclourà dins del fitxer JSON per facilitar la correcció.
-        </p>
-
-        <p>
-          La convenció de noms és <strong>obligatòria</strong> i ha de seguir exactament el patró:
-          <br>
-          <code>&lt;primerCognom&gt;-0483-ae009-&lt;tipus&gt;-timeout-&lt;valor&gt;.png</code>
-          <br><br>
-          On:
-          <ul>
-            <li><codiae><strong>&lt;primerCognom&gt;</strong></codiae> és només el <strong>primer cognom</strong> de l’alumne, <strong>en minúscules</strong>.</li>
-            <li><codiae><strong>&lt;tipus&gt;</strong></codiae> pot ser <strong><code>grub-menu</code></strong>, <code><strong>grub-config</strong></code> o <code><strong>windows-boot</strong></code>.</li>
-            <li><codiae><strong>&lt;valor&gt;</strong></codiae> és el valor final del <strong>timeout</strong> configurat.</li>
-          </ul>
-          <br>
-          Exemple per a l’alumne <em>Albert Einstein</em> amb timeout final <strong>12</strong>:
-          <br>
-          <code>einstein-0483-ae009-grub-menu-timeout-12.png</code>
-          <br><br>
-          No seguir aquesta convenció pot requerir revisió manual, però no implica penalització automàtica.
-        </p>
-
-        <div class="question" data-question-id="ev1" data-type="open" data-required="true">
-          <h2>Nom del fitxer – Menú GRUB</h2>
-          <input type="text" name="ev_grub_menu" required>
-        </div>
-
-        <div class="question" data-question-id="ev2" data-type="open" data-required="true">
-          <h2>Nom del fitxer – Configuració de GRUB</h2>
-          <input type="text" name="ev_grub_config" required>
-        </div>
-
-        <div class="question" data-question-id="ev3" data-type="open" data-required="true">
-          <h2>Nom del fitxer – Arrencada de Windows</h2>
-          <input type="text" name="ev_windows_boot" required>
-        </div>
-      </section>
+                    <p>
+                        Has d’indicar el <strong>nom exacte dels fitxers</strong> que has pujat a Moodle.
+                        Aquesta informació s’inclourà dins del fitxer JSON per facilitar la correcció.
+                    </p>
 
 
-      <section class="card">
-        <div class="question" data-question-id="q_evidencies" data-type="tf" data-required="true">
-          <h2>Confirmació d’evidències</h2>
-          <p>
-            Confirmo que he pujat a Moodle totes les captures indicades
-            i que els noms escrits corresponen als fitxers adjuntats.
-          </p>
-          <div class="options">
-            <label><input type="radio" name="q_evidencies" value="true"> Sí</label>
-            <label><input type="radio" name="q_evidencies" value="false"> No</label>
-          </div>
-        </div>
-      </section>
+                    <p>
+                        La convenció de noms és <strong>obligatòria</strong> i ha de seguir exactament el patró:
+                        <br>
+                        <br>
+                        <strong><span
+                                style="padding: 5px; background-color: LightBlue; border: 2px solid blue; border-radius: 10px; padding-left: 5px; padding-right: 10px;"><span
+                                    style="background-color: bisque;">&lt;primerCognom&gt;</span>-0483-ae009-<span
+                                    style="background-color: bisque;">&lt;codi-imatge&gt;</span>.png</span></strong>
+                        <br><br>
+                        On:
+                    <ul>
+                        <li><span style="background-color: bisque;"><strong>&lt;primerCognom&gt;</strong></span> és
+                            només el <strong>primer cognom</strong> de l’alumne, <strong>en minúscules</strong>, i </li>
+                        <li><span style="background-color: bisque;"><strong>&lt;codi-imatge&gt;</strong></span> és el
+                            <span style="background-color: LightBlue;"><strong>Codi imatge</strong></span> assignat a
+                            cada imatge. (veure apartat anterior)</li>
+                    </ul>
+                    <br>
+                    Exemple per a l’alumne <em>Albert Einstein</em> de la <u>captura del menú GRUB amb els dos sistemes
+                        visibles</u>:
+                    <br>
+                    <br>
+                    <span
+                        style="padding: 5px; background-color: LightBlue; border: 2px solid blue; border-radius: 10px; padding-left: 5px; padding-right: 10px;"><strong>einstein-0483-ae009-dos-sistemes.png</strong></span>
+                    <br><br>
+                    No seguir aquesta convenció pot requerir revisió manual, però no implica penalització automàtica.
+                    </p>
 
-      <!-- Guardar / carregar -->
-      <section class="card">
-        <h2>Guardar i recuperar respostes</h2>
-        <p>
-          Pots guardar un fitxer temporal i continuar l’activitat més endavant.
-          El fitxer està signat per detectar modificacions.
-        </p>
+                    <div class="question" data-question-id="ev1" data-type="open" data-required="true">
+                        <h2>Nom del fitxer – Menú GRUB</h2>
+                        <!-- <input type="text" name="ev_grub_menu" placeholder="&lt;primerCognom&gt;-0483-ae009-dos-sistemes.png" required> -->
+                        <input type="text" name="ev1" pattern="^[a-z]+-0483-ae009-dos-sistemes\.png$"
+                            placeholder="einstein-0483-ae009-dos-sistemes.png" required>
+                            <small class="meta-info">
+                                Exemple: einstein-0483-ae009-dos-sistemes.png
+                            </small>
+                    </div>
+                    <div class="question" data-question-id="ev2" data-type="open" data-required="true">
+                        <h2>Nom del fitxer – Configuració de GRUB</h2>
+                        <input type="text" name="ev2"
+                            placeholder="&lt;primerCognom&gt;-0483-ae009-fitxer-grub.png" required>
+                    </div>
 
-        <div class="btn-row">
-          <button type="button" class="secondary" id="btn-save-temp">
-            Descarrega fitxer temporal
-          </button>
+                    <div class="question" data-question-id="ev3" data-type="open" data-required="true">
+                        <h2>Nom del fitxer – Arrencada de Windows</h2>
+                        <input type="text" name="ev3"
+                            placeholder="&lt;primerCognom&gt;-0483-ae009-conf-win.png" required>
+                    </div>
+                </section>
 
-          <div class="file-input-wrapper">
-            <span class="file-input-label">Carrega fitxer temporal…</span>
-            <input type="file" id="load-temp-input" accept=".json,.tmp,.txt,application/json">
-          </div>
-        </div>
 
-        <p id="temp-file-info" class="meta-info"></p>
-      </section>
+                <section class="card">
+                    <div class="question" data-question-id="q_evidencies" data-type="tf" data-required="true">
+                        <h2>Confirmació d’evidències</h2>
+                        <p>
+                            Confirmo que he pujat a Moodle totes les captures indicades
+                            i que els noms escrits corresponen als fitxers adjuntats.
+                        </p>
+                        <div class="options">
+                            <label><input type="radio" name="q_evidencies" value="true"> Sí</label>
+                            <label><input type="radio" name="q_evidencies" value="false"> No</label>
+                        </div>
+                    </div>
+                </section>
 
-      <!-- JSON final -->
-      <section class="card">
-        <h2>Generar JSON final</h2>
-        <p>
-          Quan hagis respost totes les preguntes, descarrega el JSON final
-          i puja’l al Moodle.
-        </p>
+                <!-- Guardar / carregar -->
+                <section class="card">
+                    <h2>Guardar i recuperar respostes</h2>
+                    <p>
+                        Pots guardar un fitxer temporal i continuar l’activitat més endavant.
+                        El fitxer està signat per detectar modificacions.
+                    </p>
 
-        <div class="btn-row">
-          <button type="button" class="primary" id="btn-download-final">
-            Descarrega JSON final
-          </button>
-        </div>
+                    <div class="btn-row">
+                        <button type="button" class="secondary" id="btn-save-temp">
+                            Descarrega fitxer temporal
+                        </button>
 
-        <div id="status-message"></div>
-      </section>
+                        <div class="file-input-wrapper">
+                            <span class="file-input-label">Carrega fitxer temporal…</span>
+                            <input type="file" id="load-temp-input" accept=".json,.tmp,.txt,application/json">
+                        </div>
+                    </div>
 
-    </form>
-  </main>
-</div>
+                    <p id="temp-file-info" class="meta-info"></p>
+                </section>
 
-<script src="../../../assets/js/formularis.js"></script>
+                <!-- JSON final -->
+                <section class="card">
+                    <h2>Generar JSON final</h2>
+                    <p>
+                        Quan hagis respost totes les preguntes, descarrega el JSON final
+                        i puja’l al Moodle.
+                    </p>
+
+                    <div class="btn-row">
+                        <button type="button" class="primary" id="btn-download-final">
+                            Descarrega JSON final
+                        </button>
+                    </div>
+
+                    <div id="status-message"></div>
+                </section>
+
+            </form>
+        </main>
+    </div>
+
+    <script src="../../../assets/js/formularis.js"></script>
 </body>
+
 </html>

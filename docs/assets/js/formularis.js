@@ -79,9 +79,20 @@ function isQuestionAnswered(qEl) {
         const inputs = qEl.querySelectorAll('input[type="checkbox"][name="' + qid + '"]');
         return Array.from(inputs).some(inp => inp.checked);
     } else if (type === "open") {
-        const field = qEl.querySelector('textarea[name="' + qid + '"], input[type="text"][name="' + qid + '"]');
-        return field && field.value.trim().length > 0;
+        // const field = qEl.querySelector('textarea[name="' + qid + '"], input[type="text"][name="' + qid + '"]');
+        const field = qEl.querySelector('textarea[name="' + qid + '"], input[name="' + qid + '"]');
+            if (!field) return false;
+            if (field.value.trim().length === 0) return false;
+            return field.checkValidity(); // 🔥 AQUÍ
     }
+
+    // } else if (type === "open") {
+    //     // const field = qEl.querySelector('textarea[name="' + qid + '"], input[type="text"][name="' + qid + '"]');
+    //     const field = qEl.querySelector('textarea[name="' + qid + '"], input[name="' + qid + '"]');
+    //     return field && field.value.trim().length > 0;
+    // }
+
+
 
     return true;
 }
@@ -109,7 +120,15 @@ function collectAnswers() {
                 value: checked
             };
         } else if (type === "open") {
-            const field = qEl.querySelector('textarea[name="' + qid + '"], input[type="text"][name="' + qid + '"]');
+            // const field = qEl.querySelector(
+            //     'textarea[name="' + qid + '"], input[type="text"][name="' + qid + '"]'
+            // );
+            const field = qEl.querySelector(
+                'textarea[name="' + qid + '"], input[name="' + qid + '"]'
+            );
+
+
+
             answers[qid] = {
                 type,
                 value: field ? field.value : ""
@@ -143,7 +162,14 @@ function applyAnswers(data) {
                 inp.checked = Array.isArray(val) && val.includes(inp.value);
             });
         } else if (type === "open") {
-            const field = qEl.querySelector('textarea[name="' + qid + '"], input[type="text"][name="' + qid + '"]');
+            // const field = qEl.querySelector(
+            //     'textarea[name="' + qid + '"], input[type="text"][name="' + qid + '"]'
+            // );
+            const field = qEl.querySelector(
+                'textarea[name="' + qid + '"], input[name="' + qid + '"]'
+            );
+
+
             if (field) field.value = (typeof val === "string" ? val : "");
         }
     });

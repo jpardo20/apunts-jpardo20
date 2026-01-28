@@ -64,6 +64,12 @@ textarea {
     resize: vertical;
 }
 
+.form-wrapper {
+  max-width: 900px;   /* el mateix que les cards */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .question {
     margin-bottom: 1rem;
 }
@@ -91,11 +97,27 @@ textarea {
 }
 
 .question.unanswered {
+    padding: 10px;
     border-left: 4px solid #d9534f;
+    border-right: 1px solid #d9534f;
+    border-top: 1px solid #d9534f;
+    border-bottom: 1px solid #d9534f;
     background-color: #fff5f5;
+    border-radius: 20px;
 }
 
-.question.unanswered h2::after {
+.required-note {
+  margin: 1rem auto 1.5rem auto;
+  max-width: 900px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.required-note strong {
+  color: #d9534f; /* mateix vermell que l’asterisc */
+}
+
+.question h2::after, .question.unanswered h2::after {
     content: " ✱";
     color: #d9534f;
     font-weight: bold;
@@ -218,6 +240,26 @@ button:disabled {
     font-size: 0.9rem;
     background-color: #fff;
     cursor: pointer;
+}
+
+codiEspecial{
+    padding-left: 5px;
+    padding-right: 5px;
+    color: black;
+    background-color:bisque;
+}
+
+codiae{
+    padding-left: 15px;
+    padding-right: 15px;
+    color: black;
+    background-color: #009de0;
+}
+
+
+.question.valid {
+  background: #eef6ff;
+  border: 2px solid #3b82f6;
 }
 
 @media (max-width: 600px) {
