@@ -1,0 +1,80 @@
+{
+    "module": {
+        "code": "tut",
+        "name": "Tutories"
+    },
+    "presentations": [
+        {
+            "id": "correccio",
+            "title": "Correcció — Activitat de Ciberseguretat bàsica",
+            "description": "Correcció — Activitat de Ciberseguretat bàsica",
+            "src": "correccio-activitat-ciberseguretat-basica.reveal",
+            "theme": "white",
+            "status": "inactive",
+            "kind": "theory",
+            "tags": [
+                "BBDD"
+            ]
+        },
+        {
+            "id": "1a-sessio",
+            "title": "1a Sessió | Projecte de Tutoria FP",
+            "description": "Projecte de Tutoria FP | SESSIÓ 1 · Inici del projecte i reflexió inicial.",
+            "src": "projecte-1a-sessio.reveal",
+            "theme": "white",
+            "status": "active",
+            "kind": "theory",
+            "tags": [
+                "BBDD"
+            ]
+        },
+        {
+            "id": "2a-sessio",
+            "title": "2a Sessió | Projecte de Tutoria FP",
+            "description": "Projecte de Tutoria FP | SESSIÓ 2 · ...",
+            "src": "projecte-1a-sessio.reveal",
+            "theme": "white",
+            "status": "inactive",
+            "kind": "theory",
+            "tags": [
+                "BBDD"
+            ]
+        },
+        {
+            "id": "3a-sessio",
+            "title": "3a Sessió | Projecte de Tutoria FP",
+            "description": "Projecte de Tutoria FP | SESSIÓ 3 · ...",
+            "src": "projecte-1a-sessio.reveal",
+            "theme": "white",
+            "status": "inactive",
+            "kind": "theory",
+            "tags": [
+                "BBDD"
+            ]
+        },
+        {
+            "id": "4a-sessio",
+            "title": "4a Sessió | Projecte de Tutoria FP",
+            "description": "Projecte de Tutoria FP | SESSIÓ 4 ...",
+            "src": "projecte-1a-sessio.reveal",
+            "theme": "white",
+            "status": "inactive",
+            "kind": "theory",
+            "tags": [
+                "BBDD"
+            ]
+        },
+        {
+            "id": "5a-sessio",
+            "title": "5a Sessió | Projecte de Tutoria FP",
+            "description": "Projecte de Tutoria FP | SESSIÓ 5 ...",
+            "src": "projecte-1a-sessio.reveal",
+            "theme": "white",
+            "status": "inactive",
+            "kind": "theory",
+            "tags": [
+                "BBDD"
+            ]
+        }
+    ]
+}

@@ -25,6 +25,8 @@
 <!-- <ul>
     <li><p><a href="moduls/mopt1-robotica-python/presentacions/index.html">Teoria</a></p></li>
 </ul> -->
+<h3><a href="moduls/tutoria/presentacions/index.html">Tutoria</a></h3>
+
 </details>
 
 
@@ -37,6 +39,7 @@
 <h3></h3>
 <h3><a href="moduls/0484-bases-de-dades/presentacions/index.html">0484 - Bases de dades</a></h3>
 
+
 <!--
 <ul>
 <li><p><a href="moduls/0484-bases-de-dades/presentacions/index.html">Presentacions</a></p></li>
@@ -44,15 +47,17 @@
 </ul> 
 -->
 
-
 <h3><a href="moduls/0483-sistemes-informatics/presentacions/index.html">0483 - Sistemes Informàtics</a></h3>
+
+<h3><a href="moduls/tutoria/presentacions/index.html">Tutoria</a></h3>
+
 <!--
 <ul><li><p><a href="moduls/0483-sistemes-informatics/presentacions/index.html">Presentacions</a></p></li></ul> 
 -->
 
 </details>
 
-<h3><strong>Tutoria de SMX i DAM</u></strong></h3>
+<!-- <h3><strong>Tutoria de SMX i DAM</u></strong></h3>
 <details>
   <summary>Desplega per veure Tutoria de SMX i DAM
 </summary>
@@ -71,7 +76,7 @@ divendres, 14 de novembre -> <a href="https://jpardo20.github.io/apunts-jpardo20
 
 </ul>
 
-</details>
+</details> -->
 
 
 

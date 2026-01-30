@@ -20,6 +20,9 @@ nav:
     - MOPT1 Programació Python:
       # - Presentacions:
         - Presentacions:  moduls/mopt1-robotica-python/presentacions/index.html
+    - Tutoria:
+      # - Presentacions:
+        - Presentacions:  moduls/tutoria/presentacions/index.html
   - Mòduls de DAM:
     - 0373 - Llenguatges de marques:
       # - Presentacions:
@@ -30,7 +33,9 @@ nav:
     - 0483 - Sistemes Informàtics:
       # - Presentacions:
         - Presentacions:  moduls/0483-sistemes-informatics/presentacions/index.html 
-
+    - Tutoria:
+      # - Presentacions:
+        - Presentacions:  moduls/tutoria/presentacions/index.html
   # - <h3>Mòduls de DAM</h3>:
   
   #   - 0373 - Llenguatges de marques:
@@ -56,7 +61,13 @@ theme:
 
 extra_css:
   - assets/css/styles.css
+  - assets/css/base.css
+  - assets/css/tema.css
+  - assets/css/fonts.css
 
+extra_javascript:
+  - assets/js/presentador.js
+  
 markdown_extensions:
   - admonition
   - attr_list
