@@ -114,7 +114,10 @@ Al final de la sessió hauràs de tenir:
 3. Convida l’usuari: <codiae>jpardo20</codiae>
 4. Assegura’t que queda convidat correctament.
 
+<div class="admonition caution">
+<br>
 Aquest pas és obligatori.
+</div>
 
 ---
 
@@ -158,7 +161,12 @@ git add .
 git commit -m "inici sessio 1"
 ```
 
+<div class="admonition caution">
+<br>
 Aquest <codijpc>commit</codijpc> és obligatori.
+</div>
+
+
 
 ---
 
@@ -183,9 +191,10 @@ Explica com t’estàs adaptant al ritme de treball del cicle
 
 Completa la taula següent de manera sincera i concreta.
 
-<br><br><br>
-
+<div class="admonition tip">
+<br>
 Com has de traslladar aquesta autoavaluació al repositori
+</div>
 
 ⬇️
 
@@ -263,12 +272,13 @@ Completa la taula següent de manera sincera i concreta.
 
 ----
 
-### IMPORTANT
+<div class="admonition caution">
 
 - No deixis cap apartat buit.
 - Escriu frases completes.
 - Centra’t en aspectes acadèmics.
 - No copiïs res d’internet.
+</div>
 
 ---
 
