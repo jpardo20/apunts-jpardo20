@@ -1,0 +1,339 @@
+# Propostes de millora de seguretat i integritat de dades
+
+## Base de dades Escape Rooms
+
+### 0484 – Bases de dades
+
+---
+
+## Punt de partida
+
+Ja tenim una base de dades que:
+
+- reflecteix correctament el domini del problema
+- té totes les taules necessàries
+- utilitza claus primàries i foranes
+
+⬇️
+
+----
+
+Però...
+
+**Una BD correcta no sempre és una BD segura**
+
+Encara permet:
+
+- dades duplicades
+- incoherències
+- errors humans en els `INSERT`
+
+---
+
+## Objectiu d’aquesta millora
+
+Fer que la base de dades:
+
+- **eviti errors automàticament**
+- **sigui més robusta**
+- **garanteixi la integritat de les dades**
+
+Sense canviar el model,  
+**afegint restriccions i normes**.
+
+---
+
+## Tipus de millores que veurem
+
+Treballarem amb:
+
+1. Restriccions `UNIQUE`
+2. Claus compostes per evitar duplicats lògics
+3. Restriccions `CHECK`
+4. Protecció de relacions amb  
+   `ON DELETE` i `ON UPDATE`
+
+---
+
+## 1. Restriccions UNIQUE  
+
+### Evitar duplicats reals
+
+Les claus primàries eviten duplicats d’ID,  
+però **no eviten duplicats lògics**.
+
+⬇️
+
+----
+
+Exemple de problema:
+
+- dues seus amb el mateix nom
+- dues sales iguals dins la mateixa seu
+- dos equips amb el mateix nom
+
+*  **La BD ho permet... si no fem res**
+
+---
+
+## UNIQUE a la taula SEUS
+
+No hauria d’existir:
+
+- la mateixa seu
+- a la mateixa ciutat
+- repetida
+
+⬇️
+
+----
+
+```sql
+ALTER TABLE SEUS
+ADD CONSTRAINT uq_seu_nom_ciutat
+UNIQUE (nom_seu, ciutat_seu);
+```
+
+* Evita seus duplicades de manera automàtica.
+
+---
+
+## UNIQUE a la taula SALES
+
+Dins d’una mateixa seu:
+
+- no pot haver-hi dues sales amb el mateix nom
+
+⬇️
+
+----
+
+```sql
+ALTER TABLE SALES
+ADD CONSTRAINT uq_sala_seu
+UNIQUE (nom_sala, id_seu);
+```
+
+---
+
+## UNIQUE a la taula EQUIPS
+
+Els equips es poden reutilitzar en reserves.
+
+*  El nom ha de ser únic.
+
+⬇️
+
+----
+
+```sql
+ALTER TABLE EQUIPS
+ADD CONSTRAINT uq_nom_equip
+UNIQUE (nom_equip);
+```
+
+---
+
+## 2. Evitar duplicats lògics  
+### Cas de les reserves
+
+Una situació problemàtica:
+
+- mateixa sala
+- mateixa data i hora
+- dues reserves diferents
+
+❌ Impossible en la realitat  
+* Possible a la BD (si no ho evitem)
+
+---
+
+## UNIQUE a RESERVES
+
+⬇️
+
+```sql
+ALTER TABLE RESERVES
+ADD CONSTRAINT uq_reserva_sala_data
+UNIQUE (id_sala, data_hora);
+```
+
+* Garanteix que una sala  
+no pot tenir dues reserves simultànies.
+
+---
+
+## 3. Restriccions CHECK  
+### Validar dades absurdes
+
+Alguns errors típics:
+
+- durades negatives
+- puntuacions negatives
+- reserves amb 0 participants
+
+*  **La BD no hauria d’acceptar això**
+
+---
+
+## CHECK a SALES
+
+⬇️
+
+```sql
+ALTER TABLE SALES
+ADD CONSTRAINT chk_durada_sala
+CHECK (durada_max_sala > 0),
+ADD CONSTRAINT chk_max_participants
+CHECK (max_participants_sala > 0);
+```
+
+---
+
+## CHECK a RESERVES i RESULTATS
+
+⬇️
+
+```sql
+ALTER TABLE RESERVES
+ADD CONSTRAINT chk_num_participants
+CHECK (num_participants > 0);
+```
+
+```sql
+ALTER TABLE RESULTATS
+ADD CONSTRAINT chk_puntuacio
+CHECK (puntuacio >= 0);
+```
+
+* La BD bloqueja dades incoherents.
+
+---
+
+## 4. Protegir relacions  
+### ON DELETE / ON UPDATE
+
+Abans de veure el SQL, una mica de teoria 👇
+
+---
+
+## Què passa quan s’elimina una fila?
+
+Si una taula està relacionada amb una altra:
+
+- Què passa si s’elimina el registre pare?
+- I si s’actualitza la seva clau?
+
+*  **La BD ha de saber què fer**
+
+---
+
+## Opcions principals
+
+Quan definim una clau forana, podem indicar:
+
+- `ON DELETE`
+- `ON UPDATE`
+
+Amb diferents comportaments:
+
+- `RESTRICT`
+- `CASCADE`
+- `SET NULL`
+
+---
+
+## ON DELETE RESTRICT
+
+No permet eliminar el registre pare  
+-> si té registres fills associats.
+
+* Exemple:
+
+- no es pot eliminar una seu si té sales
+
+És una opció **molt segura**.
+
+---
+
+## ON DELETE CASCADE
+
+En eliminar el registre pare:
+
+- s’eliminen automàticament els fills
+
+* Exemple:
+
+- eliminar un equip
+- elimina les relacions amb participants
+
+Cal usar-ho amb criteri.
+
+---
+
+## ON UPDATE CASCADE
+
+Si canvia la clau primària del pare:
+
+- s’actualitza automàticament a les filles
+
+* Molt útil
+* Poques vegades perillós
+
+---
+
+## Exemple aplicat: SALES → SEUS
+
+⬇️
+
+```sql
+FOREIGN KEY (id_seu)
+REFERENCES SEUS(id_seu)
+ON DELETE RESTRICT
+ON UPDATE CASCADE
+```
+
+* No es poden eliminar seus amb sales
+* Els canvis d’ID es propaguen
+
+---
+
+## Exemple aplicat: EQUIP_PARTICIPANT → EQUIPS
+
+⬇️
+
+```sql
+FOREIGN KEY (id_equip)
+REFERENCES EQUIPS(id_equip)
+ON DELETE CASCADE
+```
+
+* Si s’elimina un equip  
+* desapareixen les seves relacions
+
+---
+
+## Missatge clau
+
+> Una bona base de dades  
+> **no confia en l’usuari**.
+
+⬇️
+
+----
+
+La seguretat i la coherència:
+
+- no depenen dels `INSERT`
+- depenen del **disseny**
+
+---
+
+## Resum final
+
+Amb aquestes millores:
+
+- * evitem duplicats
+- * evitem incoherències
+- * la BD es protegeix sola
+

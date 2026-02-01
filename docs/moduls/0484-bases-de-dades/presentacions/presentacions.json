@@ -219,6 +219,18 @@
       "tags": [
         "BBDD"
       ]
+    },
+    {
+      "id": "0484-bds-teoria-011-millores-gestio-escape-rooms",
+      "title": "TEORIA: Propostes de millora de seguretat i integritat de dades",
+      "description": "TEORIA: Propostes de millora de seguretat i integritat de dades",
+      "src": "slides/0484-bds-teoria-011-millores-gestio-escape-rooms.reveal",
+      "theme": "white",
+      "status": "active",
+       "kind": "theory",
+      "tags": [
+        "BBDD"
+      ]
     }
   ]
 }
