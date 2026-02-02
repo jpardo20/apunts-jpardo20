@@ -1,0 +1,264 @@
+# Dades, validació i decisió de sistema - 0373-ae011
+## 0373 · Llenguatges de marques i sistemes de gestió d’informació
+## 1r DAM — 2n trimestre
+
+---
+## Objectiu de l’activitat
+
+Aquesta activitat avalua si ets capaç de:
+
+- interpretar **dades en format JSON**
+- distingir entre:
+  - error tècnic
+  - problema de criteri
+  - cas acceptable
+- **prendre decisions com a sistema**
+- justificar-les amb criteri raonat
+
+No es tracta de programar.  
+No es tracta de transformar dades.
+
+👉 Es tracta de **decidir què fa un sistema amb les dades que rep**.
+
+Note:
+Llegeix aquesta diapo amb calma.
+Remarca que no és una activitat tècnica de JSON.
+És una activitat de criteri.
+
+---
+## Context general
+
+Un sistema rep dades en format JSON.
+
+Abans de continuar un procés, el sistema ha de decidir si:
+
+- pot continuar
+- ha de continuar amb advertència
+- s’ha d’aturar
+
+El sistema:
+- **no coneix la persona**
+- **només veu les dades**
+- decideix segons criteri professional
+
+Note:
+Recorda explícitament el flux:
+validar → decidir → utilitzar.
+
+---
+## Instruccions generals
+
+Tens **8 casos independents**.
+
+Per **cada cas**, respon:
+
+1. Les dades són **tècnicament correctes**?  
+2. El sistema detecta **algun problema**? Quin?  
+3. El sistema hauria de:
+   - continuar  
+   - continuar amb advertència  
+   - aturar-se  
+4. **Justifica la decisió** (3–5 línies)
+
+Note:
+Insisteix que la justificació és clau.
+No hi ha respostes d’una sola paraula.
+
+---
+## Important
+
+- **Només 2 dels 8 casos són plenament correctes**
+- **Hi ha casos grisos**
+- **No totes les dades incorrectes obliguen a aturar**
+- No hi ha repartiment simètric de respostes
+
+👉 Cada cas s’ha de pensar **per separat**.
+
+Note:
+Aquesta diapo evita patrons d’endevinació.
+
+---
+## CAS 1
+
+```json
+{
+  "id": 1023,
+  "usuari": "albert",
+  "actiu": true
+}
+```
+
+Note:
+Cas correcte.
+S’hauria de poder continuar sense problema.
+
+---
+## CAS 2
+
+```json
+{
+  "id": 1024,
+  "usuari": "maria",
+  "actiu": false
+}
+```
+
+Note:
+Segon cas correcte.
+Comprova si l’alumne sap no aturar per defecte.
+
+---
+## CAS 3
+
+```json
+{
+  "id": "1025",
+  "usuari": "pau",
+  "actiu": true
+}
+```
+
+Note:
+Error de tipus.
+Id esperable com a número.
+Cas tècnic clar.
+
+---
+## CAS 4
+
+```json
+{
+  "id": 1026,
+  "usuari": "",
+  "actiu": true
+}
+```
+
+Note:
+Cas de criteri.
+El camp existeix però el contingut és problemàtic.
+No és purament tècnic.
+
+---
+## CAS 5
+
+```json
+{
+  "id": 1027,
+  "usuari": "laia",
+  "actiu": "sí"
+}
+```
+
+Note:
+Error tècnic clar.
+El tipus no és correcte.
+Aquí el sistema no pot confiar en les dades.
+
+---
+## CAS 6
+
+```json
+{
+  "id": 1028,
+  "usuari": "roger"
+}
+```
+
+Note:
+Cas gris.
+Falta informació, però pot dependre del moment del procés.
+
+---
+## CAS 7
+
+```json
+{
+  "id": 1029,
+  "usuari": "anna",
+  "edat": 14
+}
+```
+
+Note:
+Cas gris clàssic.
+Tècnicament correcte.
+La decisió depèn del context del sistema.
+
+---
+## CAS 8
+
+```json
+{
+  "id": 1030,
+  "usuari": "joan",
+  "edat": -3
+}
+```
+
+Note:
+Valor amb sentit dubtós.
+Tipus correcte, significat problemàtic.
+Cas de criteri clar.
+
+---
+## PART 2 · Cas de decisió raonada
+
+Tria **un dels casos grisos** (CAS 6 o CAS 7).
+
+Respon de manera més extensa:
+
+- Quina decisió prens com a sistema?
+- Per què?
+- Per què **una altra decisió també podria ser raonable**?
+
+Extensió orientativa: **6–8 línies**
+
+Note:
+Aquesta part diferencia molt els nivells d’alumnat.
+
+---
+## PART 3 · Reflexió final
+
+Respon breument:
+
+> Per què validar dades **no és suficient**  
+> per decidir què fa un sistema?
+
+Extensió orientativa: **5–6 línies**
+
+Note:
+Pregunta clau del mòdul.
+Aquí es veu si el missatge ha quedat.
+
+---
+## Format d’entrega
+
+- Document de text (Google Docs, Word, LibreOffice…)
+- Un document per alumne
+- No s’avalua el format
+- S’avalua el **contingut i el raonament**
+
+---
+## Criteris d’avaluació
+
+| Part | Pes |
+|----|----|
+| Anàlisi dels 8 casos | 55% |
+| Cas gris raonat | 25% |
+| Reflexió final | 20% |
+
+Note:
+Explica que la nota no és binària.
+Es valora la coherència de les decisions.
+
+---
+## Recorda
+
+- Validar **no és** decidir
+- El format **no pensa**
+- Un sistema **ha de justificar el que fa**
+
+Note:
+Aquesta és la diapo de tancament de l’AE.
+Deixa-la uns segons abans d’acabar.

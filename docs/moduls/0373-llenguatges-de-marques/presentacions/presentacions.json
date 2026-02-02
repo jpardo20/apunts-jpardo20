@@ -122,6 +122,12 @@
             "description": "Formats de dades i criteri de sistema",
             "status": "active",
             "kind": "theory"
+        },{
+            "order": 175,
+            "title": "175 Activitat: Dades, validació i decisió de sistema - 0373-ae011",
+            "src": "slides/0373-2ntri-0010-0373-ae011.reveal",
+            "description": "Activitat avaluable: 0373-ae011",
+            "kind": "activity"
         }
     ]
 }
