@@ -26,10 +26,6 @@ No es tracta de transformar dades.
 
 Es tracta de **decidir què fa un sistema amb les dades que rep**.
 
-Note:
-Llegeix aquesta diapo amb calma.
-Remarca que no és una activitat tècnica de JSON.
-És una activitat de criteri.
 
 ---
 
@@ -52,9 +48,6 @@ El sistema:
 - **només veu les dades**
 - decideix segons criteri professional
 
-Note:
-Recorda explícitament el flux:
-validar → decidir → utilitzar.
 
 ---
 
@@ -72,9 +65,6 @@ Per **cada cas**, respon:
    - aturar-se  
 4. **Justifica la decisió** (3–5 línies)
 
-Note:
-Insisteix que la justificació és clau.
-No hi ha respostes d’una sola paraula.
 
 ---
 
@@ -88,9 +78,6 @@ No hi ha respostes d’una sola paraula.
 }
 ```
 
-Note:
-Cas correcte.
-S’hauria de poder continuar sense problema.
 
 ---
 
@@ -104,9 +91,6 @@ S’hauria de poder continuar sense problema.
 }
 ```
 
-Note:
-Segon cas correcte.
-Comprova si l’alumne sap no aturar per defecte.
 
 ---
 
@@ -120,10 +104,6 @@ Comprova si l’alumne sap no aturar per defecte.
 }
 ```
 
-Note:
-Error de tipus.
-Id esperable com a número.
-Cas tècnic clar.
 
 ---
 
@@ -137,10 +117,6 @@ Cas tècnic clar.
 }
 ```
 
-Note:
-Cas de criteri.
-El camp existeix però el contingut és problemàtic.
-No és purament tècnic.
 
 ---
 
@@ -154,10 +130,6 @@ No és purament tècnic.
 }
 ```
 
-Note:
-Error tècnic clar.
-El tipus no és correcte.
-Aquí el sistema no pot confiar en les dades.
 
 ---
 
@@ -169,10 +141,6 @@ Aquí el sistema no pot confiar en les dades.
   "usuari": "roger"
 }
 ```
-
-Note:
-Cas gris.
-Falta informació, però pot dependre del moment del procés.
 
 ---
 
@@ -186,11 +154,6 @@ Falta informació, però pot dependre del moment del procés.
 }
 ```
 
-Note:
-Cas gris clàssic.
-Tècnicament correcte.
-La decisió depèn del context del sistema.
-
 ---
 
 ## CAS 8
@@ -203,27 +166,21 @@ La decisió depèn del context del sistema.
 }
 ```
 
-Note:
-Valor amb sentit dubtós.
-Tipus correcte, significat problemàtic.
-Cas de criteri clar.
-
 ---
 
 ## PART 2 · Cas de decisió raonada
 
-Tria **un dels casos grisos**.
+Hi ha dos **casos grisos**, és a dir que presenten un nivell més elevat de complexitat a l'hora de decidir.
 
-Respon de manera més extensa:
+Cal que siguis tú qui indiqui quins creus qus són els dos **casos grisos**.
+
+Respon de manera més extensa a aquests dos casos:
 
 - Quina decisió prens com a sistema?
 - Per què?
 - Per què **una altra decisió també podria ser raonable**?
 
 Extensió orientativa: **6–8 línies**
-
-Note:
-Aquesta part diferencia molt els nivells d’alumnat.
 
 ---
 
@@ -236,18 +193,31 @@ Respon breument:
 
 Extensió orientativa: **5–6 línies**
 
-Note:
-Pregunta clau del mòdul.
-Aquí es veu si el missatge ha quedat.
-
 ---
 
 ## Format d’entrega
 
-- Document en format markdown
+- Document en format markdown, pujat a l'aula virtual.
 - Un document per alumne
 - No s’avalua el format
 - S’avalua el **contingut i el raonament**
+
+
+Nom del fitxer a pujar ...
+
+⬇️
+
+----
+
+Nom del fitxer a pujar:
+
+<u><b>**`<PrimerCognomAlumne>0373-ae011.md`**</b></u><br>(<u>**tot en minúscules**</u>).
+
+><hr>
+>
+> ###### On **`<PrimerCognomAlumne>`** és <u>només</u> el primer cognom de l'alumne, sense el nom.
+>
+> ###### Per exemple en el cas de l'alumne <b><u>Albert Einstein</u></b>, el nom del fitxer seria <kbd><u><b>**`einstein-0373-ae011.md`**</b></u></kbd>.
 
 ---
 
@@ -259,9 +229,6 @@ Aquí es veu si el missatge ha quedat.
 | Cas gris raonat | 25% |
 | Reflexió final | 20% |
 
-Note:
-Explica que la nota no és binària.
-Es valora la coherència de les decisions.
 
 ---
 
@@ -271,6 +238,3 @@ Es valora la coherència de les decisions.
 - El format **no pensa**
 - Un sistema **ha de justificar el que fa**
 
-Note:
-Aquesta és la diapo de tancament de l’AE.
-Deixa-la uns segons abans d’acabar.
