@@ -1,0 +1,586 @@
+# Formats de dades i criteri de sistema
+## Llenguatges de marques – DAM 1r
+
+---
+
+## Quan treballem amb dades,
+## el problema **no és el format**
+
+* XML no decideix
+* XSD no corregeix
+* XSLT no pensa
+
+<br>
+
+️ **El sistema decideix**
+
+---
+
+### Validar → Decidir → Transformar
+
+<br>
+
+<small>
+Pensar com un sistema
+és l’objectiu real del mòdul
+</small>
+
+Note:
+Aquesta diapositiva és el pont entre blocs.
+
+No l’expliquis tècnicament.
+Fes una pausa abans de parlar.
+
+Missatge clau a dir:
+“Tot el que hem fet amb XML no anava de llenguatges.
+Anava de dades i de decisions.”
+
+No entris en JSON encara.
+Aquesta diapo serveix per reconèixer el que ja saben.
+
+---
+
+## Què hem estat fent realment
+
+No hem estat aprenent:
+
+- XML
+- XSD
+- XSLT
+
+Hem estat aprenent a:
+
+- **rebre dades**
+- **comprovar-les**
+- **decidir què fer**
+
+Note:
+Aquesta slide ajuda a reordenar mentalment el bloc anterior.
+
+Remarca que els llenguatges eren eines, no l’objectiu.
+Fes veure que el que han après no es perd,
+sinó que es reutilitza.
+
+Pregunta retòrica possible:
+“Creieu que aquest problema només passa amb XML?”
+No cal que responguin encara.
+
+---
+
+## Les dades no viuen soles
+
+Les dades sempre arriben a un sistema:
+
+- Formularis web
+- Fitxers d’importació
+- Dades d’un proveïdor
+- Informació d’usuaris
+- Resultats d’un procés
+
+Note:
+Aquí comencem el nou bloc sense cap llenguatge nou.
+
+Explica exemples reals:
+
+- un Excel que s’importa
+- un formulari de registre
+- un fitxer que arriba d’una altra empresa
+
+Idea clau:
+“El sistema no pot confiar a cegues en les dades.”
+
+---
+
+## Davant de dades, un sistema ha de decidir
+
+Un sistema pot:
+
+- continuar
+- aturar-se
+- avisar
+- rebutjar
+- guardar parcialment
+
+La decisió **no depèn del format**.
+
+Note:
+Relaciona-ho amb l’activitat de “Decideix com actua el sistema”.
+
+Insisteix:
+No hi ha una única resposta correcta.
+Hi ha decisions raonables segons el context.
+
+Aquí consolides el pensament de sistema.
+
+---
+
+## El mateix problema, sempre
+
+Canvia:
+
+- el **format**
+
+No canvia:
+
+- el **problema**
+
+Note:
+Aquesta diapo és molt curta però molt important.
+
+Fes una pausa.
+Deixa que la idea reposi.
+
+Estàs preparant el terreny perquè aparegui JSON
+com una conseqüència natural.
+
+---
+
+## Recordem: XML
+
+Amb XML ja sabem que:
+
+- és un format de dades
+- té estructura
+- es pot validar
+- **no decideix res**
+
+Note:
+Aquesta slide és tranquil·litzadora.
+Serveix perquè l’alumne senti:
+“Ah, això ho controlo.”
+
+No expliquis sintaxi.
+Només recorda conceptes.
+
+---
+
+## I si les dades no fossin XML?
+
+Hi ha altres formats per representar dades.
+
+Un dels més habituals avui dia és:
+**JSON**
+
+Note:
+Aquí apareix JSON per primer cop.
+No el presentis com “ara canviem”.
+
+Presenta’l com:
+“Una altra manera d’expressar dades.”
+
+Important:
+No entris encara en detall.
+
+---
+
+## Comparació conceptual
+
+| Concepte | XML | JSON |
+|--------|-----|------|
+| Són dades | ✔️ | ✔️ |
+| Tenen estructura | ✔️ | ✔️ |
+| Es poden validar | ✔️ | ✔️ |
+| Decideixen | ❌ | ❌ |
+
+Note:
+Aquesta taula és clau per l’encaix Lego.
+
+Insisteix molt en l’última fila:
+Cap format decideix.
+
+Pregunta a classe:
+“Qui decideix, doncs?”
+Deixa que responguin.
+
+---
+
+## Missatge important
+
+Canviar de format
+**no canvia el problema**
+
+Note:
+Aquesta slide és gairebé filosòfica.
+
+Serveix per reforçar que:
+el que han après amb XML és reutilitzable.
+
+No expliquis res més.
+
+---
+
+## Primer contacte amb JSON
+
+JSON representa dades amb:
+
+- parelles **clau : valor**
+- llistes d’elements
+- estructures simples
+
+És només una manera d’escriure dades.
+
+Note:
+Aquí pots mostrar (oralment o a la pissarra)
+un exemple molt simple, si vols,
+però no és obligatori.
+
+No parlis encara de validació JSON.
+No parlis d’APIs.
+No parlis de JavaScript.
+
+Només:
+“Són dades.”
+
+
+---
+
+## Exemple 1 · Dades correctes… però dubtoses
+
+```json
+{
+  "nom": "Anna",
+  "edat": 14,
+  "email": "anna@email.com"
+}
+```
+
+Pregunta com a sistema:
+
+- Les dades són correctes?
+- El format és vàlid?
+- El sistema hauria de continuar?
+
+Note:
+Aquest exemple és clau perquè NO hi ha error tècnic.
+
+Guia oral:
+
+- El JSON està ben escrit
+- L’edat és un número
+- L’email té format correcte
+
+Però:
+Un sistema real pot acceptar un registre de 14 anys?
+
+Missatge:
+“No tot el que és correcte tècnicament és acceptable.”
+
+---
+
+## Exemple 2 · Falta informació
+
+```json
+{
+  "nom": "Jordi"
+}
+```
+
+Pregunta com a sistema:
+
+- Falta informació?
+- El sistema pot continuar?
+- Depèn de què?
+
+Note:
+Aquest exemple serveix per parlar de context.
+
+Guia oral:
+
+- Potser només necessitem el nom
+- Potser és un registre parcial
+- Potser estem en un pas intermedi
+
+Idea clau:
+“La decisió depèn del moment del procés,
+no només de les dades.”
+
+---
+
+## Exemple 3 · El valor té sentit?
+
+```json
+{
+  "producte": "Cadira",
+  "preu": -20
+}
+```
+
+Pregunta com a sistema:
+
+- El tipus és correcte?
+- El valor té sentit?
+- El sistema hauria d’aturar-se?
+
+Note:
+Aquest exemple connecta directament amb XSD.
+
+Guia oral:
+
+- És un número → correcte
+- Però és negatiu → sospitós
+
+Pregunta a classe:
+“Això és un error de dades o una decisió de sistema?”
+
+Missatge:
+“La validació arriba fins on arriba.”
+
+---
+
+## Exemple 4 · Error tècnic clar
+
+```json
+{
+  "nom": "Laia",
+  "email": "laia@email.com",
+}
+```
+
+Pregunta com a sistema:
+
+- Aquí què passa?
+- Es pot decidir res?
+- Què toca fer primer?
+
+Note:
+Aquest és l’únic exemple amb error tècnic clar.
+
+Guia oral:
+
+- El JSON està mal format
+- Aquí no hi ha debat
+
+Missatge:
+“Sense dades vàlides,
+no hi ha decisió possible.”
+
+---
+
+## Què hem vist amb aquests exemples
+
+- No tots els problemes són tècnics
+- No totes les dades incorrectes obliguen a aturar
+- La decisió depèn del context
+- El format no pren decisions
+
+Note:
+Aquesta slide fixa el missatge.
+
+Pots dir literalment:
+“Això és exactament el mateix que fèiem amb XML.
+Només ha canviat com s’escriuen les dades.”
+
+---
+
+## I amb JSON… què passa?
+
+Exactament el mateix:
+
+1. Rebem dades
+2. Les validem (amb eines adequades)
+3. Decidim
+4. Les utilitzem o no
+
+Note:
+Aquesta diapo és la connexió directa amb el futur.
+
+Digues explícitament:
+“El flux no canvia.”
+
+Això dona seguretat a l’alumnat.
+
+---
+
+## Què hem fet avui
+
+- Hem tancat XML com a cas concret
+- Hem identificat un problema general
+- Hem vist que el format no és el centre
+- Hem obert la porta a altres formats
+
+Note:
+Aquesta és una diapo de tancament de sessió.
+
+Recapitula amb calma.
+No introdueixis res nou.
+
+---
+
+## Què farem a partir d’ara
+
+Treballarem amb altres formats de dades
+aplicant **el mateix criteri de sistema**
+
+Note:
+No expliquis el següent tema en detall.
+
+Només deixa clar:
+“No comencem de zero.”
+“Continuem el mateix camí.”
+
+Això tanca la sessió amb coherència.
+
+---
+
+## Mini activitat · Pensem com un sistema
+
+Treball en **parelles**
+
+No programem.  
+No validem amb eines.
+
+**Decidim.**
+
+Note:
+Presenta l’activitat amb calma.
+
+Insisteix:
+
+- no és un exercici tècnic
+- no és per trobar errors
+- és per decidir com actuaria un sistema real
+
+Recalca que treballaran en parelles.
+
+---
+
+## Context del sistema
+
+Un sistema rep dades per:
+
+- crear un **perfil d’usuari**
+- desar informació
+- continuar un procés
+
+El sistema:
+
+- **no coneix la persona**
+- **només veu dades**
+
+Note:
+Aquesta diapo fixa el marc mental.
+
+Remarca:
+“El sistema no interpreta intencions.
+Només veu el que rep.”
+
+No parlis encara de JSON concret.
+
+---
+
+## CAS A
+
+```json
+{
+  "usuari": "marc99",
+  "actiu": true
+}
+```
+
+Com a sistema:
+
+1. Tens prou informació?
+2. Pots continuar?
+3. Quina decisió prendries?
+
+Note:
+No busquis errors.
+Tot és correcte tècnicament.
+
+Guia oral:
+
+- Potser només volem marcar un estat
+- Potser és una fase intermèdia
+
+Accepta respostes diferents.
+
+---
+
+## CAS B
+
+```json
+{
+  "usuari": "",
+  "actiu": true
+}
+```
+
+Com a sistema:
+
+1. Les dades són correctes?
+2. El problema és tècnic o de criteri?
+3. Atures el procés o continues?
+
+Note:
+Aquest cas genera dubte.
+
+Guia oral:
+
+- El camp existeix
+- El tipus és correcte
+- Però el contingut és útil?
+
+Pregunta clau:
+“El sistema pot saber si això és acceptable?”
+
+---
+
+## CAS C
+
+```json
+{
+  "usuari": "laura",
+  "actiu": "sí"
+}
+```
+
+Com a sistema:
+
+1. Aquí què falla?
+2. Pots decidir alguna cosa?
+3. Quin seria el primer pas?
+
+Note:
+Aquest és el cas de contrast.
+
+Guia oral:
+
+- Aquí sí que hi ha un problema clar
+- El sistema no pot confiar en les dades
+
+Missatge:
+“Sense dades fiables, no hi ha decisió.”
+
+---
+
+## Posada en comú
+
+Per cada cas:
+
+- continuar / aturar
+- per què
+- què faria el sistema després
+
+Note:
+Fes parlar diferents parelles.
+
+No busquis consens absolut.
+Busca arguments.
+
+Corregeix només si algú confon:
+validació amb decisió.
+
+---
+
+## Què hem practicat
+
+- Llegir dades com un sistema
+- No confondre format amb decisió
+- Acceptar que el criteri depèn del context
+
+Note:
+Aquesta diapo tanca l’activitat.
+
+Frase recomanada:
+“Això és exactament el que farem sempre,
+canviï o no el format.”

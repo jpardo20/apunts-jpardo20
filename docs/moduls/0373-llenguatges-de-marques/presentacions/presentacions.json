@@ -115,10 +115,13 @@
             "description": "XSD, XSLT i decisions de sistema: Activitat de grup Decideix com actua el sistema",
             "status": "active",
             "kind": "theory"
+        },{
+            "order": 170,
+            "title": "170. Formats de dades i criteri de sistema",
+            "src": "slides/0373-2ntri-0009-dades-i-criteri-de-siste.reveal",
+            "description": "Formats de dades i criteri de sistema",
+            "status": "active",
+            "kind": "theory"
         }
-
-
-
-        
     ]
 }
