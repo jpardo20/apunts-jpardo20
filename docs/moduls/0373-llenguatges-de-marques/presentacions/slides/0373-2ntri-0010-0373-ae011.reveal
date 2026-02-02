@@ -1,8 +1,9 @@
-# Dades, validació i decisió de sistema - 0373-ae011
+# Dades, validació i decisió de sistema - <codiae>0373-ae011</codiae>
+
 ## 0373 · Llenguatges de marques i sistemes de gestió d’informació
-## 1r DAM — 2n trimestre
 
 ---
+
 ## Objectiu de l’activitat
 
 Aquesta activitat avalua si ets capaç de:
@@ -15,8 +16,7 @@ Aquesta activitat avalua si ets capaç de:
 - **prendre decisions com a sistema**
 - justificar-les amb criteri raonat
 
-
-️
+⬇️
 
 ----
 
@@ -32,6 +32,7 @@ Remarca que no és una activitat tècnica de JSON.
 És una activitat de criteri.
 
 ---
+
 ## Context general
 
 Un sistema rep dades en format JSON.
@@ -42,11 +43,9 @@ Abans de continuar un procés, el sistema ha de decidir si:
 - ha de continuar amb advertència
 - s’ha d’aturar
 
-
-️
+⬇️
 
 ----
-
 
 El sistema:
 - **no coneix la persona**
@@ -58,6 +57,7 @@ Recorda explícitament el flux:
 validar → decidir → utilitzar.
 
 ---
+
 ## Instruccions generals
 
 Tens **8 casos independents**.
@@ -77,19 +77,7 @@ Insisteix que la justificació és clau.
 No hi ha respostes d’una sola paraula.
 
 ---
-## Important
 
-- **Només 2 dels 8 casos són plenament correctes**
-- **Hi ha casos grisos**
-- **No totes les dades incorrectes obliguen a aturar**
-- No hi ha repartiment simètric de respostes
-
- Cada cas s’ha de pensar **per separat**.
-
-Note:
-Aquesta diapo evita patrons d’endevinació.
-
----
 ## CAS 1
 
 ```json
@@ -105,6 +93,7 @@ Cas correcte.
 S’hauria de poder continuar sense problema.
 
 ---
+
 ## CAS 2
 
 ```json
@@ -120,6 +109,7 @@ Segon cas correcte.
 Comprova si l’alumne sap no aturar per defecte.
 
 ---
+
 ## CAS 3
 
 ```json
@@ -136,6 +126,7 @@ Id esperable com a número.
 Cas tècnic clar.
 
 ---
+
 ## CAS 4
 
 ```json
@@ -152,6 +143,7 @@ El camp existeix però el contingut és problemàtic.
 No és purament tècnic.
 
 ---
+
 ## CAS 5
 
 ```json
@@ -168,6 +160,7 @@ El tipus no és correcte.
 Aquí el sistema no pot confiar en les dades.
 
 ---
+
 ## CAS 6
 
 ```json
@@ -182,6 +175,7 @@ Cas gris.
 Falta informació, però pot dependre del moment del procés.
 
 ---
+
 ## CAS 7
 
 ```json
@@ -198,6 +192,7 @@ Tècnicament correcte.
 La decisió depèn del context del sistema.
 
 ---
+
 ## CAS 8
 
 ```json
@@ -214,9 +209,10 @@ Tipus correcte, significat problemàtic.
 Cas de criteri clar.
 
 ---
+
 ## PART 2 · Cas de decisió raonada
 
-Tria **un dels casos grisos** (CAS 6 o CAS 7).
+Tria **un dels casos grisos**.
 
 Respon de manera més extensa:
 
@@ -230,6 +226,7 @@ Note:
 Aquesta part diferencia molt els nivells d’alumnat.
 
 ---
+
 ## PART 3 · Reflexió final
 
 Respon breument:
@@ -244,14 +241,16 @@ Pregunta clau del mòdul.
 Aquí es veu si el missatge ha quedat.
 
 ---
+
 ## Format d’entrega
 
-- Document de text (Google Docs, Word, LibreOffice…)
+- Document en format markdown
 - Un document per alumne
 - No s’avalua el format
 - S’avalua el **contingut i el raonament**
 
 ---
+
 ## Criteris d’avaluació
 
 | Part | Pes |
@@ -265,6 +264,7 @@ Explica que la nota no és binària.
 Es valora la coherència de les decisions.
 
 ---
+
 ## Recorda
 
 - Validar **no és** decidir
