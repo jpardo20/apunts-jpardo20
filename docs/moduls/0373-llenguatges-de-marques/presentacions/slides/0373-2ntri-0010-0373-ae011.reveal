@@ -15,10 +15,16 @@ Aquesta activitat avalua si ets capaç de:
 - **prendre decisions com a sistema**
 - justificar-les amb criteri raonat
 
+
+️
+
+----
+
+
 No es tracta de programar.  
 No es tracta de transformar dades.
 
-👉 Es tracta de **decidir què fa un sistema amb les dades que rep**.
+Es tracta de **decidir què fa un sistema amb les dades que rep**.
 
 Note:
 Llegeix aquesta diapo amb calma.
@@ -35,6 +41,12 @@ Abans de continuar un procés, el sistema ha de decidir si:
 - pot continuar
 - ha de continuar amb advertència
 - s’ha d’aturar
+
+
+️
+
+----
+
 
 El sistema:
 - **no coneix la persona**
@@ -72,7 +84,7 @@ No hi ha respostes d’una sola paraula.
 - **No totes les dades incorrectes obliguen a aturar**
 - No hi ha repartiment simètric de respostes
 
-👉 Cada cas s’ha de pensar **per separat**.
+ Cada cas s’ha de pensar **per separat**.
 
 Note:
 Aquesta diapo evita patrons d’endevinació.
