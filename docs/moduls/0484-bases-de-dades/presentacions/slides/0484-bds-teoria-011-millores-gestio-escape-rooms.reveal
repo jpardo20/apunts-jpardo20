@@ -72,6 +72,8 @@ Exemple de problema:
 - dues sales iguals dins la mateixa seu
 - dos equips amb el mateix nom
 
+<br>
+
 *  **La BD ho permet... si no fem res**
 
 ---
@@ -235,12 +237,41 @@ MariaDB [escape_room]> show create table RESERVES;
 MariaDB [escape_room]>
 
 ```
+⬇️
+
+----
+
+## Per comprovar que el CHECK ha estat afegit correnctament a la taula **`RESULTATS`** podem executar la següent comanda `show create table RESULTATS;`:
+
+```sql
+MariaDB [escape_room]> show create table RESULTATS;
++-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table     | Create Table                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
++-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| RESULTATS | CREATE TABLE `RESULTATS` (
+  `id_resultat` int(11) NOT NULL AUTO_INCREMENT,
+  `temps_utilitzat` int(11) DEFAULT NULL,
+  `exit_fracas` tinyint(1) DEFAULT NULL,
+  `puntuacio` int(11) DEFAULT NULL,
+  `qtat_pistes` int(11) DEFAULT NULL,
+  `id_reserva` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_resultat`),
+  KEY `id_reserva` (`id_reserva`),
+  CONSTRAINT `RESULTATS_ibfk_1` FOREIGN KEY (`id_reserva`) REFERENCES `RESERVES` (`id_reserva`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci |
++-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [escape_room]>
+
+```
+
 ---
 
 ## 4. Protegir relacions  
 ### ON DELETE / ON UPDATE
 
-Abans de veure el SQL, una mica de teoria 👇
+Abans de veure el SQL, una mica de teoria
 
 ---
 
