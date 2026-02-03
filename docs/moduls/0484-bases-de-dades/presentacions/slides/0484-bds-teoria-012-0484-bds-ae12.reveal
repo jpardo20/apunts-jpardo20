@@ -1,0 +1,198 @@
+# Activitat 12: **Fitxer SQL per afegir registres a la base de dades** <codiae>0484-bds-ae12</codiae>
+
+---
+
+## Context de l’activitat
+
+Fins ara, en aquest projecte, has desenvolupat de manera progressiva:
+
+- **0484-bds-ae09** → MER de la base de dades de gestió d’Escape Rooms
+- **0484-bds-ae10** → Model relacional (MR)
+- **0484-bds-ae11** → Fitxer SQL de creació de les taules
+
+️En aquest punt **ja disposem d’una base de dades estructurada**, amb, **`claus primàries`**, **`claus foranes`**, **dominis** controlats, i **restriccions d’integritat**.
+
+El següent pas natural és **omplir-la amb dades reals i coherents**.
+
+---
+
+## Objectiu de l’activitat
+
+L’objectiu d’aquesta activitat és:
+
+- generar un **fitxer SQL d’inserció de dades** (`INSERT INTO`)
+- que respecti **tota l’estructura i restriccions** de la base de dades `escape_rooms`
+- i que permeti **provar el funcionament real del sistema**.
+
+Aquesta activitat posa el focus en :
+
+- coherència de dades,
+- integritat referencial,
+- i ordre lògic d’inserció.
+
+---
+
+## Creació del repositori (obligatori)
+
+
+## PAS 1 · CREACIÓ DEL REPOSITORI A GITHUB
+
+Accedeix a <a href="https://github.com" target="_blank">https://github.com</a>, inicia sessió, crea un repositori nou.
+
+El nom del repositori (exacte) <codiae>&lt;primerCognomAlumne&gt;-escape-rooms-bd</codiae> (tot amb minúscules)
+
+><hr>
+>
+> ###### On **`<PrimerCognomAlumne>`** és <u>només</u> el primer cognom de l'alumne, sense el nom.
+>
+> ###### Per exemple en el cas de l'alumne <b><u>Albert Einstein</u></b>, el nom del repositori seria <kbd><u><b>**`einstein-0223-aof-ae06-docs`**</b></u></kbd>.
+>
+><hr>
+
+⬇️
+
+----
+
+4. Configuració del repositori:
+   - Privat
+   - Inicialitza amb un <codijpc>README.md</codijpc>
+   - NO afegeixis cap altre fitxer automàtic
+
+5. Crea el repositori.
+
+---
+
+## PAS 2 · CONVIDAR EL PROFESSOR
+
+1. Entra a la configuració del repositori (<codijpc>Settings</codijpc>).
+2. Ves a <codijpc>Collaborators</codijpc>.
+3. Convida l’usuari: <codiae>jpardo20</codiae>
+4. Assegura’t que queda convidat correctament.
+
+<div class="admonition caution">
+<br>
+Aquest pas és obligatori.
+</div>
+
+---
+
+## PAS 3 · CLONAR EL REPOSITORI AL TEU ORDINADOR
+
+1. Copia l’URL del repositori.
+2. Obre un terminal a la carpeta on treballes habitualment.
+3. Executa:
+
+```bash
+git clone <URL_DEL_REPOSITORI>
+```
+
+4. Entra a la carpeta del repositori:
+
+```bash
+cd <primerCognomAlumne>-escape-rooms-bd
+```
+
+---
+
+## PAS 4 · ESTRUCTURA INICIAL DEL PROJECTE
+
+El repositori ha de contenir, com a mínim:
+
+- `0484-bds-ae09-mer-escape-rooms.xml`
+- `0484-bds-ae10-mr-escape-rooms.xml`
+- `0484-bds-ae11-creacio-taules-escape-rooms.sql`
+
+> Pots afegir altres fitxers si vols (notes, proves, captures), però **aquests dos són obligatoris**.
+
+---
+
+## Activitat a lliurar (ae12)
+
+Has de crear el fitxer:
+
+```bash
+0484-bds-ae12-insercio-dades-escape-rooms.sql
+```
+
+Aquest fitxer **només** ha de contenir sentències `INSERT INTO`.
+
+ **NO** ha d’incloure :
+
+- `DROP DATABASE`
+- `CREATE DATABASE`
+- `CREATE TABLE`
+- `ALTER TABLE`
+
+---
+
+## Dades mínimes a inserir
+
+El fitxer ha de contenir, com a mínim:
+
+- **SEUS** → 3 seus diferents
+- **SALES** → 2 sales per cada seu
+- **EQUIPS** → 5 equips
+- **PARTICIPANTS** → 10 participants
+- **EQUIP_PARTICIPANT** → relacions reals entre equips i participants
+- **RESERVES** → almenys 6 reserves
+- **RESULTATS** → resultats associats a reserves realitzades
+
+⬇️
+
+----
+
+### Important
+
+- Els **identificadors forans han d’existir prèviament**
+- Les dades han de ser **versemblants** (dates, valors, textos)
+- Els valors dels `ENUM` han de coincidir **exactament** amb els definits a les taules
+- No s’han de generar duplicats que violin `UNIQUE` o claus primàries
+
+---
+
+## ️ Recordatoris d’integritat
+
+- Un **RESULTAT** només pot existir si la **RESERVA existeix**
+- Una **RESERVA** ha de referenciar una **SALA** i un **EQUIP**
+- La taula **EQUIP_PARTICIPANT** representa una relació N–N real
+- No tots els equips han de tenir el mateix nombre de participants
+- No totes les reserves han de tenir resultat (ex.: cancel·lades)
+
+---
+
+## Recomanació
+
+Prova el teu fitxer abans de pujar-lo al teu repositori.
+
+Comprova :
+
+- que no hi ha errors,
+- que totes les dades s’insereixen correctament,
+- i que pots fer consultes sense problemes.
+
+---
+
+## Lliurament
+
+Cal que us assegureu, que el professor té accés al vostre repositori, ja que sense accés no el podrà corregir.
+
+## Què s’avaluarà
+
+- Correcció sintàctica dels `INSERT`
+- Coherència de les dades
+- Respecte a les restriccions del model
+- Ordre lògic d’inserció
+- Qualitat global del conjunt de dades
+
+---
+
+## ️ Nota final
+
+Aquesta activitat és clau perquè :
+
+- connecta el disseny amb l’ús real de la base de dades,
+- i prepara el terreny per les **consultes SQL** de les següents activitats.
+
+---
+
+**Endavant, ara la base de dades comença a “viure”.**

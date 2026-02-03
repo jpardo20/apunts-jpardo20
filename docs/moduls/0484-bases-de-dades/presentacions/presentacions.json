@@ -6,7 +6,7 @@
   "presentations": [
     {
       "id": "001_Introduccio_Bases_Dades",
-      "title": "1: Introducció a Bases de Dades",
+      "title": "01: Introducció a Bases de Dades",
       "description": "",
       "src": "slides/001_Introduccio_Bases_Dades.reveal",
       "theme": "white",
@@ -18,7 +18,7 @@
     },
     {
       "id": "002_Conceptes_Basics_Bases_Dades",
-      "title": "2: Conceptes bàsics: de Bases de Dades",
+      "title": "02: Conceptes bàsics: de Bases de Dades",
       "description": "",
       "src": "slides/002_Conceptes_Basics_Bases_Dades.reveal",
       "theme": "white",
@@ -30,7 +30,7 @@
     },
     {
       "id": "003_MER_Model_Entitat_Relacio",
-      "title": "3: Model Entitat-Relació (MER)",
+      "title": "03: Model Entitat-Relació (MER)",
       "description": "",
       "src": "slides/003_MER_Model_Entitat_Relacio.reveal",
       "theme": "white",
@@ -42,7 +42,7 @@
     },
     {
       "id": "004_Join",
-      "title": "4 Comanda `JOIN` a SQL",
+      "title": "04 Comanda `JOIN` a SQL",
       "description": "",
       "src": "slides/004_Join.reveal",
       "theme": "white",
@@ -53,8 +53,8 @@
       ]
     },
     {
-      "id": "004_Relacions_MER",
-      "title": "5 Relacions (MER)",
+      "id": "005_Relacions_MER",
+      "title": "05 Relacions (MER)",
       "description": "",
       "src": "slides/004_Relacions_MER.reveal",
       "theme": "white",
@@ -66,7 +66,7 @@
     },
     {
       "id": "DAM_Act_004_MER_14_Enunciats",
-      "title": "Enunciats: Model Entitat-Relació (MER)",
+      "title": "06 - Enunciats: Model Entitat-Relació (MER)",
       "description": "Enunciats: Model Entitat-Relació (MER)",
       "src": "slides/DAM_Act_004_MER_14_Enunciats.reveal",
       "theme": "white",
@@ -78,7 +78,7 @@
     },
     {
       "id": "0484-bds-activitat-validacio-mer-escenaris.reveal",
-      "title": "0484-bds-activitat-validacio-mer-escenaris.reveal",
+      "title": "07. 0484-bds-activitat-validacio-mer-escenaris.reveal",
       "description": "Enunciats: Model Entitat-Relació (MER)",
       "src": "slides/0484-bds-activitat-validacio-mer-escenaris.reveal",
       "theme": "white",
@@ -89,8 +89,8 @@
       ]
     },
     {
-      "id": "del-mer-al-model-relacional-v2.",
-      "title": "TEORIA: Del MER al model relacional",
+      "id": "8 del-mer-al-model-relacional-v2.",
+      "title": "08. TEORIA: Del MER al model relacional",
       "description": "TEORIA: Del MER al model relacional",
       "src": "slides/del-mer-al-model-relacional-v2.reveal",
       "theme": "white",
@@ -101,8 +101,8 @@
       ]
     },
     {
-      "id": "0484-bds-ae01",
-      "title": "Activitat: Informació caòtica (0484-bds-ae01)",
+      "id": "9-0484-bds-ae01",
+      "title": "09. Activitat: Informació caòtica (0484-bds-ae01)",
       "description": "Codi d'activitat 0484-bds-ae01",
       "src": "slides/0484-bds-ae01.reveal",
       "theme": "white",
@@ -113,8 +113,8 @@
       ] 
     },
     {
-      "id": "0484-bds-ae02",
-      "title": "Activitat: Treballem les JOIN 0484-bds-ae02",
+      "id": "10 - 0484-bds-ae02",
+      "title": "10. Activitat: Treballem les JOIN 0484-bds-ae02",
       "description": "Codi d'activitat 0484-bds-ae02",
       "src": "slides/0484-bds-ae02.reveal",
       "theme": "white",
@@ -126,7 +126,7 @@
     },
     {
       "id": "0484-bds-ae03",
-      "title": "Activitat: Validació d’un MER Agència de viatges 0484-bds-ae03",
+      "title": "11. Activitat: Validació d’un MER Agència de viatges 0484-bds-ae03",
       "description": "Codi d'activitat 0484-bds-ae03",
       "src": "slides/0484-bds-ae03-act-validacio-mer-escenaris.reveal",
       "theme": "white",
@@ -138,7 +138,7 @@
     },
     {
       "id": "0484-bds-ae05",
-      "title": "Activitat 1: Creació Entitat 0484-bds-ae05",
+      "title": "12. Activitat 1: Creació Entitat 0484-bds-ae05",
       "description": "Codi d'activitat 0484-bds-ae05",
       "src": "slides/0484-bds-ae05-creacioEntitat.reveal",
       "theme": "white",
@@ -150,7 +150,7 @@
     },
     {
       "id": "0484-bds-ae06",
-      "title": "Activitat 2: Anàlisi PET-Flix 0484-bds-ae06",
+      "title": "13. Activitat 2: Anàlisi PET-Flix 0484-bds-ae06",
       "description": "Codi d'activitat 0484-bds-ae06",
       "src": "slides/0484-bds-ae06-act-002_PET_Flix.reveal",
       "theme": "white",
@@ -161,8 +161,8 @@
       ] 
     },
     {
-      "id": "0484-bds-teoria-007-tornada-de-nadal",
-      "title": "Teoria 7: Tornant de Nadal",
+      "id": "14. 0484-bds-teoria-007-tornada-de-nadal",
+      "title": "14. Teoria 7: Tornant de Nadal",
       "description": "Teoria 7: Tornant de Nadal",
       "src": "slides/0484-bds-01-teoria-007-tornada-de-nadal.reveal",
       "theme": "white",
@@ -174,7 +174,7 @@
     },
     {
       "id": "dedel-model-relacional-asql-ddl.",
-      "title": "TEORIA: Del model relacional a SQL (DDL)",
+      "title": "15. TEORIA: Del model relacional a SQL (DDL)",
       "description": "TEORIA: Del model relacional a SQL (DDL)",
       "src": "slides/0484-bds-teoria-008-del-model-relacional-asql-ddl.reveal",
       "theme": "white",
@@ -186,7 +186,7 @@
     },
     {
       "id": "0484-bds-ae08",
-      "title": "Activitat 8: Inserció de dades a la base de dades <code><b>videojoc_online</b></code> (<code><b>0484-bds-ae08</b></code>)",
+      "title": "16. Activitat 8: Inserció de dades a la base de dades <code><b>videojoc_online</b></code> (<code><b>0484-bds-ae08</b></code>)",
       "description": "Practicar l’ús de les comandes <code><b>INSERT INTO</b></code> en una base de dades relacional.",
       "src": "slides/0484-bds-ae08.reveal",
       "theme": "white",
@@ -198,7 +198,7 @@
     },
     {
       "id": "0484-bds-teoria-009-alter-table-duplicats",
-      "title": "TEORIA: ALTER TABLE, duplicats i dades compartides",
+      "title": "17. TEORIA: ALTER TABLE, duplicats i dades compartides",
       "description": "TEORIA: ALTER TABLE, duplicats i dades compartides",
       "src": "slides/0484-bds-teoria-009-alter-table-duplicats.reveal",
       "theme": "white",
@@ -210,7 +210,7 @@
     },
     {
       "id": "0484-bds-teoria-010-gestio-escape-rooms",
-      "title": "TEORIA: Plataforma de gestió d’Escape Rooms i experiències immersives",
+      "title": "18. TEORIA: Plataforma de gestió d’Escape Rooms i experiències immersives",
       "description": "TEORIA: Plataforma de gestió d’Escape Rooms i experiències immersives",
       "src": "slides/0484-bds-teoria-010-gestio-escape-rooms.reveal",
       "theme": "white",
@@ -222,7 +222,7 @@
     },
     {
       "id": "0484-bds-teoria-011-millores-gestio-escape-rooms",
-      "title": "TEORIA: Propostes de millora de seguretat i integritat de dades",
+      "title": "19. TEORIA: Propostes de millora de seguretat i integritat de dades",
       "description": "TEORIA: Propostes de millora de seguretat i integritat de dades",
       "src": "slides/0484-bds-teoria-011-millores-gestio-escape-rooms.reveal",
       "theme": "white",
@@ -231,6 +231,20 @@
       "tags": [
         "BBDD"
       ]
+    },
+    {
+      "id": "0484-bds-teoria-012-0484-bds-ae12.reveal",
+      "title": "20. Activitat 12: Fitxer SQL per afegir registres a la base de dades <codiae>0484-bds-ae12</codiae>",
+      "description": "generar un fitxer SQL d’inserció de dades (<codijpc>INSERT INTO</codijpc>)<br>- que respecti tota l’estructura i restriccions de la base de dades <codijpc>escape_rooms</codijpc><br>- i que permeti provar el funcionament real del sistema.",
+      "src": "slides/0484-bds-teoria-012-0484-bds-ae12.reveal",
+      "theme": "white",
+       "kind": "activity",
+      "status": "active",
+      "tags": [
+        "BBDD", "activitat"
+      ] 
     }
   ]
 }
+
+
