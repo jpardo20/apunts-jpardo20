@@ -287,10 +287,12 @@ Si canvia la clau primària del pare:
 ⬇️
 
 ```sql
+ALTER TABLE SALES
+ADD CONSTRAINT fk_sales_seus
 FOREIGN KEY (id_seu)
 REFERENCES SEUS(id_seu)
 ON DELETE RESTRICT
-ON UPDATE CASCADE
+ON UPDATE CASCADE;
 ```
 
 * No es poden eliminar seus amb sales
@@ -303,9 +305,11 @@ ON UPDATE CASCADE
 ⬇️
 
 ```sql
+ALTER TABLE EQUIPS
+ADD CONSTRAINT fk_id_equip
 FOREIGN KEY (id_equip)
 REFERENCES EQUIPS(id_equip)
-ON DELETE CASCADE
+ON DELETE CASCADE;
 ```
 
 * Si s’elimina un equip  
