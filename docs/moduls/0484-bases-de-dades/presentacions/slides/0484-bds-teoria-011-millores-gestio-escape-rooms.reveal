@@ -26,7 +26,7 @@ Encara permet:
 
 - dades duplicades
 - incoherències
-- errors humans en els `INSERT`
+- errors humans en els <codijpc>INSERT/codijpc>
 
 ---
 
@@ -51,7 +51,7 @@ Treballarem amb:
 2. Claus compostes per evitar duplicats lògics
 3. Restriccions `CHECK`
 4. Protecció de relacions amb  
-   `ON DELETE` i `ON UPDATE`
+   <codijpc>ON DELETE</codijpc> i <codijpc>ON UPDATE</codijpc>
 
 ---
 
@@ -175,7 +175,7 @@ UNIQUE (id_sala, data_hora);
 <br>
 
 ### Garanteix que una sala  
-no pot tenir dues reserves simultànies.
+### no pot tenir dues reserves simultànies.
 
 ---
 
@@ -206,13 +206,13 @@ ADD CONSTRAINT chk_max_participants
 CHECK (max_participants_sala > 0);
 ```
 
-> Per comprovar que el CHECK ha estat afegit correnctament a la taula ...
+> Per comprovar que el CHECK ha estat afegit correctament a la taula ...
 
 ⬇️
 
 ----
 
-## Per comprovar que el CHECK ha estat afegit correnctament a la taula **`SALES`** podem executar la següent comanda `show create table SALES;`:
+## Per comprovar que el CHECK ha estat afegit correctament a la taula <codijpc>SALES/codijpc> podem executar la següent comanda <codijpc>show create table SALES;</codijpc>:
 
 
 ```sql
@@ -265,13 +265,13 @@ CHECK (puntuacio >= 0);
 
 ### La BD bloqueja dades incoherents.
 
-> Per comprovar que el CHECK ha estat afegit correnctament a la taula ...
+> Per comprovar que el CHECK ha estat afegit correctament a la taula ...
 
 ⬇️
 
 ----
 
-## Per comprovar que el CHECK ha estat afegit correnctament a la taula **`RESERVES`** podem executar la següent comanda `show create table RESERVES;`:
+## Per comprovar que el CHECK ha estat afegit correctament a la taula <codijpc>RESERVES/codijpc> podem executar la següent comanda <codijpc>show create table RESERVES;</codijpc>:
 
 ```sql
 MariaDB [escape_room]> show create table RESERVES;
@@ -299,13 +299,13 @@ MariaDB [escape_room]>
 
 ```
 
-> Per comprovar que el CHECK ha estat afegit correnctament a la taula ...
+> Per comprovar que el CHECK ha estat afegit correctament a la taula ...
 
 ⬇️
 
 ----
 
-## Per comprovar que el CHECK ha estat afegit correnctament a la taula **`RESULTATS`** podem executar la següent comanda `show create table RESULTATS;`:
+## Per comprovar que el CHECK ha estat afegit correctament a la taula **`RESULTATS`** podem executar la següent comanda <codijpc>show create table RESULTATS;</codijpc>:
 
 ```sql
 MariaDB [escape_room]> show create table RESULTATS;
@@ -359,14 +359,14 @@ Si una taula està relacionada amb una altra:
 
 Quan definim una clau forana, podem indicar:
 
-- `ON DELETE`
-- `ON UPDATE`
+- <codijpc>ON DELETE</codijpc>
+- <codijpc>ON UPDATE</codijpc>
 
 Amb diferents comportaments:
 
-- `RESTRICT`
-- `CASCADE`
-- `SET NULL`
+- <codijpc>RESTRICT</codijpc>
+- <codijpc>CASCADE</codijpc>
+- <codijpc>SET NULL</codijpc>
 
 ---
 
@@ -453,7 +453,7 @@ ON DELETE CASCADE;
 
 La seguretat i la coherència:
 
-- no depenen dels `INSERT`
+- no depenen dels <codijpc>INSERT/codijpc>
 - depenen del **disseny**
 
 ---
