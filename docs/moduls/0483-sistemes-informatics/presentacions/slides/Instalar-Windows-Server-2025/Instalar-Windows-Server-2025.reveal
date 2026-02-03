@@ -29,8 +29,8 @@ Marca el protocol: si algú es perd, que s’aturi i aixequi la mà; no improvis
 - **NOM MV:** <codijpc>Win2025</codijpc> 
 - **RAM:** <codijpc>4 GB</codijpc> mínim (ideal <codijpc>6 GB</codijpc> si el vostre PC us ho permet)
 - **CPU:** <codijpc>2 vCPU</codijpc>
-- **Disc:** <codijpc>180 GB</codijpc> (dinàmic)
-- **Firmware:** <codijpc>UEFI</codijpc> (Secure Boot opcional)
+- **Disc:** <codijpc>180 GB</codijpc> (**dinàmic**)
+- **Firmware:** <codijpc>UEFI</codijpc> (**`Secure Boot opcional`**)
 - **ISO:** la que ja teniu disponible (**NO s'ha de descarregar a classe**)
 
 Note:
@@ -98,7 +98,7 @@ Guió docent (Pas 002)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Un cop completada la primera etapa, fem clic sobre el botó Següent.</li>
+      <li>Un cop completada la primera etapa, fem clic sobre el botó <kbd>Siguiente</kbd>.</li>
       <li>A continuació, ens hem d'assegurar d'assignar la quantitat de memòria suficient perquè el sistema funcioni correctament.</li>
     </ul>
   </div>
@@ -107,7 +107,7 @@ Guió docent (Pas 002)
 Note:
 Guió docent (Pas 003)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Un cop completada la primera etapa, fem clic sobre el botó Següent.
+• Instrucció clau (guia): Un cop completada la primera etapa, fem clic sobre el botó <kbd>Siguiente</kbd>.
 • Següent acció / què passarà: A continuació, ens hem d'assegurar d'assignar la quantitat de memòria suficient perquè el sistema funcioni correctament.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 • Connexió amb «processos» (30s): encara que ningú cliqui, el sistema continua perquè està executant processos en segon pla.
@@ -122,7 +122,7 @@ Guió docent (Pas 003)
   <div style="flex:1;">
     <ul>
       <li>A continuació, hem d'establir les característiques del disc dur virtual que utilitzarem.</li>
-      <li>Un cop fets aquests ajustos, fem clic al botó Següent.</li>
+      <li>Un cop fets aquests ajustos, fem clic al botó <kbd>Siguiente</kbd>.</li>
     </ul>
   </div>
 </div>
@@ -131,7 +131,7 @@ Note:
 Guió docent (Pas 004)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
 • Instrucció clau (guia): A continuació, hem d'establir les característiques del disc dur virtual que utilitzarem.
-• Següent acció / què passarà: Un cop fets aquests ajustos, fem clic al botó Següent.
+• Següent acció / què passarà: Un cop fets aquests ajustos, fem clic al botó <kbd>Siguiente</kbd>.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
@@ -143,7 +143,7 @@ Guió docent (Pas 004)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Si tot és correcte, n'hi ha prou amb fer clic sobre el botó Finalitzar.</li>
+      <li>Si tot és correcte, n'hi ha prou amb fer clic sobre el botó <kbd>Finalizar</kbd>.</li>
       <li>Amb això, VirtualBox té tota la informació que necessita per crear la màquina virtual, de manera que, en el següent pas, ens mostra un resum de la informació que hem aportat per fer una última comprovació.</li>
     </ul>
   </div>
@@ -152,7 +152,7 @@ Guió docent (Pas 004)
 Note:
 Guió docent (Pas 005)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Si tot és correcte, n'hi ha prou amb fer clic sobre el botó Finalitzar.
+• Instrucció clau (guia): Si tot és correcte, n'hi ha prou amb fer clic sobre el botó <kbd>Finalizar</kbd>.
 • Següent acció / què passarà: Amb això, VirtualBox té tota la informació que necessita per crear la màquina virtual, de manera que, en el següent pas, ens mostra un resum de la informació que hem aportat per fer una última comprovació.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
@@ -216,7 +216,7 @@ Guió docent (Pas 007)
   <div style="flex:1;">
     <ul>
       <li>Si hem completat correctament els passos anteriors, estem llestos per iniciar la instal·lació de Windows Server 2025.</li>
-      <li>Només hem de seleccionar la màquina virtual a la finestra principal de VirtualBox i fer clic al botó Iniciar.</li>
+      <li>Només hem de seleccionar la màquina virtual a la finestra principal de VirtualBox i fer clic al botó <kbd>Iniciar</kbd>.</li>
     </ul>
   </div>
 </div>
@@ -225,7 +225,7 @@ Note:
 Guió docent (Pas 008)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
 • Instrucció clau (guia): Si hem completat correctament els passos anteriors, estem llestos per iniciar la instal·lació de Windows Server 2025.
-• Següent acció / què passarà: Només hem de seleccionar la màquina virtual a la finestra principal de VirtualBox i fer clic al botó Iniciar.
+• Següent acció / què passarà: Només hem de seleccionar la màquina virtual a la finestra principal de VirtualBox i fer clic al botó <kbd>Iniciar</kbd>.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
@@ -261,7 +261,7 @@ Guió docent (Pas 009)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Per continuar, fem clic sobre el botó Següent.</li>
+      <li>Per continuar, fem clic sobre el botó <kbd>Siguiente</kbd>.</li>
       <li>A continuació, fem clic sobre Instal·lar ara.</li>
     </ul>
   </div>
@@ -270,7 +270,7 @@ Guió docent (Pas 009)
 Note:
 Guió docent (Pas 010)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Per continuar, fem clic sobre el botó Següent.
+• Instrucció clau (guia): Per continuar, fem clic sobre el botó <kbd>Siguiente</kbd>.
 • Següent acció / què passarà: A continuació, fem clic sobre Instal·lar ara.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
@@ -308,7 +308,7 @@ Guió docent (Pas 011)
   <div style="flex:1;">
     <ul>
       <li>Per exemple, en el nostre cas triarem Standard Evaluation (Desktop Experience).</li>
-      <li>A continuació, fem clic sobre el botó Següent.</li>
+      <li>A continuació, fem clic sobre el botó <kbd>Siguiente</kbd>.</li>
     </ul>
   </div>
 </div>
@@ -317,7 +317,7 @@ Note:
 Guió docent (Pas 012)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
 • Instrucció clau (guia): Per exemple, en el nostre cas triarem Standard Evaluation (Desktop Experience).
-• Següent acció / què passarà: A continuació, fem clic sobre el botó Següent.
+• Següent acció / què passarà: A continuació, fem clic sobre el botó <kbd>Siguiente</kbd>.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 • Connexió amb «processos» (30s): encara que ningú cliqui, el sistema continua perquè està executant processos en segon pla.
 
