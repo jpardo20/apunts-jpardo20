@@ -45,16 +45,23 @@ Si algú va just de RAM al host, millor baixar a 4 GB però mantenir 2 vCPU.
 
 ## Pas 1
 
-- Un cop en ella, ens desplacem cap avall fins a trobar el nostre idioma.
-- Un cop localitzat, fem clic sobre l'enllaç de descàrrega.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-001.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-001.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Un cop en ella, ens desplacem cap avall fins a trobar el nostre idioma.</li>
+      <li>Un cop localitzat, fem clic sobre l'enllaç de descàrrega.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 001)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Una vez en ella, nos desplazamos hacia abajo hasta encontrar nuestro idioma.
-• Següent acció / què passarà: Una vez localizado, hacemos clic sobre el enlace de descarga.
+• Instrucció clau (guia): Un cop en ella, ens desplacem cap avall fins a trobar el nostre idioma.
+• Següent acció / què passarà: Un cop localitzat, fem clic sobre l'enllaç de descàrrega.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 • Connexió amb «processos» (30s): encara que ningú cliqui, el sistema continua perquè està executant processos en segon pla.
 
@@ -62,81 +69,113 @@ Guió docent (Pas 001)
 
 ## Pas 2
 
-- Comprovareu que aquesta s'inicia automàticament.
-- A la versió en anglès, també pots descarregar un arxiu VHD, que no és més que un disc dur virtual, que et permetrà crear ràpidament una nova màquina virtual de Hyper-V, amb Windows Server 2025 ja instal·lat i llest per utilitzar.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-002.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-002.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Comprovareu que aquesta s'inicia automàticament.</li>
+      <li>A la versió en anglès, també podeu descarregar un arxiu VHD, que no és més que un disc dur virtual, que us permetrà crear ràpidament una nova màquina virtual de Hyper-V, amb Windows Server 2025 ja instal·lat i llest per utilitzar.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 002)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Comprobarás que ésta se inicia automáticamente.
-• Següent acció / què passarà: En la versión en inglés, también puedes descargar un archivo VHD , que no es más que un disco duro virtual, que te permitirá crear rápidamente una nueva máquina virtual de Hyper-V , con Windows Server 2025 ya instalado y listo para usar.
+• Instrucció clau (guia): Comprovareu que aquesta s'inicia automàticament.
+• Següent acció / què passarà: A la versió en anglès, també podeu descarregar un arxiu VHD, que no és més que un disc dur virtual, que us permetrà crear ràpidament una nova màquina virtual de Hyper-V, amb Windows Server 2025 ja instal·lat i llest per utilitzar.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 3
 
-- Un cop completada la primera etapa, fem clic sobre el botó Següent .
-- A continuació, ens hem d'assegurar d'assignar la quantitat de memòria suficient perquè el sistema funcioni correctament.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-003.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-003.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Un cop completada la primera etapa, fem clic sobre el botó Següent.</li>
+      <li>A continuació, ens hem d'assegurar d'assignar la quantitat de memòria suficient perquè el sistema funcioni correctament.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 003)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Una vez completada la primera etapa, hacemos clic sobre el botón Siguiente .
-• Següent acció / què passarà: A continuación, debemos asegurarnos de asignar la cantidad de memoria suficiente para que el sistema funcione de forma correcta.
+• Instrucció clau (guia): Un cop completada la primera etapa, fem clic sobre el botó Següent.
+• Següent acció / què passarà: A continuació, ens hem d'assegurar d'assignar la quantitat de memòria suficient perquè el sistema funcioni correctament.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 • Connexió amb «processos» (30s): encara que ningú cliqui, el sistema continua perquè està executant processos en segon pla.
 
 ---
 
 ## Pas 4
-
-- A continuación debemos establecer las características del disco duro virtual que vayamos a utilizar.
-- Una vez hechos estos ajustes, hacemos clic en el botón Siguiente .
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-004.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-004.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>A continuació, hem d'establir les característiques del disc dur virtual que utilitzarem.</li>
+      <li>Un cop fets aquests ajustos, fem clic al botó Següent.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 004)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): A continuación debemos establecer las características del disco duro virtual que vayamos a utilizar.
-• Següent acció / què passarà: Una vez hechos estos ajustes, hacemos clic en el botón Siguiente .
+• Instrucció clau (guia): A continuació, hem d'establir les característiques del disc dur virtual que utilitzarem.
+• Següent acció / què passarà: Un cop fets aquests ajustos, fem clic al botó Següent.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 5
-
-- Si todo es correcto, basta con hacer clic sobre el botón Terminar .
-- Con esto, VirtualBox tiene toda la información que necesita para crear la máquina virtual por lo que, en el siguiente paso, nos muestra un resumen de la información que hemos aportado para que realicemos una última comprobación.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-005.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-005.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Si tot és correcte, n'hi ha prou amb fer clic sobre el botó Finalitzar.</li>
+      <li>Amb això, VirtualBox té tota la informació que necessita per crear la màquina virtual, de manera que, en el següent pas, ens mostra un resum de la informació que hem aportat per fer una última comprovació.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 005)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Si todo es correcto, basta con hacer clic sobre el botón Terminar .
-• Següent acció / què passarà: Con esto, VirtualBox tiene toda la información que necesita para crear la máquina virtual por lo que, en el siguiente paso, nos muestra un resumen de la información que hemos aportado para que realicemos una última comprobación.
+• Instrucció clau (guia): Si tot és correcte, n'hi ha prou amb fer clic sobre el botó Finalitzar.
+• Següent acció / què passarà: Amb això, VirtualBox té tota la informació que necessita per crear la màquina virtual, de manera que, en el següent pas, ens mostra un resum de la informació que hem aportat per fer una última comprovació.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 6
-
-- Si te fijas en el resumen, el Tipo de SO invitado que aparece es Windows Server 2022 , esto no debe preocuparte.
-- Cuando volvamos a la ventana principal de VirtualBox observaremos que, en la parte izquierda, aparece la máquina virtual que acabamos de crear.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-006.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-006.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Si t'hi fixes en el resum, el tipus de SO convidat que apareix és Windows Server 2022, això no t'ha de preocupar.</li>
+      <li>Quan tornem a la finestra principal de VirtualBox, observarem que, a la part esquerra, apareix la màquina virtual que acabem de crear.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 006)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Si te fijas en el resumen, el Tipo de SO invitado que aparece es Windows Server 2022 , esto no debe preocuparte.
-• Següent acció / què passarà: Cuando volvamos a la ventana principal de VirtualBox observaremos que, en la parte izquierda, aparece la máquina virtual que acabamos de crear.
+• Instrucció clau (guia): Si t'hi fixes en el resum, el tipus de SO convidat que apareix és Windows Server 2022, això no t'ha de preocupar.
+• Següent acció / què passarà: Quan tornem a la finestra principal de VirtualBox, observarem que, a la part esquerra, apareix la màquina virtual que acabem de crear.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 • Connexió amb «processos» (30s): encara que ningú cliqui, el sistema continua perquè està executant processos en segon pla.
 
@@ -144,96 +183,141 @@ Guió docent (Pas 006)
 
 ## Pas 7
 
-- A la derecha aparecen sus características, agrupadas por categorías.
-- Iniciamos la instalación.
+<div style="display: flex; align-items: center; gap: 2rem;">
 
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-007.png" height="300">
+  <div style="flex: 1; text-align: center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-007.png" height="450" width="auto">
+  </div>
+
+  <div style="flex: 1;">
+    <ul>
+      <li>A la dreta apareixen les seves característiques, agrupades per categories.</li>
+      <li>Iniciem la instal·lació.</li>
+    </ul>
+  </div>
+
+</div>
 
 Note:
 Guió docent (Pas 007)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): A la derecha aparecen sus características, agrupadas por categorías.
-• Següent acció / què passarà: Iniciamos la instalación.
+• Instrucció clau (guia): A la dreta apareixen les seves característiques, agrupades per categories.
+• Següent acció / què passarà: Iniciem la instal·lació.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 8
 
-- Si hemos completado correctamente los pasos anteriores, estamos listos para iniciar la instalación de Windows Server 2025 .
-- Solo tenemos que seleccionar la máquina virtual en la ventana principal de VirtualBox y hacer clic en el botón Iniciar .
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-008.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-008.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Si hem completat correctament els passos anteriors, estem llestos per iniciar la instal·lació de Windows Server 2025.</li>
+      <li>Només hem de seleccionar la màquina virtual a la finestra principal de VirtualBox i fer clic al botó Iniciar.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 008)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Si hemos completado correctamente los pasos anteriores, estamos listos para iniciar la instalación de Windows Server 2025 .
-• Següent acció / què passarà: Solo tenemos que seleccionar la máquina virtual en la ventana principal de VirtualBox y hacer clic en el botón Iniciar .
+• Instrucció clau (guia): Si hem completat correctament els passos anteriors, estem llestos per iniciar la instal·lació de Windows Server 2025.
+• Següent acció / què passarà: Només hem de seleccionar la màquina virtual a la finestra principal de VirtualBox i fer clic al botó Iniciar.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 9
 
-- El sistema se iniciará desde el DVD de instalación y, tras unos segundos, aparecerá el asistente.
-- Elegimos la configuración regional (idioma, formato de hora y moneda y teclado).
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-009.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-009.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>El sistema s'iniciarà des del DVD d'instal·lació i, després d'uns segons, apareixerà l'assistent.</li>
+      <li>Triem la configuració regional (idioma, format d'hora i moneda i teclat).</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 009)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): El sistema se iniciará desde el DVD de instalación y, tras unos segundos, aparecerá el asistente.
-• Següent acció / què passarà: Elegimos la configuración regional (idioma, formato de hora y moneda y teclado).
+• Instrucció clau (guia): El sistema s'iniciarà des del DVD d'instal·lació i, després d'uns segons, apareixerà l'assistent.
+• Següent acció / què passarà: Triem la configuració regional (idioma, format d'hora i moneda i teclat).
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 10
 
-- Para continuar, hacemos clic sobre el botón Siguiente .
-- A continuación, hacemos clic sobre Instalar ahora .
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-010.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-010.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Per continuar, fem clic sobre el botó Següent.</li>
+      <li>A continuació, fem clic sobre Instal·lar ara.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 010)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Para continuar, hacemos clic sobre el botón Siguiente .
-• Següent acció / què passarà: A continuación, hacemos clic sobre Instalar ahora .
+• Instrucció clau (guia): Per continuar, fem clic sobre el botó Següent.
+• Següent acció / què passarà: A continuació, fem clic sobre Instal·lar ara.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 11
 
-- Tras unos segundos, veremos la lista de ediciones disponibles.
-- Elegimos la que queramos instalar.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-011.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-011.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Després d'uns segons, veurem la llista d'edicions disponibles.</li>
+      <li>Triem la que vulguem instal·lar.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 011)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Tras unos segundos, veremos la lista de ediciones disponibles.
-• Següent acció / què passarà: Elegimos la que queramos instalar.
+• Instrucció clau (guia): Després d'uns segons, veurem la llista d'edicions disponibles.
+• Següent acció / què passarà: Triem la que vulguem instal·lar.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 12
 
-- Por ejemplo, en nuestro caso elegiremos Standard Evaluation (Desktop Experience) .
-- A continuación, hacemos clic sobre el botón Siguiente .
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-012.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-012.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Per exemple, en el nostre cas triarem Standard Evaluation (Desktop Experience).</li>
+      <li>A continuació, fem clic sobre el botó Següent.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 012)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Por ejemplo, en nuestro caso elegiremos Standard Evaluation (Desktop Experience) .
-• Següent acció / què passarà: A continuación, hacemos clic sobre el botón Siguiente .
+• Instrucció clau (guia): Per exemple, en el nostre cas triarem Standard Evaluation (Desktop Experience).
+• Següent acció / què passarà: A continuació, fem clic sobre el botó Següent.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 • Connexió amb «processos» (30s): encara que ningú cliqui, el sistema continua perquè està executant processos en segon pla.
 
@@ -241,96 +325,138 @@ Guió docent (Pas 012)
 
 ## Pas 13
 
-- En la siguiente ventana nos muestra el contrato de licencia.
-- Debemos marcar la casilla Acepto los términos de licencia y hacemos clic en Siguiente .
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-013.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-013.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>A la següent finestra ens mostra el contracte de llicència.</li>
+      <li>Hem de marcar la casella Accepto els termes de la llicència i fer clic a Següent.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 013)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): En la siguiente ventana nos muestra el contrato de licencia.
-• Següent acció / què passarà: Debemos marcar la casilla Acepto los términos de licencia y hacemos clic en Siguiente .
+• Instrucció clau (guia): A la següent finestra ens mostra el contracte de llicència.
+• Següent acció / què passarà: Hem de marcar la casella Accepto els termes de la llicència i fer clic a Següent.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 14
 
-- Ahora debemos elegir el tipo de instalación.
-- Elegimos Personalizada: Instalar solo Windows (avanzado) .
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-014.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-014.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Ara hem de triar el tipus d'instal·lació.</li>
+      <li>Triem Personalitzada: Instal·lar només Windows (avançat).</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 014)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Ahora debemos elegir el tipo de instalación.
-• Següent acció / què passarà: Elegimos Personalizada: Instalar solo Windows (avanzado) .
+• Instrucció clau (guia): Ara hem de triar el tipus d'instal·lació.
+• Següent acció / què passarà: Triem Personalitzada: Instal·lar només Windows (avançat).
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 15
 
-- A continuación se nos mostrará la lista de unidades de disco disponibles.
-- Seleccionamos el disco duro virtual y hacemos clic en Siguiente .
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-015.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-015.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>A continuació se'ns mostrarà la llista d'unitats de disc disponibles.</li>
+      <li>Seleccionem el disc dur virtual i fem clic a Següent.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 015)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): A continuación se nos mostrará la lista de unidades de disco disponibles.
-• Següent acció / què passarà: Seleccionamos el disco duro virtual y hacemos clic en Siguiente .
+• Instrucció clau (guia): A continuació se'ns mostrarà la llista d'unitats de disc disponibles.
+• Següent acció / què passarà: Seleccionem el disc dur virtual i fem clic a Següent.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 16
 
-- Comenzará el proceso de copia de archivos.
-- Esta parte puede tardar un rato.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-016.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-016.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Començarà el procés de còpia de fitxers.</li>
+      <li>Aquesta part pot trigar una estona.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 016)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Comenzará el proceso de copia de archivos.
-• Següent acció / què passarà: Esta parte puede tardar un rato.
+• Instrucció clau (guia): Començarà el procés de còpia de fitxers.
+• Següent acció / què passarà: Aquesta part pot trigar una estona.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 17
 
-- Tras finalizar, el sistema reiniciará automáticamente.
-- No pulses ninguna tecla para arrancar desde el DVD.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-017.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-017.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>En finalitzar, el sistema es reiniciarà automàticament.</li>
+      <li>No premeu cap tecla per arrencar des del DVD.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 017)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Tras finalizar, el sistema reiniciará automáticamente.
-• Següent acció / què passarà: No pulses ninguna tecla para arrancar desde el DVD.
+• Instrucció clau (guia): En finalitzar, el sistema es reiniciarà automàticament.
+• Següent acció / què passarà: No premeu cap tecla per arrencar des del DVD.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 18
 
-- Tras el reinicio, continuará la instalación.
-- Esperamos a que termine.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-018.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-018.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Després del reinici, continuarà la instal·lació.</li>
+      <li>Esperem que acabi.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 018)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Tras el reinicio, continuará la instalación.
-• Següent acció / què passarà: Esperamos a que termine.
+• Instrucció clau (guia): Després del reinici, continuarà la instal·lació.
+• Següent acció / què passarà: Esperem que acabi.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 • Connexió amb «processos» (30s): encara que ningú cliqui, el sistema continua perquè està executant processos en segon pla.
 
@@ -338,80 +464,115 @@ Guió docent (Pas 018)
 
 ## Pas 19
 
-- Cuando finalice, nos pedirá establecer la contraseña del administrador.
-- Introducimos y confirmamos la contraseña.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-019.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-019.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Quan finalitzi, ens demanarà establir la contrasenya de l'administrador.</li>
+      <li>Introduïm i confirmem la contrasenya.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 019)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Cuando finalice, nos pedirá establecer la contraseña del administrador.
-• Següent acció / què passarà: Introducimos y confirmamos la contraseña.
+• Instrucció clau (guia): Quan finalitzi, ens demanarà establir la contrasenya de l'administrador.
+• Següent acció / què passarà: Introduïm i confirmem la contrasenya.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 20
 
-- Hacemos clic sobre Finalizar .
-- Tras unos segundos, veremos la pantalla de inicio de sesión.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-020.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-020.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Fem clic sobre Finalitzar.</li>
+      <li>Després d'uns segons, veurem la pantalla d'inici de sessió.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 020)
 • Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Hacemos clic sobre Finalizar .
-• Següent acció / què passarà: Tras unos segundos, veremos la pantalla de inicio de sesión.
+• Instrucció clau (guia): Fem clic sobre Finalitzar.
+• Següent acció / què passarà: Després d'uns segons, veurem la pantalla d'inici de sessió.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 21
 
-- Para iniciar sesión, pulsamos Ctrl+Alt+Supr (en VirtualBox: Host+Del).
-- Introducimos la contraseña de administrador.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-021.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-021.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Per iniciar sessió, premem Ctrl+Alt+Supr (a VirtualBox: Host+Del).</li>
+      <li>Introduïm la contrasenya d'administrador.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 021)
-• Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Para iniciar sesión, pulsamos Ctrl+Alt+Supr (en VirtualBox: Host+Del).
-• Següent acció / què passarà: Introducimos la contraseña de administrador.
+• Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixeixi la mà.»
+• Instrucció clau (guia): Per iniciar sessió, premem Ctrl+Alt+Supr (a VirtualBox: Host+Del).
+• Següent acció / què passarà: Introduïm la contrasenya d'administrador.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 22
 
-- Ya dentro del sistema, se abrirá el Administrador del servidor.
-- Ahora instalamos las Guest Additions de VirtualBox.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-022.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-022.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Un cop dins del sistema, s'obrirà l'Administrador del servidor.</li>
+      <li>Ara instal·lem les Guest Additions de VirtualBox.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 022)
-• Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Ya dentro del sistema, se abrirá el Administrador del servidor.
-• Següent acció / què passarà: Ahora instalamos las Guest Additions de VirtualBox.
+• Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixeixi la mà.»
+• Instrucció clau (guia): Un cop dins del sistema, s'obrirà l'Administrador del servidor.
+• Següent acció / què passarà: Ara instal·lem les Guest Additions de VirtualBox.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 24
 
-- En el menú de VirtualBox, hacemos clic en Dispositivos → Insertar imagen de CD de las Guest Additions.
-- Abrimos el explorador y ejecutamos el instalador.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-024.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-024.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Al menú de VirtualBox, fem clic a Dispositius → Inserir imatge de CD de les Guest Additions.</li>
+      <li>Obrim l'explorador i executem l'instal·lador.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 024)
-• Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): En el menú de VirtualBox, hacemos clic en Dispositivos → Insertar imagen de CD de las Guest Additions.
-• Següent acció / què passarà: Abrimos el explorador y ejecutamos el instalador.
+• Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixeixi la mà.»
+• Instrucció clau (guia): Al menú de VirtualBox, fem clic a Dispositius → Inserir imatge de CD de les Guest Additions.
+• Següent acció / què passarà: Obrim l'explorador i executem l'instal·lador.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 • Connexió amb «processos» (30s): encara que ningú cliqui, el sistema continua perquè està executant processos en segon pla.
 
@@ -419,93 +580,114 @@ Guió docent (Pas 024)
 
 ## Pas 25
 
-- Se abrirá el asistente de instalación de Guest Additions.
-- Pulsamos Siguiente .
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-025.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-025.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>S'obrirà l'assistent d'instal·lació de les Guest Additions.</li>
+      <li>Premem Següent.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 025)
-• Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Se abrirá el asistente de instalación de Guest Additions.
-• Següent acció / què passarà: Pulsamos Siguiente .
+• Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixeixi la mà.»
+• Instrucció clau (guia): S'obrirà l'assistent d'instal·lació de les Guest Additions.
+• Següent acció / què passarà: Premem Següent.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 26
 
-- Elegimos la ruta de instalación (por defecto está bien).
-- Pulsamos Instalar .
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-026.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-026.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Triem la ruta d'instal·lació (per defecte és correcta).</li>
+      <li>Premem Instal·lar.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 026)
-• Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Elegimos la ruta de instalación (por defecto está bien).
-• Següent acció / què passarà: Pulsamos Instalar .
+• Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixeixi la mà.»
+• Instrucció clau (guia): Triem la ruta d'instal·lació (per defecte és correcta).
+• Següent acció / què passarà: Premem Instal·lar.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 27
 
-- Si Windows muestra avisos de controladores, aceptamos instalar.
-- Esperamos a que termine.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-027.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-027.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Si Windows mostra avisos de controladors, acceptem instal·lar.</li>
+      <li>Esperem que acabi.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 027)
-• Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Si Windows muestra avisos de controladores, aceptamos instalar.
-• Següent acció / què passarà: Esperamos a que termine.
+• Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixeixi la mà.»
+• Instrucció clau (guia): Si Windows mostra avisos de controladors, acceptem instal·lar.
+• Següent acció / què passarà: Esperem que acabi.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 28
 
-- Al finalizar, marcamos Reiniciar ahora (si lo pide) o reiniciamos manualmente.
-- Tras reiniciar, la integración de pantalla y ratón mejora.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-028.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-028.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>En finalitzar, marquem Reiniciar ara (si ho demana) o reiniciem manualment.</li>
+      <li>Després de reiniciar, la integració de pantalla i ratolí millora.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 028)
-• Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Al finalizar, marcamos Reiniciar ahora (si lo pide) o reiniciamos manualmente.
-• Següent acció / què passarà: Tras reiniciar, la integración de pantalla y ratón mejora.
+• Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixeixi la mà.»
+• Instrucció clau (guia): En finalitzar, marquem Reiniciar ara (si ho demana) o reiniciem manualment.
+• Següent acció / què passarà: Després de reiniciar, la integració de pantalla i ratolí millora.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 
 ---
 
 ## Pas 29
 
-- Una vez reiniciado, el sistema estará listo.
-- Ya podemos empezar a trabajar con Windows Server 2025.
-
-<img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-029.png" height="300">
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-029.png" height="450" width="auto">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>Un cop reiniciat, el sistema estarà llest.</li>
+      <li>Ja podem començar a treballar amb Windows Server 2025.</li>
+    </ul>
+  </div>
+</div>
 
 Note:
 Guió docent (Pas 029)
-• Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixequi la mà.»
-• Instrucció clau (guia): Una vez reiniciado, el sistema estará listo.
-• Següent acció / què passarà: Ya podemos empezar a trabajar con Windows Server 2025.
+• Marca el ritme: «Aneu tots al mateix pas. Si algú es perd, que aixeixi la mà.»
+• Instrucció clau (guia): Un cop reiniciat, el sistema estarà llest.
+• Següent acció / què passarà: Ja podem començar a treballar amb Windows Server 2025.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 • Connexió amb «processos» (30s): encara que ningú cliqui, el sistema continua perquè està executant processos en segon pla.
-
----
-
-## Tancament ràpid
-
-- Si no has acabat: **deixa la instal·lació a punt** (o la VM guardada)
-- Demà: reprendrem **«Què és un procés?»** i ho connectarem amb:
-  - processos a Windows
-  - processos a Ubuntu Server
-
-Note:
-Finalitza reforçant la idea: avui és procedimental; demà és conceptual.
-Demà podràs fer exemples reals amb Gestor de tasques (Windows) i `ps/top` (Linux).
-Indica què han de deixar fet abans de marxar: VM creada, ISO muntada, instal·lació iniciada o en fase avançada.
