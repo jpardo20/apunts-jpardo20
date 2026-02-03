@@ -143,7 +143,7 @@ Guió docent (Pas 004)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Si tot és correcte, n'hi ha prou amb fer clic sobre el botó <kbd>Finalizar</kbd>.</li>
+      <li>Si tot és correcte, n'hi ha prou amb fer clic sobre el botó <kbd>Termininar</kbd>.</li>
       <li>Amb això, VirtualBox té tota la informació que necessita per crear la màquina virtual, de manera que, en el següent pas, ens mostra un resum de la informació que hem aportat per fer una última comprovació.</li>
     </ul>
   </div>
