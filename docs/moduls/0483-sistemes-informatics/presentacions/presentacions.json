@@ -117,6 +117,14 @@
             "description": "90. Activitat: Dual boot i gestors d’arrencada | 0483-ae009",
             "status": "active",
             "kind": "activity"
+        },
+        {
+            "order": 91,
+            "title": "91 - Instal·lar-Windows-Server-2025",
+            "src": "slides/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025.reveal",
+            "description": "Instal·lar-Windows-Server-2025",
+            "status": "active",
+            "kind": "theory"
         }
     ]
 }
