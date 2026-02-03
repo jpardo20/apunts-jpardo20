@@ -73,8 +73,10 @@ Exemple de problema:
 - dos equips amb el mateix nom
 
 <br>
+<br>
+<br>
 
-*  **La BD ho permet... si no fem res**
+###  **La BD ho permet... si no fem res**
 
 ---
 
@@ -122,7 +124,12 @@ UNIQUE (nom_sala, id_seu);
 
 Els equips es poden reutilitzar en reserves.
 
-*  El nom ha de ser únic.
+
+<br>
+<br>
+<br>
+
+### El nom ha de ser únic.
 
 ⬇️
 
@@ -146,13 +153,16 @@ Una situació problemàtica:
 - dues reserves diferents
 
 ❌ Impossible en la realitat  
-* Possible a la BD (si no ho evitem)
+
+<br>
+<br>
+<br>
+
+###  Possible a la BD (si no ho evitem)
 
 ---
 
 ## UNIQUE a RESERVES
-
-⬇️
 
 ```sql
 ALTER TABLE RESERVES
@@ -160,7 +170,11 @@ ADD CONSTRAINT uq_reserva_sala_data
 UNIQUE (id_sala, data_hora);
 ```
 
-* Garanteix que una sala  
+<br>
+<br>
+<br>
+
+### Garanteix que una sala  
 no pot tenir dues reserves simultànies.
 
 ---
@@ -174,7 +188,11 @@ Alguns errors típics:
 - puntuacions negatives
 - reserves amb 0 participants
 
-*  **La BD no hauria d’acceptar això**
+<br>
+<br>
+<br>
+
+### **La BD no hauria d’acceptar això**
 
 ---
 
@@ -186,6 +204,43 @@ ADD CONSTRAINT chk_durada_sala
 CHECK (durada_max_sala > 0),
 ADD CONSTRAINT chk_max_participants
 CHECK (max_participants_sala > 0);
+```
+
+> Per comprovar que el CHECK ha estat afegit correnctament a la taula ...
+
+⬇️
+
+----
+
+## Per comprovar que el CHECK ha estat afegit correnctament a la taula **`SALES`** podem executar la següent comanda `show create table SALES;`:
+
+
+```sql
+MariaDB [escape_room]> show create table SALES;
++-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table | Create Table                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
++-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SALES | CREATE TABLE `SALES` (
+  `id_sala` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_sala` varchar(100) DEFAULT NULL,
+  `tematica` varchar(50) DEFAULT NULL,
+  `dificultat` enum('Fàcil','Mitjà','Difícil') NOT NULL,
+  `durada_max` int(11) DEFAULT NULL,
+  `max_parti` int(11) DEFAULT NULL,
+  `id_seu` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_sala`),
+  UNIQUE KEY `uq_sala_seu` (`nom_sala`,`id_seu`),
+  KEY `fk_sales_seus` (`id_seu`),
+  CONSTRAINT `SALES_ibfk_1` FOREIGN KEY (`id_seu`) REFERENCES `SEUS` (`id_seu`),
+  CONSTRAINT `fk_sales_seus` FOREIGN KEY (`id_seu`) REFERENCES `SEUS` (`id_seu`) ON UPDATE CASCADE,
+  CONSTRAINT `chk_durada_sala` CHECK (`durada_max` > 0),
+  CONSTRAINT `chk_max_participants` CHECK (`max_parti` > 0)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci    |
++-------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [escape_room]>
+
 ```
 
 ---
@@ -204,7 +259,13 @@ ADD CONSTRAINT chk_puntuacio
 CHECK (puntuacio >= 0);
 ```
 
-* La BD bloqueja dades incoherents.
+<br>
+<br>
+<br>
+
+### La BD bloqueja dades incoherents.
+
+> Per comprovar que el CHECK ha estat afegit correnctament a la taula ...
 
 ⬇️
 
@@ -237,6 +298,9 @@ MariaDB [escape_room]> show create table RESERVES;
 MariaDB [escape_room]>
 
 ```
+
+> Per comprovar que el CHECK ha estat afegit correnctament a la taula ...
+
 ⬇️
 
 ----
@@ -282,7 +346,12 @@ Si una taula està relacionada amb una altra:
 - Què passa si s’elimina el registre pare?
 - I si s’actualitza la seva clau?
 
-*  **La BD ha de saber què fer**
+
+<br>
+<br>
+<br>
+
+###  **La BD ha de saber què fer**
 
 ---
 
@@ -342,7 +411,6 @@ Si canvia la clau primària del pare:
 
 ## Exemple aplicat: SALES → SEUS
 
-⬇️
 
 ```sql
 ALTER TABLE SALES
@@ -360,7 +428,6 @@ ON UPDATE CASCADE;
 
 ## Exemple aplicat: EQUIP_PARTICIPANT → EQUIPS
 
-⬇️
 
 ```sql
 ALTER TABLE EQUIPS
