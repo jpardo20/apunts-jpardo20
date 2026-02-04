@@ -235,6 +235,23 @@ Guió docent (Pas 008)
 
 ---
 
+
+<div class="admonition caution">
+<br>
+<p class="admonition-title">Important</p>
+    <ul>
+    <li>Cal que la nostra MV tingui dues "Interfícies de Xarxa"</li>
+    <li>La primera Interfície de Xarxa cal que estigui com a <code>NAT</code></li>
+    <li>La segona Interfície de Xarxa cal que estigui com a <code>Host Only</code> o <code>Solo anfitrión</code></li>
+    </ul>
+</div>
+
+
+
+
+---
+
+
 ## Pas 9
 
 <div style="display:flex; align-items:center; gap:2rem;">
