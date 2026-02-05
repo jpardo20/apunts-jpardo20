@@ -1,3 +1,5 @@
+DROP DATABASE escape_room;
+
 -- =========================================
 -- CREACIÓ DE LA BASE DE DADES I LES TAULES
 -- Projecte Escape Rooms - Model relacional
