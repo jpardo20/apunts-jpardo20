@@ -60,7 +60,7 @@ CREATE TABLE EQUIPS_PARTICIPANTS (
 
 CREATE TABLE RESERVES (
     id_reserva INT AUTO_INCREMENT PRIMARY KEY,
-    data_hora_reserva DATETIME,
+    data_hora DATETIME,
     estat_reserva ENUM('Realitzada', 'Cancel·lada', 'Pendent') NOT NULL,
     qtat_participants INT,
     id_sala INT,
