@@ -51,11 +51,11 @@ CREATE TABLE SALES (
 
 CREATE TABLE EQUIPS_PARTICIPANTS (
     id_equip INT,
-    id_participant INT,
+    id_parti INT,
     data_incorp DATE,
-    PRIMARY KEY (id_equip, id_participant),
+    PRIMARY KEY (id_equip, id_parti),
     FOREIGN KEY (id_equip) REFERENCES EQUIPS(id_equip),
-    FOREIGN KEY (id_participant) REFERENCES PARTICIPANTS(id_participant)
+    FOREIGN KEY (id_parti) REFERENCES PARTICIPANTS(id_parti)
 );
 
 CREATE TABLE RESERVES (
