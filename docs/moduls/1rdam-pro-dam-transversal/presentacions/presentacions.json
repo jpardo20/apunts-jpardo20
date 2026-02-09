@@ -1,0 +1,23 @@
+{
+    "module": {
+        "code": "1damtra",
+        "name": "1rdam-pro-dam-transversal"
+    },
+    "presentations": [
+        {
+            "order": "001",
+            "title": "001. Exemple complet — Creació i modificació d’un repositori amb flux professional GitHub (CLI)",
+            "src": "slides/pasos-github.reveal",
+            "description": "Exemple complet — Creació i modificació d’un repositori amb flux professional GitHub (CLI)",
+            "status": "active",
+            "kind": "theory"
+        },{
+            "order": "005",
+            "title": "005. Mini-activitat de control — Flux professional amb GitHub (CLI)",
+            "src": "slides/control-eina.reveal",
+            "description": "Mini-activitat de control — Flux professional amb GitHub (CLI)",
+            "status": "active",
+            "kind": "activity"
+        }
+    ]
+}

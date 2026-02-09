@@ -33,6 +33,9 @@ nav:
     - 0483 - Sistemes Informàtics:
       # - Presentacions:
         - Presentacions:  moduls/0483-sistemes-informatics/presentacions/index.html 
+    - PRTR - Projecte transversal:
+      # - Presentacions:
+        - Presentacions:  moduls/1rdam-pro-dam-transversal/presentacions/index.html        
     - Tutoria:
       # - Presentacions:
         - Presentacions:  moduls/tutoria/presentacions/index.html

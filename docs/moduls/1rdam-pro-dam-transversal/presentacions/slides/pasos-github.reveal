@@ -1,9 +1,16 @@
 # Exemple complet — Creació i modificació d’un repositori amb flux professional GitHub (CLI)
 
-Aquest document mostra **pas a pas** com fer **una modificació mínima** (editar el `README.md`) seguint **un flux professional amb branques i Pull Requests**, utilitzant **exclusivament la consola de VS Code**, `git` i `gh`.
+---
 
-> ⚠️ El canvi és irrellevant.
-> **El procés és l’objectiu d’aprenentatge.**
+Aquest document mostra **pas a pas** com fer **una modificació mínima** (editar el <codijpc>README.md</codijpc>) seguint **un flux professional amb branques i Pull Requests**, utilitzant **exclusivament la consola de VS Code**, `git` i `gh`.
+
+<div class="admonition important">
+
+**El canvi és irrellevant.**
+
+**El procés és l’objectiu d’aprenentatge.**
+
+</div>
 
 ---
 
@@ -11,13 +18,63 @@ Aquest document mostra **pas a pas** com fer **una modificació mínima** (edita
 
 * Git instal·lat
 * GitHub CLI (`gh`) instal·lat
+
+⬇️
+
+----
+
 * Sessió iniciada amb:
 
 ```bash
 gh auth login
 ```
+<pre>
+(.venv)
+joan@DIT-BCN-PROF MINGW64 ~/repos-joan/apunts-jpardo20 (main)
+$ gh auth login
+? Where do you use GitHub? GitHub.com
+? What is your preferred protocol for Git operations on this host? HTTPS
+? Authenticate Git with your GitHub credentials? Yes
+? How would you like to authenticate GitHub CLI? Login with a web browser
+
+! First copy your one-time code: XXXX-YYYY
+Press Enter to open https://github.com/login/device in your browser...
+✓ Authentication complete.
+- gh config set -h github.com git_protocol https
+✓ Configured git protocol
+✓ Logged in as jpardo20
+! You were already logged in to this account
+(.venv) 
+joan@DIT-BCN-PROF MINGW64 ~/repos-joan/apunts-jpardo20 (main)
+$ 
+(.venv) 
+joan@DIT-BCN-PROF MINGW64 ~/repos-joan/apunts-jpardo20 (main)
+$
+</pre>
+
+⬇️
+
+----
 
 * VS Code amb terminal integrat
+
+<p align="center">
+  <img src="../img/pasos-github/pasos-github-image-0.png">pasos-github-image-0.png</img>
+</p>
+
+
+
+⬇️
+
+----
+
+![alt text](../img/pasos-github/pasos-github-image-1.png)
+
+![alt text](../img/pasos-github/pasos-github-image-2.png)
+
+![alt text](../img/pasos-github/pasos-github-image-3.png)
+
+![alt text](../img/pasos-github/pasos-github-image-4.png)
 
 ---
 
