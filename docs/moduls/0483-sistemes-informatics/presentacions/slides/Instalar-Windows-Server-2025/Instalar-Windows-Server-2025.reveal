@@ -98,8 +98,8 @@ Guió docent (Pas 002)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Un cop completada la primera etapa, fem clic sobre el botó <kbd>Siguiente</kbd>.</li>
-      <li>A continuació, ens hem d'assegurar d'assignar la quantitat de memòria suficient perquè el sistema funcioni correctament.</li>
+      <li>En aquest punt cal indicar els detalls de la MV.</li>
+      <li>Un cop indicat el nom, a on volem guardar la MV i la ISO que farem servir, fem clic sobre el botó <kbd>Siguiente</kbd>.</li>
     </ul>
   </div>
 </div>
@@ -121,7 +121,8 @@ Guió docent (Pas 003)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>A continuació, hem d'establir les característiques del disc dur virtual que utilitzarem.</li>
+      <li>A continuació, ens hem d'assegurar d'assignar la quantitat de memòria suficient perquè el sistema funcioni correctament.</li>
+      <li>Així com la quantitat de processadors</li>
       <li>Un cop fets aquests ajustos, fem clic al botó <kbd>Siguiente</kbd>.</li>
     </ul>
   </div>
@@ -143,8 +144,8 @@ Guió docent (Pas 004)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Si tot és correcte, n'hi ha prou amb fer clic sobre el botó <kbd>Termininar</kbd>.</li>
-      <li>Amb això, VirtualBox té tota la informació que necessita per crear la màquina virtual, de manera que, en el següent pas, ens mostra un resum de la informació que hem aportat per fer una última comprovació.</li>
+      <li>A continuació, hem d'establir les característiques del disc dur virtual que utilitzarem.</li>
+      <li>Per continuar cal fer clic al botó <kbd>Siguiente</kbd>.</li>
     </ul>
   </div>
 </div>
@@ -165,8 +166,9 @@ Guió docent (Pas 005)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Si t'hi fixes en el resum, el tipus de SO convidat que apareix és Windows Server 2022, això no t'ha de preocupar.</li>
-      <li>Quan tornem a la finestra principal de VirtualBox, observarem que, a la part esquerra, apareix la màquina virtual que acabem de crear.</li>
+      <li>Si tot és correcte, n'hi ha prou amb fer clic sobre el botó <kbd>Termininar</kbd>.</li>
+      <li>Amb això, VirtualBox té tota la informació que necessita per crear la màquina virtual.</li>
+      <li>Si t'hi fixes en el resum, el tipus de SO convidat que apareix és <code>Windows Server 2022</code>, això no t'ha de preocupar.</li>
     </ul>
   </div>
 </div>
@@ -191,8 +193,9 @@ Guió docent (Pas 006)
 
   <div style="flex: 1;">
     <ul>
+      <li>Quan tornem a la finestra principal de VirtualBox, observarem que, a la part esquerra, apareix la màquina virtual que acabem de crear.</li>
       <li>A la dreta apareixen les seves característiques, agrupades per categories.</li>
-      <li>Iniciem la instal·lació.</li>
+      <li>Mirem els detalls del disc dur.</li>
     </ul>
   </div>
 
@@ -215,8 +218,10 @@ Guió docent (Pas 007)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Si hem completat correctament els passos anteriors, estem llestos per iniciar la instal·lació de Windows Server 2025.</li>
-      <li>Només hem de seleccionar la màquina virtual a la finestra principal de VirtualBox i fer clic al botó <kbd>Iniciar</kbd>.</li>
+    <li>Comprovem que els detalls del disc dur son correctes.</li>
+    <li>El següent pas és configurar les dues Interfícies de Xarxa</li>
+    <li>La primera Interfície de Xarxa cal que estigui com a <code>NAT</code></li>
+    <li>La segona Interfície de Xarxa cal que estigui com a <code>Host Only</code> o <code>Solo anfitrión</code></li>
     </ul>
   </div>
 </div>
@@ -230,6 +235,23 @@ Guió docent (Pas 008)
 
 ---
 
+
+<div class="admonition caution">
+<br>
+<p class="admonition-title">Important</p>
+    <ul>
+    <li>Cal que la nostra MV tingui dues "Interfícies de Xarxa"</li>
+    <li>La primera Interfície de Xarxa cal que estigui com a <code>NAT</code></li>
+    <li>La segona Interfície de Xarxa cal que estigui com a <code>Host Only</code> o <code>Solo anfitrión</code></li>
+    </ul>
+</div>
+
+
+
+
+---
+
+
 ## Pas 9
 
 <div style="display:flex; align-items:center; gap:2rem;">
@@ -238,8 +260,9 @@ Guió docent (Pas 008)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>El sistema s'iniciarà des del DVD d'instal·lació i, després d'uns segons, apareixerà l'assistent.</li>
-      <li>Triem la configuració regional (idioma, format d'hora i moneda i teclat).</li>
+      <li>Si hem completat correctament els passos anteriors, estem llestos per iniciar la instal·lació de Windows Server 2025.</li>
+      <li>Només hem de seleccionar la màquina virtual a la finestra principal de VirtualBox i fer clic al botó <kbd>Iniciar</kbd>.</li>
+      <li>Iniciem la instal·lació.</li>
     </ul>
   </div>
 </div>
@@ -257,12 +280,13 @@ Guió docent (Pas 009)
 
 <div style="display:flex; align-items:center; gap:2rem;">
   <div style="flex:1; text-align:center;">
-    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-010.png" height="450" width="auto">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-011.png" height="450" width="auto">
   </div>
   <div style="flex:1;">
     <ul>
+      <li>El sistema s'iniciarà des del DVD d'instal·lació i, després d'uns segons, apareixerà l'assistent.</li>
+      <li>Triem la configuració regional: idioma, i format d'hora.</li>
       <li>Per continuar, fem clic sobre el botó <kbd>Siguiente</kbd>.</li>
-      <li>A continuació, fem clic sobre Instal·lar ara.</li>
     </ul>
   </div>
 </div>
@@ -280,12 +304,12 @@ Guió docent (Pas 010)
 
 <div style="display:flex; align-items:center; gap:2rem;">
   <div style="flex:1; text-align:center;">
-    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-011.png" height="450" width="auto">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-012.png" height="450" width="auto">
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Després d'uns segons, veurem la llista d'edicions disponibles.</li>
-      <li>Triem la que vulguem instal·lar.</li>
+      <li>Triem la configuració del teclat.</li>
+      <li>A continuació, fem clic sobre Instal·lar ara.</li>
     </ul>
   </div>
 </div>
@@ -303,12 +327,11 @@ Guió docent (Pas 011)
 
 <div style="display:flex; align-items:center; gap:2rem;">
   <div style="flex:1; text-align:center;">
-    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-012.png" height="450" width="auto">
+    <img src="../img/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025-con-interfaz-grafica-paso-a-paso-013.png" height="450" width="auto">
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Per exemple, en el nostre cas triarem Standard Evaluation (Desktop Experience).</li>
-      <li>A continuació, fem clic sobre el botó <kbd>Siguiente</kbd>.</li>
+      <li>Triem la configuració de la instal·lació: <code>Instalar Windows Server 2025</code></li>
     </ul>
   </div>
 </div>
@@ -331,8 +354,9 @@ Guió docent (Pas 012)
   </div>
   <div style="flex:1;">
     <ul>
+      <li>Per exemple, en el nostre cas triarem Standard Evaluation (Desktop Experience).</li>
+      <li>Acceptem que perdrem tot el contingut del disc dur, mardant la casella.</li>
       <li>A la següent finestra ens mostra el contracte de llicència.</li>
-      <li>Hem de marcar la casella Accepto els termes de la llicència i fer clic a Següent.</li>
     </ul>
   </div>
 </div>
@@ -354,8 +378,10 @@ Guió docent (Pas 013)
   </div>
   <div style="flex:1;">
     <ul>
+      <li>Després d'uns segons, veurem la llista d'edicions disponibles.</li>
       <li>Ara hem de triar el tipus d'instal·lació.</li>
-      <li>Triem Personalitzada: Instal·lar només Windows (avançat).</li>
+      <li>Triem: Instal·lar Windows Server 2025 Standard (amb experiència d'escriptori).</li>
+      <li>Fem clic a Següent.</li>
     </ul>
   </div>
 </div>
@@ -377,8 +403,8 @@ Guió docent (Pas 014)
   </div>
   <div style="flex:1;">
     <ul>
+      <li>Hem de marcar la casella Accepto els termes de la llicència i fer clic a Següent.</li>
       <li>A continuació se'ns mostrarà la llista d'unitats de disc disponibles.</li>
-      <li>Seleccionem el disc dur virtual i fem clic a Següent.</li>
     </ul>
   </div>
 </div>
@@ -400,8 +426,8 @@ Guió docent (Pas 015)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Començarà el procés de còpia de fitxers.</li>
-      <li>Aquesta part pot trigar una estona.</li>
+      <li>Ara cal que indiquem al sistema a quin disc dur volem dur a terme la instal·lacaió.</li>
+      <li>Seleccionem el disc dur 0 i fem clic a Següent.</li>
     </ul>
   </div>
 </div>
@@ -423,8 +449,9 @@ Guió docent (Pas 016)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>En finalitzar, el sistema es reiniciarà automàticament.</li>
-      <li>No premeu cap tecla per arrencar des del DVD.</li>
+      <li>Ens informa del que farà, per si volem canviar,<br>
+      ja que a partir d'aquí ja no podrem tornar enrrera.</li>
+      <li>Confirmem que tot és correcte i fem clic a Instalar.</li>
     </ul>
   </div>
 </div>
@@ -446,8 +473,8 @@ Guió docent (Pas 017)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Després del reinici, continuarà la instal·lació.</li>
-      <li>Esperem que acabi.</li>
+      <li>Aquesta part pot trigar una estona.</li>
+      <li>En finalitzar, el sistema es reiniciarà automàticament.</li>
     </ul>
   </div>
 </div>
@@ -470,8 +497,10 @@ Guió docent (Pas 018)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Quan finalitzi, ens demanarà establir la contrasenya de l'administrador.</li>
-      <li>Introduïm i confirmem la contrasenya.</li>
+      <li>No premeu cap tecla per arrencar des del DVD.</li>
+      <li>Començarà el procés de còpia de fitxers.</li>
+      <li>Després del reinici, continuarà la instal·lació.</li>
+      <li>Esperem que acabi.</li>
     </ul>
   </div>
 </div>
@@ -493,8 +522,7 @@ Guió docent (Pas 019)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Fem clic sobre Finalitzar.</li>
-      <li>Després d'uns segons, veurem la pantalla d'inici de sessió.</li>
+      <li>Seguim esperant ...<li>
     </ul>
   </div>
 </div>
@@ -516,8 +544,8 @@ Guió docent (Pas 020)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Per iniciar sessió, premem Ctrl+Alt+Supr (a VirtualBox: Host+Del).</li>
-      <li>Introduïm la contrasenya d'administrador.</li>
+      <li>Seguim esperant ...<li>
+      <li>Quan finalitzi, ens demanarà establir la contrasenya de l'administrador.</li>
     </ul>
   </div>
 </div>
@@ -539,8 +567,9 @@ Guió docent (Pas 021)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Un cop dins del sistema, s'obrirà l'Administrador del servidor.</li>
-      <li>Ara instal·lem les Guest Additions de VirtualBox.</li>
+      <li>Introduïm la contrasenya.</li>
+      <li>La introduïm, una segona vegada, per confir-la.</li>
+      <li>Fem clic sobre Finalitzar.</li>
     </ul>
   </div>
 </div>
@@ -562,8 +591,8 @@ Guió docent (Pas 022)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Al menú de VirtualBox, fem clic a Dispositius → Inserir imatge de CD de les Guest Additions.</li>
-      <li>Obrim l'explorador i executem l'instal·lador.</li>
+      <li>Després d'uns segons, veurem la pantalla d'inici de sessió.</li>
+      <li>Per iniciar sessió, premem Ctrl+Alt+Supr (a VirtualBox: Host+Del).</li>
     </ul>
   </div>
 </div>
@@ -586,8 +615,7 @@ Guió docent (Pas 024)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>S'obrirà l'assistent d'instal·lació de les Guest Additions.</li>
-      <li>Premem Següent.</li>
+      <li>Introduïm la contrasenya d'administrador.</li>
     </ul>
   </div>
 </div>
@@ -609,8 +637,8 @@ Guió docent (Pas 025)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Triem la ruta d'instal·lació (per defecte és correcta).</li>
-      <li>Premem Instal·lar.</li>
+      <li>Veiem que el sistema està creant el perfil d'adminstrador</li>
+      <li>Aquesta part pot trigar una estona.</li>
     </ul>
   </div>
 </div>
@@ -632,8 +660,8 @@ Guió docent (Pas 026)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Si Windows mostra avisos de controladors, acceptem instal·lar.</li>
-      <li>Esperem que acabi.</li>
+      <li>Ens demana, que si volem que en cas d'error s'enviïn dades a Microsoft.</li>
+      <li>Premem Aceptar</li>
     </ul>
   </div>
 </div>
@@ -655,8 +683,8 @@ Guió docent (Pas 027)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>En finalitzar, marquem Reiniciar ara (si ho demana) o reiniciem manualment.</li>
-      <li>Després de reiniciar, la integració de pantalla i ratolí millora.</li>
+      <li>Un cop dins del sistema, s'obrirà l'Administrador del servidor.</li>
+      <li>De moment el tanquem i apareixerm a l'escriptòri de l'Administrador</li>
     </ul>
   </div>
 </div>
@@ -678,7 +706,6 @@ Guió docent (Pas 028)
   </div>
   <div style="flex:1;">
     <ul>
-      <li>Un cop reiniciat, el sistema estarà llest.</li>
       <li>Ja podem començar a treballar amb Windows Server 2025.</li>
     </ul>
   </div>
@@ -691,3 +718,20 @@ Guió docent (Pas 029)
 • Següent acció / què passarà: Ja podem començar a treballar amb Windows Server 2025.
 • Recorda: avui l’objectiu és deixar-ho ENCAMINAT. No cal acabar la instal·lació si el temps no ho permet.
 • Connexió amb «processos» (30s): encara que ningú cliqui, el sistema continua perquè està executant processos en segon pla.
+
+<!-- 
+      <li>Un cop reiniciat, el sistema estarà llest.</li>
+      <li>Ara instal·lem les Guest Additions de VirtualBox.</li>
+      <li>Al menú de VirtualBox, fem clic a Dispositius → Inserir imatge de CD de les Guest Additions.</li>
+      <li>Obrim l'explorador i executem l'instal·lador.</li>
+      <li>S'obrirà l'assistent d'instal·lació de les Guest Additions.</li>
+      <li>Premem Següent.</li>
+
+      <li>Ara instal·lem les Guest Additions de VirtualBox.</li>
+      <li>Triem la ruta d'instal·lació (per defecte és correcta).</li>
+
+      <li>Si Windows mostra avisos de controladors, acceptem instal·lar.</li>
+      <li>Esperem que acabi.</li>
+
+      <li>En finalitzar, marquem Reiniciar ara (si ho demana) o reiniciem manualment.</li>
+      <li>Després de reiniciar, la integració de pantalla i ratolí millora.</li> -->

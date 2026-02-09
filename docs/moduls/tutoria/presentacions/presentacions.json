@@ -32,9 +32,9 @@
             "id": "2a-sessio",
             "title": "2a Sessió | Projecte de Tutoria FP",
             "description": "Projecte de Tutoria FP | SESSIÓ 2 · ...",
-            "src": "projecte-1a-sessio.reveal",
+            "src": "projecte-2a-sessio.reveal",
             "theme": "white",
-            "status": "inactive",
+            "status": "active",
             "kind": "theory",
             "tags": [
                 "BBDD"

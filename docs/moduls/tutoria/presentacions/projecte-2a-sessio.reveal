@@ -1,0 +1,206 @@
+# Projecte de Tutoria FP
+
+## SESSIÓ 2 · El cicle i les sortides professionals
+
+Durada de la sessió: 1 hora  
+Modalitat: Treball individual  
+Aquesta sessió és obligatòria i compta per nota.
+
+---
+
+## OBJECTIU DE LA SESSIÓ
+
+En aquesta sessió analitzaràs el cicle que estàs cursant i algunes de les **possibles sortides professionals** relacionades amb els estudis que estàs fent.
+
+L’objectiu és:
+
+- entendre millor què prepara el cicle a nivell professional
+- relacionar els continguts del cicle amb possibles rols laborals
+- identificar aspectes a millorar per orientar el teu futur acadèmic
+
+⬇️
+
+----
+
+Al final de la sessió hauràs de tenir:
+
+- un nou fitxer afegit al repositori
+- el contingut completat segons les instruccions
+- com a mínim **dos <codijpc>commit</codijpc>s fets avui**
+
+---
+
+## PAS 1 · ABANS DE COMENÇAR LA SESSIÓ
+
+Abans de començar a treballar, actualitza el teu repositori local.
+
+```bash
+git pull
+```
+
+Assegura’t que **no hi ha errors** abans de continuar.
+
+---
+
+## PAS 2 · ESTRUCTURA DE FITXERS DE LA SESSIÓ
+
+Dins del teu repositori, crea la carpeta i el fitxer següents:
+
+```bash
+sessio-2/
+└── sortides_professionals.md
+```
+
+No modifiquis cap altre fitxer.
+
+---
+
+## PAS 3 · PRIMER <codijpc>commit</codijpc> (INICI DE LA SESSIÓ)
+
+Un cop creada l’estructura, fes el **primer commit de la sessió**.
+
+```bash
+git add .
+git commit -m "inici sessio 2"
+```
+
+<div class="admonition caution">
+<br>
+Aquest <codijpc>commit</codijpc> és obligatori.
+</div>
+
+---
+
+## PAS 4 · ANÀLISI DEL CICLE I DE LES SORTIDES PROFESSIONALS
+
+Pensa i reflexiona sobre els punts següents abans d’escriure el contingut.
+
+## 1. Què estic estudiant
+
+Explica breument què creus que s’aprèn en el cicle que estàs cursant
+i quines competències principals creus que es treballen.
+
+
+⬇️
+
+----
+
+## 2. Dues possibles sortides professionals
+
+Escriu **dues sortides professionals** que creguis que estan relacionades
+amb el cicle que estàs estudiant.
+
+No cal que siguin decisions definitives.
+
+⬇️
+
+----
+
+## 3. Relació entre el cicle i una sortida professional
+
+Tria una de les dues sortides anteriors i explica:
+- per què creus que està relacionada amb el cicle
+- quins mòduls o continguts del cicle hi poden tenir relació
+
+⬇️
+
+----
+
+## 4. Aspectes a millorar o reforçar
+
+Indica **un aspecte acadèmic** que creus que hauries de millorar
+o treballar més per poder accedir en el futur a aquesta sortida professional.
+
+⬇️
+
+----
+
+## PAS 5 · CONTINGUT DEL FITXER <codijpc>sortides_professionals.md</codijpc>
+
+El fitxer <codijpc>sessio-2/sortides_professionals.md</codijpc> ha de tenir **exactament** aquesta estructura:
+
+```markdown
+# Sessió 2 · El cicle i les sortides professionals
+
+## 1. Què estic estudiant
+Explica breument què creus que s’aprèn en el cicle que estàs cursant
+i quines competències principals es treballen.
+
+## 2. Dues possibles sortides professionals
+Escriu dues sortides professionals relacionades amb el cicle.
+
+Sortida 1:
+Sortida 2:
+
+## 3. Relació amb una sortida professional
+Tria una de les sortides anteriors i explica per què està relacionada
+amb el cicle i amb els continguts que s’hi treballen.
+
+## 4. Aspectes a millorar
+Explica un aspecte acadèmic que creus que hauries de millorar
+o reforçar per poder accedir a aquesta sortida professional.
+```
+
+⬇️
+
+----
+
+<div class="admonition tip">
+<br>
+No es busca una decisió definitiva, sinó una reflexió acadèmica coherent.
+</div>
+
+---
+
+## PAS 6 · SEGON <codijpc>commit</codijpc> (FINAL DE LA SESSIÓ)
+
+Quan hagis acabat d’escriure el contingut, fes el **segon commit**.
+
+```bash
+git add .
+git commit -m "final sessio 2"
+```
+
+---
+
+## PAS 7 · PUJAR ELS CANVIS A GITHUB
+
+Abans d’acabar la sessió, executa:
+
+```bash
+git push -u origin main
+```
+
+Assegura’t que **no hi ha errors**.
+
+---
+
+## QUÈ ES COMPROVARÀ PER AVALUAR LA SESSIÓ 2
+
+Perquè la sessió compti com a feta correctament, cal que:
+
+- existeixi la carpeta <codijpc>sessio-2</codijpc>
+- existeixi el fitxer <codijpc>sortides_professionals.md</codijpc>
+- el contingut segueixi l’estructura indicada
+- hi hagi **dos <codijpc>commit</codijpc>s fets avui**
+- els missatges dels commits siguin correctes
+- el contingut sigui coherent i no buit
+
+Si falta algun d’aquests punts, la sessió es considerarà incompleta.
+
+---
+
+Recorda:
+A l’inici de cada sessió:
+
+```bash
+git pull
+```
+
+Al final de cada sessió:
+
+```bash
+git push -u origin main
+```
+
+I com a mínim cal fer dos <codijpc>git commit</codijpc> a cada sessió.
