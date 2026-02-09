@@ -1,0 +1,178 @@
+# Mini-activitat de control — Flux professional amb GitHub (CLI)
+
+## Context de l’activitat
+
+Aquesta activitat serveix per **comprovar que cada alumne és capaç d’executar correctament el flux professional de treball amb GitHub** que s’utilitzarà a partir d’ara en els projectes de l’assignatura.
+
+⚠️ **El contingut del canvi és trivial.**
+✔️ **El procés és l’objectiu de l’activitat.**
+
+L’activitat es fa **en grup**, però **cada alumne ha de fer el seu propi canvi**, amb la seva branca, el seu commit i el seu Pull Request.
+
+---
+
+## Requisits previs (obligatoris)
+
+Abans de començar, cada alumne ha de tenir:
+
+* Git instal·lat
+* GitHub CLI (`gh`) instal·lat
+* Sessió iniciada correctament amb:
+
+```bash
+gh auth login
+```
+
+* VS Code amb terminal integrat
+* Repositori del grup clonat en local
+
+---
+
+## Tasca a realitzar
+
+Al fitxer `README.md` del **repositori del grup**, hi ha la secció següent:
+
+```md
+## Group members (workflow test)
+
+| Name and surname | GitHub username | GitHub email |
+|------------------|-----------------|--------------|
+```
+
+### Què ha de fer cada alumne
+
+Cada alumne ha d’afegir **EXACTAMENT una fila nova** a aquesta taula amb:
+
+* el seu **nom i cognoms**
+* el seu **usuari de GitHub**
+* el **correu associat al seu compte de GitHub**
+
+Exemple:
+
+```md
+| Joan Pardo | jpardo20 | joan@example.com |
+```
+
+⚠️ **No s’ha de modificar res més del fitxer.**
+
+---
+
+## Condicions estrictes (no negociables)
+
+* ❌ Prohibit treballar directament a `main`
+* ❌ Prohibit modificar altres files de la taula
+* ❌ Prohibit modificar l’estructura de la taula
+* ❌ Prohibit fer més d’un commit
+* ❌ Prohibit fer el merge del Pull Request
+
+Un alumne = una fila = un Pull Request.
+
+---
+
+## Flux obligatori a seguir (pas a pas)
+
+Cada alumne ha de seguir **fil per randa** el flux següent:
+
+1. Assegurar que `main` està actualitzat
+
+   ```bash
+   git checkout main
+   git pull
+   ```
+
+2. Crear una branca pròpia amb el nom:
+
+   ```text
+   docs/add-member-<github-username>
+   ```
+
+   ```bash
+   git checkout -b docs/add-member-<github-username>
+   ```
+
+3. Modificar **només** el fitxer `README.md`
+
+4. Revisar els canvis abans de fer commit
+
+   ```bash
+   git status
+   git diff
+   ```
+
+5. Crear **un únic commit** amb una sola idea
+
+   ```bash
+   git add README.md
+   git commit -m "Docs: add group member <github-username>"
+   ```
+
+6. Pujar la branca al repositori remot
+
+   ```bash
+   git push -u origin docs/add-member-<github-username>
+   ```
+
+7. Crear el Pull Request amb `gh`
+
+   ```bash
+   gh pr create --base main --head docs/add-member-<github-username>
+   ```
+
+   * Títol del PR (escriu EXACTAMENT):
+
+     ```text
+     Docs: add group member <github-username>
+     ```
+
+   * Body del PR (editant amb `e`):
+
+     ````md
+     ## What
+     Add my information to the group members table in README.md.
+
+     ## Why
+     Verify that I can follow the required GitHub-based workflow.
+
+     ## Verification
+     ```bash
+     grep "<github-username>" README.md
+     ````
+
+     ```
+     ```
+
+8. **NO fer el merge del PR**
+
+---
+
+## Què es comprovarà
+
+Per cada alumne es comprovarà:
+
+* existeix una branca amb el nom correcte
+* existeix un Pull Request obert
+* el PR apunta a `main`
+* el PR conté **un únic commit**
+* el commit modifica només `README.md`
+* la fila afegida és correcta i coherent
+* el correu del commit coincideix amb el correu indicat
+
+---
+
+## Resultat esperat
+
+Al final de l’activitat:
+
+* el repositori tindrà **diversos PRs oberts** (un per alumne)
+* `main` romandrà intacte
+* tots els alumnes hauran executat el flux complet
+
+---
+
+## Missatge final important
+
+> Aquesta activitat no avalua el contingut del canvi.
+>
+> Avalua la capacitat de seguir **un procés professional complet**.
+>
+> A partir d’ara, aquest flux **no és un exemple: és una norma**.

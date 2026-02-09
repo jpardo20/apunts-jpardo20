@@ -135,6 +135,13 @@
             "description": "Exemple complet — Creació i modificació d’un repositori amb flux professional GitHub (CLI)",
             "status": "active",
             "kind": "theory"
+        },{
+            "order": 905,
+            "title": "905. Mini-activitat de control — Flux professional amb GitHub (CLI)",
+            "src": "slides/control-eina.reveal",
+            "description": "Mini-activitat de control — Flux professional amb GitHub (CLI)",
+            "status": "active",
+            "kind": "activity"
         }
     ]
 }
