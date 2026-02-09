@@ -1,5 +1,7 @@
 # Mini-activitat de control — Flux professional amb GitHub (CLI)
 
+
+
 ---
 
 ## Context de l’activitat
@@ -34,6 +36,12 @@ gh auth login
 
 * VS Code amb terminal integrat
 * Repositori del grup clonat en local
+
+---
+
+## Context de l’activitat
+
+![repo-pardo-pardo-001.png](repo-pardo-pardo-001.png)
 
 ---
 
