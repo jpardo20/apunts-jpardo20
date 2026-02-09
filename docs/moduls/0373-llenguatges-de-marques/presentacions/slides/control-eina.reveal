@@ -1,11 +1,20 @@
 # Mini-activitat de control — Flux professional amb GitHub (CLI)
 
+---
+
 ## Context de l’activitat
 
 Aquesta activitat serveix per **comprovar que cada alumne és capaç d’executar correctament el flux professional de treball amb GitHub** que s’utilitzarà a partir d’ara en els projectes de l’assignatura.
 
-⚠️ **El contingut del canvi és trivial.**
-✔️ **El procés és l’objectiu de l’activitat.**
+⬇️
+
+----
+
+
+>  ⚠️ **El contingut del canvi és trivial.**
+
+
+> ✔️ **El procés és l’o   bjectiu de l’activitat.**
 
 L’activitat es fa **en grup**, però **cada alumne ha de fer el seu propi canvi**, amb la seva branca, el seu commit i el seu Pull Request.
 
@@ -39,6 +48,10 @@ Al fitxer `README.md` del **repositori del grup**, hi ha la secció següent:
 |------------------|-----------------|--------------|
 ```
 
+⬇️
+
+----
+
 ### Què ha de fer cada alumne
 
 Cada alumne ha d’afegir **EXACTAMENT una fila nova** a aquesta taula amb:
@@ -46,6 +59,10 @@ Cada alumne ha d’afegir **EXACTAMENT una fila nova** a aquesta taula amb:
 * el seu **nom i cognoms**
 * el seu **usuari de GitHub**
 * el **correu associat al seu compte de GitHub**
+
+⬇️
+
+----
 
 Exemple:
 
@@ -80,6 +97,10 @@ Cada alumne ha de seguir **fil per randa** el flux següent:
    git pull
    ```
 
+⬇️
+
+----
+
 2. Crear una branca pròpia amb el nom:
 
    ```text
@@ -90,6 +111,10 @@ Cada alumne ha de seguir **fil per randa** el flux següent:
    git checkout -b docs/add-member-<github-username>
    ```
 
+⬇️
+
+----
+
 3. Modificar **només** el fitxer `README.md`
 
 4. Revisar els canvis abans de fer commit
@@ -99,6 +124,10 @@ Cada alumne ha de seguir **fil per randa** el flux següent:
    git diff
    ```
 
+⬇️
+
+----
+
 5. Crear **un únic commit** amb una sola idea
 
    ```bash
@@ -106,11 +135,19 @@ Cada alumne ha de seguir **fil per randa** el flux següent:
    git commit -m "Docs: add group member <github-username>"
    ```
 
+⬇️
+
+----
+
 6. Pujar la branca al repositori remot
 
    ```bash
    git push -u origin docs/add-member-<github-username>
    ```
+
+⬇️
+
+----
 
 7. Crear el Pull Request amb `gh`
 
@@ -118,27 +155,33 @@ Cada alumne ha de seguir **fil per randa** el flux següent:
    gh pr create --base main --head docs/add-member-<github-username>
    ```
 
+⬇️
+
+----
+
    * Títol del PR (escriu EXACTAMENT):
 
      ```text
      Docs: add group member <github-username>
      ```
 
+⬇️
+
+----
+
    * Body del PR (editant amb `e`):
 
-     ````md
-     ## What
-     Add my information to the group members table in README.md.
+     ```md
+     ## Què
+     Afegir la meva informació a la taula de membres del grup a README.md.
 
-     ## Why
-     Verify that I can follow the required GitHub-based workflow.
+     ## Per què
+     Verificar que puc seguir el flux de treball requerit basat en GitHub.
 
-     ## Verification
-     ```bash
-     grep "<github-username>" README.md
-     ````
-
-     ```
+     ## Verificació
+        ```bash
+        grep "<github-username>" README.md
+        ```
      ```
 
 8. **NO fer el merge del PR**
