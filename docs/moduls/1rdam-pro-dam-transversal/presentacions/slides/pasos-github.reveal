@@ -253,6 +253,11 @@ Quan demani el títol, escriu **EXACTAMENT**:
 Docs: aclarir el flux de treball a README
 ```
 
+> Perquè obri els comentaris amb Visual Studio Code cal configurar el **`gh`**:
+>  ´´´bash
+>  gh config set editor "code --wait"
+>  ´´´
+
 ⬇️
 
 ----
