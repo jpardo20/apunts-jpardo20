@@ -1,0 +1,107 @@
+# SUMARI D’ÚS DE GITHUB  
+## Projecte PhoenixTech – DAM1
+
+---
+
+## 1. Per què fem servir GitHub en aquest projecte
+
+En aquest projecte utilitzarem **GitHub** no només com una eina tècnica, sinó com una **manera de treballar**.
+
+L’objectiu principal **no és el codi**, sinó aprendre a:
+- treballar de manera ordenada,
+- col·laborar amb altres persones,
+- explicar què fem i per què,
+- i deixar evidències clares del treball de cadascú.
+
+GitHub ens permet fer tot això de manera **visible i traçable**.
+
+---
+
+## 2. Què s’avalua realment
+
+En les activitats amb GitHub **no s’avalua només el resultat final**, sinó sobretot:
+
+- com organitzes el teu treball,
+- si segueixes un procediment clar,
+- si saps explicar què has fet,
+- si revises el treball d’un company,
+- i si participes de manera activa.
+
+És possible que dues persones facin coses diferents però **treballin igual de bé** si segueixen el procés correcte.
+
+---
+
+## 3. Treballar amb branques i Pull Requests (idea clau)
+
+Quan treballem en grup:
+
+- **ningú treballa directament sobre el projecte principal**,
+- cada persona treballa en una **branca pròpia**,
+- els canvis s’envien mitjançant un **Pull Request (PR)**,
+- un altre company revisa el treball abans d’integrar-lo.
+
+Això:
+- evita errors,
+- permet comentar i millorar,
+- i deixa constància de qui ha fet què.
+
+---
+
+## 4. El README.md com a eina central
+
+Durant moltes activitats:
+- **no es modificarà codi**,
+- es treballarà principalment sobre el fitxer `README.md`.
+
+El README serveix per:
+- explicar propostes,
+- justificar decisions,
+- descriure dificultats,
+- i deixar evidència del treball individual.
+
+Saber explicar bé el que fas és part fonamental de l’aprenentatge.
+
+---
+
+## 5. El rol de QA (revisor)
+
+En aquest projecte:
+- tots els alumnes faran, en algun moment, de **QA**.
+
+Fer de QA vol dir:
+- llegir el treball d’un company,
+- comprovar que s’ha seguit el procediment,
+- fer comentaris si cal,
+- i validar abans de la fusió.
+
+Revisar també és aprendre.
+
+---
+
+## 6. Sobre els errors i els conflictes
+
+Els errors i els conflictes **formen part del treball col·laboratiu**.
+
+- Un conflicte no vol dir que hagis fet alguna cosa malament.
+- Vol dir que dues persones han treballat en paral·lel.
+
+Quan apareguin conflictes:
+- s’afrontaran,
+- s’analitzaran,
+- i es resoldran amb ajuda de les eines adequades.
+
+---
+
+## 7. Idea clau final
+
+GitHub no és un obstacle del projecte, sinó **l’eina que ens permet veure el procés**.
+
+Si segueixes el procediment:
+- encara que t’equivoquis,
+- encara que dubtis,
+- encara que necessitis ajuda,
+
+el teu treball quedarà reflectit i valorat.
+
+Aquest document és un **resum orientatiu**.  
+Els detalls concrets de com treballar s’expliquen als documents de normes i a cada activitat.

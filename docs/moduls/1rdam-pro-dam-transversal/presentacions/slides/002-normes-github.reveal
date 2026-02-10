@@ -1,0 +1,154 @@
+# NORMES DE TREBALL AMB GITHUB  
+## Projecte PhoenixTech – DAM1
+
+---
+
+## 1. Finalitat d’aquest document
+
+Aquest document defineix **com s’ha de treballar amb GitHub** durant el projecte PhoenixTech.
+
+L’objectiu és:
+- aprendre a treballar de manera **ordenada i col·laborativa**,
+- seguir un **flux de treball professional bàsic**,
+- i deixar **evidències clares del treball individual i en grup**.
+
+Aquest document:
+- **NO és una activitat concreta**,
+- **NO demana cap entrega específica**,
+- s’aplica a **totes les activitats** del projecte.
+
+---
+
+## 2. Principi fonamental
+
+> ⚠️ **El més important NO és el contingut del canvi, sinó el procés seguit.**
+
+Durant el projecte s’avaluarà:
+- com es treballa,
+- com s’expliquen les decisions,
+- i com es col·labora amb els companys.
+
+---
+
+## 3. Organització del treball amb GitHub
+
+- Tot el projecte es treballa sobre **un repositori compartit per grup**.
+- **No està permès treballar directament sobre la branca `main`.**
+- **Cada alumne ha de crear les seves pròpies branques.**
+- Cada aportació es fa mitjançant **Pull Requests (PR)**.
+
+No es permet:
+- fer canvis directes a `main`,
+- pujar canvis sense PR,
+- fusionar PR propis.
+
+---
+
+## 4. Flux de treball obligatori
+
+Per **qualsevol aportació**, s’ha de seguir sempre aquest flux:
+
+1. Crear una **branca nova** a partir de `main`.
+2. Fer els canvis corresponents.
+3. Fer **com a mínim un commit**, amb missatge clar.
+4. Pujar la branca al repositori remot.
+5. Crear un **Pull Request (PR)**.
+6. Assignar un **company com a QA (revisor)**.
+7. Revisar el PR si ets QA d’un altre alumne.
+8. Fusionar el PR **(mai ho pot fer la mateixa persona que ha creat la branca)**.
+
+Aquest flux és **obligatori** en totes les activitats.
+
+---
+
+## 5. Ús de les eines
+
+- El treball habitual s’ha de fer **des de la consola de VS Code**.
+- L’ús del terminal permet entendre millor què està passant al repositori.
+- **La resolució de conflictes es farà des del web de GitHub** quan sigui necessari.
+
+> Els conflictes no són errors: indiquen que diverses persones han treballat en paral·lel.
+
+---
+
+## 6. Fitxer README.md com a eina de treball
+
+Durant el projecte, el fitxer `README.md` s’utilitzarà com a **document viu** per explicar el treball fet.
+
+En moltes activitats:
+- **no es modificarà codi**,
+- només s’editarà el `README.md`.
+
+Això permet:
+- centrar-se en el procés,
+- explicar decisions,
+- i evitar errors tècnics innecessaris.
+
+---
+
+## 7. Estructura obligatòria d’aportació individual
+
+Quan una activitat requereixi explicació al `README.md`, cada aportació haurà d’incloure **obligatòriament** la secció següent:
+
+```md
+## Aportació individual
+- Alumne:
+- Branca:
+- Qui fa de QA:
+- Què he fet:
+- Dificultats:
+```
+
+### Indicacions:
+- **Alumne**: nom i cognoms.
+- **Branca**: nom exacte de la branca creada.
+- **Qui fa de QA**: company que revisa el PR.
+- **Què he fet**: explicació clara del treball realitzat.
+- **Dificultats**: problemes, dubtes o decisions complexes.
+
+> Les aportacions sense aquesta estructura **no es consideraran vàlides**.
+
+---
+
+## 8. Rol de QA (revisor)
+
+Tots els alumnes hauran d’exercir **el rol de QA** durant el projecte.
+
+El QA:
+- revisa el treball d’un company,
+- comprova que el flux s’ha seguit correctament,
+- revisa el contingut del README,
+- comenta o valida abans de la fusió.
+
+Fer de QA **forma part de l’avaluació**.
+
+---
+
+## 9. Avaluació del treball amb GitHub
+
+El professor utilitzarà el repositori com a **font principal d’evidències** per avaluar:
+
+- participació individual,
+- ús correcte de branques,
+- qualitat dels commits,
+- ús de Pull Requests,
+- revisió de companys (QA),
+- claredat de les explicacions,
+- seguiment del procediment establert.
+
+No seguir aquestes normes pot comportar que:
+- una activitat **no sigui avaluable**,
+- o que no es pugui atribuir el treball a un alumne concret.
+
+---
+
+## 10. Idea clau final
+
+Aquestes normes no busquen complicar el treball, sinó:
+- ajudar-vos a treballar de manera ordenada,
+- entendre com es treballa en entorns reals,
+- i garantir que el treball de cadascú quedi clar i reconegut.
+
+Aquest document és el **marc comú** del projecte.  
+Les activitats concretes indicaran **què** s’ha de fer;  
+aquí s’explica **com** s’ha de treballar.

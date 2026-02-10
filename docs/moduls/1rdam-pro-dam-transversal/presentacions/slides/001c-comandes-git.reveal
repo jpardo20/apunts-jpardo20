@@ -1,0 +1,247 @@
+# REFERÈNCIA DE COMANDES GIT i GITHUB
+## Projecte PhoenixTech – DAM1
+
+---
+
+## 1. Idea general
+
+Aquest document és un **llistat de les comandes Git** que es faran servir durant el projecte.
+
+No explica **com** funcionen internament, sinó **què fan a nivell conceptual**.  
+Serveix com a **guia ràpida** mentre treballes.
+
+---
+
+## 2. Situar-se dins del repositori
+
+```
+git status
+```
+→ Mostra en quin estat està el repositori i si hi ha canvis pendents.
+
+```
+git log
+```
+→ Mostra l’historial de commits del repositori.
+
+---
+
+## 3. Sincronitzar informació del repositori remot
+
+```
+git fetch --all
+```
+→ Descarrega **tota la informació del repositori remot** (branques, canvis, referències)  
+→ **No modifica cap branca local ni fusiona res**
+
+📌 Aquesta comanda s’ha de fer quan:
+- un company ha creat o pujat una branca nova,
+- has fet `git pull` però **no veus els canvis dels altres**,
+- vols assegurar-te que tens **tota la informació actualitzada** abans de començar a treballar.
+
+---
+
+## 4. Actualitzar el repositori local
+
+```
+git pull
+```
+→ Porta al teu ordinador els canvis més recents **de la branca on estàs situat**.
+
+📌 Aquesta comanda **NO descarrega automàticament les branques noves dels altres**.
+
+---
+
+## 5. Crear i canviar de branca
+
+```
+git branch
+```
+→ Mostra les branques existents.
+
+```
+git checkout -b nom-branca
+```
+→ Crea una branca nova i hi treballa a sobre.
+
+```
+git checkout nom-branca
+```
+→ Canvia a una branca ja existent.
+
+---
+
+## 6. Preparar i desar canvis (commits)
+
+```
+git add README.md
+```
+→ Marca el fitxer com a preparat per fer commit.
+
+```
+git add .
+```
+→ Marca tots els canvis del directori actual.
+
+```
+git commit -m "missatge del commit"
+```
+→ Desa els canvis amb una explicació breu del que s’ha fet.
+
+---
+
+## 7. Enviar canvis al repositori remot
+
+```
+git push
+```
+→ Envia la branca i els commits al repositori remot (GitHub).
+
+```
+git push -u origin nom-branca
+```
+→ Envia una branca nova i la vincula amb el repositori remot.
+
+---
+
+## 8. Treball amb Pull Requests (PR)
+
+Tot i que aquestes accions es poden fer des del web de GitHub, en el nostre cas és obligatori fer-les des de la consola amb `gh`
+
+## 9. Comandes `gh` (GitHub CLI)
+
+Les comandes `gh` permeten treballar amb **Pull Requests directament des de la consola**, sense anar al navegador.
+
+---
+
+### Crear un Pull Request
+
+```
+gh pr create --base main --head <nomBranca>
+```
+→ Crea un Pull Request a partir de la branca `<nomBranca>` i cap a la branca `main`.  
+→ Permet definir títol, descripció i base del PR.
+
+---
+
+### Veure l’estat dels Pull Requests
+
+```
+gh pr status
+```
+
+→ Mostra els PR oberts, els PR propis i els PR pendents de revisió.
+
+---
+
+### Llistar Pull Requests
+
+```
+gh pr list
+```
+→ Mostra una llista dels Pull Requests del repositori.
+
+---
+
+### Veure el detall d’un Pull Request
+
+```
+gh pr view
+```
+→ Mostra la informació d’un PR: estat, descripció, comentaris i revisions.
+
+---
+
+### Afegir comentaris a un PR
+
+```
+gh pr comment <number> --body "QA revisió completada. PR aprovat i fusionat."
+```
+
+> A on **`<number>`** és el número del PR
+
+⬇️
+
+----
+
+> A on **`<number>`** és el número del PR
+
+→ Afegeix un comentari a un Pull Request (per exemple, com a QA).
+
+```bash
+$ gh pr status
+
+Relevant pull requests in XXXXXX/YYYY-ZZZZ-gestio-incidencies
+
+Current branch
+  #4  Docs: add group member XXXXXX [docs/add-member-XXXXXX] - Merged
+
+Created by you
+  You have no open pull requests
+
+Requesting a code review from you
+  You have no pull requests to review
+```
+
+---
+
+### Aprovar o revisar un PR
+
+```
+gh pr review
+```
+→ Permet revisar un PR: aprovar-lo o demanar canvis.
+
+---
+
+### Fusionar un Pull Request
+
+```
+gh pr merge
+```
+→ Fusiona un Pull Request al projecte principal.
+
+📌 Recorda:  
+❌ **Mai fusionis el teu propi PR**.
+
+---
+
+## 10. Resolució de conflictes
+
+### En aquest projecte, els conflictes es resolen des del web de GitHub
+
+- Visualitzar conflictes  
+  → Veure quines parts del fitxer entren en conflicte.
+
+- Escollir canvis  
+  → Decidir quina versió es manté.
+
+- Marcar com resolt  
+  → Indicar que el conflicte ja està solucionat.
+
+---
+
+## 11. Bones pràctiques bàsiques
+
+- Fer `git fetch --all` abans de començar a treballar.
+- Fer `git pull` un cop situat a la branca correcta.
+- Crear **una branca nova per cada aportació**.
+- Fer commits clars i concrets.
+- No treballar mai directament sobre `main`.
+- No fusionar mai el teu propi PR.
+- Utilitzar `gh` per gestionar PR quan sigui possible.
+
+---
+
+## 12. Idea clau final
+
+No cal memoritzar totes les comandes.
+
+L’important és entendre:
+- quan sincronitzar informació del remot,
+- quan crear una branca,
+- quan fer un commit,
+- quan crear i revisar un PR,
+- i com col·laborar amb els companys.
+
+Aquest document és una **ajuda ràpida**, no un examen.

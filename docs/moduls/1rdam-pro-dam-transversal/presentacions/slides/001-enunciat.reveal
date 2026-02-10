@@ -1,0 +1,135 @@
+# PROJECTE TRANSVERSAL DAM1  
+## PhoenixTech – Gestió d’incidències i flux de material
+
+---
+
+## 1. Introducció
+
+Durant les properes setmanes treballarem en un **projecte transversal** que integra continguts de diferents mòduls del curs.  
+Aquest projecte no és una activitat puntual, sinó un **fil conductor** que ens permetrà entendre com encaixen els diferents coneixements que esteu adquirint.
+
+El projecte es basa en una empresa fictícia anomenada **PhoenixTech**, però el context i les situacions que es plantegen són **semblants a les que es poden trobar en una empresa real** del sector tecnològic.
+
+L’objectiu no és només “fer coses”, sinó **entendre el sistema en conjunt** i aprendre a treballar de manera ordenada i col·laborativa.
+
+---
+
+## 2. Context de l’empresa PhoenixTech
+
+**PhoenixTech** és una empresa tecnològica que disposa d’un **servei tècnic intern**.  
+Aquest servei s’encarrega de gestionar **incidències** relacionades amb equips, sistemes i infraestructura.
+
+El funcionament general és el següent:
+
+- Els tècnics registren **incidències**.
+- Les incidències es gestionen mitjançant una **aplicació interna**.
+- Les dades de les incidències s’emmagatzemen en una **base de dades**.
+- Quan una incidència requereix material, el tècnic fa una **comanda a un proveïdor extern**.
+- Les comandes i la informació del material es gestionen mitjançant **intercanvi de dades en format JSON**.
+- L’empresa disposa d’una **infraestructura corporativa** amb usuaris i rols (Active Directory).
+
+Aquest projecte simula aquest entorn de treball.
+
+---
+
+## 3. Què farem en aquest projecte
+
+Al llarg del projecte treballarem, entre d’altres, els següents aspectes:
+
+- **Disseny de dades**:
+  - pensar quines dades necessita el sistema,
+  - com es relacionen,
+  - i com s’organitzen correctament.
+- **Bases de dades**:
+  - modelar les incidències,
+  - crear estructures de dades,
+  - fer consultes.
+- **Intercanvi d’informació**:
+  - representar dades en format **JSON**,
+  - entendre com diferents sistemes comparteixen informació.
+- **Sistemes informàtics**:
+  - entendre el funcionament global del sistema,
+  - el paper dels usuaris, rols i permisos,
+  - el flux entre usuari, aplicació i base de dades.
+- **Treball col·laboratiu**:
+  - treballar en equip,
+  - justificar decisions,
+  - revisar el treball dels companys.
+
+No es tracta de fer una aplicació completa i complexa, sinó de **comprendre el funcionament d’un sistema real des de diferents punts de vista**.
+
+---
+
+## 4. Organització del treball
+
+- El treball es farà **en grups de 2 o 3 alumnes**.
+- Tots els grups treballaran sobre **el mateix projecte**, però amb tasques concretes.
+- Hi haurà activitats:
+  - **individuals** (cada alumne treballa pel seu compte),
+  - i **col·lectives** (decisions consensuades de grup).
+
+Alguns alumnes podran aprofundir més en la part tècnica, però **tothom treballarà el mateix projecte base**.
+
+---
+
+## 5. Com treballarem
+
+Al llarg del projecte:
+
+- Es proposaran **activitats concretes** (MER, JSON, etc.).
+- Cada activitat tindrà el seu **enunciat propi**.
+- Es treballarà de manera **progressiva**:
+  - primer propostes individuals,
+  - després versions consensuades.
+- El professor anirà guiant i donant feedback durant el procés.
+
+L’èmfasi estarà posat en:
+- entendre què s’està fent,
+- explicar les decisions,
+- i treballar de manera ordenada.
+
+---
+
+## 6. Què NO és aquest projecte
+
+És important tenir clar què **no** és aquest projecte:
+
+- No és un examen.
+- No és només programar.
+- No és copiar una solució correcta.
+- No és fer-ho ràpid.
+
+És un projecte per **aprendre a pensar, justificar i treballar com en un entorn real**.
+
+---
+
+## 7. Documents del projecte
+
+Per treballar correctament, el projecte disposarà de diferents documents:
+
+1. **Enunciat del projecte** (aquest document)  
+   → explica el context general.
+2. **Normes de treball amb GitHub**  
+   → explica com s’ha de treballar i com s’avaluarà el procés.
+3. **Enunciats de les activitats**  
+   → expliquen què s’ha de fer en cada moment.
+
+És important **llegir cada document quan correspongui**, ja que cadascun té una funció diferent.
+
+---
+
+## 8. Idea clau final
+
+Aquest projecte no tracta només de fer tasques tècniques, sinó d’aprendre a:
+
+- entendre un sistema complet,
+- treballar amb altres persones,
+- justificar decisions,
+- i deixar evidències clares del treball fet.
+
+Si entens **per què** fas cada cosa, el projecte tindrà sentit.
+
+---
+
+💡 **Aquest document serveix per posar-te en context.**  
+Les activitats concretes i les normes de treball es presentaran en documents separats.

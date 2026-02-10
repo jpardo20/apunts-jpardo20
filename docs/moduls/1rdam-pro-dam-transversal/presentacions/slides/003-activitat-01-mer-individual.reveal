@@ -1,0 +1,152 @@
+# ACTIVITAT 1: Proposta individual de Model Entitat-Relació (MER)
+
+### Projecte PhoenixTech – DAM1
+
+---
+
+## 1. Objectiu de l’activitat
+
+L’objectiu d’aquesta activitat és que **cada alumne, de manera individual**, sigui capaç de:
+
+- analitzar el context del projecte PhoenixTech,
+- identificar les dades necessàries per a la **gestió d’incidències**,
+- proposar un **Model Entitat-Relació (MER)** coherent,
+- i justificar les decisions preses.
+
+Aquesta activitat serveix com a **punt de partida del projecte** i com a base per a una proposta col·lectiva posterior.
+
+---
+
+## 2. Context funcional
+
+PhoenixTech necessita una **base de dades** per gestionar les incidències del seu servei tècnic.
+
+Cada incidència:
+- es registra al sistema,
+- té un estat,
+- està associada a un tècnic,
+- pot requerir material,
+- i evoluciona al llarg del temps.
+
+En aquesta activitat **no es programa res**.  
+Només es treballa el **disseny conceptual de les dades**.
+
+---
+
+## 3. Treball a realitzar
+
+Cada alumne ha de:
+
+1. Analitzar el context del projecte.
+2. Proposar un **Model Entitat-Relació (MER)** per a la gestió d’incidències.
+3. Definir:
+   - entitats necessàries,
+   - atributs principals,
+   - relacions entre entitats,
+   - cardinalitats.
+4. Prendre decisions raonades sobre el model.
+
+> ⚠️ No hi ha una única solució correcta.  
+> Es valorarà la **coherència i justificació** del model.
+
+---
+
+## 4. Forma de treball (obligatòria)
+
+Aquesta activitat s’ha de realitzar seguint **estrictament** les normes definides al document:
+
+**`002-normes-github.reveal`**
+
+En resum:
+
+- ❌ No es pot treballar directament a `main`.
+- ✅ Cada alumne ha de crear **la seva pròpia branca**.
+- ✅ El treball s’ha de lliurar mitjançant **Pull Request (PR)**.
+- ✅ Un altre alumne ha de fer de **QA**.
+- ❌ L’alumne que crea la branca **NO pot fusionar el seu propi PR**.
+
+---
+
+## 5. Com s’ha de lliurar la proposta
+
+### 📌 Important
+En aquesta activitat **NO es puja cap fitxer de codi ni imatge**.
+
+La proposta de MER s’ha d’explicar **exclusivament** al fitxer `README.md`.
+
+---
+
+## 6. Contingut obligatori al README.md
+
+Cada alumne ha d’afegir una secció nova al `README.md` amb la següent estructura **obligatòria**:
+
+```md
+## Proposta individual de MER
+
+### Aportació individual
+- Alumne:
+- Branca:
+- Qui fa de QA:
+- Què he fet:
+- Dificultats:
+```
+
+### A l’apartat **Què he fet** cal explicar:
+- quines entitats s’han definit,
+- quines relacions hi ha,
+- per què s’han pres aquestes decisions.
+
+No cal dibuixar el diagrama, però **sí descriure’l clarament**.
+
+---
+
+## 7. Rol de QA
+
+Un altre alumne farà de **QA (revisor)** del PR.
+
+El QA ha de:
+- llegir la proposta de MER,
+- comprovar que segueix el flux correcte,
+- revisar la claredat de l’explicació,
+- comentar si detecta incoherències o dubtes.
+
+Fer de QA **forma part de l’activitat**.
+
+---
+
+## 8. Resultat de l’activitat
+
+El resultat d’aquesta activitat serà:
+- un conjunt de **propostes individuals de MER**,
+- visibles al repositori,
+- que serviran de base per a:
+  - comparar solucions,
+  - discutir decisions,
+  - i elaborar una **proposta col·lectiva final** en una activitat posterior.
+
+---
+
+## 9. Criteris generals d’avaluació
+
+En aquesta activitat es valorarà:
+
+- participació individual clara,
+- seguiment correcte del flux GitHub,
+- coherència del MER proposat,
+- capacitat d’explicar i justificar decisions,
+- participació com a QA.
+
+> ⚠️ Les aportacions que no segueixin el procediment establert poden no ser avaluables.
+
+---
+
+## 10. Idea clau final
+
+Aquesta activitat no busca trobar “el MER perfecte”, sinó:
+
+- aprendre a analitzar un problema,
+- proposar una solució raonada,
+- explicar-la correctament,
+- i treballar de manera professional i col·laborativa.
+
+El següent pas serà **posar en comú les propostes** i construir una versió consensuada.

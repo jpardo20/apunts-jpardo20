@@ -18,6 +18,36 @@
             "description": "Mini-activitat de control — Flux professional amb GitHub (CLI)",
             "status": "active",
             "kind": "activity"
+        },{
+            "order": "100",
+            "title": "100. PhoenixTech – Gestió d’incidències i flux de material",
+            "src": "slides/enunciat.reveal",
+            "description": "PhoenixTech – Gestió d’incidències i flux de material",
+            "status": "active",
+            "kind": "theory"
+        },{
+            "order": "101",
+            "title": "101. PhoenixTech: SUMARI D’ÚS DE GITHUB",
+            "src": "slides/001b-sumari-GitHub.reveal",
+            "description": "PhoenixTech: SUMARI D’ÚS DE GITHUB",
+            "status": "active",
+            "kind": "theory"
+        },{
+            "order": "102",
+            "title": "101. PhoenixTech: REFERÈNCIA DE COMANDES GIT i GITHUB",
+            "src": "slides/001c-comandes-git.reveal",
+            "description": "PhoenixTech: REFERÈNCIA DE COMANDES GIT i GITHUB",
+            "status": "active",
+            "kind": "theory"
+        },{
+            "order": "110",
+            "title": "110. PhoenixTech: ACTIVITAT 1: Proposta individual de Model Entitat-Relació (MER)",
+            "src": "slides/003-activitat-01-mer-individual.reveal",
+            "description": "ACTIVITAT 1: Proposta individual de Model Entitat-Relació (MER)",
+            "status": "active",
+            "kind": "activity"
         }
+
+        
     ]
 }

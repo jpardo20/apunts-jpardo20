@@ -1,0 +1,138 @@
+# Treball col·laboratiu amb GitHub (branques, PR i revisió)
+
+## DAM1 – Control d’ús de l’eina GitHub
+
+---
+
+## 1. Objectiu de l’activitat
+
+L’objectiu d’aquesta activitat és **aprendre i demostrar** que saps treballar de manera col·laborativa amb **GitHub**, seguint un **flux professional bàsic**:
+
+- treballar amb **branques**,
+- fer **commits conscients**,
+- crear **Pull Requests (PR)**,
+- revisar el treball d’un altre company (**QA**),
+- i integrar canvis al repositori de manera controlada.
+
+> ⚠️ **El contingut del canvi NO és l’objectiu principal.**  
+> L’objectiu és **el procés**.
+
+---
+
+## 2. Organització del treball
+
+- El treball es fa **en grups de 2 o 3 alumnes**.
+- Tots els alumnes treballen sobre **un mateix repositori compartit**.
+- **NO es pot treballar directament sobre la branca `main`.**
+- **Cada alumne ha de crear les seves pròpies branques i PR.**
+
+Durant l’activitat:
+- cada alumne farà **diversos Pull Requests**,
+- alguns individuals,
+- i altres com a part d’un treball col·lectiu.
+
+---
+
+## 3. Norma clau (molt important)
+
+❌ **No es pot modificar codi de l’aplicació.**  
+✅ **Només es permet modificar el fitxer `README.md`.**
+
+Això es fa expressament per:
+- evitar errors greus,
+- reduir l’estrès tècnic,
+- i centrar-nos exclusivament en l’ús correcte de GitHub.
+
+---
+
+## 4. Flux de treball obligatori
+
+Per **cada aportació**, s’ha de seguir **obligatòriament** aquest flux:
+
+1. Crear una **branca nova** a partir de `main`.
+2. Modificar el fitxer `README.md`.
+3. Fer **com a mínim un commit** amb missatge clar.
+4. Pujar la branca al repositori remot.
+5. Crear un **Pull Request (PR)**.
+
+⬇️
+
+----
+
+6. Assignar **un company com a QA** (revisor).
+7. Revisar el PR (si ets QA d’un altre alumne).
+8. Fusionar el PR **(NO pot fusionar-lo la mateixa persona que ha fet la branca)**.
+
+> 📌 El treball habitual s’ha de fer **des de la consola de VS Code**.  
+> 📌 **La resolució de conflictes es farà des del web de GitHub** quan calgui.
+
+---
+
+## 5. Modificacions al README.md (estructura obligatòria)
+
+Cada Pull Request ha d’afegir o actualitzar una secció amb aquesta estructura **obligatòria**:
+
+```md
+## Aportació individual
+- Alumne:
+- Branca:
+- Qui fa de QA:
+- Què he fet:
+- Dificultats:
+```
+
+⬇️
+
+----
+
+### Indicacions:
+- **Alumne**: nom i cognoms.
+- **Branca**: nom exacte de la branca creada.
+- **Qui fa de QA**: company que revisa el PR.
+- **Què he fet**: explicació clara i breu de l’aportació.
+- **Dificultats**: problemes trobats o dubtes durant el procés.
+
+> ⚠️ Les aportacions sense aquesta secció **no es consideraran vàlides**.
+
+---
+
+## 6. Rol de QA (revisor)
+
+Tots els alumnes hauran de fer **com a mínim un cop de QA**.
+
+El rol de QA implica:
+- llegir el PR d’un company,
+- comprovar que segueix el flux correcte,
+- revisar el contingut del README,
+- i autoritzar (o comentar) abans de la fusió.
+
+> Ser QA **forma part de l’avaluació**.
+
+---
+
+## 7. Avaluació
+
+L’activitat avalua **el procés**, no el resultat tècnic. Es tindrà en compte:
+
+- Creació correcta de branques.
+- Ús correcte de commits.
+- Creació i gestió de Pull Requests.
+- Participació activa com a QA.
+- Compliment estricte del flux indicat.
+- Claredat i qualitat de les explicacions al README.
+- Evidències individuals visibles al repositori.
+
+⬇️
+
+----
+
+> ⚠️ El fet de no seguir el flux (treballar a `main`, no fer PR, no fer QA, etc.) pot comportar que l’activitat **no sigui avaluable**.
+
+---
+
+## 8. Consideracions finals
+
+- Aquesta activitat **no és un examen**, però **sí és avaluable**.
+- L’objectiu és aprendre a treballar com en un entorn real.
+- Els errors formen part del procés, però **no seguir el procediment no**.
+- El professor podrà utilitzar l’historial del repositori com a **evidència d’avaluació individual**.
