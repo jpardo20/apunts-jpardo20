@@ -377,13 +377,20 @@ gh pr comment <number> --body "QA review completed. PR approved and merged."
 
 > A on **`<number>`** és el número del PR
 
+⬇️
+
+----
+
+> A on **`<number>`** és el número del PR
+
+
 ```bash
 $ gh pr status
 
-Relevant pull requests in javiitc/name-quilca-titua-a-gestio-incidencies
+Relevant pull requests in XXXXXX/YYYY-ZZZZ-gestio-incidencies
 
 Current branch
-  #4  Docs: add group member Lemsito22 [docs/add-member-Lemsito22] - Merged
+  #4  Docs: add group member XXXXXX [docs/add-member-XXXXXX] - Merged
 
 Created by you
   You have no open pull requests
@@ -400,13 +407,15 @@ El QA **NO fa el merge**.
 
 Ha d’afegir un comentari al PR indicant clarament què falla, per exemple:
 
-```text
-QA review failed:
+```bash
+gh pr comment <number> --body "QA review failed:
 - Commit message does not follow the required format.
-- Verification section is missing.
+- Verification section is missing."
 ```
 
 El PR queda **obert** fins que l’alumne responsable el corregeixi.
+
+![alt text](../img/1rdam-pro-dam-transversal/gh-pr-comment-example.png)
 
 ---
 
