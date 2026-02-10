@@ -1,7 +1,5 @@
 # Mini-activitat de control — Flux professional amb GitHub (CLI)
 
-
-
 ---
 
 ## Context de l’activitat
@@ -12,11 +10,9 @@ Aquesta activitat serveix per **comprovar que cada alumne és capaç d’executa
 
 ----
 
+> ⚠️ **El contingut del canvi és trivial.**
 
->  ⚠️ **El contingut del canvi és trivial.**
-
-
-> ✔️ **El procés és l’o   bjectiu de l’activitat.**
+> ✔️ **El procés és l’objectiu de l’activitat.**
 
 L’activitat es fa **en grup**, però **cada alumne ha de fer el seu propi canvi**, amb la seva branca, el seu commit i el seu Pull Request.
 
@@ -39,7 +35,7 @@ gh auth login
 
 ---
 
-## Context de l’activitat
+## Context del repositori
 
 ![repo-pardo-pardo-001.png](repo-pardo-pardo-001.png)
 
@@ -90,20 +86,20 @@ Exemple:
 * ❌ Prohibit fer més d’un commit
 * ❌ Prohibit fer el merge del Pull Request
 
-Un alumne = una fila = un Pull Request.
+**Un alumne = una fila = un Pull Request**
 
 ---
 
-## Flux obligatori a seguir (pas a pas)
+## Flux obligatori a seguir (alumne)
 
 Cada alumne ha de seguir **fil per randa** el flux següent:
 
 1. Assegurar que `main` està actualitzat
 
-   ```bash
-   git checkout main
-   git pull
-   ```
+```bash
+git checkout main
+git pull
+```
 
 ⬇️
 
@@ -111,13 +107,13 @@ Cada alumne ha de seguir **fil per randa** el flux següent:
 
 2. Crear una branca pròpia amb el nom:
 
-   ```text
-   docs/add-member-<github-username>
-   ```
+```text
+docs/add-member-<github-username>
+```
 
-   ```bash
-   git checkout -b docs/add-member-<github-username>
-   ```
+```bash
+git checkout -b docs/add-member-<github-username>
+```
 
 ⬇️
 
@@ -127,10 +123,10 @@ Cada alumne ha de seguir **fil per randa** el flux següent:
 
 4. Revisar els canvis abans de fer commit
 
-   ```bash
-   git status
-   git diff
-   ```
+```bash
+git status
+git diff
+```
 
 ⬇️
 
@@ -138,10 +134,10 @@ Cada alumne ha de seguir **fil per randa** el flux següent:
 
 5. Crear **un únic commit** amb una sola idea
 
-   ```bash
-   git add README.md
-   git commit -m "Docs: add group member <github-username>"
-   ```
+```bash
+git add README.md
+git commit -m "Docs: add group member <github-username>"
+```
 
 ⬇️
 
@@ -149,9 +145,9 @@ Cada alumne ha de seguir **fil per randa** el flux següent:
 
 6. Pujar la branca al repositori remot
 
-   ```bash
-   git push -u origin docs/add-member-<github-username>
-   ```
+```bash
+git push -u origin docs/add-member-<github-username>
+```
 
 ⬇️
 
@@ -159,54 +155,122 @@ Cada alumne ha de seguir **fil per randa** el flux següent:
 
 7. Crear el Pull Request amb `gh`
 
-   ```bash
-   gh pr create --base main --head docs/add-member-<github-username>
-   ```
+```bash
+gh pr create --base main --head docs/add-member-<github-username>
+```
 
-⬇️
+* Títol del PR (escriu EXACTAMENT):
 
-----
+```text
+Docs: add group member <github-username>
+```
 
-   * Títol del PR (escriu EXACTAMENT):
+* Body del PR (editant amb `e`):
 
-     ```text
-     Docs: add group member <github-username>
-     ```
+```md
+## Què
+Afegir la meva informació a la taula de membres del grup a README.md.
 
-⬇️
+## Per què
+Verificar que puc seguir el flux de treball requerit basat en GitHub.
 
-----
-
-   * Body del PR (editant amb `e`):
-
-     ```md
-     ## Què
-     Afegir la meva informació a la taula de membres del grup a README.md.
-
-     ## Per què
-     Verificar que puc seguir el flux de treball requerit basat en GitHub.
-
-     ## Verificació
-        ```bash
-        grep "<github-username>" README.md
-        ```
-     ```
+## Verificació
+```bash
+grep "<github-username>" README.md
+```
+```
 
 8. **NO fer el merge del PR**
 
 ---
 
-## Què es comprovarà
+## Nova fase de l’activitat — Fase QA (Quality Assurance)
 
-Per cada alumne es comprovarà:
+Quan **tots els alumnes del grup ja tenen el seu Pull Request obert**, s’inicia aquesta nova fase.
 
-* existeix una branca amb el nom correcte
-* existeix un Pull Request obert
-* el PR apunta a `main`
-* el PR conté **un únic commit**
-* el commit modifica només `README.md`
-* la fila afegida és correcta i coherent
-* el correu del commit coincideix amb el correu indicat
+---
+
+### Rol: Alumne QA
+
+Un alumne del grup que **NO hagi creat cap Pull Request** assumeix el rol de **QA**.
+
+Aquest alumne és el responsable de **revisar els Pull Requests dels companys** i decidir si es poden tancar o no.
+
+> El rol de QA **NO és simbòlic**.  
+> Té responsabilitat real sobre el repositori del grup.
+
+---
+
+### Què ha de comprovar el QA
+
+Per **cada Pull Request**, el QA ha de verificar:
+
+#### Procés
+* El PR apunta a `main`
+* El PR prové d’una branca pròpia
+* El PR conté **un únic commit**
+
+#### Contingut
+* Només es modifica el fitxer `README.md`
+* Només s’ha afegit **una fila**
+* El format de la taula és correcte
+
+#### Pull Request
+* El títol del PR és correcte
+* El body conté:
+  * **Què**
+  * **Per què**
+  * **Verificació**
+* La verificació és **copiable i executable**
+
+---
+
+### Actuació del QA
+
+#### Cas 1 — El PR és correcte
+
+El QA fa el merge del PR:
+
+```bash
+gh pr merge --merge
+```
+
+Opcionalment, pot afegir un comentari:
+
+```text
+QA review completed. PR approved and merged.
+```
+
+---
+
+#### Cas 2 — El PR NO és correcte
+
+El QA **NO fa el merge** i afegeix un comentari indicant què falla, per exemple:
+
+```text
+QA review failed:
+- Verification section is missing.
+- Commit message is incorrect.
+```
+
+El PR queda **obert** fins que l’alumne el corregeixi.
+
+---
+
+## Què es comprovarà (avaluació)
+
+Per cada alumne:
+
+* ha creat una branca correcta
+* ha creat un Pull Request obert
+* ha seguit el flux indicat
+* ha participat en el procés del grup
+
+Per al QA:
+
+* ha revisat els PRs
+* ha pres decisions justificades
+* ha deixat traça de revisió
 
 ---
 
@@ -214,16 +278,18 @@ Per cada alumne es comprovarà:
 
 Al final de l’activitat:
 
-* el repositori tindrà **diversos PRs oberts** (un per alumne)
-* `main` romandrà intacte
-* tots els alumnes hauran executat el flux complet
+* tots els PRs han estat revisats
+* alguns PRs poden haver estat rebutjats
+* `main` queda coherent i traçable
+* el grup ha treballat amb rols diferenciats
 
 ---
 
 ## Missatge final important
 
-> Aquesta activitat no avalua el contingut del canvi.
+> Aquesta activitat **no avalua el contingut del canvi**.
 >
-> Avalua la capacitat de seguir **un procés professional complet**.
+> Avalua la capacitat de seguir **un procés professional complet**,  
+> incloent **revisió i control de qualitat**.
 >
 > A partir d’ara, aquest flux **no és un exemple: és una norma**.

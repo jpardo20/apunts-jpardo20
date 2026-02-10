@@ -29,8 +29,6 @@ Aquest document mostra **pas a pas** com fer **una modificació mínima** (edita
 gh auth login
 ```
 <pre>
-(.venv)
-joan@DIT-BCN-PROF MINGW64 ~/repos-joan/apunts-jpardo20 (main)
 $ gh auth login
 ? Where do you use GitHub? GitHub.com
 ? What is your preferred protocol for Git operations on this host? HTTPS
@@ -42,13 +40,8 @@ Press Enter to open https://github.com/login/device in your browser...
 ✓ Authentication complete.
 - gh config set -h github.com git_protocol https
 ✓ Configured git protocol
-✓ Logged in as jpardo20
+✓ Logged in as <elVostreUsuariGithub>
 ! You were already logged in to this account
-(.venv) 
-joan@DIT-BCN-PROF MINGW64 ~/repos-joan/apunts-jpardo20 (main)
-$ 
-(.venv) 
-joan@DIT-BCN-PROF MINGW64 ~/repos-joan/apunts-jpardo20 (main)
 $
 </pre>
 
@@ -92,20 +85,52 @@ $
 
 ---
 
+> **Nota docent important**  
+>  
+> En aquest document **només s’expliquen en detall les comandes que cal saber interpretar**.  
+>  
+> Les comandes que només executen una acció (crear una branca, afegir fitxers, fer push, fer merge, etc.)  
+> **s’aprenen amb la pràctica i no requereixen una interpretació detallada de la sortida**.
+>  
+> Aquest criteri és intencionat.
+
+
+---
+
 ## PAS 1 — Estat inicial del repositori
+
+> Aquesta comanda és especialment important perquè **retorna informació que cal saber llegir i interpretar**.
 
 Comprovem l’estat abans de fer res:
 
 ```bash
-git status
-git branch
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
 ```
 
 Explicació:
 
-* Som a `main`
-* El repositori està net
-* **Encara no treballarem a `main`**
+* `On branch main` => Ens trobem a la branca `main`
+
+* `Your branch is up to date with 'origin/main'.` => La teva branca `main` està actualitzada amb la branca `origin/main`
+
+* `nothing to commit, working tree clean` => No hi ha cap fitxer modificat que estrobi pendent de fer un `commit`.
+
+⬇️
+
+----
+
+```bash
+$ git branch
+* main
+```
+
+Explicació:
+
+* Llistat de les branques que hi ha al repositori i l'`*` indica a quina branca et trobes treballant. 
 
 ---
 
@@ -115,8 +140,22 @@ Disciplina bàsica abans de crear branques:
 
 ```bash
 git checkout main
+```
+
+Explicació:
+
+Per desplaçar-nos a una branca en concret, en aquest cas a la branca `main`
+
+⬇️
+
+----
+
+```bash
 git pull
 ```
+Explicació:
+
+Obtenir els canvis d'un altre repositori o una branca local.
 
 ---
 
@@ -222,9 +261,9 @@ Actualitza README.md per indicar explícitament que el projecte segueix un flux 
 Fer que les regles de contribució siguin visibles i explícites per a qualsevol persona que accedeixi al repositori.
 
 ## Verificació
-    ```bash
-    sed -n '1,20p' README.md
-    ```
+  ```bash
+  sed -n '1,20p' README.md
+  ```
 
 ```
 
@@ -238,6 +277,8 @@ El PR:
 
 ## PAS 9 — El PR està obert (però no fusionat)
 
+> Aquesta comanda permet **interpretar l’estat dels Pull Requests** i entendre si els canvis formen part del projecte o no.
+
 Comprovem l’estat:
 
 ```bash
@@ -247,6 +288,100 @@ gh pr status
 Missatge clau:
 
 > El canvi encara **NO forma part del projecte**.
+
+---
+
+---
+
+## Nova fase de l’activitat — Fase QA (Quality Assurance)
+
+En aquest punt **tots els Pull Requests han d’estar oberts** i **cap d’ells s’ha d’haver fusionat encara**.
+
+Ara s’introdueix un **nou rol dins del grup**.
+
+---
+
+### Rol: Alumne QA (Quality Assurance)
+
+Un alumne del grup que **NO hagi creat cap Pull Request** assumeix el rol de **QA**.
+
+Aquest alumne és el responsable de:
+
+- revisar els Pull Requests dels companys
+- comprovar que compleixen **tot el procés indicat**
+- decidir si un PR es pot tancar (mergejar) o no
+
+> El rol de QA **NO és simbòlic**.  
+> Té responsabilitat real sobre el repositori.
+
+---
+
+### Què ha de comprovar el QA (checklist)
+
+Per **cada Pull Request**, el QA ha de verificar:
+
+#### Procés
+- El PR apunta correctament a `main`
+- El PR prové d’una branca pròpia
+- El PR conté **un únic commit**
+
+#### Contingut
+- Només es modifica el fitxer `README.md`
+- El canvi correspon exactament al que es demanava
+- No s’ha trencat el format del fitxer
+
+#### Pull Request
+- El títol del PR és correcte
+- El body conté les seccions:
+  - **Què**
+  - **Per què**
+  - **Verificació**
+- La verificació és **copiable i executable**
+
+---
+
+### Actuació del QA
+
+#### Cas 1 — El Pull Request és correcte
+
+El QA fa el merge del PR amb la comanda següent:
+
+```bash
+gh pr merge --merge
+```
+
+Opcionalment, el QA pot afegir un comentari al PR indicant:
+
+```text
+QA review completed. PR approved and merged.
+```
+
+---
+
+#### Cas 2 — El Pull Request NO és correcte
+
+El QA **NO fa el merge**.
+
+Ha d’afegir un comentari al PR indicant clarament què falla, per exemple:
+
+```text
+QA review failed:
+- Commit message does not follow the required format.
+- Verification section is missing.
+```
+
+El PR queda **obert** fins que l’alumne responsable el corregeixi.
+
+---
+
+### Missatge clau d’aquesta fase
+
+> Un Pull Request **no és propietat de qui el crea**.
+>
+> El projecte és responsabilitat de tot l’equip.
+>
+> La qualitat també es treballa.
+
 
 ---
 
