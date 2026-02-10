@@ -254,9 +254,10 @@ Docs: aclarir el flux de treball a README
 ```
 
 > Perquè obri els comentaris amb Visual Studio Code cal configurar el **`gh`**:
->  ´´´bash
+>
+>  ```bash
 >  gh config set editor "code --wait"
->  ´´´
+>  ```
 
 ⬇️
 
