@@ -259,7 +259,7 @@ Docs: aclarir el flux de treball a README
 
 Quan demani el body, prem `e` (Edit) i introdueix el text següent:
 
-```
+```markdown
 ## Què
 
 Actualitza README.md per indicar explícitament que el projecte segueix un flux de treball estricte basat en GitHub.
@@ -269,9 +269,9 @@ Actualitza README.md per indicar explícitament que el projecte segueix un flux 
 Fer que les regles de contribució siguin visibles i explícites per a qualsevol persona que accedeixi al repositori.
 
 ## Verificació
-  ```bash
-  sed -n '1,20p' README.md
-  ```
+    ```bash
+    sed -n '1,20p' README.md
+    ```
 
 ```
 
@@ -364,10 +364,32 @@ El QA fa el merge del PR amb la comanda següent:
 gh pr merge --merge
 ```
 
-Opcionalment, el QA pot afegir un comentari al PR indicant:
+⬇️
 
-```text
-QA review completed. PR approved and merged.
+----
+
+
+Opcionalment, el QA pot afegir un comentari al PR indicant el motiu pel qual l'ha tancat, o no l'ha tancat:
+
+```bash
+gh pr comment <number> "QA review completed. PR approved and merged."
+```
+
+> A on **`<number>`** és el número del PR
+
+```bash
+$ gh pr status
+
+Relevant pull requests in javiitc/name-quilca-titua-a-gestio-incidencies
+
+Current branch
+  #4  Docs: add group member Lemsito22 [docs/add-member-Lemsito22] - Merged
+
+Created by you
+  You have no open pull requests
+
+Requesting a code review from you
+  You have no pull requests to review
 ```
 
 ---
