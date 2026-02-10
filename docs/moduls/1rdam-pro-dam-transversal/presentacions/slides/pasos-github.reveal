@@ -253,6 +253,10 @@ Quan demani el títol, escriu **EXACTAMENT**:
 Docs: aclarir el flux de treball a README
 ```
 
+⬇️
+
+----
+
 Quan demani el body, prem `e` (Edit) i introdueix el text següent:
 
 ```
@@ -295,8 +299,6 @@ Missatge clau:
 
 ---
 
----
-
 ## Nova fase de l’activitat — Fase QA (Quality Assurance)
 
 En aquest punt **tots els Pull Requests han d’estar oberts** i **cap d’ells s’ha d’haver fusionat encara**.
@@ -329,10 +331,18 @@ Per **cada Pull Request**, el QA ha de verificar:
 - El PR prové d’una branca pròpia
 - El PR conté **un únic commit**
 
+⬇️
+
+----
+
 #### Contingut
 - Només es modifica el fitxer `README.md`
 - El canvi correspon exactament al que es demanava
 - No s’ha trencat el format del fitxer
+
+⬇️
+
+----
 
 #### Pull Request
 - El títol del PR és correcte
