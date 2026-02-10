@@ -21,7 +21,7 @@
         },{
             "order": "100",
             "title": "100. PhoenixTech – Gestió d’incidències i flux de material",
-            "src": "slides/enunciat.reveal",
+            "src": "slides/001-enunciat.reveal",
             "description": "PhoenixTech – Gestió d’incidències i flux de material",
             "status": "active",
             "kind": "theory"
@@ -34,9 +34,16 @@
             "kind": "theory"
         },{
             "order": "102",
-            "title": "101. PhoenixTech: REFERÈNCIA DE COMANDES GIT i GITHUB",
+            "title": "102. PhoenixTech: REFERÈNCIA DE COMANDES GIT i GITHUB",
             "src": "slides/001c-comandes-git.reveal",
             "description": "PhoenixTech: REFERÈNCIA DE COMANDES GIT i GITHUB",
+            "status": "active",
+            "kind": "theory"
+        },{
+            "order": "103",
+            "title": "103. PhoenixTech: NORMES DE TREBALL AMB GITHUB",
+            "src": "slides/002-normes-github.reveal",
+            "description": "PhoenixTech: NORMES DE TREBALL AMB GITHUB",
             "status": "active",
             "kind": "theory"
         },{

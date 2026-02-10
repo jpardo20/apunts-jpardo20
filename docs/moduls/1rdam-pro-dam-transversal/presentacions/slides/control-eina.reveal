@@ -178,8 +178,6 @@ Verificar que puc seguir el flux de treball requerit basat en GitHub.
 ```bash
 grep "<github-username>" README.md
 ```
-```
-
 8. **NO fer el merge del PR**
 
 ---
@@ -210,10 +208,20 @@ Per **cada Pull Request**, el QA ha de verificar:
 * El PR prové d’una branca pròpia
 * El PR conté **un únic commit**
 
+
+⬇️
+
+----
+
 #### Contingut
 * Només es modifica el fitxer `README.md`
 * Només s’ha afegit **una fila**
 * El format de la taula és correcte
+
+
+⬇️
+
+----
 
 #### Pull Request
 * El títol del PR és correcte

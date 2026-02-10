@@ -24,6 +24,11 @@ El funcionament general és el següent:
 - Els tècnics registren **incidències**.
 - Les incidències es gestionen mitjançant una **aplicació interna**.
 - Les dades de les incidències s’emmagatzemen en una **base de dades**.
+
+⬇️
+
+----
+
 - Quan una incidència requereix material, el tècnic fa una **comanda a un proveïdor extern**.
 - Les comandes i la informació del material es gestionen mitjançant **intercanvi de dades en format JSON**.
 - L’empresa disposa d’una **infraestructura corporativa** amb usuaris i rols (Active Directory).
@@ -44,6 +49,12 @@ Al llarg del projecte treballarem, entre d’altres, els següents aspectes:
   - modelar les incidències,
   - crear estructures de dades,
   - fer consultes.
+
+  
+⬇️
+
+----
+
 - **Intercanvi d’informació**:
   - representar dades en format **JSON**,
   - entendre com diferents sistemes comparteixen informació.
@@ -51,6 +62,12 @@ Al llarg del projecte treballarem, entre d’altres, els següents aspectes:
   - entendre el funcionament global del sistema,
   - el paper dels usuaris, rols i permisos,
   - el flux entre usuari, aplicació i base de dades.
+
+
+⬇️
+
+----
+
 - **Treball col·laboratiu**:
   - treballar en equip,
   - justificar decisions,
@@ -81,6 +98,11 @@ Al llarg del projecte:
 - Es treballarà de manera **progressiva**:
   - primer propostes individuals,
   - després versions consensuades.
+
+⬇️
+
+----
+
 - El professor anirà guiant i donant feedback durant el procés.
 
 L’èmfasi estarà posat en:
