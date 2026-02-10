@@ -372,7 +372,7 @@ gh pr merge --merge
 Opcionalment, el QA pot afegir un comentari al PR indicant el motiu pel qual l'ha tancat, o no l'ha tancat:
 
 ```bash
-gh pr comment <number> "QA review completed. PR approved and merged."
+gh pr comment <number> --body "QA review completed. PR approved and merged."
 ```
 
 > A on **`<number>`** és el número del PR
