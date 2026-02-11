@@ -207,10 +207,7 @@ Assignar el <codijpc>PR</codijpc> a algú, és a dir, assignar un revisor (**`re
 
 > <codijpc style="color:black; font-weight: bold;">N</codijpc> = número del PR i <codijpc style="color:black; font-weight: bold;">usuari</codijpc> = nom GitHub
 
-
-⬇️
-
-----
+---
 
 ## Per fer de <codijpc>QA</codijpc>
     
@@ -222,9 +219,6 @@ Assignar el <codijpc>PR</codijpc> a algú, és a dir, assignar un revisor (**`re
     <li>Si no hi ha conflictes fer el <codijpc>merge</codijpc></li>
     <li>Assegurar-nos de que la <b>Tasca (<u>Issue</u>)</b> passa a <codijpc>Done</codijpc></li>
   </ol>
-
-
-
 
 ---
 
