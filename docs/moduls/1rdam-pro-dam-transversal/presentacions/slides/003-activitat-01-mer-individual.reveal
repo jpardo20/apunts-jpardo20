@@ -1,15 +1,16 @@
-# ACTIVITAT 1: Proposta individual de Model Entitat-Relació (MER)
+# ACTIVITAT 1  
+## Proposta individual de Model Entitat-Relació (MER)
 
 ### Projecte PhoenixTech – DAM1
 
 ---
 
-## 1. Objectiu de l’activitat
+## 1. Objectiu de l'activitat
 
-L’objectiu d’aquesta activitat és que **cada alumne, de manera individual**, sigui capaç de:
+L'objectiu d'aquesta activitat és que **cada alumne, de manera individual**, sigui capaç de:
 
 - analitzar el context del projecte PhoenixTech,
-- identificar les dades necessàries per a la **gestió d’incidències**,
+- identificar les dades necessàries per a la **gestió d'incidències**,
 - proposar un **Model Entitat-Relació (MER)** coherent,
 - i justificar les decisions preses.
 
@@ -29,7 +30,7 @@ Cada incidència:
 - i evoluciona al llarg del temps.
 
 En aquesta activitat **no es programa res**.  
-Només es treballa el **disseny conceptual de les dades**.
+Es treballa el **disseny conceptual de les dades** mitjançant un MER.
 
 ---
 
@@ -38,7 +39,7 @@ Només es treballa el **disseny conceptual de les dades**.
 Cada alumne ha de:
 
 1. Analitzar el context del projecte.
-2. Proposar un **Model Entitat-Relació (MER)** per a la gestió d’incidències.
+2. Proposar un **Model Entitat-Relació (MER)** per a la gestió d'incidències.
 3. Definir:
    - entitats necessàries,
    - atributs principals,
@@ -53,7 +54,7 @@ Cada alumne ha de:
 
 ## 4. Forma de treball (obligatòria)
 
-Aquesta activitat s’ha de realitzar seguint **estrictament** les normes definides al document:
+Aquesta activitat s'ha de realitzar seguint **estrictament** les normes definides al document:
 
 **`002-normes-github.reveal`**
 
@@ -61,27 +62,68 @@ En resum:
 
 - ❌ No es pot treballar directament a `main`.
 - ✅ Cada alumne ha de crear **la seva pròpia branca**.
-- ✅ El treball s’ha de lliurar mitjançant **Pull Request (PR)**.
+- ✅ El treball s'ha de lliurar mitjançant **Pull Request (PR)**.
 - ✅ Un altre alumne ha de fer de **QA**.
-- ❌ L’alumne que crea la branca **NO pot fusionar el seu propi PR**.
+- ❌ L'alumne que crea la branca **NO pot fusionar el seu propi PR**.
 
 ---
 
-## 5. Com s’ha de lliurar la proposta
+## 5. Estructura de carpetes i fitxers (molt important)
 
-### 📌 Important
-En aquesta activitat **NO es puja cap fitxer de codi ni imatge**.
+Cada alumne ha de crear (si no existeix) la carpeta següent al repositori:
 
-La proposta de MER s’ha d’explicar **exclusivament** al fitxer `README.md`.
+```
+<PrimerCognomAlumne>-mer/
+```
+
+>
+> ###### On <u>`<PrimerCognomAlumne>`</u> és <u>només</u> el primer cognom de l'alumne, sense el nom, en <u>minúscules</u>, <u>sense accents</u>, ni <u>espais</u>, ni lletres que no siguin de l'<u>alfabet anglès</u> (és a dir, sense <u>`ñ`</u>, <u>`ç`</u>, etc.), ni <u>caràrters especials</u>.
+>
+> ###### Per exemple en el cas de l'alumne <b><u>Pere De la Peña</u></b>, el nom de la carepta seria <kbd><b>`delapena-mer`</b></kbd>.
+>
+
+Dins d'aquesta carpeta, **cada alumne ha de pujar dos fitxers** corresponents a la seva proposta individual de MER:
+
+- Un fitxer **XML** amb el model i un fitxer d'**imatge** amb el **diagrama del MER**.
+
+⬇️
+
+----
+
+- Un fitxer **XML** amb el model
+
+  ```
+  mer/<PrimerCognomAlumne>-mer.xml
+  ```
+  
+- Un fitxer **d'imatge** amb el diagrama del MER:
+  ```
+  mer/<PrimerCognomAlumne>-mer.png
+  ```
+  *(també pot ser .jpg)*
+
+>
+> ###### On <u>`<PrimerCognomAlumne>`</u> és <u>només</u> el primer cognom de l'alumne, sense el nom, en <u>minúscules</u>, <u>sense accents</u>, ni <u>espais</u>, ni lletres que no siguin de l'<u>alfabet anglès</u> (és a dir, sense <u>`ñ`</u>, <u>`ç`</u>, etc.), ni <u>caràrters especials</u>.
+>
+> ###### Per exemple en el cas de l'alumne <b><u>Pere De la Peña</u></b>, el nom del fitxer seria <kbd><b>`delapena-mer.xml`</b></kbd> o <kbd><b>`delapena-mer.png`</b></kbd>.
+>
+
+⬇️
+
+----
+
+📌 **És obligatori que el nom de l'alumne aparegui al nom dels fitxers** per evitar conflictes i facilitar la revisió.
 
 ---
 
 ## 6. Contingut obligatori al README.md
 
-Cada alumne ha d’afegir una secció nova al `README.md` amb la següent estructura **obligatòria**:
+Tot i que el MER es lliura mitjançant fitxers, **cal documentar l'aportació al README.md**.
+
+Cada alumne ha d'afegir una secció nova amb la següent estructura **obligatòria**:
 
 ```md
-## Proposta individual de MER
+## Proposta individual de MER (<PrimerCognomAlumne>)
 
 ### Aportació individual
 - Alumne:
@@ -91,12 +133,21 @@ Cada alumne ha d’afegir una secció nova al `README.md` amb la següent estruc
 - Dificultats:
 ```
 
-### A l’apartat **Què he fet** cal explicar:
-- quines entitats s’han definit,
-- quines relacions hi ha,
-- per què s’han pres aquestes decisions.
+⬇️
 
-No cal dibuixar el diagrama, però **sí descriure’l clarament**.
+----
+
+### A l'apartat **Què he fet** cal indicar:
+- quines entitats principals s'han definit,
+- quines relacions s'han considerat,
+- i referenciar explícitament els fitxers pujats a la carpeta **`mer/`**.
+
+Exemple:
+```md
+He proposat un MER amb les entitats Incidència, Tècnic i Estat.  
+El diagrama es troba al fitxer [<PrimerCognomAlumne>-mer.xml](mer/<PrimerCognomAlumne>-mer.xml), i
+el disseny és ![<PrimerCognomAlumne>-mer.png](mer/<PrimerCognomAlumne>-mer.png).”
+```
 
 ---
 
@@ -105,20 +156,20 @@ No cal dibuixar el diagrama, però **sí descriure’l clarament**.
 Un altre alumne farà de **QA (revisor)** del PR.
 
 El QA ha de:
-- llegir la proposta de MER,
-- comprovar que segueix el flux correcte,
-- revisar la claredat de l’explicació,
-- comentar si detecta incoherències o dubtes.
+- comprovar que els fitxers del MER existeixen,
+- verificar que el README està complet,
+- fer comentaris si detecta dubtes o incoherències.
 
-Fer de QA **forma part de l’activitat**.
+Fer de QA **forma part de l'activitat i de l'avaluació**.
 
 ---
 
-## 8. Resultat de l’activitat
+## 8. Resultat de l'activitat
 
-El resultat d’aquesta activitat serà:
+El resultat d'aquesta activitat serà:
 - un conjunt de **propostes individuals de MER**,
 - visibles al repositori,
+- amb diagrames i models estructurats,
 - que serviran de base per a:
   - comparar solucions,
   - discutir decisions,
@@ -126,14 +177,15 @@ El resultat d’aquesta activitat serà:
 
 ---
 
-## 9. Criteris generals d’avaluació
+## 9. Criteris generals d'avaluació
 
 En aquesta activitat es valorarà:
 
 - participació individual clara,
 - seguiment correcte del flux GitHub,
-- coherència del MER proposat,
-- capacitat d’explicar i justificar decisions,
+- existència i correcció dels fitxers del MER (XML i imatge),
+- coherència del model proposat,
+- capacitat de justificar decisions al README,
 - participació com a QA.
 
 > ⚠️ Les aportacions que no segueixin el procediment establert poden no ser avaluables.
@@ -145,8 +197,8 @@ En aquesta activitat es valorarà:
 Aquesta activitat no busca trobar “el MER perfecte”, sinó:
 
 - aprendre a analitzar un problema,
-- proposar una solució raonada,
-- explicar-la correctament,
+- representar-lo de manera visual i estructurada,
+- explicar les decisions preses,
 - i treballar de manera professional i col·laborativa.
 
-El següent pas serà **posar en comú les propostes** i construir una versió consensuada.
+El següent pas serà **posar en comú les propostes** i construir una versió consensuada del MER.
