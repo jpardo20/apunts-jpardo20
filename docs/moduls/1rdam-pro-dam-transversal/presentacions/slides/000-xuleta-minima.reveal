@@ -1,0 +1,25 @@
+# GH CLI – Targeta de butxaca
+
+<codijpc style="color:black; font-weight: bold;">N</codijpc> = número del PR  i <codijpc style="color:black; font-weight: bold;">usuari</codijpc> = nom GitHub
+<div style="display:flex; align-items:left; gap:0.3rem;">
+  <div style="flex:1; text-align:left; width:40%;">
+    <ul>
+      <li><codijpc>git fetch</codijpc></li>
+      <li><codijpc>git pull --all</codijpc></li>
+      <li><codijpc>gh pr create --base main --head <codijpc style="color:black; font-weight: bold;">&lt;nomBranca></codijpc></codijpc></li>
+      <li><codijpc>gh pr list </codijpc></li>
+      <li><codijpc> gh pr view <codijpc style="color:black; font-weight: bold;">N</codijpc></codijpc></li>
+       </ul>
+
+</div>
+ <div style="flex:3; text-align:left;">
+    <ul>
+      <li>Assignar revisor:<codijpc>gh pr edit <codijpc style="color:black; font-weight: bold;">N</codijpc> --add-reviewer <codijpc style="color:black; font-weight: bold;">usuari</codijpc></codijpc></li>
+<li>Aprovar: <codijpc>gh pr review <codijpc style="color:black; font-weight: bold;">N</codijpc> --approve</codijpc></li>
+<li>Fusionar <codijpc>gh pr merge <codijpc style="color:black; font-weight: bold;">N</codijpc> --delete-branch</codijpc></li>
+<li>Demanar canvis:<br><codijpc>gh pr review <codijpc style="color:black; font-weight: bold;">N</codijpc> --request-changes --body "Comentari"</codijpc></li>
+<li>Comentari simple:<br><codijpc>gh pr review <codijpc style="color:black; font-weight: bold;">N</codijpc> --comment --body "Comentari"</codijpc></li>
+       </ul>
+
+  </div>
+</div>

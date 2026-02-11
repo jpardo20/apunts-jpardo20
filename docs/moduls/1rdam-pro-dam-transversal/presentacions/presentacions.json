@@ -53,8 +53,27 @@
             "description": "ACTIVITAT 1: Proposta individual de Model Entitat-Relació (MER)",
             "status": "active",
             "kind": "activity"
-        }
-
-        
+        },{
+            "order": "200",
+            "title": "200. GH CLI: Targeta de butxaca",
+            "src": "slides/000-xuleta-minima.reveal",
+            "description": "GH CLI: Targeta de butxaca",
+            "status": "active",
+            "kind": "theory"
+        },{
+            "order": "201",
+            "title": "201. 000-crear-projecte.reveal",
+            "src": "slides/000-crear-projecte.reveal",
+            "description": "000-crear-projecte.reveal",
+            "status": "active",
+            "kind": "theory"
+        },{
+            "order": "202",
+            "title": "202. 000-flux-treball.reveal",
+            "src": "slides/000-flux-treball.reveal",
+            "description": "000-flux-treball.reveal",
+            "status": "active",
+            "kind": "theory"
+        }       
     ]
 }

@@ -1,0 +1,258 @@
+# Flux de treball
+
+---
+
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+
+## Crear una <b>Tasca (<u>Issue</u>)</b>
+
+1. Anem al projecte del repositori,
+
+2. Des de **`Backlog`**, presionar <kbd>+ Add Item</kbd>
+
+  </div>
+  <div style="flex:1;">
+    <img src="../img/1rdam-pro-dam-transversal/000-flux-treball-001-new-item.png" height="450" width="auto">
+  </div>
+</div>
+
+
+⬇️
+
+----
+
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <ul>
+      <li>Escribim el títol que volem que tingui la nova tasca.</li>
+      <li>Pressionem <kbd>Intro</kbd>.</li>
+    </ul>
+  </div>
+  <div style="flex:1;">
+    <img src="../img/1rdam-pro-dam-transversal/000-flux-treball-002-nom-item.png" height="450" width="auto">
+  </div>
+</div>
+
+⬇️
+
+----
+
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <ul>
+      <li>Confirmem que està correctament sel·leccionat el nostre repositori.</li>
+      <li>Pressionem <kbd>Blank issue</kbd> per crear-la.</li>
+    </ul>
+  </div>
+  <div style="flex:1;">
+    <img src="../img/1rdam-pro-dam-transversal/000-flux-treball-003-blank-issue.png" height="450" width="auto">
+  </div>
+</div>
+   
+⬇️
+
+----
+
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <ul>
+      <li>afegim un comentari a la tasca si s'escau, i</li>
+      <li>presionen el botó <kbd>Create</kbd> o <kbd>CTRL + Intro</kbd> per crear-la.</li>
+    </ul>
+  </div>
+  <div style="flex:1;">
+    <img src="../img/1rdam-pro-dam-transversal/000-flux-treball-004-add-comment.png" height="450" width="auto">
+  </div>
+</div>
+
+
+⬇️
+
+----
+
+## Assignar-se la <b>Tasca (<u>Issue</u>)</b>
+
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <ul>
+    <li>Tan bon punt creada la tasca, seguim l'enllaç de la mateixa per editar-la.</li>
+    </ul>
+  </div>
+  <div style="flex:1;">
+    <img src="../img/1rdam-pro-dam-transversal/000-flux-treball-006-task-link.png" height="450" width="auto">
+  </div>
+</div>
+
+⬇️
+
+----
+
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <ul>
+    <li>Un cop estem editant-la, caldrà assingar-nos-la, per això seguirem l'enllaç <codijpc>Assign yourself</codijpc>,</li>
+    </ul>
+  </div>
+  <div style="flex:1;">
+    <img src="../img/1rdam-pro-dam-transversal/000-flux-treball-007-task-assign-yourself.png" height="450" width="auto">
+  </div>
+</div>
+
+
+⬇️
+
+----
+
+1. Automàticament ja apareixerà com assingada a nosaltres.
+
+    ![alt text](../img/1rdam-pro-dam-transversal/000-flux-treball-008-task-assigned-yourself.png)
+
+
+---
+
+## Creació d'una branca per treballar a la <b>Tasca (<u>Issue</u>)</b> des del projecte
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <ul>
+    <li>Per crear una <b>branca</b> a partir de la <b>Tasca (<u>Issue</u>)</b>, cal:</li>
+    <li>Desplaçar-nos cap avall, fins trobar l'enllaç <codijpc>Create a branch</codijpc></li>
+    </ul>
+     ⬇️
+  </div>
+  <div style="flex:1;">
+    <img src="../img/1rdam-pro-dam-transversal/000-flux-treball-009-create-branch.png" height="450" width="auto">
+  </div>
+</div>
+
+----
+
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:2; text-align:center;">
+    <ul>
+    <li>
+El <b>Branch name</b> és correcte, aquest serà el <b>número de la tasca</b>, seguit del <b>títol de la tasca</b> sense accents i els espais subtituits per guions.
+</li><li>
+El <b>Repository destination</b> és el nostre repositori,
+</li>
+<li>
+El <b>Branch source</b> és la branca <codijpc>main</codijpc>, és a dir, que aquesta branca s'està creant a partir de l'estat actual de la branca <codijpc>main</codijpc> i que 
+</li><li>
+l'opció <b>What's next?</b> tenim sel·leccionat <b>Checkout locally</b>.
+    </li>
+    </ul>
+ ⬇️
+  </div>
+  <div style="flex:1;">
+    <img src="../img/1rdam-pro-dam-transversal/000-flux-treball-010-create-branch-confirm.png" height="550" width="auto">
+  </div>
+</div>
+Un cop tot és correcte, ja podem pitjar el botó <codijpc>Create branch</codijpc>, per crear-la.
+
+----
+
+![alt text](../img/1rdam-pro-dam-transversal/000-flux-treball-011-create-branch-commands.png)
+
+Aquestes son les comandes que cal que exefcutis al teu repositori local per poder treballar sobre aquesta branca.
+
+<codijpc>
+git fetch origin<br>
+git checkout 11-titol-que-volem-que-tingui-la-tascca
+</codijpc>
+
+---
+
+## Actualitzar el repositori
+
+Tot seguit, abans de començar a treballar, a la nova branca, des del nostres repositori local, és a dir, Visual Studio Code, executem les dues comandes.
+
+<codijpc>git fetch origin</codijpc>
+
+Per actualitzar la informació dels elements que hi ha al repositori remot.
+
+![alt text](../img/1rdam-pro-dam-transversal/000-flux-treball-012-git-fetch-origin.png)
+
+
+⬇️
+
+----
+
+<codijpc>git checkout 11-titol-que-volem-que-tingui-la-tascca</codijpc>
+
+![alt text](../img/1rdam-pro-dam-transversal/000-flux-treball-013-git-checkout-11.png)
+
+Per desplaçar-nos a la branca que acabem de crear per dur a terme la feina.
+
+---
+
+## Fem el desenvolupament oportu segons la tasca a dur a terme.
+
+---
+
+## Un cop acabat el desenvolupament que tenia assignat
+
+Un cop acabat el desenvolupament que teniem assignat, cal que creem un <codijpc>pull request</codijpc> (<codijpc>PR</codijpc>), per que el nostre company, fent de <codijpc>QA</codijpc>, validi i executí el <codijpc>merge</codijpc> de la nostra branca cap a la branca <codijpc>main</codijpc>.
+
+Crear <codijpc>PR</codijpc>
+
+<codijpc>gh pr create --base main --head <codijpc style="color:black; font-weight: bold;">&lt;nomBranca></codijpc></codijpc>
+
+⬇️
+
+----
+
+Assignar el <codijpc>PR</codijpc> a algú, és a dir, assignar un revisor (**`reviewer`**) 
+
+<codijpc>gh pr edit <codijpc style="color:black; font-weight: bold;">N</codijpc> --add-reviewer <codijpc style="color:black; font-weight: bold;">usuari</codijpc></codijpc>
+
+> <codijpc style="color:black; font-weight: bold;">N</codijpc> = número del PR i <codijpc style="color:black; font-weight: bold;">usuari</codijpc> = nom GitHub
+
+
+⬇️
+
+----
+
+## Per fer de <codijpc>QA</codijpc>
+    
+  <ol>
+    <li>Veure quin <codijpc>PR</codijpc> de de gestionar</li>
+    <li>Fer el <codijpc>Review</codijpc> del <codijpc>PR</codijpc></li>
+      <ol><li start="2">Si hi ha conflictes demanar al membre que ha creat el <codijpc style="color:black; font-weight: bold;">PR</codijpc> que arregli els conflictes,</li></ol>
+    </li>
+    <li>Si no hi ha conflictes fer el <codijpc>merge</codijpc></li>
+    <li>Assegurar-nos de que la <b>Tasca (<u>Issue</u>)</b> passa a <codijpc>Done</codijpc></li>
+  </ol>
+
+
+
+
+---
+
+# Veure les Tasques **`Issues`** del repositori
+
+<codijpc>gh issue list</codijpc>
+
+---
+
+# Fer Review
+
+Aprovar:
+<codijpc>gh pr review <codijpc style="color:black; font-weight: bold;">N</codijpc> --approve</codijpc>
+
+Demanar canvis:
+
+<codijpc>gh pr review <codijpc style="color:black; font-weight: bold;">N</codijpc> --request-changes --body "Comentari"</codijpc>
+
+---
+
+# Fer Merge
+
+<codijpc>gh pr merge <codijpc style="color:black; font-weight: bold;">N</codijpc> --delete-branch</codijpc>
+
+---
+
+# Resultat final
+
+<b>Tasca (<u>Issue</u>)</b> → Branch → PR → Review → Merge → Done
+
+El Project mostra l’estat visual del treball.
