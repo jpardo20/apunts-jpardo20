@@ -8,48 +8,59 @@ Crear un Project (Kanban) associat a un repositori
 per gestionar tasques (Issues) de manera visual.
 
 ---
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <h1>PAS 1</h1>
+    <h2>Entrar al repositori a GitHubt</h2>
+    <ol>
+        <li>Obrir GitHub</li>
+        <li>Entrar al repositori corresponent</li>
+        <li>Anar a la pestanya <codijpc>Projects</codijpc></li>
+    </ol>
+  </div>
+  <div style="flex:1;">
+    <img src="../img/1rdam-pro-dam-transversal/000-crear-projecte-001-pestanya-projects.png" height="450" width="auto">
+  </div>
+</div>
 
-# PAS 1
-
-## Entrar al repositori a GitHub
-
-1. Obrir GitHub
-2. Entrar al repositori corresponent
-3. Anar a la pestanya **Projects**
-
-![alt text](pestanya-projects.png)
 ---
 
-# PAS 2
 
-## Crear un nou Project
-
-1. Clicar **+ New project**
-2. Escollir tipus: - **Board (Kanban)**
-
-![alt text](../img/1rdam-pro-dam-transversal/000-crear-projecte-002-temp-kanban.png)
-
-
-⬇️
-
-----
-
-3. Posar comn a nom del projecte, exactamente el mateix nom que el repositori, però amb **`proj-`** davant.
-
-Per exemple, si el nom del repositori és **`pardo-pardo-gestio-incidencies`**:
-
-El nom serà **`proj-pardo-pardo-gestio-incidencies`**
-
-![alt text](../img/1rdam-pro-dam-transversal/000-crear-projecte-003-nom-proj.png)
-
-
-4. Clicar **Create**
-
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <h1>PAS 2</h1>
+    <h2>Crear un nou Project</h2>
+    <ol>
+        <li>Clicar <codijpc>+ New project</codijpc></li>
+        <li>Escollir tipus: - <codijpc>Board (Kanban)</codijpc></li>
+    </ol>
+  </div>
+  <div style="flex:1;">
+    <img src="../img/1rdam-pro-dam-transversal/000-crear-projecte-002-temp-kanban.png" height="450" width="auto">
+  </div>
+</div> 
 
 ⬇️
 
 ----
 
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <ol>
+    <li>Posar com a nom del projecte, exactamente el mateix nom que el repositori, però amb <codijpc>proj-</codijpc> davant.</li>
+    <li>Clicar <codijpc>Create Project</codijpc></li>
+    </ol>
+    <p>Per exemple, si el nom del repositori és <codijpc>pardo-pardo-gestio-incidencies</codijpc>:</p>
+    <p>El nom serà <codijpc>proj-pardo-pardo-gestio-incidencies</codijpc></p>
+  </div>
+  <div style="flex:1;">
+    <img src="../img/1rdam-pro-dam-transversal/000-crear-projecte-003-nom-proj.png" height="450" width="auto">
+  </div>
+</div>
+
+⬇️
+
+----
 
 ![alt text](../img/1rdam-pro-dam-transversal/000-crear-projecte-004-projecte-creat.png)
 
@@ -61,53 +72,92 @@ El nom serà **`proj-pardo-pardo-gestio-incidencies`**
 
 Comprovar que hi ha columnes com:
 
-- Backlog
-- In Progress
-- In Review
-- Done
-
-Si no hi són, crear-les manualment.
-
+- <codijpc>Backlog</codijpc>
+- <codijpc>In Progress</codijpc>
+- <codijpc>In Review</codijpc>
+- <codijpc>Done</codijpc>
 
 ⬇️
 
 ----
 
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <p>I si hi ha una amb el nom <codijpc>Ready</codijpc>, l'esborreu.</p>
+  </div>
+  <div style="flex:1;">
+    <img src="../img/1rdam-pro-dam-transversal/000-crear-projecte-005-esborrar-ready.png" height="450" width="auto">
+  </div>
+</div>
 
-I si hi ha una amb el nom Ready, l'esborreu.
+⬇️
 
-![alt text](../img/1rdam-pro-dam-transversal/000-crear-projecte-005-esborrar-ready.png)
+----
+
+Respongueu afirmativament a la pregunta si voleu esborrar una <codijpc>Delete option</codijpc>
 
 ![alt text](../img/1rdam-pro-dam-transversal/000-crear-projecte-006-esborrar-ready-02.png)
 
 
 ---
 
-# PAS 4
-
-## Configurar el repositori del Project
-
-Anar a:
-
-**Settings**
-
-![alt text](../img/1rdam-pro-dam-transversal/000-crear-projecte-007-settings.png)
-
-**Project settings**
-
-![alt text](../img/1rdam-pro-dam-transversal/000-crear-projecte-008-check-def-repo.png)
-
-I confirmar que **Default repository** apareix el nostre repositori.
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <h1>PAS 4</h1>
+    <h2>Configurar el repositori del Project</h2>
+    <p>Anar a: <codijpc>Settings</codijpc></p>
+  </div>
+  <div style="flex:1;">
+    <img src="../img/1rdam-pro-dam-transversal/000-crear-projecte-007-settings.png" height="450" width="auto">
+  </div>
+</div> 
 
 ⬇️
 
 ----
 
-Anar a **Manage access** 
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+<codijpc>Project settings</codijpc> 
+    <ul>
+    <li>I confirmar que <codijpc>Default repository</codijpc> apareix el nostre repositori.</li>
+    </ul>
+  </div>
+  <div style="flex:1;">
+    <img src="../img/1rdam-pro-dam-transversal/000-crear-projecte-008-check-def-repo.png" height="450" width="auto">
+  </div>
+</div>
 
-![alt text](../img/1rdam-pro-dam-transversal/000-crear-projecte-009-settings-man-acc.png)
 
-Cal convidar a l'usuari del professor **`jpardo20`** com a **`admin`** i a la resta de memnres del grup.
+⬇️
+
+----
+
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <ul>
+    <li>Anar a <codijpc>Manage access</codijpc> </li>
+    </ul>
+  </div>
+  <div style="flex:1;">
+    <img src="../img/1rdam-pro-dam-transversal/000-crear-projecte-009-settings-man-acc.png" height="450" width="auto">
+  </div>
+</div>
+
+⬇️
+
+----
+
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:1; text-align:center;">
+    <ul>
+    <li>Cal convidar a l'usuari del professor <codijpc>jpardo20</codijpc> com a <codijpc>admin</codijpc> i a la resta de memnres del grup.</li>
+    </ul>
+
+  </div>
+  <div style="flex:1;">
+    <img src="../img/1rdam-pro-dam-transversal/000-crear-projecte-010-settings-add-acc-profe.png" height="450" width="auto">
+  </div>
+</div>
 
 
-![alt text](../img/1rdam-pro-dam-transversal/000-crear-projecte-010-settings-add-acc-profe.png)
