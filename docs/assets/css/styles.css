@@ -833,3 +833,20 @@ main {
 .sort-select {
   min-width: 150px;
 }
+
+.moduls-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dues columnes iguals */
+  gap: 40px; /* espai entre columnes */
+  margin-top: 15px;
+}
+
+.moduls-grid h3 {
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .moduls-grid {
+    grid-template-columns: 1fr;
+  }
+}
