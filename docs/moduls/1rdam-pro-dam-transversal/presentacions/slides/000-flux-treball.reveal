@@ -187,6 +187,19 @@ Per desplaçar-nos a la branca que acabem de crear per dur a terme la feina.
 
 ## Fem el desenvolupament oportu segons la tasca a dur a terme.
 
+Un cop heu modificat tots els fitxers necessaris cal fer:
+
+
+<codijpc>
+git add REDAME.md<br>
+git push -u origin checkout 11-titol-que-volem-que-tingui-la-tascca
+</codijpc>
+
+Sabreu que heu afegit tots els fitxers necessaris, quan `git status` us mostri tots els fitxers que heu modificat de color verd. v
+
+Si encara hi ha algun fitxer de color vermell, cal afegir-lo amb la comanda `git add <NomDelFitxerVermell>`.
+
+Si no el <codijpc>Pull Request</codijpc>, com que es fa al repositori remot, no existirà ni la branca ni els fitxer que heu modificat.
 ---
 
 ## Un cop acabat el desenvolupament que tenia assignat
