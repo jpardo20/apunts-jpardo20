@@ -185,28 +185,32 @@ Per desplaçar-nos a la branca que acabem de crear per dur a terme la feina.
 
 ---
 
-## Fem el desenvolupament oportu segons la tasca a dur a terme.
+## Fer el desenvolupament segons la tasca
 
-Un cop heu modificat tots els fitxers necessaris cal fer:
+* Un cop heu modificat tots els fitxers necessaris cal fer:
 
+<ul>
+<li>
+<codijpc>git add REDAME.md</codijpc>
+</li>
+<li>
+<codijpc>git push -u origin checkout 11-titol-que-volem-que-tingui-la-tascca</codijpc>
 
-<codijpc>
-git add REDAME.md<br>
-git push -u origin checkout 11-titol-que-volem-que-tingui-la-tascca
+</li>
 </codijpc>
 
-Sabreu que heu afegit tots els fitxers necessaris, quan `git status` us mostri tots els fitxers que heu modificat de color verd. v
+Sabreu que heu afegit tots els fitxers necessaris, quan <codijpc>git status</codijpc> us mostri tots els fitxers que heu modificat de color verd.
 
-Si encara hi ha algun fitxer de color vermell, cal afegir-lo amb la comanda `git add <NomDelFitxerVermell>`.
+Si encara hi ha algun fitxer de color vermell, cal afegir-lo amb la comanda <codijpc>git add &lt;NomDelFitxerVermell></codijpc>.
 
-Si no el <codijpc>Pull Request</codijpc>, com que es fa al repositori remot, no existirà ni la branca ni els fitxer que heu modificat.
+Si no en fer el <codijpc>Pull Request</codijpc>, al repositori remot, no existiran ni la branca ni els fitxers que heu modificat.
 ---
 
-## Un cop acabat el desenvolupament que tenia assignat
+## Un cop acabat el desenvolupament
 
-Un cop acabat el desenvolupament que teniem assignat, cal que creem un <codijpc>pull request</codijpc> (<codijpc>PR</codijpc>), per que el nostre company, fent de <codijpc>QA</codijpc>, validi i executí el <codijpc>merge</codijpc> de la nostra branca cap a la branca <codijpc>main</codijpc>.
+Ara cal que crear un <codijpc>pull request</codijpc> (<codijpc>PR</codijpc>), per que el nostre company, qui fa de <codijpc>QA</codijpc>, validi i executí el <codijpc>merge</codijpc> de la nostra branca cap a la branca <codijpc>main</codijpc>.
 
-Crear <codijpc>PR</codijpc>
+* Per crear <codijpc>PR</codijpc> cal executar
 
 <codijpc>gh pr create --base main --head <codijpc style="color:black; font-weight: bold;">&lt;nomBranca></codijpc></codijpc>
 
@@ -214,7 +218,7 @@ Crear <codijpc>PR</codijpc>
 
 ----
 
-Assignar el <codijpc>PR</codijpc> a algú, és a dir, assignar un revisor (**`reviewer`**) 
+* Per assignar el <codijpc>PR</codijpc> a algú, és a dir, assignar un revisor (**`reviewer`**) cal executar:
 
 <codijpc>gh pr edit <codijpc style="color:black; font-weight: bold;">N</codijpc> --add-reviewer <codijpc style="color:black; font-weight: bold;">usuari</codijpc></codijpc>
 

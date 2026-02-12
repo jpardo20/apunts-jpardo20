@@ -3,8 +3,10 @@
 <details>
   <summary>Desplega per veure els mòduls de SMX</summary>
 
+<h3><a href="moduls/tutoria/presentacions/index.html">Tutoria</a></h3>
 <h3><a href="moduls/0221-muntatge-i-manteniment-d-equips/presentacions/index.html">0221 Muntatge i manteniment d’equips</a></h3>
-<!-- <ul>
+<!--
+  <ul>
     <li>
         <p>
             <a href="moduls/0221-muntatge-i-manteniment-d-equips/presentacions/index.html">Presentacions</a>
@@ -12,8 +14,9 @@
     </li> -->
     <!-- <li><p><a href="https://jpardo20.github.io/apunts-jpardo20/moduls/0221-muntatge-i-manteniment-d-equips/presentacions/slides/0221-ae-004.html">Correció: coavaluacio presentacions rúbrica</a>
         </p>
-        </li> -->
-        </ul>
+        </li> 
+  </ul>
+-->
 
 <h3><a href="moduls/0223-aplicacions-ofimatiques/presentacions/index.html">0223 Aplicacions ofimàtiques</a></h3>
 <!-- <ul><li><p><a href="moduls/0223-aplicacions-ofimatiques/presentacions/index.html">Presentacions</a></p></li></ul> -->
@@ -25,7 +28,6 @@
 <!-- <ul>
     <li><p><a href="moduls/mopt1-robotica-python/presentacions/index.html">Teoria</a></p></li>
 </ul> -->
-<h3><a href="moduls/tutoria/presentacions/index.html">Tutoria</a></h3>
 
 </details>
 
@@ -33,6 +35,8 @@
 <h3><strong>Mòduls de DAM</u></strong></h3>
 <details>
   <summary>Desplega per veure els mòduls de DAM</summary>
+
+<h3><a href="moduls/tutoria/presentacions/index.html">Tutoria</a></h3>
 
 <h3><a href="moduls/0373-llenguatges-de-marques/presentacions/index.html">0373 - Llenguatges de marques</a></h3>
 <!-- <ul><li><p><a href="moduls/0373-llenguatges-de-marques/presentacions/index.html">Presentacions</a></p></li></ul> -->
@@ -49,7 +53,8 @@
 
 <h3><a href="moduls/0483-sistemes-informatics/presentacions/index.html">0483 - Sistemes Informàtics</a></h3>
 
-<h3><a href="moduls/tutoria/presentacions/index.html">Tutoria</a></h3>
+<h3><a href="moduls/1rdam-pro-dam-transversal/presentacions/index.html">PRTR - Projecte transversal</a></h3>
+
 
 <!--
 <ul><li><p><a href="moduls/0483-sistemes-informatics/presentacions/index.html">Presentacions</a></p></li></ul> 
