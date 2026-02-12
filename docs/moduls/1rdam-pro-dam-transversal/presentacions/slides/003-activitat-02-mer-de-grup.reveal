@@ -1,18 +1,18 @@
 # Projecte PhoenixTech: Proposta de Model Entitat-Relació (MER)
-# * Individual <codiae>0484-bds-ae13</codiae>
+# * De grup <codiae>0484-bds-ae14</codiae>
 
 ---
 
 ## 1. Objectiu de l'activitat
 
-L'objectiu d'aquesta activitat és que **cada alumne, de manera individual**, sigui capaç de:
+L'objectiu d'aquesta activitat és que **tot el grup, de manera colectiva**, sigui capaç de:
 
 - analitzar el context del projecte PhoenixTech,
 - identificar les dades necessàries per a la **gestió d'incidències**,
 - proposar un **Model Entitat-Relació (MER)** coherent,
 - i justificar les decisions preses.
 
-Aquesta activitat serveix com a **punt de partida del projecte** i com a base per a una proposta col·lectiva posterior.
+Aquesta activitat servirà com a **proposta inicial del projecte del grup** i com a base per la creació de les taules de la base de dades de l'aplicació del grup.
 
 ---
 
@@ -34,10 +34,10 @@ Es treballa el **disseny conceptual de les dades** mitjançant un MER.
 
 ## 3. Treball a realitzar
 
-Cada alumne ha de:
+El grup de manera colectiva, ha de:
 
-1. Analitzar el context del projecte.
-2. Proposar un **Model Entitat-Relació (MER)** per a la gestió d'incidències.
+1. Analitzar els dirferents MER dels mebres del grup,
+2. Consensuar un **Model Entitat-Relació (MER)**  i un **Model Relacional (MER)** per a la gestió d'incidències.
 3. Definir:
    - entitats necessàries,
    - atributs principals,
@@ -45,7 +45,6 @@ Cada alumne ha de:
    - cardinalitats.
 4. Prendre decisions raonades sobre el model.
 
-> ⚠️ No hi ha una única solució correcta.  
 > Es valorarà la **coherència i justificació** del model.
 
 ---
@@ -59,30 +58,23 @@ Aquesta activitat s'ha de realitzar seguint **estrictament** les normes definide
 En resum:
 
 - ❌ No es pot treballar directament a `main`.
-- ✅ Cada alumne ha de crear **la seva pròpia branca**.
+- ✅ Un alumne ha de crear **la branca** per desenvolpuar aquesta tasca.
 - ✅ El treball s'ha de lliurar mitjançant **Pull Request (PR)**.
 - ✅ Un altre alumne ha de fer de **QA**.
-- ❌ L'alumne que crea la branca **NO pot fusionar el seu propi PR**.
+- ❌ L'alumne que crea la branca **NO pot fusionar el PR**.
 
 ---
-
-# Individual <codiae>0484-bds-ae13</codiae> 
+# De grup <codiae>0484-bds-ae14</codiae>
 
 ## 5. Estructura de carpetes i fitxers (molt important)
 
-Cada alumne ha de crear la carpeta següent al repositori:
+A cada repostori cal que hi hagi la carpeta següent:
 
 ```
-<PrimerCognomAlumne>-mer/
+docs/
 ```
 
->
-> ###### On <u>`<PrimerCognomAlumne>`</u> és <u>només</u> el primer cognom de l'alumne, sense el nom, en <u>minúscules</u>, <u>sense accents</u>, ni <u>espais</u>, ni lletres que no siguin de l'<u>alfabet anglès</u> (és a dir, sense <u>`ñ`</u>, <u>`ç`</u>, etc.), ni <u>caràrters especials</u>.
->
-> ###### Per exemple en el cas de l'alumne <b><u>Pere De la Peña</u></b>, el nom de la carepta seria <kbd><b>`delapena-mer`</b></kbd>.
->
-
-Dins d'aquesta carpeta, **cada alumne ha de pujar dos fitxers** corresponents a la seva proposta individual de MER:
+Dins d'aquesta carpeta, **cada grup ha de pujar dos fitxers** corresponents a la seva proposta en grup de MER:
 
 - Un fitxer **XML** amb el model i un fitxer d'**imatge** amb el **diagrama del MER**.
 
@@ -93,26 +85,18 @@ Dins d'aquesta carpeta, **cada alumne ha de pujar dos fitxers** corresponents a 
 - Un fitxer **XML** amb el model
 
   ```
-  mer/<PrimerCognomAlumne>-mer.xml
+  docs/<nomRepositori>-mer.xml
   ```
 
 - Un fitxer **d'imatge** amb el diagrama del MER:
   ```
-  mer/<PrimerCognomAlumne>-mer.png
+  docs/<nomRepositori>-mer.png
   ```
   *(també pot ser .jpg)*
 
 >
-> ###### On <u>`<PrimerCognomAlumne>`</u> és <u>només</u> el primer cognom de l'alumne, sense el nom, en <u>minúscules</u>, <u>sense accents</u>, ni <u>espais</u>, ni lletres que no siguin de l'<u>alfabet anglès</u> (és a dir, sense <u>`ñ`</u>, <u>`ç`</u>, etc.), ni <u>caràrters especials</u>.
+> ###### On <u>`<nomRepositori>`</u> és el nom del repositori del grup.
 >
-> ###### Per exemple en el cas de l'alumne <b><u>Pere De la Peña</u></b>, el nom del fitxer seria <kbd><b>`delapena-mer.xml`</b></kbd> o <kbd><b>`delapena-mer.png`</b></kbd>.
->
-
-⬇️
-
-----
-
-📌 **És obligatori que el nom de l'alumne aparegui al nom dels fitxers** per evitar conflictes i facilitar la revisió.
 
 ---
 
@@ -120,33 +104,21 @@ Dins d'aquesta carpeta, **cada alumne ha de pujar dos fitxers** corresponents a 
 
 Tot i que el MER es lliura mitjançant fitxers, **cal documentar l'aportació al README.md**.
 
-Cada alumne ha d'afegir una secció nova amb la següent estructura **obligatòria**:
+El grup ha d'afegir una secció nova amb la següent estructura **obligatòria**:
 
 ```md
-## Proposta individual de MER (<PrimerCognomAlumne>)
-
-### Aportació individual
-- Alumne:
-- Branca:
-- Qui fa de QA:
-- Què he fet:
-- Dificultats:
+## Proposta de grup de MER
 ```
-
-⬇️
-
-----
-
-### A l'apartat **Què he fet** cal indicar:
-- quines entitats principals s'han definit,
+### A aqeust apartat cal indicar:
+- quines són les entitats que apereixen,
 - quines relacions s'han considerat,
-- i referenciar explícitament els fitxers pujats a la carpeta **`mer/`**.
+- i referenciar explícitament els fitxers pujats a la carpeta **`docs/`**.
 
 Exemple:
 ```md
-He proposat un MER amb les entitats Incidència, Tècnic i Estat.  
-El diagrama es troba al fitxer [<PrimerCognomAlumne>-mer.xml](mer/<PrimerCognomAlumne>-mer.xml), i
-el disseny és ![<PrimerCognomAlumne>-mer.png](mer/<PrimerCognomAlumne>-mer.png).
+...  
+El diagrama es troba al fitxer [<nomRepositori>-mer.xml](docs/<nomRepositori>-mer.xml), i
+el disseny final és ![<nomRepositori>-mer.png](docs/<nomRepositori>-mer.png).
 ```
 
 ---
@@ -167,14 +139,10 @@ Fer de QA **forma part de l'activitat i de l'avaluació**.
 ## 8. Resultat de l'activitat
 
 El resultat d'aquesta activitat serà:
-- un conjunt de **propostes individuals de MER**,
+- un **proposta de MER de grup**,
 - visibles al repositori,
 - amb diagrames i models estructurats,
-- que serviran de base per a:
-  - comparar solucions,
-  - discutir decisions,
-  - i elaborar una **proposta col·lectiva final** en una activitat posterior.
-
+- que serviran de base per a la posterior creació de les taules.
 ---
 
 ## 9. Criteris generals d'avaluació
@@ -197,8 +165,8 @@ En aquesta activitat es valorarà:
 Aquesta activitat no busca trobar “el MER perfecte”, sinó:
 
 - aprendre a analitzar un problema,
+- avaluar les diferents propostes,
+- determinar de manera conjunta una proposta final,
 - representar-lo de manera visual i estructurada,
 - explicar les decisions preses,
 - i treballar de manera professional i col·laborativa.
-
-El següent pas serà **posar en comú les propostes** i construir una versió consensuada del MER.

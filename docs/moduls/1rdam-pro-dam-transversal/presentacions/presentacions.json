@@ -74,6 +74,13 @@
             "description": "Flux de treball",
             "status": "active",
             "kind": "theory"
+        },{
+            "order": "210",
+            "title": "210. 2a activitat Projecte PhoenixTech: Proposta de grupe grup de Model Entitat-Relació (MER) <codiae>0484-bds-ae14</codia>",
+            "src": "slides/003-activitat-02-mer-de-grup.reveal",
+            "description": "2a activitat Projecte PhoenixTech: Proposta de grupe grup de Model Entitat-Relació (MER) <codiae>0484-bds-ae14</codia>",
+            "status": "active",
+            "kind": "activity"
         }       
     ]
 }
