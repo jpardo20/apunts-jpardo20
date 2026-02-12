@@ -62,16 +62,16 @@
             "kind": "theory"
         },{
             "order": "201",
-            "title": "201. 000-crear-projecte.reveal",
+            "title": "201. Crear un Projecte (KANBAN) des d’un Repositori",
             "src": "slides/000-crear-projecte.reveal",
-            "description": "000-crear-projecte.reveal",
+            "description": "Crear un Projecte (KANBAN) des d’un Repositori",
             "status": "active",
             "kind": "theory"
         },{
             "order": "202",
-            "title": "202. 000-flux-treball.reveal",
+            "title": "202. Flux de treball",
             "src": "slides/000-flux-treball.reveal",
-            "description": "000-flux-treball.reveal",
+            "description": "Flux de treball",
             "status": "active",
             "kind": "theory"
         }       
