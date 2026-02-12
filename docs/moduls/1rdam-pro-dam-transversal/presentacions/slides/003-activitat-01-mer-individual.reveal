@@ -1,5 +1,6 @@
 # Projecte PhoenixTech: Proposta de Model Entitat-Relació (MER)
-# * Individual <codiae>0484-bds-ae13</codiae>
+
+# Individual <codiae>0484-bds-ae13</codiae>
 
 ---
 
@@ -66,8 +67,6 @@ En resum:
 
 ---
 
-# Individual <codiae>0484-bds-ae13</codiae> 
-
 ## 5. Estructura de carpetes i fitxers (molt important)
 
 Cada alumne ha de crear la carpeta següent al repositori:
@@ -82,13 +81,11 @@ Cada alumne ha de crear la carpeta següent al repositori:
 > ###### Per exemple en el cas de l'alumne <b><u>Pere De la Peña</u></b>, el nom de la carepta seria <kbd><b>`delapena-mer`</b></kbd>.
 >
 
-Dins d'aquesta carpeta, **cada alumne ha de pujar dos fitxers** corresponents a la seva proposta individual de MER:
-
-- Un fitxer **XML** amb el model i un fitxer d'**imatge** amb el **diagrama del MER**.
-
 ⬇️
 
 ----
+
+Dins d'aquesta carpeta, **cada alumne ha de pujar dos fitxers**:
 
 - Un fitxer **XML** amb el model
 
@@ -100,7 +97,6 @@ Dins d'aquesta carpeta, **cada alumne ha de pujar dos fitxers** corresponents a 
   ```
   mer/<PrimerCognomAlumne>-mer.png
   ```
-  *(també pot ser .jpg)*
 
 >
 > ###### On <u>`<PrimerCognomAlumne>`</u> és <u>només</u> el primer cognom de l'alumne, sense el nom, en <u>minúscules</u>, <u>sense accents</u>, ni <u>espais</u>, ni lletres que no siguin de l'<u>alfabet anglès</u> (és a dir, sense <u>`ñ`</u>, <u>`ç`</u>, etc.), ni <u>caràrters especials</u>.
@@ -137,7 +133,7 @@ Cada alumne ha d'afegir una secció nova amb la següent estructura **obligatòr
 
 ----
 
-### A l'apartat **Què he fet** cal indicar:
+### A l'apartat **`Què he fet`** cal indicar:
 - quines entitats principals s'han definit,
 - quines relacions s'han considerat,
 - i referenciar explícitament els fitxers pujats a la carpeta **`mer/`**.

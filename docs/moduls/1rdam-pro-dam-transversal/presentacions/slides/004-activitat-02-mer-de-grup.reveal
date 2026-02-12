@@ -1,5 +1,5 @@
 # Projecte PhoenixTech: Proposta de Model Entitat-Relació (MER)
-# * De grup <codiae>0484-bds-ae14</codiae>
+# De grup <codiae>0484-bds-ae14</codiae>
 
 ---
 
@@ -21,6 +21,7 @@ Aquesta activitat servirà com a **proposta inicial del projecte del grup** i co
 PhoenixTech necessita una **base de dades** per gestionar les incidències del seu servei tècnic.
 
 Cada incidència:
+
 - es registra al sistema,
 - té un estat,
 - està associada a un tècnic,
@@ -64,15 +65,10 @@ En resum:
 - ❌ L'alumne que crea la branca **NO pot fusionar el PR**.
 
 ---
-# De grup <codiae>0484-bds-ae14</codiae>
 
 ## 5. Estructura de carpetes i fitxers (molt important)
 
-A cada repostori cal que hi hagi la carpeta següent:
-
-```
-docs/
-```
+A cada repostori cal que hi hagi la carpeta següent: <codiae>docs/</codiae>
 
 Dins d'aquesta carpeta, **cada grup ha de pujar dos fitxers** corresponents a la seva proposta en grup de MER:
 
@@ -109,12 +105,19 @@ El grup ha d'afegir una secció nova amb la següent estructura **obligatòria**
 ```md
 ## Proposta de grup de MER
 ```
-### A aqeust apartat cal indicar:
+
+### A aquest apartat cal indicar
+
 - quines són les entitats que apereixen,
 - quines relacions s'han considerat,
-- i referenciar explícitament els fitxers pujats a la carpeta **`docs/`**.
+- i referenciar explícitament els fitxers pujats a la carpeta <codiae>docs/</codiae>.
 
+⬇️
+
+----
+    
 Exemple:
+
 ```md
 ...  
 El diagrama es troba al fitxer [<nomRepositori>-mer.xml](docs/<nomRepositori>-mer.xml), i
@@ -128,6 +131,7 @@ el disseny final és ![<nomRepositori>-mer.png](docs/<nomRepositori>-mer.png).
 Un altre alumne farà de **QA (revisor)** del PR.
 
 El QA ha de:
+
 - comprovar que els fitxers del MER existeixen,
 - verificar que el README està complet,
 - fer comentaris si detecta dubtes o incoherències.
@@ -139,10 +143,12 @@ Fer de QA **forma part de l'activitat i de l'avaluació**.
 ## 8. Resultat de l'activitat
 
 El resultat d'aquesta activitat serà:
+
 - un **proposta de MER de grup**,
 - visibles al repositori,
 - amb diagrames i models estructurats,
 - que serviran de base per a la posterior creació de les taules.
+
 ---
 
 ## 9. Criteris generals d'avaluació
