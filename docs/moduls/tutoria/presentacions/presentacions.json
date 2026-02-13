@@ -31,7 +31,7 @@
         {
             "id": "2a-sessio",
             "title": "2a Sessió | Projecte de Tutoria FP",
-            "description": "Projecte de Tutoria FP | SESSIÓ 2 · ...",
+            "description": "Projecte de Tutoria FP | SESSIÓ 2: El cicle i les sortides professionals.",
             "src": "projecte-2a-sessio.reveal",
             "theme": "white",
             "status": "active",
@@ -44,9 +44,9 @@
             "id": "3a-sessio",
             "title": "3a Sessió | Projecte de Tutoria FP",
             "description": "Projecte de Tutoria FP | SESSIÓ 3 · ...",
-            "src": "projecte-1a-sessio.reveal",
+            "src": "projecte-3a-sessio.reveal",
             "theme": "white",
-            "status": "inactive",
+            "status": "active",
             "kind": "theory",
             "tags": [
                 "BBDD"

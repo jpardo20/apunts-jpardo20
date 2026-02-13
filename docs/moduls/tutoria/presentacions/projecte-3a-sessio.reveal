@@ -1,0 +1,206 @@
+# Projecte de Tutoria FP
+
+## SESSIÓ 3 · Hàbits de treball i organització acadèmica
+
+Durada de la sessió: 1 hora  
+Modalitat: Treball individual  
+Aquesta sessió és obligatòria i compta per nota.
+
+---
+
+## OBJECTIU DE LA SESSIÓ
+
+En aquesta sessió analitzaràs la teva manera de treballar com a estudiant d’FP.
+
+L’objectiu és:
+
+- identificar els teus hàbits d’estudi actuals
+- analitzar com organitzes el teu temps acadèmic
+- detectar aspectes que pots millorar per optimitzar el teu rendiment
+
+⬇️
+
+----
+
+Al final de la sessió hauràs de tenir:
+
+- un nou fitxer afegit al repositori
+- el contingut completat segons les instruccions
+- com a mínim **dos <codijpc>commit</codijpc>s fets avui**
+
+---
+
+## PAS 1 · ABANS DE COMENÇAR LA SESSIÓ
+
+Abans de començar a treballar, actualitza el teu repositori local.
+
+```bash
+git pull
+```
+
+Assegura’t que **no hi ha errors** abans de continuar.
+
+---
+
+## PAS 2 · ESTRUCTURA DE FITXERS DE LA SESSIÓ
+
+Dins del teu repositori, crea la carpeta i el fitxer següents:
+
+```bash
+sessio-3/
+└── habits_i_organitzacio.md
+```
+
+No modifiquis cap altre fitxer.
+
+---
+
+## PAS 3 · PRIMER <codijpc>commit</codijpc> (INICI DE LA SESSIÓ)
+
+Un cop creada l’estructura, fes el **primer commit de la sessió**.
+
+```bash
+git add .
+git commit -m "inici sessio 3"
+```
+
+<div class="admonition caution">
+<br>
+Aquest <codijpc>commit</codijpc> és obligatori.
+</div>
+
+---
+
+## PAS 4 · ANÀLISI DELS TEUS HÀBITS DE TREBALL
+
+Reflexiona de manera acadèmica i concreta sobre els punts següents.
+
+## 1. Organització del temps
+
+Explica com organitzes actualment el teu temps d’estudi fora de classe:
+
+- Planifiques les tasques?
+- Treballes amb calendari o agenda?
+- Estudies de manera regular o només abans d’entregues/exàmens?
+
+⬇️
+
+----
+
+## 2. Hàbits d’estudi
+
+Descriu com treballes habitualment els continguts dels mòduls:
+
+- Fas esquemes o resums?
+- Repeteixes exercicis pràctics?
+- Demanes ajuda quan no entens alguna cosa?
+- Revises els errors després d’una correcció?
+
+⬇️
+
+----
+
+## 3. Punt fort en la manera de treballar
+
+Indica **un aspecte positiu** de la teva manera de treballar
+que consideris que t’està ajudant acadèmicament.
+
+⬇️
+
+----
+
+## 4. Aspecte a millorar i acció concreta
+
+Identifica **un aspecte concret** que hauries de millorar
+en la teva manera d’organitzar-te o estudiar.
+
+A continuació, indica **una acció concreta** que et compromets a aplicar durant el proper mes.
+
+⬇️
+
+----
+
+## PAS 5 · CONTINGUT DEL FITXER <codijpc>habits_i_organitzacio.md</codijpc>
+
+El fitxer <codijpc>sessio-3/habits_i_organitzacio.md</codijpc> ha de tenir **exactament** aquesta estructura:
+
+```markdown
+# Sessió 3 · Hàbits de treball i organització acadèmica
+
+## 1. Organització del temps
+Explica com organitzes actualment el teu temps d’estudi fora de classe.
+
+## 2. Hàbits d’estudi
+Descriu com treballes habitualment els continguts dels mòduls.
+
+## 3. Punt fort en la meva manera de treballar
+Indica un aspecte positiu de la teva manera de treballar.
+
+## 4. Aspecte a millorar i acció concreta
+Explica un aspecte a millorar i una acció concreta que aplicaràs
+durant el proper mes.
+```
+
+⬇️
+
+----
+
+<div class="admonition tip">
+<br>
+Sigues concret. No es valoren respostes genèriques.
+</div>
+
+---
+
+## PAS 6 · SEGON <codijpc>commit</codijpc> (FINAL DE LA SESSIÓ)
+
+Quan hagis acabat d’escriure el contingut, fes el **segon commit**.
+
+```bash
+git add .
+git commit -m "final sessio 3"
+```
+
+---
+
+## PAS 7 · PUJAR ELS CANVIS A GITHUB
+
+Abans d’acabar la sessió, executa:
+
+```bash
+git push -u origin main
+```
+
+Assegura’t que **no hi ha errors**.
+
+---
+
+## QUÈ ES COMPROVARÀ PER AVALUAR LA SESSIÓ 3
+
+Perquè la sessió compti com a feta correctament, cal que:
+
+- existeixi la carpeta <codijpc>sessio-3</codijpc>
+- existeixi el fitxer <codijpc>habits_i_organitzacio.md</codijpc>
+- el contingut segueixi l’estructura indicada
+- hi hagi **dos <codijpc>commit</codijpc>s fets avui**
+- els missatges dels commits siguin correctes
+- el contingut sigui coherent i no buit
+
+Si falta algun d’aquests punts, la sessió es considerarà incompleta.
+
+---
+
+Recorda:
+A l’inici de cada sessió:
+
+```bash
+git pull
+```
+
+Al final de cada sessió:
+
+```bash
+git push -u origin main
+```
+
+I com a mínim cal fer dos <codijpc>git commit</codijpc> a cada sessió.
