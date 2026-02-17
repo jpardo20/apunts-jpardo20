@@ -95,6 +95,13 @@
             "description": "3a activitat Projecte PhoenixTech: Model Relacional de grup (MR) </br> De grup <codiae>0484-bds-ae15</codiae>",
             "status": "active",
             "kind": "activity"
+        },{
+            "order": "235",
+            "title": "235. Pràctica: Crear un nou contenidor amb **`PHP`**",
+            "src": "slides/creacio-base-dades-usuaris.reveal",
+            "description": "Pràctica: Crear un nou contenidor amb **`PHP`**",
+            "status": "active",
+            "kind": "theory"
         }
     ]
 }

@@ -1,0 +1,311 @@
+# Pràctica: Crear un nou contenidor amb **`PHP`**
+
+## OBJECTIU
+
+Crear un nou contenidor **`PHP`** que es connecti al contenidor de **`MariaDB`** ja existent.
+
+- Crearem una NOVA base de dades,
+- Crear una taula **`usuaris`**
+- Simularem un login des de PHP.
+
+---
+
+# 1. Comprovem que `MariaDB` està funcionant
+
+A la MV:
+
+```bash
+sudo docker containers ps
+```
+
+<pre>
+profe@ubuntu-docker:~$ sudo docker container ps
+CONTAINER ID   IMAGE           COMMAND                  CREATED       STATUS       PORTS                                         NAMES
+e9a3565b2208   phpmyadmin      "/docker-entrypoint.…"   4 weeks ago   Up 13 days   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp       mysql-phpmyadmin-1
+797ca4d5a354   mariadb:10.11   "docker-entrypoint.s…"   4 weeks ago   Up 13 days   3306/tcp                                      mysql-db-1
+profe@ubuntu-docker:~$
+</pre>
+
+Hauries de veure:
+
+- **`mysql-phpmyadmin-1`**
+- **`mysql-db-1`**
+
+---
+
+# 2. Crear una NOVA base de dades
+
+Connecta't al contenidor que té la base de dades **`Mariadb`**:
+
+```bash
+sudo docker exec -ti bash mysql-db-1
+```
+
+<pre>
+profe@ubuntu-docker:~$ sudo docker exec -ti  mysql-db-1 bash
+root@797ca4d5a354:/#
+</pre>
+
+
+Un cop que siguis dins del contenidor, obre el programa **`mysql`**
+
+```bash
+mysql -u root -p
+```
+
+Quan et demani la contrasenya escrius **`profe`**, si has seguit els passos del profe.
+
+<pre>
+root@797ca4d5a354:/# mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 82
+Server version: 10.11.15-MariaDB-ubu2204 mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
+</pre>
+
+
+Ara executa aquest SQL:
+
+```bash
+CREATE DATABASE institut_app;
+
+USE institut_app;
+
+CREATE TABLE usuaris (
+    id_usuari INT AUTO_INCREMENT PRIMARY KEY,
+    nom_usuari VARCHAR(50) NOT NULL,
+    motdepas_usuari CHAR(64) NOT NULL
+);
+
+INSERT INTO usuaris (nom_usuari, motdepas_usuari)
+VALUES ('alumne', SHA2('1234', 256));
+```
+
+<pre>
+MariaDB [(none)]> CREATE DATABASE institut_app;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]>
+MariaDB [(none)]> USE institut_app;
+Database changed
+MariaDB [institut_app]>
+MariaDB [institut_app]> CREATE TABLE usuaris (
+    ->     id_usuari INT AUTO_INCREMENT PRIMARY KEY,
+    ->     nom_usuari VARCHAR(50) NOT NULL,
+    ->     motdepas_usuari CHAR(64) NOT NULL
+    -> );
+Query OK, 0 rows affected (0.017 sec)
+
+MariaDB [institut_app]>
+MariaDB [institut_app]> INSERT INTO usuaris (nom_usuari, motdepas_usuari)
+    -> VALUES ('alumne', SHA2('1234', 256));
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [institut_app]> SELECT *
+    -> FROM usuaris;
++-----------+------------+------------------------------------------------------------------+
+| id_usuari | nom_usuari | motdepas_usuari                                                  |
++-----------+------------+------------------------------------------------------------------+
+|         1 | alumne     | 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4 |
++-----------+------------+------------------------------------------------------------------+
+1 row in set (0.001 sec)
+
+MariaDB [institut_app]>
+</pre>
+
+---
+
+# 3. Crear el nou projecte PHP
+
+A la MV:
+
+```bash
+mkdir -p ~/php/web
+cd ~/php
+```
+
+Estructura final:
+
+```bash
+php/
+  Dockerfile
+  compose.yaml
+  web/
+    login.php
+```
+
+---
+
+# 4. Crear el **`Dockerfile`**
+
+Crea el fitxer **`Dockerfile`**:
+
+```bash
+FROM php:8.2-cli
+RUN docker-php-ext-install pdo pdo_mysql
+```
+
+---
+
+# 5. Crear el **`compose.yaml`**
+
+IMPORTANT: Fem servir la xarxa del primer sistema de contenidors. 
+
+Per mirar la xarxa que ha creat Docker cal executar:
+
+```bash
+docker network ls
+```
+
+<pre>
+profe@ubuntu-docker:~$ docker network ls
+NETWORK ID     NAME            DRIVER    SCOPE
+41404f82c0b8   bridge          bridge    local
+0afbd4edd4d7   host            host      local
+81759cd554c7   mysql_default   bridge    local
+0a18e44d4c88   none            null      local
+profe@ubuntu-docker:~$
+</pre>
+
+Ara ja podem crear el **`compose.yaml`**
+
+```yml
+services:
+  web:
+    build: .
+    container_name: php-web
+    working_dir: /app
+    volumes:
+      - ./web:/app
+    ports:
+      - "8000:8000"
+    command: php -S 0.0.0.0:8000
+    networks:
+      - mysql_default
+
+networks:
+  mysql_default:
+    external: true
+```
+
+---
+
+# 6. Crear **`login.php`**
+
+Dins **`php/web/login.php`**:
+```html
+<?php
+
+$host = "db";                 // nom del servei MariaDB
+$dbname = "institut_app";     // NOVA base de dades
+$user = "root";
+$pass = "profe";
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Error de connexió: " . $e->getMessage());
+}
+
+$msg = "";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    $nom_usuari = $_POST["nom_usuari"];
+    $motdepas_usuari = hash("sha256", $_POST["motdepas_usuari"]);
+
+    $stmt = $pdo->prepare("SELECT * FROM usuaris WHERE nom_usuari = ? AND motdepas_usuari = ?");
+    $stmt->execute([$nom_usuari, $motdepas_usuari]);
+
+    if ($stmt->fetch()) {
+        $msg = "Login correcte!";
+    } else {
+        $msg = "Usuari o contrasenya incorrectes";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Institut</title>
+</head>
+<body>
+
+<h2>Login Institut</h2>
+
+<?php if ($msg): ?>
+    <p><strong><?= $msg ?></strong></p>
+<?php endif; ?>
+
+<form method="POST">
+    Usuari: <input type="text" name="nom_usuari"><br><br>
+    Contrasenya: <input type="password" name="motdepas_usuari"><br><br>
+    <button type="submit">Entrar</button>
+</form>
+
+</body>
+</html>
+```
+
+---
+
+# 7. Arrencar el contenidor PHP
+
+Des de la carpeta php:
+
+```bash
+docker compose up -d --build
+```
+
+Comprovar:
+
+```bash
+docker ps
+```
+
+---
+
+# 8. Provar el login
+
+Obre al navegador:
+```bash
+http://192.168.56.101:8000/login.php
+```
+
+![alt text](../img/1rdam-pro-dam-transversal/creacio-base-dades-usuaris-image001.png)
+
+
+
+```bash
+Usuari: alumne  
+Contrasenya: 1234  
+```
+
+Si tot està bé → **`Login correcte!`**
+
+![alt text](../img/1rdam-pro-dam-transversal/creacio-base-dades-usuaris-image002.png)
+
+---
+
+# QUÈ ESTÀ PASSANT REALMENT
+
+Navegador -> Contenidor PHP (php-web) -> Contenidor MariaDB (db) -> Base de dades institut_app
+
+Tot dins la xarxa Docker **`mysql_default`**.
+
+No s’utilitza:
+- localhost
+- IP
+- Apache al host
+- PHP al host
+
+És arquitectura client-servidor real amb Docker.
