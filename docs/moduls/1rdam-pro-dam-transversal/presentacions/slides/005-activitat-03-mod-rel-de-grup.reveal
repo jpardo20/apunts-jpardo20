@@ -1,0 +1,154 @@
+# Projecte PhoenixTech: Model Relacional de grup (MR) </br> De grup <codiae>0484-bds-ae15</codiae>
+
+---
+
+## 1. Objectiu de l'activitat
+
+L'objectiu d'aquesta activitat és que **tot el grup, de manera colectiva**, sigui capaç de:
+
+- a partir del **Model Entitat-Relació (MER)** de grup i amb els canvis que ha comentat el professor,
+- cal que creeu el **Model Relacional de grup (MR)** i justificar les decisions preses.
+
+---
+
+## 2. Treball a realitzar
+
+El grup de manera colectiva, ha de:
+
+1. Crear el **Model Relacional de grup (MR)**, a partir del **Model Entitat-Relació (MER)**
+
+2. Prendre decisions raonades sobre el model.
+
+> Es valorarà la **coherència i justificació** del model.
+
+---
+
+## 3. Forma de treball (obligatòria)
+
+Aquesta activitat s'ha de realitzar seguint **estrictament** les normes definides al document:
+
+<a href="https://jpardo20.github.io/apunts-jpardo20/assets/files/presentador.html?src=%2Fapunts-jpardo20%2Fmoduls%2F1rdam-pro-dam-transversal%2Fpresentacions%2Fslides%2F002-normes-github.reveal&title=103.%20PhoenixTech%3A%20NORMES%20DE%20TREBALL%20AMB%20GITHUB#/md-section" target="_blank">**`Normes de treball amb github`**</a> i 
+<a href="https://jpardo20.github.io/apunts-jpardo20/assets/files/presentador.html?src=%2Fapunts-jpardo20%2Fmoduls%2F1rdam-pro-dam-transversal%2Fpresentacions%2Fslides%2F000-flux-treball.reveal&title=202.%20Flux%20de%20treball#/md-section" target="_blank">**`Flux de treball`**</a>
+
+
+En resum:
+
+- ❌ No es pot treballar directament a `main`.
+- ✅ Un alumne ha de crear **la branca** per desenvolpuar aquesta tasca.
+- ✅ El treball s'ha de lliurar mitjançant **Pull Request (PR)**.
+- ✅ Un altre alumne ha de fer de **QA**.
+- ❌ L'alumne que crea la branca **NO pot fusionar el PR**.
+
+---
+
+## 4. Estructura de carpetes i fitxers (molt important)
+
+A cada repositori cal que hi hagi la carpeta següent: <codiae>docs/</codiae>
+
+Dins d'aquesta carpeta, **cada grup ha de pujar un fitxer** corresponent a la seva proposta en grup de MR:
+
+- Un fitxer **XML** amb el model i un fitxer d'**imatge** amb el **diagrama del MR**.
+
+⬇️
+
+----
+
+- Un fitxer **XML** amb el model
+
+  ```
+  docs/<nomRepositori>-mr.xml
+  ```
+
+- Un fitxer **d'imatge** amb el diagrama del MR:
+  ```
+  docs/<nomRepositori>-mr.png
+  ```
+  *(també pot ser .jpg)*
+
+>
+> ###### On <u>`<nomRepositori>`</u> és el nom del repositori del grup.
+>
+
+---
+
+## 5. Contingut obligatori al README.md
+
+Tot i que el MR es lliura mitjançant fitxers, **cal documentar l'aportació al README.md**.
+
+El grup ha d'afegir una secció nova amb la següent estructura **obligatòria**:
+
+```md
+## Diagrama de grup de MR
+```
+
+### A aquest apartat cal indicar
+
+- quines són les entitats que apareixen,
+- quins són els atributs de cada entitat,
+- quin és el domini de cada atribut, i el perquè d'aquest  domini.
+- i referenciar explícitament els fitxers pujats a la carpeta <codiae>docs/</codiae>.
+
+⬇️
+
+----
+
+Exemple:
+
+```md
+...  
+El **diagrama MR** es troba al fitxer [<nomRepositori>-mr.xml](docs/<nomRepositori>-mr.xml), i
+la imatge del **diagrama MR** és ![<nomRepositori>-mr.png](docs/<nomRepositori>-mr.png).
+```
+
+---
+
+## 7. Rol de QA
+
+Un altre alumne farà de **QA (revisor)** del PR.
+
+El QA ha de:
+
+- comprovar que els fitxers del MR existeixen,
+- verificar que el README està complet,
+- fer comentaris si detecta dubtes o incoherències.
+
+Fer de QA **forma part de l'activitat i de l'avaluació**.
+
+---
+
+## 8. Resultat de l'activitat
+
+El resultat d'aquesta activitat serà:
+
+- un **proposta de MR de grup**,
+- visibles al repositori,
+- amb diagrames i models estructurats,
+- que serviran de base per a la posterior creació de les taules.
+
+---
+
+## 9. Criteris generals d'avaluació
+
+En aquesta activitat es valorarà:
+
+- participació individual clara,
+- seguiment correcte del flux GitHub,
+- existència i correcció dels fitxers del MR (XML i imatge),
+- coherència del model proposat,
+- capacitat de justificar decisions al README,
+- participació com a QA.
+
+> Les aportacions que no segueixin el procediment establert poden no ser avaluables.
+
+---
+
+## 10. Idea clau final
+
+Aquesta activitat no busca trobar “el MR perfecte”, sinó:
+
+- aprendre a analitzar un problema,
+- avaluar les diferents propostes,
+- determinar de manera conjunta una proposta final,
+- representar-lo de manera visual i estructurada,
+- explicar les decisions preses,
+- i treballar de manera professional i col·laborativa.

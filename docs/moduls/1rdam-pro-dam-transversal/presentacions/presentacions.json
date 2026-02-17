@@ -77,10 +77,17 @@
         },{
             "order": "210",
             "title": "210. 2a activitat Projecte PhoenixTech: Proposta de grupe grup de Model Entitat-Relació (MER) <codiae>0484-bds-ae14</codia>",
-            "src": "slides/004-activitat-02-mer-de-grup.reveal",
+                "src": "slides/004-activitat-02-mer-de-grup.reveal",
             "description": "2a activitat Projecte PhoenixTech: Proposta de grupe grup de Model Entitat-Relació (MER) <codiae>0484-bds-ae14</codia>",
             "status": "active",
             "kind": "activity"
-        }       
+        },{
+            "order": "220",
+            "title": "220. 3a activitat Projecte PhoenixTech: Model Relacional de grup (MR) </br> De grup <codiae>0484-bds-ae15</codiae>",
+                "src": "slides/005-activitat-03-mod-rel-de-grup.reveal",
+            "description": "3a activitat Projecte PhoenixTech: Model Relacional de grup (MR) </br> De grup <codiae>0484-bds-ae15</codiae>",
+            "status": "active",
+            "kind": "activity"
+        }
     ]
 }
