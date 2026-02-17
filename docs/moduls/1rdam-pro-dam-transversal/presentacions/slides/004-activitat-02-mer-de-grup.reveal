@@ -68,7 +68,7 @@ En resum:
 
 ## 5. Estructura de carpetes i fitxers (molt important)
 
-A cada repostori cal que hi hagi la carpeta següent: <codiae>docs/</codiae>
+A cada repositori cal que hi hagi la carpeta següent: <codiae>docs/</codiae>
 
 Dins d'aquesta carpeta, **cada grup ha de pujar dos fitxers** corresponents a la seva proposta en grup de MER:
 
@@ -108,7 +108,7 @@ El grup ha d'afegir una secció nova amb la següent estructura **obligatòria**
 
 ### A aquest apartat cal indicar
 
-- quines són les entitats que apereixen,
+- quines són les entitats que apareixen,
 - quines relacions s'han considerat,
 - i referenciar explícitament els fitxers pujats a la carpeta <codiae>docs/</codiae>.
 

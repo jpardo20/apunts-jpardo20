@@ -88,6 +88,13 @@
             "description": "3a activitat Projecte PhoenixTech: Model Relacional de grup (MR) </br> De grup <codiae>0484-bds-ae15</codiae>",
             "status": "active",
             "kind": "activity"
+        },{
+            "order": "230",
+            "title": "230. 4a activitat Projecte PhoenixTech: Comandes SQL per crear la base de dades del Model Relacional(MR) </br> De grup <codiae>0484-bds-ae16</codiae>",
+                "src": "slides/006-activitat-04-sql-create-table.reveal",
+            "description": "3a activitat Projecte PhoenixTech: Model Relacional de grup (MR) </br> De grup <codiae>0484-bds-ae15</codiae>",
+            "status": "active",
+            "kind": "activity"
         }
     ]
 }
