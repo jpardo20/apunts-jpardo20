@@ -12,11 +12,7 @@ Crear un nou contenidor **`PHP`** que es connecti al contenidor de **`MariaDB`**
 
 # 1. Comprovem que `MariaDB` està funcionant
 
-A la MV:
-
-```bash
-sudo docker containers ps
-```
+A la MV executa `sudo docker container ps`
 
 <pre>
 profe@ubuntu-docker:~$ sudo docker container ps
@@ -47,6 +43,11 @@ root@797ca4d5a354:/#
 </pre>
 
 
+⬇️
+
+----
+
+
 Un cop que siguis dins del contenidor, obre el programa **`mysql`**
 
 ```bash
@@ -70,6 +71,10 @@ MariaDB [(none)]>
 </pre>
 
 
+⬇️
+
+----
+
 Ara executa aquest SQL:
 
 ```bash
@@ -86,6 +91,11 @@ CREATE TABLE usuaris (
 INSERT INTO usuaris (nom_usuari, motdepas_usuari)
 VALUES ('alumne', SHA2('1234', 256));
 ```
+
+
+⬇️
+
+----
 
 <pre>
 MariaDB [(none)]> CREATE DATABASE institut_app;
@@ -172,6 +182,10 @@ NETWORK ID     NAME            DRIVER    SCOPE
 0a18e44d4c88   none            null      local
 profe@ubuntu-docker:~$
 </pre>
+
+⬇️
+
+----
 
 Ara ja podem crear el **`compose.yaml`**
 
@@ -260,31 +274,51 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 # 7. Arrencar el contenidor PHP
 
-Des de la carpeta php:
+Des de la carpeta **`php`**:
 
 ```bash
 docker compose up -d --build
 ```
 
-Comprovar:
+Per comprovar-ho executa `sudo docker container ps`
 
-```bash
-docker ps
-```
+<pre>
+profe@ubuntu-docker:~/php$ sudo docker container ps
+CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+49b36b301cad   php-web         "docker-php-entrypoi…"   18 minutes ago   Up 18 minutes   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   php-web
+e9a3565b2208   phpmyadmin      "/docker-entrypoint.…"   4 weeks ago      Up 2 weeks      0.0.0.0:8080->80/tcp, [::]:8080->80/tcp       mysql-phpmyadmin-1
+797ca4d5a354   mariadb:10.11   "docker-entrypoint.s…"   4 weeks ago      Up 2 weeks      3306/tcp                                      mysql-db-1
+profe@ubuntu-docker:~/php$
+</pre>
 
 ---
 
-# 8. Provar el login
+# 8. Provar el **`login`**
+
+<div style="display:flex; align-items:left; gap:0.3rem;">
+  <div style="flex:2; text-align:left; width:40%;">
 
 Obre al navegador:
 ```bash
 http://192.168.56.101:8000/login.php
 ```
 
-![alt text](../img/1rdam-pro-dam-transversal/creacio-base-dades-usuaris-image001.png)
+</div>
+ <div style="flex:3; text-align:left;">
+    <img src="../img/1rdam-pro-dam-transversal/creacio-base-dades-usuaris-image001.png" height="450" width="auto">
+  </div>
+</div>
 
+<!-- ![alt text](../img/1rdam-pro-dam-transversal/creacio-base-dades-usuaris-image001.png) -->
 
+⬇️
 
+----
+
+<div style="display:flex; align-items:left; gap:0.3rem;">
+  <div style="flex:2; text-align:left; width:40%;">
+
+Prova amb: 
 ```bash
 Usuari: alumne  
 Contrasenya: 1234  
@@ -292,20 +326,9 @@ Contrasenya: 1234
 
 Si tot està bé → **`Login correcte!`**
 
-![alt text](../img/1rdam-pro-dam-transversal/creacio-base-dades-usuaris-image002.png)
+</div>
+ <div style="flex:3; text-align:left;">
+    <img src="../img/1rdam-pro-dam-transversal/creacio-base-dades-usuaris-image002.png" height="450" width="auto">
+  </div>
+</div>
 
----
-
-# QUÈ ESTÀ PASSANT REALMENT
-
-Navegador -> Contenidor PHP (php-web) -> Contenidor MariaDB (db) -> Base de dades institut_app
-
-Tot dins la xarxa Docker **`mysql_default`**.
-
-No s’utilitza:
-- localhost
-- IP
-- Apache al host
-- PHP al host
-
-És arquitectura client-servidor real amb Docker.
