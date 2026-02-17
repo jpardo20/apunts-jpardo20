@@ -115,6 +115,14 @@
             "description": "1. Mesura de paràmetres elèctrics",
             "status": "active",
             "kind": "theory"
+        },
+        {
+            "order": 80,
+            "title": "80. 1r REPTE ASTI: 'Oficina Eficient 2026'.",
+            "src": "slides/asti-repte-01-enunciat.reveal",
+            "description": "1r REPTE ASTI: 'Oficina Eficient 2026'",
+            "status": "active",
+            "kind": "theory"
         }
     ]
 }
