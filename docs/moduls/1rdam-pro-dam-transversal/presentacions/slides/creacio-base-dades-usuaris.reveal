@@ -5,7 +5,7 @@
 Crear un nou contenidor **`PHP`** que es connecti al contenidor de **`MariaDB`** ja existent.
 
 - Crearem una NOVA base de dades,
-- Crear una taula **`usuaris`**
+- Crear una taula **`USUARIS`**
 - Simularem un login des de PHP.
 
 ---
@@ -75,21 +75,23 @@ MariaDB [(none)]>
 
 ----
 
-Ara executa aquest SQL:
+Ara executa les següents comandes SQL per:
 
-```bash
+* crear la base de dades **`institut_app`**:
+* treballar sobre la base de dades **`institut_app`**:
+* crear la taula **`USUARIS`**:
+
+```sql
 CREATE DATABASE institut_app;
 
 USE institut_app;
 
-CREATE TABLE usuaris (
+CREATE TABLE USUARIS (
     id_usuari INT AUTO_INCREMENT PRIMARY KEY,
     nom_usuari VARCHAR(50) NOT NULL,
     motdepas_usuari CHAR(64) NOT NULL
 );
 
-INSERT INTO usuaris (nom_usuari, motdepas_usuari)
-VALUES ('alumne', SHA2('1234', 256));
 ```
 
 
@@ -105,29 +107,62 @@ MariaDB [(none)]>
 MariaDB [(none)]> USE institut_app;
 Database changed
 MariaDB [institut_app]>
-MariaDB [institut_app]> CREATE TABLE usuaris (
+MariaDB [institut_app]> CREATE TABLE USUARIS (
     ->     id_usuari INT AUTO_INCREMENT PRIMARY KEY,
     ->     nom_usuari VARCHAR(50) NOT NULL,
     ->     motdepas_usuari CHAR(64) NOT NULL
     -> );
 Query OK, 0 rows affected (0.017 sec)
+</pre>
 
+⬇️
+
+----
+
+Ja hem creat la taula ara toca afegit un registre
+
+```sql
+INSERT INTO USUARIS (nom_usuari, motdepas_usuari)
+VALUES ('alumne', SHA2('1234', 256));
+```
+
+<pre>
 MariaDB [institut_app]>
-MariaDB [institut_app]> INSERT INTO usuaris (nom_usuari, motdepas_usuari)
+MariaDB [institut_app]> INSERT INTO USUARIS (nom_usuari, motdepas_usuari)
     -> VALUES ('alumne', SHA2('1234', 256));
 Query OK, 1 row affected (0.002 sec)
 
 MariaDB [institut_app]> SELECT *
-    -> FROM usuaris;
+    -> FROM USUARIS;
 +-----------+------------+------------------------------------------------------------------+
 | id_usuari | nom_usuari | motdepas_usuari                                                  |
 +-----------+------------+------------------------------------------------------------------+
 |         1 | alumne     | 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4 |
 +-----------+------------+------------------------------------------------------------------+
 1 row in set (0.001 sec)
-
-MariaDB [institut_app]>
 </pre>
+
+⬇️
+
+----
+
+Ara cal sortir per tornar al sistema Ubuntu (host).
+
+<pre>
+
+MariaDB [institut_app]> exit
+Bye
+
+root@797ca4d5a354:/# exit
+exit
+profe@ubuntu-docker:~$
+</pre>
+
+Ara sí, ja has sortit:
+
+- Primer **`exit`** per sortir del programa **`mysql`**
+- Segon **`exit`**, per sortir del contenidor **`MariaDB`**
+- I tornes a estar al sistema Ubuntu (host)
 
 ---
 
@@ -232,10 +267,11 @@ $msg = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    $nom_usuari = $_POST["nom_usuari"];
-    $motdepas_usuari = hash("sha256", $_POST["motdepas_usuari"]);
+    $nom_usuari = $_POST["nom_usuari"] ?? "";
+    $motdepas_input = $_POST["motdepas_usuari"] ?? "";
+    $motdepas_usuari = hash("sha256", $motdepas_input);
 
-    $stmt = $pdo->prepare("SELECT * FROM usuaris WHERE nom_usuari = ? AND motdepas_usuari = ?");
+    $stmt = $pdo->prepare("SELECT * FROM USUARIS WHERE nom_usuari = ? AND motdepas_usuari = ?");
     $stmt->execute([$nom_usuari, $motdepas_usuari]);
 
     if ($stmt->fetch()) {
