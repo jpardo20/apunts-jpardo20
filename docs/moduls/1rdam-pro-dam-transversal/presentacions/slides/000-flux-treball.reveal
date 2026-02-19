@@ -104,7 +104,7 @@
 
 ----
 
-1. Automàticament ja apareixerà com assingada a nosaltres.
+Automàticament ja apareixerà com assingada a nosaltres.
 
     ![alt text](../img/1rdam-pro-dam-transversal/000-flux-treball-008-task-assigned-yourself.png)
 
@@ -134,8 +134,7 @@
 El <b>Branch name</b> és correcte, aquest serà el <b>número de la tasca</b>, seguit del <b>títol de la tasca</b> sense accents i els espais subtituits per guions.
 </li><li>
 El <b>Repository destination</b> és el nostre repositori,
-</li>
-<li>
+</li><li>
 El <b>Branch source</b> és la branca <codijpc>main</codijpc>, és a dir, que aquesta branca s'està creant a partir de l'estat actual de la branca <codijpc>main</codijpc> i que 
 </li><li>
 l'opció <b>What's next?</b> tenim sel·leccionat <b>Checkout locally</b>.
@@ -196,7 +195,7 @@ Per desplaçar-nos a la branca que acabem de crear per dur a terme la feina.
 <li>
 <codijpc>git checkout 11-titol-que-volem-que-tingui-la-tascca</codijpc>
 </li>
-</codijpc>
+</ul>
 
 Sabreu que heu afegit tots els fitxers necessaris, quan <codijpc>git status</codijpc> us mostri tots els fitxers que heu modificat de color verd.
 
@@ -211,9 +210,9 @@ Un cop que ja estiguin tots els fitxers que heu modificat de color verd, llavors
 
 <ul>
 <li>
-<codijpc>git commit -m "Comentari que descriu els canvis fets als fitxer"</codijpc>
+<codijpc>git commit -m "Comentari que descriu els canvis fets als fitxers"</codijpc>
 </li>
-<li>
+</ul>
 
 
 ⬇️
@@ -226,7 +225,7 @@ I finalment, un cop que ja hem fet el <codijpc>commit</codijpc>, cal enviar els 
 <li>
 <codijpc>git push -u origin 11-titol-que-volem-que-tingui-la-tascca</codijpc>
 </li>
-<li>
+</ul>
 
 Si no en fer el <codijpc>Pull Request</codijpc>, al repositori remot, no existiran ni la branca ni els fitxers que heu modificat.
 
@@ -256,7 +255,7 @@ Ara cal que crear un <codijpc>pull request</codijpc> (<codijpc>PR</codijpc>), pe
     
   <ol>
     <li>Veure quin <codijpc>PR</codijpc> de de gestionar</li>
-    <li>Fer el <codijpc>Review</codijpc> del <codijpc>PR</codijpc></li>
+    <li>Fer el <codijpc>Review</codijpc> del <codijpc>PR</codijpc>
       <ol><li start="2">Si hi ha conflictes demanar al membre que ha creat el <codijpc style="color:black; font-weight: bold;">PR</codijpc> que arregli els conflictes,</li></ol>
     </li>
     <li>Si no hi ha conflictes fer el <codijpc>merge</codijpc></li>
