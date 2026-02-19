@@ -194,16 +194,42 @@ Per desplaçar-nos a la branca que acabem de crear per dur a terme la feina.
 <codijpc>git add REDAME.md</codijpc>
 </li>
 <li>
-<codijpc>git push -u origin checkout 11-titol-que-volem-que-tingui-la-tascca</codijpc>
-
+<codijpc>git checkout 11-titol-que-volem-que-tingui-la-tascca</codijpc>
 </li>
 </codijpc>
 
 Sabreu que heu afegit tots els fitxers necessaris, quan <codijpc>git status</codijpc> us mostri tots els fitxers que heu modificat de color verd.
 
-Si encara hi ha algun fitxer de color vermell, cal afegir-lo amb la comanda <codijpc>git add &lt;NomDelFitxerVermell></codijpc>.
+Si encara hi ha algun fitxer de color vermell, cal afegir-lo amb la comanda <codijpc>git add &gt;NomDelFitxerVermell></codijpc>.
+
+
+⬇️
+
+----
+
+Un cop que ja estiguin tots els fitxers que heu modificat de color verd, llavors cal fer el <codijpc>commit</codijpc>.
+
+<ul>
+<li>
+<codijpc>git commit -m "Comentari que descriu els canvis fets als fitxer"</codijpc>
+</li>
+<li>
+
+
+⬇️
+
+----
+
+I finalment, un cop que ja hem fet el <codijpc>commit</codijpc>, cal enviar els commits, és a dir, tots els fitxers que han estat modificats al repositori remot amb la comanda <codijpc>git push</codijpc>.
+
+<ul>
+<li>
+<codijpc>git push -u origin 11-titol-que-volem-que-tingui-la-tascca</codijpc>
+</li>
+<li>
 
 Si no en fer el <codijpc>Pull Request</codijpc>, al repositori remot, no existiran ni la branca ni els fitxers que heu modificat.
+
 ---
 
 ## Un cop acabat el desenvolupament
