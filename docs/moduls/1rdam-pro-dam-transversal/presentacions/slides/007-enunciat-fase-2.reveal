@@ -12,6 +12,10 @@ A la **Fase 1** heu definit:
 - El fitxer `model_relacional.sql`
 - El diccionari de dades
 
+⬇️
+
+----
+
 En aquesta fase no programàveu funcionalitats complexes.  
 Definíeu **l’estructura formal del sistema**.
 
@@ -125,6 +129,13 @@ Cada grup haurà de lliurar:
    - Versions utilitzades
    - Passos per importar la base de dades
    - Configuració de connexió
+
+
+⬇️
+
+----
+
+
 4. Tres captures de pantalla:
    - Inserció correcta
    - Llistat amb JOIN
@@ -137,9 +148,7 @@ No s’acceptaran demostracions orals sense evidència.
 
 ## 8. Flux Git obligatori
 
-Aquesta fase també forma part del control de procés.
-
-Heu de:
+Aquesta fase també forma part del control de procés. Heu de:
 
 - Crear Issue per cada funcionalitat
 - Assignar-vos la tasca
@@ -164,6 +173,10 @@ A la **Fase 3** el sistema evolucionarà cap a:
 - Linux amb MySQL remot
 - Separació real de serveis
 - Resolució per nom
+
+⬇️
+
+----
 
 Per tant:
 
