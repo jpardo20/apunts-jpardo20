@@ -116,6 +116,15 @@
             "description": "FASE 2: CONTRACTE SQL",
             "status": "active",
             "kind": "theory"
+        } ,{
+            "order": "236",
+            "title": "236. DICCIONARI DE DADES - Documentació estructural del model relacional ",
+            "src": "slides/009-enunciat-diccionari-dades.reveal",
+            "description": "DICCIONARI DE DADES - Documentació estructural del model relacional",
+            "status": "active",
+            "kind": "theory"
         } 
     ]
 }
+
+

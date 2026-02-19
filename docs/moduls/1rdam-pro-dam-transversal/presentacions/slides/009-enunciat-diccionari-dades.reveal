@@ -1,0 +1,179 @@
+# PHOENIXTECH – DICCIONARI DE DADES - Documentació estructural del model relacional
+
+---
+
+## 1. Context
+
+A la Fase 1 heu definit:
+
+- El Model Entitat–Relació (MER)
+- El Model Relacional
+- El fitxer SQL amb les taules del sistema
+
+Aquest treball defineix **l’estructura tècnica** de la base de dades.
+
+Ara cal definir-ne el significat.
+
+---
+
+## 2. Objectiu del Diccionari de Dades
+
+El diccionari de dades no és una còpia del SQL.
+
+És:
+
+> El document que descriu formalment el significat funcional i estructural de cada element del vostre model relacional.
+
+⬇️
+
+----
+
+
+
+Ha de demostrar que:
+
+- Enteneu què representa cada taula.
+- Enteneu què representa cada camp.
+- Enteneu les relacions definides.
+
+---
+
+## 3. Format obligatori
+
+El document haurà d’incloure els següents apartats:
+
+⬇️
+
+----
+
+
+
+### 3.1 Descripció general del sistema
+
+Breu explicació (5–10 línies):
+
+- Quin problema resol la base de dades.
+- Quin és el seu objectiu dins de PhoenixTech.
+- Quin tipus d’informació gestiona.
+
+⬇️
+
+----
+
+
+### 3.2 Descripció de cada taula
+
+Per cada taula del model:
+
+```
+### NOM_TAULA
+
+Descripció funcional:
+(Què representa dins del sistema)
+
+Clau primària:
+- nom_camp: Descripció del seu significat.
+
+Camps:
+- nom_camp (tipus): Què representa.
+- nom_camp (tipus): Què representa.
+- ...
+
+Relacions:
+- camp_fk → TAULA_REFERENCIADA.camp
+```
+
+No s’ha de copiar el SQL literalment.
+S’ha d’explicar.
+
+⬇️
+
+----
+
+
+
+### 3.3 Relacions principals del sistema
+
+Cal descriure les relacions en termes conceptuals:
+
+Exemple:
+
+- Un usuari pot crear múltiples incidències.
+- Cada incidència està associada a un únic usuari.
+- Una incidència té un únic estat.
+- Un estat pot estar assignat a múltiples incidències.
+
+Aquest apartat ha de connectar amb el MER inicial.
+
+⬇️
+
+----
+
+
+
+### 3.4 Decisions de disseny
+
+Cal incloure un apartat on expliqueu:
+
+- Per què s’han definit determinades restriccions.
+- Per què hi ha camps NOT NULL.
+- Per què una relació és obligatòria.
+- Qualsevol decisió estructural rellevant.
+
+No cal justificació acadèmica extensa.
+Cal coherència.
+
+⬇️
+
+----
+
+
+
+### 3.5 Convencions utilitzades
+
+Cal indicar:
+
+- Convenció de noms de taules.
+- Convenció de noms de claus primàries.
+- Convenció de noms de claus foranes.
+- Altres criteris aplicats.
+
+---
+
+## 4. Requisits formals
+
+- Document en format **`.md`** i amb el nom **`diccionari-de-dades.md`**.
+- Cal que estigui a la carpeta **`docs/`**
+- Redacció clara i estructurada.
+- Sense copiar directament el SQL.
+- Ha de ser coherent amb el fitxer SQL lliurat.
+
+Si hi ha incoherències entre el diccionari i el SQL, es considerarà error estructural.
+
+---
+
+## 5. Connexió amb la Fase 2 i Fase 3
+
+El diccionari de dades és:
+
+- La base documental de la Fase 2 (validació estructural).
+- El document de referència per a la Fase 3 (desplegament en infraestructura real).
+
+Un model sense documentació és difícilment escalable.
+
+PhoenixTech és un sistema.
+I tot sistema professional té documentació estructural.
+
+---
+
+# RESUM
+
+El diccionari de dades ha de demostrar que:
+
+- El model no és accidental.
+- Les decisions són conscients.
+- Les relacions estan compreses.
+- L’estructura és coherent.
+
+No es valora la quantitat.
+Es valora la comprensió estructural.
