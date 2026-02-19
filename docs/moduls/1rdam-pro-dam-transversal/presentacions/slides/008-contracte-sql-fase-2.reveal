@@ -1,0 +1,228 @@
+# CONTRACTE SQL – FASE 2
+## Projecte PhoenixTech
+
+---
+
+## 1. Finalitat del document
+
+Aquest document defineix el **contracte estructural mínim** que ha de complir el fitxer SQL lliurat a la Fase 2 del projecte PhoenixTech.
+
+La Fase 2 no consisteix a ampliar funcionalitats, sinó a:
+
+> Validar que el model relacional definit a la Fase 1 és executable, coherent i usable des d’un backend real.
+
+Aquest contracte garanteix una base comuna de qualitat estructural sense limitar la vostra capacitat de disseny.
+
+---
+
+## 2. Fitxer SQL lliurat
+
+Cada grup haurà de lliurar un fitxer `.sql` que contingui:
+
+- Les instruccions `CREATE TABLE` de la seva base de dades.
+- Les claus primàries.
+- Les claus foranes.
+- Les restriccions estructurals definides.
+
+El nom del fitxer és lliure, però ha de ser clar i identificable.
+
+---
+
+## 3. Requisits obligatoris mínims
+
+### 3.1 Executabilitat
+
+El fitxer:
+
+- Ha de poder importar-se en MySQL sense errors.
+- No pot dependre d’elements externs no definits.
+- Ha d’incloure totes les taules necessàries per al funcionament del sistema.
+
+---
+
+### 3.2 Integritat estructural
+
+Totes les taules han de complir:
+
+- Declaració explícita de `PRIMARY KEY`.
+- Declaració formal de `FOREIGN KEY` quan hi hagi relació.
+- Ús de `ENGINE=InnoDB`.
+- Declaració de `NOT NULL` en camps obligatoris.
+
+No és suficient declarar un camp `_id` sense `FOREIGN KEY`.
+
+La integritat referencial ha d’estar definida formalment.
+
+
+⬇️
+
+----
+
+
+### Nota sobre el motor d’emmagatzematge (ENGINE)
+
+En MySQL, cada taula utilitza un **motor d’emmagatzematge**.  
+El motor determina com es gestionen:
+
+- Les dades
+- Les claus foranes
+- La integritat referencial
+- Les transaccions
+
+
+⬇️
+
+----
+
+
+Perquè el vostre model relacional funcioni correctament amb:
+
+- `FOREIGN KEY`
+- Integritat referencial real
+- Validació d’errors estructurals
+
+
+⬇️
+
+----
+
+
+Les taules han d’utilitzar el motor:
+
+```
+ENGINE=InnoDB
+```
+
+Exemple:
+
+```
+CREATE TABLE USUARIS (
+    id INT AUTO_INCREMENT,
+    nom VARCHAR(100) NOT NULL,
+    CONSTRAINT pk_usuaris PRIMARY KEY (id)
+) ENGINE=InnoDB;
+```
+
+
+⬇️
+
+----
+
+
+⚠ Si no s’utilitza InnoDB, les claus foranes poden no funcionar encara que estiguin declarades.
+
+Aquesta exigència no és decorativa:  
+és necessària perquè el sistema validi correctament les relacions definides al model.
+
+---
+
+### 3.3 Entitats conceptuals mínimes
+
+El model ha de contenir com a mínim les següents entitats conceptuals:
+
+- Usuaris
+- Incidències
+- Estats
+
+Els noms de les taules poden variar, però:
+
+- Han de ser coherents.
+- Han de permetre identificar clarament aquestes entitats.
+- Han de permetre establir relacions entre elles.
+
+
+⬇️
+
+----
+
+
+
+Si es modifiquen els noms respecte a la proposta del backend base, el grup haurà d’adaptar el backend.
+
+---
+
+### 3.4 Coherència relacional
+
+El model ha de permetre:
+
+- Inserir una incidència vinculada a un usuari.
+- Assignar un estat a la incidència.
+- Consultar incidències amb informació relacionada mitjançant JOIN.
+
+Si aquestes operacions no són possibles, el model es considera estructuralment incorrecte.
+
+---
+
+## 4. Llibertat de disseny
+
+Aquest contracte és **flexible**.
+
+Podeu:
+
+- Afegir noves entitats.
+- Afegir camps addicionals.
+- Afegir restriccions addicionals.
+- Introduir noves relacions.
+
+Sempre que:
+
+⬇️
+
+----
+
+
+Sempre que:
+
+- No es trenqui la coherència relacional.
+- No es vulnerin els requisits mínims definits.
+- El sistema continuï sent executable i usable.
+
+---
+
+## 5. Errors estructurals greus
+
+Es consideraran errors estructurals greus:
+
+- Taules sense `PRIMARY KEY`.
+- Relacions sense `FOREIGN KEY` formal.
+- Ús de motor diferent d’InnoDB.
+- Model que no permet executar insercions coherents.
+- Errors d’importació del fitxer SQL.
+
+---
+
+## 6. Connexió amb la Fase 3
+
+La Fase 2 valida l’estructura en entorn local.
+
+A la Fase 3, el sistema s’implantarà en infraestructura distribuïda real.
+
+Per tant:
+
+> Un model estructuralment feble a la Fase 2 generarà problemes greus a la Fase 3.
+
+Aquest contracte existeix per evitar-ho.
+
+---
+
+## 7. Filosofia del contracte
+
+Aquest document no pretén limitar la vostra creativitat.
+
+Pretén assegurar que PhoenixTech es construeixi sobre una base estructural sòlida.
+
+La qualitat del sistema no es mesura per la quantitat de taules, sinó per la coherència del seu model.
+
+---
+
+# RESUM
+
+El vostre SQL ha de ser:
+
+- Executable  
+- Relacionalment coherent  
+- Formalment definit  
+- Compatible amb el backend base  
+
+PhoenixTech és un sistema.  
+I tot sistema comença per una estructura sòlida.
