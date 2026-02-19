@@ -1,0 +1,154 @@
+# PROJECTE DE TUTORIA FP
+## Sessió 4 · Anàlisi DAFO Acadèmic
+
+Durada: 1 sessió  
+Modalitat: Individual  
+Caràcter: Obligatori i avaluable  
+Evidència: Fitxer Markdown al repositori personal
+
+---
+
+# Objectiu de la sessió
+
+Realitzar una anàlisi estructurada de la pròpia situació acadèmica mitjançant la metodologia DAFO, amb la finalitat de:
+
+- Sintetitzar el procés de reflexió iniciat a les sessions anteriors
+- Identificar factors interns i externs que influeixen en el rendiment
+- Desenvolupar consciència acadèmica realista
+- Preparar la definició d’objectius concrets a la Sessió 5
+
+---
+
+# Què és una anàlisi DAFO?
+
+DAFO és una eina d’anàlisi estratègica que permet examinar una situació des de quatre dimensions:
+
+- **D**ebilitats (internes)
+- **A**menaces (externes)
+- **F**ortaleses (internes)
+- **O**portunitats (externes)
+
+En aquesta sessió, aplicarem el DAFO al teu context acadèmic dins del cicle formatiu.
+
+---
+
+# Factors interns
+
+## Fortaleses
+
+Aspectes personals i acadèmics que et beneficien.
+
+Exemples:
+- Capacitat de concentració
+- Bon nivell tècnic en determinats mòduls
+- Constància
+- Capacitat d’organització
+
+## Debilitats
+
+Aspectes interns que dificulten el teu progrés.
+
+Exemples:
+- Procrastinació
+- Dificultat en la gestió del temps
+- Mancança de base tècnica
+- Baixa participació a classe
+
+---
+
+# Factors externs
+
+## Oportunitats
+
+Elements externs que poden afavorir el teu desenvolupament acadèmic.
+
+Exemples:
+- Recursos del centre
+- Professorat disponible
+- Accés a materials addicionals
+- Entorn tecnològic
+
+## Amenaces
+
+Factors externs que poden afectar negativament el teu rendiment.
+
+Exemples:
+- Càrrega elevada de treball
+- Distraccions externes
+- Compatibilitat amb feina
+- Problemes d’organització personal fora del centre
+
+---
+
+# Tasca a realitzar
+
+Has de crear el fitxer:
+
+sessio-4/analisi_dafo.md
+
+Amb l’estructura exacta següent:
+
+# Anàlisi DAFO Acadèmic
+
+## Fortaleses
+- ...
+- ...
+- ...
+
+## Debilitats
+- ...
+- ...
+- ...
+
+## Oportunitats
+- ...
+- ...
+- ...
+
+## Amenaces
+- ...
+- ...
+- ...
+
+## Síntesi personal (obligatòria)
+
+Redacta un breu paràgraf (mínim 8 línies) on:
+
+- Relacionis almenys una fortalesa amb una oportunitat
+- Identifiquis una debilitat que puguis treballar
+- Proposis una acció concreta de millora
+
+---
+
+# Requisits tècnics obligatoris
+
+- El fitxer ha d’estar dins la carpeta correcta
+- L’estructura ha de respectar-se exactament
+- Mínim 2 commits durant la sessió
+- Missatges de commit descriptius
+- Git pull a l’inici
+- Git push al final
+
+---
+
+# Criteris d’avaluació
+
+Es valorarà:
+
+- Completesa de l’anàlisi
+- Capacitat d’autoreflexió realista
+- Coherència entre apartats
+- Qualitat de la síntesi final
+- Rigor formal en la redacció
+
+---
+
+# Finalitat pedagògica
+
+Aquesta sessió té com a objectiu consolidar:
+
+- Autoconeixement acadèmic
+- Capacitat d’anàlisi estructurada
+- Visió global del propi procés formatiu
+
+La Sessió 5 partirà directament d’aquesta anàlisi per definir objectius acadèmics concrets.

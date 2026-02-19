@@ -1,11 +1,10 @@
 <?php
 
 class Database {
-
-    private $host = "localhost";
-    private $db_name = "phoenixtech";
+    private $host = "db";
+    private $db_name = "institut_app";
     private $username = "root";
-    private $password = "";
+    private $password = "profe";
     public $conn;
 
     public function getConnection() {
