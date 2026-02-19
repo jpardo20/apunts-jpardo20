@@ -1,0 +1,208 @@
+# PHOENIXTECH – FASE 2: Integració del Model Relacional amb Backend Local  
+### *(Validació estructural del sistema)*
+
+---
+
+## 1. Context
+
+A la **Fase 1** heu definit:
+
+- El **Model Entitat–Relació (MER)**
+- El **Model Relacional (MR)**
+- El fitxer `model_relacional.sql`
+- El diccionari de dades
+
+En aquesta fase no programàveu funcionalitats complexes.  
+Definíeu **l’estructura formal del sistema**.
+
+Ara cal demostrar que aquest model:
+
+> És executable, coherent i usable des d’una aplicació real.
+
+---
+
+## 2. Objectiu de la Fase 2
+
+La Fase 2 **NO és un projecte web**.
+
+És:
+
+> La validació estructural del model relacional mitjançant un backend mínim en entorn local.
+
+El backend actuarà com a **banc de proves del vostre model**.
+
+Si el model està mal definit, aquí apareixeran els errors.
+
+---
+
+## 3. Arquitectura obligatòria
+
+Treballareu en entorn local amb:
+
+- Windows Server 2025  
+- IIS amb suport PHP  
+- MySQL instal·lat al mateix servidor  
+
+⚠ No s’utilitzarà encara infraestructura distribuïda.  
+Això serà objecte de la **Fase 3**.
+
+---
+
+## 4. Backend base comú
+
+Se us proporcionarà una estructura base obligatòria:
+
+```
+/phoenixtech-backend/
+│
+├── config/
+├── models/
+├── controllers/
+├── views/
+└── index.php
+```
+
+No es permet modificar l’estructura general.
+
+L’objectiu no és crear arquitectura nova, sinó **integrar correctament el vostre model relacional**.
+
+---
+
+## 5. Funcionalitats mínimes obligatòries
+
+### 1️⃣ Inserir una incidència
+
+Mitjançant formulari HTML que:
+
+- Inserisca dades a `INCIDENCIES`
+- Respecti claus foranes
+- No generi errors d’integritat
+
+---
+
+### 2️⃣ Llistar incidències
+
+Mitjançant consulta amb:
+
+- JOIN amb `USUARIS`
+- JOIN amb `ESTATS`
+
+S’ha de demostrar que les relacions funcionen correctament.
+
+---
+
+### 3️⃣ Canviar l’estat d’una incidència
+
+Actualització controlada del camp `estat_id`.
+
+Això valida:
+
+- Integritat referencial
+- Existència de dades coherents
+- Correcta definició de FOREIGN KEY
+
+---
+
+## 6. Requisits tècnics obligatoris
+
+Heu de demostrar que:
+
+- El fitxer `model_relacional.sql` s’executa sense errors.
+- Totes les taules tenen PRIMARY KEY.
+- Totes les relacions tenen FOREIGN KEY amb CONSTRAINT.
+- Les insercions respecten les restriccions definides.
+- Els JOIN retornen informació coherent.
+
+---
+
+## 7. Entregables obligatoris
+
+Cada grup haurà de lliurar:
+
+1. `model_relacional.sql` executable  
+2. Carpeta `phoenixtech-backend/` funcional  
+3. `CONFIG_LOCAL.md` amb:
+   - Versions utilitzades
+   - Passos per importar la base de dades
+   - Configuració de connexió
+4. Tres captures de pantalla:
+   - Inserció correcta
+   - Llistat amb JOIN
+   - Canvi d’estat correcte
+
+No s’acceptaran vídeos.  
+No s’acceptaran demostracions orals sense evidència.
+
+---
+
+## 8. Flux Git obligatori
+
+Aquesta fase també forma part del control de procés.
+
+Heu de:
+
+- Crear Issue per cada funcionalitat
+- Assignar-vos la tasca
+- Crear branca des de la Issue
+- Desenvolupar
+- Crear Pull Request
+- Assignar reviewer
+- Merge realitzat per un altre membre
+
+Cap funcionalitat es considerarà finalitzada si no compleix el flux complet.
+
+---
+
+## 9. Connexió amb la Fase 3
+
+Aquesta configuració és deliberadament simplificada.
+
+A la **Fase 3** el sistema evolucionarà cap a:
+
+- Arquitectura client–servidor real
+- Windows Server amb AD, DNS i DHCP
+- Linux amb MySQL remot
+- Separació real de serveis
+- Resolució per nom
+
+Per tant:
+
+> Fase 2 valida el model.  
+> Fase 3 valida la infraestructura.
+
+Només si el model és sòlid, la migració a entorn distribuït serà viable.
+
+---
+
+## 10. Què NO és aquesta fase
+
+No és:
+
+- Un projecte web complet
+- Un sistema amb autenticació
+- Una API REST
+- Un exercici d’estètica
+- Una ampliació funcional del sistema
+
+És una validació estructural.
+
+---
+
+## 11. Criteri d’avaluació principal
+
+El criteri fonamental serà:
+
+> El model relacional suporta operacions reals sense inconsistències.
+
+La qualitat del disseny es reflectirà en la facilitat d’integració.
+
+---
+
+# RESUM
+
+Fase 1 → Definir estructura  
+Fase 2 → Validar estructura en local  
+Fase 3 → Desplegar estructura en infraestructura real  
+
+PhoenixTech no és un projecte fragmentat.  
+És un sistema que evoluciona per fases.

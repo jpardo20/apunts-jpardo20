@@ -102,6 +102,13 @@
             "description": "Pràctica: Crear un nou contenidor amb **`PHP`**",
             "status": "active",
             "kind": "theory"
+        },{
+            "order": "240",
+            "title": "240. FASE 2: Integració del Model Relacional amb Backend Local",
+            "src": "slides/007-enunciat-fase-2.reveal",
+            "description": "FASE 2: Integració del Model Relacional amb Backend Local",
+            "status": "active",
+            "kind": "theory"
         }
     ]
 }
