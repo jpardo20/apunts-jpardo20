@@ -163,7 +163,7 @@ git checkout 11-titol-que-volem-que-tingui-la-tascca
 
 ## Actualitzar el repositori
 
-Tot seguit, abans de començar a treballar, a la nova branca, des del nostres repositori local, és a dir, Visual Studio Code, executem les dues comandes.
+Tot seguit, <u>**abans de començar a treballar**</u>, a la nova branca, des del nostre repositori local, és a dir, Visual Studio Code, executem les dues comandes.
 
 <codijpc>git fetch origin</codijpc>
 
@@ -186,7 +186,7 @@ Per desplaçar-nos a la branca que acabem de crear per dur a terme la feina.
 
 ## Fer el desenvolupament segons la tasca
 
-* Un cop heu modificat tots els fitxers necessaris cal fer:
+Un cop heu modificat tots els fitxers necessaris cal fer:
 
 <ul>
 <li>
@@ -219,7 +219,7 @@ Un cop que ja estiguin tots els fitxers que heu modificat de color verd, llavors
 
 ----
 
-I finalment, un cop que ja hem fet el <codijpc>commit</codijpc>, cal enviar els commits, és a dir, tots els fitxers que han estat modificats al repositori remot amb la comanda <codijpc>git push</codijpc>.
+I finalment, un cop que ja hem fet el <codijpc>commit</codijpc>, cal enviar els <codijpc>commit</codijpc>s, és a dir, tots els fitxers que han estat modificats, al repositori remot amb la comanda <codijpc>git push</codijpc>.
 
 <ul>
 <li>
