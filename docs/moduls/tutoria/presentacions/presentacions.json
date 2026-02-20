@@ -56,9 +56,9 @@
             "id": "4a-sessio",
             "title": "4a Sessió | Projecte de Tutoria FP",
             "description": "Projecte de Tutoria FP | SESSIÓ 4 ...",
-            "src": "projecte-1a-sessio.reveal",
+            "src": "projecte-4a-sessio.reveal",
             "theme": "white",
-            "status": "inactive",
+            "status": "active",
             "kind": "theory",
             "tags": [
                 "BBDD"
