@@ -2,9 +2,10 @@
 
 ## Sessió 1: Inici del projecte i diagnòstic acadèmic inicial
 
-Durada de la sessió: 1 hora  
-Modalitat: Treball individual  
-Aquesta sessió és obligatòria i compta per nota.
++ Durada: 1 hora
++ Modalitat: Individual
++ Caràcter: Obligatori i avaluable
++ Evidència: Fitxer Markdown al repositori personal
 
 ---
 
@@ -65,7 +66,7 @@ Forma part del **seguiment acadèmic del curs**.
 
 ---
 
-## OBJECTIU DE LA SESSIÓ
+## Objectiu de la sessió
 
 Avui començaràs el projecte de tutoria creant el teu repositori a GitHub i fent un **primer diagnòstic acadèmic** sobre la teva situació actual al cicle.
 
@@ -95,7 +96,7 @@ Al final de la sessió hauràs de tenir:
 
    <codiae>&lt;primerCognomAlumne&gt;-tutoria-fp</codiae>
 
-   Exemple:  
+   Exemple:
    <codiae>pardo-tutoria-fp</codiae>
 
 ⬇️
