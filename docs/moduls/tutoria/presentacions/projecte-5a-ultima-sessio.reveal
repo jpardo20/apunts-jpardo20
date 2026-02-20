@@ -32,16 +32,16 @@ Aquesta sessió és obligatòria i compta per nota.
 ## OBJECTIU DE LA SESSIÓ
 
 Avui tancaràs el projecte de tutoria fent una síntesi final:
-- què has après sobre tu com a alumne
-- què creus que has millorat (o no)
-- com t’imagines d’aquí a un any
++ què has après sobre tu com a alumne
++ què creus que has millorat (o no)
++ com t’imagines d’aquí a un any
 
 No es tracta de fer promeses, sinó de **reflexionar amb realisme**.
 
 Al final de la sessió hauràs de tenir:
-- un últim fitxer afegit al repositori
-- el contingut completat segons les instruccions
-- com a mínim **dos commits fets avui**
++ un últim fitxer afegit al repositori
++ el contingut completat segons les instruccions
++ com a mínim **dos commits fets avui**
 
 ---
 
@@ -112,10 +112,10 @@ i en quin sentit.
 
 ## INDICACIONS IMPORTANTS
 
-- Escriu frases completes.
-- No cal que tot sigui positiu.
-- No cal escriure molt: es valora el contingut.
-- Sigues sincer i realista.
++ Escriu frases completes.
++ No cal que tot sigui positiu.
++ No cal escriure molt: es valora el contingut.
++ Sigues sincer i realista.
 
 ---
 
@@ -146,12 +146,12 @@ Assegura’t que **no hi ha errors**.
 
 Perquè la sessió compti com a feta correctament, cal que:
 
-- existeixi la carpeta `sessio-5`
-- existeixi el fitxer `tancament_i_futur.md`
-- el fitxer tingui totes les seccions indicades
-- hi hagi **dos commits fets avui**
-- els missatges dels commits siguin correctes
-- el contingut sigui coherent i no buit
++ existeixi la carpeta `sessio-5`
++ existeixi el fitxer `tancament_i_futur.md`
++ el fitxer tingui totes les seccions indicades
++ hi hagi **dos commits fets avui**
++ els missatges dels commits siguin correctes
++ el contingut sigui coherent i no buit
 
 Si falta algun d’aquests punts, la sessió es considerarà incompleta.
 

@@ -15,27 +15,27 @@ Aquest projecte de tutoria és un treball **individual i progressiu** que es des
 
 Forma part del seguiment acadèmic de l’alumnat i té com a objectiu:
 
-- analitzar la situació acadèmica de cada alumne
-- fomentar l’autoavaluació i la millora contínua
-- ajudar a prendre decisions acadèmiques amb criteri
++ analitzar la situació acadèmica de cada alumne
++ fomentar l’autoavaluació i la millora contínua
++ ajudar a prendre decisions acadèmiques amb criteri
 
 ---
 
 ### Com es treballarà
 
-- El projecte es desenvolupa **per fases**, una a cada sessió de tutoria.
-- Cada sessió té un objectiu concret.
-- El contingut del projecte es presentarà **sessió a sessió**, no tot al principi.
++ El projecte es desenvolupa **per fases**, una a cada sessió de tutoria.
++ Cada sessió té un objectiu concret.
++ El contingut del projecte es presentarà **sessió a sessió**, no tot al principi.
 
 ---
 
 ### Organització del treball
 
-- Cada alumne treballarà amb un **repositori propi a GitHub**.
-- A cada sessió:
-  - es continuarà el treball iniciat
-  - es faran commits del progrés
-- El projecte es construeix **de manera progressiva**, no en una sola sessió.
++ Cada alumne treballarà amb un **repositori propi a GitHub**.
++ A cada sessió:
+  + es continuarà el treball iniciat
+  + es faran commits del progrés
++ El projecte es construeix **de manera progressiva**, no en una sola sessió.
 
 ---
 
@@ -43,10 +43,10 @@ Forma part del seguiment acadèmic de l’alumnat i té com a objectiu:
 
 Es valorarà principalment:
 
-- el seguiment del procés
-- la constància en el treball
-- el compliment de les instruccions
-- la coherència del contingut
++ el seguiment del procés
++ la constància en el treball
++ el compliment de les instruccions
++ la coherència del contingut
 
 <div class="admonition tip">
 <br>
@@ -58,9 +58,9 @@ No és un examen ni un treball puntual.
 
 ### Què NO és aquest projecte
 
-- No és un treball per acabar el primer dia.
-- No és una activitat d’opinió personal.
-- No és una tutoria improvisada.
++ No és un treball per acabar el primer dia.
++ No és una activitat d’opinió personal.
++ No és una tutoria improvisada.
 
 Forma part del **seguiment acadèmic del curs**.
 
@@ -72,9 +72,9 @@ Avui començaràs el projecte de tutoria creant el teu repositori a GitHub i fen
 
 L’objectiu no és valorar emocions, sinó:
 
-- identificar d’on vens a nivell acadèmic
-- analitzar com t’estàs adaptant al ritme del cicle
-- detectar dificultats acadèmiques concretes
++ identificar d’on vens a nivell acadèmic
++ analitzar com t’estàs adaptant al ritme del cicle
++ detectar dificultats acadèmiques concretes
 
 ⬇️
 
@@ -82,9 +82,9 @@ L’objectiu no és valorar emocions, sinó:
 
 Al final de la sessió hauràs de tenir:
 
-- un repositori creat i configurat correctament
-- un primer fitxer de treball completat
-- com a mínim **dos <codijpc>commit</codijpc>s fets avui**
++ un repositori creat i configurat correctament
++ un primer fitxer de treball completat
++ com a mínim **dos <codijpc>commit</codijpc>s fets avui**
 
 ---
 
@@ -104,9 +104,9 @@ Al final de la sessió hauràs de tenir:
 ----
 
 4. Configuració del repositori:
-   - Privat
-   - Inicialitza amb un <codijpc>README.md</codijpc>
-   - NO afegeixis cap altre fitxer automàtic
+   + Privat
+   + Inicialitza amb un <codijpc>README.md</codijpc>
+   + NO afegeixis cap altre fitxer automàtic
 
 5. Crea el repositori.
 
@@ -238,13 +238,13 @@ Completa la taula següent de manera sincera i concreta.
 
 | Mòdul | Què se’m dona millor | Què he de millorar | Què faré diferent el proper mes |
 |------|----------------------|-------------------|----------------------------------|
-| 0483 - Sistemes informàtics | | | |
-| 0484 - Bases de dades | | | |
-| 0373 - Llenguatges de marques i sistemes de gestió d’informació | | | |
-| 0179 - Anglès professional | | | |
-| 0485 - Programació | | | |
-| 1665 - Digitalització aplicada als sectors productius | | | |
-| 1709 - Itinerari personal per a l’ocupabilitat I | | | |
+| 0483 + Sistemes informàtics | | | |
+| 0484 + Bases de dades | | | |
+| 0373 + Llenguatges de marques i sistemes de gestió d’informació | | | |
+| 0179 + Anglès professional | | | |
+| 0485 + Programació | | | |
+| 1665 + Digitalització aplicada als sectors productius | | | |
+| 1709 + Itinerari personal per a l’ocupabilitat I | | | |
 ```
 
 ⬇️
@@ -263,13 +263,13 @@ Completa la taula següent de manera sincera i concreta.
 
 | Mòdul | Què se’m dona millor | Què he de millorar | Què faré diferent el proper mes |
 |------|----------------------|-------------------|----------------------------------|
-| 0221 - Muntatge i manteniment d’equips | | | |
-| 0222 - Sistemes operatius monolloc | | | |
-| 0223 - Aplicacions ofimàtiques | | | |
-| 0225 - Xarxes locals | | | |
-| 1664 - Digitalització aplicada als sectors productius | | | |
-| 1709 - Itinerari personal per a l’ocupabilitat I | | | |
-| MOP01 - Informàtica aplicada a Sistemes Electrònics (Robòtica) i Programació en Python | | | |
+| 0221 + Muntatge i manteniment d’equips | | | |
+| 0222 + Sistemes operatius monolloc | | | |
+| 0223 + Aplicacions ofimàtiques | | | |
+| 0225 + Xarxes locals | | | |
+| 1664 + Digitalització aplicada als sectors productius | | | |
+| 1709 + Itinerari personal per a l’ocupabilitat I | | | |
+| MOP01 + Informàtica aplicada a Sistemes Electrònics (Robòtica) i Programació en Python | | | |
 ```
 
 
@@ -279,10 +279,10 @@ Completa la taula següent de manera sincera i concreta.
 
 <div class="admonition caution">
 
-- No deixis cap apartat buit.
-- Escriu frases completes.
-- Centra’t en aspectes acadèmics.
-- No copiïs res d’internet.
++ No deixis cap apartat buit.
++ Escriu frases completes.
++ Centra’t en aspectes acadèmics.
++ No copiïs res d’internet.
 </div>
 
 ---
@@ -314,14 +314,14 @@ Assegura’t que **no hi ha errors**.
 
 Perquè la sessió compti com a feta correctament, cal que:
 
-- el repositori existeixi i sigui privat
-- el nom del repositori sigui correcte
-- el professor estigui convidat
-- existeixi la carpeta <codijpc>sessio-1</codijpc>
-- existeixi el fitxer <codijpc>reflexio_inicial.md</codijpc>
-- hi hagi **dos <codijpc>commit</codijpc>s fets avui**
-- els missatges dels <codijpc>commit</codijpc>s siguin correctes
-- el contingut sigui coherent i no buit
++ el repositori existeixi i sigui privat
++ el nom del repositori sigui correcte
++ el professor estigui convidat
++ existeixi la carpeta <codijpc>sessio-1</codijpc>
++ existeixi el fitxer <codijpc>reflexio_inicial.md</codijpc>
++ hi hagi **dos <codijpc>commit</codijpc>s fets avui**
++ els missatges dels <codijpc>commit</codijpc>s siguin correctes
++ el contingut sigui coherent i no buit
 
 Si falta algun d’aquests punts, la sessió es considerarà incompleta.
 

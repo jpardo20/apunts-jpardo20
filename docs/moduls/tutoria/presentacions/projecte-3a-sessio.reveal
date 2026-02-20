@@ -15,9 +15,9 @@ En aquesta sessió analitzaràs la teva manera de treballar com a estudiant d’
 
 L’objectiu és:
 
-- identificar els teus hàbits d’estudi actuals
-- analitzar com organitzes el teu temps acadèmic
-- detectar aspectes que pots millorar per optimitzar el teu rendiment
++ identificar els teus hàbits d’estudi actuals
++ analitzar com organitzes el teu temps acadèmic
++ detectar aspectes que pots millorar per optimitzar el teu rendiment
 
 ⬇️
 
@@ -25,9 +25,9 @@ L’objectiu és:
 
 Al final de la sessió hauràs de tenir:
 
-- un nou fitxer afegit al repositori
-- el contingut completat segons les instruccions
-- com a mínim **dos <codijpc>commit</codijpc>s fets avui**
++ un nou fitxer afegit al repositori
++ el contingut completat segons les instruccions
++ com a mínim **dos <codijpc>commit</codijpc>s fets avui**
 
 ---
 
@@ -80,9 +80,9 @@ Reflexiona de manera acadèmica i concreta sobre els punts següents.
 
 Explica com organitzes actualment el teu temps d’estudi fora de classe:
 
-- Planifiques les tasques?
-- Treballes amb calendari o agenda?
-- Estudies de manera regular o només abans d’entregues/exàmens?
++ Planifiques les tasques?
++ Treballes amb calendari o agenda?
++ Estudies de manera regular o només abans d’entregues/exàmens?
 
 ⬇️
 
@@ -92,10 +92,10 @@ Explica com organitzes actualment el teu temps d’estudi fora de classe:
 
 Descriu com treballes habitualment els continguts dels mòduls:
 
-- Fas esquemes o resums?
-- Repeteixes exercicis pràctics?
-- Demanes ajuda quan no entens alguna cosa?
-- Revises els errors després d’una correcció?
++ Fas esquemes o resums?
++ Repeteixes exercicis pràctics?
++ Demanes ajuda quan no entens alguna cosa?
++ Revises els errors després d’una correcció?
 
 ⬇️
 
@@ -180,12 +180,12 @@ Assegura’t que **no hi ha errors**.
 
 Perquè la sessió compti com a feta correctament, cal que:
 
-- existeixi la carpeta <codijpc>sessio-3</codijpc>
-- existeixi el fitxer <codijpc>habits_i_organitzacio.md</codijpc>
-- el contingut segueixi l’estructura indicada
-- hi hagi **dos <codijpc>commit</codijpc>s fets avui**
-- els missatges dels commits siguin correctes
-- el contingut sigui coherent i no buit
++ existeixi la carpeta <codijpc>sessio-3</codijpc>
++ existeixi el fitxer <codijpc>habits_i_organitzacio.md</codijpc>
++ el contingut segueixi l’estructura indicada
++ hi hagi **dos <codijpc>commit</codijpc>s fets avui**
++ els missatges dels commits siguin correctes
++ el contingut sigui coherent i no buit
 
 Si falta algun d’aquests punts, la sessió es considerarà incompleta.
 

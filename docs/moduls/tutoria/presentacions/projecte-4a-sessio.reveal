@@ -13,10 +13,10 @@
 
 Dur a terme una anàlisi estructurada de la vostra pròpia situació acadèmica mitjançant la metodologia **`DAFO`**, amb la finalitat de:
 
-- Sintetitzar el procés de reflexió iniciat a les sessions anteriors
-- Identificar factors interns i externs que influeixen en el rendiment
-- Desenvolupar consciència acadèmica realista
-- Preparar la definició d’objectius concrets a la Sessió 5
++ Sintetitzar el procés de reflexió iniciat a les sessions anteriors
++ Identificar factors interns i externs que influeixen en el rendiment
++ Desenvolupar consciència acadèmica realista
++ Preparar la definició d’objectius concrets a la Sessió 5
 
 ---
 
@@ -24,10 +24,10 @@ Dur a terme una anàlisi estructurada de la vostra pròpia situació acadèmica 
 
 **`DAFO`** és una eina d’anàlisi estratègica que permet examinar una situació des de quatre dimensions:
 
-- <u>**`D`**`ebilitats`</u> (internes)
-- <u>**`A`**`menaces`</u> (externes)
-- <u>**`F`**`ortaleses`</u> (internes)
-- <u>**`O`**`portunitats`</u> (externes)
++ <u>**`D`**`ebilitats`</u> (internes)
++ <u>**`A`**`menaces`</u> (externes)
++ <u>**`F`**`ortaleses`</u> (internes)
++ <u>**`O`**`portunitats`</u> (externes)
 
 En aquesta sessió, aplicarem el **`DAFO`** al teu context acadèmic dins del cicle formatiu.
 
@@ -41,10 +41,10 @@ Aspectes personals i acadèmics que et beneficien.
 
 Exemples:
 
-- Capacitat de concentració
-- Bon nivell tècnic en determinats mòduls
-- Constància
-- Capacitat d’organització
++ Capacitat de concentració
++ Bon nivell tècnic en determinats mòduls
++ Constància
++ Capacitat d’organització
 
 
 ⬇️
@@ -58,10 +58,10 @@ Aspectes interns que dificulten el teu progrés.
 
 Exemples:
 
-- Procrastinació (*)
-- Dificultat en la gestió del temps
-- Mancança de base tècnica
-- Baixa participació a classe
++ Procrastinació (*)
++ Dificultat en la gestió del temps
++ Mancança de base tècnica
++ Baixa participació a classe
 
 <small>(*) La ***procrastinació*** és l'hàbit de posposar tasques o situacions pendents, substituint-les per activitats més agradables o irrellevants.</small>
 ---
@@ -74,10 +74,10 @@ Elements externs que poden afavorir el teu desenvolupament acadèmic.
 
 Exemples:
 
-- Recursos del centre
-- Professorat disponible
-- Accés a materials addicionals
-- Entorn tecnològic
++ Recursos del centre
++ Professorat disponible
++ Accés a materials addicionals
++ Entorn tecnològic
 
 
 ⬇️
@@ -91,10 +91,10 @@ Factors externs que poden afectar negativament el teu rendiment.
 
 Exemples:
 
-- Càrrega elevada de treball
-- Distraccions externes
-- Compatibilitat amb feina
-- Problemes d’organització personal fora del centre
++ Càrrega elevada de treball
++ Distraccions externes
++ Compatibilitat amb feina
++ Problemes d’organització personal fora del centre
 
 ---
 
@@ -106,14 +106,14 @@ El fitxer <codijpc>sessio-4/analisi_dafo.md</codijpc> ha de tenir **exactament**
 ## Anàlisi **`DAFO`** Acadèmic
 
 ### Fortaleses
-- ...
-- ...
-- ...
++ ...
++ ...
++ ...
 
 ### Debilitats
-- ...
-- ...
-- ...
++ ...
++ ...
++ ...
 ```
 
 ⬇️
@@ -122,14 +122,14 @@ El fitxer <codijpc>sessio-4/analisi_dafo.md</codijpc> ha de tenir **exactament**
 
 ```markdown
 ### Oportunitats
-- ...
-- ...
-- ...
++ ...
++ ...
++ ...
 
 ### Amenaces
-- ...
-- ...
-- ...
++ ...
++ ...
++ ...
 ```
 
 ⬇️
@@ -141,21 +141,21 @@ El fitxer <codijpc>sessio-4/analisi_dafo.md</codijpc> ha de tenir **exactament**
 
 Redacta un breu paràgraf (mínim 8 línies) on:
 
-- Relacionis almenys una fortalesa amb una oportunitat
-- Identifiquis una debilitat que puguis treballar
-- Proposis una acció concreta de millora
++ Relacionis almenys una fortalesa amb una oportunitat
++ Identifiquis una debilitat que puguis treballar
++ Proposis una acció concreta de millora
 ```
 
 ---
 
 ## Requisits tècnics obligatoris
 
-- El fitxer ha d’estar dins la carpeta correcta
-- L’estructura ha de respectar-se exactament
-- Mínim <u>**2 `commit`s**</u> durant la sessió
++ El fitxer ha d’estar dins la carpeta correcta
++ L’estructura ha de respectar-se exactament
++ Mínim <u>**2 `commit`s**</u> durant la sessió
     - **`git pull`** a l’inici
     - **`git push`** al final
-- Missatges de **`commit`** descriptius
++ Missatges de **`commit`** descriptius
 
 ---
 
@@ -163,11 +163,11 @@ Redacta un breu paràgraf (mínim 8 línies) on:
 
 Es valorarà:
 
-- Completesa de l’anàlisi
-- Capacitat d’autoreflexió realista
-- Coherència entre apartats
-- Qualitat de la síntesi final
-- Rigor formal en la redacció
++ Completesa de l’anàlisi
++ Capacitat d’autoreflexió realista
++ Coherència entre apartats
++ Qualitat de la síntesi final
++ Rigor formal en la redacció
 
 ---
 
@@ -175,8 +175,8 @@ Es valorarà:
 
 Aquesta sessió té com a objectiu consolidar:
 
-- Autoconeixement acadèmic
-- Capacitat d’anàlisi estructurada
-- Visió global del propi procés formatiu
++ Autoconeixement acadèmic
++ Capacitat d’anàlisi estructurada
++ Visió global del propi procés formatiu
 
 La **5a sessió** partirà directament d’aquesta anàlisi per definir objectius acadèmics concrets.
