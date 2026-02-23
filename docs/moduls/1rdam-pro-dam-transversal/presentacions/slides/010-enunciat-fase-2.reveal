@@ -146,7 +146,7 @@ Opció B (Extensió distribuïda):
 
 Cal crear el fitxer:
 
-<codijpc>infraestructura.md</codijpc>
+<codijpc>docs/infraestructura.md</codijpc>
 
 Per cada servei:
 
@@ -163,12 +163,12 @@ Per cada servei:
 1. Crear la tasca al repositori <codijpc>(*)</codijpc>
 2. Assignar responsable <codijpc>(*)</codijpc> 
 3. Crear <codijpc>branca</codijpc> des de la tasca <codijpc>(*)</codijpc>
-4. Implementar el servei 
-5. Crear <codijpc>PR</codijpc> (**Pull Request**) 
-6. Assignar un <codijpc>QA</codijpc> 
-7. El <codijpc>merge</codijpc> no pot ser fet pel responsable 
+4. un cop implementatar el servei, crear <codijpc>PR</codijpc> (**Pull Request**) 
+5. Assignar un <codijpc>QA</codijpc> 
+6. El <codijpc>merge</codijpc> no pot ser fet pel responsable 
 
 ⚠ Sense flux complet, la tasca no es considera validada.
+El servei pot funcionar tècnicament, però no serà avaluable sense flux.
 
 <codijpc>(*)</codijpc> des del repo o des del projecte
 
@@ -199,14 +199,14 @@ Només aquestes proves són obligatòries.
 
 - <codijpc>nslookup nom-servidor</codijpc>
 - <codijpc>ping nom-servidor</codijpc>
-- El nom resol a la IP correcta
+- El nom ha de resoldre a la IP fixa configurada al servidor.
 
 ---
 
 ## DHCP
 
 - Client mostra IP del rang configurat
-- Es visualitza concessió al servidor DHCP
+- Visualització de la concessió activa al rol DHCP
 
 ---
 
@@ -259,6 +259,8 @@ Qualsevol membre pot ser preguntat sobre:
 - MySQL
 
 No es podrà justificar desconeixement indicant que el servei era responsabilitat d’un altre.
+
+Es podrà demanar demostració en directe d’alguna prova.
 
 ---
 
