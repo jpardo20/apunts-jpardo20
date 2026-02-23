@@ -5,100 +5,108 @@
     },
     "presentations": [
         {
-            "order": 10,
-            "title": "1. Introducción a aplicaciones ofimáticas",
+            "order": "010",
+            "title": "010. Introducción a aplicaciones ofimáticas",
             "src": "slides/aof-ud01-introduccio.reveal",
             "description": "Introducción a aplicaciones ofimáticas",
             "status": "active",
             "kind": "theory"
         },
         {
-            "order": 20,
-            "title": "2. Organización individual y Colectiva",
+            "order": "020",
+            "title": "020. Organización individual y Colectiva",
             "src": "slides/organizacio.reveal",
             "description": "Organización individual y Colectiva",
             "status": "active",
             "kind": "theory"
         },
         {
-            "order": 30,
-            "title": "3. Utilidades PDF",
+            "order": "030",
+            "title": "030. Utilidades PDF",
             "src": "slides/aof-03-utilidades-pdf.reveal",
             "description": "Utilidades PDF",
             "status": "active",
             "kind": "theory"
         },
         {
-            "order": 50,
-            "title": "5. Procesadores de texto",
+            "order": "050",
+            "title": "050. Procesadores de texto",
             "src": "slides/aof-ud05-procesador-de-texto.reveal",
             "description": "¿Qué es un procesador de texto?",
             "status": "active",
             "kind": "theory"
         },
         {
-            "order": 70,
-            "title": "7. Recursos para Word",
+            "order": "070",
+            "title": "070. Recursos para Word",
             "src": "slides/recursos.reveal",
             "description": "Recursos-estilo-TikTok--para-Word",
             "status": "active",
             "kind": "theory"
         },
         {
-            "order": 25,
-            "title": "Actividad evaluable aof-ud03-ae01",
+            "order": "250",
+            "title": "250: Actividad evaluable aof-ud03-ae01",
             "src": "slides/aof-ud03-actividades-evaluables-01.reveal",
             "description": "Introducción a aplicaciones ofimáticas",
             "status": "active",
             "kind": "activity"
         },
         {
-            "order": 26,
-            "title": "Activitat AOF-UD02 – Gestió de Projectes amb GitHub",
+            "order": "260",
+            "title": "260. Activitat AOF-UD02 – Gestió de Projectes amb GitHub",
             "href": "https://classroom.github.com/a/5VaEsg90",
             "description": "Assignment de grup aof-ud02-act-project",
             "status": "active",
             "kind": "activity"
         },
         {
-            "order": 27,
-            "title": "Actividad evaluable aof-ud05-ae05",
+            "order": "270",
+            "title": "270. Actividad evaluable aof-ud05-ae05",
             "src": "slides/aof-ud05-ae05.reveal",
             "description": "Procesadores de texto",
             "status": "active",
             "kind": "activity"
         },
         {
-            "order": 28,
-            "title": "Activitat evaluable 0223-aof-ae06-docs",
+            "order": "280",
+            "title": "280. Activitat evaluable 0223-aof-ae06-docs",
             "src": "slides/0223-aof-ae06-docs.reveal",
             "description": "Procesadors de texts",
             "status": "active",
             "kind": "activity"
         },
         {
-            "order": 29,
-            "title": "Activitat evaluable: 0223-aof-ae07",
+            "order": "290",
+            "title": "290. Activitat evaluable: 0223-aof-ae07",
             "src": "slides/0223-aof-ae07.reveal",
             "description": "Procesadors de texts",
             "status": "active",
             "kind": "activity"
         },
         {
-            "order": 131,
-            "title": "31. Introducción a macros",
+            "order": "300",
+            "title": "300. Introducción a macros",
             "src": "slides/0223-aof-teoria-macros.reveal",
             "description": "Macros als procesadors de texts",
             "status": "active",
             "kind": "theory"
         },
         {
-            "order": 132,
-            "title": "32. Introducción a macros 2a part",
+            "order": "310",
+            "title": "310. Introducción a macros 2a part",
             "src": "slides/0223-aof-teoria-macros-2.reveal",
             "description": "Macros als procesadors de texts",
             "status": "active",
             "kind": "theory"
+        },
+        {
+            "order": "320",
+            "title": "320. Activitat avaluable 8: Radiografia del projecte ASTI. (0223-aof-ae08)",
+            "src": "slides/0223-aof-ae08-asti-radiografia-enunciat.reveal",
+            "description": "Reflexió individual obligatòria",
+            "status": "active",
+            "kind": "activity"
         }
     ]
 }
