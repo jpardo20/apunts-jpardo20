@@ -1,4 +1,4 @@
-# PHOENIXTECH – FASE 2  -  Desplegament d’Infraestructura  
+# PHOENIXTECH – FASE 2 - Desplegament d’Infraestructura 
 
 ### Enunciat + Contracte de Proves de Validació
 
@@ -19,7 +19,7 @@ Ara PhoenixTech entra en fase d’implantació real.
 
 ----
 
-En entorns professionals, un servei no es dona per vàlid perquè “funciona”,  
+En entorns professionals, un servei no es dona per vàlid perquè “funciona”, 
 sinó perquè es pot validar amb proves objectives.
 
 Aquesta fase introdueix aquesta lògica.
@@ -70,7 +70,7 @@ On: <codijpc>X</codijpc> = número assignat al grup
 
 ### DHCP
 - Rang dinàmic definit (exemple):
-  <codijpc>192.168.X0.100</codijpc> – <codijpc>192.168.X0.150</codijpc>
+ <codijpc>192.168.X0.100</codijpc> – <codijpc>192.168.X0.150</codijpc>
 
 On: <codijpc>X</codijpc> = número assignat al grup
 
@@ -160,21 +160,20 @@ Per cada servei:
 
 ---
 
-# 4. Flux essencial obligatori
+# 4. Flux obligatori, per tasca:
 
-Per cada tasca (issue):
-
-1. Crear la tasca al repositori (<codijpc>*</codijpc>)
-2. Assignar responsable principal  
-3. Crear branca des de la tasca  
-4. Implementar el servei  
-5. Crear Pull Request  
-6. Assignar un QA  
-7. El merge no pot ser fet pel responsable  
+1. Crear la tasca al repositori <codijpc>(*)</codijpc>
+2. Assignar responsable <codijpc>(*)</codijpc> 
+3. Crear <codijpc>branca</codijpc> des de la tasca <codijpc>(*)</codijpc>
+4. Implementar el servei 
+5. Crear <codijpc>PR</codijpc> (**Pull Request**) 
+6. Assignar un <codijpc>QA</codijpc> 
+7. El <codijpc>merge</codijpc> no pot ser fet pel responsable 
 
 ⚠ Sense flux complet, la tasca no es considera validada.
 
-(<codijpc>*</codijpc>) des del repo o des del projecte
+<codijpc>(*)</codijpc> des del repo o des del projecte
+
 ---
 
 # 5. Contracte de Proves de Validació – Fase 2
