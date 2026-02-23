@@ -34,6 +34,24 @@ On: <codijpc>X</codijpc> = número assignat al grup
 
 Exemple: - Grup 3 → <codijpc>192.168.30.0/24</codijpc>
 
+Assignació de grups ...
+
+⬇️
+
+----
+
+### GRUPS
+
+* **Grup 1:** **`abe-galan-gestio-incidencies`**
+
+* **Grup 2:** **`arenas-ciurana-rincon-gestio-incidencies`**
+
+* **Grup 3:** **`gonzalez_ruiz-gestio-incidencies`**
+
+* **Grup 4:** **`gonzalez-ruiz-gestio-incidencies`**
+
+* **Grup 5:** **`name-quilca-titua-a-gestio-incidencies`**
+
 ---
 
 ## Assignació mínima obligatòria
@@ -44,6 +62,7 @@ Exemple: - Grup 3 → <codijpc>192.168.30.0/24</codijpc>
 - Gateway configurat correctament
 - DNS apuntant a ell mateix
 
+On: <codijpc>X</codijpc> = número assignat al grup
 
 ⬇️
 
@@ -53,6 +72,7 @@ Exemple: - Grup 3 → <codijpc>192.168.30.0/24</codijpc>
 - Rang dinàmic definit (exemple):
   <codijpc>192.168.X0.100</codijpc> – <codijpc>192.168.X0.150</codijpc>
 
+On: <codijpc>X</codijpc> = número assignat al grup
 
 ⬇️
 
