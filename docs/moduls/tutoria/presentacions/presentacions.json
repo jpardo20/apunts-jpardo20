@@ -19,7 +19,7 @@
         {
             "id": "1a-sessio",
             "title": "1a Sessió | Projecte de Tutoria FP",
-            "description": "Projecte de Tutoria FP | SESSIÓ 1 · Inici del projecte i reflexió inicial.",
+            "description": "Inici del projecte i reflexió inicial.",
             "src": "projecte-1a-sessio.reveal",
             "theme": "white",
             "status": "active",
@@ -31,7 +31,7 @@
         {
             "id": "2a-sessio",
             "title": "2a Sessió | Projecte de Tutoria FP",
-            "description": "Projecte de Tutoria FP | SESSIÓ 2: El cicle i les sortides professionals.",
+            "description": "El cicle i les sortides professionals.",
             "src": "projecte-2a-sessio.reveal",
             "theme": "white",
             "status": "active",
@@ -43,7 +43,7 @@
         {
             "id": "3a-sessio",
             "title": "3a Sessió | Projecte de Tutoria FP",
-            "description": "Projecte de Tutoria FP | SESSIÓ 3 · ...",
+            "description": "Hàbits de treball i organització acadèmica",
             "src": "projecte-3a-sessio.reveal",
             "theme": "white",
             "status": "active",
@@ -55,10 +55,10 @@
         {
             "id": "4a-sessio",
             "title": "4a Sessió | Projecte de Tutoria FP",
-            "description": "Projecte de Tutoria FP | SESSIÓ 4 ...",
-            "src": "projecte-1a-sessio.reveal",
+            "description": "Anàlisi <b>DAFO</b> acadèmic",
+            "src": "projecte-4a-sessio.reveal",
             "theme": "white",
-            "status": "inactive",
+            "status": "active",
             "kind": "theory",
             "tags": [
                 "BBDD"
@@ -67,7 +67,7 @@
         {
             "id": "5a-sessio",
             "title": "5a Sessió | Projecte de Tutoria FP",
-            "description": "Projecte de Tutoria FP | SESSIÓ 5 ...",
+            "description": "Sessió  5 ...",
             "src": "projecte-1a-sessio.reveal",
             "theme": "white",
             "status": "inactive",

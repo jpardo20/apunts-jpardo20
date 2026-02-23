@@ -1,22 +1,23 @@
 # Projecte de Tutoria FP
 
-## SESSIÓ 2 · El cicle i les sortides professionals
+## Sessió 2: El cicle i les sortides professionals
 
-Durada de la sessió: 1 hora  
-Modalitat: Treball individual  
-Aquesta sessió és obligatòria i compta per nota.
++ Durada: 1 hora
++ Modalitat: Individual
++ Caràcter: Obligatori i avaluable
++ Evidència: Fitxer Markdown al repositori personal
 
 ---
 
-## OBJECTIU DE LA SESSIÓ
+## Objectiu de la sessió
 
 En aquesta sessió analitzaràs el cicle que estàs cursant i algunes de les **possibles sortides professionals** relacionades amb els estudis que estàs fent.
 
 L’objectiu és:
 
-- entendre millor què prepara el cicle a nivell professional
-- relacionar els continguts del cicle amb possibles rols laborals
-- identificar aspectes a millorar per orientar el teu futur acadèmic
++ entendre millor què prepara el cicle a nivell professional
++ relacionar els continguts del cicle amb possibles rols laborals
++ identificar aspectes a millorar per orientar el teu futur acadèmic
 
 ⬇️
 
@@ -24,9 +25,9 @@ L’objectiu és:
 
 Al final de la sessió hauràs de tenir:
 
-- un nou fitxer afegit al repositori
-- el contingut completat segons les instruccions
-- com a mínim **dos <codijpc>commit</codijpc>s fets avui**
++ un nou fitxer afegit al repositori
++ el contingut completat segons les instruccions
++ com a mínim **dos <codijpc>commit</codijpc>s fets avui**
 
 ---
 
@@ -99,8 +100,8 @@ No cal que siguin decisions definitives.
 ## 3. Relació entre el cicle i una sortida professional
 
 Tria una de les dues sortides anteriors i explica:
-- per què creus que està relacionada amb el cicle
-- quins mòduls o continguts del cicle hi poden tenir relació
++ per què creus que està relacionada amb el cicle
++ quins mòduls o continguts del cicle hi poden tenir relació
 
 ⬇️
 
@@ -179,12 +180,12 @@ Assegura’t que **no hi ha errors**.
 
 Perquè la sessió compti com a feta correctament, cal que:
 
-- existeixi la carpeta <codijpc>sessio-2</codijpc>
-- existeixi el fitxer <codijpc>sortides_professionals.md</codijpc>
-- el contingut segueixi l’estructura indicada
-- hi hagi **dos <codijpc>commit</codijpc>s fets avui**
-- els missatges dels commits siguin correctes
-- el contingut sigui coherent i no buit
++ existeixi la carpeta <codijpc>sessio-2</codijpc>
++ existeixi el fitxer <codijpc>sortides_professionals.md</codijpc>
++ el contingut segueixi l’estructura indicada
++ hi hagi **dos <codijpc>commit</codijpc>s fets avui**
++ els missatges dels commits siguin correctes
++ el contingut sigui coherent i no buit
 
 Si falta algun d’aquests punts, la sessió es considerarà incompleta.
 
