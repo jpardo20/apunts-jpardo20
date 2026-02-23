@@ -15,6 +15,10 @@ Fins ara heu treballat:
 
 Ara PhoenixTech entra en fase d’implantació real.
 
+⬇️
+
+----
+
 En entorns professionals, un servei no es dona per vàlid perquè “funciona”,  
 sinó perquè es pot validar amb proves objectives.
 
@@ -24,16 +28,11 @@ Aquesta fase introdueix aquesta lògica.
 
 # 2. Arquitectura de Xarxa Obligatòria
 
-Cada grup treballarà amb la seva subxarxa:
+Cada grup treballarà amb la seva subxarxa: **`192.168.X0.0/24`**
 
-**192.168.X0.0/24**
+On: **`X`** = número assignat al grup
 
-On:
-
-- X = número assignat al grup
-
-Exemple:
-- Grup 3 → 192.168.30.0/24
+Exemple: - Grup 3 → **`192.168.30.0/24`**
 
 ---
 
@@ -45,9 +44,19 @@ Exemple:
 - Gateway configurat correctament
 - DNS apuntant a ell mateix
 
+
+⬇️
+
+----
+
 ### DHCP
 - Rang dinàmic definit (exemple):
   192.168.X0.100 – 192.168.X0.150
+
+
+⬇️
+
+----
 
 ### Clients Windows 11 (mínim 2 per grup)
 - Configuració en DHCP
