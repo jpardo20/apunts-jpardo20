@@ -1,0 +1,251 @@
+# PHOENIXTECH – FASE 2  -  Desplegament d’Infraestructura  
+
+### Enunciat + Contracte de Proves de Validació
+
+---
+
+## 1. Context
+
+Fins ara heu treballat:
+
+- Model Entitat–Relació (MER)
+- Model Relacional (MR)
+- Contracte SQL
+- Diccionari de dades
+
+Ara PhoenixTech entra en fase d’implantació real.
+
+En entorns professionals, un servei no es dona per vàlid perquè “funciona”,  
+sinó perquè es pot validar amb proves objectives.
+
+Aquesta fase introdueix aquesta lògica.
+
+---
+
+# 2. Arquitectura de Xarxa Obligatòria
+
+Cada grup treballarà amb la seva subxarxa:
+
+**192.168.X0.0/24**
+
+On:
+
+- X = número assignat al grup
+
+Exemple:
+- Grup 3 → 192.168.30.0/24
+
+---
+
+## Assignació mínima obligatòria
+
+### Windows Server 2025
+- IP fixa dins del rang
+- Exemple: 192.168.X0.10
+- Gateway configurat correctament
+- DNS apuntant a ell mateix
+
+### DHCP
+- Rang dinàmic definit (exemple):
+  192.168.X0.100 – 192.168.X0.150
+
+### Clients Windows 11 (mínim 2 per grup)
+- Configuració en DHCP
+- Han de rebre IP automàticament
+- Han de poder unir-se al domini
+
+---
+
+# 3. Infraestructura Mínima Viable (IMV)
+
+Tots els grups han de completar les següents tasques (issue):
+
+---
+
+## Tasca (issue) 1 – Active Directory
+
+- Instal·lació AD DS
+- Promoció a controlador de domini
+- Creació de domini funcional
+- Creació de mínim 3 usuaris
+- Creació de mínim 2 grups
+
+---
+
+## Tasca (issue) 2 – DNS funcional
+
+- DNS integrat al domini
+- Resolució per nom operativa
+
+---
+
+## Tasca (issue) 3 – DHCP
+
+- Instal·lació rol DHCP
+- Configuració del rang assignat
+- Autorització al domini
+- Concessió correcta d’IP a clients
+
+---
+
+## Tasca (issue) 4 – IIS + PHP
+
+- Instal·lació IIS
+- Activació PHP
+- Pàgina `phpinfo()` funcional
+
+---
+
+## Tasca (issue) 5 – Base de dades
+
+Opció A (IMV consolidada):
+- Instal·lació MySQL en Windows
+
+Opció B (Extensió distribuïda):
+- Instal·lació Linux
+- Instal·lació MySQL en Linux
+- Connexió remota Windows → Linux
+
+---
+
+## Tasca (issue) 6 – Connexió aplicació → base de dades
+
+- Connexió PHP → MySQL
+- Consulta simple funcional
+
+---
+
+## Tasca (issue) 7 – Documentació
+
+Cal crear el fitxer:
+
+`infraestructura.md`
+
+Per cada servei:
+
+- Responsable
+- QA assignat
+- Configuració final
+- Proves realitzades
+- Resultat (OK / Error)
+
+---
+
+# 4. Flux essencial obligatori
+
+Per cada tasca (issue):
+
+1. Crear la tasca al repositori  
+2. Assignar responsable principal  
+3. Crear branca des de la tasca  
+4. Implementar el servei  
+5. Crear Pull Request  
+6. Assignar un QA  
+7. El merge no pot ser fet pel responsable  
+
+⚠ Sense flux complet, la tasca no es considera validada.
+
+---
+
+# 5. Contracte de Proves de Validació – Fase 2
+
+Només aquestes proves són obligatòries.
+
+---
+
+## Xarxa
+
+- El servidor té IP fixa correcta dins 192.168.X0.0
+- Un client Windows 11 rep IP del rang DHCP
+- El client pot fer `ping` al servidor per IP
+
+---
+
+## Active Directory
+
+- Login correcte amb un usuari creat
+- Client unit al domini
+
+---
+
+## DNS
+
+- `nslookup nom-servidor`
+- `ping nom-servidor`
+- El nom resol a la IP correcta
+
+---
+
+## DHCP
+
+- Client mostra IP del rang configurat
+- Es visualitza concessió al servidor DHCP
+
+---
+
+## IIS + PHP
+
+- Accés per navegador
+- Pàgina `phpinfo()` visible
+
+---
+
+## Base de dades
+
+- Connexió amb usuari creat
+- Base de dades visible
+
+---
+
+## Connexió aplicació → BD
+
+- Script PHP es connecta correctament
+- Consulta simple executada
+- Resultat visible
+
+---
+
+# 6. Rúbrica objectiva
+
+Per cada tasca (issue):
+
+| Criteri | Validat / No validat |
+|----------|----------------------|
+Flux complet | ✔ / ✖ |
+Servei funcional | ✔ / ✖ |
+Proves executades | ✔ / ✖ |
+QA realitzat | ✔ / ✖ |
+
+Si un criteri falla → la tasca no es valida.
+
+---
+
+# 7. Defensa final
+
+Qualsevol membre pot ser preguntat sobre:
+
+- Xarxa
+- AD
+- DNS
+- DHCP
+- IIS
+- MySQL
+
+No es podrà justificar desconeixement indicant que el servei era responsabilitat d’un altre.
+
+---
+
+# 8. Marc professional
+
+Aquesta fase no endureix el projecte.
+
+El professionalitza.
+
+En entorns reals:
+
+- Les IP són coherents
+- Els dominis funcionen
+- Els serveis es validen
+- Les proves són objectives
+
+PhoenixTech simula aquest entorn.
