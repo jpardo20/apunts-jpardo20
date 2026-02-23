@@ -28,11 +28,11 @@ Aquesta fase introdueix aquesta lògica.
 
 # 2. Arquitectura de Xarxa Obligatòria
 
-Cada grup treballarà amb la seva subxarxa: **`192.168.X0.0/24`**
+Cada grup treballarà amb la seva subxarxa: <codijpc>192.168.X0.0/24</codijpc>
 
-On: **`X`** = número assignat al grup
+On: <codijpc>X</codijpc> = número assignat al grup
 
-Exemple: - Grup 3 → **`192.168.30.0/24`**
+Exemple: - Grup 3 → <codijpc>192.168.30.0/24</codijpc>
 
 ---
 
@@ -40,7 +40,7 @@ Exemple: - Grup 3 → **`192.168.30.0/24`**
 
 ### Windows Server 2025
 - IP fixa dins del rang
-- Exemple: 192.168.X0.10
+- Exemple: <codijpc>192.168.X0.10</codijpc>
 - Gateway configurat correctament
 - DNS apuntant a ell mateix
 
@@ -51,7 +51,7 @@ Exemple: - Grup 3 → **`192.168.30.0/24`**
 
 ### DHCP
 - Rang dinàmic definit (exemple):
-  192.168.X0.100 – 192.168.X0.150
+  <codijpc>192.168.X0.100</codijpc> – <codijpc>192.168.X0.150</codijpc>
 
 
 ⬇️
@@ -101,7 +101,7 @@ Tots els grups han de completar les següents tasques (issue):
 
 - Instal·lació IIS
 - Activació PHP
-- Pàgina `phpinfo()` funcional
+- Pàgina <codijpc>phpinfo()</codijpc> funcional
 
 ---
 
@@ -128,7 +128,7 @@ Opció B (Extensió distribuïda):
 
 Cal crear el fitxer:
 
-`infraestructura.md`
+<codijpc>infraestructura.md</codijpc>
 
 Per cada servei:
 
@@ -144,7 +144,7 @@ Per cada servei:
 
 Per cada tasca (issue):
 
-1. Crear la tasca al repositori  
+1. Crear la tasca al repositori (<codijpc>*</codijpc>)
 2. Assignar responsable principal  
 3. Crear branca des de la tasca  
 4. Implementar el servei  
@@ -154,6 +154,7 @@ Per cada tasca (issue):
 
 ⚠ Sense flux complet, la tasca no es considera validada.
 
+(<codijpc>*</codijpc>) des del repo o des del projecte
 ---
 
 # 5. Contracte de Proves de Validació – Fase 2
@@ -164,9 +165,9 @@ Només aquestes proves són obligatòries.
 
 ## Xarxa
 
-- El servidor té IP fixa correcta dins 192.168.X0.0
+- El servidor té IP fixa correcta dins <codijpc>192.168.X0.0</codijpc>
 - Un client Windows 11 rep IP del rang DHCP
-- El client pot fer `ping` al servidor per IP
+- El client pot fer <codijpc>ping</codijpc> al servidor per IP
 
 ---
 
@@ -179,8 +180,8 @@ Només aquestes proves són obligatòries.
 
 ## DNS
 
-- `nslookup nom-servidor`
-- `ping nom-servidor`
+- <codijpc>nslookup nom-servidor</codijpc>
+- <codijpc>ping nom-servidor</codijpc>
 - El nom resol a la IP correcta
 
 ---
@@ -195,7 +196,7 @@ Només aquestes proves són obligatòries.
 ## IIS + PHP
 
 - Accés per navegador
-- Pàgina `phpinfo()` visible
+- Pàgina <codijpc>phpinfo()</codijpc> visible
 
 ---
 
@@ -220,10 +221,10 @@ Per cada tasca (issue):
 
 | Criteri | Validat / No validat |
 |----------|----------------------|
-Flux complet | ✔ / ✖ |
-Servei funcional | ✔ / ✖ |
-Proves executades | ✔ / ✖ |
-QA realitzat | ✔ / ✖ |
+|Flux complet | ✔ / ✖ |
+|Servei funcional | ✔ / ✖ |
+|Proves executades | ✔ / ✖ |
+|QA realitzat | ✔ / ✖ |
 
 Si un criteri falla → la tasca no es valida.
 
