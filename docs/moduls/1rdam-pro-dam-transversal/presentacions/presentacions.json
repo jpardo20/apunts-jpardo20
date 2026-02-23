@@ -107,14 +107,14 @@
             "title": "240. FASE 2: Integració del Model Relacional amb Backend Local",
             "src": "slides/007-enunciat-fase-2.reveal",
             "description": "FASE 2: Integració del Model Relacional amb Backend Local",
-            "status": "active",
+            "status": "inactive",
             "kind": "theory"
         },{
             "order": "250",
             "title": "250. FASE 2: CONTRACTE SQL ",
             "src": "slides/008-contracte-sql-fase-2.reveal",
             "description": "FASE 2: CONTRACTE SQL",
-            "status": "active",
+            "status": "inactive",
             "kind": "theory"
         } ,{
             "order": "236",
