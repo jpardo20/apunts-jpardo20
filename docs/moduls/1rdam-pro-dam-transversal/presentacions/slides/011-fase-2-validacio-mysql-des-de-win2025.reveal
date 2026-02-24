@@ -1,0 +1,216 @@
+# CHECKLIST TÈCNIC – Validació connexió MariaDB (Linux → Win2025)
+
+## 🎯 Objectiu
+
+Abans d’instal·lar IIS, PHP o desenvolupar l’aplicació web, cal validar que:
+
+✔ El servidor Linux té MariaDB funcionant  
+✔ El Windows 2025 pot accedir al port 3306  
+✔ El servei MariaDB escolta correctament  
+✔ No hi ha problemes de firewall ni configuració de xarxa  
+
+Aquesta validació és obligatòria abans de continuar.
+
+---
+
+# PAS 1 – Validació de xarxa (connectivitat IP)
+
+## 🔹 Des del Windows 2025 (PowerShell)
+
+```powershell
+ping 192.168.X0.2
+```
+
+(Substitueix X pel número de grup.)
+
+### ✅ Resultat correcte:
+Respostes amb temps (Reply from…)
+
+### ❌ Si falla:
+- Revisar configuració IP
+- Comprovar que ambdues màquines estan a la mateixa xarxa (Host-only / Bridge)
+- Verificar que el Linux està encès
+
+---
+
+# PAS 2 – Validació del port 3306
+
+## 🔹 Des del Windows 2025 (PowerShell)
+
+```powershell
+Test-NetConnection 192.168.X0.2 -Port 3306
+```
+
+### ✅ Resultat correcte:
+```
+TcpTestSucceeded : True
+```
+
+Això significa:
+- El servei escolta
+- El port està obert
+- No hi ha bloqueig de firewall
+
+### ❌ Si surt False:
+Cal revisar el servidor Linux.
+
+---
+
+# PAS 3 – Verificació del servei MariaDB al Linux
+
+## 🔹 Des del Linux
+
+```bash
+sudo systemctl status mariadb
+```
+
+### Ha de mostrar:
+```
+active (running)
+```
+
+Si no està actiu:
+
+```bash
+sudo systemctl start mariadb
+```
+
+---
+
+# PAS 4 – Comprovar que MariaDB escolta a totes les IP
+
+## 🔹 Des del Linux
+
+```bash
+sudo ss -lntp | grep 3306
+```
+
+### ✅ Correcte:
+```
+0.0.0.0:3306
+```
+
+### ❌ Incorrecte:
+```
+127.0.0.1:3306
+```
+
+Si surt 127.0.0.1, MariaDB només escolta localment.
+
+## Solució:
+
+Editar el fitxer:
+
+```bash
+sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
+```
+
+Buscar:
+
+```
+bind-address = 127.0.0.1
+```
+
+Canviar a:
+
+```
+bind-address = 0.0.0.0
+```
+
+Després:
+
+```bash
+sudo systemctl restart mariadb
+```
+
+---
+
+# PAS 5 – Firewall Linux (si cal)
+
+Si el port segueix tancat:
+
+```bash
+sudo ufw allow 3306/tcp
+sudo ufw status
+```
+
+---
+
+# PAS 6 – Validació d’autenticació (des del Linux)
+
+No cal instal·lar MySQL al Windows.
+
+Només cal comprovar que existeix un usuari que pugui connectar remotament.
+
+## 🔹 Entrar a MariaDB al Linux:
+
+```bash
+sudo mariadb -u root -p
+```
+
+## 🔹 Comprovar usuaris:
+
+```sql
+SELECT user, host FROM mysql.user;
+```
+
+Si només surt:
+```
+root | localhost
+```
+
+Cal crear usuari remot:
+
+```sql
+CREATE USER 'appuser'@'192.168.X0.%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'appuser'@'192.168.X0.%';
+FLUSH PRIVILEGES;
+```
+
+---
+
+# VALIDACIÓ FINAL OBLIGATÒRIA
+
+Des del Windows:
+
+```powershell
+Test-NetConnection 192.168.X0.2 -Port 3306
+```
+
+Si:
+
+```
+TcpTestSucceeded : True
+```
+
+✔ La infraestructura està correctament configurada.
+
+Només llavors es pot començar amb IIS i PHP.
+
+---
+
+# ❗ Important
+
+No es permet avançar cap part de l’aplicació web si:
+
+- El ping no funciona
+- El port 3306 està tancat
+- MariaDB no escolta a 0.0.0.0
+- No hi ha usuari remot configurat
+
+La infraestructura és part del projecte.
+
+---
+
+# 🎓 Competència que s’està treballant
+
+Aquest procés valida que l’alumne entén:
+
+- Xarxes IP
+- Ports TCP
+- Serveis
+- Firewall
+- Configuració de servidor
+- Autenticació de base de dades
+
+No és només “fer que funcioni”, és entendre l’ecosistema complet.

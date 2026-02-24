@@ -130,7 +130,19 @@
             "description": "FASE 2: Desplegament d’Infraestructura",
             "status": "active",
             "kind": "theory"
+        }   ,{
+            "order": "245",
+            "title": "245. FASE 2: Validació connexió MariaDB (Linux → Win2025) ",
+            "src": "slides/011-fase-2-validacio-mysql-des-de-win2025.reveal",
+            "description": "FASE 2: Validació connexió MariaDB (Linux → Win2025)",
+            "status": "active",
+            "kind": "theory"
         } 
+
+
+
+
+        
     ]
 }
 
