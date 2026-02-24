@@ -109,28 +109,16 @@
             "description": "FASE 2: Integració del Model Relacional amb Backend Local",
             "status": "inactive",
             "kind": "theory"
-        },{
-            "order": "250",
-            "title": "250. FASE 2: CONTRACTE SQL ",
-            "src": "slides/008-contracte-sql-fase-2.reveal",
-            "description": "FASE 2: CONTRACTE SQL",
-            "status": "inactive",
-            "kind": "theory"
-        } ,{
+        },
+
+        {
             "order": "236",
             "title": "236. DICCIONARI DE DADES - Documentació estructural del model relacional ",
             "src": "slides/009-enunciat-diccionari-dades.reveal",
             "description": "DICCIONARI DE DADES - Documentació estructural del model relacional",
             "status": "active",
             "kind": "theory"
-        }  ,{
-            "order": "240",
-            "title": "240. FASE 2: Desplegament d’Infraestructura ",
-            "src": "slides/010-enunciat-fase-2.reveal",
-            "description": "FASE 2: Desplegament d’Infraestructura",
-            "status": "active",
-            "kind": "theory"
-        }   ,{
+        }    ,{
             "order": "245",
             "title": "245. FASE 2: Validació connexió MariaDB (Linux → Win2025) ",
             "src": "slides/011-fase-2-validacio-mysql-des-de-win2025.reveal",
@@ -138,14 +126,21 @@
             "status": "active",
             "kind": "theory"
         } 
-
-
-
-
+ ,{
+            "order": "299",
+            "title": "299. FASE 2: Desplegament d’Infraestructura ",
+            "src": "slides/010-enunciat-fase-2.reveal",
+            "description": "FASE 2: Desplegament d’Infraestructura",
+            "status": "active",
+            "kind": "theory"
+        } ,{
+            "order": "299",
+            "title": "299. FASE 2: Desplegament d’Infraestructura ",
+            "src": "slides/010-enunciat-fase-2.reveal",
+            "description": "FASE 2: Desplegament d’Infraestructura",
+            "status": "active",
+            "kind": "theory"
+        }
         
     ]
 }
-
-
-
-
