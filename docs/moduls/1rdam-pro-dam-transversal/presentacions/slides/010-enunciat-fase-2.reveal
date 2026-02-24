@@ -121,6 +121,11 @@ Tots els grups han de completar les següents tasques (issue):
 - Activació PHP
 - Pàgina <codijpc>phpinfo()</codijpc> funcional
 
+> ### NOTA:
+> 
+> Abans d'intal·lar el IIS al servidor de win2025, cal instal·lar la base de dades
+>
+
 ---
 
 ## Tasca (issue) 5 – Base de dades
@@ -131,7 +136,10 @@ Opció A (IMV consolidada):
 Opció B (Extensió distribuïda):
 - Instal·lació Linux
 - Instal·lació MySQL en Linux
-- Connexió remota Windows → Linux
+
+Per validar la connexió remota Windows → Linux teniu el següent document:
+
+<a href="https://jpardo20.github.io/apunts-jpardo20/assets/files/presentador.html?src=%2Fapunts-jpardo20%2Fmoduls%2F1rdam-pro-dam-transversal%2Fpresentacions%2Fslides%2F011-fase-2-validacio-mysql-des-de-win2025.reveal&title=245.%20FASE%202%3A%20Validaci%C3%B3%20connexi%C3%B3%20MariaDB%20(Linux%20%E2%86%92%20Win2025)%20#/md-section" target="_about">CHECKLIST TÈCNIC – Validació connexió MariaDB (Linux → Win2025)</a>
 
 ---
 
@@ -231,6 +239,14 @@ Només aquestes proves són obligatòries.
 - Script PHP es connecta correctament
 - Consulta simple executada
 - Resultat visible
+
+> ### VALIDACIÓ FINAL OBLIGATÒRIA
+> 
+> Des del Windows:
+> ```ps
+> Test-NetConnection 192.168.X0.2 -Port 3306
+> ```
+> amb resposta: `TcpTestSucceeded : True`
 
 ---
 
