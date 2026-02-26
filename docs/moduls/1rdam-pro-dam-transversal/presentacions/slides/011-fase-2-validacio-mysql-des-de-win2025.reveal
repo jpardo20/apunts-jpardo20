@@ -256,3 +256,81 @@ Aquest procés valida que l’alumne entén:
 - Autenticació de base de dades
 
 No és només “fer que funcioni”, és entendre l’ecosistema complet.
+
+---
+
+### Configuració MV's
+
+## Servidor LINUX
+
+|NIC  |nom linux| ip            |  macAdd <br> cas profe | configuració| tipus|funció|
+|-----  |------| -----      |  ------ |  ----|----|----|
+|NIC 1|enp0s3|  10.0.2.??      |  .. ad58 | DHCP|NAT|Internet|
+|NIC 2|enp0s8|  192.168.56.101 |  .. 16c9 | DHCP|Host-Only|Putty|
+|NIC 3|enp0s9|  192.168.X0.2   |  .. 3597 | IP manual|BRIDGE| Connexió amb W2025<br> xarxa 192.168.50.0/24 |
+
+```bash
+sudo vi /etc/netplan/50-cloud-init.yaml
+sudo netplan apply
+```
+
+Altres fitxer poden ser:
+
+```bash
+/etc/netplan/50-cloud-init.yaml
+/etc/netplan/00-installer-config.yaml
+/etc/netplan/01-network-manager-all.yaml
+```
+
+Configuració NIC Bridge
+```bash
+    enp0s9:
+      dhcp4: false
+      addresses:
+        - 192.168.X0.2/24
+      routes:
+        - to: default
+          via: 192.168.X0.1
+      nameservers:
+        addresses: [8.8.8.8, 8.8.4.4]
+```
+
+## Configuració contenidor mysql
+
+```bash
+sudo docker exec -ti mysql-db-1 bash
+```
+
+Un cop ens trobem dins del contenidor, cal executar:
+
+```bash
+ss -lntp | grep 3306
+```
+
+I la sortida mostrarà alguna cosa semblant a:
+
+```bash
+LISTEN 0    80     0.0.0.0:3306 ...
+```
+
+Des del servidor **Srv W2025** que té IP **`192.168.X0.1`**.
+
+Comprobar que tenim connexió amb el servidor a on tenim la base de dades:
+
+```powershell
+ping  192.168.X0.2
+```
+
+Comprobar que el servidor a on tenim la base de dades, està escoltant pel port **`3306`**:
+
+```powershell
+Test-NetConnection 192.168.X0.2 -Port 3306
+```
+
+A la sortida de la comanda cal veure:
+
+```powershell
+TcpTestSucceeded : True
+```
+
+Per confirmar que tenim connexió amb el servidor i que podem accedir al mysql.
