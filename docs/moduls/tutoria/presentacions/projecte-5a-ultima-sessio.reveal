@@ -1,171 +1,269 @@
 # Projecte de Tutoria FP
 
-## Sessió 5:  PENDENT DE DEFINIR!!
+## Sessió 5: Síntesi i **`Pla d’Acció Acadèmic`**
 
-+ Durada: 1 hora
-+ Modalitat: Individual
-+ Caràcter: Obligatori i avaluable
-+ Evidència: Fitxer Markdown al repositori personal
-
-## ---- Contingut no disponible ----
++ Durada: 1 hora  
++ Modalitat: Individual  
++ Caràcter: Obligatori i avaluable  
++ Evidència: Fitxer Markdown al repositori personal  
 
 ---
 
-# Torna enrere
+## Objectiu de la sessió
+
+Transformar l’anàlisi **`DAFO`** realitzada a la Sessió 4 en un **pla d’acció acadèmic concret i mesurable**, amb la finalitat de:
+
++ Convertir la reflexió en decisions operatives  
++ Definir objectius acadèmics realistes  
++ Establir accions específiques de millora  
++ Assumir compromís personal amb el propi procés formatiu  
 
 ---
 
----
+## De l’anàlisi a l’acció
+
+A la Sessió 4 vas identificar:
+
++ Fortaleses  
++ Debilitats  
++ Oportunitats  
++ Amenaces  
+
+Ara la pregunta és:
+
+> Què faràs amb aquesta informació?
 
 ---
 
-# Projecte de Tutoria FP
+## Fortaleses → Potenciació estratègica
 
-## SESSIÓ 5 · Tancament del projecte i mirada a futur
+No n’hi ha prou amb identificar-les.
 
-Durada de la sessió: 1 hora  
-Modalitat: Treball individual  
-Aquesta sessió és obligatòria i compta per nota.
+Cal preguntar-se:
 
----
-
-## OBJECTIU DE LA SESSIÓ
-
-Avui tancaràs el projecte de tutoria fent una síntesi final:
-+ què has après sobre tu com a alumne
-+ què creus que has millorat (o no)
-+ com t’imagines d’aquí a un any
-
-No es tracta de fer promeses, sinó de **reflexionar amb realisme**.
-
-Al final de la sessió hauràs de tenir:
-+ un últim fitxer afegit al repositori
-+ el contingut completat segons les instruccions
-+ com a mínim **dos commits fets avui**
++ Com puc aprofitar millor les meves fortaleses?  
++ Puc convertir-les en avantatge acadèmic?  
++ Puc ajudar altres companys?  
++ Puc assumir més responsabilitat?  
 
 ---
 
-## ABANS DE COMENÇAR
+## Debilitats → Pla real de millora
 
-1. Obre un terminal dins del teu repositori local.
-2. Executa:
+No volem frases genèriques.
 
-```bash
-git pull
+No serveix dir:
+> “Milloraré la meva organització.”
+
+Cal concretar:
+
++ Quin hàbit canviaré?  
++ Amb quina freqüència?  
++ Quin indicador utilitzaré per saber si milloro?  
+
+---
+
+## Oportunitats → Aprofitament conscient
+
+Exemples:
+
++ Recursos del centre  
++ Professorat disponible  
++ Projectes pràctics  
++ Materials online  
++ Entorn tecnològic  
+
+Pregunta clau:
+
+> Estic aprofitant realment aquestes oportunitats?
+
+---
+
+## Amenaces → Estratègies preventives
+
+Les amenaces no desapareixen soles.
+
+Cal definir:
+
++ Com les neutralitzaré?  
++ Quin mecanisme preventiu aplicaré?  
++ Què faré quan detecti que apareixen?  
+
+---
+
+## CONTINGUT DEL FITXER <codijpc>pla_accio_academic.md</codijpc>
+
+El fitxer <codijpc>sessio-5/pla_accio_academic.md</codijpc> ha de tenir **exactament** aquesta estructura:
+
+Sota el títol **`Pla d’Acció Acadèmic`** anotareu, per començar, un recordatori del que vàreu detectar al DAFO.
+
+```md
+## Pla d’Acció Acadèmic
+
+### 1. Recordatori sintètic del meu DAFO
 ```
 
-Assegura’t que no hi ha errors abans de continuar.
+En aquest apartat no es tracta de tornar a fer el DAFO, sinó de sintetitzar-lo.  
+Cal que seleccioneu els punts més rellevants i significatius que realment influeixen en el vostre rendiment acadèmic actual.
 
 ---
 
-## ESTRUCTURA DE FITXERS PER A LA SESSIÓ 5
+Sota el títol **`Fortaleses`** cal que anoteu les **fortaleses** que vàreu identificar a la darrera sessió:
 
-Dins del repositori, crea la carpeta i el fitxer següents:
-
+```md
+#### Fortaleses
++ ...
++ ...
 ```
-sessio-5/
-└── tancament_i_futur.md
-```
 
-No modifiquis cap altre fitxer.
+Aquí s’espera que destaqueu aquells aspectes que us donen avantatge acadèmic: habilitats, actituds, coneixements previs, capacitat d’organització, constància, etc.
+
+No poseu frases genèriques. Sigueu concrets.
 
 ---
 
-## PRIMER COMMIT (INICI DE LA SESSIÓ)
+Sota el títol **`Debilitats`** cal que anoteu les **debilitats** que vàreu identificar a la darrera sessió:
 
-Un cop creada l’estructura, fes el primer commit.
-
-```bash
-git add .
-git commit -m "inici sessio 5"
+```md
+#### Debilitats
++ ...
++ ...
 ```
 
-Aquest commit és obligatori.
+En aquest apartat cal identificar dificultats reals: manca d’organització, distraccions, problemes tècnics, manca de constància, inseguretat en exposicions, etc.
+
+L’objectiu no és justificar-se, sinó identificar punts de millora.
 
 ---
 
-## CONTINGUT DEL FITXER tancament_i_futur.md
+Sota el títol **`Oportunitats`** cal que anoteu les **oportunitats** que vàreu identificar a la darrera sessió:
 
-Edita el fitxer `sessio-5/tancament_i_futur.md` i escriu **exactament** aquesta estructura:
-
-```markdown
-# Sessió 5 · Tancament del projecte de tutoria
-
-## 1. Què he descobert sobre mi com a alumne
-Explica una cosa que no tenies clara a l’inici del projecte
-i que ara veus diferent.
-
-## 2. Un aspecte que he millorat (o començat a millorar)
-Descriu una cosa concreta que creus que has millorat
-durant el curs o gràcies a aquest projecte.
-
-## 3. Un repte realista per a l’any vinent
-Explica un objectiu realista que t’agradaria assolir
-el curs vinent com a estudiant.
-
-## 4. Com crec que aquest projecte m’ha ajudat
-Valora breument si aquest projecte t’ha servit
-i en quin sentit.
+```md
+#### Oportunitats
++ ...
++ ...
 ```
+
+Aquí heu d’indicar recursos externs que podeu aprofitar: professorat, materials, projectes, recursos online, companys, entorn tecnològic, etc.
+
+Penseu: què tinc a favor que pot ajudar-me si el sé utilitzar?
 
 ---
 
-## INDICACIONS IMPORTANTS
+Sota el títol **`Amenaces`** cal que anoteu les **amenaces** que vàreu identificar a la darrera sessió:
 
-+ Escriu frases completes.
-+ No cal que tot sigui positiu.
-+ No cal escriure molt: es valora el contingut.
-+ Sigues sincer i realista.
+```md
+#### Amenaces
++ ...
++ ...
+```
+
+Les amenaces poden ser factors externs o interns: falta de temps, càrrega d’altres responsabilitats, distraccions digitals, desmotivació puntual, etc.
+
+L’important és reconèixer-les per poder anticipar-les.
 
 ---
 
-## SEGON COMMIT (FINAL DE LA SESSIÓ)
+A continuació, transformareu aquesta anàlisi en accions concretes.
 
-Quan hagis acabat el contingut, fes el segon commit.
+```md
+### 2. Pla d’acció concret
 
-```bash
-git add .
-git commit -m "final sessio 5"
+| Aspecte a treballar | Acció concreta | Freqüència | Indicador de seguiment |
+|---------------------|---------------|------------|------------------------|
+|                     |               |            |                        |
+|                     |               |            |                        |
+|                     |               |            |                        |
 ```
+
+En aquesta taula s’espera que definiu:
+
+- **Aspecte a treballar:** una debilitat o amenaça concreta detectada al DAFO.  
+- **Acció concreta:** què fareu exactament per millorar-ho (no val “estudiar més”).  
+- **Freqüència:** cada dia, cada setmana, abans de cada examen, etc.  
+- **Indicador de seguiment:** com sabreu objectivament si esteu millorant.
+
+Aquest és el nucli del document. Ha de ser realista i aplicable.
 
 ---
 
-## PUJAR ELS CANVIS A GITHUB
+A continuació, definireu les vostres prioritats reals.
 
-Abans d’acabar la sessió, executa:
-
-```bash
-git push -u origin main
+```md
+### 3. Tres prioritats per al proper període
 ```
 
-Assegura’t que **no hi ha errors**.
+En aquest apartat heu de seleccionar **només tres objectius clau**.  
+No es tracta de fer una llista llarga, sinó d’identificar el que realment marcarà la diferència en el vostre rendiment.
+
+Cada prioritat ha d’incloure:
+
+- Un objectiu clar  
+- Una acció concreta associada  
+- Un indicador que permeti mesurar el progrés  
 
 ---
 
-## QUÈ ES COMPROVARÀ PER AVALUAR LA SESSIÓ 5
+Finalment, completareu el compromís personal.
 
-Perquè la sessió compti com a feta correctament, cal que:
+```md
+### 4. Compromís personal
+```
 
-+ existeixi la carpeta `sessio-5`
-+ existeixi el fitxer `tancament_i_futur.md`
-+ el fitxer tingui totes les seccions indicades
-+ hi hagi **dos commits fets avui**
-+ els missatges dels commits siguin correctes
-+ el contingut sigui coherent i no buit
+Aquest apartat és reflexiu.  
 
-Si falta algun d’aquests punts, la sessió es considerarà incompleta.
+No és tècnic, és honest.  
+
+S’espera que assumiu responsabilitat sobre el vostre procés acadèmic i que identifiqueu què depèn de vosaltres.
+
+No és un exercici per agradar al professorat.  
+És un exercici per ser coherents amb el vostre propi futur.
 
 ---
 
-Recorda:
-A l’inici de cada sessió:
-```bash
-git pull
-```
+## Requisits tècnics obligatoris
 
-Al final de cada sessió:
-```bash
-git push -u origin main
-```
++ El fitxer ha d’estar dins la carpeta correcta  
++ L’estructura ha de respectar-se exactament  
++ Mínim **2 `commit`s** durant la sessió  
+    - `git pull` a l’inici  
+    - `git push` al final  
++ Missatges de `commit` descriptius  
 
-I com a mínim cal fer dos `git commit` a cada sessió.
+---
+
+## Criteris d’avaluació
+
+Es valorarà:
+
++ Coherència amb el DAFO de la Sessió 4  
++ Concreció de les accions proposades  
++ Realisme dels objectius  
++ Capacitat d’autoregulació  
++ Rigor formal en la redacció  
++ Qualitat del compromís personal  
+
+---
+
+## Finalitat pedagògica
+
+Aquesta sessió tanca el cicle iniciat a la Sessió 1:
+
++ Diagnòstic inicial  
++ Hàbits de treball  
++ Anàlisi estructurada (DAFO)  
++ Transformació en pla operatiu  
+
+L’objectiu final no és el document.
+
+És que el pla sigui real.
+
+---
+
+## Missatge final
+
+El rendiment acadèmic no depèn només de capacitats.
+
+Depèn de decisions repetides en el temps.
+
+Aquesta sessió consisteix a decidir-les.

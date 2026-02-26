@@ -68,9 +68,9 @@
             "id": "5a-sessio",
             "title": "5a Sessió | Projecte de Tutoria FP",
             "description": "Sessió  5 ...",
-            "src": "projecte-1a-sessio.reveal",
+            "src": "projecte-5a-ultima-sessio.reveal",
             "theme": "white",
-            "status": "inactive",
+            "status": "active",
             "kind": "theory",
             "tags": [
                 "BBDD"
