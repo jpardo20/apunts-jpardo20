@@ -261,13 +261,21 @@ No és només “fer que funcioni”, és entendre l’ecosistema complet.
 
 ### Configuració MV's
 
+⬇️
+
+----
+
 ## Servidor LINUX
 
-|NIC  |nom linux| ip            |  macAdd <br> cas profe | configuració| tipus|funció|
-|-----  |------| -----      |  ------ |  ----|----|----|
-|NIC 1|enp0s3|  10.0.2.??      |  .. ad58 | DHCP|NAT|Internet|
-|NIC 2|enp0s8|  192.168.56.101 |  .. 16c9 | DHCP|Host-Only|Putty|
-|NIC 3|enp0s9|  192.168.X0.2   |  .. 3597 | IP manual|BRIDGE| Connexió amb W2025<br> xarxa 192.168.50.0/24 |
+|# NIC|Nom<br>Linux|Adreça IP|McAdd<br>(cas profe)|Config.|Tipus|Funció|
+|----|----|----|----|----|----|----|
+|1|enp0s3|10.0.2.??|<small>..ad58</small>|DHCP|NAT|Internet|
+|2|enp0s8|192.168.56.101|<small>..16c9</small>|DHCP|Host-Only|Putty|
+|3|enp0s9|192.168.X0.2|<small>..3597</small>|IP manual|BRIDGE|Connexió amb W2025<br>Xarxa 192.168.X0.0/24|
+
+⬇️
+
+----
 
 ```bash
 sudo vi /etc/netplan/50-cloud-init.yaml
@@ -282,6 +290,10 @@ Altres fitxer poden ser:
 /etc/netplan/01-network-manager-all.yaml
 ```
 
+⬇️
+
+----
+
 Configuració NIC Bridge
 ```bash
     enp0s9:
@@ -295,7 +307,14 @@ Configuració NIC Bridge
         addresses: [8.8.8.8, 8.8.4.4]
 ```
 
+
+⬇️
+
+----
+
 ## Configuració contenidor mysql
+
+Entrem al contenidor que conté la base de dades
 
 ```bash
 sudo docker exec -ti mysql-db-1 bash
@@ -313,7 +332,11 @@ I la sortida mostrarà alguna cosa semblant a:
 LISTEN 0    80     0.0.0.0:3306 ...
 ```
 
-Des del servidor **Srv W2025** que té IP **`192.168.X0.1`**.
+⬇️
+
+----
+
+### Des del servidor **Srv W2025** que té IP **`192.168.X0.1`**.
 
 Comprobar que tenim connexió amb el servidor a on tenim la base de dades:
 
@@ -326,6 +349,10 @@ Comprobar que el servidor a on tenim la base de dades, està escoltant pel port 
 ```powershell
 Test-NetConnection 192.168.X0.2 -Port 3306
 ```
+
+⬇️
+
+----
 
 A la sortida de la comanda cal veure:
 
