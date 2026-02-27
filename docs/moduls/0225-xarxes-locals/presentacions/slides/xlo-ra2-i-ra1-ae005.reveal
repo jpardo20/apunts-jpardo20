@@ -1,0 +1,127 @@
+# 0225 – Xarxes locals  
+## Sessió pràctica – Instal·lació i verificació de cablejat  (0225-ae005)
+### Preparació per avaluació del 2n trimestre
+
+---
+
+# Objectiu de la sessió
+
+Avui treballarem principalment:
+
+- **RA2 – Instal·lació de xarxes locals cablejades**
+- **RA1 – Identificació d’elements d’una xarxa local** (aplicat)
+
+Aquesta sessió és **diagnòstica** i es consolidarà en la sessió final d’avaluació.
+
+---
+
+# Recordatori tècnic (RA1)
+
+## Estàndard T568B
+
+Ordre correcte dels fils:
+
+1. Blanc-taronja  
+2. Taronja  
+3. Blanc-verd  
+4. Blau  
+5. Blanc-blau  
+6. Verd  
+7. Blanc-marró  
+8. Marró  
+
+---
+
+# Què estem avaluant? (RA2)
+
+Durant la pràctica observaré:
+
+- Ordre correcte dels fils
+- Tall net i alineació correcta
+- Inserció completa dins el connector
+- Ús correcte de la grimpadora
+- Resultat del comprovador
+- Metodologia i ordre de treball
+
+---
+
+# Bones pràctiques professionals (RA2 + RA4)
+
+- No despullar més cable del necessari
+- No doblegar excessivament els parells
+- Mantenir ordre a la taula
+- Etiquetar correctament el cable
+- Repetir amb criteri si hi ha error
+
+---
+
+# Procediment de la prova
+
+Cada alumne haurà de:
+
+1. Preparar el cable
+2. Crimpar els dos extrems
+3. Verificar amb comprovador
+4. Explicar què ha passat si hi ha error
+5. Etiquetar el cable correctament
+
+---
+
+# Si el cable falla...
+
+No es repeteix immediatament.
+
+Primer cal:
+
+- Interpretar el resultat del comprovador
+- Explicar quin tipus d’error s’ha produït
+- Proposar una possible causa
+
+Això forma part de **RA1 (identificació i interpretació)**.
+
+---
+
+# Part escrita (RA1)
+
+Al final de la sessió respondreu:
+
+1. Diferència entre T568A i T568B
+2. Què indica un parell invertit?
+3. Per què no s’ha de despullar massa cable?
+4. Per què és important etiquetar en entorns professionals?
+
+---
+
+# Important
+
+Aquesta sessió és:
+
+- Diagnòstica
+- Formativa
+- Preparació per a la consolidació final
+
+La competència real es validarà a la sessió final.
+
+---
+
+# Última part de la sessió
+
+Prepararem la següent fase del projecte:
+
+**RA3 – Configuració IP i diagnosi en entorn virtual**
+
+- Instal·lació d’una ISO Linux
+- Creació de màquina virtual
+- Configuració de xarxa interna
+
+---
+
+# Resum
+
+Avui treballem:
+
+- RA2 → Instal·lació física
+- RA1 → Interpretació tècnica
+- Preparació de RA3
+
+Objectiu: arribar preparats a l’avaluació final del trimestre.
