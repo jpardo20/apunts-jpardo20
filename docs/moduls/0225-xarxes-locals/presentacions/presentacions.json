@@ -78,9 +78,9 @@
     },
     {
       "order": "100",
-      "title": "100. Sessió pràctica: Instal·lació i verificació de cablejat - 0225-ae005",
-      "src": "slides/xlo-ra2-i-ra1-ae005.reveal",
-      "description": "Instal·lació i verificació de cablejat - 0225-ae005 - RA1 i RA2",
+      "title": "100. Sessió pràctica: Instal·lació i verificació de cablejat - 0225-xlo-ae006",
+      "src": "slides/xlo-ra2-i-ra1-0225-xlo-ae005.reveal",
+      "description": "Instal·lació i verificació de cablejat - 0225-xlo-ae006 - RA1 i RA2",
       "status": "active",
       "kind":"activity"
     }
