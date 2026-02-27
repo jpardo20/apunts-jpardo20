@@ -19,7 +19,6 @@ Aquesta sessió és **diagnòstica** i es consolidarà en la sessió final d’a
 
 ## Estàndard <codijpc>T568B</codijpc>
 
-
 <div style="display:flex; align-items:center; gap:2rem;">
   <div style="flex:2; text-align:center;">
     <img src="../img/0225-xarxes-locals/esquema-rj45-t5668a-i-b.png" alt="../img/0225-xarxes-locals/presentacions/slides/esquema-rj45-t5668a-i-b.png" width="600">
@@ -37,10 +36,6 @@ Aquesta sessió és **diagnòstica** i es consolidarà en la sessió final d’a
     </ul>
   </div>
 </div>
-
-
-
-
 
 ---
 
@@ -101,6 +96,61 @@ Al final de la sessió respondreu:
 2. Què indica un parell invertit?
 3. Per què no s’ha de despullar massa cable?
 4. Per què és important etiquetar en entorns professionals?
+
+---
+
+# Documentació d’evidències (RA2)
+
+Aquesta pràctica generarà evidència tècnica al vostre repositori individual de GitHub Classroom.
+
+Primer:
+
+1. Crimpar
+2. Validar amb comprovador
+3. Etiquetar
+4. **Després** fer les fotografies
+
+No es fan fotos abans de validar el cable.
+
+---
+
+# Evidències obligatòries
+
+Heu de pujar al repositori:
+
+- `01_fils_alineats.jpg`
+- `02_connector_abans_crimpar.jpg`
+- `03_comprovador_resultat.jpg`
+
+Requisits:
+
+- Fotos clares i enfocades
+- El cable ha d’estar etiquetat amb el vostre nom
+- No s’accepten fotos d’un altre alumne
+
+Missatge de commit obligatori:
+
+"Evidència RA2 – crimpat correcte"
+
+---
+
+# Accés a GitHub Classroom
+
+Enllaç d’acceptació de l’activitat:
+
+https://classroom.github.com/a/0Pl2doDl
+
+Passos:
+
+1. Acceptar l’Assignment
+2. Clonar el repositori
+3. Crear carpeta `/evidencies/` si no existeix
+4. Afegir les fotos
+5. `git add .`
+6. `git commit -m "Evidència RA2 – crimpat correcte"`
+7. `git push`
+
+Si avui no hi ha temps de pujar-les, es farà a la propera sessió
 
 ---
 
