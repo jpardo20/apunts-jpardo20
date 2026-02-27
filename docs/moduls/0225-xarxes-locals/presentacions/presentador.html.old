@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecció…</title>
+  <script>
+    const target = "/apunts-jpardo20/assets/files/presentador.html"
+                 + window.location.search
+                 + window.location.hash;
+    window.location.replace(target);
+  </script>
+</head>
+<body>
+  <p>Redirigint al presentador…</p>
+</body>
+</html>

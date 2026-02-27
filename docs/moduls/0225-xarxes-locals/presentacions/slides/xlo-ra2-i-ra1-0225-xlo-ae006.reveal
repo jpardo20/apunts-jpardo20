@@ -1,5 +1,5 @@
 # 0225 – Xarxes locals  
-## Sessió pràctica – Instal·lació i verificació de cablejat  (0225-xlo-ae006)
+## Sessió pràctica – Instal·lació i verificació de cablejat  (<codijpc>0225-xlo-ae006</codijpc>)
 ### Preparació per avaluació del 2n trimestre
 
 ---
@@ -17,16 +17,30 @@ Aquesta sessió és **diagnòstica** i es consolidarà en la sessió final d’a
 
 # Recordatori tècnic (RA1)
 
-## Estàndard T568B
+## Estàndard <codijpc>T568B</codijpc>
 
-1. Blanc-taronja  
-2. Taronja  
-3. Blanc-verd  
-4. Blau  
-5. Blanc-blau  
-6. Verd  
-7. Blanc-marró  
-8. Marró  
+
+<div style="display:flex; align-items:center; gap:2rem;">
+  <div style="flex:2; text-align:center;">
+    <img src="../img/0225-xarxes-locals/esquema-rj45-t5668a-i-b.png" alt="../img/0225-xarxes-locals/presentacions/slides/esquema-rj45-t5668a-i-b.png" width="600">
+  </div>
+  <div style="flex:1;">
+    <ul>
+      <li>1. Blanc-taronja</li>
+      <li>2. Taronja</li>
+      <li>3. Blanc-verd</li>
+      <li>4. Blau</li>
+      <li>5. Blanc-blau</li>
+      <li>6. Verd</li>
+      <li>7. Blanc-marró</li>
+      <li>8. Marró  </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
 
 ---
 
@@ -83,7 +97,7 @@ Això forma part de **RA1 (identificació i interpretació)**.
 
 Al final de la sessió respondreu:
 
-1. Diferència entre T568A i T568B
+1. Diferència entre <codijpc>T568A</codijpc> i <codijpc>T568B</codijpc>
 2. Què indica un parell invertit?
 3. Per què no s’ha de despullar massa cable?
 4. Per què és important etiquetar en entorns professionals?
