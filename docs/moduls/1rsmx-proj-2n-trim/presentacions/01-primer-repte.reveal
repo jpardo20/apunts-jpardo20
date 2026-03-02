@@ -21,6 +21,40 @@ Cada alumne tindrà:
 
 Tot el que feu quedarà registrat.
 
+⬇️
+
+----
+
+# Accés a GitHub Classroom
+
+Enllaç d’acceptació de l’activitat:
+
+## Passos
+
+1. Acceptar l’<a href="https://classroom.github.com/a/-Xf0rS1Z" target="_blank"> **Assignment** `SMX-Sprint-T2`</a>.
+2. Clonar el vostre repositori individual al vostre equip.
+3. Generar el fitxer d’evidència executant <codijpc>smx_evidencia.sh</codijpc> a Ubuntu.
+
+⬇️
+
+----
+
+4. Copiar el fitxer generat dins la carpeta <codijpc>0221_muntatge/evidencies/</codijpc>
+
+5. Renombrar-lo exactament a <codijpc>ubuntu_evidencia.json</codijpc>
+
+6. Afegir els canvis: <codijpc>git add .</codijpc>
+
+7. Fer el **`commit`** <codijpc>git commit -m "Evidència Ubuntu – configuració inicial"</codijpc>
+
+8. Fer push: <codijpc>git push -u origin main</codijpc>
+
+9. Comprovar el resultat a la pestanya **Actions** del repositori.
+
+* Si surt <codijpc>FAIL</codijpc>, llegir el missatge, corregir i tornar a enviar.
+
+* Si surt <codijpc>PASS</codijpc>, el lliurament és correcte.
+
 ---
 
 ## Com funciona el sistema
