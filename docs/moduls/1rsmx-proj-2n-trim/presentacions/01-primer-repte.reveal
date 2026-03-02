@@ -301,9 +301,10 @@ Dins del fitxer: <codijpc>0221_muntatge/analisi.md</codijpc> cal copiar i omplir
 ## Normes importants
 
 * Revisar abans de fer <codijpc>push</codijpc>.
-* Mirar la pestanya **Actions** si surt <codijpc>FAIL</codijpc>.
-* Llegir el missatge d’error.
-* Corregir i tornar a enviar.
+* Mirar la pestanya **Actions**
+    * si surt <codijpc>FAIL</codijpc>.
+        * Llegir el missatge d’error.
+        * Corregir i tornar a enviar.
 
 <hr>
 
