@@ -1,0 +1,209 @@
+# SPRINT TÈCNIC SMX – TANCAMENT 2n TRIMESTRE
+
+## Dates
+
+* **Inici**: <codijpc>02/03/2026</codijpc>
+* **Data límit final**: <codijpc>12/03/2026</codijpc> a les <codijpc>23:59</codijpc>
+* **Defensa individual**: <codijpc>13/03/2026</codijpc>
+
+---
+
+## Objectiu
+
+Durant aquestes dues setmanes treballarem com un equip tècnic real.
+
+Cada alumne tindrà:
+
+* Un repositori individual.
+* Validació automàtica en fer <codijpc>push</codijpc>.
+* Feedback immediat (<codijpc>PASS</codijpc> o <codijpc>FAIL</codijpc>).
+* Una defensa final breu.
+
+Tot el que feu quedarà registrat.
+
+---
+
+## Com funciona el sistema
+
+Cada vegada que feu <codijpc>git push</codijpc>:
+
+1. S’activa una validació automàtica.
+2. Si falta alguna cosa → <codijpc>FAIL</codijpc> (amb missatge clar).
+3. Si està correctament lliurat → <codijpc>PASS</codijpc>.
+
+
+⬇️
+
+----
+
+
+El sistema comprova:
+
+* Que el fitxer existeix.
+* Que no està buit.
+* Que és JSON vàlid.
+* Que conté el camp <codijpc>hostname</codijpc>.
+
+⬇️
+
+----
+
+### IMPORTANT:
+
+* <codijpc>PASS</codijpc> vol dir que el fitxer està correctament lliurat.
+
+* No vol dir que la configuració sigui correcta.
+
+* La configuració serà revisada.
+
+---
+
+### Sistema de valoració tècnica
+
+| Moment en què s’aconsegueix el primer <codijpc>PASS</codijpc> | Nota |
+|---------------------------------------------------------------|------:|
+| Al **primer** intent                                              | **`100%`** |
+| Al **segon** intent (correcció ràpida, **`<5` min**)                    | **`100%`** |
+| Al **segon** intent (**`≥5` min**)                                      | **`95%`**  |
+| Al **tercer** intent                                              | **`90%`**  |
+| A partir del **quart** intent                                     | **`85%`**  |
+
+⬇️
+
+----
+
+* El temps es calcula segons el registre de <codijpc>GitHub Actions</codijpc> entre el primer <codijpc>FAIL</codijpc> i el primer <codijpc>PASS</codijpc>.
+
+* La nota es determina segons el moment en què es registra el primer <codijpc>PASS</codijpc> a <codijpc>GitHub Actions</codijpc>.
+
+* Els errors es poden corregir.
+
+* El rigor abans de fer push té valor.
+
+* No es modificaran manualment notes un cop registrat el primer <codijpc>PASS</codijpc>.
+---
+
+## REPTE 1 – UBUNTU (Dilluns 02/03)
+
+### Data límit Repte 1 – Ubuntu
+
+* Data límit de validació amb <codijpc>PASS</codijpc>:
+
+ **Dimecres 04/03/2026 a les 11:20**
+
+
+
+* A partir d’aquesta hora, encara es podrà lliurar,
+però es considerarà fora de termini.
+
+* Es tindrà en compte l’hora del primer <codijpc>PASS</codijpc> registrat a <codijpc>GitHub Actions</codijpc>.
+
+⬇️
+
+----
+
+Cal configurar la màquina Ubuntu perquè:
+
+1. Tingui <codijpc>hostname</codijpc> correcte.
+2. Tingui IP estàtica.
+3. **apache2** estigui instal·lat i en execució. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>Cal comprovar que el servei està actiu.</small>
+4. Es generi l’evidència amb <codijpc>smx_evidencia.sh</codijpc>.
+5. Es pugi el fitxer al vostre repositori:
+
+<codijpc>0221_muntatge/evidencies/ubuntu_evidencia.json</codijpc>
+
+⬇️
+
+----
+
+* L’script genera un fitxer amb nom automàtic, del tipus
+
+<codijpc>smx_evidencia_cognom-nom_2026-03-01_XX-XX-XX.json</codijpc>
+
+
+* Cal copiar-lo al repositori i renombrar-lo exactament a:
+
+<codijpc>0221_muntatge/evidencies/ubuntu_evidencia.json</codijpc>
+
+---
+
+## Convencions obligatòries
+
+## Hostname
+
+<codijpc>smx-cognom</codijpc>
+
+* Minúscules.
+* Sense accents.
+* Sense espais.
+* Si hi ha coincidència → afegim 2 lletres del segon cognom.
+
+> **Veure taula de dades**
+---
+
+## IP
+
+```
+192.168.50.1X/24
+Gateway: 192.168.50.1
+```
+
+X = número assignat a cada alumne.
+
+> **Veure taula de dades**
+
+
+⬇️
+
+----
+
+|Nom i Cognoms|Hostname|IP estàtica|Màscara|Gateway|
+|------|-------|-----|----|-----|
+|Lorena Cracana|<codijpc>smx-cracana</codijpc>|<codijpc>192.168.50.11</codijpc>|<small><codijpc>255.255.255.0</codijpc></small>|<small><codijpc>192.168.50.1</codijpc></small>|
+|Daniel De Paiva|<codijpc>smx-depaiva</codijpc>|<codijpc>192.168.50.12</codijpc>|<small><codijpc>255.255.255.0</codijpc></small>|<small><codijpc>192.168.50.1</codijpc></small>|
+|Pau Díaz|<codijpc>smx-diaz</codijpc>|<codijpc>192.168.50.13</codijpc>|<small><codijpc>255.255.255.0</codijpc></small>|<small><codijpc>192.168.50.1</codijpc></small>|
+|Merouan Kiass|<codijpc>smx-kiass</codijpc>|<codijpc>192.168.50.14</codijpc>|<small><codijpc>255.255.255.0</codijpc></small>|<small><codijpc>192.168.50.1</codijpc></small>|
+|Marc López|<codijpc>smx-lopez</codijpc>|<codijpc>192.168.50.15</codijpc>|<small><codijpc>255.255.255.0</codijpc></small>|<small><codijpc>192.168.50.1</codijpc></small>|
+|Clemente Ramos|<codijpc>smx-ramos</codijpc>|<codijpc>192.168.50.16</codijpc>|<small><codijpc>255.255.255.0</codijpc></small>|<small><codijpc>192.168.50.1</codijpc></small>|
+|Kristina Velkovska|<codijpc>smx-velkovska</codijpc>|<codijpc>192.168.50.17</codijpc>|<small><codijpc>255.255.255.0</codijpc></small>|<small><codijpc>192.168.50.1</codijpc></small>|
+
+---
+
+## Normes importants
+
+* Revisar abans de fer <codijpc>push</codijpc>.
+* Mirar la pestanya **Actions** si surt <codijpc>FAIL</codijpc>.
+* Llegir el missatge d’error.
+* Corregir i tornar a enviar.
+
+<hr>
+
+* No es tracta de provar fins que surti.
+
+* Es tracta de lliurar amb criteri.
+
+
+---
+
+## Defensa final
+
+Divendres 13/03:
+
+* Explicar configuració IP.
+* Explicar <codijpc>hostname</codijpc>.
+* Explicar què fa l’script.
+* Explicar què significa el JSON.
+
+<hr>
+
+* No només importa que funcioni.
+
+* Importa que ho entengueu.
+
+---
+
+## Missatge final
+
+Tindreu ajuda durant el procés.
+El sistema és objectiu i igual per a tothom.
+Treballarem com un equip tècnic real.

@@ -20,6 +20,9 @@ nav:
     - MOPT1 Programació Python:
       # - Presentacions:
         - Presentacions:  moduls/mopt1-robotica-python/presentacions/index.html
+    - PR2T - Projecte 2n trimestre:
+      # - Presentacions:
+        - Presentacions:  moduls/1rsmx-proj-2n-trim/presentacions/index.html
     - Tutoria:
       # - Presentacions:
         - Presentacions:  moduls/tutoria/presentacions/index.html

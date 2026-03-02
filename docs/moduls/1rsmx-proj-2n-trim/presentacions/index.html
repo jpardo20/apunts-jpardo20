@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ca">
+
+<head>
+    <meta charset="utf-8">
+    <title>Apunts Joan Pardo per DigiTechFP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../assets/css/styles.css">
+</head>
+
+<body class="portal">
+
+    <body class="portal">
+        <header class="portal-header"
+                data-module="auto"
+                data-back-href="auto"
+                data-back-text="auto"
+            data-subtitle="">
+        </header>
+        
+        
+
+
+        <!-- Controls -->
+        <div class="toolbar">
+            <input id="search" type="search" placeholder="Cerca per títol o descripció…">
+            <select id="sort" class="sort-select" aria-label="Ordena">
+                <option value="title-az">Títol A → Z</option>
+                <option value="title-za">Títol Z → A</option>
+                <option value="date-new">Data (recent primer)</option>
+                <option value="date-old">Data (antic primer)</option>
+            </select>
+        </div>
+        <main>
+            <section id="grid" class="grid" aria-live="polite"></section>
+        </main>
+
+        <footer class="site-footer">© 2025 - 2026     |     Apunts Joan Pardo per DigiTechFP</footer>
+        <script src="../../../assets/js/presentacions-grid.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                initPresentationsPage({
+                    jsonUrl: 'presentacions.json'
+                });
+            });
+        </script>
+        <script src="../../../assets/js/portal-header.js"></script>
+    </body>
+
+</html>

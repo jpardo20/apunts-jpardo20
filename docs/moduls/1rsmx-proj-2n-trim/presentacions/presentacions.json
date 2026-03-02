@@ -1,0 +1,16 @@
+{
+    "module": {
+        "code": "1smx2ntrim",
+        "name": "1rsmx-proj-2n-trimestre"
+    },
+    "presentations": [
+        {
+            "order": "001",
+            "title": "001. SPRINT TÈCNIC SMX – TANCAMENT 2n TRIMESTRE",
+            "src": "01-primer-repte.reveal",
+            "description": "SPRINT TÈCNIC SMX – TANCAMENT 2n TRIMESTRE",
+            "status": "active",
+            "kind": "activity"
+        }
+    ]
+}

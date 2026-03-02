@@ -13,6 +13,7 @@
     </div>
     <div>
       <h2 style="margin: 5px;"><strong>Altres</strong></h2>
+      <h3><a href="moduls/1rsmx-proj-2n-trim/presentacions/index.html">PR2T - Projecte 2n trimestre</a></h3>
       <h3><a href="moduls/tutoria/presentacions/index.html">Tutoria</a></h3>
     </div>
   </div>
