@@ -10,7 +10,17 @@
 
 ## Objectiu
 
-Durant aquestes dues setmanes treballarem com un equip tècnic real.
+* Durant aquestes dues setmanes treballarem com un equip tècnic real.
+
+* Això no és una pràctica aïllada.
+
+* És una simulació de treball professional.
+
+
+⬇️
+
+----
+
 
 Cada alumne tindrà:
 
@@ -19,11 +29,9 @@ Cada alumne tindrà:
 * Feedback immediat (<codijpc>PASS</codijpc> o <codijpc>FAIL</codijpc>).
 * Una defensa final breu.
 
-Tot el que feu quedarà registrat.
+Tot el que feu quedarà registrat (commits, intents, temps i validacions).
 
-⬇️
-
-----
+---
 
 # Accés a GitHub Classroom
 
@@ -88,6 +96,10 @@ El sistema comprova:
 
 * No vol dir que la configuració sigui correcta.
 
+* Un sistema valida estructura.
+
+* Un tècnic ha d’entendre arquitectura.
+
 * La configuració serà revisada.
 
 ---
@@ -114,7 +126,6 @@ El sistema comprova:
 
 * El rigor abans de fer push té valor.
 
-* No es modificaran manualment notes un cop registrat el primer <codijpc>PASS</codijpc>.
 ---
 
 ## REPTE 1 – UBUNTU (Dilluns 02/03)
@@ -124,8 +135,6 @@ El sistema comprova:
 * Data límit de validació amb <codijpc>PASS</codijpc>:
 
  **Dimecres 04/03/2026 a les 11:20**
-
-
 
 * A partir d’aquesta hora, encara es podrà lliurar,
 però es considerarà fora de termini.
@@ -159,7 +168,10 @@ Cal configurar la màquina Ubuntu perquè:
 
 <codijpc>0221_muntatge/evidencies/ubuntu_evidencia.json</codijpc>
 
----
+
+⬇️
+
+----
 
 ## Convencions obligatòries
 
@@ -173,7 +185,11 @@ Cal configurar la màquina Ubuntu perquè:
 * Si hi ha coincidència → afegim 2 lletres del segon cognom.
 
 > **Veure taula de dades**
----
+
+⬇️
+
+----
+
 
 ## IP
 
@@ -201,6 +217,85 @@ X = número assignat a cada alumne.
 |Clemente Ramos|<codijpc>smx-ramos</codijpc>|<codijpc>192.168.50.16</codijpc>|<small><codijpc>255.255.255.0</codijpc></small>|<small><codijpc>192.168.50.1</codijpc></small>|
 |Kristina Velkovska|<codijpc>smx-velkovska</codijpc>|<codijpc>192.168.50.17</codijpc>|<small><codijpc>255.255.255.0</codijpc></small>|<small><codijpc>192.168.50.1</codijpc></small>|
 
+
+
+---
+
+
+## REPTE 1 – CONSOLIDACIÓ (Dimarts 03/03)
+
+Objectiu: consolidar configuració i entendre què hem fet.
+
+Aquesta fase avalua comprensió, no només execució tècnica.
+
+⬇️
+
+----
+
+### Part tècnica
+
+Cal modificar la pàgina per defecte d’Apache perquè mostri:
+
+<codijpc>Servidor SMX – cognom</codijpc>
+
+* No es proporcionarà la ruta del fitxer.
+
+* Cal investigar-la.
+
+⬇️
+
+----
+
+Cal verificar que:
+
+* Apache està en execució.
+* La pàgina és accessible via navegador.
+* El contingut s’ha modificat correctament.
+
+
+⬇️
+
+----
+
+### Part conceptual
+
+Cal crear el fitxer: <codijpc>0221_muntatge/analisi.md</codijpc> i respondre a:
+
+1. Què és un <codijpc>hostname</codijpc>?
+2. Per què fem servir <codijpc>IP estàtica</codijpc>?
+3. Com sabem que <codijpc>Apache</codijpc> està funcionant?
+4. Què és el fitxer <codijpc>JSON</codijpc> generat?
+5. Per què el <codijpc>JSON</codijpc> és una evidència vàlida?
+
+El fitxer <codijpc>0221_muntatge/analisi.md</codijpc>, també s’ha de pujar al repositori.
+
+No s’acceptaran respostes copiades literalment d’Internet.
+
+⬇️
+
+----
+
+Dins del fitxer: <codijpc>0221_muntatge/analisi.md</codijpc> cal copiar i omplir:
+
+```markdown
+
+## Explicació
+
+1. Què és el **`hostname`**?
+
+2. Per què fem servir **`IP estàtica`**?
+
+3. Com sabem que **`Apache`** està funcionant?
+
+4. Què és el fitxer **`JSON`** generat?
+
+5. Per què el **`JSON`** és una evidència vàlida?
+```
+
+* Cal respondre amb paraules pròpies, de manera clara i concreta.
+* No es tracta de copiar definicions.
+* Es tracta de demostrar que entens el que has configurat.
+
 ---
 
 ## Normes importants
@@ -213,7 +308,6 @@ X = número assignat a cada alumne.
 <hr>
 
 * No es tracta de provar fins que surti.
-
 * Es tracta de lliurar amb criteri.
 
 
@@ -231,13 +325,11 @@ Divendres 13/03:
 <hr>
 
 * No només importa que funcioni.
-
 * Importa que ho entengueu.
 
 ---
 
 ## Missatge final
 
-Tindreu ajuda durant el procés.
-El sistema és objectiu i igual per a tothom.
-Treballarem com un equip tècnic real.
+* El sistema és objectiu i igual per a tothom.
+* Treballarem com un equip tècnic real.

@@ -5,12 +5,20 @@
     },
     "presentations": [
         {
+            "order": "000",
+            "title": "000. SPRINT SMX — BRIEFING INICIAL",
+            "src": "00-briefing-sprint.reveal",
+            "description": "És el marc mental abans de començar.",
+            "status": "active",
+            "kind": "activity"
+        },{
             "order": "001",
             "title": "001. SPRINT TÈCNIC SMX – TANCAMENT 2n TRIMESTRE",
             "src": "01-primer-repte.reveal",
-            "description": "SPRINT TÈCNIC SMX – TANCAMENT 2n TRIMESTRE",
+            "description": "Això no és una pràctica aïllada.<br>És una simulació de treball professional.",
             "status": "active",
             "kind": "activity"
         }
+
     ]
 }

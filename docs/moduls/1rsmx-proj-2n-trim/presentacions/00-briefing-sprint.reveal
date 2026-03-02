@@ -1,0 +1,58 @@
+# SPRINT TÈCNIC SMX — T2
+
+---
+
+## Què comença avui?
+
+Durant dues setmanes treballarem com un equip tècnic real.
+
+* Això no és una pràctica aïllada.
+
+* És una simulació de treball professional.
+
+---
+
+## Com funciona?
+
+* Cada alumne té un repositori individual
+* Cada <codijpc>git push</codijpc> activa validació automàtica
+* El sistema retorna <codijpc>PASS</codijpc> o <codijpc>FAIL</codijpc>
+* Tot queda registrat
+
+---
+
+## Important
+
+* <codijpc>PASS</codijpc> vol dir => **El lliurament és estructuralment correcte**
+
+* <codijpc>PASS</codijpc> **NO** vol dir => **Que la configuració sigui correcta**
+
+---
+
+* Un sistema valida estructura.
+
+* Un tècnic ha d’entendre arquitectura.
+
+---
+
+## Com es valora?
+
+Es té en compte:
+
+* El moment del primer <codijpc>PASS</codijpc>
+* El nombre d’intents
+* El rigor abans de fer <codijpc>push</codijpc>
+
+---
+
+No es tracta de provar fins que surti.
+
+Es tracta de lliurar amb criteri.
+
+---
+
+## Objectiu real
+
+* Que funcioni.
+* Que ho entenguis.
+* Que ho puguis explicar.
