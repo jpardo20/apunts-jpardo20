@@ -41,15 +41,16 @@
 
 ---
 
-
 ### Eines que hem utilitzat avui
 
-| prova | capa OSI | què comprova |
-|------|-----------|--------------|
-| `ping` | capa 3 | connectivitat de xarxa |
-| `curl http://IP` | capa 7 | servei web |
-| navegador | capa 7 | experiència d'usuari |
-
+| prova / eina | què comprova | capa OSI principal | explicació |
+|---------------|--------------|--------------------|------------|
+| ping | connectivitat entre màquines | Capa 3 – Xarxa | utilitza ICMP per comprovar si una màquina és accessible a través de la xarxa IP |
+| curl http://IP | servei web | Capa 7 – Aplicació | envia una petició HTTP directament al servidor per veure si el servei Apache respon |
+| navegador | experiència d'usuari | Capa 7 – Aplicació | comprova que el servei HTTP funciona correctament des d'una aplicació real d'usuari |
+| IP configurada | adreçament de la màquina | Capa 3 – Xarxa | determina a quina xarxa pertany el sistema |
+| MAC / NIC | accés al medi | Capa 2 – Enllaç de dades | la targeta de xarxa permet enviar trames dins de la xarxa local |
+| cable / Wi-Fi | connexió física | Capa 1 – Física | el medi físic permet transportar els bits entre dispositius |
 
 
 ---
