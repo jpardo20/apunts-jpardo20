@@ -1,0 +1,62 @@
+## Explicació diagnòstic d’un servidor (model OSI)
+
+<table>
+<tr>
+<th>capa OSI</th>
+<th>què representa</th>
+<th>exemple en la pràctica</th>
+</tr>
+
+<tr class="fragment fade-up" data-fragment-index="4">
+<td><b>7 Aplicació</b></td>
+<td>serveis que utilitzen els usuaris</td>
+<td>Apache / HTTP</td>
+</tr>
+
+<tr class="fragment fade-up" data-fragment-index="3">
+<td><b>4 Transport</b></td>
+<td>comunicació entre processos</td>
+<td>TCP port 80</td>
+</tr>
+
+<tr class="fragment fade-up" data-fragment-index="2">
+<td><b>3 Xarxa</b></td>
+<td>adreces IP i encaminament</td>
+<td>192.168.50.X</td>
+</tr>
+
+<tr class="fragment fade-up" data-fragment-index="1">
+<td><b>2 Enllaç</b></td>
+<td>comunicació dins la LAN</td>
+<td>MAC / targeta de xarxa</td>
+</tr>
+
+<tr class="fragment fade-up" data-fragment-index="0">
+<td><b>1 Física</b></td>
+<td>transmissió de bits</td>
+<td>cable / Wi-Fi</td>
+</tr>
+
+</table>
+
+---
+
+
+### Eines que hem utilitzat avui
+
+| prova | capa OSI | què comprova |
+|------|-----------|--------------|
+| `ping` | capa 3 | connectivitat de xarxa |
+| `curl http://IP` | capa 7 | servei web |
+| navegador | capa 7 | experiència d'usuari |
+
+
+
+---
+
+
+### Idea clau
+
+Un servidor **no és només una màquina**.
+
+Un servidor és **un servei accessible des de la xarxa**.

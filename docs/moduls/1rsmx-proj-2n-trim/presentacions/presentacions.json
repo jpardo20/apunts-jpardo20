@@ -25,6 +25,13 @@
             "description": "Verificació de servidors.",
             "status": "active",
             "kind": "activity"
+        },{
+            "order": "003",
+            "title": "003. Explicació diagnòstic d’un servidor (model OSI)",
+            "src": "02-explicacio-ois.reveal",
+            "description": "Explicació diagnòstic d’un servidor (model OSI).",
+            "status": "active",
+            "kind": "activity"
         }
 
 
