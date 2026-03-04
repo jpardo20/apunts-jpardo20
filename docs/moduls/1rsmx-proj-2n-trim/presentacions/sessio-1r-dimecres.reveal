@@ -1,0 +1,116 @@
+# Sprint SMX – Verificació de servidors
+
+Avui farem una verificació tècnica dels servidors configurats.
+
+En un entorn professional, quan un tècnic configura un servidor,
+un altre tècnic comprova que el servei funciona correctament des de la xarxa.
+
+Aquesta activitat simula aquest procés.
+
+---
+
+## Objectiu
+
+Comprovar que els servidors Ubuntu del grup funcionen correctament
+i que el servei web (Apache) és accessible des d'altres màquines de la xarxa.
+
+---
+
+## Activitat
+
+Treballareu en parelles.
+
+Cada alumne haurà de provar el servidor d’un altre alumne.
+
+Haureu de comprovar:
+
+1. Connectivitat de xarxa
+2. Accés al servei web
+3. Funcionament real del servidor
+
+---
+
+## Proves obligatòries
+
+Des de la màquina del verificador:
+
+1️⃣ Comprovar connectivitat
+
+<codijpc>ping 192.168.50.X</codijpc>
+
+
+2️⃣ Comprovar servei web
+
+<codijpc>curl http://192.168.50.X</codijpc>
+
+
+3️⃣ Obrir el servidor al navegador
+
+<codijpc>http://192.168.50.X</codijpc>
+
+---
+
+## Si alguna prova falla
+
+Heu de diagnosticar el problema i solucionar-lo.
+
+Possibles causes:
+
+- Apache no està en execució
+- IP incorrecta
+- problema de xarxa
+- configuració incorrecta del servei
+
+---
+
+## Evidència obligatòria
+
+Heu de crear el fitxer:
+
+<codijpc>0221_muntatge/verificacio.md</codijpc>
+
+amb el resultat de la verificació.
+
+---
+
+Plantilla mínima:
+
+```md
+# Verificació de servidor
+
+Servidor verificat:
+IP:
+
+PING: OK / FAIL
+CURL: OK / FAIL
+HTTP navegador: OK / FAIL
+
+Servidor operatiu: SI / NO
+
+```
+---
+
+```md
+
+Problemes detectats:
+-
+
+Solució aplicada:
+-
+
+Verificat per:
+
+```
+---
+
+## Important
+
+Al final de la sessió heu de fer:
+
+```git
+git add verificacio.md
+git commit -m "verificacio servidor"
+git push
+```
+
+El repositori ha de quedar actualitzat abans d’acabar la classe.

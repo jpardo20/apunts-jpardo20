@@ -18,7 +18,16 @@
             "description": "Això no és una pràctica aïllada.<br>És una simulació de treball professional.",
             "status": "active",
             "kind": "activity"
+        },{
+            "order": "002",
+            "title": "002. SPRINT TÈCNIC SMX – Verificació de servidors",
+            "src": "sessio-1r-dimecres.reveal",
+            "description": "Verificació de servidors.",
+            "status": "active",
+            "kind": "activity"
         }
 
+
+        
     ]
 }
