@@ -30,6 +30,41 @@ Haureu de comprovar:
 
 ---
 
+## Procés de verificació
+
+La verificació es farà en **tres fases**:
+
+### 1️⃣ Verificació remota
+
+Primer heu de provar el servidor del vostre company **des de la vostra pròpia màquina virtual**.
+
+Això simula el comportament d’un client que accedeix a un servidor dins de la xarxa.
+
+---
+
+### 2️⃣ Diagnòstic
+
+Si alguna prova falla, aneu a la màquina del vostre company i reviseu conjuntament la configuració del servidor.
+
+Per exemple:
+
+- configuració de la IP
+- estat del servei Apache
+- configuració del sistema
+
+---
+
+### 3️⃣ Solució i nova verificació
+
+Si detecteu el problema:
+
+1. corregiu la configuració
+2. torneu a provar el servidor **des de la vostra pròpia màquina virtual**
+
+Un servidor només es considera correcte si funciona **des d’una altra màquina de la xarxa**.
+
+---
+
 ## Proves obligatòries
 
 Des de la màquina del verificador:
@@ -86,12 +121,11 @@ CURL: OK / FAIL
 HTTP navegador: OK / FAIL
 
 Servidor operatiu: SI / NO
-
 ```
+
 ---
 
 ```md
-
 Problemes detectats:
 -
 
@@ -99,8 +133,18 @@ Solució aplicada:
 -
 
 Verificat per:
-
 ```
+
+---
+
+## Segona ronda de verificació
+
+Si acabeu abans d’hora, podeu repetir el procés amb **un altre company**.
+
+Aquesta segona verificació serveix per comprovar si els problemes detectats a la primera ronda han estat solucionats.
+
+Afegiu els resultats al mateix fitxer `verificacio.md`.
+
 ---
 
 ## Important
