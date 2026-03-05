@@ -1,0 +1,186 @@
+## Activitat avaluable – Diagnòstic de servidor
+
+Avui hem configurat i verificat servidors Ubuntu dins de la xarxa del laboratori.
+
+Ara comprovarem si enteneu **què està passant realment a la xarxa**.
+
+Aquesta és una **mini activitat avaluable**.
+
+Resposta al repositori:
+
+<codijpc>0221_muntatge/diagnostic.md</codijpc>
+
+---
+
+## Pregunta clau (xarxa vs servei)
+
+Un alumne prova un servidor i obté aquests resultats:
+
+| prova | resultat |
+|------|----------|
+| ping 192.168.50.12 | funciona |
+| curl http://192.168.50.12 | falla |
+| navegador | no carrega |
+
+
+
+### Pregunta
+
+Què significa això?
+
+
+
+
+
+La **xarxa funciona** però el **servei web no respon**.
+
+
+
+
+
+Possibles causes:
+
+- Apache no està en execució  
+- Apache mal configurat  
+- servei HTTP no actiu  
+
+
+
+---
+
+## Mini activitat avaluable
+
+Crea el fitxer:
+
+<codijpc>0221_muntatge/diagnostic.md</codijpc>
+
+i respon les preguntes següents.
+
+---
+
+### 1. Diagnòstic
+
+Si:
+
+ping funciona  
+curl no funciona  
+
+Explica:
+
+- què està funcionant
+- què pot estar fallant
+
+---
+
+### 2. Model OSI
+
+Relaciona cada eina amb la capa principal que comprova:
+
+| eina | capa OSI |
+|------|-----------|
+| ping | ? |
+| curl | ? |
+| navegador | ? |
+
+Recorda:
+
+⬇️
+
+----
+
+| capa | eina |
+|------|------|
+| xarxa | ping |
+| servei | curl |
+| usuari | navegador |
+
+---
+
+### 3. Concepte de servidor
+
+Explica amb les teves paraules:
+
+> Què significa que un servidor **funciona correctament**?
+
+---
+
+### 4. Diagnòstic pràctic
+
+Indica **una possible causa** si:
+
+ping funciona  
+però el navegador no carrega la web.
+
+---
+
+### 5. Verificació del teu servidor
+
+Executa aquestes comandes a la teva màquina virtual i enganxa el resultat.
+
+```bash
+hostname
+```
+
+```bash
+hostname -I
+```
+
+```bash
+systemctl status apache2 --no-pager
+```
+
+Explica breument:
+
+- quin és el teu **hostname**
+- quina és la teva **IP**
+- si **Apache està actiu**
+
+---
+
+### 6. Verificació local del servei
+
+Executa:
+
+```bash
+curl localhost
+```
+
+Enganxa el resultat i explica:
+
+- què apareix
+- què significa aquest resultat
+
+---
+
+## Entrega
+
+Guardar el fitxer:
+
+<codijpc>0221_muntatge/diagnostic.md</codijpc>
+
+i executar:
+
+```bash
+git add diagnostic.md
+git commit -m "activitat diagnostic servidor"
+git push
+```
+
+---
+
+## Idea final
+
+Un servidor **no és només una màquina**.
+
+
+Un servidor és **un servei accessible des de la xarxa**.
+
+
+Per això avui hem utilitzat:
+
+| prova | què comprova |
+|------|--------------|
+| ping | xarxa |
+| curl | servei |
+| navegador | experiència d'usuari |
+

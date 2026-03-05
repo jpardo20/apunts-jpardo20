@@ -32,6 +32,13 @@
             "description": "Explicació diagnòstic d’un servidor (model OSI).",
             "status": "active",
             "kind": "activity"
+        },{
+            "order": "004",
+            "title": "004. Activitat avaluable – Diagnòstic de servidor",
+            "src": "03-activitat-avaluable-diagnostic.reveal",
+            "description": "Activitat avaluable – Diagnòstic de servidor.",
+            "status": "active",
+            "kind": "activity"
         }
 
 
