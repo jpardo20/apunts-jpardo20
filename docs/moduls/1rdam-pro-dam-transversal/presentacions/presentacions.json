@@ -139,13 +139,6 @@
             "description": "FASE 2: Desplegament d’Infraestructura",
             "status": "active",
             "kind": "theory"
-        } ,{
-            "order": "299",
-            "title": "299. FASE 2: Desplegament d’Infraestructura ",
-            "src": "slides/010-enunciat-fase-2.reveal",
-            "description": "FASE 2: Desplegament d’Infraestructura",
-            "status": "active",
-            "kind": "theory"
         }
 
     ]

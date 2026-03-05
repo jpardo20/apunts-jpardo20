@@ -270,3 +270,32 @@ El professor validarà:
 - contingut del repositori
 - evidències aportades
 - funcionament de la base de dades
+
+---
+
+## Detall dels camps obligatòris
+
+|Nom variable|Tipus camp DB|
+|----------------|-----------------|
+|'incidencia_table'| TAULA | 
+|'incidencia_id'| INT AUTO_INCREMENT|
+|'incidencia_estat'| ENUM('Oberta', 'En Procés', 'Resolta', 'Tancada') NOT NULL|
+|'descripcio_Incidencia'|TEXT|
+|'assumpte_Incidencia'| VARCHAR(200) NOT NULL|
+|'data_Apertura_Incidencia'|DATETIME NOT NULL|
+|||
+|'tecnic_table'|TAULA|
+|'tecnic_id'| INT AUTO_INCREMENT |
+|'tecnic_nom'| VARCHAR(100) NOT NULL,|
+|||
+|'client_table'| TAULA |
+|'client_id'| INT AUTO_INCREMENT |
+|'client_nom'|  VARCHAR(100) NOT NULL,|
+|'client_cognom'| VARCHAR(100) NOT NULL,|
+|||
+|'historial_table'| TAULA|
+|'historial_id'|INT AUTO_INCREMENT|
+|'historial_estats_anteriors'| ENUM('Oberta', 'En Procés', 'Resolta', 'Tancada') NOT NULL,|
+|'historial_data_canvi'| DATETIME NOT NULL,|
+|'historial_comentaris'| TEXT|
+|'historial_incidencia_id'|  INT|
