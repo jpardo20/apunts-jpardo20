@@ -273,7 +273,7 @@ El professor validarà:
 
 ---
 
-## Detall dels camps obligatòris
+## Detall dels camps obligatòris (1/4)
 
 |Nom variable|Tipus camp DB|
 |----------------|-----------------|
@@ -283,16 +283,40 @@ El professor validarà:
 |'descripcio_Incidencia'|TEXT|
 |'assumpte_Incidencia'| VARCHAR(200) NOT NULL|
 |'data_Apertura_Incidencia'|DATETIME NOT NULL|
-|||
+
+⬇️
+
+----
+
+## Detall dels camps obligatòris (2/4)
+
+|Nom variable|Tipus camp DB|
+|----------------|-----------------|
 |'tecnic_table'|TAULA|
 |'tecnic_id'| INT AUTO_INCREMENT |
 |'tecnic_nom'| VARCHAR(100) NOT NULL,|
-|||
+
+⬇️
+
+----
+
+## Detall dels camps obligatòris (3/4)
+
+|Nom variable|Tipus camp DB|
+|----------------|-----------------|
 |'client_table'| TAULA |
 |'client_id'| INT AUTO_INCREMENT |
 |'client_nom'|  VARCHAR(100) NOT NULL,|
 |'client_cognom'| VARCHAR(100) NOT NULL,|
-|||
+
+⬇️
+
+----
+
+## Detall dels camps obligatòris  (4/4)
+
+|Nom variable|Tipus camp DB|
+|----------------|-----------------|
 |'historial_table'| TAULA|
 |'historial_id'|INT AUTO_INCREMENT|
 |'historial_estats_anteriors'| ENUM('Oberta', 'En Procés', 'Resolta', 'Tancada') NOT NULL,|
