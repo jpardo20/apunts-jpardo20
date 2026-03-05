@@ -125,8 +125,14 @@
             "description": "FASE 2: Validació connexió MariaDB (Linux → Win2025)",
             "status": "active",
             "kind": "theory"
-        } 
- ,{
+        },{
+            "order": "250",
+            "title": "250. Activitat tècnica: IIS + PHP + MySQL en dues màquines</br> De grup <codiae>0484-bds-ae17</codiae>",
+                "src": "slides/012-act-tecnica-iis-php-mysql.reveal",
+            "description": "Activitat tècnica: IIS + PHP + MySQL en dues màquines</br> De grup <codiae>0484-bds-ae17</codiae>",
+            "status": "active",
+            "kind": "activity"
+        },{
             "order": "299",
             "title": "299. FASE 2: Desplegament d’Infraestructura ",
             "src": "slides/010-enunciat-fase-2.reveal",
@@ -141,6 +147,6 @@
             "status": "active",
             "kind": "theory"
         }
-        
+
     ]
 }

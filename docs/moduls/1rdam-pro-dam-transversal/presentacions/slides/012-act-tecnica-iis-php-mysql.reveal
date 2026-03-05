@@ -1,0 +1,265 @@
+# PhoenixTech  
+## Activitat tècnica: IIS + PHP + MySQL en dues màquines
+
+---
+
+# Objectiu de l'activitat
+
+L'objectiu és desplegar una aplicació web PHP sobre **Windows Server 2025 amb IIS**, connectada a una base de dades **MySQL/MariaDB situada en un servidor Linux**.
+
+Aquesta activitat permet validar:
+
+- funcionament d'un servidor web amb PHP
+- connexió remota a una base de dades
+- configuració de serveis en diferents màquines
+- integració completa d'una aplicació web amb base de dades
+
+---
+
+# Arquitectura del sistema
+
+Cada grup disposa de **dues màquines virtuals**:
+
+Servidor web:
+
+```
+Windows Server 2025
+IP: 192.168.x0.1
+Serveis instal·lats:
+- IIS
+- PHP
+```
+
+Servidor de base de dades:
+
+```
+Ubuntu Server
+IP: 192.168.x0.2
+Serveis instal·lats:
+- MySQL o MariaDB
+```
+
+L'aplicació PHP s'executa al servidor Windows i es connecta a la base de dades situada al servidor Linux.
+
+---
+
+# Flux de funcionament
+
+```
+Navegador
+   ↓
+IIS (Windows Server)
+   ↓
+Aplicació PHP
+   ↓
+MySQL / MariaDB (Ubuntu Server)
+```
+
+Per tant, la connexió a la base de dades serà **remota**, utilitzant la IP del servidor Linux.
+
+---
+
+# Aplicació proporcionada
+
+El professor proporciona una aplicació PHP amb l'estructura següent:
+
+```
+gestio-incidencies/
+│
+├── config/
+│   └── Database.php
+│
+├── models/
+├── controllers/
+├── views/
+│
+└── index.php
+```
+
+Aquesta aplicació utilitza **PDO** per connectar-se a la base de dades.
+
+---
+
+# Tasca a realitzar
+
+Cada grup ha de:
+
+1. Crear la base de dades `gestio_incidencies` al servidor Ubuntu.
+2. Executar l'script SQL per crear les taules.
+3. Permetre connexions remotes a MySQL/MariaDB.
+4. Configurar el fitxer `Database.php` perquè es connecti al servidor Linux.
+5. Desplegar l'aplicació PHP al servidor IIS.
+6. Verificar que l'aplicació funciona correctament.
+
+---
+
+# Configuració de la connexió
+
+La connexió a la base de dades ha d'utilitzar la IP del servidor Ubuntu.
+
+Exemple:
+
+```
+DB_HOST = 192.168.x0.2
+DB_NAME = gestio_incidencies
+```
+
+---
+
+# Verificació del funcionament
+
+L'aplicació ha de ser accessible des del navegador.
+
+Per exemple:
+
+```
+http://192.168.x0.1/gestio-incidencies
+```
+
+La pàgina ha de permetre interactuar amb la base de dades.
+
+---
+
+# Evidències obligatòries al repositori
+
+Per poder validar l'activitat, el repositori ha de contenir evidències clares.
+
+Les evidències s'han de col·locar dins la carpeta:
+
+```
+docs/
+```
+
+---
+
+# Evidència 1 — Configuració del servidor web
+
+Captura on es vegi:
+
+- IIS executant-se
+- el lloc web configurat
+- la carpeta de l'aplicació
+
+Fitxer:
+
+```
+docs/iis-config.png
+```
+
+---
+
+# Evidència 2 — Aplicació funcionant
+
+Captura del navegador amb l'aplicació executant-se.
+
+Ha de mostrar:
+
+- la pàgina principal
+- accés correcte a la base de dades
+
+Fitxer:
+
+```
+docs/aplicacio-funcionant.png
+```
+
+---
+
+# Evidència 3 — Base de dades al servidor Ubuntu
+
+Captura on es vegi:
+
+- base de dades `gestio_incidencies`
+- taules creades
+
+Fitxer:
+
+```
+docs/mysql-estructura.png
+```
+
+---
+
+# Evidència 4 — SQL utilitzat
+
+El repositori ha d'incloure el fitxer SQL amb l'estructura de la base de dades.
+
+Fitxer:
+
+```
+docs/database.sql
+```
+
+---
+
+# Evidència 5 — Documentació
+
+Cal incloure un document explicant el procés realitzat.
+
+Fitxer:
+
+```
+README.md
+```
+
+Ha d'incloure:
+
+- configuració del servidor IIS
+- configuració de la connexió PHP → MySQL
+- configuració de MySQL al servidor Ubuntu
+- problemes trobats i solucions
+
+---
+
+# Estructura esperada del repositori
+
+```
+repo-grup/
+│
+├── src/
+│   └── gestio-incidencies
+│
+├── docs/
+│   ├── iis-config.png
+│   ├── aplicacio-funcionant.png
+│   ├── mysql-estructura.png
+│   └── database.sql
+│
+└── README.md
+```
+
+---
+
+# Criteris d'avaluació
+
+| Aspecte | Pes |
+|---|---|
+Configuració IIS + PHP | 20%
+Configuració MySQL | 20%
+Connexió remota PHP → MySQL | 20%
+Aplicació funcional | 20%
+Documentació i evidències | 20%
+
+---
+
+# Important
+
+El repositori ha de mostrar **evidència clara del treball realitzat**.
+
+No es valoraran repositoris que:
+
+- no continguin captures
+- no incloguin el SQL
+- no expliquin el procés al README
+
+---
+
+# Entrega
+
+L'entrega es realitza mitjançant **commit al repositori del grup**.
+
+El professor validarà:
+
+- contingut del repositori
+- evidències aportades
+- funcionament de la base de dades
