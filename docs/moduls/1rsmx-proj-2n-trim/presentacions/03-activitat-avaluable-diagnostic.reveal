@@ -161,9 +161,9 @@ Guardar el fitxer:
 i executar:
 
 ```bash
-git add diagnostic.md
+git add 0221_muntatge/diagnostic.md
 git commit -m "activitat diagnostic servidor"
-git push
+git push -u origin main
 ```
 
 ---
