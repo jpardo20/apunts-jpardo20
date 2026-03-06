@@ -5,76 +5,67 @@
     },
     "presentations": [
         {
-            "id": "correccio",
-            "title": "Correcció — Activitat de Ciberseguretat bàsica",
+            "id": "99",
+            "title": "99: Correcció — Activitat de Ciberseguretat bàsica",
             "description": "Correcció — Activitat de Ciberseguretat bàsica",
             "src": "correccio-activitat-ciberseguretat-basica.reveal",
             "theme": "white",
             "status": "inactive",
-            "kind": "theory",
-            "tags": [
-                "BBDD"
-            ]
+            "kind": "theory"
         },
         {
-            "id": "1a-sessio",
-            "title": "1a Sessió | Projecte de Tutoria FP",
+            "id": "01",
+            "title": "01 - 1a Sessió | Projecte de Tutoria FP",
             "description": "Inici del projecte i reflexió inicial.",
             "src": "projecte-1a-sessio.reveal",
             "theme": "white",
             "status": "active",
-            "kind": "theory",
-            "tags": [
-                "BBDD"
-            ]
+            "kind": "theory"
         },
         {
-            "id": "2a-sessio",
-            "title": "2a Sessió | Projecte de Tutoria FP",
+            "id": "02",
+            "title": "02 - 2a Sessió | Projecte de Tutoria FP",
             "description": "El cicle i les sortides professionals.",
             "src": "projecte-2a-sessio.reveal",
             "theme": "white",
             "status": "active",
-            "kind": "theory",
-            "tags": [
-                "BBDD"
-            ]
+            "kind": "theory"
         },
         {
-            "id": "3a-sessio",
-            "title": "3a Sessió | Projecte de Tutoria FP",
+            "id": "03",
+            "title": "03 - 3a Sessió | Projecte de Tutoria FP",
             "description": "Hàbits de treball i organització acadèmica",
             "src": "projecte-3a-sessio.reveal",
             "theme": "white",
             "status": "active",
-            "kind": "theory",
-            "tags": [
-                "BBDD"
-            ]
+            "kind": "theory"
         },
         {
-            "id": "4a-sessio",
-            "title": "4a Sessió | Projecte de Tutoria FP",
+            "id": "04",
+            "title": "04 - 4a Sessió | Projecte de Tutoria FP",
             "description": "Anàlisi <b>DAFO</b> acadèmic",
             "src": "projecte-4a-sessio.reveal",
             "theme": "white",
             "status": "active",
-            "kind": "theory",
-            "tags": [
-                "BBDD"
-            ]
+            "kind": "theory"
         },
         {
-            "id": "5a-sessio",
-            "title": "5a Sessió | Projecte de Tutoria FP",
+            "id": "05",
+            "title": "05 - 5a Sessió | Projecte de Tutoria FP",
             "description": "Síntesi i <b>Pla d’Acció Acadèmic</b>",
             "src": "projecte-5a-ultima-sessio.reveal",
             "theme": "white",
             "status": "active",
-            "kind": "theory",
-            "tags": [
-                "BBDD"
-            ]
+            "kind": "theory"
+        },
+        {
+            "id": "06",
+            "title": "06 | Projecte de Tutoria FP",
+            "description": "Sessió de tancament i mirada al procés",
+            "src": "projecte-6a-sessio.reveal",
+            "theme": "white",
+            "status": "active",
+            "kind": "theory"
         }
     ]
 }
