@@ -1,0 +1,51 @@
+# Bones pràctiques — Incidències tècniques
+
+## Com documentar un problema
+
+---
+
+## Error molt habitual
+
+Moltes vegades es confonen tres coses diferents:
+
+- el problema
+- el diagnòstic
+- la solució
+
+---
+
+## Procés correcte
+
+Quan documentem incidències fem sempre:
+
+```
+Problema → Diagnòstic → Solució
+```
+
+---
+
+## Exemple correcte
+
+| Problema | Diagnòstic | Solució |
+|---|---|---|
+| El navegador no mostra la web | `curl http://localhost` | Reiniciar Apache |
+
+---
+
+## Exemple incorrecte
+
+| Problema | Diagnòstic | Solució |
+|---|---|---|
+| no funciona | no funciona | no funciona |
+
+Aquest tipus de descripció **no permet entendre el problema**.
+
+---
+
+## Regla pràctica
+
+Pregunteu-vos sempre:
+
+> Si una altra persona llegís aquest document, entendria què ha passat?
+
+Si la resposta és **sí**, la incidència està ben documentada.

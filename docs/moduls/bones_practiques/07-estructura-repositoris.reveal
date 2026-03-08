@@ -1,0 +1,72 @@
+# Bones pràctiques — Estructura de repositoris
+
+## Organitzar un projecte
+
+---
+
+## Error molt habitual
+
+Repositoris amb:
+
+- fitxers barrejats
+- noms poc clars
+- carpetes desordenades
+
+Això dificulta entendre el projecte.
+
+---
+
+## Regla principal
+
+```
+1 carpeta = 1 tipus de contingut
+```
+
+Exemple:
+
+```
+docs/
+scripts/
+config/
+tests/
+```
+
+---
+
+## Exemple d'estructura
+
+```
+projecte/
+
+docs/
+scripts/
+config/
+tests/
+README.md
+```
+
+Això facilita entendre el repositori.
+
+---
+
+## Bons noms de fitxer
+
+Preferiu noms descriptius:
+
+```
+config_apache.md
+diagnostic_xarxa.md
+```
+
+Eviteu noms com:
+
+```
+prova.txt
+document1.docx
+```
+
+---
+
+## Regla final
+
+Un repositori ben organitzat **facilita mantenir el projecte**.

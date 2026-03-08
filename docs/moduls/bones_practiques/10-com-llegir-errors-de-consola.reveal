@@ -1,0 +1,52 @@
+# Bones pràctiques — Errors de consola
+
+## Entendre els missatges del sistema
+
+---
+
+## Error molt habitual
+
+Quan apareix un error a la consola:
+
+- es copia sense llegir
+- o es passa directament al professor
+
+---
+
+## Regla principal
+
+Llegiu **les últimes línies del missatge**.
+
+Moltes vegades el problema apareix al final.
+
+---
+
+## Exemple
+
+```
+Failed to start apache2.service
+```
+
+Interpretació:
+
+- el servei no s'ha pogut iniciar
+- cal comprovar l'estat del servei
+
+---
+
+## Com investigar
+
+```
+systemctl status servei
+journalctl -xe
+```
+
+Aquestes comandes donen més informació.
+
+---
+
+## Regla final
+
+La consola **sempre explica què ha passat**.
+
+Només cal **llegir el missatge amb calma**.

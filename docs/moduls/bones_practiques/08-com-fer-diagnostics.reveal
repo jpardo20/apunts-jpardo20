@@ -1,0 +1,54 @@
+# Bones pràctiques — Fer diagnòstics
+
+## Entendre un problema
+
+---
+
+## Error molt habitual
+
+Quan alguna cosa falla, alguns alumnes:
+
+- intenten arreglar-ho directament
+- sense comprovar què està passant
+
+---
+
+## Procés correcte
+
+Un diagnòstic sempre segueix:
+
+```
+Observar → Comprovar → Analitzar
+```
+
+---
+
+## Exemple
+
+Problema: no es pot accedir al servidor.
+
+Comprovacions:
+
+```
+ping servidor
+ip a
+curl http://servidor
+```
+
+Cada prova ajuda a identificar la causa.
+
+---
+
+## No saltar passos
+
+Molts errors es resolen simplement observant:
+
+- configuració IP
+- estat dels serveis
+- missatges del sistema
+
+---
+
+## Regla final
+
+Primer **entendre el problema**, després **arreglar-lo**.

@@ -1,0 +1,59 @@
+# Bones pràctiques — Debugging de sistemes
+
+## Com trobar problemes tècnics
+
+---
+
+## Error molt habitual
+
+Quan alguna cosa no funciona, molts alumnes:
+
+- canvien moltes coses alhora
+- reinicien serveis sense entendre el problema
+
+Això **dificulta trobar la causa real**.
+
+---
+
+## Regla principal
+
+```
+Canvia només una cosa cada vegada
+```
+
+Després comprova si el problema ha canviat.
+
+---
+
+## Procés de debugging
+
+```
+1. Identificar el problema
+2. Formular una hipòtesi
+3. Fer una prova
+4. Analitzar el resultat
+```
+
+Repetir fins trobar la causa.
+
+---
+
+## Exemple
+
+Problema: la web no es mostra.
+
+Proves possibles:
+
+```
+ping servidor
+curl http://localhost
+systemctl status apache2
+```
+
+Cada prova aporta informació nova.
+
+---
+
+## Regla final
+
+El debugging és **investigar**, no **provar coses a l'atzar**.

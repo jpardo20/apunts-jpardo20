@@ -1,0 +1,56 @@
+# Bones pràctiques — Documentació tècnica
+
+## Com explicar un sistema
+
+---
+
+## Objectiu de la documentació
+
+La documentació ha de permetre que **una altra persona entengui el sistema**.
+
+---
+
+## Estructura recomanada
+
+Una documentació tècnica sol tenir:
+
+```
+Context
+Configuració
+Proves
+Problemes
+Conclusió
+```
+
+---
+
+## Exemple
+
+### Context
+Servidor Ubuntu amb Apache.
+
+### Configuració
+Instal·lació amb `apt install apache2`.
+
+### Proves
+Verificació amb `curl` i navegador.
+
+---
+
+## Error molt habitual
+
+Documents amb:
+
+- captures sense explicació
+- passos desordenats
+- conclusions inexistents
+
+---
+
+## Regla final
+
+La documentació ha d'explicar:
+
+- què s'ha fet
+- com s'ha comprovat
+- si ha funcionat correctament

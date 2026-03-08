@@ -1,0 +1,59 @@
+# Bones pràctiques — Llegir errors
+
+## Els errors són informació
+
+---
+
+## Error molt habitual
+
+Quan apareix un error, molts alumnes:
+
+- el tanquen
+- el copien sense llegir
+- o simplement diuen "no funciona"
+
+---
+
+## Regla principal
+
+```
+Un missatge d'error és una pista
+```
+
+Normalment indica:
+
+- què ha fallat
+- on ha fallat
+- per què pot haver fallat
+
+---
+
+## Exemple
+
+Error:
+
+```
+Connection refused
+```
+
+Interpretació possible:
+
+- el servidor no està actiu
+- el port no està obert
+- el servei no escolta
+
+---
+
+## Com llegir un error
+
+1. Llegir el missatge complet  
+2. Identificar la paraula clau  
+3. Buscar què significa
+
+---
+
+## Regla final
+
+Els errors **no són enemics**.
+
+Són **informació per diagnosticar el problema**.

@@ -1,0 +1,64 @@
+# Bones pràctiques — Git
+
+## Commit, push i repositori
+
+---
+
+## Git no puja fitxers automàticament
+
+Crear o modificar un fitxer **no és suficient**.
+
+Git només puja fitxers que han passat per:
+
+```
+git add
+git commit
+git push
+```
+
+---
+
+## Flux de treball correcte
+
+Després de modificar fitxers:
+
+```bash
+git add <fitxers modificats>
+git commit -m "Explicació del canvi"
+git push
+```
+
+---
+
+## Com comprovar que tot està correcte
+
+Executeu:
+
+```bash
+git status
+```
+
+Si **no apareixen fitxers modificats**, vol dir que tot està guardat al repositori.
+
+---
+
+## Comprovar el repositori remot
+
+Després del `push`:
+
+1. Aneu a **GitHub**
+2. Obriu el vostre repositori
+3. Comproveu que el fitxer apareix realment
+
+Si el fitxer es veu a GitHub → **està correctament lliurat**.
+
+---
+
+## Regla important
+
+Si un fitxer:
+
+- només està al vostre ordinador
+- i **no està al repositori**
+
+llavors **no existeix per a la correcció**.

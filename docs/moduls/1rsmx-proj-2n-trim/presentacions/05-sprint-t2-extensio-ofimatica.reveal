@@ -1,0 +1,441 @@
+# Sprint T2 — Documentació del projecte
+
+## Mòdul 0223 — Aplicacions ofimàtiques
+
+Durant aquesta setmana utilitzarem el **projecte Sprint T2**  
+per generar la documentació professional del treball realitzat.
+
+Aquesta documentació servirà per **tancar el mòdul 0223**.
+
+Note:
+
+"Durant el Sprint heu fet feina tècnica. Ara farem l'últim pas que es fa en qualsevol projecte professional: documentar el sistema perquè una altra persona el pugui entendre."
+---
+
+## Context
+
+Durant el Sprint T2 heu estat treballant en:
+
+- configuració de servidor Ubuntu
+- verificació de serveis
+- proves de connectivitat
+- diagnòstic de problemes
+
+Tot aquest treball tècnic està registrat al repositori. Ara cal fer una cosa que **sempre es fa en entorns professionals**: **`documentar el projecte`**
+
+---
+
+## Objectiu de la setmana
+
+Crear el **paquet de documentació del Sprint T2**.
+
+Aquest paquet inclourà:
+
+1. informe tècnic
+2. registre d’incidències
+3. presentació del projecte
+4. informe resum integrat
+5. comunicació del lliurament
+
+Tot quedarà guardat dins del repositori. En projectes professionals, la documentació del sistema és tan important com la configuració tècnica.
+
+---
+
+## Nova carpeta al repositori
+
+A l'arrel del repositori heu de crear <codijpc>0223_ofimatica_sprint/</codijpc>
+
+Estructura:
+
+```bash
+0223_ofimatica_sprint/
+
+01_document/
+02_calcul/
+03_presentacio/
+04_integracio/
+05_comunicacio/
+```
+
+Tots els fitxers d’aquesta activitat han d’estar dins d’aquesta carpeta.
+
+---
+
+### Activitat 1 — Informe tècnic
+
+Crear el document <codijpc>01_document/informe_servidor.docx</codijpc>
+
+Contingut mínim:
+
+- títol del projecte
+- descripció del servidor Ubuntu
+- configuració IP
+- servei instal·lat (Apache o similar)
+- proves realitzades (ping, curl, navegador)
+- conclusions
+
+
+⬇️
+
+----
+
+El document ha d’incloure:
+
+- títols amb estils
+- una taula
+- almenys una captura
+- numeració de seccions
+
+⬇️
+
+----
+
+## Data límit activitat 1
+
+Fer un <codijpc>push</codijpc> al repositori abans de:
+
+<div class="admonition caution">
+<br>
+<p class="admonition-title">dimecres, 11 de març de 2026<br>abans de les 18.00 h</p>
+</div>
+
+---
+
+### Activitat 2 — Registre d’incidències
+
+Crear el full de càlcul <codijpc>02_calcul/incidencies_sprint.xlsx</codijpc>
+
+Columnes mínimes:
+
+- ID
+- Data
+- Problema detectat
+- Comanda utilitzada
+- Solució
+- Estat
+
+⬇️
+
+----
+
+El document ha de tenir:
+
+- filtres
+- ordenació
+- almenys 5 incidències reals del projecte
+
+⬇️
+
+----
+
+## Data límit activitat 2
+
+Fer un <codijpc>push</codijpc> al repositori abans de:
+
+<div class="admonition caution">
+<br>
+<p class="admonition-title">dimecres, 11 de març de 2026<br>abans de les 18.00 h</p>
+</div>
+
+---
+
+### Activitat 3 — Presentació del projecte
+
+Crear la presentació <codijpc>03_presentacio/sprint_t2_review.pptx</codijpc>
+
+Mínim 5 diapositives:
+
+1. introducció al projecte
+2. arquitectura del sistema
+3. configuració del servidor
+4. problemes trobats
+5. resultats finals
+
+⬇️
+
+----
+
+Utilitzeu:
+
+- títols
+- esquemes o captures
+- text resumit
+
+⬇️
+
+----
+
+## Data límit activitat 3
+
+Fer un <codijpc>push</codijpc> al repositori abans de:
+
+<div class="admonition caution">
+<br>
+<p class="admonition-title">dijous, 12 de març de 2026<br>abans de les 14.00 h</p>
+</div>
+
+---
+
+### Activitat 4 — Informe final integrat
+
+Crear el document <codijpc>04_integracio/informe_final.docx</codijpc>
+
+Aquest document ha d’integrar:
+
+- explicació del projecte
+- dades o taules del full de càlcul
+- captures del sistema
+- resum del treball realitzat
+
+Aquest document és el **resum final del Sprint T2**.
+
+⬇️
+
+----
+
+## Data límit activitat 4
+
+Fer un <codijpc>push</codijpc> al repositori abans de:
+
+<div class="admonition caution">
+<br>
+<p class="admonition-title">divendres, 13 de març de 2026<br>abans de les 14.00 h</p>
+</div>
+
+---
+
+### Activitat 5 — Comunicació del lliurament
+
+Heu d’enviar un correu amb:
+
+- assumpte clar
+- breu explicació del treball
+- document final adjunt
+
+Guardar evidència al repositori:
+
+```bash
+05_comunicacio/correu_enviat.png
+05_comunicacio/correu.pdf
+```
+
+⬇️
+
+----
+
+## Data límit activitat 5
+
+Fer un <codijpc>push</codijpc> al repositori abans de:
+
+<div class="admonition caution">
+<br>
+<p class="admonition-title">divendres, 13 de març de 2026<br>abans de les 14.00 h</p>
+</div>
+
+---
+
+## Estructura final del repositori
+
+```bash
+0223_ofimatica_sprint/
+
+01_document/informe_servidor.docx
+
+02_calcul/incidencies_sprint.xlsx
+
+03_presentacio/sprint_t2_review.pptx
+
+04_integracio/informe_final.docx
+
+05_comunicacio/correu_enviat.png
+05_comunicacio/correu.pdf
+```
+
+Comproveu sempre a GitHub que els fitxers apareixen correctament després de fer push.
+
+---
+
+## Com es corregirà el treball
+
+Per corregir aquesta activitat miraré:
+
+- estructura del repositori,
+- existència dels fitxers,
+- qualitat mínima dels documents,
+- evidències del treball realitzat,
+- commits al repositori, i
+- que els fitxers estiguin a la carpeta correcta
+
+També es tindrà en compte que els documents tinguin contingut real relacionat amb el projecte Sprint T2.
+
+<div class="admonition caution">
+<br>
+<p class="admonition-title">Recordeu:<br>Si no està al repositori, <u>no existeix</u>.</p>
+</div>
+
+---
+
+## Recordatori important
+
+Tot el treball s'ha de lliurar amb:
+
+```bash
+git add <fitxers modificats>
+git commit -m "Missatge indicant el que s'ha modificat"
+git push -u origin main
+```
+
+Només es tindran en compte els fitxers **pujats abans de la data límit**.
+
+---
+
+## Objectiu final
+
+Amb aquesta documentació podreu demostrar:
+
+- el treball tècnic realitzat
+- la capacitat de documentar un projecte
+- la comunicació professional del treball
+
+Aquest procés és habitual en **projectes professionals reals**.
+
+---
+
+# FAQ — Preguntes freqüents
+
+---
+
+## Puc modificar els fitxers després de fer <codijpc>push</codijpc>?
+
+Sí.
+
+Podeu modificar els fitxers tantes vegades com vulgueu **fins a la data límit**.
+
+El que es tindrà en compte serà **l'últim commit abans de l'hora límit**.
+
+Flux de treball recomanat:
+
+Després de treballar:
+
+```bash
+git add <fitxers modificats>
+git commit -m "Missatge indicant el que s'ha modificat"
+git push -u origin main
+```
+
+⬇️
+
+----
+
+Després de millorar:
+
+```bash
+git add <fitxers modificats>
+git commit -m "Missatge indicant el que s'ha modificat"
+git push -u origin main
+```
+
+⬇️
+
+----
+
+I un pujat tot al repositori remot, 
+
+```bash
+git status
+```
+
+I confirmar que no apareix, ni de color en vermell, ni de color en verd, cap dels fitxers que heu modificat.
+
+---
+
+## Què passa si faig el document però m'oblido de fer <codijpc>push</codijpc>?
+
+Només es tindran en compte els fitxers que estiguin **al repositori abans de la data límit**.
+
+<div class="admonition caution">
+<br>
+<p class="admonition-title">Important</p>
+Si el fitxer només està al vostre ordinador i <u>no està al repositori</u>, no es pot corregir.
+</div>
+
+---
+
+## Podem utilitzar el que ja hem fet durant el Sprint T2?
+
+Sí.
+
+De fet **aquesta és la idea de l'activitat**.
+
+Els documents han d'explicar el treball real que heu fet durant el Sprint T2.
+
+Podeu utilitzar, per exemple:
+
+- captures de <codijpc>ping</codijpc>
+- captures del navegador
+- sortides de comandes
+- diagnòstic <codijpc>OSI</codijpc>
+- proves de connectivitat
+
+---
+
+## Podem utilitzar Word, LibreOffice o Google Docs?
+
+Podeu utilitzar **l'eina que vulgueu** per crear els documents.
+
+Però el fitxer final que pugeu al repositori ha de ser:
+
+```bash
+.docx
+.xlsx
+.pptx
+```
+
+---
+
+## Com puc comprovar que el meu treball està realment al repositori?
+
+Després de fer el <codijpc>push</codijpc>:
+
+1. Amb el navegador, aneu al vostre repositori a <codijpc>GitHub</codijpc>, i
+
+2. comproveu que els fitxers apareixen dins de la carpeta <codijpc>0223_ofimatica_sprint/</codijpc>
+
+Si el fitxer es veu a <codijpc>GitHub</codijpc>, vol dir que **està correctament lliurat**.
+
+---
+
+## Abans de fer <codijpc>commit</codijpc>, què hauria de comprovar?
+
+Executeu sempre:
+
+```bash
+git status
+```
+
+Això us permet comprovar que els fitxers apareixen com a **files to be committed**.
+
+Després podeu fer:
+
+```bash
+git add .
+git commit -m "documentacio sprint"
+git push -u origin main
+```
+
+---
+
+## Els documents han de ser molt llargs o perfectes?
+
+No.
+
+L'important és que **documentin el projecte real que heu fet**.
+
+Per exemple:
+
+- captures del sistema
+- explicació de proves
+- incidències reals del Sprint
+
+L'objectiu és **explicar el projecte perquè una altra persona el pugui entendre**.
+

@@ -1,0 +1,56 @@
+# Bones pràctiques — Presentacions tècniques
+
+## Com explicar un projecte
+
+---
+
+## Error molt habitual
+
+Fer diapositives amb **massa text**.
+
+Una presentació **no és un document**.
+
+---
+
+## Regla principal
+
+```
+1 idea per diapositiva
+```
+
+---
+
+## Quant text és correcte?
+
+Màxim:
+
+- 3–5 línies
+- frases curtes
+- paraules clau
+
+La resta ha de ser:
+
+- esquema
+- captura
+- diagrama
+- imatge
+
+---
+
+## Exemple correcte
+
+**Configuració del servidor**
+
+- instal·lació d'Apache
+- comprovació del servei
+- prova amb `curl`
+
+(captura del navegador)
+
+---
+
+## Recordeu
+
+Els detalls complets van al **document**.
+
+La presentació serveix per **entendre el projecte ràpidament**.

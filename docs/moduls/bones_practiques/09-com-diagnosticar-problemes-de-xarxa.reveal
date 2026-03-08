@@ -1,0 +1,57 @@
+# Bones pràctiques — Diagnòstic de xarxa
+
+## Com trobar problemes de connectivitat
+
+---
+
+## Error molt habitual
+
+Quan no hi ha connexió, alguns alumnes:
+
+- reinicien serveis
+- canvien configuracions
+
+sense comprovar la xarxa.
+
+---
+
+## Procés correcte
+
+Diagnòstic en aquest ordre:
+
+```
+1. Comprovar IP
+2. Comprovar connectivitat
+3. Comprovar serveis
+```
+
+---
+
+## Comandes útils
+
+```
+ip a
+ping
+curl
+```
+
+Aquestes eines donen informació diferent.
+
+---
+
+## Exemple
+
+```
+ping 192.168.1.10
+```
+
+Si no respon:
+
+- problema de xarxa
+- problema d'adreça IP
+
+---
+
+## Regla final
+
+Sempre diagnosticar **de la capa més baixa a la més alta**.
