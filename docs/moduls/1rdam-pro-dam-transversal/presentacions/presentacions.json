@@ -133,6 +133,13 @@
             "status": "active",
             "kind": "activity"
         },{
+            "order": "251",
+            "title": "251. Activitat Documents JSON (Projecte PhoenixTech)",
+                "src": "slides/013-act-fitxers-json.reveal",
+            "description": "Documents JSON (Projecte PhoenixTech)",
+            "status": "active",
+            "kind": "activity"
+        },{
             "order": "299",
             "title": "299. FASE 2: Desplegament d’Infraestructura ",
             "src": "slides/010-enunciat-fase-2.reveal",
