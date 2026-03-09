@@ -54,7 +54,7 @@
         },
         {
             "order": "101",
-            "title": "101. Pìndola | Bones pràctiques: Git",
+            "title": "101. Píndola | <b>Bones pràctiques</b>: Git",
             "src": "bp-01-git-commit-push.reveal",
             "description": "Commit, push i repositori.",
             "status": "active",
@@ -62,7 +62,7 @@
         },
         {
             "order": "102",
-            "title": "102. Pìndola | Bones pràctiques: Incidències tècniques",
+            "title": "102. Píndola | <b>Bones pràctiques</b>: Incidències tècniques",
             "src": "bp-02-documentar-incidencies.reveal",
             "description": "Com documentar un problema.",
             "status": "active",
@@ -70,7 +70,7 @@
         },
         {
             "order": "103",
-            "title": "103. Pìndola | Bones pràctiques: Presentacions tècniques",
+            "title": "103. Píndola | <b>Bones pràctiques</b>: Presentacions tècniques",
             "src": "bp-03-presentacions-tecniques.reveal",
             "description": "Com explicar un projecte.",
             "status": "active",
@@ -78,7 +78,7 @@
         },
         {
             "order": "104",
-            "title": "104. Pìndola | Bones pràctiques: Documentació tècnica",
+            "title": "104. Píndola | <b>Bones pràctiques</b>: Documentació tècnica",
             "src": "bp-04-documentacio-tecnica.reveal",
             "description": "Commit, push i repositori.",
             "status": "active",
@@ -86,7 +86,7 @@
         },
         {
             "order": "105",
-            "title": "105. Pìndola | Bones pràctiques: Debugging de sistemes",
+            "title": "105. Píndola | <b>Bones pràctiques</b>: Debugging de sistemes",
             "src": "bp-05-debugging-sistemes.reveal",
             "description": "Com trobar problemes tècnics.",
             "status": "active",
@@ -94,7 +94,7 @@
         },
         {
             "order": "106",
-            "title": "106. Pìndola | Bones pràctiques: Llegir errors",
+            "title": "106. Píndola | <b>Bones pràctiques</b>: Llegir errors",
             "src": "bp-06-com-llegir-errors.reveal",
             "description": "Els errors són informació.",
             "status": "active",
@@ -102,7 +102,7 @@
         },
         {
             "order": "107",
-            "title": "107. Pìndola | Bones pràctiques: Estructura de repositoris",
+            "title": "107. Píndola | <b>Bones pràctiques</b>: Estructura de repositoris",
             "src": "bp-07-estructura-repositoris.reveal",
             "description": "Organitzar un projecte.",
             "status": "active",
@@ -110,7 +110,7 @@
         },
         {
             "order": "108",
-            "title": "108. Pìndola | Bones pràctiques: Fer diagnòstics",
+            "title": "108. Píndola | <b>Bones pràctiques</b>: Fer diagnòstics",
             "src": "bp-08-com-fer-diagnostics.reveal",
             "description": "Entendre un problema.",
             "status": "active",
@@ -118,7 +118,7 @@
         },
         {
             "order": "109",
-            "title": "109. Pìndola | Bones pràctiques: Diagnòstic de xarxa",
+            "title": "109. Píndola | <b>Bones pràctiques</b>: Diagnòstic de xarxa",
             "src": "bp-09-com-diagnosticar-problemes-de-xarxa.reveal",
             "description": "Com trobar problemes de connectivitat.",
             "status": "active",
@@ -126,7 +126,7 @@
         },
         {
             "order": "110",
-            "title": "110. Pìndola | Bones pràctiques: Errors de consola",
+            "title": "110. Píndola | <b>Bones pràctiques</b>: Errors de consola",
             "src": "bp-10-com-llegir-errors-de-consola.reveal",
             "description": "Entendre els missatges del sistema.",
             "status": "active",
