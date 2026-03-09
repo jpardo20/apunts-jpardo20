@@ -135,13 +135,13 @@ Els fitxers s’han de desar dins del repositori del projecte en aquesta carpeta
 
 ### JSON de grup
 
-* Nom del fitxer <codijpc>grup-&lt;codiIncidencia>.json</codijpc>
+* Nom del fitxer <codijpc>json-grup-&lt;codiIncidencia>.json</codijpc>
 
 ><hr>
 >
 > #### On **`<codiIncidencia>`** és el codi de l'incidència que apareix al text facilitat
 >
-> #### Per exemple si el codi de l'incidència és **`XE101`**, el nom del fitxer seria <kbd><u><b>**`grup-XE101.json`**</b></u></kbd>
+> #### Per exemple si el codi de l'incidència és **`XE101`**, el nom del fitxer seria <kbd><u><b>**`json-grup-XE101.json`**</b></u></kbd>
 >
 ><hr>
 
