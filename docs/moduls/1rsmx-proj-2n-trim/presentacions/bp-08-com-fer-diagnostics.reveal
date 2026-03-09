@@ -27,7 +27,7 @@ Problema: no es pot accedir al servidor.
 
 Comprovacions:
 
-```
+```bash
 ping servidor
 ip a
 curl http://servidor
