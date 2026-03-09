@@ -281,7 +281,7 @@ JSON revisat. Estructura correcta.
 
 1. crear nova branca, <codijpc>feature/json-grup-&lt;codiIncidencia></codijpc>
 
-2. crear el fitxer <codijpc>feature/json-grup-&lt;codiIncidencia>.json</codijpc>
+2. crear el fitxer <codijpc>json-grup-&lt;codiIncidencia>.json</codijpc>
 
 3. commit obligatori <codijpc>JSON grup &lt;codiIncidencia></codijpc>
 
