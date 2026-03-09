@@ -20,11 +20,11 @@ L’objectiu és transformar informació escrita en **dades estructurades**.
 
 Aprendre a:
 
-- dissenyar estructures d’informació
-- representar dades amb **JSON**
-- utilitzar **objectes i arrays**
-- estructurar informació de manera jeràrquica
-- integrar informació generada per diferents persones
+* dissenyar estructures d’informació
+* representar dades amb **JSON**
+* utilitzar **objectes i arrays**
+* estructurar informació de manera jeràrquica
+* integrar informació generada per diferents persones
 
 ---
 
@@ -36,30 +36,28 @@ Aquesta activitat té **dues parts**:
 
 2. **Document JSON de grup**
 
-
 ---
 
 ## Part 1 — JSON individual
 
-Cada alumne ha de crear **un document JSON personal** basat en la incidència assignada al seu grup.
+* Cada alumne ha de crear **un document JSON personal** basat en la incidència assignada al seu grup.
 
-El document ha de representar informació rellevant sobre la incidència.
+* El document ha de representar informació rellevant sobre la incidència.
 
 ⬇️
 
 ----
 
-L’estructura és **lliure**, però ha de complir els requisits següents:
+* L’estructura és **lliure**, però ha de complir els requisits següents:
 
 ### Requisits
 
 El JSON ha de contenir:
 
-- un **objecte principal**
-- almenys **un array**
-- almenys **4 camps d’informació**
-- un camp amb **diagnosi o proposta de solució** escrita per l’alumne
-
+* un **objecte principal**
+* almenys **un array**
+* almenys **4 camps d’informació**
+* un camp amb **diagnosi o proposta de solució** escrita per l’alumne
 
 ⬇️
 
@@ -67,13 +65,13 @@ El JSON ha de contenir:
 
 Exemples d’informació que es pot incloure:
 
-- identificador de la incidència
-- persona que ha reportat el problema
-- tècnic assignat
-- materials utilitzats
-- ubicació
-- diagnosi tècnica
-- proposta de solució
+* identificador de la incidència
+* persona que ha reportat el problema
+* tècnic assignat
+* materials utilitzats
+* ubicació
+* diagnosi tècnica
+* proposta de solució
 
 Cada alumne pot decidir **l’estructura exacta del seu JSON**.
 
@@ -81,10 +79,9 @@ Cada alumne pot decidir **l’estructura exacta del seu JSON**.
 
 ## Part 2 — JSON de grup
 
-Un cop tots els membres del grup hagin creat el seu JSON personal, el grup haurà de crear **un document JSON conjunt**.
+* Un cop tots els membres del grup hagin creat el seu JSON personal, el grup haurà de crear **un document JSON conjunt**.
 
-Aquest document ha de **recollir informació dels JSON individuals dels membres del grup**.
-
+* Aquest document ha de **recollir informació dels JSON individuals dels membres del grup**.
 
 ⬇️
 
@@ -92,22 +89,21 @@ Aquest document ha de **recollir informació dels JSON individuals dels membres 
 
 Per exemple:
 
-- resum de propostes de solució
-- materials suggerits per cada alumne
-- diagnosi de cada membre
+* resum de propostes de solució
+* materials suggerits per cada alumne
+* diagnosi de cada membre
 
 Aquest document ha de contenir:
 
-- l’identificador de la incidència
-- un **array amb informació dels membres del grup**
-- almenys **un camp amb dades extretes dels JSON personals**
+* l’identificador de la incidència
+* un **array amb informació dels membres del grup**
+* almenys **un camp amb dades extretes dels JSON personals**
 
 ---
 
 ## Estructura del repositori
 
-Els fitxers s’han de desar dins del repositori del projecte en aquesta carpeta `docs/json/`
-
+Els fitxers s’han de desar dins del repositori del projecte en aquesta carpeta <codijpc>docs/json/</codijpc>
 
 ⬇️
 
@@ -115,9 +111,9 @@ Els fitxers s’han de desar dins del repositori del projecte en aquesta carpeta
 
 ### JSON individuals
 
-Nom del fitxer <codijpc>&lt;primerCognomAlumne>-&lt;codiIncidencia>.json</codijpc>
+* Nom del fitxer <codijpc>&lt;primerCognomAlumne>-&lt;codiIncidencia>.json</codijpc>
 
-<u>**Tot en minúscules**</u>, <u>sense espais</u> i fent servir **<u>només</u> caràcters de l'alfabet anglès**, cal eliminar espais, accents i caràcters especials.
+* <u>**Tot en minúscules**</u>, <u>sense espais</u> i fent servir **<u>només</u> caràcters de l'alfabet anglès**, cal eliminar espais, accents i caràcters especials.
 
 ⬇️
 
@@ -125,11 +121,11 @@ Nom del fitxer <codijpc>&lt;primerCognomAlumne>-&lt;codiIncidencia>.json</codijp
 
 ><hr>
 >
-> #### On **`<primerCognomAlumne>`** és <u>només</u> el primer cognom de l'alumne, sense el nom, i 
+> #### On **`<primerCognomAlumne>`** és <u>només</u> el primer cognom de l'alumne, sense el nom, i
 >
-> #### on **`<codiIncidencia>`** és el codi de l'incidència que apareix al text facilitat.
+> #### on **`<codiIncidencia>`** és el codi de l'incidència que apareix al text facilitat
 >
-> #### Per exemple en el cas de l'alumne <b><u>Albert Einstein</u></b>, i el codi de l'incidència **`XE101`**, el nom del fitxer seria <kbd><u><b>**`einstein-XE101.json`**</b></u></kbd>.
+> #### Per exemple en el cas de l'alumne <b><u>Albert Einstein</u></b>, i el codi de l'incidència **`XE101`**, el nom del fitxer seria <kbd><u><b>**`einstein-XE101.json`**</b></u></kbd>
 >
 ><hr>
 
@@ -139,13 +135,13 @@ Nom del fitxer <codijpc>&lt;primerCognomAlumne>-&lt;codiIncidencia>.json</codijp
 
 ### JSON de grup
 
-Nom del fitxer <codijpc>grup-&lt;codiIncidencia>.json</codijpc>
+* Nom del fitxer <codijpc>grup-&lt;codiIncidencia>.json</codijpc>
 
 ><hr>
 >
-> #### On **`<codiIncidencia>`** és el codi de l'incidència que apareix al text facilitat.
+> #### On **`<codiIncidencia>`** és el codi de l'incidència que apareix al text facilitat
 >
-> #### Per exemple si el codi de l'incidència és **`XE101`**, el nom del fitxer seria <kbd><u><b>**`grup-XE101.json`**</b></u></kbd>.
+> #### Per exemple si el codi de l'incidència és **`XE101`**, el nom del fitxer seria <kbd><u><b>**`grup-XE101.json`**</b></u></kbd>
 >
 ><hr>
 
@@ -171,7 +167,6 @@ Nom del fitxer <codijpc>grup-&lt;codiIncidencia>.json</codijpc>
 
 * Durant la revisió es van provar diferents components de recanvi del magatzem. La incidència es va registrar el **10 de març de 2026** amb **prioritat mitjana**.
 
-
 ⬇️
 
 ----
@@ -184,11 +179,9 @@ Nom del fitxer <codijpc>grup-&lt;codiIncidencia>.json</codijpc>
 
 * Durant la intervenció es van substituir alguns consumibles i es va revisar la configuració del sistema. La incidència es va registrar el **11 de març de 2026** amb **prioritat baixa**.
 
-
 ⬇️
 
 ----
-
 
 ## Incidència assignada: Grup 4
 
@@ -218,33 +211,33 @@ Nom del fitxer <codijpc>grup-&lt;codiIncidencia>.json</codijpc>
 
 * Cada alumne ha de crear una branca amb el format <codijpc>feature/json-&lt;primerCognomAlumne></codijpc>
 
-<u>**Tot en minúscules**</u>, <u>sense espais</u> i fent servir **<u>només</u> caràcters de l'alfabet anglès**, cal eliminar espais, accents i caràcters especials.
+* <u>**Tot en minúscules**</u>, <u>sense espais</u> i fent servir **<u>només</u> caràcters de l'alfabet anglès**, cal eliminar espais, accents i caràcters especials.
 
 ><hr>
 >
-> #### On **`<primerCognomAlumne>`** és <u>només</u> el primer cognom de l'alumne, sense el nom.
+> #### On **`<primerCognomAlumne>`** és <u>només</u> el primer cognom de l'alumne, sense el nom
 >
-> #### Per exemple en el cas de l'alumne <b><u>Albert Einstein</u></b>, el nom de la branca seria <kbd><u><b>**`feature/json-einstein`**</b></u></kbd>.
+> #### Per exemple en el cas de l'alumne <b><u>Albert Einstein</u></b>, el nom de la branca seria <kbd><u><b>**`feature/json-einstein`**</b></u></kbd>
 >
 ><hr>
 
-Comanda recomanada <codijpc>git checkout -b feature/json-&lt;primerCognomAlumne></codijpc>
+* Comanda recomanada <codijpc>git checkout -b feature/json-&lt;primerCognomAlumne></codijpc>
 
 ---
 
 ## Pas 2 — Crear el JSON individual
 
-Cada alumne crea el seu fitxer dins de <codijpc>docs/json/</codijpc>
+* Cada alumne crea el seu fitxer dins de <codijpc>docs/json/</codijpc>
 
-Nom del fitxer <codijpc>docs/json/&lt;primerCognomAlumne>-&lt;codiIncidencia>.json</codijpc>
+* Nom del fitxer <codijpc>docs/json/&lt;primerCognomAlumne>-&lt;codiIncidencia>.json</codijpc>
 
 ---
 
 ## Pas 3 — Commit del JSON personal
 
-Missatge de commit obligatori <codijpc>JSON individual &lt;codiIncidencia> &lt;primerCognomAlumne></codijpc>
+* Missatge de commit obligatori <codijpc>JSON individual &lt;codiIncidencia> &lt;primerCognomAlumne></codijpc>
 
-Exemple:
+* Exemple:
 
 ```bash
 git add docs/json/einstein-XE101.json
@@ -256,15 +249,15 @@ git push origin feature/json-einstein
 
 ## Pas 4 — Crear Pull Request
 
-Cada alumne ha de crear un **Pull Request** cap a **`main`**.
+* Cada alumne ha de crear un **Pull Request** cap a **`main`**.
 
-Títol obligatori:
+* Títol obligatori:
 
 ```bash
 JSON individual <codiIncidencia> <primerCognomAlumne>
 ```
 
-Exemple:
+* Exemple:
 
 ```bash
 JSON individual XE101 Einstein
@@ -274,11 +267,11 @@ JSON individual XE101 Einstein
 
 ## Pas 5 — Revisió entre companys
 
-Abans de fusionar el PR, **almenys un company del grup ha de revisar-lo**.
+* Abans de fusionar el PR, **almenys un company del grup ha de revisar-lo**.
 
-La revisió ha d’incloure un comentari.
+* La revisió ha d’incloure un comentari.
 
-Exemple de comentari:
+* Exemple de comentari:
 
 ```bash
 JSON revisat. Estructura correcta.
@@ -288,9 +281,9 @@ JSON revisat. Estructura correcta.
 
 ## Pas 6 — Crear el JSON de grup
 
-Un cop tots els JSON individuals estiguin fusionats a `main`, el grup crearà el **JSON de grup**.
+* Un cop tots els JSON individuals estiguin fusionats a `main`, el grup crearà el **JSON de grup**.
 
-Per fer-ho:
+* Per fer-ho:
 
 1. crear nova branca, <codijpc>feature/json-grup-&lt;codiIncidencia></codijpc>
 
@@ -306,11 +299,11 @@ Per fer-ho:
 
 Per avaluar l’activitat es revisarà:
 
-- JSON individual de cada alumne
-- JSON de grup
-- commits realitzats
-- Pull Requests creats
-- revisió entre companys
+* JSON individual de cada alumne
+* JSON de grup
+* commits realitzats
+* Pull Requests creats
+* revisió entre companys
 
 Aquestes evidències quedaran registrades al repositori.
 
@@ -318,19 +311,24 @@ Aquestes evidències quedaran registrades al repositori.
 
 ## Criteris d’avaluació
 
-## JSON individual (70%)
+<div style="display:flex; align-content:center; gap:1rem;">
+  <div style="flex:1; align-items: flex-start">
+    <h3>JSON individual (70%)<h3>
 
 | Criteri | Punts |
-|------|------|
-JSON vàlid | 3 |
-estructura coherent | 2 |
-ús correcte d'objectes i arrays | 2 |
+|------|------:|
+|JSON vàlid | 3 |
+|estructura coherent | 2 |
+|ús correcte d'objectes i arrays | 2 |
 
----
-
-## JSON de grup (30%)
+</div>
+<div style="flex:1; align-content: flex-start">
+<h3>JSON de grup (30%)<h3>
 
 | Criteri | Punts |
-|------|------|
-integra informació dels membres | 2 |
-estructura correcta | 1 |
+|------|------:|
+|integra informació dels membres | 2 |
+|estructura correcta | 1 |
+
+  </div>
+</div>
