@@ -11,37 +11,126 @@
             "description": "És el marc mental abans de començar.",
             "status": "active",
             "kind": "activity"
-        },{
+        },
+        {
             "order": "001",
             "title": "001. SPRINT TÈCNIC SMX – TANCAMENT 2n TRIMESTRE",
             "src": "01-primer-repte.reveal",
             "description": "Això no és una pràctica aïllada.<br>És una simulació de treball professional.",
             "status": "active",
             "kind": "activity"
-        },{
+        },
+        {
             "order": "002",
             "title": "002. SPRINT TÈCNIC SMX – Verificació de servidors",
             "src": "02-sessio-1r-dimecres.reveal",
             "description": "Verificació de servidors.",
             "status": "active",
             "kind": "activity"
-        },{
+        },
+        {
             "order": "003",
             "title": "003. Explicació diagnòstic d’un servidor (model OSI)",
             "src": "03-explicacio-osi.reveal",
             "description": "Explicació diagnòstic d’un servidor (model OSI).",
             "status": "active",
             "kind": "activity"
-        },{
+        },
+        {
             "order": "004",
-            "title": "004. Activitat avaluable – Diagnòstic de servidor",
+            "title": "004. Com explicar un sistema",
             "src": "04-activitat-avaluable-diagnostic.reveal",
-            "description": "Activitat avaluable – Diagnòstic de servidor.",
+            "description": "Com explicar un sistema",
             "status": "active",
             "kind": "activity"
+        },
+        {
+            "order": "005",
+            "title": "005. Sprint T2 — Documentació del projecte",
+            "src": "05-sprint-t2-extensio-ofimatica.reveal",
+            "description": "Sprint T2 — Documentació del projecte.",
+            "status": "active",
+            "kind": "activity"
+        },
+        {
+            "order": "101",
+            "title": "101. Pìndola | Bones pràctiques: Git",
+            "src": "bp-01-git-commit-push.reveal",
+            "description": "Commit, push i repositori.",
+            "status": "active",
+            "kind": "theory"
+        },
+        {
+            "order": "102",
+            "title": "102. Pìndola | Bones pràctiques: Incidències tècniques",
+            "src": "bp-02-documentar-incidencies.reveal",
+            "description": "Com documentar un problema.",
+            "status": "active",
+            "kind": "theory"
+        },
+        {
+            "order": "103",
+            "title": "103. Pìndola | Bones pràctiques: Presentacions tècniques",
+            "src": "bp-03-presentacions-tecniques.reveal",
+            "description": "Com explicar un projecte.",
+            "status": "active",
+            "kind": "theory"
+        },
+        {
+            "order": "104",
+            "title": "104. Pìndola | Bones pràctiques: Documentació tècnica",
+            "src": "bp-04-documentacio-tecnica.reveal",
+            "description": "Commit, push i repositori.",
+            "status": "active",
+            "kind": "theory"
+        },
+        {
+            "order": "105",
+            "title": "105. Pìndola | Bones pràctiques: Debugging de sistemes",
+            "src": "bp-05-debugging-sistemes.reveal",
+            "description": "Com trobar problemes tècnics.",
+            "status": "active",
+            "kind": "theory"
+        },
+        {
+            "order": "106",
+            "title": "106. Pìndola | Bones pràctiques: Llegir errors",
+            "src": "bp-06-com-llegir-errors.reveal",
+            "description": "Els errors són informació.",
+            "status": "active",
+            "kind": "theory"
+        },
+        {
+            "order": "107",
+            "title": "107. Pìndola | Bones pràctiques: Estructura de repositoris",
+            "src": "bp-07-estructura-repositoris.reveal",
+            "description": "Organitzar un projecte.",
+            "status": "active",
+            "kind": "theory"
+        },
+        {
+            "order": "108",
+            "title": "108. Pìndola | Bones pràctiques: Fer diagnòstics",
+            "src": "bp-08-com-fer-diagnostics.reveal",
+            "description": "Entendre un problema.",
+            "status": "active",
+            "kind": "theory"
+        },
+        {
+            "order": "109",
+            "title": "109. Pìndola | Bones pràctiques: Diagnòstic de xarxa",
+            "src": "bp-09-com-diagnosticar-problemes-de-xarxa.reveal",
+            "description": "Com trobar problemes de connectivitat.",
+            "status": "active",
+            "kind": "theory"
+        },
+        {
+            "order": "110",
+            "title": "110. Pìndola | Bones pràctiques: Errors de consola",
+            "src": "bp-10-com-llegir-errors-de-consola.reveal",
+            "description": "Entendre els missatges del sistema.",
+            "status": "active",
+            "kind": "theory"
         }
-
-
-        
     ]
 }
