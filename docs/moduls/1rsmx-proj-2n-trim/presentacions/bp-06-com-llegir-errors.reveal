@@ -16,9 +16,7 @@ Quan apareix un error, molts alumnes:
 
 ## Regla principal
 
-```
 Un missatge d'error és una pista
-```
 
 Normalment indica:
 
@@ -30,11 +28,7 @@ Normalment indica:
 
 ## Exemple
 
-Error:
-
-```
-Connection refused
-```
+Error: `Connection refused`
 
 Interpretació possible:
 
@@ -47,8 +41,10 @@ Interpretació possible:
 ## Com llegir un error
 
 1. Llegir el missatge complet  
-2. Identificar la paraula clau  
-3. Buscar què significa
+
+1. Identificar la paraula clau  
+
+1. Buscar què significa
 
 ---
 

@@ -18,13 +18,12 @@ Això dificulta entendre el projecte.
 
 ## Regla principal
 
-```
-1 carpeta = 1 tipus de contingut
-```
+### 1 carpeta = 1 tipus de contingut
+
 
 Exemple:
 
-```
+```bash
 docs/
 scripts/
 config/
@@ -35,7 +34,7 @@ tests/
 
 ## Exemple d'estructura
 
-```
+```bash
 projecte/
 
 docs/
@@ -53,14 +52,14 @@ Això facilita entendre el repositori.
 
 Preferiu noms descriptius:
 
-```
+```bash
 config_apache.md
 diagnostic_xarxa.md
 ```
 
 Eviteu noms com:
 
-```
+```bash
 prova.txt
 document1.docx
 ```

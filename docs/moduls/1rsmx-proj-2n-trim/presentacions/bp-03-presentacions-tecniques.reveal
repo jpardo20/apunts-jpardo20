@@ -14,9 +14,8 @@ Una presentació **no és un document**.
 
 ## Regla principal
 
-```
-1 idea per diapositiva
-```
+
+Una idea per diapositiva
 
 ---
 
@@ -39,7 +38,7 @@ La resta ha de ser:
 
 ## Exemple correcte
 
-**Configuració del servidor**
+- **Configuració del servidor**
 
 - instal·lació d'Apache
 - comprovació del servei

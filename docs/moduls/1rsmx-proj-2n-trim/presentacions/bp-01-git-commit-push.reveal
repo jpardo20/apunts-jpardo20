@@ -10,7 +10,7 @@ Crear o modificar un fitxer **no és suficient**.
 
 Git només puja fitxers que han passat per:
 
-```
+```bash
 git add
 git commit
 git push

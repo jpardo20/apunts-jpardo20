@@ -17,9 +17,7 @@ Això **dificulta trobar la causa real**.
 
 ## Regla principal
 
-```
 Canvia només una cosa cada vegada
-```
 
 Després comprova si el problema ha canviat.
 
@@ -27,12 +25,11 @@ Després comprova si el problema ha canviat.
 
 ## Procés de debugging
 
-```
 1. Identificar el problema
 2. Formular una hipòtesi
 3. Fer una prova
 4. Analitzar el resultat
-```
+
 
 Repetir fins trobar la causa.
 
@@ -44,7 +41,7 @@ Problema: la web no es mostra.
 
 Proves possibles:
 
-```
+```bash
 ping servidor
 curl http://localhost
 systemctl status apache2

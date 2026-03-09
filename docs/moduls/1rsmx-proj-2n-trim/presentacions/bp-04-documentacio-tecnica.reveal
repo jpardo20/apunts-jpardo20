@@ -14,25 +14,30 @@ La documentació ha de permetre que **una altra persona entengui el sistema**.
 
 Una documentació tècnica sol tenir:
 
-```
-Context
-Configuració
-Proves
-Problemes
-Conclusió
-```
+1. Context
+
+1. Configuració
+
+1. Proves
+
+1. Problemes
+
+1. Conclusió
 
 ---
 
 ## Exemple
 
 ### Context
+
 Servidor Ubuntu amb Apache.
 
 ### Configuració
+
 Instal·lació amb `apt install apache2`.
 
 ### Proves
+
 Verificació amb `curl` i navegador.
 
 ---
