@@ -1,0 +1,318 @@
+# Activitat — Documents JSON (Projecte PhoenixTech)
+
+## Context
+
+En el projecte **PhoenixTech** estem desenvolupant un sistema de gestió d’incidències tècniques.
+
+En molts sistemes informàtics moderns, la informació es representa i s’intercanvia mitjançant **documents JSON**. Aquests documents permeten estructurar dades de manera clara i jeràrquica.
+
+En aquesta activitat treballareu amb **documents JSON** a partir d’una incidència descrita en format narratiu.
+
+L’objectiu és transformar informació escrita en **dades estructurades**.
+
+---
+
+## Objectius de l'activitat
+
+Aprendre a:
+
+- dissenyar estructures d’informació
+- representar dades amb **JSON**
+- utilitzar **objectes i arrays**
+- estructurar informació de manera jeràrquica
+- integrar informació generada per diferents persones
+
+---
+
+## Treball a realitzar
+
+Aquesta activitat té **dues parts**:
+
+1. **Document JSON individual (cada alumne)**
+
+2. **Document JSON de grup**
+
+
+---
+
+## Part 1 — JSON individual
+
+Cada alumne ha de crear **un document JSON personal** basat en la incidència assignada al seu grup.
+
+El document ha de representar informació rellevant sobre la incidència. L’estructura és **lliure**, però ha de complir els requisits següents:
+
+### Requisits
+
+El JSON ha de contenir:
+
+- un **objecte principal**
+- almenys **un array**
+- almenys **4 camps d’informació**
+- un camp amb **diagnosi o proposta de solució** escrita per l’alumne
+
+Exemples d’informació que es pot incloure:
+
+- identificador de la incidència
+- persona que ha reportat el problema
+- tècnic assignat
+- materials utilitzats
+- ubicació
+- diagnosi tècnica
+- proposta de solució
+
+Cada alumne pot decidir **l’estructura exacta del seu JSON**.
+
+---
+
+## Part 2 — JSON de grup
+
+Un cop tots els membres del grup hagin creat el seu JSON personal, el grup haurà de crear **un document JSON conjunt**.
+
+Aquest document ha de **recollir informació dels JSON individuals dels membres del grup**.
+
+Per exemple:
+
+- resum de propostes de solució
+- materials suggerits per cada alumne
+- diagnosi de cada membre
+
+Aquest document ha de contenir:
+
+- l’identificador de la incidència
+- un **array amb informació dels membres del grup**
+- almenys **un camp amb dades extretes dels JSON personals**
+
+---
+
+## Estructura del repositori
+
+Els fitxers s’han de desar dins del repositori del projecte en aquesta carpeta:
+
+```bash
+docs/json/
+```
+
+### JSON individuals
+
+Nom del fitxer <codijpc>&lt;primerCognomAlumne>-<codiIncidencia>.json</codijpc>
+
+
+<u>**Tot en minúscules**</u>, <u>sense espais</u> i fent servir **<u>només</u> caràcters de l'alfabet anglès**, cal eliminar espais, accents i caràcters especials.
+
+><hr>
+>
+> #### On **`&lt;primerCognomAlumne`** és <u>només</u> el primer cognom de l'alumne, sense el nom, i 
+>
+> #### on **`<codiIncidencia>`** és el codi de l'incidència que apareix al text facilitat.
+>
+> #### Per exemple en el cas de l'alumne <b><u>Albert Einstein</u></b>, i el codi de l'incidència **`XE101`**, el nom del fitxer seria <kbd><u><b>**`einstein-XE101.json`**</b></u></kbd>.
+>
+><hr>
+
+### JSON de grup
+
+Nom del fitxer <codijpc>grup-&lt;codiIncidencia>.json</codijpc>
+
+><hr>
+>
+> #### On **`&lt;codiIncidencia>`** és el codi de l'incidència que apareix al text facilitat.
+>
+> #### Per exemple si el codi de l'incidència és **`XE101`**, el nom del fitxer seria <kbd><u><b>**`grup-XE101.json`**</b></u></kbd>.
+>
+><hr>
+
+---
+
+## Incidències assignades
+
+## Grup 1
+
+La incidència **XE101** va ser oberta per **Pere Renom**, professor del departament de programació.
+
+Durant una classe a l’aula **DAM-2**, diversos alumnes van informar que no tenien connexió a Internet.
+
+Després d’una revisió inicial, el tècnic **Jordi Biugas** va detectar que el problema estava relacionat amb un **switch de xarxa mal configurat** dins del rack de comunicacions.
+
+Per resoldre la incidència es van utilitzar diversos materials, com **cables Ethernet i connectors RJ45**.
+
+La incidència es va obrir el **12 de març de 2026** i es va marcar amb **prioritat alta**.
+
+---
+
+## Grup 2
+
+La incidència **XE102** va ser oberta per **Laura Gómez**, administrativa del centre.
+
+L’ordinador de secretaria no s’encenia correctament i mostrava errors durant l’arrencada.
+
+El tècnic **Marc Vidal** va revisar l’equip i va detectar que el problema podia estar relacionat amb la **memòria RAM i la font d’alimentació**.
+
+Durant la revisió es van provar diferents components de recanvi del magatzem.
+
+La incidència es va registrar el **10 de març de 2026** amb **prioritat mitjana**.
+
+---
+
+## Grup 3
+
+La incidència **XE103** va ser oberta per **Carla Torres**, professora del departament de llenguatges.
+
+La **impressora de secretaria** no imprimia correctament els documents enviats des dels ordinadors del centre.
+
+El tècnic **Albert Navarro** va revisar el dispositiu i va detectar possibles problemes amb els **cartutxos de tinta i la configuració del controlador d’impressió**.
+
+Durant la intervenció es van substituir alguns consumibles i es va revisar la configuració del sistema.
+
+La incidència es va registrar el **11 de març de 2026** amb **prioritat baixa**.
+
+---
+
+## Grup 4
+
+La incidència **XE104** va ser oberta per **David Martínez**, responsable del departament TIC.
+
+El **servidor de fitxers del centre** estava gairebé sense espai disponible, cosa que impedia guardar nous documents.
+
+El tècnic **Anna Costa** va revisar el sistema i va detectar que diversos usuaris estaven ocupant gran quantitat d’espai amb còpies duplicades de fitxers.
+
+Es va iniciar una revisió del sistema d’emmagatzematge i es va plantejar ampliar l’espai del servidor.
+
+La incidència es va registrar el **9 de març de 2026** amb **prioritat alta**.
+
+
+---
+
+## Resultat esperat
+
+Cada alumne haurà creat **un document JSON personal**, i cada grup haurà generat **un document JSON conjunt** que integri informació dels membres del grup.
+
+## Workflow Git obligatori
+
+Per garantir la traçabilitat del treball, aquesta activitat s’ha de realitzar seguint el **flux de treball amb branques i Pull Requests**.
+
+No es permet treballar directament sobre la branca `main`.
+
+---
+
+## Pas 1 — Crear branca personal
+
+Cada alumne ha de crear una branca amb el format <codijpc>feature/json-&lt;primerCognomAlumne></codijpc>
+
+
+<u>**Tot en minúscules**</u>, <u>sense espais</u> i fent servir **<u>només</u> caràcters de l'alfabet anglès**, cal eliminar espais, accents i caràcters especials.
+
+><hr>
+>
+> #### On **`&lt;primerCognomAlumne`** és <u>només</u> el primer cognom de l'alumne, sense el nom.
+>
+> #### Per exemple en el cas de l'alumne <b><u>Albert Einstein</u></b>, el nom de la branca seria <kbd><u><b>**`feature/json-einstein`**</b></u></kbd>.
+>
+><hr>
+
+
+Comanda recomanada <codijpc>git checkout -b feature/json-&lt;primerCognomAlumne></codijpc>
+
+---
+
+## Pas 2 — Crear el JSON individual
+
+Cada alumne crea el seu fitxer dins de <codijpc>docs/json/</codijpc>
+
+Nom del fitxer <codijpc>docs/json/&lt;primerCognomAlumne>-<codiIncidencia>.json</codijpc>
+
+---
+
+## Pas 3 — Commit del JSON personal
+
+Missatge de commit obligatori <codijpc>JSON individual &lt;codiIncidencia></codijpc>
+
+Exemple:
+
+```bash
+git add docs/json/einstein-XE101.json
+git commit -m "JSON individual XE101 Einstein"
+git push origin feature/json-anna
+```
+
+---
+
+## Pas 4 — Crear Pull Request
+
+Cada alumne ha de crear un **Pull Request** cap a `main`.
+
+Títol obligatori:
+
+```bash
+JSON individual <codiIncidencia>
+```
+
+Exemple:
+
+```bash
+JSON individual XE101
+```
+
+---
+
+## Pas 5 — Revisió entre companys
+
+Abans de fusionar el PR, **almenys un company del grup ha de revisar-lo**.
+
+La revisió ha d’incloure un comentari.
+
+Exemple de comentari:
+
+```bash
+JSON revisat. Estructura correcta.
+```
+
+---
+
+## Pas 6 — Crear el JSON de grup
+
+Un cop tots els JSON individuals estiguin fusionats a `main`, el grup crearà el **JSON de grup**.
+
+Per fer-ho:
+
+1. crear nova branca, <codijpc>feature/json-grup-lt;codiIncidencia></codijpc>
+
+2. crear el fitxer <codijpc>feature/json-grup-lt;codiIncidencia>.json</codijpc>
+
+3. commit obligatori <codijpc>JSON grup lt;codiIncidencia></codijpc>
+
+4. crear Pull Request.
+
+---
+
+## Evidències que es revisaran
+
+Per avaluar l’activitat es revisarà:
+
+- JSON individual de cada alumne
+- JSON de grup
+- commits realitzats
+- Pull Requests creats
+- revisió entre companys
+
+Aquestes evidències quedaran registrades al repositori.
+
+---
+
+## Criteris d’avaluació
+
+## JSON individual (70%)
+
+| Criteri | Punts |
+|------|------|
+JSON vàlid | 3 |
+estructura coherent | 2 |
+ús correcte d'objectes i arrays | 2 |
+
+---
+
+## JSON de grup (30%)
+
+| Criteri | Punts |
+|------|------|
+integra informació dels membres | 2 |
+estructura correcta | 1 |
