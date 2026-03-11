@@ -1,0 +1,239 @@
+# Activitat: Conceptes de JSON
+
+Projecte **PhoenixTech**
+
+---
+
+## Què has de fer (resum)
+
+Per cada cas:
+
+1. Obre un fitxer de `cases/`
+2. Detecta quin error té
+3. Escriu la resposta a `respostes/answers.json`
+4. Fes `commit` i `push`
+
+El sistema validarà automàticament si la resposta és correcta.
+
+**Data límit:** dimarts **`11 de març`** de 2026 a les **`13:59`** UTC
+
+---
+
+## Objectiu de l'activitat
+
+Analitzar **documents JSON** i detectar errors típics.
+
+Treballareu amb un **repositori GitHub Classroom**.
+
+Cada resposta es valida **automàticament**.
+
+---
+
+## Accés a l'activitat
+
+Escaneja o obre l'enllaç:
+
+<h3>
+<a href="https://classroom.github.com/a/nlAGBn62" target="_blank">
+https://classroom.github.com/a/nlAGBn62
+</a>
+</h3>
+
+Accepta l'assignació.
+
+Això crearà **el teu repositori personal**.
+
+Cal que el clonis en local, per dur a terme l'activitat.
+
+---
+
+## Què trobaràs al repositori
+
+```bash
+cases/
+easy01.data
+easy02.data
+...
+hard05.data
+
+respostes/
+answers.json
+validated.json
+```
+
+---
+
+## Què has de fer
+
+Per cada cas:
+
+1️⃣ Analitzar el fitxer de `cases/`
+
+2️⃣ Detectar **quin error té**
+
+3️⃣ Escriure la resposta a:
+
+```bash
+respostes/answers.json
+```
+
+---
+
+## Tipus d'errors possibles
+
+Els valors següents són **els únics que es poden utilitzar** al fitxer **`respostes/answers.json`**.
+
+S'han d'escriure **exactament igual**.
+
+```
+valid
+comma_error
+quotes_error
+array_object_error
+missing_key
+duplicate_key
+structure_error
+```
+
+Alguns casos poden tenir **més d’un error**.
+
+⚠️ Els valors s'han d'escriure **exactament igual**.
+
+
+⬇️
+
+----
+
+⚠️ Els valors s'han d'escriure **exactament igual**.
+
+Per exemple:
+
+```
+comma_error
+```
+
+No són vàlids:
+
+```
+comma
+comma-error
+Comma_error
+```
+
+---
+
+## Exemple
+
+```bash
+{
+ "easy01": "valid",
+ "easy02": "comma_error"
+}
+```
+
+---
+
+## Regles importants
+
+1️⃣ Un **cas per commit**
+
+2️⃣ Fes **commit + push** després de cada resposta
+
+3️⃣ El sistema validarà automàticament
+
+```bash
+PASS
+```
+
+o
+
+```bash
+FAIL
+```
+
+---
+
+## Molt important
+
+❌ No modifiqueu fitxers de `cases/`
+
+❌ No modifiqueu `validated.json`
+
+Només heu d'editar:
+
+```bash
+answers.json
+```
+
+---
+
+## Funcionament
+
+Quan feu **push**:
+
+GitHub executa un **validador automàtic**
+
+El resultat apareixerà al commit.
+
+---
+
+## Si falleu un cas
+
+El sistema registrarà:
+
+```bash
+FAILED
+```
+
+No es pot corregir.
+
+Però **podreu continuar amb el següent cas**.
+
+---
+
+## Ordre dels exercicis
+
+```bash
+easy → medium → hard
+```
+
+S'han de resoldre **en ordre**.
+
+---
+
+## Estratègia recomanada
+
+Per cada cas:
+
+1. Analitza el fitxer
+2. Escriu la resposta a **`answers.json`**
+3. Fes **`commit`**
+4. Fes **`push`**
+5. Mira el resultat
+
+**`PASS`** -> continua  
+**`FAIL`** -> queda registrat -> continua  
+
+---
+
+## Consell
+
+Llegiu el JSON **amb molta atenció**.
+
+Els errors són **els típics que es fan quan es treballa amb JSON**.
+
+---
+
+## Comencem
+
+Accediu a:
+
+<h3>
+<a href="https://classroom.github.com/a/nlAGBn62" target="_blank">
+https://classroom.github.com/a/nlAGBn62
+</a>
+</h3>
+
+Clonar el repositori.
+
+I començar amb **easy01**.
