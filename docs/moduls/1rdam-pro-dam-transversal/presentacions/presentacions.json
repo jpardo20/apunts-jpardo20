@@ -140,6 +140,13 @@
             "status": "active",
             "kind": "activity"
         },{
+            "order": "255",
+            "title": "255. Activitat Conceptes JSON",
+                "src": "slides/014-act-conceptes-json.reveal",
+            "description": "Conceptes JSON (Projecte PhoenixTech)",
+            "status": "active",
+            "kind": "activity"
+        },{
             "order": "299",
             "title": "299. FASE 2: Desplegament d’Infraestructura ",
             "src": "slides/010-enunciat-fase-2.reveal",
@@ -150,3 +157,5 @@
 
     ]
 }
+
+
