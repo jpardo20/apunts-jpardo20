@@ -147,6 +147,13 @@
             "status": "active",
             "kind": "activity"
         },{
+            "order": "260",
+            "title": "260. Activitat Checkpoint de coneixement segon trimestre",
+                "src": "slides/015-act-checkpoint-2n-trim.reveal",
+            "description": "Checkpoint de coneixement segon trimestre",
+            "status": "active",
+            "kind": "activity"
+        },{
             "order": "299",
             "title": "299. FASE 2: Desplegament d’Infraestructura ",
             "src": "slides/010-enunciat-fase-2.reveal",
@@ -154,7 +161,6 @@
             "status": "active",
             "kind": "theory"
         }
-
     ]
 }
 

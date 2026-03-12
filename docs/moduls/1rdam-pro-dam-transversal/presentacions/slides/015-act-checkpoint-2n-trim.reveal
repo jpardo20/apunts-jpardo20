@@ -1,0 +1,142 @@
+# PhoenixTech - Checkpoint de coneixement segon trimestre
+
+Avui farem un **checkpoint individual** per comprovar que enteneu:
+
+- el projecte **PhoenixTech**
+- el format **JSON**
+- els conceptes bàsics de **Git / GitHub**
+
+---
+
+## Objectiu
+
+Cada alumne haurà de:
+
+1. Respondre **3 preguntes**
+2. Guardar les respostes en **format JSON**
+3. Fer **commit i push** al seu repositori
+
+---
+
+## Pas 1
+
+###  Accepta l'assignació
+
+Accedeix a l'enllaç de GitHub Classroom:
+
+<h3>
+<a href="https://classroom.github.com/a/_xKDmpUb" target="_blank">
+https://classroom.github.com/a/_xKDmpUb
+</a>
+</h3>
+
+### 
+
+Això crearà **el teu repositori personal**.
+
+---
+
+## Pas 2
+
+###  Clona el repositori
+
+Un cop acceptada l'activitat:
+
+```bash
+git clone <url-del-teu-repositori>
+cd tres-preguntes
+```
+
+---
+
+## Pas 3
+
+###  Obre l'eina
+
+Obre el fitxer següent amb el navegador:
+
+```
+tres-preguntes.html
+```
+
+Aquesta eina:
+
+- generarà **3 preguntes aleatòries**
+- guardarà les teves respostes en **JSON**
+
+---
+
+## Pas 4  
+
+###  Selecciona el teu nom
+
+A la part superior de la pàgina:
+
+- selecciona **el teu nom**
+- respon les **3 preguntes**
+
+**Totes les respostes són obligatòries**
+
+---
+
+## Pas 5  
+
+###  Guarda les respostes
+
+Quan hagis acabat:
+
+Prem el botó:
+
+```
+Guardar respostes
+```
+
+El sistema crearà un fitxer JSON, que hauràs de guardar a la carpeta:
+
+```
+respostes/answers.json
+```
+
+del teu repositori.
+
+---
+
+## Pas 6
+
+###  Envia l'activitat
+
+Després d'haver generat el fitxer:
+
+```bash
+git add .
+git commit -m "Checkpoint PhoenixTech"
+git push
+```
+
+---
+
+## Estructura final del repositori
+
+El teu repositori hauria de quedar així:
+
+```
+repo
+├── tres-preguntes.html
+├── README.md
+├── fitxers
+│   ├── control.js
+│   ├── estils.css
+│   └── tres-preguntes.html
+└── respostes
+    └── answers.json
+```
+
+---
+
+## Important
+
+- Les preguntes es generen **aleatòriament**
+- No es poden canviar recarregant la pàgina
+- Les respostes han de ser **amb les teves paraules**
+
+Aquest checkpoint serveix per comprovar que **has entès el projecte**.
