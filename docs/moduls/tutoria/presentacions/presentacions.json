@@ -64,7 +64,7 @@
             "description": "Sessió de tancament i mirada al procés",
             "src": "projecte-6a-sessio.reveal",
             "theme": "white",
-            "status": "active",
+            "status": "inactive",
             "kind": "theory"
         }
     ]
