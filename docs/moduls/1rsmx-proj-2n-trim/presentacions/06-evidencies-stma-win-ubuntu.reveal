@@ -1,0 +1,262 @@
+# SMX — Comunicació entre Windows i Ubuntu
+
+---
+
+## Context de l'activitat
+
+Cada alumne disposa de **dues màquines virtuals**:
+
+- **MV1:** Windows 11  
+- **MV2:** Ubuntu Desktop
+
+Les dues màquines tenen configurada una **NIC amb xarxa interna**.
+
+L'objectiu d'aquesta activitat és demostrar que:
+
+- les dues màquines **estan correctament configurades**
+- les dues màquines **es veuen a la xarxa**
+- les dues màquines **es poden comunicar**
+
+---
+
+## Objectiu
+
+Demostrar que el sistema funciona correctament.
+
+Per fer-ho haureu de generar **diverses evidències** i pujar-les al vostre repositori GitHub.
+
+Repositori de cada alumne:
+
+```
+SMX-2025-2027/smx-sprint-t2-<nomUsuariGithub>
+```
+
+Exemple:
+
+```
+SMX-2025-2027/smx-sprint-t2-jperez
+```
+
+---
+
+## Pas 1 — Comprovar la configuració de xarxa
+
+### A Windows 11
+
+Obrir **Terminal o CMD** i executar:
+
+```
+ipconfig
+```
+
+Identificar:
+
+- IP de la màquina
+- màscara de xarxa
+
+---
+
+## Pas 2 — Comprovar la configuració de xarxa
+
+### A Ubuntu
+
+Obrir terminal i executar:
+
+```
+ip a
+```
+
+Identificar:
+
+- IP de la interfície de xarxa
+- màscara de xarxa
+
+---
+
+## Pas 3 — Ping Ubuntu → Windows
+
+Des d'Ubuntu executar:
+
+```
+ping IP_WINDOWS
+```
+
+Exemple:
+
+```
+ping 192.168.50.10
+```
+
+El resultat correcte ha de mostrar respostes com:
+
+```
+64 bytes from ...
+```
+
+---
+
+## Pas 4 — Ping Windows → Ubuntu
+
+Des de Windows executar:
+
+```
+ping IP_UBUNTU
+```
+
+Exemple:
+
+```
+ping 192.168.50.20
+```
+
+---
+
+## Pas 5 — Firewall de Windows
+
+És possible que **Ubuntu no rebi resposta del ping**.
+
+En aquest cas cal revisar el **Firewall de Windows**.
+
+Opcions possibles:
+
+- desactivar temporalment el firewall
+- o permetre **ICMP Echo Request**
+
+---
+
+## Evidències que heu de generar
+
+Cal crear dins del repositori la carpeta:
+
+```
+evidencies_xarxa
+```
+
+Dins d'aquesta carpeta han d'existir **les següents captures**.
+
+---
+
+## Evidència 1 — Configuració Windows
+
+Captura de pantalla del resultat de:
+
+```
+ipconfig
+```
+
+Nom del fitxer:
+
+```
+ipconfig_windows.png
+```
+
+---
+
+## Evidència 2 — Configuració Ubuntu
+
+Captura de pantalla del resultat de:
+
+```
+ip a
+```
+
+Nom del fitxer:
+
+```
+ip_ubuntu.png
+```
+
+---
+
+## Evidència 3 — Ping Ubuntu → Windows
+
+Captura del ping executat des d'Ubuntu.
+
+Fitxer:
+
+```
+ping_ubuntu_a_windows.png
+```
+
+A la captura ha d'aparèixer:
+
+```
+64 bytes from ...
+```
+
+---
+
+## Evidència 4 — Ping Windows → Ubuntu
+
+Captura del ping executat des de Windows.
+
+Fitxer:
+
+```
+ping_windows_a_ubuntu.png
+```
+
+---
+
+## Evidència 5 — Configuració del Firewall
+
+Captura que mostri una de les opcions:
+
+- firewall desactivat  
+- regla que permet ICMP
+
+Fitxer:
+
+```
+firewall_windows.png
+```
+
+---
+
+## Estructura final esperada
+
+Al vostre repositori ha d'existir:
+
+```
+evidencies_xarxa/
+
+ipconfig_windows.png
+ip_ubuntu.png
+ping_ubuntu_a_windows.png
+ping_windows_a_ubuntu.png
+firewall_windows.png
+```
+
+---
+
+## Pujar les evidències al repositori
+
+Un cop generades les captures:
+
+```
+git add evidencies_xarxa
+git commit -m "Evidències comunicació xarxa entre MV"
+git push
+```
+
+---
+
+## Quan el sistema es considera correcte
+
+La pràctica es considera **correctament configurada** si:
+
+✔ Les dues màquines tenen IP a la mateixa xarxa  
+✔ Ubuntu pot fer ping a Windows  
+✔ Windows pot fer ping a Ubuntu  
+✔ Existeix evidència del firewall  
+
+---
+
+## Objectiu real de la pràctica
+
+Entendre:
+
+- configuració de **xarxes internes**
+- funcionament del **ping**
+- impacte dels **firewalls**
+- verificació de connectivitat entre sistemes

@@ -53,12 +53,12 @@
             "kind": "activity"
         },
         {
-            "order": "101",
-            "title": "101. Píndola | <b>Bones pràctiques</b>: Git",
-            "src": "bp-01-git-commit-push.reveal",
+            "order": "006",
+            "title": "006. SMX — Comunicació entre Windows i Ubuntu",
+            "src": "06-evidencies-stma-win-ubuntu.reveal",
             "description": "Commit, push i repositori.",
             "status": "active",
-            "kind": "theory"
+            "kind": "activity"
         },
         {
             "order": "102",
@@ -131,6 +131,17 @@
             "description": "Entendre els missatges del sistema.",
             "status": "active",
             "kind": "theory"
+        },
+        {
+            "order": "005",
+            "title": "005. Sprint T2 — Documentació del projecte",
+            "src": "05-sprint-t2-extensio-ofimatica.reveal",
+            "description": "Sprint T2 — Documentació del projecte.",
+            "status": "active",
+            "kind": "activity"
         }
     ]
 }
+
+
+
