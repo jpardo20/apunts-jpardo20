@@ -66,6 +66,17 @@
             "theme": "white",
             "status": "active",
             "kind": "theory"
+        },
+        {
+            "id": "06",
+            "title": "06 | Projecte de Tutoria FP",
+            "description": "Resum del tancament",
+            "src": "tancament.reveal",
+            "theme": "white",
+            "status": "active",
+            "kind": "theory"
         }
     ]
 }
+
+
