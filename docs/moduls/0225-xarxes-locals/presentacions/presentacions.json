@@ -83,7 +83,17 @@
       "description": "Instal·lació i verificació de cablejat - 0225-xlo-ae006 - RA1 i RA2",
       "status": "active",
       "kind":"activity"
+    },
+    {
+      "order": "101",
+      "title": "101. Sessió pràctica: Adreces IP i subxarxa",
+      "src": "slides/0225-xlo-adreces-i-subxarxes.reveal",
+      "description": "Adreces IP i subxarxa",
+      "status": "active",
+      "kind":"activity"
     }
   ]
 }
+
+
 
