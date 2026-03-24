@@ -68,9 +68,9 @@
             "kind": "theory"
         },
         {
-            "id": "06",
-            "title": "06 | Projecte de Tutoria FP",
-            "description": "Resum del tancament",
+            "id": "07",
+            "title": "07 | Tancament de projecte de Tutoria FP",
+            "description": "Tancament de projecte de Tutoria FP",
             "src": "tancament.reveal",
             "theme": "white",
             "status": "active",

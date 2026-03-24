@@ -255,3 +255,29 @@ h1 codiae::after{
   opacity: 0.8;
 }
 
+
+
+.timer-bar {
+  position: relative;
+  height: 20px;
+  background: #ddd;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.timer-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #4caf50;
+
+  animation: countdown 180s linear forwards;
+}
+
+@keyframes countdown {
+  from { width: 100%; }
+  to { width: 0%; }
+}
