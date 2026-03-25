@@ -31,8 +31,8 @@ scripts/fp_smx_m01_u1_pdfindex.pdf
 # 🧪 Anàlisi, informes i sortides temporals
 ###############################################################################
 analisi-apunts-20251024.md
-tree2.out
-*.out
+
+**/*.out
 *.log
 **/*.bak*
 

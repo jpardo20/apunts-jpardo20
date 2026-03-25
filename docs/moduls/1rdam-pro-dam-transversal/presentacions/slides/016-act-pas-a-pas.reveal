@@ -57,22 +57,38 @@ El que es valora és:
 
 El document HA de contenir EXACTAMENT aquests apartats (mateix nom)
 
+```markdown
+## Objectiu
+
+## Arquitectura
+
+## Requisits previs
+
+## Pas a pas
+
+## Comprovacions
+
+## Conclusions
+
+```
+
+
 ---
 
-## OBJECTIU
+## Objectiu
 
 ```markdown
-## OBJECTIU
+## Objectiu
 ```
 
 Descriu quin és el resultat final que es vol aconseguir
 
 ---
 
-## ARQUITECTURA
+## Arquitectura
 
 ```markdown
-## ARQUITECTURA
+## Arquitectura
 ```
 
 Explica els components del sistema:
@@ -84,10 +100,10 @@ Explica els components del sistema:
 
 ---
 
-## REQUISITS PREVIS
+## Requisits previs
 
 ```markdown
-## REQUISITS PREVIS
+## Requisits previs
 ```
 
 Indica tot el que ha d’estar preparat abans de començar:
@@ -100,10 +116,10 @@ Indica tot el que ha d’estar preparat abans de començar:
 
 ---
 
-## PAS A PAS
+## Pas a pas
 
 ```markdown
-## PAS A PAS
+## Pas a pas
 ```
 
 Aquest és l’apartat **més important**
@@ -141,10 +157,10 @@ Cal dir exactament què es configura
 
 ---
 
-## COMPROVACIONS
+## Comprovacions
 
 ```markdown
-## COMPROVACIONS
+## Comprovacions
 ```
 
 Explica com verificar que el sistema funciona
@@ -158,10 +174,10 @@ Per exemple:
 
 ---
 
-## CONCLUSIONS
+## Conclusions
 
 ```markdown
-## CONCLUSIONS
+## Conclusions
 ```
 
 Reflexió breu:

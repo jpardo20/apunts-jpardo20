@@ -1,0 +1,240 @@
+# IPs i Xarxes
+
+## Com saber si dues IP estan a la mateixa xarxa
+
+---
+
+## Objectiu
+
+Saber respondre:
+
+Aquestes dues IP poden comunicar-se directament?
+
+---
+
+## Què tenim?
+
+Una adreça IP `192.168.1.10`
+
+Una màscara **`/24`**
+
+---
+
+## Idea clau
+
+Una IP té 2 parts:
+
+- **Xarxa**
+- ️ **Host**
+
+La màscara ens diu on està el tall
+
+---
+
+## ️ Exemple
+
+IP: `192.168.1.10`
+
+**`/24`** → `192.168.1 | 10`
+
+Xarxa → **`192.168.1`**
+Host → **`10`**
+
+---
+
+## Regla d’or
+
+Dues IP estan a la mateixa xarxa si:
+
+**TENEN LA MATEIXA PART DE XARXA**
+
+---
+
+## Cas `/24`
+
+Mirem els **3 primers bytes**
+
+Exemple:
+
+```bash
+192.168.1.10
+192.168.1.200
+```
+
+Mateixa xarxa
+
+---
+
+## Cas `/24`
+
+```bash
+192.168.1.10
+192.168.2.10
+```
+
+Xarxa diferent
+
+---
+
+## Cas `/16`
+
+Mirem els **2 primers números**
+
+```bash
+172.16.5.10
+172.16.200.1
+```
+
+Mateixa xarxa
+
+---
+
+## Cas `/16`
+
+```bash
+172.16.5.10
+172.17.5.10
+```
+
+Xarxa diferent
+
+---
+
+## Cas `/8`
+
+Mirem **només el primer número**
+
+```bash
+10.0.0.1
+10.200.1.1
+```
+
+Mateixa xarxa
+
+---
+
+## Cas `/8`
+
+```bash
+10.0.0.1
+11.0.0.1
+```
+
+Xarxa diferent
+
+---
+
+## Resum visual
+
+| Màscara | Què comparar |
+|--------|-------------|
+| **`/8`** | 1r byte |
+| **`/16`** | 2n byte |
+| **`/24`** | 3r byte |
+
+---
+
+## Truc rÀpid
+
+Tapa la part d’host
+
+**`/24`** → tapa l'últim byte
+
+**`/16`** → tapa els 2 últims bytes
+
+**`/8`** → tapa  els 3 últims bytes
+
+---
+
+## Pràctica **`/24`**
+
+Decideix:
+
+```bash
+192.168.1.10 /24
+192.168.1.200 /24
+```
+
+Mateixa xarxa?
+
+---
+
+## Pràctica**`/16`**
+
+```bash
+10.0.1.1 /16
+10.1.1.1 /16
+```
+
+Mateixa xarxa?
+
+---
+
+## Pràctica**`/8`**
+
+```bash
+172.16.5.10 /8
+173.16.5.10 /8
+```
+
+Mateixa xarxa?
+
+---
+
+## Idees importants
+
+- No cal fer càlculs complicats
+- Només comparar números ️
+- La màscara és la clau
+
+---
+
+## Objectiu final
+
+Ser capaç de decidir en menys de 5 segons:
+
+mateixa xarxa
+xarxa diferent
+
+---
+
+## Pràctica — Mateixa xarxa
+
+**`/24`** (mirar 3 primers bytes)
+
+|1a IP|2a IP|
+|----|----|
+|192.168.1.10 /24|192.168.1.200 /24|
+|192.168.1.10 /24|192.168.2.10 /24|
+|10.0.0.1 /24|10.0.0.50 /24|
+|10.0.1.1 /24|10.0.2.1 /24|
+|172.16.5.10 /24|172.16.5.200 /24|
+|172.16.5.10 /24|172.16.6.10 /24|
+|192.168.100.1 /24|192.168.100.254 /24|
+
+----
+
+**`/16`** (mirar 2 primers bytes)
+
+|1a IP|2a IP|
+|----|----|
+|172.16.5.10 /16|172.16.200.1 /16|
+|172.16.5.10 /16|172.17.5.10 /16|
+|192.168.10.10 /16|192.168.200.200 /16|
+|192.168.10.10 /16|192.169.10.10 /16|
+|10.10.1.1 /16|10.10.255.255 /16|
+|10.10.1.1 /16|10.11.1.1 /16|
+
+----
+
+**`/8`** (mirar 1r byte)
+
+|1a IP|2a IP|
+|----|----|
+|10.0.0.1 /8|10.255.255.255 /8|
+|10.0.0.1 /8|11.0.0.1 /8|
+|172.16.5.10 /8|172.200.1.1 /8|
+|172.16.5.10 /8|173.16.5.10 /8|
+|192.168.1.1 /8|192.10.10.10 /8|
+|192.168.1.1 /8|193.168.1.1 /8|
+|8.8.8.8 /8|8.1.2.3 /8|
