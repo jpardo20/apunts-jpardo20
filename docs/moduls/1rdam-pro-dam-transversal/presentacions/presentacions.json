@@ -160,8 +160,16 @@
             "description": "FASE 2: Desplegament d’Infraestructura",
             "status": "active",
             "kind": "theory"
+        },{
+            "order": "300",
+            "title": "300. Activitat individual: Guia pas a pas ",
+            "src": "slides/016-act-pas-a-pas.reveal",
+            "description": "Activitat individual: Guia pas a pas",
+            "status": "active",
+            "kind": "activity"
         }
     ]
 }
+
 
 

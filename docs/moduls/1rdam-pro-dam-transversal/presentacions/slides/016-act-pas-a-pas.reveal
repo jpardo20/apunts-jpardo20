@@ -1,0 +1,214 @@
+# Projecte PhoenixTech
+
+## Activitat individual: Guia pas a pas
+
+---
+
+## Objectiu de l'activitat
+
+Cada alumne ha de demostrar que entén tot el sistema complet del projecte PhoenixTech.
+
+No es tracta d’explicar què heu fet, sinó de demostrar que sabries:
+
+> reproduir tot el projecte des de zero
+
+---
+
+## Què has de fer
+
+Has de crear una guia tècnica pas a pas que expliqui:
+
+Com arribar a tenir una aplicació PHP en IIS (Windows Server)  
+que accedeix a una base de dades MySQL (Ubuntu)  
+i valida usuaris contra Active Directory
+
+---
+
+## Important
+
+Això NO és un resum
+
+No has d’explicar el projecte  
+No has de copiar comandes sense context  
+No has de fer descripcions genèriques
+
+El document ha de ser una guia clara, ordenada i executable
+
+---
+
+## Prohibit
+
+No es poden incloure captures de pantalla
+
+No es valorarà cap captura
+
+El que es valora és:
+
+- què s’ha de fer exactament
+- on s’ha de fer
+- què s’ha de configurar
+- quines opcions cal marcar o desmarcar
+- quins fitxers s’han de modificar
+- quines línies s’han de comentar o descomentar
+
+---
+
+## Estructura obligatòria del document
+
+El document HA de contenir EXACTAMENT aquests apartats (mateix nom)
+
+---
+
+## OBJECTIU
+
+Descriu quin és el resultat final que es vol aconseguir
+
+---
+
+## ARQUITECTURA
+
+Explica els components del sistema:
+
+- servidor Windows (IIS + PHP)
+- servidor Ubuntu (MySQL / MariaDB)
+- Active Directory
+- xarxa
+
+---
+
+## REQUISITS PREVIS
+
+Indica tot el que ha d’estar preparat abans de començar:
+
+- IPs
+- connectivitat
+- servidors en marxa
+- usuaris a l’AD
+- base de dades (si escau)
+
+---
+
+## PAS A PAS
+
+Aquest és l’apartat més important
+
+Has d’explicar el procés complet en ordre correcte
+
+Cada pas ha d’indicar:
+
+- què es fa
+- a quin servidor
+- en quin fitxer o eina
+- quines opcions es configuren
+
+⬇️
+
+----
+Exemples del nivell de detall esperat:
+
+- quin fitxer PHP es crea i amb quin nom
+- quin fitxer de configuració es modifica
+- quina línia concreta s’ha de canviar
+- quina línia s’ha de comentar o descomentar
+- quin port s’utilitza
+- quin host s’indica
+- quin usuari s’utilitza
+- quins fitxers s’han de descarregar i on es col·loquen
+
+⬇️
+
+----
+
+No serveix dir: “configurar IIS”  
+Cal dir exactament què es configura
+
+---
+
+## COMPROVACIONS
+
+Explica com verificar que el sistema funciona
+
+Per exemple:
+
+- accés via navegador
+- login correcte
+- accés a dades
+- resposta esperada
+
+---
+
+## CONCLUSIONS
+
+Reflexió breu:
+
+- què és més crític
+- què falla més sovint
+- què cal controlar millor
+
+---
+
+## Lliurament
+
+## Estructura de carpetes i fitxers (molt important)
+
+Cada alumne ha de crear la carpeta següent al repositori:
+
+```bash
+<PrimerCognomAlumne>-guia/
+```
+
+>
+> ###### On <u>`<PrimerCognomAlumne>`</u> és <u>només</u> el primer cognom de l'alumne, sense el nom, en <u>minúscules</u>, <u>sense accents</u>, ni <u>espais</u>, ni lletres que no siguin de l'<u>alfabet anglès</u> (és a dir, sense <u>`ñ`</u>, <u>`ç`</u>, etc.), ni <u>caràrters especials</u>.
+>
+> ###### Per exemple en el cas de l'alumne <b><u>Pere De la Peña</u></b>, el nom de la carpeta seria <kbd><b>`delapena-guia`</b></kbd>.
+>
+
+⬇️
+
+----
+
+Dins d'aquesta carpeta, cada alumne ha de pujar un fitxer amb el nom:
+
+```bash
+<PrimerCognomAlumne>-guia/<PrimerCognomAlumne>-pas-a-pas.md
+```
+
+>
+> ###### On <u>`<PrimerCognomAlumne>`</u> és <u>només</u> el primer cognom de l'alumne, sense el nom, en <u>minúscules</u>, <u>sense accents</u>, ni <u>espais</u>, ni lletres que no siguin de l'<u>alfabet anglès</u> (és a dir, sense <u>`ñ`</u>, <u>`ç`</u>, etc.), ni <u>caràrters especials</u>.
+>
+> ###### Per exemple en el cas de l'alumne <b><u>Pere De la Peña</u></b>, el nom del fitxer seria <kbd><b>`delapena-pas-a-pas.md`</b></kbd>.
+>
+
+---
+
+## Format del document
+
+Format obligatori: Markdown (.md)
+
+Ha de ser:
+
+- clar
+- estructurat
+- tècnic
+- executable
+
+---
+
+## Criteris d’avaluació
+
+Comprensió global del sistema (40%)
+
+Ordre i estructura del document (30%)
+
+Precisió tècnica (20%)
+
+Claredat de l’explicació (10%)
+
+---
+
+## Pista final
+
+Si una altra persona segueix la teva guia, hauria de poder muntar el sistema sense ajuda
+
+Si no és així, la guia no és correcta
+
