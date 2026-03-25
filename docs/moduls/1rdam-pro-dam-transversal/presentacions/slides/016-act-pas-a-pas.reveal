@@ -61,11 +61,19 @@ El document HA de contenir EXACTAMENT aquests apartats (mateix nom)
 
 ## OBJECTIU
 
+```markdown
+## OBJECTIU
+```
+
 Descriu quin és el resultat final que es vol aconseguir
 
 ---
 
 ## ARQUITECTURA
+
+```markdown
+## ARQUITECTURA
+```
 
 Explica els components del sistema:
 
@@ -77,6 +85,10 @@ Explica els components del sistema:
 ---
 
 ## REQUISITS PREVIS
+
+```markdown
+## REQUISITS PREVIS
+```
 
 Indica tot el que ha d’estar preparat abans de començar:
 
@@ -90,7 +102,11 @@ Indica tot el que ha d’estar preparat abans de començar:
 
 ## PAS A PAS
 
-Aquest és l’apartat més important
+```markdown
+## PAS A PAS
+```
+
+Aquest és l’apartat **més important**
 
 Has d’explicar el procés complet en ordre correcte
 
@@ -104,6 +120,7 @@ Cada pas ha d’indicar:
 ⬇️
 
 ----
+
 Exemples del nivell de detall esperat:
 
 - quin fitxer PHP es crea i amb quin nom
@@ -126,6 +143,10 @@ Cal dir exactament què es configura
 
 ## COMPROVACIONS
 
+```markdown
+## COMPROVACIONS
+```
+
 Explica com verificar que el sistema funciona
 
 Per exemple:
@@ -138,6 +159,10 @@ Per exemple:
 ---
 
 ## CONCLUSIONS
+
+```markdown
+## CONCLUSIONS
+```
 
 Reflexió breu:
 
@@ -183,7 +208,7 @@ Dins d'aquesta carpeta, cada alumne ha de pujar un fitxer amb el nom:
 
 ## Format del document
 
-Format obligatori: Markdown (.md)
+Format obligatori: **Markdown** (**`.md`**)
 
 Ha de ser:
 
