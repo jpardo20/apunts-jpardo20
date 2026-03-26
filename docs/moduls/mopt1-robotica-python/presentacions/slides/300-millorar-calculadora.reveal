@@ -1,0 +1,435 @@
+# Millorem la nostra calculadora
+
+## Objectiu de la sessió
+
+- Millorar el codi existent
+- Escriure codi més net
+- Aprendre bones pràctiques
+- Entendre per què millorem el codi
+
+Note:
+Explica que avui no faran "més coses", sinó que faran millor el que ja saben. És un canvi de mentalitat: passar de programar perquè funcioni a programar bé.
+
+---
+
+## Punt de partida
+
+- Ja tenim un programa que:
+
+  - Funciona
+  - Té funcions
+  - Té menú
+
+- Però...
+
+  - Té codi repetit
+  - Té parts poc clares
+  - No està documentat
+
+Note:
+Projecta el codi original i demana opinions. No corregeixis encara, deixa que detectin problemes.
+
+---
+
+## Millora 1: Documentar funcions
+
+### Explicació de la millora 1
+
+- Quan un programa creix, no n'hi ha prou amb que funcioni.
+
+- Cal que:
+
+  - altres persones entenguin el codi
+  - nosaltres mateixos el puguem entendre en el futur
+
+> Per això documentem les funcions.
+
+---
+
+### Teoria: <codijpc>docstrings</codijpc>
+
+Una funció ha d'explicar:
+
+- què fa
+- quins paràmetres rep
+- què retorna
+
+---
+
+### Exemple
+
+```python
+def suma(a, b):
+    """
+    Calcula la suma de dos nombres.
+
+    :param a: primer nombre
+    :param b: segon nombre
+    :return: resultat de la suma
+    """
+    return a + b
+```
+
+Note:
+Explica que això no afecta al funcionament del programa, però sí a la seva qualitat. Relaciona-ho amb el món laboral: treball en equip.
+
+---
+
+### Activitat
+
+- Documenta:
+
+  - **`resta()`**
+  - **`producte()`**
+  - **`divisio()`**
+  - **`esParell()`**
+
+- Temps: 10 minuts
+
+Note:
+Passeja per classe i ajuda. Reforça els que escriguin frases clares.
+
+---
+
+## Millora 2: Eliminar codi innecessari
+
+### Explicació de la millora 2
+
+- Molts programes funcionen però tenen massa línies.
+
+> Menys codi = més claredat.
+
+### Teoria: Eliminar codi innecessari
+
+- Evitar:
+
+  - variables que no calen
+  - passos intermedis innecessaris
+
+---
+
+### Abans
+
+```python
+def suma(priNumSuma, segNumSuma):
+    resultatSuma = float()
+    resultatSuma = priNumSuma + segNumSuma
+    return resultatSuma
+```
+
+### Després
+
+```python
+def suma(priNumSuma, segNumSuma):
+    return priNumSuma + segNumSuma
+```
+
+Note:
+Pregunta: "Aquestes dues versions fan el mateix?"  
+Després: "Quina és més fàcil d'entendre?"
+
+---
+
+### Activitat: Eliminar codi innecessari
+
+- Simplifica:
+
+  - **`suma`**
+  - **`resta`**
+  - **`producte`**
+
+- Temps: 5 minuts
+
+---
+
+## Millora 3: Reutilitzar funcions
+
+### Explicació de la millora 3
+
+- Si repetim codi, augmentem errors i dificultem el manteniment.
+
+> **Objectiu**: reutilitzar el que ja tenim.
+
+### Teoria: DRY
+
+- **`DRY`** = **Don't Repeat Yourself**
+
+> No repetir codi, reutilitzar funcions.
+
+---
+
+### Problema actual
+
+```python
+def demanarNombres():
+    print("Entra el primer...")
+    ...
+    print("Entra el segon...")
+```
+
+### Solució
+
+```python
+def demanarNombres():
+    num1 = demanarUnNombre()
+    num2 = demanarUnNombre()
+    return num1, num2
+```
+
+Note:
+Fes-los veure que ja tenien la funció feta. És un canvi mental important.
+
+---
+
+### Activitat: Reutilitzar funcions
+
+- Modifica **`demanarNombres()`** perquè:
+
+  - utilitzi **`demanarUnNombre()`**
+
+- Temps: 10 minuts
+
+---
+
+## Millora 4: Paràmetres per defecte
+
+### Explicació de la millora 4
+
+- Podem fer funcions més flexibles sense duplicar-les.
+
+<br><br>
+
+### Teoria: Paràmetres per defecte
+
+```python
+def demanarUnNombre(missatge="Entra el nombre: "):
+```
+
+- Si no passem cap valor, utilitza el valor per defecte.
+
+---
+
+### Exemple: Paràmetres per defecte
+
+```python
+num = demanarUnNombre()
+num = demanarUnNombre("Entra el primer número: ")
+```
+
+Note:
+Insisteix que això evita crear múltiples funcions similars.
+
+---
+
+### Activitat: Paràmetres per defecte
+
+- Modifica **`demanarUnNombre`** perquè:
+
+  - accepti un missatge personalitzat
+
+- Temps: 10 minuts
+
+---
+
+## Millora 5: Simplificar booleans
+
+### Explicació de la millora 5
+
+- Molts alumnes escriuen més codi del necessari amb condicionals.
+
+### Teoria: Simplificar booleans
+
+```python
+if(condicio):
+    return True
+else:
+    return False
+```
+
+- Es pot simplificar a:
+
+```python
+return condicio
+```
+
+---
+
+### Exemple: Simplificar booleans
+
+```python
+def esParell(n):
+    return n % 2 == 0
+```
+
+Note:
+Això sol ser un "moment clic" per molts alumnes. Deixa que ho provin.
+
+---
+
+### Activitat: Simplificar booleans
+
+- Simplifica:
+
+  - **`esParell`**
+  - **`esPositiu`**
+
+- Temps: 10 minuts
+
+---
+
+## Millora 6: Tipus de dades
+
+### Explicació de la millora 6
+
+- No tots els tipus funcionen igual amb totes les operacions.
+
+<br><br>
+
+### Teoria: Tipus de dades
+
+- L'operador **`%`** (**mòdul**) està pensat per enters.
+
+---
+
+### Problema: Tipus de dades
+
+```python
+float % 2
+```
+
+<br><br>
+
+
+### Solució: Tipus de dades
+
+```python
+int(demanarUnNombre())
+```
+
+Note:
+Explica la diferència entre int i float amb exemples ràpids.
+
+---
+
+### Activitat: Tipus de dades
+
+- Modifica l'opció **`parell`**/**`senar`** perquè:
+
+  - treballi amb enters
+
+- Temps: 5 minuts
+
+---
+
+## Millora 7: Organitzar el codi
+
+### Explicació de la millora 7
+
+- Quan el programa creix, cal dividir-lo en parts.
+
+---
+
+### Teoria: Organitzar el codi
+
+- Fer funcions per:
+
+  - mostrar menú
+  - mostrar resultats
+
+---
+
+### Exemple: Organitzar el codi
+
+```python
+def mostrarMenu():
+    print("1. Suma")
+    print("2. Resta")
+```
+
+Note:
+Relaciona-ho amb "ordenar l'habitació": tot té el seu lloc.
+
+---
+
+### Activitat: Organitzar el codi
+
+- Crea:
+
+  - **`mostrarMenu()`**
+  - **`mostrarResultat()`**
+
+- Temps: 10 minuts
+
+---
+
+## Millora 8: Sortida del programa
+
+### Explicació de la millora 8
+
+- Hem d'evitar formes brusques de sortir del programa.
+
+---
+
+### Teoria: Sortida del programa
+
+- Evitar:
+
+```python
+exit(0)
+```
+
+- Millor:
+
+```python
+break
+```
+
+---
+
+### Activitat: Sortida del programa
+
+- Substitueix **`exit(0)`** per **`break`**
+
+- Temps: 5 minuts
+
+Note:
+Explica que break surt del bucle, no mata tot el programa de cop.
+
+---
+
+## Resultat final
+
+### Ara el codi és:
+
+- més net
+- més curt
+- més entenedor
+- reutilitzable
+- documentat
+
+Note:
+Fes una comparació amb el codi inicial.
+
+---
+
+## Reflexió final
+
+- Què hem millorat?
+- Què t'ha costat més?
+- Per què és important fer això?
+
+Note:
+Aquesta part és clau per consolidar aprenentatge.
+
+---
+
+## Repte final
+
+- Afegir:
+
+  - historial d'operacions
+  - nova operació (potència)
+  - separar en fitxers
+
+Note:
+Deixa això com a ampliació o deures.

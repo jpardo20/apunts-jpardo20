@@ -6,21 +6,21 @@
   "presentations": [
     {
         "order": 10,
-        "title": "1. Python 1a sessió",
+        "title": "010. Python 1a sessió",
         "src": "slides/001-python-apunts-01.reveal",
         "description": "Python Apunts mopt1-python-intro-def",
         "status": "active"
     },
     {
       "order": 20,
-      "title": "2. Python segona sessió",
+      "title": "020. Python segona sessió",
       "src": "slides/002-python-apunts-02.reveal",
       "description": "Python Apunts",
       "status": "active"
     },
     {
       "order": 30,
-      "title": "3. Python Exercicis if-else",
+      "title": "030. Python Exercicis if-else",
       "src": "slides/003-exercicis-if-else.reveal",
       "description": "Python exercicis-if-else",
       "status": "active",
@@ -28,7 +28,7 @@
     },
     {
       "order": 40,
-      "title": "4. Python exercicis-if-else",
+      "title": "040. Python exercicis-if-else",
       "src": "slides/004-python-exercicis-condicions.reveal",
       "description": "Python exercicis-if-else (mopt-ae001)",
       "status": "active",
@@ -36,7 +36,7 @@
     },
     {
       "order": 50,
-      "title": "5. Més exercicis if-else",
+      "title": "050. Més exercicis if-else",
       "src": "slides/005-python-mes-exercicis-condicions.reveal",
       "description": "Python Més exercicis if-else",
       "status": "active",
@@ -44,7 +44,7 @@
     },
     {
       "order": 60,
-      "title": "6. TEORIA: if-elif-else-i-match-case",
+      "title": "060. TEORIA: if-elif-else-i-match-case",
       "src": "slides/006-python-if-elif-else-i-match-case.reveal",
       "description": "6. TEORIA: if-elif-else-i-match-case",
       "status": "active",
@@ -52,16 +52,24 @@
     },
     {
       "order": 70,
-      "title": "7. TEORIA: Python Funcions",
+      "title": "070. TEORIA: Python Funcions",
       "src": "slides/007-python-apunts-funcions.reveal",
       "description": "Python Apunts Funcions",
       "status": "active"
     },
     {
       "order": 80,
-      "title": "8 - Arrencada Projecte ASTI (SMX)",
+      "title": "080 - Arrencada Projecte ASTI (SMX)",
       "src": "slides/primera-sessio-asti.reveal",
       "description": "Arrencada Projecte ASTI (SMX)",
+      "status": "active",
+        "kind": "theory"
+    },
+    {
+      "order": 300,
+      "title": "300 - TEORIA: Millorant la calculadora",
+      "src": "slides/300-millorar-calculadora.reveal",
+      "description": "Millorant la calculadora",
       "status": "active",
         "kind": "theory"
     }
