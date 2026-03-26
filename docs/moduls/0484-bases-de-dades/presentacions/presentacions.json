@@ -246,8 +246,8 @@
     },
     {
       "id": "0484-bds-teoria-031-stored-procedures",
-      "title": "30. TEORIA: Propostes de millora de seguretat i integritat de dades",
-      "description": "TEORIA: Propostes de millora de seguretat i integritat de dades",
+      "title": "30. TEORIA: Stored Procedure",
+      "description": "TEORIA: Stored Procedure",
       "src": "slides/0484-bds-teoria-031-stored-procedures.reveal",
       "theme": "white",
       "status": "active",

@@ -290,3 +290,33 @@ CALL fer_comanda(1, 2, 3);
 ### Proper pas
 
 Funcions i triggers
+
+---
+
+## Veure Stored Procedures
+
+### Llistar procedures
+
+```sql
+SHOW PROCEDURE STATUS
+WHERE Db = 'botiga';
+```
+
+---
+
+### Veure codi
+
+```sql
+SHOW CREATE PROCEDURE fer_comanda;
+```
+
+---
+
+### Alternativa avançada
+
+```sql
+SELECT ROUTINE_NAME
+FROM INFORMATION_SCHEMA.ROUTINES
+WHERE ROUTINE_TYPE = 'PROCEDURE'
+AND ROUTINE_SCHEMA = 'botiga';
+```
