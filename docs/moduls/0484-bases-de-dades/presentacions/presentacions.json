@@ -243,8 +243,18 @@
       "tags": [
         "BBDD", "activitat"
       ] 
+    },
+    {
+      "id": "0484-bds-teoria-031-stored-procedures",
+      "title": "30. TEORIA: Propostes de millora de seguretat i integritat de dades",
+      "description": "TEORIA: Propostes de millora de seguretat i integritat de dades",
+      "src": "slides/0484-bds-teoria-031-stored-procedures.reveal",
+      "theme": "white",
+      "status": "active",
+       "kind": "theory",
+      "tags": [
+        "BBDD"
+      ]
     }
   ]
 }
-
-

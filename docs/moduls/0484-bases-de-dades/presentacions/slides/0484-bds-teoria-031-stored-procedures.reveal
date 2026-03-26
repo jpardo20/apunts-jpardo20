@@ -1,0 +1,292 @@
+# Bases de Dades (DAM) - Stored Procedure
+
+### Objectius
+
+- Entendre què és un <a href="https://dev.mysql.com/doc/refman/8.4/en/create-procedure.html" target="_blank"><u>**`Stored Procedure`**</u></a> 
+- Crear procediments bàsics
+- Utilitzar paràmetres
+- Aplicar lògica (IF)
+- Veure casos reals
+
+---
+
+### Problema inicial
+
+Què passa si sempre fem això?
+
+```sql
+INSERT INTO comandes ...
+UPDATE productes ...
+INSERT INTO logs ...
+```
+
+---
+
+### Solució
+
+Automatitzar-ho dins la base de dades
+
+---
+
+### Definició
+
+Un **Stored Procedure** és:
+
+> Un conjunt d’instruccions SQL guardades dins la BD que es poden executar quan calgui
+
+---
+
+### Avantatges
+
+- Reutilització
+- Millor rendiment
+- Seguretat
+- Lògica centralitzada
+
+---
+
+## CREACIÓ DE LA BASE DE DADES
+
+### Crear BD
+
+```sql
+CREATE DATABASE botiga;
+USE botiga;
+```
+
+---
+
+### Taula clients
+
+```sql
+CREATE TABLE clients (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(50),
+    email VARCHAR(100)
+);
+```
+
+---
+
+### Taula productes
+
+```sql
+CREATE TABLE productes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(50),
+    preu DECIMAL(10,2),
+    stock INT
+);
+```
+
+---
+
+### Taula comandes
+
+```sql
+CREATE TABLE comandes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    client_id INT,
+    data DATETIME,
+    FOREIGN KEY (client_id) REFERENCES clients(id)
+);
+```
+
+---
+
+## INSERTS (DADES EXEMPLE)
+
+---
+
+### Clients
+
+```sql
+INSERT INTO clients (nom, email) VALUES
+('Anna', 'anna@email.com'),
+('Joan', 'joan@email.com'),
+('Maria', 'maria@email.com');
+```
+
+---
+
+### Productes
+
+```sql
+INSERT INTO productes (nom, preu, stock) VALUES
+('Teclat', 20.50, 10),
+('Ratolí', 10.00, 25),
+('Monitor', 150.00, 5);
+```
+
+---
+
+## PRIMER STORED PROCEDURE
+
+---
+
+### Exemple bàsic
+
+```sql
+DELIMITER //
+
+CREATE PROCEDURE saluda()
+BEGIN
+    SELECT 'Hola DAM!';
+END //
+
+DELIMITER ;
+```
+
+---
+
+### Executar
+
+```sql
+CALL saluda();
+```
+
+---
+
+## PROCEDURES AMB PARÀMETRES
+
+---
+
+### Exemple
+
+```sql
+DELIMITER //
+
+CREATE PROCEDURE saluda_nom(IN nom VARCHAR(50))
+BEGIN
+    SELECT CONCAT('Hola ', nom);
+END //
+
+DELIMITER ;
+```
+
+---
+
+### Execució
+
+```sql
+CALL saluda_nom('Anna');
+```
+
+---
+
+## LÒGICA (**`IF`**)
+
+---
+
+### Exemple
+
+```sql
+DELIMITER //
+
+CREATE PROCEDURE comprova_stock(IN quantitat INT)
+BEGIN
+    IF quantitat > 10 THEN
+        SELECT 'Stock alt';
+    ELSE
+        SELECT 'Stock baix';
+    END IF;
+END //
+
+DELIMITER ;
+```
+
+---
+
+## CAS REAL: FER UNA COMANDA
+
+---
+
+### Procedure real
+
+```sql
+DELIMITER //
+
+CREATE PROCEDURE fer_comanda(
+    IN p_client_id INT,
+    IN p_producte_id INT,
+    IN p_quantitat INT
+)
+BEGIN
+    INSERT INTO comandes (client_id, data)
+    VALUES (p_client_id, NOW());
+
+    UPDATE productes
+    SET stock = stock - p_quantitat
+    WHERE id = p_producte_id;
+END //
+
+DELIMITER ;
+```
+
+---
+
+### Execució
+
+```sql
+CALL fer_comanda(1, 2, 3);
+```
+
+---
+
+## ERRORS TÍPICS
+
+---
+
+### Errors comuns
+
+- Oblidar **`DELIMITER`**
+- No posar **`END IF;`**
+- Paràmetres incorrectes
+- Errors de sintaxi SQL
+
+---
+
+## EXERCICIS
+
+---
+
+### Nivell bàsic
+
+- Crear **`procedure`** que:
+  - Mostri tots els **`clients`**
+  - Mostri **`productes`** amb **`stock < 10`**
+
+---
+
+### Nivell mitjà
+
+- **`Procedure`** amb paràmetre:
+  - Buscar **`productes`** per **`nom`**
+  - Filtrar per **`preu`**
+
+---
+
+### Nivell avançat
+
+- **`Procedure`** que:
+  - Comprovi **`stock`** abans de vendre
+  - Si no hi ha **`stock`** → **`missatge error`**
+
+---
+
+## RESUM
+
+---
+
+### Idees clau
+
+- **`Stored Procedure`** = codi dins la BD
+- Permet automatitzar processos
+- Accepta paràmetres
+- Pot tenir lògica (**`IF`**)
+
+---
+
+### Proper pas
+
+Funcions i triggers
