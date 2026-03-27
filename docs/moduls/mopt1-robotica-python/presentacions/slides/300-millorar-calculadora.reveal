@@ -59,15 +59,17 @@ Una funció ha d'explicar:
 ### Exemple
 
 ```python
-def suma(a, b):
+def suma(priNumSuma, segNumSuma):
     """
     Calcula la suma de dos nombres.
 
-    :param a: primer nombre
-    :param b: segon nombre
-    :return: resultat de la suma
+    :param priNumSuma: primer nombre (float)
+    :param segonNumeroSuma: segon nombre (float)
+    :return: resultatSuma de la suma (float)
     """
-    return a + b
+    resultatSuma = float()
+    resultatSuma = priNumSuma + segNumSuma
+    return resultatSuma
 ```
 
 Note:
@@ -85,6 +87,8 @@ Explica que això no afecta al funcionament del programa, però sí a la seva qu
   - **`esParell()`**
 
 - Temps: 10 minuts
+
+- **Assignement** [**`smx-python`**](https://classroom.github.com/a/2kWOFwGE)
 
 Note:
 Passeja per classe i ajuda. Reforça els que escriguin frases clares.
