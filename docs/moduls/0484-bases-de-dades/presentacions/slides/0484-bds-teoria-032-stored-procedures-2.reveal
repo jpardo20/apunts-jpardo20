@@ -1,0 +1,264 @@
+# Bases de Dades (DAM) - Stored Procedure II
+
+## Objectius
+
+- Utilitzar variables dins **`procedures`**
+- Capturar valors amb **`SELECT INTO`**
+- Controlar errors
+- Introduir transaccions
+- Fer **`procedures`** més complets
+
+---
+
+### Recordatori
+
+Ja sabem:
+
+- Crear **`procedures`**
+- Paràmetres (**`IN`**)
+- **`IF`** / **`ELSE`**
+
+Ara farem un pas més: lògica més avançada
+
+---
+
+## Variables
+
+---
+
+### **`DECLARE`**
+
+```sql
+DECLARE v_stock INT;
+```
+
+Serveix per guardar dades dins el **`procedure`**
+
+---
+
+### Important
+
+- Sempre dins **`BEGIN`** ... **`END`**
+- Abans de qualsevol **`SELECT`**
+
+---
+
+## **`SELECT INTO`**
+
+---
+
+### Guardar valor
+
+```sql
+SELECT stock INTO v_stock
+FROM productes
+WHERE id = 1;
+```
+
+Ara **`v_stock`** conté el valor
+
+---
+
+## Control d'errors
+
+### Exemple Control d'errors
+
+```sql
+IF v_stock < 5 THEN
+    SELECT 'Stock insuficient';
+END IF;
+```
+
+---
+
+### Problema
+
+Això no atura el **`procedure`**
+
+---
+
+## Control d'errors real: **`SIGNAL`**
+
+### Exemple de **`SIGNAL`**
+
+```sql
+SIGNAL SQLSTATE '45000'
+SET MESSAGE_TEXT = 'Error: stock insuficient';
+```
+
+Això atura l’execució
+
+---
+
+## Exemple ral millorat
+
+---
+
+### **`Procedure`** amb control d’errors
+
+```sql
+DELIMITER //
+
+CREATE PROCEDURE vendre_producte_pro(
+    IN p_producte_id INT,
+    IN p_quantitat INT
+)
+BEGIN
+    DECLARE v_stock INT;
+
+    SELECT stock INTO v_stock
+    FROM productes
+    WHERE id = p_producte_id;
+
+    IF v_stock IS NULL THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Producte no existeix';
+
+    ELSEIF v_stock < p_quantitat THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Stock insuficient';
+
+    ELSE
+        UPDATE productes
+        SET stock = stock - p_quantitat
+        WHERE id = p_producte_id;
+    END IF;
+
+END //
+
+DELIMITER ;
+```
+
+---
+
+## **`Transaccions`**
+
+### Per què?
+
+Si una part falla, podem deixar dades incorrectes
+
+---
+
+### Exemple problema
+
+```sql
+INSERT INTO comandes ...
+UPDATE productes ...
+```
+
+Si falla una part, la **base de dades** queda inconsistent
+
+---
+
+## Solució: **`TRANSACTION`**
+
+### Exemple de **`TRANSACTION`**
+
+```sql
+START TRANSACTION;
+
+UPDATE productes
+SET stock = stock - 1
+WHERE id = 1;
+
+COMMIT;
+```
+
+---
+
+### En cas d’error
+
+```sql
+ROLLBACK;
+```
+
+Desfà els canvis
+
+---
+
+## **`PROCEDURE`** amb **`TRANSACTION`**
+
+---
+
+```sql
+DELIMITER //
+
+CREATE PROCEDURE fer_comanda_segura(
+    IN p_client_id INT,
+    IN p_producte_id INT,
+    IN p_quantitat INT
+)
+BEGIN
+    DECLARE v_stock INT;
+
+    START TRANSACTION;
+
+    SELECT stock INTO v_stock
+    FROM productes
+    WHERE id = p_producte_id;
+
+    IF v_stock < p_quantitat THEN
+        ROLLBACK;
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'No hi ha stock';
+
+    ELSE
+        INSERT INTO comandes (client_id, data)
+        VALUES (p_client_id, NOW());
+
+        UPDATE productes
+        SET stock = stock - p_quantitat
+        WHERE id = p_producte_id;
+
+        COMMIT;
+    END IF;
+
+END //
+
+DELIMITER ;
+```
+
+---
+
+## Errors típics
+
+---
+
+- **`DECLARE`** fora de lloc
+- **`SELECT INTO`** sense resultat
+- Oblidar **`COMMIT`**
+- Fer **`ROLLBACK`** massa tard
+
+---
+
+## Exercicis: Nivell mitjà
+
+- Modificar **`vendre_producte`**:
+  - Afegir **`SIGNAL`**
+  - Controlar producte inexistent
+
+---
+
+## Exercicis: Nivell avançat
+
+- Crear **`procedure`**:
+  - Inserir comanda
+  - Restar stock
+  - Utilitzar **`TRANSACTION`**
+  - Si falla -> **`ROLLBACK`**
+
+---
+
+### Ampliacions
+
+- Evitar stock negatiu sempre
+- Mostrar missatges clars
+
+---
+
+### Idees clau
+
+- Variables permeten estat intern
+- **`SELECT INTO`** captura dades
+- **`SIGNAL`** controla errors
+- **`TRANSACTION`** assegura consistència

@@ -255,6 +255,18 @@
       "tags": [
         "BBDD"
       ]
+    },
+    {
+      "id": "0484-bds-teoria-032-stored-procedures-2",
+      "title": "31. TEORIA: Stored Procedure II",
+      "description": "TEORIA: Stored Procedure II",
+      "src": "slides/0484-bds-teoria-032-stored-procedures-2.reveal",
+      "theme": "white",
+      "status": "active",
+       "kind": "theory",
+      "tags": [
+        "BBDD"
+      ]
     }
   ]
 }
