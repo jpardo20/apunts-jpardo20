@@ -1,0 +1,338 @@
+# ACTIVITAT PRÀCTICA GUIADA
+## Stored Procedures amb traça
+
+---
+
+## Preparació (estat inicial)
+
+```sql
+SELECT *
+FROM productes;
+```
+
+---
+
+## Resultat esperat
+
+| id | nom     | preu  | stock |
+|----|--------|-------|-------|
+| 1  | Teclat | 20.50 | 10    |
+| 2  | Ratolí | 10.00 | 25    |
+| 3  | Monitor| 150.00| 5     |
+
+---
+
+# PART 1: Procedure incorrecte
+
+---
+
+## Crear procedure
+
+```sql
+DELIMITER //
+
+CREATE PROCEDURE venda_incorrecta(
+    IN p_producte_id INT,
+    IN p_quantitat INT
+)
+BEGIN
+    DECLARE v_stock INT;
+
+    SELECT stock INTO v_stock
+    FROM productes
+    WHERE id = p_producte_id;
+
+    IF v_stock < p_quantitat THEN
+        SELECT 'Error: no hi ha stock';
+    END IF;
+
+    UPDATE productes
+    SET stock = stock - p_quantitat
+    WHERE id = p_producte_id;
+
+END //
+
+DELIMITER ;
+```
+
+---
+
+## Abans d’executar
+
+```sql
+SELECT * FROM productes WHERE id = 3;
+```
+
+---
+
+## Resultat
+
+| id | nom      | stock |
+|----|----------|-------|
+| 3  | Monitor  | 5     |
+
+---
+
+## Executar
+
+```sql
+CALL venda_incorrecta(3, 10);
+```
+
+---
+
+## Després d’executar
+
+```sql
+SELECT * FROM productes WHERE id = 3;
+```
+
+---
+
+## Resultat
+
+| id | nom      | stock |
+|----|----------|-------|
+| 3  | Monitor  | -5    |
+
+---
+
+## Conclusió
+
+- Ha mostrat error
+- PERÒ ha fet l’UPDATE igualment
+
+---
+
+# PART 2: Solució amb SIGNAL
+
+---
+
+## Procedure corregit
+
+```sql
+DELIMITER //
+
+CREATE PROCEDURE venda_signal(
+    IN p_producte_id INT,
+    IN p_quantitat INT
+)
+BEGIN
+    DECLARE v_stock INT;
+
+    SELECT stock INTO v_stock
+    FROM productes
+    WHERE id = p_producte_id;
+
+    IF v_stock < p_quantitat THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Error: no hi ha stock';
+    END IF;
+
+    UPDATE productes
+    SET stock = stock - p_quantitat
+    WHERE id = p_producte_id;
+
+END //
+
+DELIMITER ;
+```
+
+---
+
+## Reset dades
+
+```sql
+UPDATE productes SET stock = 5 WHERE id = 3;
+```
+
+---
+
+## Abans
+
+```sql
+SELECT * FROM productes WHERE id = 3;
+```
+
+| id | nom     | stock |
+|----|---------|-------|
+| 3  | Monitor | 5     |
+
+---
+
+## Executar
+
+```sql
+CALL venda_signal(3, 10);
+```
+
+---
+
+## Resultat
+
+Error: no hi ha stock
+
+---
+
+## Després
+
+```sql
+SELECT * FROM productes WHERE id = 3;
+```
+
+---
+
+## Resultat
+
+| id | nom     | stock |
+|----|---------|-------|
+| 3  | Monitor | 5     |
+
+---
+
+## Conclusió
+
+- No s’ha modificat el stock
+- SIGNAL ha aturat execució
+
+---
+
+# PART 3: Afegir validacions
+
+---
+
+## Cas: producte no existeix
+
+```sql
+CALL venda_signal(99, 1);
+```
+
+---
+
+## Problema
+
+SELECT INTO retorna NULL
+
+---
+
+## Solució
+
+Afegir:
+
+```sql
+IF v_stock IS NULL THEN
+    SIGNAL SQLSTATE '45000'
+    SET MESSAGE_TEXT = 'Producte no existeix';
+END IF;
+```
+
+---
+
+# PART 4: Afegir transacció
+
+---
+
+## Procedure final
+
+```sql
+DELIMITER //
+
+CREATE PROCEDURE venda_final(
+    IN p_producte_id INT,
+    IN p_quantitat INT
+)
+BEGIN
+    DECLARE v_stock INT;
+
+    START TRANSACTION;
+
+    SELECT stock INTO v_stock
+    FROM productes
+    WHERE id = p_producte_id;
+
+    IF v_stock IS NULL THEN
+        ROLLBACK;
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Producte no existeix';
+
+    ELSEIF p_quantitat <= 0 THEN
+        ROLLBACK;
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Quantitat incorrecta';
+
+    ELSEIF v_stock < p_quantitat THEN
+        ROLLBACK;
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Stock insuficient';
+
+    ELSE
+        UPDATE productes
+        SET stock = stock - p_quantitat
+        WHERE id = p_producte_id;
+
+        COMMIT;
+    END IF;
+
+END //
+
+DELIMITER ;
+```
+
+---
+
+# PART 5: Testing complet
+
+---
+
+## Reset dades
+
+```sql
+UPDATE productes SET stock = 10 WHERE id = 1;
+```
+
+---
+
+## Cas correcte
+
+```sql
+CALL venda_final(1, 2);
+```
+
+---
+
+## Després
+
+```sql
+SELECT * FROM productes WHERE id = 1;
+```
+
+| stock |
+|-------|
+| 8     |
+
+---
+
+## Cas error stock
+
+```sql
+CALL venda_final(1, 100);
+```
+
+---
+
+## Després
+
+```sql
+SELECT * FROM productes WHERE id = 1;
+```
+
+| stock |
+|-------|
+| 8     |
+
+---
+
+## Conclusió final
+
+- Amb SIGNAL → no hi ha canvis incorrectes
+- Amb TRANSACTION → sistema segur

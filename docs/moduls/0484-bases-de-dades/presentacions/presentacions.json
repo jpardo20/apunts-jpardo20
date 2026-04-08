@@ -267,6 +267,18 @@
       "tags": [
         "BBDD"
       ]
+    },
+    {
+      "id": "0484-bds-teoria-033-stored-procedures-3",
+      "title": "32. TEORIA: Stored Procedure III",
+      "description": "TEORIA: Stored Procedure III",
+      "src": "slides/0484-bds-teoria-033-stored-procedures-3.reveal",
+      "theme": "white",
+      "status": "active",
+       "kind": "theory",
+      "tags": [
+        "BBDD"
+      ]
     }
   ]
 }
