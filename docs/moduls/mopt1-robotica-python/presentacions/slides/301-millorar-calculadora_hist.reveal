@@ -1,0 +1,216 @@
+# PR002 – Revisió de la calculadora
+
+## Objectiu de la sessió
+
+- Aprendre a llegir codi existent
+- Detectar errors i males pràctiques
+- Proposar millores justificades
+- Pensar com a programadors professionals
+
+---
+
+## Punt de partida
+
+Ja tens un programa:
+
+- Funciona
+- Té funcions
+- Té menú
+- Guarda historial
+
+Però...
+
+- Té errors
+- Té parts millorables
+- No és del tot net
+
+---
+
+## Què farem avui
+
+Dins del teu repositori, has de crear una carpeta **`pr002-revisio-calculadora`**
+
+I dins d'aquesta carpeta cal que comencis guardant el fitxer **`calculadora-hist.py`** que teniu al **`Teams`**
+
+
+Treballaràs sobre el fitxer:
+
+```bash
+pr002-revisio-calculadora/calculadora-hist.py
+```
+
+I faràs una revisió completa del programa.
+
+---
+
+## Què és revisar codi?
+
+Revisar codi vol dir:
+
+- Entendre què fa
+- Detectar problemes
+- Proposar millores
+
+No només:
+
+- “Funciona o no funciona”
+
+---
+
+## Tipus de problemes que pots trobar
+
+- Errors de funcionament
+- Errors de lògica
+- Codi innecessari
+- Mala estructura
+- Problemes de tipus de dades
+- Missatges incorrectes
+
+
+---
+
+## Tasca principal
+
+Has de crear un document:
+
+```bash
+pr002-revisio-calculadora/revisio.md
+```
+
+On indicaràs tots els problemes que trobis.
+
+---
+
+## Format obligatori
+
+Utilitza una taula com aquesta:
+
+```markdown
+| Núm. | Zona del programa | Problema detectat | Per què és un problema | Proposta de millora |
+|------|------------------|-------------------|------------------------|---------------------|
+| 1 | funció suma | Variable innecessària | Fa el codi més llarg | Retornar directament |
+```
+
+---
+
+## Exemple de problema
+
+```python
+def suma(priNumSuma, segNumSuma):
+    resultatSuma = float()
+    resultatSuma = priNumSuma + segNumSuma
+    return resultatSuma
+```
+
+Problema:
+
+- Hi ha codi innecessari
+
+Millora:
+
+```python
+def suma(priNumSuma, segNumSuma):
+    return priNumSuma + segNumSuma
+```
+
+---
+
+## Què has de revisar
+
+Revisa tot el programa:
+
+- Funcions
+- Menú
+- Inputs
+- Resultats
+- Historial
+- Missatges
+
+---
+
+## Pistes per ajudar-te
+
+Fes-te aquestes preguntes:
+
+- Aquest codi és necessari?
+- Es pot simplificar?
+- Es pot reutilitzar?
+- El nom és clar?
+- El resultat és correcte?
+- El tipus de dada és correcte?
+
+---
+
+## Part final
+
+- Crea una versió millorada del programa
+- Aplica els canvis que proposes
+
+Fitxer:
+
+```bash
+pr002-revisio-calculadora/calculadora-millorada.py
+```
+
+---
+
+## Com treballar
+
+1. Llegeix el codi
+2. Executa’l
+3. Detecta problemes
+4. Escriu-los al document
+5. Proposa millores
+
+---
+
+## Commits
+
+Fes commits amb aquest format:
+
+```bash
+PR002 revisio inicial
+PR002 afegir errors funcions
+PR002 revisio completa
+```
+
+---
+
+## Què es valorarà
+
+- Quantitat de problemes detectats
+- Qualitat de les explicacions
+- Coherència de les millores
+- Claredat del document
+
+No estracta només de "trobar coses", sinó que cal explicar-les, i explicar-les bé.
+
+---
+
+## Errors típics a evitar
+
+- Escriure només “està malament”
+- No explicar el per què
+- Propostes poc clares
+- Copiar respostes d’un company
+
+---
+
+## Reflexió final
+
+- Què t’ha costat més?
+- Has entès millor el programa?
+- Programar és només escriure codi?
+
+---
+
+## Missatge final
+
+Un bon programador:
+
+- escriu codi
+- entén codi
+- millora codi
+
+Avui estàs treballant això.
+

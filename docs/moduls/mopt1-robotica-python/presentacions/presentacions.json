@@ -72,7 +72,18 @@
       "description": "Millorant la calculadora",
       "status": "active",
         "kind": "theory"
+    },
+    {
+      "order": 301,
+      "title": "301 - TEORIA: Millorant la calculadora amb històric",
+      "src": "slides/301-millorar-calculadora_hist.reveal",
+      "description": "Millorant la calculadora amb històric",
+      "status": "active",
+        "kind": "theory"
     }
+
+
+    
   ]
 }
 
