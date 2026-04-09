@@ -156,7 +156,7 @@ Podeu seguir aquest model:
 
 ## Lliurament 
 
-Cal que en el vostre reposiori **`portafoli-dam`** creu una carpeta amb el nom **`0483-raids`** i que dins afegiu un fitxer README.md amb tot el que us demano.
+Cal que en el vostre reposiori **`portafoli-dam`** (Assignement <a herf="https://classroom.github.com/a/j7cZFHOP" target="about_blank">**`portafoli-dam`**</a>) creu una carpeta amb el nom **`0483-raids`** i que dins afegiu un fitxer README.md amb tot el que us demano.
 
 ## Criteris de valoració
 

@@ -200,7 +200,7 @@ Heu de documentar la pràctica dins del vostre repositori.
 
 ## Lliurament
 
-Dins del vostre repositori **`portafoli-dam`** i dins de la carpeta que ja teniu amb el nom **`0483-raids`** hi ha d’haver un fitxer:
+Dins del vostre repositori **`portafoli-dam`** (Assignement <a herf="https://classroom.github.com/a/j7cZFHOP" target="about_blank">**`portafoli-dam`**</a>) i dins de la carpeta que ja teniu amb el nom **`0483-raids`** hi ha d’haver un fitxer:
 
 **`activitat-raid-ubuntu.md`**
 
