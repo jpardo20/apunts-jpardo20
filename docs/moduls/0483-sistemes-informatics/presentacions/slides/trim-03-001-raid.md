@@ -99,17 +99,6 @@ En aquest apartat heu d’indicar **d’on heu tret la informació**.
 - Boolean World: `https://www.booleanworld.com/raid-levels-explained/`
 - Wikipedia – Parity bit: `https://en.wikipedia.org/wiki/Parity_bit#RAID_array`
 
-## Format de lliurament
-
-- Document en **Markdown**, PDF o text ben estructurat.
-- Extensió orientativa: entre **2 i 4 pàgines**.
-- El document ha de tenir:
-  - títol,
-  - apartats clars,
-  - redacció pròpia,
-  - quadre resum final,
-  - i fonts finals.
-
 ## Important
 
 - **No copieu i enganxeu** sense entendre el contingut.
