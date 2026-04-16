@@ -52,6 +52,11 @@ Podeu fer servir, per exemple:
 
 ## Tasca a realitzar
 
+> [!TIP]
+>
+> Abans de començar a dur a terme l'acitvitat us recomano fermament que us llegiu TOTA l'activitat, i especialment l'apartat [Què ha de contenir el fitxer `activitat-raid-ubuntu.md`](#què-ha-de-contenir-el-fitxer-activitat-raid-ubuntumd), ja que hi ha un seguit d'elements, com sortida i explicació d'alguna comanda, de la que és necessari que obtingeu la sortida.
+>
+
 Heu de crear un **`RAID 1`** amb els dos discs addicionals, muntar-lo a una carpeta del sistema i demostrar que continua funcionant quan un dels discs falla.
 
 ## Part 1. Identificació dels discs
