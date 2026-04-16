@@ -20,7 +20,9 @@ En aquesta pràctica treballareu amb una màquina virtual de **VirtualBox** amb 
 La màquina tindrà:
 
 - **1 disc** per al sistema operatiu,
-- **2 discs addicionals** per crear el **`RAID 1`**.
+- **3 discs addicionals**
+   - 2 per crear el **`RAID 1`**
+   - 1 per recontruir el **`RAID 1`**
 
 El **`RAID`** no es farà servir per arrencar el sistema, sinó com a **volum de dades**.
 
@@ -44,8 +46,9 @@ Heu de comprovar que la màquina virtual té:
 Podeu fer servir, per exemple:
 
 - disc del sistema: **20 GB**
-- disc 1 per al **`RAID`**: **5 GB**
-- disc 2 per al **`RAID`**: **5 GB**
+- disc 1 per al **`RAID`**: **10 GB**
+- disc 2 per al **`RAID`**: **10 GB**
+- disc 3 per al **nou `RAID`**: **10 GB**
 
 ## Tasca a realitzar
 
@@ -80,6 +83,7 @@ Al final hauríeu de tenir, per exemple:
 
 - **`/dev/sdb1`**
 - **`/dev/sdc1`**
+- **`/dev/sdd1`**
 
 ## Part 3. Instal·lació de `mdadm`
 
@@ -174,12 +178,12 @@ cat /mnt/raid1/prova.txt
 
 Per recuperar el **`RAID`**, heu de tornar a afegir un disc.
 
-Si disposeu d’una nova partició preparada, la podeu afegir al **`RAID`**.
+Aquest serà el tercer dels discos.
 
 ### Exemple
 
 ```bash
-sudo mdadm /dev/md0 --add /dev/sdb1
+sudo mdadm /dev/md0 --add /dev/sdd1
 ```
 
 ### Què heu d’observar
@@ -211,11 +215,11 @@ El fitxer ha d’incloure com a mínim:
 1. **Títol de la pràctica**
 2. **Objectiu**
 3. **Configuració de la màquina virtual**
-   - nombre de discs
+   - quantitat de discs
    - mida dels discs
 4. **Identificació dels discs**
-5. **Comandes utilitzades**
-6. **Captures o sortides de comandes**
+5. **Explicació detallada de les comandes utilitzades**
+6. **Sortides de comandes**
 7. **Resultat de la creació del `RAID`**
 8. **Comprovació del muntatge**
 9. **Simulació de fallada**
@@ -226,12 +230,12 @@ El fitxer ha d’incloure com a mínim:
 
 Heu d’incloure com a mínim:
 
-- una captura o sortida de **`lsblk`** abans de crear el **`RAID`**,
-- una captura o sortida de **`cat /proc/mdstat`** després de crear-lo,
-- una captura o sortida de **`mdadm --detail /dev/md0`**,
-- una prova que el sistema de fitxers està muntat,
-- una prova que els fitxers continuen existint després de la fallada d’un disc,
-- una captura o sortida del procés de reconstrucció.
+- la sortida del resultat de  **`lsblk`** abans de crear el **`RAID`**,
+- la sortida del resultat de  **`cat /proc/mdstat`** després de crear-lo,
+- la sortida del resultat de  **`mdadm --detail /dev/md0`**,
+- la sortida de la prova que el sistema de fitxers està muntat,
+- la sortida de la prova que els fitxers continuen existint després de la fallada d’un disc,
+- la sortida del resultat de l procés de reconstrucció.
 
 ## Preguntes de reflexió final
 
@@ -250,7 +254,7 @@ Al final del document heu de respondre breument aquestes preguntes:
 - Reviseu bé els noms dels dispositius abans d’executar les comandes.
 - Un error amb el nom del disc pot esborrar informació.
 - Heu d’explicar amb les vostres paraules què feu a cada pas.
-- No n’hi ha prou amb enganxar comandes i captures.
+- No n’hi ha prou amb enganxar comandes i la sortida de les comandes.
 
 ## Criteris de valoració
 
