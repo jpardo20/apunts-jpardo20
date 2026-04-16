@@ -22,7 +22,7 @@ La màquina tindrà:
 - **1 disc** per al sistema operatiu,
 - **3 discs addicionals**
    - 2 per crear el **`RAID 1`**
-   - 1 per recontruir el **`RAID 1`**
+   - 1 per reconstruir el **`RAID 1`**
 
 El **`RAID`** no es farà servir per arrencar el sistema, sinó com a **volum de dades**.
 
@@ -54,7 +54,7 @@ Podeu fer servir, per exemple:
 
 > [!TIP]
 >
-> Abans de començar a dur a terme l'acitvitat us recomano fermament que us llegiu TOTA l'activitat, i especialment l'apartat [Què ha de contenir el fitxer `activitat-raid-ubuntu.md`](#què-ha-de-contenir-el-fitxer-activitat-raid-ubuntumd), ja que hi ha un seguit d'elements, com sortida i explicació d'alguna comanda, de la que és necessari que obtingeu la sortida.
+> Abans de començar a dur a terme l'activitat us recomano fermament que us llegiu TOTA l'activitat, i especialment l'apartat [Què ha de contenir el fitxer `activitat-raid-ubuntu.md`](#què-ha-de-contenir-el-fitxer-activitat-raid-ubuntumd), ja que hi ha un seguit d'elements, com sortida i explicació d'alguna comanda, de la que és necessari que obtingueu la sortida.
 >
 
 Heu de crear un **`RAID 1`** amb els dos discs addicionals, muntar-lo a una carpeta del sistema i demostrar que continua funcionant quan un dels discs falla.
@@ -195,7 +195,7 @@ sudo mdadm /dev/md0 --add /dev/sdd1
 
 - L’estat del **`RAID`** mentre es reconstrueix.
 - El percentatge de reconstrucció.
-- L’estat final un cop el **`RAID`** torna a estar sa.
+- L’estat final, un cop el **`RAID`** torna a estar sa.
 
 ### Comanda de seguiment
 
@@ -233,14 +233,14 @@ El fitxer ha d’incloure com a mínim:
 
 ## Captures o evidències obligatòries
 
-Heu d’incloure com a mínim:
+Heu d’incloure, com a mínim:
 
 - la sortida del resultat de  **`lsblk`** abans de crear el **`RAID`**,
 - la sortida del resultat de  **`cat /proc/mdstat`** després de crear-lo,
 - la sortida del resultat de  **`mdadm --detail /dev/md0`**,
 - la sortida de la prova que el sistema de fitxers està muntat,
 - la sortida de la prova que els fitxers continuen existint després de la fallada d’un disc,
-- la sortida del resultat de l procés de reconstrucció.
+- la sortida del resultat del procés de reconstrucció.
 
 ## Preguntes de reflexió final
 
