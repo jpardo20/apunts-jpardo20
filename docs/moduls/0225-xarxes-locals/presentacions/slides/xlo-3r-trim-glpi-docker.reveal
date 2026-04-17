@@ -389,13 +389,14 @@ A la finestra "GLPI setup" escollim l'idioma en que volem instal·lar-lo.
 
 A la finestra "Configuración de GLPI - Licencia"
 
+Presionem <kbd>Continuar > </kbd> per acceptar la llicència.
+
 </div>
 <div class="col-right">
 
 <img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0004.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
-Presionem <kbd>Continuar > </kbd> per acceptar la llicència.
 
 </div>
 
