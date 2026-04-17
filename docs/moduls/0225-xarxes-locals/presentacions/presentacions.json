@@ -95,8 +95,16 @@
     {
       "order": "300",
       "title": "300. GLPI + Docker: Gestió d’incidències i execució amb contenidors",
-      "src": "slides/xlo-3r-trim-glpi-docker.reveal",
+      "src": "slides/xlo-3r-trim-glpi-docker-act000.reveal",
       "description": "<strong>GLPI</strong> + <strong>Docker</strong>: Gestió d’incidències i execució amb contenidors<br><strong>3r trimestre</strong>",
+      "status": "active",
+      "kind":"activity"
+    },
+    {
+      "order": "301",
+      "title": "301. GLPI: PRÀCTICA — ÚS DE GLPI",
+      "src": "slides/xlo-3r-trim-glpi-docker-act000.reveal",
+      "description": "<strong>GLPI</strong>: PRÀCTICA — ÚS DE GLPI<br><strong>3r trimestre</strong>",
       "status": "active",
       "kind":"activity"
     }
