@@ -1,0 +1,461 @@
+# GLPI + Docker: Gestió d’incidències i execució amb contenidors
+
+Mòdul: Xarxes locals (0225)
+Cicle: SMX
+
+---
+
+### Què veurem avui
+
+- Què és GLPI
+- Per a què serveix
+- Què és Docker
+- Crear una màquina virtual
+- Instal·lar Ubuntu Server
+- Executar GLPI amb Docker
+- Pràctica
+
+---
+
+## Què és GLPI?
+
+GLPI és un programa que permet:
+
+- gestionar incidències (tickets)
+- controlar equips (inventari)
+- organitzar el treball dels tècnics
+
+És una eina de helpdesk
+
+---
+
+### Exemple real
+
+Empresa amb molts ordinadors
+
+Sense sistema de control:
+- incidències perdudes
+- desordre
+
+Amb GLPI:
+- tot registrat
+- seguiment
+- assignació de tècnics
+
+---
+
+### Què és un ticket?
+
+Un ticket és:
+
+- una incidència registrada
+- una petició d’ajuda
+
+Exemples:
+- No tinc Internet
+- No funciona la impressora
+
+---
+
+### Què podem fer amb GLPI?
+
+- Crear incidències
+- Assignar tècnics
+- Documentar solucions
+- Registrar equips
+- Fer seguiment
+
+---
+
+## Què és Docker?
+
+Docker permet executar programes dins de contenidors
+
+Un contenidor és una unitat que conté tot el necessari per executar una aplicació
+
+---
+
+### Avantatges de Docker
+
+- ràpid
+- fàcil d’utilitzar
+- evita errors d’instal·lació
+- mateix entorn per tothom
+
+---
+
+### Contenidor vs màquina virtual
+
+Contenidor:
+- lleuger
+- ràpid
+
+Màquina virtual:
+- més pesada
+- sistema complet
+
+---
+
+### GLPI amb Docker
+
+En lloc d’instal·lar GLPI manualment:
+
+- es descarrega com a contenidor
+- s’executa amb una comanda
+
+---
+
+### Components de GLPI
+
+Per funcionar necessita:
+
+- servidor web
+- base de dades
+- aplicació GLPI
+
+Docker gestiona tot això
+
+---
+
+## PART 1 — MÀQUINA VIRTUAL
+
+---
+
+### Per què utilitzem una MV?
+
+- aïllar l’entorn
+- evitar problemes amb el sistema real
+- fer proves sense risc
+- simular un servidor real
+
+---
+
+### Requisits de la MV
+
+- 4 GB RAM (mínim 2 GB)
+- 50 GB disc
+- 1 CPU
+- Xarxa:
+    - 1a NIC: NAT per sortir a Internet
+    - 2a NIC: HostOnly, per poder connectar-nos des del host
+    - 3a NIC: xarxa interna per poder-nos connectar a altres MV.
+
+---
+
+### Crear màquina virtual
+
+Configurar:
+
+- Nom: glpi-server
+- Tipus: Linux
+- Versió: Ubuntu (64-bit)
+
+---
+
+### Assignar recursos
+
+- RAM: 2048 MB
+- Disc: 50 GB
+- Tipus disc: VDI dinàmic
+
+---
+
+### Afegir ISO
+
+Fitxer:
+
+ubuntu-24.04.4-live-server-amd64.iso
+
+Assignar-lo com a disc d’arrencada
+
+---
+
+### Iniciar instal·lació
+
+Arrencar la màquina virtual
+
+Seleccionar:
+
+Install Ubuntu Server
+
+---
+
+### Configuració inicial
+
+Durant la instal·lació:
+
+- idioma
+- teclat
+- xarxa automàtica
+
+---
+
+### Crear usuari
+
+Exemple:
+
+- usuari: alumne
+- contrasenya: alumne
+
+---
+
+### Opcions d’instal·lació
+
+- instal·lació estàndard
+- instal·lar OpenSSh
+- NO instal·lar paquets addicionals
+
+---
+
+### Finalitzar instal·lació
+
+- esperar instal·lació
+- reiniciar sistema
+- retirar ISO
+
+---
+
+### Accés al sistema
+
+Entrar amb:
+
+- usuari creat
+- contrasenya
+
+---
+
+### Actualitzar sistema
+
+```
+sudo apt update
+sudo apt upgrade -y
+```
+
+---
+
+### Instal·lar Docker
+
+```
+sudo apt install docker.io -y
+sudo apt install docker-compose -y
+```
+
+---
+
+### Activar Docker
+
+```
+sudo systemctl enable docker
+sudo systemctl start docker
+```
+
+---
+
+### Comprovar Docker
+
+```
+docker --version
+```
+
+---
+
+## PART 2 — GLPI AMB DOCKER
+
+---
+
+### Crear carpeta de treball
+
+```
+mkdir glpi
+cd glpi
+```
+
+---
+
+### Crear docker-compose.yml
+
+```
+vi docker-compose.yml
+```
+
+---
+
+### Fitxer docker-compose complet
+
+```yaml
+version: '3.8'
+
+services:
+  db:
+    image: mariadb:10.7
+    container_name: glpi-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: glpi
+      MYSQL_USER: glpi
+      MYSQL_PASSWORD: glpi
+    volumes:
+      - db_data:/var/lib/mysql
+
+  glpi:
+    image: diouxx/glpi
+    container_name: glpi-app
+    restart: always
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    volumes:
+      - glpi_data:/var/www/html
+
+volumes:
+  db_data:
+  glpi_data:
+```
+
+---
+
+### Executar GLPI
+
+```
+docker-compose up -d
+```
+
+---
+
+### Comprovar contenidors
+
+```
+docker ps
+```
+
+Han d’aparèixer:
+
+- glpi-app
+- glpi-db
+
+---
+
+### Accedir a GLPI
+
+http://IP_DE_LA_MAQUINA:8080
+
+---
+
+### Configuració inicial
+
+Dades base de dades:
+
+- servidor: db
+- usuari: glpi
+- password: glpi
+
+---
+
+### Accés inicial
+
+Usuari:
+
+- glpi
+
+Contrasenya:
+
+- glpi
+
+---
+
+## PRÀCTICA — ÚS DE GLPI
+
+---
+
+### Crear ticket
+
+Exemple:
+
+Sense connexió a Internet
+
+---
+
+### Assignar incidència
+
+- assignar tècnic
+- canviar estat a “En curs”
+
+---
+
+### Diagnòstic
+
+- comprovar IP
+- fer ping
+- revisar connexió
+
+---
+
+### Resolució
+
+- corregir problema
+- verificar funcionament
+
+---
+
+### Documentació
+
+Incloure:
+
+- problema
+- diagnòstic
+- solució
+- comprovació
+
+---
+
+### Tancar ticket
+
+- confirmar funcionament
+- marcar com a resolt
+
+---
+
+### Relació amb el mòdul
+
+RA4:
+configuració
+
+RA5:
+incidències
+
+RA3:
+connectivitat
+
+---
+
+### Errors habituals
+
+- no documentar
+- no provar
+- tancar sense verificar
+
+---
+
+### Avantatges de la pràctica
+
+- simulació real
+- treball com tècnics
+- preparació per FCT
+
+---
+
+### Resum
+
+- GLPI gestiona incidències
+- Docker executa serveis
+- MV simula servidor real
+
+Tot integrat
+
+---
+
+### Preguntes
+
+Dubtes?

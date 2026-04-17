@@ -91,6 +91,14 @@
       "description": "Adreces IP i subxarxa",
       "status": "active",
       "kind":"activity"
+    },
+    {
+      "order": "300",
+      "title": "300. GLPI + Docker: Gestió d’incidències i execució amb contenidors",
+      "src": "slides/xlo-3r-trim-glpi-docker.reveal",
+      "description": "<strong>GLPI</strong> + <strong>Docker</strong>: Gestió d’incidències i execució amb contenidors<br><strong>3r trimestre</strong>",
+      "status": "active",
+      "kind":"activity"
     }
   ]
 }
