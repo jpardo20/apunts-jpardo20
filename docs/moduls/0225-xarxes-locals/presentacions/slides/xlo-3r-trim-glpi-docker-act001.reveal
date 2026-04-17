@@ -1,0 +1,94 @@
+## PRÀCTICA — ÚS DE GLPI
+
+---
+
+### Crear ticket
+
+Exemple:
+
+Sense connexió a Internet
+
+---
+
+### Assignar incidència
+
+- assignar tècnic
+- canviar estat a “En curs”
+
+---
+
+### Diagnòstic
+
+- comprovar IP
+- fer ping
+- revisar connexió
+
+---
+
+### Resolució
+
+- corregir problema
+- verificar funcionament
+
+---
+
+### Documentació
+
+Incloure:
+
+- problema
+- diagnòstic
+- solució
+- comprovació
+
+---
+
+### Tancar ticket
+
+- confirmar funcionament
+- marcar com a resolt
+
+---
+
+### Relació amb el mòdul
+
+RA4:
+configuració
+
+RA5:
+incidències
+
+RA3:
+connectivitat
+
+---
+
+### Errors habituals
+
+- no documentar
+- no provar
+- tancar sense verificar
+
+---
+
+### Avantatges de la pràctica
+
+- simulació real
+- treball com tècnics
+- preparació per FCT
+
+---
+
+### Resum
+
+- GLPI gestiona incidències
+- Docker executa serveis
+- MV simula servidor real
+
+Tot integrat
+
+---
+
+### Preguntes
+
+Dubtes?

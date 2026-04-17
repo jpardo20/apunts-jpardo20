@@ -226,7 +226,7 @@ Entrar amb:
 
 ### Actualitzar sistema
 
-```
+```bash
 sudo apt update
 sudo apt upgrade -y
 ```
@@ -235,7 +235,7 @@ sudo apt upgrade -y
 
 ### Instal·lar Docker
 
-```
+```bash
 sudo apt install docker.io -y
 sudo apt install docker-compose -y
 ```
@@ -244,7 +244,7 @@ sudo apt install docker-compose -y
 
 ### Activar Docker
 
-```
+```bash
 sudo systemctl enable docker
 sudo systemctl start docker
 ```
@@ -253,9 +253,21 @@ sudo systemctl start docker
 
 ### Comprovar Docker
 
-```
+```bash
 docker --version
 ```
+
+---
+
+### Afegir l’usuari al grup docker
+
+Afegim l’usuari al grup **`docker`**, perquè no ens demani executar **`docker`** amb **`sudo`**
+
+```bash
+sudo usermod -aG docker $USER
+```
+
+Si no ho fem ens demanarà que executem sempre **`sudo`** per executar **`docker`**
 
 ---
 
@@ -265,7 +277,7 @@ docker --version
 
 ### Crear carpeta de treball
 
-```
+```bash
 mkdir glpi
 cd glpi
 ```
@@ -274,7 +286,7 @@ cd glpi
 
 ### Crear docker-compose.yml
 
-```
+```bash
 vi docker-compose.yml
 ```
 
@@ -303,7 +315,7 @@ services:
     container_name: glpi-app
     restart: always
     ports:
-      - "8080:80"
+      - "9090:80"
     depends_on:
       - db
     volumes:
@@ -318,7 +330,7 @@ volumes:
 
 ### Executar GLPI
 
-```
+```bash
 docker-compose up -d
 ```
 
@@ -326,9 +338,12 @@ docker-compose up -d
 
 ### Comprovar contenidors
 
-```
+```bash
 docker ps
 ```
+
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0001.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
 Han d’aparèixer:
 
@@ -339,123 +354,314 @@ Han d’aparèixer:
 
 ### Accedir a GLPI
 
-http://IP_DE_LA_MAQUINA:8080
+<div class="cols">
+<div class="col-left">
+
+http://IP_DE_LA_MAQUINA:9090
+
+Presionem <kbd>Go to install page</kbd> per inicair la instal·lació de **`GLPI`**.
+</div>
+<div class="col-right">
+
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0002.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
+
+</div>
+---
+
+<div class="cols">
+<div class="col-left">
+
+A la finestra "GLPI setup" escollim l'idioma en que volem instal·lar-lo.
+
+</div>
+<div class="col-right">
+
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0003.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
+
+</div>
+
+---
+
+<div class="cols">
+<div class="col-left">
+
+A la finestra "Configuración de GLPI - Licencia"
+
+</div>
+<div class="col-right">
+
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0004.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
+
+Presionem <kbd>Continuar > </kbd> per acceptar la llicència.
+
+</div>
+
+
+---
+
+<div class="cols">
+<div class="col-left">
+
+A la finestra "Configuración de GLPI - Comienzo de la instalación"
+
+Escollim 'Instalar' per continuar amb la instal·lació
+
+</div>
+<div class="col-right">
+
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0005.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
+
+
+</div>
+
+
+---
+
+<div class="cols">
+<div class="col-left">
+
+A la finestra "Configuración de GLPI - Paso 0"
+
+Presionem <kbd>Continuar > </kbd> per confirmamr que s'han validat tots els requeriments imprescindibles.
+
+</div>
+<div class="col-right">
+
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0006.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
+
+</div>
 
 ---
 
 ### Configuració inicial
 
+<div class="cols">
+<div class="col-left">
+
+
+A la finestra "Configuración de GLPI - Paso 1" indiquem les nostres dades:
+
 Dades base de dades:
 
-- servidor: db
-- usuari: glpi
-- password: glpi
+- Servidor: **`db`**
+- Usuari: **`glpi`**
+- Password: **`glpi`**
+
+Presionem <kbd>Continuar > </kbd> per seguir amb la instal·lació.
+
+</div>
+<div class="col-right">
+
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0007.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
+</div>
+
+
 
 ---
 
-### Accés inicial
+<div class="cols">
+<div class="col-left">
 
-Usuari:
+**`Google Chrome`** detecta que hem fet servir una contrasenya massa feble i ens recomana canviar-la.
 
-- glpi
+Presionem <kbd>Ok</kbd> per indicar que ho hem entès!
+</div>
+<div class="col-right">
 
-Contrasenya:
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0008.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
+</div>
 
-- glpi
+
+
+---
+<div class="cols">
+<div class="col-left">
+
+**`Google Chrome`** ens facilita la possibilitat de guardar l'usuari i la contarasenya.
+
+Podeu fer el que creieu convenient.
+
+</div>
+<div class="col-right">
+
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0009.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
+
+</div>
 
 ---
 
-## PRÀCTICA — ÚS DE GLPI
+<div class="cols">
+<div class="col-left">
+
+A la finestra "Configuración de GLPI - Paso 2"
+
+
+Podem crear una nova base de dades o la base de dades **`glpi`** que ja existeix.
+
+Aquesta base de dades, exsiteix perque a la configuració del docker li hem dit que la crei.
+
+```xml
+MYSQL_DATABASE: glpi
+```
+
+Pitjem <kbd>Continuar > </kbd> per tirar endavant la instal·lació.
+
+</div>
+<div class="col-right">
+
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0010.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
+</div>
+
 
 ---
 
-### Crear ticket
+<div class="cols">
+<div class="col-left">
 
-Exemple:
+La finestra "Configuración de GLPI - Paso 3" durant la instal·lació
 
-Sense connexió a Internet
+</div>
+<div class="col-right">
 
----
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0011.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
-### Assignar incidència
-
-- assignar tècnic
-- canviar estat a “En curs”
-
----
-
-### Diagnòstic
-
-- comprovar IP
-- fer ping
-- revisar connexió
+</div>
 
 ---
 
-### Resolució
+<div class="cols">
+<div class="col-left">
 
-- corregir problema
-- verificar funcionament
+La finestra "Configuración de GLPI - Paso 3" gaire bé al final de la instal·lació
 
----
+</div>
+<div class="col-right">
 
-### Documentació
 
-Incloure:
-
-- problema
-- diagnòstic
-- solució
-- comprovació
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0012.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
+</div>
 
 ---
 
-### Tancar ticket
+<div class="cols">
+<div class="col-left">
 
-- confirmar funcionament
-- marcar com a resolt
+La finestra "Configuración de GLPI - Paso 3" un cop ja ha acbat la instal·lació.
 
----
+Presionem <kbd>Continuar > </kbd> per seguir amb la instal·lació.
 
-### Relació amb el mòdul
+</div>
+<div class="col-right">
 
-RA4:
-configuració
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0013.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
-RA5:
-incidències
-
-RA3:
-connectivitat
+</div>
 
 ---
 
-### Errors habituals
+<div class="cols">
+<div class="col-left">
+La finestra "Configuración de GLPI - Paso 4"
 
-- no documentar
-- no provar
-- tancar sense verificar
+Desactviem la casella "Enviar estadísticas de uso."
 
----
+Pitjem <kbd>Continuar > </kbd> per seguir endavant.
 
-### Avantatges de la pràctica
+</div>
+<div class="col-right">
 
-- simulació real
-- treball com tècnics
-- preparació per FCT
-
----
-
-### Resum
-
-- GLPI gestiona incidències
-- Docker executa serveis
-- MV simula servidor real
-
-Tot integrat
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0014.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
+</div>
 
 ---
 
-### Preguntes
+<div class="cols">
+<div class="col-left">
+A la finestra "Configuración de GLPI - Paso 5: Una última cosa antes de comenzar"
 
-Dubtes?
+Tornem a pitjar <kbd>Continuar > </kbd> per acabar la instal·lació.
+</div>
+<div class="col-right">
+
+
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0016.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
+
+</div>
+
+---
+
+<div class="cols">
+<div class="col-left">
+
+A la finestra "Configuración de GLPI - Paso 6: La instalación ha terminado"
+
+Tornem a pitjar <kbd>Utilizar GLPI</kbd> per començar a fer servir el programa.
+</div>
+<div class="col-right">
+
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0017.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
+
+</div>
+
+---
+
+
+<div class="cols">
+<div class="col-left">
+
+A la finestra "Login to your account"
+
+
+Entrem les nostres dades:
+
+Login: **`glpi`**
+
+Password: **`glpi`**
+
+Aquesta informació és la que hem definit a la configuració del contenidor de docker.
+
+```xml
+MYSQL_USER: glpi
+MYSQL_PASSWORD: glpi
+```
+</div>
+<div class="col-right">
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0018.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
+
+</div>
+
+---
+
+<div class="cols">
+<div class="col-left">
+
+Com podeu veure, ja hi ha molta informació entrada.
+
+Aquesta informació existeix per poder fer servir el programa sense entrar cap inforamció.
+Està bé per que ja podem començara a fer servir l'aplicació, però en realitat, no ens interessa, ja que voldrem fer servir la nostra pròpia informació.
+
+Però de moment la deixem.
+
+</div>
+<div class="col-right">
+
+<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0019.png" 
+     alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
+
+</div>
