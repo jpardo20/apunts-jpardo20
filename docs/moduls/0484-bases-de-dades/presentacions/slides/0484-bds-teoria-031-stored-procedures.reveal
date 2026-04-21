@@ -60,9 +60,9 @@ USE botiga;
 
 ```sql
 CREATE TABLE clients (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(50),
-    email VARCHAR(100)
+    id_cli INT AUTO_INCREMENT PRIMARY KEY,
+    nom_cli VARCHAR(50),
+    email_cli VARCHAR(100)
 );
 ```
 
@@ -72,10 +72,10 @@ CREATE TABLE clients (
 
 ```sql
 CREATE TABLE productes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(50),
-    preu DECIMAL(10,2),
-    stock INT
+    id_prod INT AUTO_INCREMENT PRIMARY KEY,
+    nom_prod VARCHAR(50),
+    preu_prod DECIMAL(10,2),
+    stock_prod INT
 );
 ```
 
@@ -85,10 +85,10 @@ CREATE TABLE productes (
 
 ```sql
 CREATE TABLE comandes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    client_id INT,
+    id_cda INT AUTO_INCREMENT PRIMARY KEY,
+    id_cli INT,
     data DATETIME,
-    FOREIGN KEY (client_id) REFERENCES clients(id)
+    FOREIGN KEY (id_cli) REFERENCES clients(id_cli)
 );
 ```
 
@@ -101,7 +101,7 @@ CREATE TABLE comandes (
 ### Clients
 
 ```sql
-INSERT INTO clients (nom, email) VALUES
+INSERT INTO clients (nom_cli, email_cli) VALUES
 ('Anna', 'anna@email.com'),
 ('Joan', 'joan@email.com'),
 ('Maria', 'maria@email.com');
@@ -112,7 +112,7 @@ INSERT INTO clients (nom, email) VALUES
 ### Productes
 
 ```sql
-INSERT INTO productes (nom, preu, stock) VALUES
+INSERT INTO productes (nom_prod, preu_prod, stock_prod) VALUES
 ('Teclat', 20.50, 10),
 ('Ratolí', 10.00, 25),
 ('Monitor', 150.00, 5);
@@ -212,11 +212,11 @@ CREATE PROCEDURE fer_comanda(
     IN p_quantitat INT
 )
 BEGIN
-    INSERT INTO comandes (client_id, data)
+    INSERT INTO comandes (id_cli, data)
     VALUES (p_client_id, NOW());
 
     UPDATE productes
-    SET stock = stock - p_quantitat
+    SET stock_prod = stock_prod - p_quantitat
     WHERE id = p_producte_id;
 END //
 
@@ -254,7 +254,7 @@ CALL fer_comanda(1, 2, 3);
 
 - Crear **`procedure`** que:
   - Mostri tots els **`clients`**
-  - Mostri **`productes`** amb **`stock < 10`**
+  - Mostri **`productes`** amb **`stock_prod < 10`**
 
 ---
 
@@ -269,8 +269,8 @@ CALL fer_comanda(1, 2, 3);
 ### Nivell avançat
 
 - **`Procedure`** que:
-  - Comprovi **`stock`** abans de vendre
-  - Si no hi ha **`stock`** → **`missatge error`**
+  - Comprovi **`stock_prod`** abans de vendre
+  - Si no hi ha **`stock_prod`** → **`missatge error`**
 
 ---
 

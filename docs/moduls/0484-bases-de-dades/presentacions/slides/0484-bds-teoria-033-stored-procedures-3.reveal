@@ -14,7 +14,7 @@ FROM productes;
 
 ## Resultat esperat
 
-| id | nom     | preu  | stock |
+| id_prod | nom     | preu  | stock |
 |----|--------|-------|-------|
 | 1  | Teclat | 20.50 | 10    |
 | 2  | Ratolí | 10.00 | 25    |
@@ -38,17 +38,17 @@ CREATE PROCEDURE venda_incorrecta(
 BEGIN
     DECLARE v_stock INT;
 
-    SELECT stock INTO v_stock
+    SELECT stock_prod INTO v_stock
     FROM productes
-    WHERE id = p_producte_id;
+    WHERE id_prod = p_producte_id;
 
     IF v_stock < p_quantitat THEN
         SELECT 'Error: no hi ha stock';
     END IF;
 
     UPDATE productes
-    SET stock = stock - p_quantitat
-    WHERE id = p_producte_id;
+    SET stock_prod = stock_prod - p_quantitat
+    WHERE id_prod = p_producte_id;
 
 END //
 
@@ -60,14 +60,16 @@ DELIMITER ;
 ## Abans d’executar
 
 ```sql
-SELECT * FROM productes WHERE id = 3;
+SELECT *
+FROM productes
+WHERE id_prod = 3;
 ```
 
 ---
 
 ## Resultat
 
-| id | nom      | stock |
+| id_prod | nom      | stock |
 |----|----------|-------|
 | 3  | Monitor  | 5     |
 
@@ -84,14 +86,16 @@ CALL venda_incorrecta(3, 10);
 ## Després d’executar
 
 ```sql
-SELECT * FROM productes WHERE id = 3;
+SELECT *
+FROM productes
+WHERE id_prod = 3;
 ```
 
 ---
 
 ## Resultat
 
-| id | nom      | stock |
+| id_prod | nom      | stock |
 |----|----------|-------|
 | 3  | Monitor  | -5    |
 
@@ -120,9 +124,9 @@ CREATE PROCEDURE venda_signal(
 BEGIN
     DECLARE v_stock INT;
 
-    SELECT stock INTO v_stock
+    SELECT stock_prod INTO v_stock
     FROM productes
-    WHERE id = p_producte_id;
+    WHERE id_prod = p_producte_id;
 
     IF v_stock < p_quantitat THEN
         SIGNAL SQLSTATE '45000'
@@ -130,8 +134,8 @@ BEGIN
     END IF;
 
     UPDATE productes
-    SET stock = stock - p_quantitat
-    WHERE id = p_producte_id;
+    SET stock_prod = stock_prod - p_quantitat
+    WHERE id_prod = p_producte_id;
 
 END //
 
@@ -143,7 +147,9 @@ DELIMITER ;
 ## Reset dades
 
 ```sql
-UPDATE productes SET stock = 5 WHERE id = 3;
+UPDATE productes
+SET stock = 5
+WHERE id_prod = 3;
 ```
 
 ---
@@ -151,10 +157,12 @@ UPDATE productes SET stock = 5 WHERE id = 3;
 ## Abans
 
 ```sql
-SELECT * FROM productes WHERE id = 3;
+SELECT *
+FROM productes
+WHERE id_prod = 3;
 ```
 
-| id | nom     | stock |
+| id_prod | nom     | stock |
 |----|---------|-------|
 | 3  | Monitor | 5     |
 
@@ -177,14 +185,16 @@ Error: no hi ha stock
 ## Després
 
 ```sql
-SELECT * FROM productes WHERE id = 3;
+SELECT *
+FROM productes
+WHERE id_prod = 3;
 ```
 
 ---
 
 ## Resultat
 
-| id | nom     | stock |
+| id_prod | nom     | stock |
 |----|---------|-------|
 | 3  | Monitor | 5     |
 
@@ -246,9 +256,9 @@ BEGIN
 
     START TRANSACTION;
 
-    SELECT stock INTO v_stock
+    SELECT stock_prod INTO v_stock
     FROM productes
-    WHERE id = p_producte_id;
+    WHERE id_prod = p_producte_id;
 
     IF v_stock IS NULL THEN
         ROLLBACK;
@@ -267,8 +277,8 @@ BEGIN
 
     ELSE
         UPDATE productes
-        SET stock = stock - p_quantitat
-        WHERE id = p_producte_id;
+        SET stock_prod = stock_prod - p_quantitat
+        WHERE id_prod = p_producte_id;
 
         COMMIT;
     END IF;
@@ -287,7 +297,9 @@ DELIMITER ;
 ## Reset dades
 
 ```sql
-UPDATE productes SET stock = 10 WHERE id = 1;
+UPDATE productes
+SET stock = 10
+WHERE id_prod = 1;
 ```
 
 ---
@@ -303,7 +315,9 @@ CALL venda_final(1, 2);
 ## Després
 
 ```sql
-SELECT * FROM productes WHERE id = 1;
+SELECT *
+FROM productes
+WHERE id_prod = 1;
 ```
 
 | stock |
@@ -323,7 +337,9 @@ CALL venda_final(1, 100);
 ## Després
 
 ```sql
-SELECT * FROM productes WHERE id = 1;
+SELECT *
+FROM productes
+WHERE id_prod = 1;
 ```
 
 | stock |

@@ -50,9 +50,9 @@ Serveix per guardar dades dins el **`procedure`**
 ### Guardar valor
 
 ```sql
-SELECT stock INTO v_stock
+SELECT stock_prod INTO v_stock
 FROM productes
-WHERE id = 1;
+WHERE id_prod = 1;
 ```
 
 Ara **`v_stock`** conté el valor
@@ -106,9 +106,9 @@ CREATE PROCEDURE vendre_producte_pro(
 BEGIN
     DECLARE v_stock INT;
 
-    SELECT stock INTO v_stock
+    SELECT stock_prod INTO v_stock
     FROM productes
-    WHERE id = p_producte_id;
+    WHERE id_prod = p_producte_id;
 
     IF v_stock IS NULL THEN
         SIGNAL SQLSTATE '45000'
@@ -120,8 +120,8 @@ BEGIN
 
     ELSE
         UPDATE productes
-        SET stock = stock - p_quantitat
-        WHERE id = p_producte_id;
+        SET stock_prod = stock_prod - p_quantitat
+        WHERE id_prod = p_producte_id;
     END IF;
 
 END //
@@ -158,8 +158,8 @@ Si falla una part, la **base de dades** queda inconsistent
 START TRANSACTION;
 
 UPDATE productes
-SET stock = stock - 1
-WHERE id = 1;
+SET stock_prod = stock_prod - 1
+WHERE id_prod = 1;
 
 COMMIT;
 ```
@@ -193,9 +193,9 @@ BEGIN
 
     START TRANSACTION;
 
-    SELECT stock INTO v_stock
+    SELECT stock_prod INTO v_stock
     FROM productes
-    WHERE id = p_producte_id;
+    WHERE id_prod = p_producte_id;
 
     IF v_stock < p_quantitat THEN
         ROLLBACK;
@@ -203,12 +203,12 @@ BEGIN
         SET MESSAGE_TEXT = 'No hi ha stock';
 
     ELSE
-        INSERT INTO comandes (client_id, data)
+        INSERT INTO comandes (id_cli, data)
         VALUES (p_client_id, NOW());
 
         UPDATE productes
-        SET stock = stock - p_quantitat
-        WHERE id = p_producte_id;
+        SET stock_prod = stock_prod - p_quantitat
+        WHERE id_prod = p_producte_id;
 
         COMMIT;
     END IF;
