@@ -149,9 +149,41 @@ Parla en general.
 
 </section>
 
-Note:
-Tanca amb calma.
-No moralitzis massa.
-Deixa una idea oberta:
-"En quin lloc estaries tu a la balsa?"
+---
 
+### Al teu repositori
+
+Crea aquest fitxer:
+
+```bash
+tutoria/reflexio-balsa-medusa.md
+```
+
+### Contingut mínim
+
+```markdown
+## En quin lloc estaria jo a la balsa?
+## Com treballo en grup?
+## Què puc millorar?
+## Reflexió personal (no copiar)
+## 5–10 línies mínim
+## Commit abans d’acabar la sessió
+```
+
+## Prefereixo 5 línies honestes que 20 de postureig
+
+Note:
+Sigues molt concret aquí.
+
+Objectiu:
+- evidència clara
+- ràpida de revisar
+- traçable
+
+Insisteix en:
+- que no és teoria
+- que no busques "respostes bones"
+- sinó reflexió real
+
+Si cal:
+"Prefereixo 5 línies honestes que 20 de postureig"
