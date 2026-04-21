@@ -75,6 +75,15 @@
             "theme": "white",
             "status": "active",
             "kind": "theory"
+        },
+        {
+            "id": "08",
+            "title": "08 | Tutoria: La balsa de la Medusa",
+            "description": "Tutoria: La balsa de la Medusa",
+            "src": "sessio-la-balsa-de-la-medusa.reveal",
+            "theme": "white",
+            "status": "active",
+            "kind": "theory"
         }
     ]
 }
