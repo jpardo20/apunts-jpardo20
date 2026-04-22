@@ -100,11 +100,11 @@ CREATE FUNCTION categoria_preu(preu DECIMAL(10,2))
 RETURNS VARCHAR(20)
 DETERMINISTIC
 BEGIN
-    **`IF`** preu < 50 THEN
+    IF preu < 50 THEN
         RETURN 'barat';
     ELSE
         RETURN 'car';
-    END **`IF`**;
+    END IF;
 END$$
 
 DELIMITER ;
