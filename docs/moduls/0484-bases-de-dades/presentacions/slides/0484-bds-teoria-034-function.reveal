@@ -85,7 +85,7 @@ Resultat: 121
 ## Exemple amb taula
 
 ```sql
-SELECT nom, calcular_iva(preu) AS preu_final
+SELECT nom_prod, calcular_iva(preu_prod) AS preu_final
 FROM productes;
 ```
 
@@ -115,7 +115,7 @@ DELIMITER ;
 ## Ús amb la funció
 
 ```sql
-SELECT nom, categoria_preu(preu)
+SELECT nom_prod, categoria_preu(preu_prod)
 FROM productes;
 ```
 
@@ -197,3 +197,62 @@ Tot utilitzant funcions
 - Les **`FUNCTIONS`** permeten reutilitzar càlculs
 - S’integren dins de **`SELECT`**
 - Són essencials per estructurar consultes complexes
+
+---
+
+## Exemple: calcular IVA amb dos paràmetres
+
+```sql
+DELIMITER $$
+
+CREATE FUNCTION calcular_iva_percentatge(
+    preu DECIMAL(10,2),
+    perc_iva DECIMAL(3,2)
+    )
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+    RETURN preu * (1 + perc_iva);
+END$$
+
+DELIMITER ;
+
+-- mysql> SELECT calcular_iva_percentatge(100, 0.20);
+-- +-------------------------------------+
+-- | calcular_iva_percentatge(100, 0.20) |
+-- +-------------------------------------+
+-- |                              120.00 |
+-- +-------------------------------------+
+-- 1 row in set (0.00 sec)
+
+```
+
+i
+
+```sql
+DELIMITER $$
+
+CREATE FUNCTION calcular_iva_enter(
+    preu DECIMAL(10,2),
+    enter_iva int
+    )
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+    RETURN preu * (1 + enter_iva / 100);
+END$$
+
+-- SELECT calcular_iva_enter(100, 20);
+
+DELIMITER ;
+
+
+-- mysql> SELECT calcular_iva_enter(100, 20);
+-- +-----------------------------+
+-- | calcular_iva_enter(100, 20) |
+-- +-----------------------------+
+-- |                      120.00 |
+-- +-----------------------------+
+-- 1 row in set (0.00 sec)
+
+```
