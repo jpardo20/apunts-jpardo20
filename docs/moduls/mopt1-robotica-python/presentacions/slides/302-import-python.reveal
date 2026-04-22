@@ -184,26 +184,34 @@ if __name__ == "__main__":
 
 ## Activitat 1
 
-Dins dels vostre reposotori cal crear una nova carperta **`pr003-import`**. I dins d'aquesta:
-
-- Crear els fitxer **`operacions.py`**
-- Afegir les funcions:
-  - **`suma()`**
-  - **`resta()`**
-  - **`producte()`**
-  - **`divisio()`**
-  - **`esParell()`**
-  - **`esPositiu()`**
+Dins dels vostre reposotori cal crear una nova carperta **`pr003-import`**.
 
 ⬇️
 
 ----
 
 
-- Crear els fitxer **`main.py`**, amb el següent contingut:
+I dins d'aquesta carperta **`pr003-import`** cal:
+
+- crear els fitxer **`operacions.py`** i 
+- afegir totes  les funcions que teniu definides
+  - **`suma()`**
+  - **`resta()`**
+  - **`producte()`**
+  - **`divisio()`**
+  - **`esParell()`**
+  - **`esPositiu()`**
+  - **`demanarUnNombre()`**
+  - **`demanarNombres()`**
+
+⬇️
+
+----
+
+- Crear el fitxer **`main.py`**, amb el següent contingut:
 
 ```python
-import operacions
+from operacions import suma,resta,producte, demanarNombres, demanarUnNombre, divisio, esParell, esPositiu
 
 # Programa principal
 if __name__ == "__main__":
@@ -211,6 +219,138 @@ if __name__ == "__main__":
 
 ```
 
+
+
+---
+
+
+## Activitat 1.1
+
+- Copia en el fitxer **`main.py`** tot contingut que tens al teu fitxer `pr002-revisio-calculadora/calculadora-millorada.py`.
+- i fes que funcioni
+
+---
+
+## Activitat 1.3
+
+- Crea i copia en el fitxer **`menu.py`** tot contingut:
+
+```python
+# print("\n------ CALCULADORA ------")
+# print("1. Suma")
+# print("2. Resta")
+# print("3. Producte")
+# print("4. Divisió")
+# print("5. Parell/Senar")
+# print("6. Positiu/Negatiu")
+# print("0. Sortir")
+# print("-"*25)
+# print("Escull una opció: ", end="")
+
+# Definició constants
+CARACTER = "-"
+AMPLE=50
+
+def pintaTitolEsquerra(titol,mida=AMPLE):
+    midaTitol = len(titol)
+    qtatEspais = mida - midaTitol
+    print(f"{titol}{" "*qtatEspais}")
+
+def pintaTitolDreta(titol,mida=AMPLE):
+    midaTitol = len(titol)
+    qtatEspais = mida - midaTitol
+    print(f"{" "*qtatEspais}{titol}")
+
+def pintaTitolCentrat(titol,mida=AMPLE):
+    midaTitol = len(titol)
+    qtatEspais = mida - midaTitol
+    qtatEspaisAbans = qtatEspais // 2
+    qtatEspaisDespres = qtatEspais - qtatEspaisAbans
+    print(f"{" "*qtatEspaisAbans}{titol}{" "*qtatEspaisDespres}")
+
+def pintaLinia(caracter=CARACTER, mida=AMPLE):
+    print(caracter*mida)
+
+def pintaMenu(llistatOpcions, titol):
+    pintaLinia("=")
+    pintaTitolCentrat(titol)
+    pintaLinia("=")
+    qtatOpcions = len(llistatOpcions) # lenght
+
+    for i in range(1,qtatOpcions):
+        print(f"{i}. {llistatOpcions[i]}")
+    print(f"0. {llistatOpcions[0]}")
+    pintaLinia()
+    print("Escull una opció: ", end="")
+```
+
+---
+
+
+## Activitat 1.4
+
+Codi a afegir al fitxer **`main.py`** el següent codi:
+
+Fer l'import de la funció **`pintaMenu`**
+
+```python
+    from menu import pintaMenu
+```
+
+Crear una llista amb totes les opcions del menu.
+
+```python
+
+    llistaOpcionsMenu = list()
+
+    llistaOpcionsMenu = [
+        "Sortir",           # Posició 0
+        "Suma",             # Posició 1
+        "Resta",            # Posició 2
+        "Producte",         # Posició 3
+        "Divisió",          # Posició 4
+        "Parell/Senar",     # Posició 5
+        "Positiu/Negatiu",  # Posició 6
+        "Quadrat (X elevat a 2)",           # Posició 7
+        "Cub (X elevat a 3)",           # Posició 7
+    ]
+    # print(llistaOpcionsMenu[2]) => Resta
+    # print(llistaOpcionsMenu[X]) => Sortir X=0
+    qtatOpcions = len(llistaOpcionsMenu)
+```
+
+
+⬇️
+
+----
+
+i just a sota del primer **`while(True):`** afegir el següent per cridar a la funció **`pintaMenu`**.
+
+```python
+pintaMenu(llistaOpcionsMenu, "Calculadora")
+```
+
+també, cal substituir el **`case _`** per aquest altre:
+
+```python
+            case _: # Cap de les anteriors
+                print("Opció encara no desenvolupada!")
+``` 
+
+
+⬇️
+
+----
+
+I per últim no us oblideu d'executar:
+
+```bash
+git add .
+git commit -m "Pujats fitxers amb menu.py"
+git push
+```
+
+<!-- 
 ---
 
 ## Activitat 2
@@ -239,4 +379,4 @@ Podem importar tot o funcions concretes
 
 ## Preguntes
 
-
+ -->
