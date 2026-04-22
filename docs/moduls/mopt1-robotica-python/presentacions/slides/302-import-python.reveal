@@ -1,0 +1,237 @@
+
+# Imports en Python
+
+---
+
+## Objectiu
+
+- Entendre què és un mòdul
+- Separar codi en fitxers
+- Reutilitzar funcions amb `import`
+
+---
+
+## Què és un mòdul?
+
+Un mòdul és un fitxer `.py`
+
+Exemple:
+operacions.py
+
+Conté funcions reutilitzables
+
+---
+
+## Exemple bàsic
+
+### operacions.py
+
+```python
+def suma(priNumSuma, segNumSuma):
+    return priNumSuma + segNumSuma
+
+def resta(priNumSuma, segNumSuma):
+    return priNumSuma - segNumSuma
+```
+
+---
+
+## Fitxer principal
+
+### main.py
+
+```python
+import operacions
+
+print(operacions.suma(2, 3))
+```
+
+---
+
+## Idea clau
+
+El nom del fitxer = nom del mòdul
+
+```python
+import operacions
+```
+
+---
+
+## Accedir a funcions
+
+```python
+operacions.suma(2, 3)
+```
+
+format:
+
+mòdul.funció()
+
+---
+
+## Import directe
+
+```python
+from operacions import suma
+
+print(suma(2, 3))
+```
+
+ja no cal posar `operacions.`
+
+---
+
+## Import múltiple
+
+```python
+from operacions import suma, resta
+```
+
+---
+
+## Mala pràctica
+
+```python
+from operacions import *
+```
+
+per què és dolent?
+- contamina l'espai de noms
+- difícil de llegir
+
+---
+
+## Estructura del projecte
+
+```
+calculadora/
+├── operacions.py
+└── main.py
+```
+
+Han d'estar al mateix directori
+
+---
+
+## Error típic
+
+```python
+ModuleNotFoundError
+```
+
+causes:
+- fitxer no està al mateix directori
+- nom incorrecte
+
+---
+
+## Demo important
+
+### operacions.py
+
+```python
+print("Hola")
+```
+
+### main.py
+
+```python
+import operacions
+```
+
+què passa?
+
+---
+
+## Resultat
+
+S'executa el print
+
+Perquè Python executa tot el fitxer
+
+---
+
+## Solució: main guard
+
+```python
+if __name__ == "__main__":
+    print("Executant directament")
+```
+
+---
+
+## Què fa això?
+
+- Si executes el fitxer → s'executa
+- Si l'importes → NO s'executa
+
+---
+
+## Exemple complet
+
+### operacions.py
+
+```python
+def suma(priNumSuma, segNumSuma):
+    return priNumSuma + segNumSuma
+
+if __name__ == "__main__":
+    print(suma(2, 3))
+```
+
+---
+
+## Activitat 1
+
+Dins dels vostre reposotori cal crear una nova carperta **`pr003-import`**. I dins d'aquesta:
+
+- Crear els fitxer **`operacions.py`**
+- Afegir les funcions:
+  - **`suma()`**
+  - **`resta()`**
+  - **`producte()`**
+  - **`divisio()`**
+  - **`esParell()`**
+  - **`esPositiu()`**
+
+- Crear els fitxer **`main.py`**, amb el següent contingut:
+
+```python
+import operacions
+
+# Programa principal
+if __name__ == "__main__":
+    print(operacions.suma(3,4))
+
+```
+
+---
+
+## Activitat 2
+
+- Crear `main.py`
+- Importar funcions
+- Fer 3 càlculs
+
+---
+
+## Activitat 3
+
+- Afegir funció:
+  - dividir (controlant error)
+
+---
+
+## Resum
+
+Un mòdul = un fitxer `.py`  
+`import` permet reutilitzar codi  
+Podem importar tot o funcions concretes  
+`__name__ == "__main__"` evita execucions no desitjades  
+
+---
+
+## Preguntes
+
+

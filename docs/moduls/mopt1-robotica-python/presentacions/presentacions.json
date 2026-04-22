@@ -80,10 +80,16 @@
       "description": "Millorant la calculadora amb històric",
       "status": "active",
         "kind": "theory"
+    },
+    {
+      "order": 302,
+      "title": "302 - TEORIA: Imports en Python",
+      "src": "slides/302-import-python.reveal",
+      "description": "Imports en Python",
+      "status": "active",
+        "kind": "theory"
     }
 
-
-    
   ]
 }
 
