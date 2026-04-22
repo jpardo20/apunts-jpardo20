@@ -202,6 +202,14 @@ Tot utilitzant funcions
 
 ## Exemple: calcular IVA amb dos paràmetres
 
+Si el segon paràmetre rebut és l'IVA en format decimal.
+
+```sql
+SELECT calcular_iva_percentatge(100, 0.20);
+```
+
+Llavors el codi seria:
+
 ```sql
 DELIMITER $$
 
@@ -217,6 +225,14 @@ END$$
 
 DELIMITER ;
 
+```
+
+
+ ⬇️
+
+----
+
+```sql
 -- mysql> SELECT calcular_iva_percentatge(100, 0.20);
 -- +-------------------------------------+
 -- | calcular_iva_percentatge(100, 0.20) |
@@ -227,7 +243,19 @@ DELIMITER ;
 
 ```
 
-i
+ ⬇️
+
+----
+
+
+Pero, si el segon paràmetre rebut és l'IVA en format enter.
+
+```sql
+SELECT calcular_iva_percentatge(100, 20);
+```
+
+Llavors el codi seria:
+
 
 ```sql
 DELIMITER $$
@@ -245,7 +273,14 @@ END$$
 -- SELECT calcular_iva_enter(100, 20);
 
 DELIMITER ;
+```
 
+
+ ⬇️
+
+----
+
+```sql
 
 -- mysql> SELECT calcular_iva_enter(100, 20);
 -- +-----------------------------+
