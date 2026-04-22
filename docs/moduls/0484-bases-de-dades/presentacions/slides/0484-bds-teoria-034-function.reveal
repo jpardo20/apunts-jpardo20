@@ -1,0 +1,199 @@
+# FUNCTIONS a SQL
+
+## Objectius de la sessió
+
+- Entendre què és una **`FUNCTION`**
+- Diferenciar-la d’una **`PROCEDURE`**
+- Crear funcions bàsiques
+- Utilitzar funcions dins de **`SELECT`**
+- Aplicar-les a casos reals
+
+---
+
+## Què és una **`FUNCTION`**?
+
+Una **`FUNCTION`** és un bloc de codi **`SQL`** que:
+
+- Rep **paràmetres d’entrada**
+- Realitza un càlcul
+- Retorna un **valor**
+
+---
+
+## Idea clau
+
+**`PROCEDURE`** = fer accions  
+**`FUNCTION`** = retornar un valor
+
+---
+
+## Diferència amb PROCEDURES
+
+| Característica | **`PROCEDURE`** | **`FUNCTION`** |
+|--------------|----------|----------|
+| Retorna valor | No obligatori | Obligatori |
+| Ús dins **`SELECT`** | No | Sí |
+| Modifica dades | Sí | No (en general) |
+| Objectiu | Processos | Càlculs |
+
+---
+
+## Sintaxi bàsica
+
+```sql
+DELIMITER $$
+
+CREATE FUNCTION nom_funcio(paràmetre TIPUS)
+RETURNS TIPUS
+DETERMINISTIC
+BEGIN
+    RETURN valor;
+END$$
+
+DELIMITER ;
+```
+
+---
+
+## Exemple 1: calcular IVA
+
+```sql
+DELIMITER $$
+
+CREATE FUNCTION calcular_iva(preu DECIMAL(10,2))
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+    RETURN preu * 1.21;
+END$$
+
+DELIMITER ;
+```
+
+---
+
+## Utilitzar la funció
+
+```sql
+SELECT calcular_iva(100);
+```
+
+Resultat: 121
+
+---
+
+## Exemple amb taula
+
+```sql
+SELECT nom, calcular_iva(preu) AS preu_final
+FROM productes;
+```
+
+---
+
+## Exemple 2: funció amb condició
+
+```sql
+DELIMITER $$
+
+CREATE FUNCTION categoria_preu(preu DECIMAL(10,2))
+RETURNS VARCHAR(20)
+DETERMINISTIC
+BEGIN
+    **`IF`** preu < 50 THEN
+        RETURN 'barat';
+    ELSE
+        RETURN 'car';
+    END **`IF`**;
+END$$
+
+DELIMITER ;
+```
+
+---
+
+## Ús amb la funció
+
+```sql
+SELECT nom, categoria_preu(preu)
+FROM productes;
+```
+
+---
+
+## Conceptes importants
+
+- Sempre hi ha un **`RETURN`**
+- Es poden usar **`IF`**, variables, càlculs
+- Es poden cridar dins de **`SELECT`**
+
+---
+
+## Restriccions
+
+- No s’han d’utilitzar per modificar dades
+- No **`INSERT`**, **`UPDATE`** o **`DELETE`**
+- Han de ser deterministes en molts casos
+
+---
+
+## DETERMINISTIC
+
+Indica que:
+
+- Amb els mateixos paràmetres
+- Sempre retorna el mateix resultat
+
+Exemple: calcular IVA
+
+---
+
+## Exemple no determinista
+
+Funcions com:
+
+- **`NOW()`**
+- **`RAND()`**
+
+Poden donar resultats diferents
+
+---
+
+## Errors típics
+
+- Oblidar el **`RETURN`**
+- Intentar modificar dades
+- Tipus de retorn incorrecte
+- No canviar el **`DELIMITER`**
+
+---
+
+## Activitat
+
+Crear les següents funcions:
+
+1. **`doblar_numero(x)`**
+2. **`calcular_descompte(preu)`**
+3. **`calcular_edat(data_naixement)`**
+4. **`categoria_producte(preu)`**
+
+---
+
+## Repte
+
+Fer una consulta que mostri:
+
+- Nom del producte
+- Preu original
+- Preu amb IVA
+- Categoria
+
+Tot utilitzant funcions
+
+---
+
+## Conclusió
+
+- Les **`FUNCTIONS`** permeten reutilitzar càlculs
+- S’integren dins de **`SELECT`**
+- Són essencials per estructurar consultes complexes
