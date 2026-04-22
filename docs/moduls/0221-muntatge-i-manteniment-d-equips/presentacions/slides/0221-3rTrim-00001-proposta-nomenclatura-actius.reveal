@@ -1,0 +1,414 @@
+# Proposta de sistema d’inventari i nomenclatura d’actius TIC
+
+## Centre (Seu BCN)
+
+---
+
+# 1. Objectiu
+
+Establir un sistema **clar, escalable i professional** per:
+
+- Identificar tots els actius TIC del centre
+- Facilitar la gestió d’incidències (GLPI a nivell docent)
+- Millorar la traçabilitat i el manteniment
+- Alinear-se amb bones pràctiques d’entorns empresarials
+
+---
+
+# 2. Principis del sistema
+
+## 2.1 Simplicitat
+
+Els codis han de ser:
+- curts
+- fàcils de llegir
+- fàcils d’etiquetar físicament
+
+⬇️
+
+----
+
+
+## 2.2 Independència
+
+Els dispositius:
+
+- **no estan lligats a persones**
+- **no estan lligats a aules**
+
+<div class="admonition tip">
+<br>
+són actius del centre
+</div>
+
+
+⬇️
+
+----
+
+
+## 2.3 Traçabilitat
+Cada actiu té:
+
+- un identificador únic
+- un registre (GLPI o sistema alternatiu)
+
+⬇️
+
+----
+
+
+## 2.4 Escalabilitat
+El sistema ha de servir per:
+
+- altres seus
+- nous dispositius
+- creixement futur
+
+---
+
+# 3. Estructura de la nomenclatura
+
+## 3.1 Format general
+
+```bash
+SEU-ANY-NUMERO-TIPUS
+```
+
+⬇️
+
+----
+
+
+## 3.2 Components
+
+| Element | Significat | Exemple |
+|---|---|---|
+| SEU | Localització | BCN |
+| ANY | Any adquisició (2 dígits) | 24 |
+| NUMERO | Identificador únic | 001 |
+| TIPUS | Tipus dispositiu | L |
+
+⬇️
+
+----
+
+
+## 3.3 Exemple complet
+
+```bash
+BCN-24-001-L
+```
+
+<div class="admonition tip">
+<br>
+Portàtil número 001 adquirit el 2024 a la seu BCN
+</div>
+
+---
+
+# 4. Tipus de dispositius
+
+## 4.1 Dispositius d’usuari
+
+| Dispositiu | Codi |
+|---|---|
+| Portàtil | L |
+| Teclat | K |
+| Ratolí | M |
+| Monitor | T |
+
+⬇️
+
+----
+
+
+## 4.2 Infraestructura de xarxa
+
+| Dispositiu | Codi |
+|---|---|
+| Switch | SW |
+| Punt d’accés (WiFi) | AP |
+| Router | RT |
+| Firewall | FW |
+
+⬇️
+
+----
+
+
+## 4.3 Servidors i sistemes
+
+| Dispositiu | Codi |
+|---|---|
+| Servidor | SV |
+| NAS / Emmagatzematge | ST |
+
+⬇️
+
+----
+
+
+## 4.4 Altres dispositius
+
+| Dispositiu | Codi |
+|---|---|
+| Impressora | PR |
+| Projector / Pantalla | PJ |
+| SAI (UPS) | UPS |
+
+---
+
+# 5. Model de kits (portàtil + perifèrics)
+
+⬇️
+
+----
+
+## 5.1 Concepte
+
+Els dispositius es poden agrupar per kit:
+
+```bash
+BCN-24-001-L
+BCN-24-001-K
+BCN-24-001-M
+```
+
+<div class="admonition tip">
+<br>
+Representen:
+
+- portàtil
+- teclat
+- ratolí
+</div>
+
+⬇️
+
+----
+
+## 5.2 Avantatges
+
+- coherència visual
+- relació clara entre dispositius
+- gestió independent (GLPI o altres eines)
+
+⬇️
+
+----
+
+
+## 5.3 Limitació
+
+
+<div class="admonition tip">
+<br>Si es substitueix un perifèric:
+- el kit deixa de ser “original”
+</div>
+
+⬇️
+
+----
+
+## 5.4 Solució adoptada
+
+
+<div class="admonition tip">
+<br>Es prioritza:
+
+✔ la **traçabilitat individual**
+✔ la **gestió realista**
+</div>
+
+
+<div class="admonition tip">
+<br>El kit és una referència inicial, no una dependència rígida
+</div>
+
+---
+
+# 6. Què s’inventaria
+
+## 6.1 Actius obligatoris
+
+- Portàtils
+- Servidors
+- Equip de xarxa
+- Impressores
+- Emmagatzematge
+
+⬇️
+
+----
+
+
+## 6.2 Actius recomanats
+
+- Monitors
+- SAI
+- Projectors
+
+⬇️
+
+----
+
+
+## 6.3 Perifèrics
+
+- Teclats i ratolins:
+  - inventariats només si formen part d’un kit
+  - no es gestionen com a consumibles independents
+
+---
+
+# 7. Sistema de comptador (IMPORTANT)
+
+## ❗ Problema
+
+Si no es fa servir GLPI al centre:
+
+
+<div class="admonition tip">
+<br>cal un sistema per garantir:
+</div>
+
+```bash
+BCN-24-001
+BCN-24-002
+BCN-24-003
+```
+
+
+<div class="admonition tip">
+<br>sense duplicats
+</div>
+
+---
+
+## Solucions possibles
+
+### OPCIÓ 1 — Full de càlcul compartit (RECOMANADA)
+
+Exemple (Google Sheets o Excel compartit):
+
+| SEU | ANY | NUMERO | TIPUS | DESCRIPCIÓ |
+|---|---|---|---|---|
+| BCN | 24 | 001 | L | Portàtil aula |
+
+✔ fàcil
+✔ control centralitzat
+✔ multiusuari
+✔ històric
+
+---
+
+### OPCIÓ 2 — Document manual
+
+
+<div class="admonition tip">
+<br>poc recomanable
+
+- risc d’errors
+- no concurrent
+</div>
+
+---
+
+### OPCIÓ 3 — Script automàtic (nivell PRO)
+
+
+<div class="admonition tip">
+<br>
+
+petit script (Python / Bash)
+
+- genera el següent ID
+- consulta fitxer central
+
+✔ molt robust
+❌ més complex
+
+</div>
+
+---
+
+### OPCIÓ 4 — GLPI només per inventari
+
+
+<div class="admonition tip">
+<br>encara que no s’usi per incidències
+
+✔ millor opció tècnica
+❌ potser no viable a centre
+</div>
+
+---
+
+# RECOMANACIÓ FINAL
+
+
+<div class="admonition tip">
+<br>Per al centre:
+
+✔ Full de càlcul compartit (simple i efectiu)
+</div>
+
+
+<div class="admonition tip">
+<br>Per a classe:
+
+✔ GLPI (entorn professional)
+
+</div>
+
+
+---
+
+# 8. Integració amb GLPI (docent)
+
+Cada actiu tindrà:
+
+- codi d’inventari
+- descripció
+- estat
+- incidències associades
+
+---
+
+# 9. Beneficis
+
+## Operatius
+- millor control
+- menys incidències no resoltes
+- traçabilitat
+
+## Estratègics
+- planificació renovacions
+- visió global
+
+## Pedagògics
+- simulació real
+- aprenentatge aplicat
+
+---
+
+# 10. Exemple complet
+
+```bash
+BCN-24-001-L → Portàtil
+BCN-24-001-K → Teclat
+BCN-24-001-M → Ratolí
+BCN-23-010-SW → Switch
+BCN-22-002-AP → Punt d’accés
+BCN-21-001-SV → Servidor
+```
+
+---
+
+# 11. Filosofia
+
+> “No es tracta de controlar-ho tot, sinó de controlar allò que impacta en el servei.”
+
+> “Els actius no pertanyen a persones ni a aules, sinó al centre.”
+

@@ -123,6 +123,14 @@
             "description": "1r REPTE ASTI: 'Oficina Eficient 2026'",
             "status": "active",
             "kind": "theory"
+        },
+        {
+            "order": 300,
+            "title": "300. nomenclatura-actius.",
+            "src": "slides/0221-3rTrim-00001-proposta-nomenclatura-actius.reveal",
+            "description": "300. nomenclatura-actius.",
+            "status": "active",
+            "kind": "theory"
         }
     ]
 }

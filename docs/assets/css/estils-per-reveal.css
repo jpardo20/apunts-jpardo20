@@ -68,7 +68,7 @@
 .reveal .cols {
   display: flex;
   gap: 40px;
-  align-items: center;
+  
 }
 
 .reveal .col-left {
