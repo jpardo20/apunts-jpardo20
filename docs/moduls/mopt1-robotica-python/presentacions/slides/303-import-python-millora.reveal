@@ -218,6 +218,13 @@ pintaTitolCentrat("Hola", caracter="*")
 pintaTitolCentrat("Hola", caracter="=")
 ```
 
+Sortida
+
+```bash
+********************  Hola  *********************
+====================  Hola  =====================
+```
+
 Heu aconseguit que la funció sigui molt més flexibile.
 
 ---
