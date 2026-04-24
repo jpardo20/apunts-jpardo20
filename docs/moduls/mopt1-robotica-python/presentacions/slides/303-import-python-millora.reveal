@@ -229,6 +229,85 @@ Heu aconseguit que la funció sigui molt més flexibile.
 
 ---
 
+## Següent millora
+
+A la darrera sessió, varem afegir al menu les noves opcions **`7. Quadrat`** i **`8. Cub`**, però no les vàrem desenvolupar.
+
+Ara toca desenvolupar-les, cal que creu les funcions **`quadrat`** i **`cub`**, que rebràn un número i retornaràn el quadrat i cul cub del número rebut respectivament.
+
+⬇️
+
+----
+
+Cal destacar, que el **quadrat d'un número** és aquest multiplicat per si mateix **dues vegades**,
+
+Per exemple:
+
+El **quadrat de `2`** és **`2 * 2 = 4`**, i per realitzar aquesta operació, **python** té el següent operador aritmètic **`**`**.
+
+> **`2 ** 2 = 4`**
+
+⬇️
+
+----
+
+De mateixa manera, el **cub d'un número** és aquest multiplicat per si mateix **tres vegades**,
+
+Per exemple:
+
+El **cub de `2`** és **`2 * 2 * 2 = 8`**, i per realitzar aquesta operació, **python** té el següent operador aritmètic **`**`**.
+
+> **`2 ** 3 = 8`**
+
+⬇️
+
+----
+
+## Què cal fer?
+
+Cal que modifiqueu el programa **`main.py`** per què permeti executar les dues noves opcions  **`7. Quadrat`** i **`8. Cub`** i que es mostri el resultat per consola.
+
+
+---
+
+## Següent millora 2
+
+I per últim, podem concluir que qualsevol **número** (**`base`**) elevat a un altre **número** (**`exponent`**) és aquest **número**, la **`base`**, multiplicat **`exponent` vegades**,
+
+Per exemple:
+
+Si volem coneixer el resultat d'elevar 2 (**`base`**) a 4 (**`exponent`**), el que farem serà:
+
+* **`2 * 2 * 2 * 2 = 16`**, i per realitzar aquesta operació, **python** té el següent operador aritmètic **`**`**.
+
+És a dir que ho podem expressar com **`2 ** 4 = 16`**
+
+
+⬇️
+
+----
+
+Cal que desenvolupeu la funció **`potencia`**, que rebrà dos paràmetres (**`base`** i **`exponent`**) i retornarà el resutlat d'elevar la **`base`** a l'**`exponent`**.
+
+
+⬇️
+
+----
+
+## Què cal fer? (2)
+
+Cal que modifiqueu el programa **`main.py`** per què aparegui una nova opció  **`9. Potencia`**, i faci servir la funció **`potencia`**, que heu creat.
+
+
+
+---
+
+## Següent millora 3
+
+Cal que modifiqueu el programa **`main.py`** per què permeti que les dues noves opcions  **`7. Quadrat`** i **`8. Cub`** ,en comptes de executar les funcions **`quadrat`** i **`cub`**, faci servir la funció **`potencia`** creada anteriormen.
+
+---
+
 ## Reflexió final
 
 - Per què és millor aquesta versió?
