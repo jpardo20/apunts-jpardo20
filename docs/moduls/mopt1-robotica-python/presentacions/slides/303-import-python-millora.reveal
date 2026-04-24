@@ -1,7 +1,5 @@
 # Millorem el menú de la calculadora
 
-## Objectiu de la sessió
-
 - Entendre millor les funcions
 - Aprendre a modificar codi existent
 - Utilitzar paràmetres per defecte
@@ -150,6 +148,29 @@ Sortida:
 
 ```bash
 ----------
+```
+
+
+---
+
+## Extra
+
+Fixeu-vos que abans i desprès del titiol hi ha sempre dos espais en blanc.
+
+Aquests dos espais en blanc cal que hi siguin sempre.
+
+```bash
+==================================================
+-----------------  Calculadora  ------------------
+==================================================
+```
+
+No volem això:
+
+```bash
+==================================================
+-------------------Calculadora--------------------
+==================================================
 ```
 
 ---
