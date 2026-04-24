@@ -1,0 +1,224 @@
+# Millorem el menú de la calculadora
+
+## Objectiu de la sessió
+
+- Entendre millor les funcions
+- Aprendre a modificar codi existent
+- Utilitzar paràmetres per defecte
+- Fer el codi més flexible
+
+Avui no crearem una funció nova des de zero, sinó que millorarem una que ja existeix. Això és molt habitual en el món real.
+
+---
+
+## Punt de partida
+
+Tenim a `app.py`:
+
+```python
+pintaMenu(llistaOpcionsMenu, "Calculadora")
+```
+
+I a `menu.py`:
+
+```python
+def pintaMenu(llistatOpcions, titol):
+    pintaLinia("=")
+    pintaTitolCentrat(titol)
+    pintaLinia("=")
+```
+
+Cal tenir clar que `pintaMenu` utilitza la funció `pintaTitolCentrat`.
+
+És important entendre aquesta relació.
+
+---
+
+## Resultat actual
+
+```bash
+==================================================
+                   Calculadora                    
+==================================================
+```
+
+Aquest és el comportament actual. Funciona correctament, però el volem millorar visualment.
+
+---
+
+## Objectiu de la millora
+
+Volem aconseguir això:
+
+```bash
+==================================================
+-----------------  Calculadora  ------------------
+==================================================
+```
+
+Podeu veure clarament el canvi: ara hi ha un "caràcter decoratiu" al voltant del títol.
+
+---
+
+## Explicació del problema
+
+Actualment la funció és:
+
+```python
+def pintaTitolCentrat(titol, mida=AMPLE):
+```
+
+Només rep:
+
+- el text
+- la mida
+
+Aquesta funció no és flexible. Sempre imprimeix espais.
+
+---
+
+## Què volem fer
+
+Modificar la funció perquè accepti un nou paràmetre:
+
+```python
+def pintaTitolCentrat(titol, mida=AMPLE, caracter="-"):
+```
+
+Aquí introduïm el concepte clau: paràmetre per defecte.
+
+---
+
+## Teoria: Paràmetres per defecte
+
+```python
+def funcio(param=valor):
+```
+
+- Si no passem el paràmetre → usa el valor per defecte
+- Si el passem → el sobreescriu
+
+Exemple:
+
+```python
+def saluda(nom="Usuari"):
+    print(nom)
+```
+
+Aquest és un concepte molt important en Python. Permet fer funcions més flexibles.
+
+---
+
+## Aplicació al nostre cas
+
+```python
+def pintaTitolCentrat(titol, mida=AMPLE, caracter="-"):
+```
+
+- Si no passem caracter → usa "-"
+- Si el passem → usa el que indiquem
+
+Això permet reutilitzar la funció en altres contextos.
+
+---
+
+## Idea clau
+
+Abans:
+
+```python
+" " * n
+```
+
+Ara:
+
+```python
+caracter * n
+```
+
+Com podeu veure ara podem repetir qualsevol caràcter.
+
+---
+
+## Exemple
+
+```python
+print("-" * 10)
+```
+
+Sortida:
+
+```bash
+----------
+```
+
+---
+
+## Activitat
+
+Modifica la funció:
+
+```python
+def pintaTitolCentrat(titol, mida=AMPLE, caracter="-"):
+```
+
+Perquè:
+
+- el text quedi centrat
+- els espais es substitueixin pel caràcter
+
+---
+
+## Prova final
+
+Executa:
+
+```python
+pintaMenu(llistaOpcionsMenu, "Calculadora")
+```
+
+I comprova que surt:
+
+```bash
+-----------------  Calculadora  ------------------
+```
+
+
+Valideu el resultat. És important que comproveu.
+
+---
+
+## Més proves
+
+Prova diferents caràcters:
+
+```python
+pintaTitolCentrat("Hola", caracter="*")
+pintaTitolCentrat("Hola", caracter="=")
+```
+
+Heu aconseguit que la funció sigui molt més flexibile.
+
+---
+
+## Reflexió final
+
+- Per què és millor aquesta versió?
+- Hem reutilitzat codi?
+- Hem fet la funció més flexible?
+
+No cal que respongeu, només penseu-hi!
+
+---
+
+## Missatge final
+
+Un bon programador:
+
+- no només fa que funcioni
+- fa que sigui reutilitzable
+- fa que sigui flexible
+
+## Lliurament
+
+Cal que modifiqueu el fitxer `pr003-import\menu.py`, i que pujegu els canvis al vostre repositori remot.

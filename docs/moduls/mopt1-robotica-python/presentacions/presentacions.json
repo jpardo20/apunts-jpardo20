@@ -88,8 +88,15 @@
       "description": "Imports en Python",
       "status": "active",
         "kind": "theory"
+    },
+    {
+      "order": 303,
+      "title": "303 - EXERCICI: millora de la funció <codijpc>pintaTitolCentrat</codijpc>",
+      "src": "slides/303-import-python-millora.reveal",
+      "description": "EXERCICI: millora de la funció <codijpc>pintaTitolCentrat</codijpc>",
+      "status": "active",
+      "kind":"activity"
     }
-
   ]
 }
 
