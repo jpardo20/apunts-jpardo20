@@ -2,13 +2,13 @@
 
   // Relació entre el "slug" de la carpeta i el títol bonic del mòdul
   const MODULE_TITLES = {
-    "0221-muntatge-i-manteniment-d-equips": "Apunts 0221 Muntatge i manteniment d'equips",
-    "0223-aplicacions-ofimatiques": "Apunts 0223 Aplicacions ofimàtiques",
-    "0225-xarxes-locals": "Apunts 0225 Xarxes locals",
-    "0373-llenguatges-de-marques": "Apunts 0373 Llenguatges de marques",
-    "0483-sistemes-informatics": "Apunts 0483 Sistemes informàtics",
-    "0484-bases-de-dades": "Apunts 0484 Bases de dades",
-    "mopt1-robotica-python": "Apunts mopt1 Robòtica amb Python"
+    "0221-muntatge-i-manteniment-d-equips": "0221 - Muntatge i manteniment d'equips",
+    "0223-aplicacions-ofimatiques": "0223 - Aplicacions ofimàtiques",
+    "0225-xarxes-locals": "0225 - Xarxes locals",
+    "0373-llenguatges-de-marques": "0373 - Llenguatges de marques",
+    "0483-sistemes-informatics": "0483 - Sistemes informàtics",
+    "0484-bases-de-dades": "0484 - Bases de dades",
+    "mopt1-robotica-python": "mopt1 - Robòtica amb Python"
   };
 
   function detectContext() {
@@ -45,7 +45,7 @@
       } else if (ctx.moduleSlug) {
         moduleTitle = ctx.moduleSlug;
       } else {
-        moduleTitle = "Apunts d'en Joan Pardo per DigiTechFP";
+        moduleTitle = "Apunts per DigiTechFP d'en Joan Pardo ";
       }
     }
 

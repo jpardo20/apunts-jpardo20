@@ -158,23 +158,23 @@ footer.footnote {
   /* border-bottom: 3px solid #009de0; */
 }
 
-.topbar img{
-  grid-column: 3;  
-}
 
 .topbar a{
-  grid-column: 1;
-  justify-self: end;                   /* a l'esquerra */
-  white-space: nowrap;                 /* evita que es trenqui el text */
+    grid-column: 1;
+    justify-self: end;                   /* a l'esquerra */
+    white-space: nowrap;                 /* evita que es trenqui el text */
 }
 
 #topbar-title{
-  grid-column: 2;
-  justify-self: center;                /* centrat real */
-  text-align: center;
-  font-size: 25px;
+    grid-column: 2;
+    justify-self: center;                /* centrat real */
+    text-align: center;
+    font-size: 25px;
 }
 
+.topbar img{
+  grid-column: 3;  
+}
 
 .minus{
     text-transform: lowercase;
@@ -695,6 +695,8 @@ main {
   margin: 0;
   font-size: 1.4rem;
   font-weight: 700;
+  justify-content: center;
+  display: flex;
 }
 
 .portal-header__subtitle {
@@ -705,8 +707,9 @@ main {
 
 /* Marca DIGITECH a la dreta */
 .portal-header__brand {
-  display: flex;
   align-items: center;
+  justify-content: center;
+  display: flex;
   gap: 0.4rem;
   font-weight: 700;
   font-size: 1.2rem;
@@ -714,7 +717,7 @@ main {
 }
 
 .portal-header__brand .logo {
-  height: 70px;
+  height: 30px;
   width: auto;
   display: block;
 }
