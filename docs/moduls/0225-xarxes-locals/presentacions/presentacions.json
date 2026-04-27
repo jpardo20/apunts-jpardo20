@@ -110,9 +110,9 @@
     },
     {
       "order": "302",
-      "title": "302. GLPI: PRÀCTICA GLPI — SIMULACIÓ REAL DE SERVEI TÈCNIC",
-      "src": "slides/xlo-3r-trim-glpi-docker-act002.reveal",
-      "description": "<strong>GLPI</strong>: PRÀCTICA GLPI — SIMULACIÓ REAL DE SERVEI TÈCNIC<br><strong>3r trimestre</strong>",
+      "title": "302. Pràctica GLPI - Simulació real de servei tèncnic (<codijpc>0225-xlo-ae030</codijpc>)",
+      "src": "slides/xlo-3r-trim-glpi-docker-act002-0225-xlo-ae030.reveal",
+      "description": "<strong>GLPI</strong>: Pràctica GLPI - Simulació real de servei tèncnic (<codijpc>0225-xlo-ae030</codijpc>)<br><strong>3r trimestre</strong>",
       "status": "active",
       "kind":"activity"
     }
