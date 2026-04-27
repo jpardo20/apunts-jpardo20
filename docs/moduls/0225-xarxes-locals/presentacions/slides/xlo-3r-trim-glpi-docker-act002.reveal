@@ -1,0 +1,237 @@
+# PRÀCTICA GLPI — SIMULACIÓ REAL DE SERVEI TÈCNIC
+
+## Objectiu: Treballar com un equip real de helpdesk
+
+---
+
+# CONTEXT
+
+Sou l’equip de suport tècnic del centre BCN.  
+Disposeu d’un sistema GLPI amb incidències reals.  
+Heu de gestionar-les, analitzar-les i prendre decisions.
+
+---
+
+# FASE 1 — EXPLORACIÓ
+
+## Objectiu
+Entendre el sistema
+
+⬇️
+
+----
+
+## Tasques
+
+
+<div class="cols">
+<div class="col-left">
+1. Anar a:
+<br>
+ - Soporte → Solicitudes
+
+</div>
+
+<div class="col-right">
+2. Respondre:
+
+- Quants tickets hi ha?
+- Quants estan oberts?
+- Quants estan tancats?
+- Qui és el tècnic amb més incidències?
+
+</div>
+
+---
+
+# FASE 2 — GESTIÓ REAL
+
+## Objectiu
+Treball operatiu
+
+
+⬇️
+
+----
+
+## Tasques
+
+Cada alumne ha de:
+
+### 1. Escollir 3 tickets en estat:
+- Nou
+- En curs
+
+
+⬇️
+
+----
+
+### 2. Fer:
+
+- Assignar-se el ticket  
+- Afegir un followup:
+```
+Diagnòstic inicial...
+```
+
+- Canviar estat:
+  - Nou → En curs
+
+
+⬇️
+
+----
+
+### 3. Resoldre 1 ticket
+
+- Afegir followup:
+```
+Solució aplicada...
+```
+
+- Canviar estat:
+  - En curs → Resolt → Tancat
+
+---
+
+# FASE 3 — BASE DE CONEIXEMENT
+
+## Objectiu
+Documentar coneixement
+
+⬇️
+
+----
+
+## Tasques
+
+<div class="cols">
+<div class="col-left">
+
+1. Crear un article KB:
+
+- Títol: problema resolt  
+- Contingut: passos de solució  
+</div>
+<div class="col-right">
+
+2. Relacionar-lo amb un ticket
+
+Mitjançant followup:
+```
+Veure KB: [nom article]
+```
+</div>
+
+---
+
+# FASE 4 — ANÀLISI
+
+## Objectiu
+Pensament crític
+
+## Tasques
+
+Anar a informes o estadístiques.
+
+⬇️
+
+----
+
+### Respondre:
+
+#### Evolució
+- Quin mes té més incidències?
+- Hi ha tendència?
+
+#### Tècnics
+- Qui resol més?
+- Qui té més tickets oberts?
+
+
+⬇️
+
+----
+
+
+#### Temps
+- Quin és el temps mitjà?
+- Hi ha incidències molt lentes?
+
+#### Problemes
+- Quin tipus d’error es repeteix més?
+
+---
+
+# FASE 5 — DECISIÓ
+
+## Objectiu
+Simular gestió IT
+
+
+⬇️
+
+----
+
+## Tasques
+
+En grup (2-3 alumnes), respondre:
+
+1. Cal més personal tècnic?
+2. Quin tipus d’incidència és més crítica?
+3. On cal millorar el sistema?
+4. Què automatitzaríeu?
+
+---
+
+# FASE 6 — POSADA EN COMÚ
+
+Cada grup explica:
+
+- Un problema detectat  
+- Una millora proposada  
+
+---
+
+# FASE 7 — ANÀLISI
+
+Si hi ha temps:
+
+- Comparar tècnics  
+- Detectar incidències crítiques  
+- Proposar millores del sistema  
+
+---
+
+# RÚBRICA D’AVALUACIÓ
+
+| Criteri | Punts |
+|--------|------|
+| Gestió tickets correcta | 2 |
+| Ús de followups | 2 |
+| Resolució incidències | 2 |
+| Article KB | 2 |
+| Anàlisi i reflexió | 2 |
+
+Total: 10 punts
+
+---
+
+# NOTES
+
+- Treballar de forma ordenada  
+- Escriure els followups de manera clara  
+- Pensar com un tècnic real  
+- Justificar les decisions  
+
+---
+
+# OBJECTIU FINAL
+
+Entendre com funciona un sistema real de suport tècnic i ser capaç de:
+
+- Gestionar incidències  
+- Documentar solucions  
+- Analitzar dades  
+- Prendre decisions  

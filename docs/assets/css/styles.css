@@ -631,38 +631,34 @@ main {
   padding: 0.75rem 1.5rem;
 }
 
-.portal-header__inner {
+/* .portal-header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   max-width: 1200px;
   margin: 0 auto;
-}
+} */
 
-.portal-header__back {
+/*.portal-header__back {
   font-size: .9rem;
   text-decoration: none;
-}
+}*/
 
-.portal-header__module {
+/*.portal-header__module {
   font-size: 1.4rem;
   margin: 0;
-}
+}*/
 
-.portal-header__subtitle {
+/*.portal-header__subtitle {
   margin: 0;
   font-size: .95rem;
   opacity: .8;
 }
+*/
 
 /* === PORTAL HEADER UNIFICAT === */
 
-.portal-header {
-  background-color: #ffffff;
-  border-bottom: 3px solid #0d6efd;
-  padding: 0.75rem 1.5rem;
-}
 
 .portal-header__inner {
   max-width: 1200px;
