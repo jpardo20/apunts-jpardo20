@@ -68,8 +68,8 @@
         backHref = "../../../index.html";
         backText = "← Tornar a l'inici";
       } else {
-        backHref = "../../index.html";
-        backText = "← Tornar a l'inici dolent!";
+        backHref = "../../../index.html";
+        backText = "← Tornar a l'inici";
       }
     }
 
