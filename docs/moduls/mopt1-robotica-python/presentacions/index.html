@@ -12,12 +12,16 @@
 </head>
 
 <body class="portal">
-  <header class="portal-header"
-          data-module="auto"
-          data-back-href="auto"
-          data-back-text="auto"
-          data-subtitle="auto">
-  </header>
+<link rel="stylesheet" href="../../../assets/css/header.css">
+<div id="header-container"></div>
+<script>
+fetch("../../../assets/components/header/header.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("header-container").innerHTML = html;
+  });
+</script>
+
 
     <header class="header-row">
         <div class="topbar">
@@ -118,6 +122,5 @@
     });
   });
 </script>
-  <script src="../../../assets/js/portal-header.js"></script>
 </body>
 </html>

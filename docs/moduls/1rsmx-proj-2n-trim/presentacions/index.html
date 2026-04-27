@@ -9,18 +9,15 @@
 </head>
 
 <body class="portal">
-
-    <body class="portal">
-        <header class="portal-header"
-                data-module="auto"
-                data-back-href="auto"
-                data-back-text="auto"
-            data-subtitle="">
-        </header>
-        
-        
-
-
+<link rel="stylesheet" href="../../../assets/css/header.css">
+<div id="header-container"></div>
+<script>
+fetch("../../../assets/components/header/header.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("header-container").innerHTML = html;
+  });
+</script>
         <!-- Controls -->
         <div class="toolbar">
             <input id="search" type="search" placeholder="Cerca per títol o descripció…">
@@ -44,7 +41,6 @@
                 });
             });
         </script>
-        <script src="../../../assets/js/portal-header.js"></script>
     </body>
 
 </html>
