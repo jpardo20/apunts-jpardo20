@@ -125,6 +125,14 @@
             "description": "Instal·lar-Windows-Server-2025",
             "status": "active",
             "kind": "theory"
+        },
+        {
+            "order": 301,
+            "title": "301 - Activitat: Explicació dels nivells RAID (<codijpc>0483-ae3001</codijpc>)",
+            "src": "slides/Instalar-Windows-Server-2025/Instalar-Windows-Server-2025.reveal",
+            "description": "Activitat: Explicació dels nivells RAID (<codijpc>0483-ae3001</codijpc>)",
+            "status": "active",
+            "kind": "theory"
         }
     ]
 }
