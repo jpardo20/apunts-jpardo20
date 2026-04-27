@@ -51,10 +51,9 @@ nav:
   #         - Presentacions:  moduls/0373-llenguatges-de-marques/presentacions/index.html
 
   
-
-
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/img/VERT-01-SIN-CAJA-BLANCO-RGB@2x-768x593.png
   favicon: assets/img/cropped-cropped-VERT-01-BLANCO-RGB-copia-150x150.png
   features:
@@ -70,6 +69,7 @@ extra_css:
   - assets/css/base.css
   - assets/css/tema.css
   - assets/css/fonts.css
+  - assets/css/header.css
 
 extra_javascript:
   - assets/js/presentador.js

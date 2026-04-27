@@ -1,0 +1,21 @@
+<header class="jp-header">
+
+  <!-- esquerra -->
+  <div class="jp-left">
+    <a href="{{ config.site_url | default('/') }}">
+      <img src="{{ base_url }}/assets/img/VERT-01-SIN-CAJA-BLANCO-RGB@2x-768x593.png" alt="VERT-01-SIN-CAJA-BLANCO-RGB@2x-768x593.png" />
+    </a>
+  </div>
+  <!-- centre -->
+  <div class="jp-center">
+    <span class="jp-title">
+      {{ config.site_name }}
+    </span>
+  </div>
+
+  <!-- dreta -->
+  <div class="jp-right">
+    {% include "partials/search.html" %}
+  </div>
+
+</header>

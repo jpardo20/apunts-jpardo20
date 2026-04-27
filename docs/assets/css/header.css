@@ -1,0 +1,86 @@
+/* HEADER GENERAL */
+.jp-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1e88e5;
+    color: white;
+    padding: 8px 16px;
+    position: relative;
+    font-family: sans-serif;
+    padding: 14px 24px;
+    /* abans 8px 16px */
+}
+
+/* zones */
+.jp-left,
+.jp-right {
+    display: flex;
+    align-items: center;
+}
+
+/* LOGO */
+.jp-header img {
+    height: 48px;
+    /* millor que 50px */
+
+}
+
+/* TÍTOL CENTRAT */
+.jp-center {
+    font-size: 1.2rem;
+    font-weight: 600;
+    white-space: nowrap;
+    /* evita salts de línia */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    letter-spacing: 0.3px;
+}
+
+/* ENLLAÇ */
+.jp-header a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.jp-header a:hover {
+    opacity: 0.85;
+}
+
+/* SEARCH */
+.jp-search {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.jp-search::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.jp-center {
+    max-width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .jp-center {
+        display: none;
+        /* amaga el títol en mòbil */
+    }
+
+    .jp-search {
+        width: 120px;
+    }
+}
