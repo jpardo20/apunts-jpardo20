@@ -2,53 +2,55 @@ site_name: Apunts d'en Joan Pardo per DigiTechFP
 site_description: Publicació progressiva des d'un sol repositori
 site_url: https://jpardo20.github.io/apunts-jpardo20/
 
+docs_dir: docs
+site_dir: site
 
 nav:
 
   - Mòduls de SMX:
     - 0221 Muntatge i manteniment d’equips moduls:
       # - Presentacions:
-        - Presentacions:  moduls/0221-muntatge-i-manteniment-d-equips/presentacions/index.html
+        - Presentacions:  presentacions/?modul=0221-muntatge-i-manteniment-d-equips
       # - Activitats:
       #   - Activitat mim-ud01-ae01: moduls/0221-muntatge-i-manteniment-d-equips/presentacions/mim-ud01-ae01.reveal
     - 0223 Aplicacions ofimàtiques:
       # - Presentacions:
-        - Presentacions:  moduls/0223-aplicacions-ofimatiques/presentacions/index.html
+        - Presentacions:  presentacions/?modul=0223-aplicacions-ofimatiques
     - 0225 Xarxes locals:
       # - Presentacions:
-        - Presentacions:  moduls/0225-xarxes-locals/presentacions/index.html
+        - Presentacions:  presentacions/?modul=0225-xarxes-locals
     - MOPT1 Programació Python:
       # - Presentacions:
-        - Presentacions:  moduls/mopt1-robotica-python/presentacions/index.html
+        - Presentacions:  presentacions/?modul=mopt1-robotica-python
     - PR2T - Projecte 2n trimestre:
       # - Presentacions:
-        - Presentacions:  moduls/1rsmx-proj-2n-trim/presentacions/index.html
+        - Presentacions:  presentacions/?modul=1rsmx-proj-2n-trim
     - Tutoria:
       # - Presentacions:
-        - Presentacions:  moduls/tutoria/presentacions/index.html
+        - Presentacions:  presentacions/?modul=tutoria
   - Mòduls de DAM:
     - 0373 - Llenguatges de marques:
       # - Presentacions:
-        - Presentacions:  moduls/0373-llenguatges-de-marques/presentacions/index.html
+        - Presentacions:  presentacions/?modul=0373-llenguatges-de-marques
     - 0484 - Bases de dades:
       # - Presentacions:
-        - Presentacions:  moduls/0484-bases-de-dades/presentacions/index.html
+        - Presentacions:  presentacions/?modul=0484-bases-de-dades
     - 0483 - Sistemes Informàtics:
       # - Presentacions:
-        - Presentacions:  moduls/0483-sistemes-informatics/presentacions/index.html 
+        - Presentacions:  presentacions/?modul=0483-sistemes-informatics
     - PRTR - Projecte transversal:
       # - Presentacions:
-        - Presentacions:  moduls/1rdam-pro-dam-transversal/presentacions/index.html        
+        - Presentacions:  presentacions/?modul=1rdam-pro-dam-transversal
     - Tutoria:
       # - Presentacions:
-        - Presentacions:  moduls/tutoria/presentacions/index.html
+        - Presentacions:  presentacions/?modul=tutoria
   # - <h3>Mòduls de DAM</h3>:
   
   #   - 0373 - Llenguatges de marques:
   #       - Resultats d'Aprenentatge (RA): 
   #         - apunts: moduls/0373-llenguatges-de-marques/apunts/index.html
   #       - Presentacions:
-  #         - Presentacions:  moduls/0373-llenguatges-de-marques/presentacions/index.html
+  #         - Presentacions:  presentacions/?modul=0373-llenguatges-de-marques
 
   
 theme:

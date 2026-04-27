@@ -849,3 +849,8 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+
+.md-grid {
+  max-width: 1200px;  /* o 1400px si vols ample */
+}

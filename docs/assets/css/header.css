@@ -9,6 +9,7 @@
     position: relative;
     font-family: sans-serif;
     padding: 14px 24px;
+    font-family: var(--md-text-font, sans-serif);
     /* abans 8px 16px */
 }
 
@@ -28,6 +29,7 @@
 
 /* TÍTOL CENTRAT */
 .jp-center {
+    
     font-size: 1.2rem;
     font-weight: 600;
     white-space: nowrap;
@@ -61,6 +63,8 @@
     outline: none;
     background: rgba(255, 255, 255, 0.15);
     color: white;
+    height: 36px;
+    font-size: 14px;
 }
 
 .jp-search::placeholder {
@@ -83,4 +87,19 @@
     .jp-search {
         width: 120px;
     }
+}
+
+.jp-back {
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  opacity: 0.85;
+  transition: 0.2s;
+}
+
+.jp-back:hover {
+  opacity: 1;
+  text-decoration: underline;
 }

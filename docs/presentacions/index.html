@@ -1,11 +1,100 @@
-<link rel="stylesheet" href="../assets/css/header.css">
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <title>Apunts Joan Pardo per DigiTechFP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div id="header-container"></div>
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+</head>
 
+<body class="portal">
+
+  <!-- HEADER -->
+  <div id="header-container"></div>
 <script>
-fetch('../assets/components/header/header.html')
+fetch("../assets/components/header/header.html")
   .then(res => res.text())
   .then(html => {
-    document.getElementById('header-container').innerHTML = html;
+    document.getElementById("header-container").innerHTML = html;
+
+    const base = window.location.pathname.includes('/apunts-jpardo20')
+      ? '/apunts-jpardo20'
+      : '';
+
+    // LOGO
+    const logo = document.getElementById('logo');
+    if (logo) {
+      logo.src = base + '/assets/img/VERT-01-SIN-CAJA-BLANCO-RGB@2x-768x593.png';
+    }
+
+    // BOTÓ BACK
+    const backBtn = document.getElementById('back-button');
+
+    if (backBtn) {
+    backBtn.style.display = 'inline';
+
+    backBtn.href = base + '/';  // torna a la home
+    }
+
+    // LLEGIR MODUL AQUÍ (NO a l'altre script)
+    const params = new URLSearchParams(window.location.search);
+    const modul = params.get('modul');
+
+    // MAPA DE TÍTOLS
+    const titols = {
+      "0221-muntatge-i-manteniment-d-equips": "0221 - Muntatge i manteniment d’equips",
+      "0223-aplicacions-ofimatiques": "0223 - Aplicacions ofimàtiques",
+      "0225-xarxes-locals": "0225 - Xarxes locals",
+      "0483-sistemes-informatics": "0483 - Sistemes Informàtics",
+      "0484-bases-de-dades": "0484 - Bases de dades",
+      "0373-llenguatges-de-marques": "0373 - Llenguatges de marques",
+      "mopt1-robotica-python": "MOPT1 - Programació Python",
+      "1rsmx-proj-2n-trim": "PR2T - Projecte 2n trimestre",
+      "1rdam-pro-dam-transversal": "PRTR - Projecte transversal",
+      "tutoria": "Tutoria"
+    };
+
+    // CANVIAR TÍTOL
+    const titleEl = document.querySelector('.jp-title');
+    if (titleEl && titols[modul]) {
+      titleEl.textContent = titols[modul];
+    }
   });
 </script>
+</script>
+
+  <!-- CONTINGUT -->
+  <main>
+    <section id="grid" class="grid"></section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    © 2025 - 2027 | Apunts Joan Pardo per DigiTechFP
+  </footer>
+
+  <!-- JS -->
+  <script src="../assets/js/presentacions-grid.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const modul = params.get('modul');
+
+      if (!modul) {
+        document.getElementById('grid').innerHTML =
+          '<p style="text-align:center;">Falta paràmetre modul</p>';
+        return;
+      }
+
+      initPresentationsPage({
+        jsonUrl: `/apunts-jpardo20/moduls/${modul}/presentacions/presentacions.json`
+      });
+    });
+  </script>
+
+</body>
+</html>
