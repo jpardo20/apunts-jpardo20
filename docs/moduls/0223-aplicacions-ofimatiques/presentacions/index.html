@@ -1,16 +1,11 @@
 <!doctype html>
 <html lang="ca">
-
 <head>
     <meta charset="utf-8">
     <title>Apunts Joan Pardo per DigiTechFP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../../assets/css/styles.css">
-
-
-
 </head>
-
 <body class="portal">
         <header class="portal-header" data-module="auto" data-back-href="auto" data-back-text="auto"
             data-subtitle="">
@@ -38,157 +33,10 @@
             <option value="date-old">Data (antic primer)</option>
         </select>
     </div>
-
-
-
     <main>
         <section id="grid" class="grid" aria-live="polite"></section>
     </main>
-
-    <!-- <main>
-        <section id="grid" class="grid" aria-live="polite">
-            <article class="card">
-                <h2>Actividad evaluable <kbd>aof-ud03-ae01</kbd></h2>
-                <p>Introducción a aplicaciones ofimáticas</p>
-                <p><a class="button activitat" href="./presentador.html?src=slides%2Faof-ud03-actividades-evaluables-01.reveal&title=%20Actividad%20evaluable%20aof-ud03-ae01" target="_blank">Obrir Activitat</a></p>
-            </article>
-            <article class="card">
-                <h2>Activitat AOF-UD02 – Gestió de Projectes amb GitHub <kbd>aof-ud02-act-project</kbd></h2>
-                <p>Assignment de grup aof-ud02-act-project</p>
-                <p><a class="button activitat" href="https://classroom.github.com/a/5VaEsg90" target="_blank">Obrir Assignment</a></p>
-            </article>
-
-            <article class="card">
-                <h2>Actividad evaluable <kbd>aof-ud05-ae05</kbd></h2>
-                <p>Procesadores de texto</p>
-                <p><a class="button activitat" href="./presentador.html?src=slides%2Faof-ud05-ae05.reveal&title=%20Act.%20eval.%20Procesadores%20de%20texto%3A%20aof-ud05-ae05#/md-section">Obrir Activitat</a></p>
-            </article>
-
-            <article class="card">
-                <h2>Activitat evaluable <kbd>0223-aof-ae06-docs</kbd></h2>
-                <p>Procesadors de texts</p>
-                <p><a class="button activitat" href="./presentador.html?src=slides%2F0223-aof-ae06-docs.reveal&title=%20Act.%20eval.%20Procesadores%20de%20texto%3A%20aof-ud05-ae05#/md-section">Obrir Activitat</a></p>
-            </article>
-        </section>
-    </main> -->
-
     <footer class="site-footer">© 2025 - 2027     |     Apunts Joan Pardo per DigiTechFP</footer>
-
-    <!-- <script>
-        const el = (sel) => document.querySelector(sel);
-        const grid = el('#grid');
-        const searchInput = el('#search');
-        const sortSelect = el('#sort');
-        let items = [];
-
-        function cardTemplate(item) {
-    const status = (item.status || 'active').toLowerCase();
-    const kind = (item.kind || 'theory').toLowerCase();   // 'theory' o 'activity'
-    const isActivity = kind === 'activity';
-
-    const desc = item.description ? `<p>${item.description}</p>` : '';
-    const title = item.title || 'Presentació';
-
-    // Enllaç:
-    // - si item.href → usem aquesta URL tal qual (per assignments, etc.)
-    // - sinó → com fins ara, via presentador.html + src + title + theme
-    const href = item.href || (
-        `./presentador.html?src=${encodeURIComponent(item.src || '')}` +
-        (item.theme ? `&theme=${encodeURIComponent(item.theme)}` : '') +
-        (item.title ? `&title=${encodeURIComponent(item.title)}` : '')
-    );
-
-    // Classes del <article>
-    const articleClass = [
-        'card',
-        status === 'inactive' ? 'card--inactive' : '',
-        isActivity ? 'card--activity' : 'card--theory'
-    ].filter(Boolean).join(' ');
-
-    // Insígnies
-    const badgeStatus = status === 'inactive'
-        ? `<span class="badge badge--soon">Properament</span>`
-        : '';
-
-    const badgeKind = isActivity
-        ? `<span class="badge badge--activity">Activitat</span>`
-        : `<span class="badge badge--theory">Teoria</span>`;
-
-    // Botó
-    let button;
-    if (status === 'inactive') {
-        button = `<span class="button disabled" role="link" aria-disabled="true" title="Properament">No disponible</span>`;
-    } else {
-        const buttonClass = isActivity ? 'button activitat' : 'button primary';
-        const buttonText = isActivity ? 'Obrir activitat' : 'Obrir presentació';
-        button = `<a class="${buttonClass}" href="${href}" target="_blank">${buttonText}</a>`;
-    }
-
-    return `<article class="${articleClass}">
-        ${badgeStatus} ${badgeKind}
-        <h2>${title}</h2>
-        ${desc}
-        <p>${button}</p>
-      </article>`;
-}
-
-
-        // function cardTemplate(item) {
-        //     const status = (item.status || 'active').toLowerCase();
-        //     const desc = item.description ? `<p>${item.description}</p>` : '';
-        //     const title = item.title || 'Presentació';
-        //     const href = `./presentador.html?src=${encodeURIComponent(item.src || '')}${item.theme ? `&theme=${encodeURIComponent(item.theme)}` : ''}${item.title ? `&title=${encodeURIComponent(item.title)}` : ''}`;
-        //     const articleClass = `card${status === 'inactive' ? ' card--inactive' : ''}`;
-        //     const badge = status === 'inactive' ? `<span class="badge badge--soon">Properament</span>` : '';
-        //     const button = status === 'inactive'
-        //         ? `<span class="button disabled" role="link" aria-disabled="true" title="Properament">No disponible</span>`
-        //         : `<a class="button primary" href="${href}">Obrir presentació</a>`;
-        //     return `<article class="${articleClass}">
-        //         ${badge}
-        //         <h2>${title}</h2>
-        //         ${desc}
-        //         <p>${button}</p>
-        //       </article>`;
-        // }
-
-        function render(list) {
-            grid.innerHTML = list.map(cardTemplate).join('\n');
-        }
-
-        function applyFilters() {
-            const q = (searchInput?.value || '').toLowerCase().trim();
-            const mode = sortSelect?.value || 'title-az';
-            let list = (items || []).filter(it => {
-                const status = (it.status || 'active').toLowerCase();
-                if (status === 'hidden') return false;
-                const t = (it.title || '').toLowerCase();
-                const d = (it.description || '').toLowerCase();
-                return !q || t.includes(q) || d.includes(q);
-            });
-            list.sort((a, b) => {
-                if (mode === 'title-az') return (a.title || '').localeCompare(b.title || '');
-                if (mode === 'title-za') return (b.title || '').localeCompare(a.title || '');
-                if (mode === 'date-new' || mode === 'date-old') {
-                    const ad = new Date(a.date || 0).getTime() || 0;
-                    const bd = new Date(b.date || 0).getTime() || 0;
-                    return mode === 'date-new' ? bd - ad : ad - bd;
-                }
-                return (a.order ?? 9999) - (b.order ?? 9999);
-            });
-            render(list);
-        }
-
-        searchInput?.addEventListener('input', applyFilters);
-        sortSelect?.addEventListener('change', applyFilters);
-
-        fetch('presentacions.json')
-            .then(r => r.json())
-            .then(data => { items = data.presentations || []; applyFilters(); })
-            .catch(err => {
-                grid.innerHTML = '<p>No s\'ha pogut carregar el llistat de presentacions.</p>';
-                console.error(err);
-            });
-    </script> -->
     <script src="../../../assets/js/presentacions-grid.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -199,5 +47,4 @@
     </script>
     <script src="../../../assets/js/portal-header.js"></script>
 </body>
-
 </html>
