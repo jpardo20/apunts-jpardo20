@@ -12,6 +12,25 @@ Heu de gestionar-les, analitzar-les i prendre decisions.
 
 ---
 
+# Accés a GitHub Classroom
+
+Enllaç d’acceptació de l’activitat:
+
+https://classroom.github.com/a/3P1j_BzM
+
+Passos:
+
+1. Acceptar l’Assignment
+2. Clonar el repositori
+3. Modificar el fitxer `README.md`
+4. `git add README.md`
+5. `git commit -m "Commit i push inicials"`
+6. `git push`
+
+Si avui no hi ha temps de pujar totesl les activitats, ja ho fareu a la propera sessió, el que sí que és important és que avui feu el primer **`push`**.
+
+---
+
 # FASE 1 — EXPLORACIÓ
 
 ## Objectiu
