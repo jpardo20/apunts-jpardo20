@@ -1,0 +1,169 @@
+# Exemple de KB a GLPI
+
+### Com documentar correctament una incidència
+
+Note:
+Explicar que una KB no és només escriure què hem fet, sinó deixar una guia reutilitzable per altres tècnics.
+
+---
+
+## Què és una KB?
+
+Una KB (Base de Coneixement) és un document que:
+- Explica un problema
+- Defineix causes possibles
+- Detalla una solució clara
+- Pot ser reutilitzat
+
+Note:
+Insistir en la idea de reutilització. No és una resposta puntual, és una solució per molts casos futurs.
+
+---
+
+## Objectius d'una bona KB
+
+- Clarificar problemes habituals
+- Reduir temps de resolució
+- Compartir coneixement entre tècnics
+- Evitar repetir feina
+
+Note:
+Relacionar amb el món real: equips IT utilitzen KB per ser més eficients.
+
+---
+
+## Estructura bàsica
+
+Una KB ha de tenir:
+
+1. Descripció del problema  
+2. Causes possibles  
+3. Procediment de resolució  
+4. Resultat esperat  
+5. Verificació  
+
+Note:
+Aquesta estructura és obligatòria per a la pràctica. Si no hi és, la KB està incompleta.
+
+---
+
+## Exemple real
+
+**Títol:**
+
+**`Ordinador lent — optimització bàsica`**
+
+Note:
+Explicar que el títol ha de ser clar i directe. Ha de permetre trobar el problema ràpidament.
+
+---
+
+## 1. Descripció del problema
+
+L'equip presenta:
+- Arrencada lenta
+- Aplicacions lentes
+- Bloquejos puntuals
+
+Note:
+Important descriure símptomes, no solucions. Això ajuda a identificar casos similars.
+
+---
+
+## 2. Causes possibles
+
+- Massa programes en inici
+- Processos en segon pla
+- Poc espai en disc
+- Programari innecessari
+
+Note:
+No cal encertar sempre la causa exacta, però cal mostrar criteri tècnic.
+
+---
+
+## 3. Procediment de resolució
+
+* **Pas 1:** **`Revisar processos actius`**
+
+* **Pas 2:** **`Desactivar inici automàtic`**
+
+* **Pas 3:** **`Alliberar espai en disc`**
+
+* **Pas 4:** **`Desinstal·lar programes`**
+
+* **Pas 5:** **`Reiniciar sistema`**
+
+Note:
+Els passos han de ser clars, ordenats i repetibles per qualsevol tècnic.
+
+---
+
+## 4. Resultat esperat
+
+- Sistema més ràpid
+- Aplicacions funcionen correctament
+- Menys bloquejos
+
+Note:
+Ajuda a saber si la solució ha funcionat o no.
+
+---
+
+## 5. Verificació
+
+Comprovar:
+- Temps d'arrencada
+- Ús de CPU i RAM
+- Fluïdesa del sistema
+
+Note:
+Sense verificació no hi ha confirmació real de la solució.
+
+---
+
+## Relació amb incidències
+
+Exemple:
+- Ticket #21
+- Ticket #34
+
+Note:
+Relacionar KB amb tickets és clau en GLPI. Dona valor real al sistema.
+
+---
+
+## Observacions
+
+Si no funciona:
+- Revisar disc
+- Comprovar RAM
+- Considerar reinstal·lació
+
+Note:
+Sempre deixar alternatives. Això mostra pensament tècnic.
+
+---
+
+## Errors habituals
+
+- Explicacions massa curtes
+- Falta d'estructura
+- No descriure el problema
+- Escriure només la solució
+
+Note:
+Això és el que acostumen a fer malament. Insistir-hi.
+
+---
+
+## Bona pràctica
+
+Una bona KB ha de ser:
+- Clara
+- Ordenada
+- Reutilitzable
+- Entenedora per altres tècnics
+
+Note:
+Això és el resum de tot. Si compleixen això, la KB és bona.

@@ -115,9 +115,22 @@
       "description": "<strong>GLPI</strong>: Pràctica GLPI - Simulació real de servei tèncnic (<codijpc>0225-xlo-ae030</codijpc>)<br><strong>3r trimestre</strong>",
       "status": "active",
       "kind":"activity"
+    },
+    {
+      "order": "303",
+      "title": "303. Exemple de KB a GLPI",
+      "src": "slides/xlo-3r-trim-glpi-docker-act003-exemple-de-kb.reveal",
+      "description": "Com documentar correctament una incidència",
+      "status": "active",
+      "kind":"theory"
+    },
+    {
+      "order": "304",
+      "title": "304. Pràctica GLPI  (<codijpc>0225-xlo-ae031</codijpc>) ",
+      "src": "slides/xlo-3r-trim-glpi-docker-act004-0225-xlo-ae031.reveal",
+      "description": "Crear i utilitzar una KB",
+      "status": "active",
+      "kind":"activity"
     }
   ]
 }
-
-
-

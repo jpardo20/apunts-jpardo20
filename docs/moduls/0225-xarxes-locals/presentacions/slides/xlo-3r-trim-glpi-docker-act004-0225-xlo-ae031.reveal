@@ -1,0 +1,263 @@
+# Pràctica GLPI  (<codijpc>0225-xlo-ae031</codijpc>)
+
+## Crear i utilitzar una KB
+
+Note:
+Explicar que avui faran el cicle complet: crear coneixement i utilitzar-lo per resoldre una incidència.
+
+---
+
+## Objectiu de la pràctica
+
+- Crear un article de KB
+- Simular una incidència real
+- Resoldre el ticket utilitzant la KB
+
+Note:
+Això és exactament el que es fa en un entorn professional.
+
+---
+
+## Part 1 - Crear KB
+
+Anar a:
+Herramientas → Base de conocimiento
+
+Crear un nou article
+
+Note:
+Mostrar a classe on es troba dins de GLPI.
+
+---
+
+## Camps obligatoris
+
+Omplir:
+
+- Títol
+- Contingut
+- Categoria (si existeix)
+
+Guardar l’article
+
+Note:
+Insistir que el títol ha de ser clar i el contingut estructurat.
+
+---
+
+## Recomanacions KB
+
+El contingut ha d’incloure:
+
+- Descripció del problema
+- Causes possibles
+- Passos de resolució
+- Resultat esperat
+
+Note:
+Recordar la presentació anterior. Han de seguir el model.
+
+---
+
+## Part 2 - Crear ticket (usuari)
+
+Canviar a usuari (self-service)
+
+Anar a:
+Soporte → Crear solicitud
+
+Crear un ticket nou
+
+Note:
+Important que entenguin el rol d’usuari vs tècnic.
+
+---
+
+## Contingut del ticket
+
+Incloure:
+
+- Descripció del problema
+- Símptomes clars
+
+Exemple:
+"Ordinador molt lent des de fa dies"
+
+Note:
+No han de posar la solució aquí, només el problema.
+
+---
+
+## Part 3 - Resolució com a tècnic
+
+Tornar a perfil tècnic
+
+Anar a:
+Soporte → Solicitudes
+
+Assignar-se el ticket
+
+Note:
+Simulen el flux real de treball.
+
+---
+
+## Afegir diagnòstic
+
+Afegir followup:
+
+Diagnòstic inicial...
+
+Canviar estat:
+Nou → En curs
+
+Note:
+Han de justificar què passa, no només resoldre.
+
+---
+
+## Aplicar solució
+
+Resoldre el ticket utilitzant la KB creada
+
+Afegir followup:
+
+Solució aplicada segons KB
+
+Note:
+Aquí és on connecten teoria i pràctica.
+
+---
+
+## Relacionar amb la KB
+
+Afegir al followup:
+
+Veure KB: [nom de l’article]
+
+Canviar estat:
+En curs → Resolt
+
+Note:
+Això és clau. Han d’aprendre a reutilitzar coneixement.
+
+---
+
+## Canvi de rol: usuari
+
+Ara has de validar la resolució.
+
+Canvia al perfil d’usuari (self-service)
+
+Anar a:
+Soporte → Solicitudes
+
+Note:
+Explicar que ara deixen de ser tècnics i passen a ser usuaris. És un canvi de rol molt important dins del flux real.
+
+---
+
+## Revisar el ticket resolt
+
+Localitza el ticket en estat:
+Resolt
+
+Revisa:
+- La solució aplicada
+- El contingut del followup
+- La referència a la KB
+
+Note:
+Han de comprovar si la solució és correcta, no només mirar-la per sobre.
+
+---
+
+## Validació de la solució
+
+Si la solució funciona:
+
+Afegir followup:
+
+Validació:
+La solució funciona correctament.
+
+Note:
+Això simula la validació real d’un usuari en una empresa.
+
+---
+
+## Tancar el ticket
+
+Canviar estat:
+
+Resolt → Tancat
+
+Note:
+Explicar que només l’usuari ha de fer aquest pas. El tècnic no hauria de tancar directament.
+
+---
+
+## Resultat final
+
+El ticket ha de quedar:
+
+- Resolució aplicada (tècnic)
+- Validació feta (usuari)
+- Estat final: Tancat
+- KB relacionada
+
+Note:
+Aquest és el flux complet i correcte de treball.
+
+---
+
+## Cas especial (opcional)
+
+Si la solució NO funciona:
+
+- Afegir followup explicant el problema
+- Tornar a canviar el ticket:
+
+Resolt →  En curs
+
+Note:
+Això és molt realista. Pots comentar-ho encara que no ho facin tots.
+
+
+---
+
+## Evidències (repositori)
+
+Guardar:
+
+- Captura de la KB creada
+- Captura del ticket creat
+- Captura del ticket resolt
+
+Note:
+Recordar-los que ho hauran de pujar al repo.
+
+---
+
+## Errors habituals
+
+- KB poc clara
+- Ticket mal descrit
+- No relacionar KB amb ticket
+- No canviar estats correctament
+
+Note:
+Això és el que més fallaran. Avisar-los abans.
+
+---
+
+## Tasca
+
+Crear:
+
+- 1 KB ben estructurada
+- 1 ticket com usuari
+- Resolució completa com tècnic
+
+Note:
+Deixar temps de treball i supervisar mentre ho fan.
