@@ -216,7 +216,7 @@ CREATE OR REPLACE VIEW v_resum_reserves AS
 SELECT
     res.id_resv,
     CONCAT(cli.nom_cli, ' ', cli.cognoms_cli) AS Client,
-    hab.num_habi AS Habitació,
+    hab.num_habi AS "Habitació",
     tip_hab.nom_tipus,
     res.data_entra_resv,
     res.data_surt_resv,
