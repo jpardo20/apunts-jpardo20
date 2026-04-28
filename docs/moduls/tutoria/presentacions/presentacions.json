@@ -84,6 +84,15 @@
             "theme": "white",
             "status": "active",
             "kind": "theory"
+        },
+        {
+            "id": "09",
+            "title": "09 | Tutoria: El dilema de les xarxes + La balsa de la Medusa",
+            "description": "Mite vs realitat i presa de consciència",
+            "src": "sessio-mite-vs-realitat.reveal",
+            "theme": "white",
+            "status": "active",
+            "kind": "theory"
         }
     ]
 }
