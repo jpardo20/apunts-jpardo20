@@ -1,0 +1,208 @@
+# Sistema de reserves d'hotel
+
+## Fase 2: Exploració
+
+---
+
+## Objectiu
+
+Explorar la base de dades **`hotel_reserves`**:
+
+- entendre l’estructura
+- consultar dades reals
+- documentar resultats
+
+---
+
+## Lliurament
+
+Cal crear el fitxer `sql/hotel_reserves/01-exploracio.md`
+
+No es tracta d’explicar:
+
+es tracta de demostrar que has executat consultes SQL
+
+---
+
+## Especificació de format
+
+El document ha de seguir **EXACTAMENT AQUESTA ESTRUCTURA**:
+
+````markdown
+## Taula: NOM_TAULA
+
+### Comanda
+```sql
+COMANDA_SQL;
+```
+
+### Sortida
+```sql
+(sortida real de MySQL)
+```
+
+### Interpretació
+(text explicatiu)
+````
+
+⬇️
+
+Per exemple:
+
+````markdown
+## Taula: CLIENTS
+
+### Comanda
+
+```sql
+DESC CLIENTS;
+```
+
+### Sortida
+
+```sql
+mysql> DESC CLIENTS;
++-------------+--------------+------+-----+-------------------+-------------------+
+| Field       | Type         | Null | Key | Default           | Extra             |
++-------------+--------------+------+-----+-------------------+-------------------+
+| id_cli      | int          | NO   | PRI | NULL              | auto_increment    |
+| nom_cli     | varchar(60)  | NO   |     | NULL              |                   |
+| cognoms_cli | varchar(100) | NO   |     | NULL              |                   |
+| email_cli   | varchar(120) | NO   | UNI | NULL              |                   |
+| tel_cli     | varchar(20)  | YES  |     | NULL              |                   |
+| dni_cli     | varchar(20)  | NO   | UNI | NULL              |                   |
+| data_alta   | datetime     | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+| obser_cli   | varchar(255) | YES  |     | NULL              |                   |
++-------------+--------------+------+-----+-------------------+-------------------+
+8 rows in set (0.00 sec)
+
+mysql>
+```
+
+### Interpretació
+
+- La **clau primària** és **`id_cli`**
+- El camp **`email`** és **únic**
+- El camp **`dni`** també és **únic**
+
+````
+   
+
+---
+
+## Normes obligatòries
+
+- No canviar els noms de secció
+- No afegir seccions noves
+- Utilitzar ```sql als blocs
+- El nom de la taula ha de ser exacte
+- La sortida ha de ser real
+
+---
+
+## Taules a treballar
+
+- CLIENTS
+- RESERVES
+- HABITACIONS
+- PAGAMENTS
+
+---
+
+# Tasca 1
+
+## Estructura de taules
+
+Per cada taula, executar:
+
+```sql
+DESC NOM_TAULA;
+```
+
+---
+
+# Tasca 2
+
+## Exploració de dades
+
+Per cada taula, executar:
+
+```sql
+SELECT *
+FROM NOM_TAULA;
+```
+
+---
+
+# Tasca 3
+
+## Interpretació
+
+Per cada taula, cal indicar:
+
+- clau primària
+- camps importants
+- possibles restriccions
+- observacions
+
+---
+
+## Exemple
+
+## Taula: CLIENTS
+
+### Comanda
+```sql
+DESC CLIENTS;
+```
+
+### Sortida
+```sql
+mysql> DESC CLIENTS;
+...
+```
+
+### Interpretació
+
+- La clau primària és id_cli
+- El camp email és únic
+
+---
+
+## Com saber si està correcte
+
+- Existeix una secció per cada taula
+- Hi ha blocs ```sql
+- Les comandes són correctes
+- La sortida és real
+
+---
+
+## IMPORTANT
+
+Si el format no és correcte, no es podrà corregir automàticament
+
+---
+
+## IMPORTANT
+
+Si aquesta fase no està correcta, no pots continuar
+
+---
+
+## Entrega
+
+```bash
+git add .
+git commit -m "Fase 2 - Exploració"
+git push
+```
+
+---
+
+## Proper pas
+
+Fase 3:
+
+validació automàtica amb script
+

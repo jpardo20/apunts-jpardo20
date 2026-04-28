@@ -1,0 +1,313 @@
+# Pràctica: Sistema de reserves d'hotel
+
+## Objectiu
+
+Treballar sobre una base de dades ja creada:
+
+- entendre el sistema
+- analitzar dades
+- validar coherència
+- preparar-nos per programar amb SQL
+
+---
+
+## Punt de partida
+
+Ja tens un projecte funcionant amb:
+
+- Docker
+- MySQL
+- PHP
+
+Exemple:
+
+```bash
+ls
+compose.yaml  Dockerfile  export.sh  README.md  sql  web
+```
+
+---
+
+## IMPORTANT
+
+Treballarem en un entorn real:
+
+- contenidor MySQL
+- dades persistents
+- sistema en funcionament
+
+---
+
+## Fase 1: Preparació
+
+### Objectiu
+
+Crear una nova base de dades **`hotel_reserves`** sense modificar la base de dades existent **`botiga`**.
+
+## IMPORTANT
+
+- No modificar la base de dades **`botiga`**
+- No modificar **`export.sh`**
+- Tot el treball nou serà sobre **`hotel_reserves`**
+
+---
+
+## Pas 1: Copiar fitxer
+
+Per copiar el fitxer **`hotel_reserves.sql`** dins de la carpeta **`sql/`** cal que executis:
+
+```bash
+wget https://raw.githubusercontent.com/jpardo20/apunts-jpardo20/main/docs/moduls/0484-bases-de-dades/activitats/files/hotel_reserves.sql -O sql/hotel_reserves.sql
+```
+
+ ⬇️
+
+----
+
+#### Sortida
+
+<pre>
+profe@docker-sxm:~/dam/projecte-botiga-jpardo20$ wget https://raw.githubusercontent.com/jpardo20/apunts-jpardo20/main/docs/moduls/0484-bases-de-dades/activitats/files/hotel_reserv
+es.sql -O sql/hotel_reserves.sql
+--2026-04-28 16:08:36--  https://raw.githubusercontent.com/jpardo20/apunts-jpardo20/main/docs/moduls/0484-bases-de-dades/activitats/files/hotel_reserves.sql
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.109.133, 185.199.110.133, 185.199.111.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.109.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 10566 (10K) [text/plain]
+Saving to: ‘sql/hotel_reserves.sql’
+
+sql/hotel_reserves.sql                       100%[=============================================================================================>]  10.32K  --.-KB/s    in 0.001s  
+
+2026-04-28 16:08:36 (19.6 MB/s) - ‘sql/hotel_reserves.sql’ saved [10566/10566]
+
+profe@docker-sxm:~/dam/projecte-botiga-jpardo20$   
+</pre>
+
+
+---
+
+# Pas 2
+
+## Comprovar contenidors
+
+```bash
+docker container ps
+```
+
+El contenidor MySQL ha d’estar en execució.
+
+
+ ⬇️
+
+----
+
+#### Sortida
+
+<pre>
+profe@docker-sxm:~/dam/projecte-botiga-jpardo20/sql$ docker container ps
+CONTAINER ID   IMAGE                          COMMAND                  CREATED      STATUS      PORTS                                                  NAMES
+2cb1e663215b   projecte-botiga-jpardo20-web   "docker-php-entrypoi…"   7 days ago   Up 7 days   0.0.0.0:8080->80/tcp, :::8080->80/tcp                  projecte-botiga-jpardo20-web-1
+461b870afa1c   mysql:8                        "docker-entrypoint.s…"   7 days ago   Up 7 days   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   projecte-botiga-jpardo20-db-1
+profe@docker-sxm:~/dam/projecte-botiga-jpardo20/sql$
+</pre>
+
+---
+
+# Pas 3
+
+## Importar fitxer
+
+```bash
+docker compose exec -T db mysql -u root -pprofe < sql/hotel_reserves.sql
+```
+
+ ⬇️
+
+----
+
+#### Sortida
+
+<pre>
+profe@docker-sxm:~/dam/projecte-botiga-jpardo20$ docker compose exec -T db mysql -u root -pprofe < sql/hotel_reserves.sql
+mysql: [Warning] Using a password on the command line interface can be insecure.
+profe@docker-sxm:~/dam/projecte-botiga-jpardo20
+</pre>
+
+---
+
+# Pas 4
+
+## Verificació
+
+Entrar de nou a MySQL:
+
+```bash
+docker compose exec db mysql -u root -p
+```
+
+Password: **`profe`**
+
+ ⬇️
+
+----
+
+#### Sortida
+
+<pre>
+profe@docker-sxm:~/dam/projecte-botiga-jpardo20$ docker compose exec db mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 95
+Server version: 8.4.8 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2026, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> 
+</pre>
+
+---
+
+```sql
+USE hotel_reserves;
+SHOW TABLES;
+```
+
+ ⬇️
+
+----
+
+#### Sortida
+
+<pre>
+mysql> USE hotel_reserves;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> SHOW TABLES;
++--------------------------+
+| Tables_in_hotel_reserves |
++--------------------------+
+| CLIENTS                  |
+| HABITACIONS              |
+| PAGAMENTS                |
+| RESERVA_SERVEIS          |
+| RESERVES                 |
+| SERVEIS                  |
+| TEMPORADES               |
+| TIPUS_HABITACIONS        |
+| v_pagaments_reserva      |
+| v_resum_reserves         |
++--------------------------+
+10 rows in set (0.00 sec)
+
+mysql>  
+</pre>
+
+
+---
+
+# Pas 5
+
+## Comprovació de dades
+
+```sql
+SELECT *
+FROM CLIENTS;
+```
+
+
+ ⬇️
+
+----
+
+#### Sortida
+
+<pre>
+mysql> SELECT *
+    -> FROM CLIENTS;
++--------+---------+--------------+------------------------+-----------+-----------+---------------------+------------------------+
+| id_cli | nom_cli | cognoms_cli  | email_cli              | tel_cli   | dni_cli   | data_alta           | obser_cli              |
++--------+---------+--------------+------------------------+-----------+-----------+---------------------+------------------------+
+|      1 | Joan    | Serra Puig   | joan.serra@gmail.com   | 600111222 | 72870739T | 2026-04-28 15:37:54 | Client habitual        |
+|      2 | Marta   | Casals Riera | marta.casals@gmail.com | 600333444 | 72185939W | 2026-04-28 15:37:54 | NULL                   |
+|      3 | Pau     | Vidal Costa  | pau.vidal@gmail.com    | 600555666 | 20719618E | 2026-04-28 15:37:54 | Viatja amb menors_resv |
+|      4 | Laia    | Roca Torres  | laia.roca@gmail.com    | 600777888 | 34316289J | 2026-04-28 15:37:54 | NULL                   |
+|      5 | Nil     | Ferrer Soler | nil.ferrer@gmail.com   | 600999000 | 69256903Q | 2026-04-28 15:37:54 | NULL                   |
++--------+---------+--------------+------------------------+-----------+-----------+---------------------+------------------------+
+5 rows in set (0.00 sec)
+
+mysql> 
+</pre>
+
+
+ ⬇️
+
+----
+
+
+```sql
+SELECT *
+FROM RESERVES;
+```
+
+ ⬇️
+
+----
+
+#### Sortida
+
+<pre>
+mysql> SELECT *
+    -> FROM RESERVES;
++---------+--------+---------+-----------------+----------------+-------------+-------------+---------------+---------------+----------------+----------------------+--------------+--------------+----------+--------------+--------------+--------------+---------------------+----------------------+
+| id_resv | id_cli | id_habi | data_entra_resv | data_surt_resv | adults_resv | menors_resv | en_estat_resv | preu_nit_resv | qtat_nits_resv | subtotal_estada_resv | per_dte_resv | imp_dte_resv | imp_serv | per_iva_resv | imp_iva_resv | imp_tot_resv | data_crea_resv      | obser_resv           |
++---------+--------+---------+-----------------+----------------+-------------+-------------+---------------+---------------+----------------+----------------------+--------------+--------------+----------+--------------+--------------+--------------+---------------------+----------------------+
+|       1 |      1 |       2 | 2026-05-10      | 2026-05-13     |           2 |           0 | confirmada    |         85.00 |              3 |               255.00 |            0 |         0.00 |    24.00 |           10 |        27.90 |       306.90 | 2026-04-28 15:37:54 | Cap de setmana llarg |
+|       2 |      2 |       4 | 2026-07-02      | 2026-07-07     |           2 |           1 | pendent       |        137.50 |              5 |               687.50 |           10 |        68.75 |    75.00 |           10 |        69.38 |       763.13 | 2026-04-28 15:37:54 | Reserva d’estiu    |
+|       3 |      3 |       6 | 2026-08-15      | 2026-08-18     |           2 |           0 | confirmada    |        275.00 |              3 |               825.00 |            5 |        41.25 |    50.00 |           10 |        83.38 |       917.13 | 2026-04-28 15:37:54 | Aniversari           |
+|       4 |      4 |       1 | 2026-04-28      | 2026-04-30     |           1 |           0 | checkout      |         55.00 |              2 |               110.00 |            0 |         0.00 |    20.00 |           10 |        13.00 |       143.00 | 2026-04-28 15:37:54 | NULL                 |
++---------+--------+---------+-----------------+----------------+-------------+-------------+---------------+---------------+----------------+----------------------+--------------+--------------+----------+--------------+--------------+--------------+---------------------+----------------------+
+4 rows in set (0.00 sec)
+
+mysql> 
+</pre>
+
+---
+
+## Resultat esperat
+
+- Existeix **`hotel_reserves`**
+- Existeixen totes les taules
+- Hi ha dades carregades
+
+<br><br>
+
+## IMPORTANT
+
+Si aquesta fase no funciona, no pots continuar amb la pràctica.
+
+---
+
+## Errors habituals
+
+- No fer **`USE hotel_reserves`**
+- Error en el nom del fitxer
+- Contenidor no actiu
+- Executar fora del contenidor
+
+---
+
+# Proper pas
+
+Fase 2: Exploració
+
+- Analitzar estructura
+- Consultar dades
+- Documentar en format Markdown
