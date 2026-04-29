@@ -274,6 +274,11 @@ Cal que modifiqueu el programa **`main.py`** per què permeti executar les dues 
 
 I per últim, podem concluir que qualsevol **número** (**`base`**) elevat a un altre **número** (**`exponent`**) és aquest **número**, la **`base`**, multiplicat **`exponent` vegades**,
 
+
+⬇️
+
+----
+
 Per exemple:
 
 Si volem coneixer el resultat d'elevar 2 (**`base`**) a 4 (**`exponent`**), el que farem serà:
@@ -304,7 +309,7 @@ Cal que modifiqueu el programa **`main.py`** per què aparegui una nova opció  
 
 ## Següent millora 3
 
-Cal que modifiqueu el programa **`main.py`** per què permeti que les dues noves opcions  **`7. Quadrat`** i **`8. Cub`** ,en comptes de executar les funcions **`quadrat`** i **`cub`**, faci servir la funció **`potencia`** creada anteriormen.
+Cal que modifiqueu el programa **`main.py`** per què permeti que les dues noves opcions  **`7. Quadrat`** i **`8. Cub`**, en comptes de executar les funcions **`quadrat`** i **`cub`**, faci servir la funció **`potencia`** creada anteriorment.
 
 ---
 
