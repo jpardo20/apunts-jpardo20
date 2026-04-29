@@ -24,7 +24,7 @@
 Crea la carpeta **`pr004-act-avaluable/`**, i dins:
 
 - **`operacions.py`**
-- **`main.py`** (per fer proves)
+- **`test.py`** (per fer proves)
 - **`respostes.md`**
 
 ---
