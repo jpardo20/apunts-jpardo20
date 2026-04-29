@@ -6,7 +6,7 @@
 
 ## Objectiu
 
-Explorar la base de dades **`hotel_reserves`**:
+Explorar la base de dades `hotel_reserves`:
 
 - entendre l’estructura
 - consultar dades reals
@@ -16,7 +16,9 @@ Explorar la base de dades **`hotel_reserves`**:
 
 ## Lliurament
 
-Cal crear el fitxer `sql/hotel_reserves/01-exploracio.md`
+Cal crear el fitxer:
+
+`sql/hotel_reserves/01-exploracio.md`
 
 No es tracta d’explicar:
 
@@ -26,14 +28,25 @@ es tracta de demostrar que has executat consultes SQL
 
 ## Especificació de format
 
-El document ha de seguir **EXACTAMENT AQUESTA ESTRUCTURA**:
+El document ha de seguir EXACTAMENT AQUESTA ESTRUCTURA:
 
 ````markdown
 ## Taula: NOM_TAULA
 
 ### Comanda
 ```sql
-COMANDA_SQL;
+DESC NOM_TAULA;
+```
+
+### Sortida
+```sql
+(sortida real de MySQL)
+```
+
+### Comanda
+```sql
+SELECT *
+FROM NOM_TAULA;
 ```
 
 ### Sortida
@@ -45,7 +58,7 @@ COMANDA_SQL;
 (text explicatiu)
 ````
 
-⬇️
+---
 
 Per exemple:
 
@@ -53,7 +66,6 @@ Per exemple:
 ## Taula: CLIENTS
 
 ### Comanda
-
 ```sql
 DESC CLIENTS;
 ```
@@ -79,14 +91,36 @@ mysql> DESC CLIENTS;
 mysql>
 ```
 
+### Comanda
+```sql
+SELECT *
+FROM CLIENTS;
+```
+
+### Sortida
+```sql
+mysql> SELECT *
+    -> FROM CLIENTS;
++--------+---------+--------------+------------------------+-----------+-----------+---------------------+------------------------+
+| id_cli | nom_cli | cognoms_cli  | email_cli              | tel_cli   | dni_cli   | data_alta           | obser_cli              |
++--------+---------+--------------+------------------------+-----------+-----------+---------------------+------------------------+
+|      1 | Joan    | Serra Puig   | joan.serra@gmail.com   | 600111222 | 72870739T | 2026-04-28 15:58:23 | Client habitual        |
+|      2 | Marta   | Casals Riera | marta.casals@gmail.com | 600333444 | 72185939W | 2026-04-28 15:58:23 | NULL                   |
+|      3 | Pau     | Vidal Costa  | pau.vidal@gmail.com    | 600555666 | 20719618E | 2026-04-28 15:58:23 | Viatja amb menors_resv |
+|      4 | Laia    | Roca Torres  | laia.roca@gmail.com    | 600777888 | 34316289J | 2026-04-28 15:58:23 | NULL                   |
+|      5 | Nil     | Ferrer Soler | nil.ferrer@gmail.com   | 600999000 | 69256903Q | 2026-04-28 15:58:23 | NULL                   |
++--------+---------+--------------+------------------------+-----------+-----------+---------------------+------------------------+
+5 rows in set (0.00 sec)
+
+mysql> 
+```
+
 ### Interpretació
 
-- La **clau primària** és **`id_cli`**
-- El camp **`email`** és **únic**
-- El camp **`dni`** també és **únic**
-
+- La clau primària és `id_cli`
+- El camp `email` és únic
+- El camp `dni` també és únic
 ````
-   
 
 ---
 
@@ -97,6 +131,7 @@ mysql>
 - Utilitzar ```sql als blocs
 - El nom de la taula ha de ser exacte
 - La sortida ha de ser real
+- Cada taula ha de tenir dues comandes: DESC i SELECT
 
 ---
 
@@ -109,11 +144,9 @@ mysql>
 
 ---
 
-# Tasca 1
+## Tasca 1
 
-## Estructura de taules
-
-Per cada taula, executar:
+Estructura de taules
 
 ```sql
 DESC NOM_TAULA;
@@ -121,11 +154,9 @@ DESC NOM_TAULA;
 
 ---
 
-# Tasca 2
+## Tasca 2
 
-## Exploració de dades
-
-Per cada taula, executar:
+Exploració de dades
 
 ```sql
 SELECT *
@@ -134,9 +165,9 @@ FROM NOM_TAULA;
 
 ---
 
-# Tasca 3
+## Tasca 3
 
-## Interpretació
+Interpretació
 
 Per cada taula, cal indicar:
 
@@ -147,31 +178,10 @@ Per cada taula, cal indicar:
 
 ---
 
-## Exemple
-
-## Taula: CLIENTS
-
-### Comanda
-```sql
-DESC CLIENTS;
-```
-
-### Sortida
-```sql
-mysql> DESC CLIENTS;
-...
-```
-
-### Interpretació
-
-- La clau primària és id_cli
-- El camp email és únic
-
----
-
 ## Com saber si està correcte
 
 - Existeix una secció per cada taula
+- Cada taula té dues comandes (DESC i SELECT)
 - Hi ha blocs ```sql
 - Les comandes són correctes
 - La sortida és real
@@ -190,6 +200,56 @@ Si aquesta fase no està correcta, no pots continuar
 
 ---
 
+## Validació de la pràctica
+
+```bash
+chmod +x check_fase2.sh
+./check_fase2.sh
+```
+
+---
+
+## Script de validació
+
+Crear el fitxer `check_fase2.sh`:
+
+```bash
+#!/bin/bash
+
+FILE="sql/hotel_reserves/01-exploracio.md"
+
+ERRORS=0
+
+echo "Comprovant Fase 2..."
+
+if [ ! -f "$FILE" ]; then
+    echo "ERROR: No existeix el fitxer"
+    exit 1
+fi
+
+TABLES=("CLIENTS" "RESERVES" "HABITACIONS" "PAGAMENTS")
+
+for TABLE in "${TABLES[@]}"; do
+    grep -q "## Taula: $TABLE" "$FILE" || ERRORS=1
+done
+
+grep -q "### Comanda" "$FILE" || ERRORS=1
+grep -q "### Sortida" "$FILE" || ERRORS=1
+grep -q "### Interpretació" "$FILE" || ERRORS=1
+
+grep -q '```sql' "$FILE" || ERRORS=1
+
+grep -q "DESC CLIENTS;" "$FILE" || ERRORS=1
+
+if [ $ERRORS -eq 0 ]; then
+    echo "OK: Format correcte"
+else
+    echo "Hi ha errors. Revisa l'enunciat."
+fi
+```
+
+---
+
 ## Entrega
 
 ```bash
@@ -202,7 +262,4 @@ git push
 
 ## Proper pas
 
-Fase 3:
-
-validació automàtica amb script
-
+Fase 3: validació avançada
