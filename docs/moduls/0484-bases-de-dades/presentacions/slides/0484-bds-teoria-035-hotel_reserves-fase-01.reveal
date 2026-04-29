@@ -67,20 +67,19 @@ wget https://raw.githubusercontent.com/jpardo20/apunts-jpardo20/main/docs/moduls
 #### Sortida
 
 <pre>
-profe@docker-sxm:~/dam/projecte-botiga-jpardo20$ wget https://raw.githubusercontent.com/jpardo20/apunts-jpardo20/main/docs/moduls/0484-bases-de-dades/activitats/files/hotel_reserv
-es.sql -O sql/hotel_reserves.sql
---2026-04-28 16:08:36--  https://raw.githubusercontent.com/jpardo20/apunts-jpardo20/main/docs/moduls/0484-bases-de-dades/activitats/files/hotel_reserves.sql
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.109.133, 185.199.110.133, 185.199.111.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.109.133|:443... connected.
+profe@docker-sxm:~/dam/projecte-botiga-jpardo20$ wget https://raw.githubusercontent.com/jpardo20/apunts-jpardo20/main/docs/moduls/0484-bases-de-dades/activitats/files/hotel_reserves.sql -O sql/hotel_reserves.sql
+--2026-04-29 09:19:03--  https://raw.githubusercontent.com/jpardo20/apunts-jpardo20/main/docs/moduls/0484-bases-de-dades/activitats/files/hotel_reserves.sql
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.111.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.111.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 10566 (10K) [text/plain]
+Length: 11153 (11K) [text/plain]
 Saving to: ‘sql/hotel_reserves.sql’
 
-sql/hotel_reserves.sql                       100%[=============================================================================================>]  10.32K  --.-KB/s    in 0.001s  
+sql/hotel_reserves.sql                        100%[=================================================================================================>]  10.89K  --.-KB/s    in 0.001s  
 
-2026-04-28 16:08:36 (19.6 MB/s) - ‘sql/hotel_reserves.sql’ saved [10566/10566]
+2026-04-29 09:19:04 (17.1 MB/s) - ‘sql/hotel_reserves.sql’ saved [11153/11153]
 
-profe@docker-sxm:~/dam/projecte-botiga-jpardo20$   
+profe@docker-sxm:~/dam/projecte-botiga-jpardo20$  
 </pre>
 
 
@@ -232,15 +231,15 @@ FROM CLIENTS;
 <pre>
 mysql> SELECT *
     -> FROM CLIENTS;
-+--------+---------+--------------+------------------------+-----------+-----------+---------------------+------------------------+
-| id_cli | nom_cli | cognoms_cli  | email_cli              | tel_cli   | dni_cli   | data_alta           | obser_cli              |
-+--------+---------+--------------+------------------------+-----------+-----------+---------------------+------------------------+
-|      1 | Joan    | Serra Puig   | joan.serra@gmail.com   | 600111222 | 72870739T | 2026-04-28 15:37:54 | Client habitual        |
-|      2 | Marta   | Casals Riera | marta.casals@gmail.com | 600333444 | 72185939W | 2026-04-28 15:37:54 | NULL                   |
-|      3 | Pau     | Vidal Costa  | pau.vidal@gmail.com    | 600555666 | 20719618E | 2026-04-28 15:37:54 | Viatja amb menors_resv |
-|      4 | Laia    | Roca Torres  | laia.roca@gmail.com    | 600777888 | 34316289J | 2026-04-28 15:37:54 | NULL                   |
-|      5 | Nil     | Ferrer Soler | nil.ferrer@gmail.com   | 600999000 | 69256903Q | 2026-04-28 15:37:54 | NULL                   |
-+--------+---------+--------------+------------------------+-----------+-----------+---------------------+------------------------+
++-----------+------------+----------------+------------------------+------------+------------+---------------------+-------------------+
+| id_client | nom_client | cognoms_client | email_client           | tel_client | dni_client | data_alta           | obser_client      |
++-----------+------------+----------------+------------------------+------------+------------+---------------------+-------------------+
+|         1 | Joan       | Serra Puig     | joan.serra@gmail.com   | 600111222  | 72870739T  | 2026-04-29 09:19:43 | Client habitual   |
+|         2 | Marta      | Casals Riera   | marta.casals@gmail.com | 600333444  | 72185939W  | 2026-04-29 09:19:43 | NULL              |
+|         3 | Pau        | Vidal Costa    | pau.vidal@gmail.com    | 600555666  | 20719618E  | 2026-04-29 09:19:43 | Viatja amb menors |
+|         4 | Laia       | Roca Torres    | laia.roca@gmail.com    | 600777888  | 34316289J  | 2026-04-29 09:19:43 | NULL              |
+|         5 | Nil        | Ferrer Soler   | nil.ferrer@gmail.com   | 600999000  | 69256903Q  | 2026-04-29 09:19:43 | NULL              |
++-----------+------------+----------------+------------------------+------------+------------+---------------------+-------------------+
 5 rows in set (0.00 sec)
 
 mysql> 
@@ -266,17 +265,17 @@ FROM RESERVES;
 <pre>
 mysql> SELECT *
     -> FROM RESERVES;
-+---------+--------+---------+-----------------+----------------+-------------+-------------+---------------+---------------+----------------+----------------------+--------------+--------------+----------+--------------+--------------+--------------+---------------------+----------------------+
-| id_resv | id_cli | id_habi | data_entra_resv | data_surt_resv | adults_resv | menors_resv | en_estat_resv | preu_nit_resv | qtat_nits_resv | subtotal_estada_resv | per_dte_resv | imp_dte_resv | imp_serv | per_iva_resv | imp_iva_resv | imp_tot_resv | data_crea_resv      | obser_resv           |
-+---------+--------+---------+-----------------+----------------+-------------+-------------+---------------+---------------+----------------+----------------------+--------------+--------------+----------+--------------+--------------+--------------+---------------------+----------------------+
-|       1 |      1 |       2 | 2026-05-10      | 2026-05-13     |           2 |           0 | confirmada    |         85.00 |              3 |               255.00 |            0 |         0.00 |    24.00 |           10 |        27.90 |       306.90 | 2026-04-28 15:37:54 | Cap de setmana llarg |
-|       2 |      2 |       4 | 2026-07-02      | 2026-07-07     |           2 |           1 | pendent       |        137.50 |              5 |               687.50 |           10 |        68.75 |    75.00 |           10 |        69.38 |       763.13 | 2026-04-28 15:37:54 | Reserva d’estiu    |
-|       3 |      3 |       6 | 2026-08-15      | 2026-08-18     |           2 |           0 | confirmada    |        275.00 |              3 |               825.00 |            5 |        41.25 |    50.00 |           10 |        83.38 |       917.13 | 2026-04-28 15:37:54 | Aniversari           |
-|       4 |      4 |       1 | 2026-04-28      | 2026-04-30     |           1 |           0 | checkout      |         55.00 |              2 |               110.00 |            0 |         0.00 |    20.00 |           10 |        13.00 |       143.00 | 2026-04-28 15:37:54 | NULL                 |
-+---------+--------+---------+-----------------+----------------+-------------+-------------+---------------+---------------+----------------+----------------------+--------------+--------------+----------+--------------+--------------+--------------+---------------------+----------------------+
++------------+-----------+--------------+--------------------+-------------------+----------------+----------------+------------------+------------------+------------------------+-------------------------+-----------------+-----------------+--------------------+-----------------+-----------------+-----------------+---------------------+----------------------+
+| id_reserva | id_client | id_habitacio | data_entra_reserva | data_surt_reserva | adults_reserva | menors_reserva | en_estat_reserva | preu_nit_reserva | quantitat_nits_reserva | subtotal_estada_reserva | per_dte_reserva | imp_dte_reserva | imp_servei_reserva | per_iva_reserva | imp_iva_reserva | imp_tot_reserva | data_crea_reserva   | obser_reserva        |
++------------+-----------+--------------+--------------------+-------------------+----------------+----------------+------------------+------------------+------------------------+-------------------------+-----------------+-----------------+--------------------+-----------------+-----------------+-----------------+---------------------+----------------------+
+|          1 |         1 |            2 | 2026-05-10         | 2026-05-13        |              2 |              0 | confirmada       |            85.00 |                      3 |                  255.00 |               0 |            0.00 |              24.00 |              10 |           27.90 |          306.90 | 2026-04-29 09:19:43 | Cap de setmana llarg |
+|          2 |         2 |            4 | 2026-07-02         | 2026-07-07        |              2 |              1 | pendent          |           137.50 |                      5 |                  687.50 |              10 |           68.75 |              75.00 |              10 |           69.38 |          763.13 | 2026-04-29 09:19:43 | Reserva d’estiu    |
+|          3 |         3 |            6 | 2026-08-15         | 2026-08-18        |              2 |              0 | confirmada       |           275.00 |                      3 |                  825.00 |               5 |           41.25 |              50.00 |              10 |           83.38 |          917.13 | 2026-04-29 09:19:43 | Aniversari           |
+|          4 |         4 |            1 | 2026-04-28         | 2026-04-30        |              1 |              0 | checkout         |            55.00 |                      2 |                  110.00 |               0 |            0.00 |              20.00 |              10 |           13.00 |          143.00 | 2026-04-29 09:19:43 | NULL                 |
++------------+-----------+--------------+--------------------+-------------------+----------------+----------------+------------------+------------------+------------------------+-------------------------+-----------------+-----------------+--------------------+-----------------+-----------------+-----------------+---------------------+----------------------+
 4 rows in set (0.00 sec)
 
-mysql> 
+mysql>
 </pre>
 
 ---
