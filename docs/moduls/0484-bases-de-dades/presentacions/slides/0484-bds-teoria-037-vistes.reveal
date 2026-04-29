@@ -1,0 +1,238 @@
+# VISTES (VIEWS) EN SQL
+
+## Què és una vista?
+
+Una **vista** és una consulta SQL guardada amb nom.
+
+Permet:
+- simplificar consultes complexes
+- reutilitzar resultats
+- ocultar complexitat
+
+---
+
+## Idea clau
+
+Una vista és com una **taula virtual**
+
+```sql
+SELECT * FROM v_resum_reserves;
+```
+
+- però NO guarda dades  
+- executa una consulta cada vegada
+
+---
+
+## Sintaxi bàsica
+
+```sql
+CREATE VIEW nom_vista AS
+SELECT ...
+FROM ...
+JOIN ...
+WHERE ...;
+```
+
+---
+
+## Exemple real
+
+```sql
+CREATE OR REPLACE VIEW v_resum_reserves AS
+SELECT
+    res.id_reserva,
+    CONCAT(cli.nom_client, ' ', cli.cognoms_client) AS Client,
+    hab.num_habitacio,
+    tip_hab.nom_tipus_hab,
+    res.data_entra_reserva,
+    res.data_surt_reserva,
+    res.quantitat_nits_reserva,
+    res.en_estat_reserva,
+    res.imp_tot_reserva
+FROM RESERVES res
+JOIN CLIENTS cli ON res.id_client = cli.id_client
+JOIN HABITACIONS hab ON res.id_habitacio = hab.id_habitacio
+JOIN TIPUS_HABITACIONS tip_hab ON hab.id_tipus_hab = tip_hab.id_tipus_hab;
+```
+
+---
+
+## Què mostra fa aquesta vista?
+
+- client (nom complet)
+- habitació
+- tipus
+- dates
+- estat
+- import total
+
+- Tot en una sola consulta
+
+---
+
+## Ús de la vista
+
+```sql
+SELECT *
+FROM v_resum_reserves;
+```
+
+---
+
+## Avantatges
+
+- menys JOINs repetits
+- codi més net
+- reutilització
+- més llegible
+
+---
+
+## Segona vista
+
+```sql
+CREATE OR REPLACE VIEW v_pagaments_reserva AS
+SELECT
+    res.id_reserva,
+    CONCAT(cli.nom_client, ' ', cli.cognoms_client) AS Client,
+    res.imp_tot_reserva,
+    COALESCE(SUM(paga.import_paga), 0) AS total_pagats,
+    res.imp_tot_reserva - COALESCE(SUM(paga.import_paga), 0) AS pendent
+FROM RESERVES res
+JOIN CLIENTS cli ON res.id_client = cli.id_client
+LEFT JOIN PAGAMENTS paga ON res.id_reserva = paga.id_reserva
+GROUP BY res.id_reserva, cli.nom_client, cli.cognoms_client, res.imp_tot_reserva;
+```
+
+---
+
+## Què fa aquesta vista?
+
+Calcula:
+
+- total de la reserva
+- total pagat
+- import pendent
+
+- informació financera directa
+
+---
+
+## Funcions importants
+
+```sql
+COALESCE(SUM(...), 0)
+```
+
+Serveix per:
+
+- evitar NULL
+- convertir-lo a 0
+
+---
+
+## Tipus de JOIN
+
+```sql
+LEFT JOIN PAGAMENTS
+```
+
+- Inclou reserves sense pagaments
+
+---
+
+## Exemple d'ús
+
+```sql
+SELECT *
+FROM v_pagaments_reserva
+WHERE pendent > 0;
+```
+
+- veure reserves amb deute
+
+---
+
+## Comparació
+
+Sense vista:
+
+```sql
+SELECT ...
+FROM RESERVES
+JOIN CLIENTS
+JOIN PAGAMENTS
+JOIN HABITACIONS
+...
+```
+
+Amb vista:
+
+```sql
+SELECT *
+FROM v_pagaments_reserva;
+```
+
+---
+
+## Quan utilitzar vistes?
+
+- Consultes complexes repetides  
+- Informes  
+- Abstracció de dades  
+
+---
+
+## Quan NO utilitzar-les?
+
+- Quan necessites màxim rendiment  
+- Consultes molt simples  
+
+---
+
+## Limitacions
+
+- no guarden dades
+- depenen de les taules
+- poden ser més lentes si són complexes
+
+---
+
+## Bones pràctiques
+
+- noms clars (`v_...`)
+- no abusar
+- reutilitzar
+- documentar
+
+---
+
+## Pràctica
+
+1. Executa:
+
+```sql
+SELECT * FROM v_resum_reserves;
+```
+
+- Quines reserves tenen pendent?
+
+
+2. Executa:
+
+```sql
+SELECT * FROM v_pagaments_reserva;
+```
+
+- Quin client ha pagat més?
+
+---
+
+## Resum
+
+- una vista = consulta guardada
+- simplifica SQL
+- millora manteniment
+- útil per informes
+

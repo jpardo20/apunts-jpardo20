@@ -323,6 +323,20 @@
             "tags": [
                 "BBDD"
             ]
+        },
+        {
+            "id": "0484-bds-teoria-037-vistes",
+            "title": "37. TEORIA: Vistes (VIEWs)",
+            "description": "Una **vista** és una consulta SQL guardada amb nom.",
+            "src": "slides/0484-bds-teoria-037-vistes.reveal",
+            "theme": "white",
+            "status": "active",
+            "kind": "theory",
+            "tags": [
+                "BBDD"
+            ]
         }
     ]
 }
+
+
