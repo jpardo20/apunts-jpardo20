@@ -122,12 +122,15 @@ Has de provar com a mínim:
 - un nombre no primer
 - el nombre 1
 
-Exemple:
+Contingut del fitxer **`test.py`**:
 
 ```python
-print(esPrimer(7))
-print(esPrimer(8))
-print(esPrimer(1))
+from operacions import esPrimer
+
+# Programa principal
+if __name__ == "__main__":
+    for i in range(2, 20):
+        print(f"El número {i} és primer? {esPrimer(i)}")
 ```
 
 ---
