@@ -42,19 +42,19 @@ Treballarem en un entorn real:
 
 ### Objectiu
 
-Crear una nova base de dades **`hotel_reserves`** sense modificar la base de dades existent **`botiga`**.
+Crear una nova base de dades <codijpc>hotel_reserves</codijpc> sense modificar la base de dades existent <codijpc>botiga</codijpc>.
 
 ## IMPORTANT
 
-- No modificar la base de dades **`botiga`**
-- No modificar **`export.sh`**
-- Tot el treball nou serà sobre **`hotel_reserves`**
+- No modificar la base de dades <codijpc>botiga</codijpc>
+- No modificar <codijpc>export.sh</codijpc>
+- Tot el treball nou serà sobre <codijpc>hotel_reserves</codijpc>
 
 ---
 
 ## Pas 1: Copiar fitxer
 
-Per copiar el fitxer **`hotel_reserves.sql`** dins de la carpeta **`sql/`** cal que executis:
+Per copiar el fitxer <codijpc>hotel_reserves.sql</codijpc> dins de la carpeta <codijpc>sql/</codijpc> cal que, des de l'arrel del repositori, executis la següent comanda:
 
 ```bash
 wget https://raw.githubusercontent.com/jpardo20/apunts-jpardo20/main/docs/moduls/0484-bases-de-dades/activitats/files/hotel_reserves.sql -O sql/hotel_reserves.sql
@@ -144,7 +144,7 @@ Entrar de nou a MySQL:
 docker compose exec db mysql -u root -p
 ```
 
-Password: **`profe`**
+Password: <codijpc>profe</codijpc>
 
  ⬇️
 
@@ -282,7 +282,7 @@ mysql>
 
 ## Resultat esperat
 
-- Existeix **`hotel_reserves`**
+- Existeix <codijpc>hotel_reserves</codijpc>
 - Existeixen totes les taules
 - Hi ha dades carregades
 
@@ -296,7 +296,7 @@ Si aquesta fase no funciona, no pots continuar amb la pràctica.
 
 ## Errors habituals
 
-- No fer **`USE hotel_reserves`**
+- No fer <codijpc>USE hotel_reserves</codijpc>
 - Error en el nom del fitxer
 - Contenidor no actiu
 - Executar fora del contenidor
