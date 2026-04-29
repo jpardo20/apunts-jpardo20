@@ -12,9 +12,9 @@ Quines reserves tenen pendent de pagament?
 
 Per respondre, necessitem dades de:
 
-- RESERVES
-- CLIENTS
-- PAGAMENTS
+- RESERVES → import total
+- CLIENTS → qui ha fet la reserva
+- PAGAMENTS → quant s’ha pagat
 
 ---
 
@@ -23,9 +23,46 @@ Per respondre, necessitem dades de:
 Veure les reserves:
 
 ```sql
-SELECT *
+SELECT
+    id_reserva,
+    data_entra_reserva,
+    data_surt_reserva,
+    quantitat_nits_reserva,
+    en_estat_reserva,
+    imp_tot_reserva
 FROM RESERVES;
 ```
+
+---
+
+### Resultat
+
+```sql
+mysql> SELECT id_reserva,
+    ->     data_entra_reserva,
+    ->     data_surt_reserva,
+    ->     quantitat_nits_reserva,
+    ->     en_estat_reserva,
+    ->     imp_tot_reserva
+    -> FROM RESERVES;
++------------+--------------------+-------------------+------------------------+------------------+-----------------+
+| id_reserva | data_entra_reserva | data_surt_reserva | quantitat_nits_reserva | en_estat_reserva | imp_tot_reserva |
++------------+--------------------+-------------------+------------------------+------------------+-----------------+
+|          1 | 2026-05-10         | 2026-05-13        |                      3 | confirmada       |          306.90 |
+|          2 | 2026-07-02         | 2026-07-07        |                      5 | pendent          |          763.13 |
+|          3 | 2026-08-15         | 2026-08-18        |                      3 | confirmada       |          917.13 |
+|          4 | 2026-04-28         | 2026-04-30        |                      2 | checkout         |          143.00 |
++------------+--------------------+-------------------+------------------------+------------------+-----------------+
+4 rows in set (0.00 sec)
+```
+
+---
+
+## Interpretació
+
+- Cada fila és una reserva
+- Tenim el total a pagar
+- Però NO sabem què s’ha pagat
 
 ---
 
@@ -34,9 +71,37 @@ FROM RESERVES;
 Veure els pagaments:
 
 ```sql
-SELECT *
+SELECT
+    id_reserva,
+    import_paga
 FROM PAGAMENTS;
 ```
+
+---
+
+### Resultat
+
+```sql
+mysql> SELECT id_reserva, import_paga FROM PAGAMENTS;
++------------+-------------+
+| id_reserva | import_paga |
++------------+-------------+
+|          1 |      100.00 |
+|          1 |      206.90 |
+|          3 |      300.00 |
+|          4 |      143.00 |
++------------+-------------+
+4 rows in set (0.00 sec)
+```
+
+---
+
+## Interpretació
+
+- Una reserva pot tenir diversos pagaments
+- Exemple:
+  - reserva 1 → 2 pagaments
+  - reserva 2 → cap pagament
 
 ---
 
@@ -57,9 +122,34 @@ JOIN CLIENTS cli
 
 ---
 
+### Resultat
+
+```sql
+mysql> SELECT
+    ->     res.id_reserva,
+    ->     cli.nom_client,
+    ->     cli.cognoms_client,
+    ->     res.imp_tot_reserva
+    -> FROM RESERVES res
+    -> JOIN CLIENTS cli
+    ->     ON res.id_client = cli.id_client;
++------------+------------+----------------+-----------------+
+| id_reserva | nom_client | cognoms_client | imp_tot_reserva |
++------------+------------+----------------+-----------------+
+|          1 | Joan       | Serra Puig     |          306.90 |
+|          2 | Marta      | Casals Riera   |          763.13 |
+|          3 | Pau        | Vidal Costa    |          917.13 |
+|          4 | Laia       | Roca Torres    |          143.00 |
++------------+------------+----------------+-----------------+
+4 rows in set (0.00 sec)
+```
+
+
+---
+
 ## Quart pas
 
-Afegir pagaments
+Afegir pagaments:
 
 ```sql
 SELECT
@@ -76,21 +166,47 @@ LEFT JOIN PAGAMENTS paga
 
 ---
 
+### Resultat
+
+
+```sql
+mysql> SELECT
+    ->     res.id_reserva,
+    ->     CONCAT(cli.nom_client, ' ', cli.cognoms_client) AS client,
+    ->     res.imp_tot_reserva,
+    ->     paga.import_paga
+    -> FROM RESERVES res
+    -> JOIN CLIENTS cli
+    ->     ON res.id_client = cli.id_client
+    -> LEFT JOIN PAGAMENTS paga
+    ->     ON res.id_reserva = paga.id_reserva;
++------------+--------------------+-----------------+-------------+
+| id_reserva | client             | imp_tot_reserva | import_paga |
++------------+--------------------+-----------------+-------------+
+|          1 | Joan Serra Puig    |          306.90 |      206.90 |
+|          1 | Joan Serra Puig    |          306.90 |      100.00 |
+|          2 | Marta Casals Riera |          763.13 |        NULL |
+|          3 | Pau Vidal Costa    |          917.13 |      300.00 |
+|          4 | Laia Roca Torres   |          143.00 |      143.00 |
++------------+--------------------+-----------------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> 
+```
+---
+
 ## Problema
 
-Una reserva pot tenir:
+Els resultats es repeteixen:
 
-- cap pagament
-- un pagament
-- diversos pagaments
-
-Cal sumar els pagaments.
+- una fila per cada pagament
+- no tenim el total pagat
 
 ---
 
 ## Cinquè pas
 
-Agrupar per reserva:
+Agrupar i sumar:
 
 ```sql
 SELECT
@@ -112,15 +228,46 @@ GROUP BY
 
 ---
 
+### Resultat
+
+```sql
+mysql> SELECT
+    ->     res.id_reserva,
+    ->     CONCAT(cli.nom_client, ' ', cli.cognoms_client) AS client,
+    ->     res.imp_tot_reserva,
+    ->     SUM(paga.import_paga) AS total_pagats
+    -> FROM RESERVES res
+    -> JOIN CLIENTS cli
+    ->     ON res.id_client = cli.id_client
+    -> LEFT JOIN PAGAMENTS paga
+    ->     ON res.id_reserva = paga.id_reserva
+    -> GROUP BY
+    ->     res.id_reserva,
+    ->     cli.nom_client,
+    ->     cli.cognoms_client,
+    ->     res.imp_tot_reserva;
++------------+--------------------+-----------------+--------------+
+| id_reserva | client             | imp_tot_reserva | total_pagats |
++------------+--------------------+-----------------+--------------+
+|          1 | Joan Serra Puig    |          306.90 |       306.90 |
+|          2 | Marta Casals Riera |          763.13 |         NULL |
+|          3 | Pau Vidal Costa    |          917.13 |       300.00 |
+|          4 | Laia Roca Torres   |          143.00 |       143.00 |
++------------+--------------------+-----------------+--------------+
+4 rows in set (0.00 sec)
+
+mysql> 
+```
+
+---
+
 ## Sisè pas
 
-Evitar valors NULL:
+Evitar NULL:
 
 ```sql
 COALESCE(SUM(paga.import_paga), 0)
 ```
-
-Si no hi ha pagaments, retorna 0.
 
 ---
 
@@ -147,48 +294,62 @@ GROUP BY
 
 ---
 
-## Ara ja podem respondre
-
-Quines reserves tenen pendent?
+### Resultat
 
 ```sql
-SELECT
-    res.id_reserva,
-    CONCAT(cli.nom_client, ' ', cli.cognoms_client) AS client,
-    res.imp_tot_reserva,
-    COALESCE(SUM(paga.import_paga), 0) AS total_pagats,
-    res.imp_tot_reserva - COALESCE(SUM(paga.import_paga), 0) AS pendent
-FROM RESERVES res
-JOIN CLIENTS cli
-    ON res.id_client = cli.id_client
-LEFT JOIN PAGAMENTS paga
-    ON res.id_reserva = paga.id_reserva
-GROUP BY
-    res.id_reserva,
-    cli.nom_client,
-    cli.cognoms_client,
-    res.imp_tot_reserva
+mysql> SELECT
+    ->     res.id_reserva,
+    ->     CONCAT(cli.nom_client, ' ', cli.cognoms_client) AS client,
+    ->     res.imp_tot_reserva,
+    ->     COALESCE(SUM(paga.import_paga), 0) AS total_pagats,
+    ->     res.imp_tot_reserva - COALESCE(SUM(paga.import_paga), 0) AS pendent
+    -> FROM RESERVES res
+    -> JOIN CLIENTS cli
+    ->     ON res.id_client = cli.id_client
+    -> LEFT JOIN PAGAMENTS paga
+    ->     ON res.id_reserva = paga.id_reserva
+    -> GROUP BY
+    ->     res.id_reserva,
+    ->     cli.nom_client,
+    ->     cli.cognoms_client,
+    ->     res.imp_tot_reserva;
++------------+--------------------+-----------------+--------------+---------+
+| id_reserva | client             | imp_tot_reserva | total_pagats | pendent |
++------------+--------------------+-----------------+--------------+---------+
+|          1 | Joan Serra Puig    |          306.90 |       306.90 |    0.00 |
+|          2 | Marta Casals Riera |          763.13 |         0.00 |  763.13 |
+|          3 | Pau Vidal Costa    |          917.13 |       300.00 |  617.13 |
+|          4 | Laia Roca Torres   |          143.00 |       143.00 |    0.00 |
++------------+--------------------+-----------------+--------------+---------+
+4 rows in set (0.00 sec)
+```
+
+
+---
+
+## Ara sí
+
+Filtrar reserves amb deute:
+
+```sql
 HAVING pendent > 0;
 ```
 
 ---
 
-## Problema
+## Problema real
 
-La consulta funciona.
-
-Però és:
+Aquesta consulta és:
 
 - llarga
-- repetitiva
 - difícil de mantenir
-- fàcil d'escriure malament
+- fàcil d’equivocar
 
 ---
 
 ## Solució
 
-Guardar aquesta consulta com una vista.
+Guardar-la com una vista.
 
 ---
 
@@ -216,9 +377,7 @@ GROUP BY
 
 ---
 
-## A partir d'ara
-
-Ja no cal repetir la consulta complexa.
+## A partir d’ara
 
 ```sql
 SELECT *
@@ -227,45 +386,35 @@ FROM v_pagaments_reserva;
 
 ---
 
-## Respondre la pregunta
+### Resultat
 
 ```sql
-SELECT *
-FROM v_pagaments_reserva
-WHERE pendent > 0;
+mysql> SELECT *
+    -> FROM v_pagaments_reserva;
++------------+--------------------+-----------------+-------------+------------------+
+| id_reserva | Client             | imp_tot_reserva | Total pagat | Pendent Pagament |
++------------+--------------------+-----------------+-------------+------------------+
+|          1 | Joan Serra Puig    |          306.90 |      306.90 |             0.00 |
+|          2 | Marta Casals Riera |          763.13 |        0.00 |           763.13 |
+|          3 | Pau Vidal Costa    |          917.13 |      300.00 |           617.13 |
+|          4 | Laia Roca Torres   |          143.00 |      143.00 |             0.00 |
++------------+--------------------+-----------------+-------------+------------------+
+4 rows in set (0.00 sec)
+
+mysql> 
 ```
 
 ---
 
 ## Idea clau
 
-La vista no resol un problema nou.
+La vista no fa res nou.
 
-La vista guarda una consulta que ja sabem fer.
-
----
-
-## Què és una vista?
-
-Una vista és una consulta SQL guardada amb nom.
-
-Funciona com una taula virtual.
-
----
-
-## Important
-
-Una vista:
-
-- no guarda dades
-- depèn de les taules originals
-- s'executa quan la consultem
+Només evita repetir la consulta.
 
 ---
 
 ## Segon exemple
-
-També podem guardar el resum de reserves.
 
 ```sql
 SELECT *
@@ -301,50 +450,15 @@ JOIN TIPUS_HABITACIONS tip_hab
 
 ## Avantatges
 
-- simplifica consultes llargues
+- simplifica consultes
 - evita repetir JOINs
+- millora llegibilitat
 - facilita informes
-- millora la llegibilitat
 
----
-
-## Quan utilitzar vistes?
-
-- consultes que es repeteixen
-- informes
-- consultes amb molts JOINs
-- dades calculades
-
----
-
-## Quan no cal?
-
-- consultes molt simples
-- casos on només es fa servir una vegada
-- quan cal màxim rendiment i la vista és molt complexa
-
----
-
-## Pràctica
-
-Executa:
-
-```sql
-SELECT *
-FROM v_pagaments_reserva;
-```
-
-Després:
-
-```sql
-SELECT *
-FROM v_pagaments_reserva
-WHERE pendent > 0;
-```
 ---
 
 ## Resum
 
-- primer hem creat una consulta complexa
-- després l'hem guardada com una vista
-- ara la podem reutilitzar fàcilment
+- hem construït una consulta complexa pas a pas
+- l’hem guardada com una vista
+- ara la reutilitzem fàcilment
