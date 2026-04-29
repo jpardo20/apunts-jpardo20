@@ -1,173 +1,224 @@
 # VISTES (VIEWS) EN SQL
 
-## Què és una vista?
+## Punt de partida
 
-Una **vista** és una consulta SQL guardada amb nom.
+Ens demanen:
 
-Permet:
-- simplificar consultes complexes
-- reutilitzar resultats
-- ocultar complexitat
+Quines reserves tenen pendent de pagament?
 
 ---
 
-## Idea clau
+## Què necessitem saber?
 
-Una vista és com una **taula virtual**
+Per respondre, necessitem dades de:
 
-```sql
-SELECT * FROM v_resum_reserves;
-```
-
-- però NO guarda dades  
-- executa una consulta cada vegada
+- RESERVES
+- CLIENTS
+- PAGAMENTS
 
 ---
 
-## Sintaxi bàsica
+## Primer pas
 
-```sql
-CREATE VIEW nom_vista AS
-SELECT ...
-FROM ...
-JOIN ...
-WHERE ...;
-```
-
----
-
-## Exemple real
-
-```sql
-CREATE OR REPLACE VIEW v_resum_reserves AS
-SELECT
-    res.id_reserva,
-    CONCAT(cli.nom_client, ' ', cli.cognoms_client) AS Client,
-    hab.num_habitacio,
-    tip_hab.nom_tipus_hab,
-    res.data_entra_reserva,
-    res.data_surt_reserva,
-    res.quantitat_nits_reserva,
-    res.en_estat_reserva,
-    res.imp_tot_reserva
-FROM RESERVES res
-JOIN CLIENTS cli ON res.id_client = cli.id_client
-JOIN HABITACIONS hab ON res.id_habitacio = hab.id_habitacio
-JOIN TIPUS_HABITACIONS tip_hab ON hab.id_tipus_hab = tip_hab.id_tipus_hab;
-```
-
----
-
-## Què mostra fa aquesta vista?
-
-- client (nom complet)
-- habitació
-- tipus
-- dates
-- estat
-- import total
-
-- Tot en una sola consulta
-
----
-
-## Ús de la vista
+Veure les reserves:
 
 ```sql
 SELECT *
-FROM v_resum_reserves;
+FROM RESERVES;
 ```
 
 ---
 
-## Avantatges
+## Segon pas
 
-- menys JOINs repetits
-- codi més net
-- reutilització
-- més llegible
+Veure els pagaments:
+
+```sql
+SELECT *
+FROM PAGAMENTS;
+```
 
 ---
 
-## Segona vista
+## Tercer pas
+
+Relacionar reserves amb clients:
+
+```sql
+SELECT
+    res.id_reserva,
+    cli.nom_client,
+    cli.cognoms_client,
+    res.imp_tot_reserva
+FROM RESERVES res
+JOIN CLIENTS cli
+    ON res.id_client = cli.id_client;
+```
+
+---
+
+## Quart pas
+
+Afegir pagaments
+
+```sql
+SELECT
+    res.id_reserva,
+    CONCAT(cli.nom_client, ' ', cli.cognoms_client) AS client,
+    res.imp_tot_reserva,
+    paga.import_paga
+FROM RESERVES res
+JOIN CLIENTS cli
+    ON res.id_client = cli.id_client
+LEFT JOIN PAGAMENTS paga
+    ON res.id_reserva = paga.id_reserva;
+```
+
+---
+
+## Problema
+
+Una reserva pot tenir:
+
+- cap pagament
+- un pagament
+- diversos pagaments
+
+Cal sumar els pagaments.
+
+---
+
+## Cinquè pas
+
+Agrupar per reserva:
+
+```sql
+SELECT
+    res.id_reserva,
+    CONCAT(cli.nom_client, ' ', cli.cognoms_client) AS client,
+    res.imp_tot_reserva,
+    SUM(paga.import_paga) AS total_pagats
+FROM RESERVES res
+JOIN CLIENTS cli
+    ON res.id_client = cli.id_client
+LEFT JOIN PAGAMENTS paga
+    ON res.id_reserva = paga.id_reserva
+GROUP BY
+    res.id_reserva,
+    cli.nom_client,
+    cli.cognoms_client,
+    res.imp_tot_reserva;
+```
+
+---
+
+## Sisè pas
+
+Evitar valors NULL:
+
+```sql
+COALESCE(SUM(paga.import_paga), 0)
+```
+
+Si no hi ha pagaments, retorna 0.
+
+---
+
+## Consulta completa
+
+```sql
+SELECT
+    res.id_reserva,
+    CONCAT(cli.nom_client, ' ', cli.cognoms_client) AS client,
+    res.imp_tot_reserva,
+    COALESCE(SUM(paga.import_paga), 0) AS total_pagats,
+    res.imp_tot_reserva - COALESCE(SUM(paga.import_paga), 0) AS pendent
+FROM RESERVES res
+JOIN CLIENTS cli
+    ON res.id_client = cli.id_client
+LEFT JOIN PAGAMENTS paga
+    ON res.id_reserva = paga.id_reserva
+GROUP BY
+    res.id_reserva,
+    cli.nom_client,
+    cli.cognoms_client,
+    res.imp_tot_reserva;
+```
+
+---
+
+## Ara ja podem respondre
+
+Quines reserves tenen pendent?
+
+```sql
+SELECT
+    res.id_reserva,
+    CONCAT(cli.nom_client, ' ', cli.cognoms_client) AS client,
+    res.imp_tot_reserva,
+    COALESCE(SUM(paga.import_paga), 0) AS total_pagats,
+    res.imp_tot_reserva - COALESCE(SUM(paga.import_paga), 0) AS pendent
+FROM RESERVES res
+JOIN CLIENTS cli
+    ON res.id_client = cli.id_client
+LEFT JOIN PAGAMENTS paga
+    ON res.id_reserva = paga.id_reserva
+GROUP BY
+    res.id_reserva,
+    cli.nom_client,
+    cli.cognoms_client,
+    res.imp_tot_reserva
+HAVING pendent > 0;
+```
+
+---
+
+## Problema
+
+La consulta funciona.
+
+Però és:
+
+- llarga
+- repetitiva
+- difícil de mantenir
+- fàcil d'escriure malament
+
+---
+
+## Solució
+
+Guardar aquesta consulta com una vista.
+
+---
+
+## Crear la vista
 
 ```sql
 CREATE OR REPLACE VIEW v_pagaments_reserva AS
 SELECT
     res.id_reserva,
-    CONCAT(cli.nom_client, ' ', cli.cognoms_client) AS Client,
+    CONCAT(cli.nom_client, ' ', cli.cognoms_client) AS client,
     res.imp_tot_reserva,
     COALESCE(SUM(paga.import_paga), 0) AS total_pagats,
     res.imp_tot_reserva - COALESCE(SUM(paga.import_paga), 0) AS pendent
 FROM RESERVES res
-JOIN CLIENTS cli ON res.id_client = cli.id_client
-LEFT JOIN PAGAMENTS paga ON res.id_reserva = paga.id_reserva
-GROUP BY res.id_reserva, cli.nom_client, cli.cognoms_client, res.imp_tot_reserva;
+JOIN CLIENTS cli
+    ON res.id_client = cli.id_client
+LEFT JOIN PAGAMENTS paga
+    ON res.id_reserva = paga.id_reserva
+GROUP BY
+    res.id_reserva,
+    cli.nom_client,
+    cli.cognoms_client,
+    res.imp_tot_reserva;
 ```
 
 ---
 
-## Què fa aquesta vista?
+## A partir d'ara
 
-Calcula:
-
-- total de la reserva
-- total pagat
-- import pendent
-
-- informació financera directa
-
----
-
-## Funcions importants
-
-```sql
-COALESCE(SUM(...), 0)
-```
-
-Serveix per:
-
-- evitar NULL
-- convertir-lo a 0
-
----
-
-## Tipus de JOIN
-
-```sql
-LEFT JOIN PAGAMENTS
-```
-
-- Inclou reserves sense pagaments
-
----
-
-## Exemple d'ús
-
-```sql
-SELECT *
-FROM v_pagaments_reserva
-WHERE pendent > 0;
-```
-
-- veure reserves amb deute
-
----
-
-## Comparació
-
-Sense vista:
-
-```sql
-SELECT ...
-FROM RESERVES
-JOIN CLIENTS
-JOIN PAGAMENTS
-JOIN HABITACIONS
-...
-```
-
-Amb vista:
+Ja no cal repetir la consulta complexa.
 
 ```sql
 SELECT *
@@ -176,63 +227,124 @@ FROM v_pagaments_reserva;
 
 ---
 
+## Respondre la pregunta
+
+```sql
+SELECT *
+FROM v_pagaments_reserva
+WHERE pendent > 0;
+```
+
+---
+
+## Idea clau
+
+La vista no resol un problema nou.
+
+La vista guarda una consulta que ja sabem fer.
+
+---
+
+## Què és una vista?
+
+Una vista és una consulta SQL guardada amb nom.
+
+Funciona com una taula virtual.
+
+---
+
+## Important
+
+Una vista:
+
+- no guarda dades
+- depèn de les taules originals
+- s'executa quan la consultem
+
+---
+
+## Segon exemple
+
+També podem guardar el resum de reserves.
+
+```sql
+SELECT *
+FROM v_resum_reserves;
+```
+
+---
+
+## Vista de resum
+
+```sql
+CREATE OR REPLACE VIEW v_resum_reserves AS
+SELECT
+    res.id_reserva,
+    CONCAT(cli.nom_client, ' ', cli.cognoms_client) AS client,
+    hab.num_habitacio AS `Habitació`,
+    tip_hab.nom_tipus_hab AS `Tipus`,
+    res.data_entra_reserva AS `Data entr.`,
+    res.data_surt_reserva AS `Data surt.`,
+    res.quantitat_nits_reserva AS `# nits`,
+    res.en_estat_reserva AS `Estat reserva`,
+    res.imp_tot_reserva AS `Import total`
+FROM RESERVES res
+JOIN CLIENTS cli
+    ON res.id_client = cli.id_client
+JOIN HABITACIONS hab
+    ON res.id_habitacio = hab.id_habitacio
+JOIN TIPUS_HABITACIONS tip_hab
+    ON hab.id_tipus_hab = tip_hab.id_tipus_hab;
+```
+
+---
+
+## Avantatges
+
+- simplifica consultes llargues
+- evita repetir JOINs
+- facilita informes
+- millora la llegibilitat
+
+---
+
 ## Quan utilitzar vistes?
 
-- Consultes complexes repetides  
-- Informes  
-- Abstracció de dades  
+- consultes que es repeteixen
+- informes
+- consultes amb molts JOINs
+- dades calculades
 
 ---
 
-## Quan NO utilitzar-les?
+## Quan no cal?
 
-- Quan necessites màxim rendiment  
-- Consultes molt simples  
-
----
-
-## Limitacions
-
-- no guarden dades
-- depenen de les taules
-- poden ser més lentes si són complexes
-
----
-
-## Bones pràctiques
-
-- noms clars (`v_...`)
-- no abusar
-- reutilitzar
-- documentar
+- consultes molt simples
+- casos on només es fa servir una vegada
+- quan cal màxim rendiment i la vista és molt complexa
 
 ---
 
 ## Pràctica
 
-1. Executa:
+Executa:
 
 ```sql
-SELECT * FROM v_resum_reserves;
+SELECT *
+FROM v_pagaments_reserva;
 ```
 
-- Quines reserves tenen pendent?
-
-
-2. Executa:
+Després:
 
 ```sql
-SELECT * FROM v_pagaments_reserva;
+SELECT *
+FROM v_pagaments_reserva
+WHERE pendent > 0;
 ```
-
-- Quin client ha pagat més?
-
 ---
 
 ## Resum
 
-- una vista = consulta guardada
-- simplifica SQL
-- millora manteniment
-- útil per informes
-
+- primer hem creat una consulta complexa
+- després l'hem guardada com una vista
+- ara la podem reutilitzar fàcilment
