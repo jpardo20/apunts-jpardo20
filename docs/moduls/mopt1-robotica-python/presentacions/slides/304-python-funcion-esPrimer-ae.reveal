@@ -1,0 +1,159 @@
+# PR004 – Activitat Avaluable: Funció esPrimer
+
+## Objectiu de la prova
+
+- Entendre el problema dels nombres primers
+- Desenvolupar una funció correcta en Python
+- Escriure codi net i coherent
+- Mostrar el procés de treball mitjançant commits
+
+---
+
+## Normes importants
+
+- Treball individual
+- No es pot copiar codi d'altres companys
+- No es pot utilitzar IA
+- Es valorarà el procés (commits)
+- El programa ha de funcionar correctament
+
+---
+
+## Estructura del repositori
+
+Crea la carpeta **`pr004-act-avaluable/`**, i dins:
+
+- **`operacions.py`**
+- **`main.py`** (per fer proves)
+- **`respostes.md`**
+
+---
+
+## Sistema de commits
+
+Cada 10 minuts hauràs de fer un commit amb aquest format:
+
+`git add . ; git commit -m "Commit 10:10h" ; git push`
+
+`git add . ; git commit -m "Commit 10:20h" ; git push`
+
+`git add . ; git commit -m "Commit 10:30h" ; git push`
+
+...
+
+IMPORTANT:
+- No canviïs el missatge
+- Fes commit amb el que tinguis en aquell moment
+
+---
+
+## PART 1 – Teoria: Nombres primers
+
+Un nombre és primer si:
+
+- És més gran que 1
+- Només és divisible per 1 i per ell mateix
+
+---
+
+## Exemples
+
+| Nombre | És primer? |
+|--------|-----------|
+| 2 | Sí |
+| 3 | Sí |
+| 4 | No |
+| 5 | Sí |
+| 6 | No |
+| 7 | Sí |
+| 8 | No |
+
+---
+
+## Idea per resoldre-ho
+
+Per saber si un nombre (**`nombreRebut`**) és primer:
+
+1. Si el **`nombreRebut`** és menor o igual a 1 → **`nombreRebut`** NO és primer
+2. Provar dividir el **`nombreRebut`** per tots els nombres entre 2 i **`nombreRebut - 1`**
+3. Si trobem una divisió exacta → NO és primer
+4. Si no en trobem cap → ÉS primer
+
+---
+
+## PART 2 – Desenvolupament
+
+Crea la funció següent a **`operacions.py`**:
+
+```python
+def esPrimer(nombreRebut):
+```
+
+La funció ha de retornar:
+
+- `True` si el número és primer
+- `False` si no ho és
+
+---
+
+## Pista
+
+Pots utilitzar:
+
+```python
+for i in range(2, nombreRebut):
+```
+
+I comprovar:
+
+```python
+nombreRebut % i == 0
+```
+
+---
+
+## PART 3 – Proves
+
+Crea un fitxer **`test.py`** per provar la funció.
+
+Has de provar com a mínim:
+
+- un nombre primer
+- un nombre no primer
+- el nombre 1
+
+Exemple:
+
+```python
+print(esPrimer(7))
+print(esPrimer(8))
+print(esPrimer(1))
+```
+
+---
+
+## PART 4 – Explicació (**`respostes.md`**)
+
+Respon:
+
+1. Explica amb les teves paraules com has resolt el problema
+2. Quina part t’ha costat més?
+3. Com has comprovat que funciona correctament?
+
+---
+
+## Què es valorarà
+
+- Funcionament correcte de la funció
+- Claredat del codi
+- Ús correcte del bucle i condicions
+- Explicació a respostes.md
+- Evolució dels commits
+
+---
+
+## Missatge final
+
+No es tracta només de fer que funcioni.
+
+Es tracta d’entendre el que fas.

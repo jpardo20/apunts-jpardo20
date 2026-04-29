@@ -96,6 +96,14 @@
       "description": "EXERCICI: millora de la funció <codijpc>pintaTitolCentrat</codijpc>",
       "status": "active",
       "kind":"activity"
+    },
+    {
+      "order": 304,
+      "title": "304 - TEST: Cal que desnevolupar la funció <codijpc>esPrimer</codijpc>",
+      "src": "slides/304-python-funcion-esPrimer-ae.reveal",
+      "description": "TEST: Cal que desnevolupar la funció <codijpc>esPrimer</codijpc>",
+      "status": "active",
+      "kind":"activity"
     }
   ]
 }
