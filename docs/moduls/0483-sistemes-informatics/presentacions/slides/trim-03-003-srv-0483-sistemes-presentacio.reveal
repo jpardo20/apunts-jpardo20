@@ -1,0 +1,154 @@
+# Projecte 0483 - Sistemes Informàtics
+
+### Desplegament d’un servidor Linux amb Docker
+
+---
+
+# Objectiu
+
+Convertir-vos en administradors de sistemes capaços de:
+
+- muntar un servidor
+- desplegar serveis
+- diagnosticar problemes
+- automatitzar tasques
+
+---
+
+# Context real
+
+Una empresa necessita un servidor funcional
+
+Ha de:
+- tenir un servei web
+- ser accessible per xarxa
+- estar controlat
+- funcionar de forma automàtica
+
+---
+
+# Què fareu
+
+Construireu un sistema complet:
+
+Linux → Xarxa → Docker → Monitorització → Automatització
+
+---
+
+# 1. Linux
+
+- Crear una màquina virtual Ubuntu
+- Treballar amb terminal
+- Gestionar fitxers i permisos
+
+Base de tot el projecte
+
+---
+
+# 2. Xarxa
+
+- Assignar IP
+- Comprovar connexió (ping)
+- Accedir al servidor
+
+El servidor ha de ser accessible
+
+---
+
+# 3. Docker
+
+- Crear un servei web
+- Publicar-lo amb ports
+
+Exemple:
+http://IP:8080
+
+---
+
+# 4. Monitorització
+
+- CPU i RAM (top)
+- disc (df)
+- processos
+- logs
+
+Entendre què està passant
+
+---
+
+# 5. Automatització
+
+- Crear scripts
+- programar-los (cron)
+
+El sistema treballa sol
+
+---
+
+# Tot connectat
+
+Servidor Linux<br>
+↓<br>
+Té xarxa<br>
+↓<br>
+Té un servei (Docker)<br>
+↓<br>
+El controlo<br>
+↓<br>
+El faig automàtic
+
+---
+
+# DEMO
+
+Aquí es fa la demostració amb la màquina virtual:
+
+- Mostrar IP (ip a)
+- Mostrar contenidor Docker funcionant
+- Accedir des del navegador
+- Mostrar monitorització (top o htop)
+
+---
+
+# Què haureu d’entregar
+
+Repo:
+```bash
+projecte-servei-linux/
+├── docker-compose.yml
+├── scripts/
+├── README.md
+```
+---
+
+# README (important)
+
+Ha d’explicar:
+
+- com funciona el sistema
+- com accedir al servei
+- què fa cada part
+
+---
+
+# Avaluació
+
+- Funciona → aprovat
+- Explicació → puja nota
+- Extres → notable o excel·lent
+
+---
+
+# Per què és important?
+
+Això és el que fa un:
+
+- administrador de sistemes
+- tècnic de sistemes
+- perfil devops
+
+És món real
+
+---
+
+# Dubtes
