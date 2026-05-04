@@ -6,7 +6,7 @@
     "presentations": [
         {
             "order": 0,
-            "title": "00. Presentació bàsica",
+            "title": "000. Presentació bàsica",
             "src": "slides/00-mim-pres-basica.reveal",
             "description": "00. Presentació bàsica",
             "status": "active",
@@ -14,7 +14,7 @@
         },
         {
             "order": 1,
-            "title": "01. Components d’un ordinador digital",
+            "title": "001. Components d’un ordinador digital",
             "src": "slides/001-components-d-un-ordinador-digital-ra1.reveal",
             "description": "Components d’un ordinador digital",
             "status": "active",
@@ -22,7 +22,7 @@
         },
         {
             "order": 2,
-            "title": "02. Factors de Forma",
+            "title": "002. Factors de Forma",
             "src": "slides/002-factors-de-forma-ra1.reveal",
             "description": "Factors de Forma",
             "status": "active",
@@ -30,7 +30,7 @@
         },
         {
             "order": 3,
-            "title": "03. Plaques Base",
+            "title": "003. Plaques Base",
             "src": "slides/003-plaques-base-ra1.reveal",
             "description": "Plaques Base",
             "status": "active",
@@ -38,7 +38,7 @@
         },
         {
             "order": 4,
-            "title": "04. Chipset",
+            "title": "004. Chipset",
             "src": "slides/004-chipset-ra1.reveal",
             "description": "Chipset",
             "status": "active",
@@ -46,7 +46,7 @@
         },
         {
             "order": 5,
-            "title": "05. Processadors",
+            "title": "005. Processadors",
             "src": "slides/005-processadors-ra1.reveal",
             "description": "Chipset",
             "status": "active",
@@ -54,7 +54,7 @@
         },
         {
             "order": 6,
-            "title": "06. RAM",
+            "title": "006. RAM",
             "src": "slides/006-ram-ra1.reveal",
             "description": "RAM",
             "status": "active",
@@ -62,7 +62,7 @@
         },
         {
             "order": 7,
-            "title": "07. Sistemes d'emmagatzematge",
+            "title": "007. Sistemes d'emmagatzematge",
             "src": "slides/007-sistemes-d_emmagatzematge-ra1.reveal",
             "description": "Sistemes d'emmagatzematge",
             "status": "active",
@@ -70,23 +70,23 @@
         },
         {
             "order": 8,
-            "title": "08. Sistemes de refrigeració",
+            "title": "008. Sistemes de refrigeració",
             "src": "slides/008-sistemes-de-refrigeraci-ra1.reveal",
             "description": "Sistemes de refrigeració",
             "status": "active",
             "kind": "theory"
         },
         {
-            "order": 9,
-            "title": "11 Activitat: Electricitat - Mesura i fonts - 0221-ae-001",
+            "order": 11,
+            "title": "011 Activitat: Electricitat - Mesura i fonts - 0221-ae-001",
             "src": "slides/0221-ae-001.reveal",
             "description": "Activitat: Electricitat - Mesura i fonts - 0221-ae-001",
             "status": "active",
             "kind": "activity"
         },
         {
-            "order": 9,
-            "title": "12 - Qüestionari - Introducció a l'electricitat - 0221-ae-002",
+            "order": 12,
+            "title": "012 - Qüestionari - Introducció a l'electricitat - 0221-ae-002",
             "src": "slides/m0221-ae-002.reveal",
             "description": "Activitat 2. Qüestionari - Introducció a l'electricitat - 0221-ae-002",
             "status": "active",
@@ -94,23 +94,23 @@
         },
         {
             "order": 10,
-            "title": "10 - Avaluació activitat 1. Presentacions mim-ud01-ae01",
+            "title": "010 - Avaluació activitat 1. Presentacions mim-ud01-ae01",
             "src": "slides/avaluacio-presentacions.reveal",
             "description": "Avaluació activitat 1. Presentacions mim-ud01-ae01",
             "status": "active",
             "kind": "activity"
         },
         {
-            "order": 11,
-            "title": "11 - Avaluació avaluacio-presentacions-ms365.reveal",
+            "order": 13,
+            "title": "013 - Avaluació avaluacio-presentacions-ms365.reveal",
             "src": "slides/avaluacio-presentacions-ms365.reveal",
             "description": "Avaluació avaluacio-presentacions-ms365.reveal",
             "status": "inactive",
             "kind": "activity"
         },
         {
-            "order": 12,
-            "title": "12. Mesura de paràmetres elèctrics.",
+            "order": 14,
+            "title": "014. Mesura de paràmetres elèctrics.",
             "src": "slides/mim-electricitat-intro.reveal",
             "description": "1. Mesura de paràmetres elèctrics",
             "status": "active",
@@ -118,7 +118,7 @@
         },
         {
             "order": 80,
-            "title": "80. 1r REPTE ASTI: 'Oficina Eficient 2026'.",
+            "title": "080. 1r REPTE ASTI: 'Oficina Eficient 2026'.",
             "src": "slides/asti-repte-01-enunciat.reveal",
             "description": "1r REPTE ASTI: 'Oficina Eficient 2026'",
             "status": "active",
