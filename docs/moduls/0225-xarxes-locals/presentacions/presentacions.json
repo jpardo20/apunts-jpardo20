@@ -131,6 +131,14 @@
       "description": "Crear i utilitzar una KB",
       "status": "active",
       "kind":"activity"
+    },
+    {
+      "order": "305",
+      "title": "305. Pràctica GLPI - Gestió d'inventari d'equips (<codijpc>0225-xlo-ae032</codijpc>)",
+      "src": "slides/xlo-3r-trim-glpi-docker-act005-0225-xlo-ae032.reveal",
+      "description": "Gestionar l’alta d’equips i la seva relació amb usuaris i perifèrics en un entorn real",
+      "status": "active",
+      "kind":"activity"
     }
   ]
 }

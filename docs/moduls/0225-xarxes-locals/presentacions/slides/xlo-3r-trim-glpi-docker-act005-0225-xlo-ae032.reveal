@@ -1,0 +1,166 @@
+# Pràctica GLPI - Gestió d'inventari d'equips (<codijpc>0225-xlo-ae032</codijpc>)
+
+## Objectiu: Gestionar l’alta d’equips i la seva relació amb usuaris i perifèrics en un entorn real
+
+---
+
+# CONTEXT
+
+Sou tècnics informàtics del centre BCN.
+El vostre equip ha de gestionar l’inventari dels dispositius informàtics utilitzant GLPI.
+
+Cal donar d’alta equips complets i assegurar que tota la informació està correctament relacionada per garantir la traçabilitat.
+
+---
+
+# OBJECTIU DE LA PRÀCTICA
+
+Donar d’alta un equip complet (ordinador + perifèrics + usuari) i documentar tot el procés seguit.
+
+---
+
+# PART 1 — CREACIÓ D’ACTIUS
+
+## 1. Crear un ordinador
+
+A GLPI, donar d’alta un ordinador amb:
+
+- Nom segons nomenclatura del centre (ex: **`BCN-25-100-L`**)
+- Ubicació
+- Estat
+- Altres camps rellevants
+
+---
+
+## 2. Crear perifèrics associats
+
+Crear els següents dispositius:
+
+- Teclat → **`BCN-25-100-K`**
+- Ratolí → **`BCN-25-100-M`**
+- Monitor → **`BCN-25-100-MON`**
+
+Assegurar-se que segueixen la mateixa numeració que l’ordinador.
+
+---
+
+| Alumne                     | Usuari GLPI   | Ordinador      | Teclat         | Ratolí         | Monitor         |
+|--------------------------|--------------|----------------|----------------|----------------|-----------------|
+| Marc López Vivies        | **`usr-marc`**     | **`BCN-25-101-L`**   | **`BCN-25-101-K`**   | **`BCN-25-101-M`**   | **`BCN-25-101-MON`**  |
+| Pau Díaz López           | **`usr-pau`**      | **`BCN-25-102-L`**   | **`BCN-25-102-K`**   | **`BCN-25-102-M`**   | **`BCN-25-102-MON`**  |
+| Merouan Kiass            | **`usr-merouan`**  | **`BCN-25-103-L`**   | **`BCN-25-103-K`**   | **`BCN-25-103-M`**   | **`BCN-25-103-MON`**  |
+
+---
+
+| Alumne                     | Usuari GLPI   | Ordinador      | Teclat         | Ratolí         | Monitor         |
+|--------------------------|--------------|----------------|----------------|----------------|-----------------|
+| Antonia Lorena Cracana   | **`usr-lorena`**   | **`BCN-25-104-L`**   | **`BCN-25-104-K`**   | **`BCN-25-104-M`**   | **`BCN-25-104-MON`**  |
+| Clemente Ramos Guiterrez | **`usr-clemente`** | **`BCN-25-105-L`**   | **`BCN-25-105-K`**   | **`BCN-25-105-M`**   | **`BCN-25-105-MON`**  |
+| Kristina Velkovska       | **`usr-kristina`** | **`BCN-25-106-L`**   | **`BCN-25-106-K`**   | **`BCN-25-106-M`**   | **`BCN-25-106-MON`**  |
+
+---
+
+| Alumne                     | Usuari GLPI   | Ordinador      | Teclat         | Ratolí         | Monitor         |
+|--------------------------|--------------|----------------|----------------|----------------|-----------------|
+| Joao Daniel De Paiva     | **`usr-daniel`**   | **`BCN-25-107-L`**   | **`BCN-25-107-K`**   | **`BCN-25-107-M`**   | **`BCN-25-107-MON`**  |
+
+---
+
+## 3. Assignar un usuari
+
+- Assignar un usuari existent
+- Relacionar-lo amb l’ordinador
+
+---
+
+## 4. Relacionar els elements
+
+- Associar els perifèrics a l’ordinador
+- Associar l’ordinador a l’usuari
+
+Verificar que totes les relacions són correctes dins del sistema.
+
+---
+
+# PART 2 — DOCUMENTACIÓ
+
+Cal elaborar un document explicatiu amb els següents apartats:
+
+---
+
+## 1. Descripció del procés
+
+Explicar pas a pas com s’ha realitzat:
+
+- Alta de l’ordinador
+- Alta dels perifèrics
+- Assignació d’usuari
+- Relacions entre elements
+
+---
+
+## 2. Captures de pantalla
+
+Incloure captures que mostrin:
+
+- Creació de l’ordinador
+- Creació dels perifèrics
+- Associació entre dispositius
+- Assignació a l’usuari
+
+---
+
+## 3. Esquema relacional
+
+Representar de forma clara la relació entre els elements:
+
+Usuari → Ordinador → Perifèrics
+
+---
+
+## 4. Problemes trobats
+
+Descriure:
+
+- Errors o dificultats
+- Decisions preses
+- Com s’han resolt
+
+---
+
+## 5. Propostes de millora
+
+Reflexionar sobre:
+
+- Com es podria millorar el procés
+- Possibles automatitzacions
+- Millores en la nomenclatura o organització
+
+---
+
+# CRITERIS D’AVALUACIÓ
+
+| Criteri | Punts |
+|--------|------|
+| Creació correcta dels actius | 3 |
+| Relacions correctes entre elements | 2 |
+| Documentació clara i estructurada | 2 |
+| Captures de pantalla adequades | 1 |
+| Anàlisi i reflexió | 2 |
+
+Total: 10 punts
+
+---
+
+# NOTES
+
+- Treball individual
+- Cal seguir la nomenclatura indicada
+- El document ha de ser clar i ordenat
+- Es valorarà la capacitat d’explicació i justificació
+
+---
+
+# OBJECTIU FINAL
+
+Ser capaç de gestionar correctament l’inventari d’un sistema informàtic real utilitzant GLPI, assegurant la traçabilitat dels dispositius i la seva relació amb els usuaris.
