@@ -25,7 +25,7 @@ Donar d’alta un equip complet (ordinador + perifèrics + usuari) i documentar 
 
 A GLPI, donar d’alta un ordinador amb:
 
-- Nom segons nomenclatura del centre (ex: **`BCN-25-100-L`**)
+- Nom segons nomenclatura del centre (ex: **`BCN-25-100-D`**)
 - Ubicació
 - Estat
 - Altres camps rellevants
@@ -46,23 +46,23 @@ Assegurar-se que segueixen la mateixa numeració que l’ordinador.
 
 | Alumne                     | Usuari GLPI   | Ordinador      | Teclat         | Ratolí         | Monitor         |
 |--------------------------|--------------|----------------|----------------|----------------|-----------------|
-| Marc López Vivies        | **`usr-marc`**     | **`BCN-25-101-L`**   | **`BCN-25-101-K`**   | **`BCN-25-101-M`**   | **`BCN-25-101-MON`**  |
-| Pau Díaz López           | **`usr-pau`**      | **`BCN-25-102-L`**   | **`BCN-25-102-K`**   | **`BCN-25-102-M`**   | **`BCN-25-102-MON`**  |
-| Merouan Kiass            | **`usr-merouan`**  | **`BCN-25-103-L`**   | **`BCN-25-103-K`**   | **`BCN-25-103-M`**   | **`BCN-25-103-MON`**  |
+| Marc López Vivies        | **`usr-marc`**     | **`BCN-25-101-D`**   | **`BCN-25-101-K`**   | **`BCN-25-101-M`**   | **`BCN-25-101-MON`**  |
+| Pau Díaz López           | **`usr-pau`**      | **`BCN-25-102-D`**   | **`BCN-25-102-K`**   | **`BCN-25-102-M`**   | **`BCN-25-102-MON`**  |
+| Merouan Kiass            | **`usr-merouan`**  | **`BCN-25-103-D`**   | **`BCN-25-103-K`**   | **`BCN-25-103-M`**   | **`BCN-25-103-MON`**  |
 
 ---
 
 | Alumne                     | Usuari GLPI   | Ordinador      | Teclat         | Ratolí         | Monitor         |
 |--------------------------|--------------|----------------|----------------|----------------|-----------------|
-| Antonia Lorena Cracana   | **`usr-lorena`**   | **`BCN-25-104-L`**   | **`BCN-25-104-K`**   | **`BCN-25-104-M`**   | **`BCN-25-104-MON`**  |
-| Clemente Ramos Guiterrez | **`usr-clemente`** | **`BCN-25-105-L`**   | **`BCN-25-105-K`**   | **`BCN-25-105-M`**   | **`BCN-25-105-MON`**  |
-| Kristina Velkovska       | **`usr-kristina`** | **`BCN-25-106-L`**   | **`BCN-25-106-K`**   | **`BCN-25-106-M`**   | **`BCN-25-106-MON`**  |
+| Antonia Lorena Cracana   | **`usr-lorena`**   | **`BCN-25-104-D`**   | **`BCN-25-104-K`**   | **`BCN-25-104-M`**   | **`BCN-25-104-MON`**  |
+| Clemente Ramos Guiterrez | **`usr-clemente`** | **`BCN-25-105-D`**   | **`BCN-25-105-K`**   | **`BCN-25-105-M`**   | **`BCN-25-105-MON`**  |
+| Kristina Velkovska       | **`usr-kristina`** | **`BCN-25-106-D`**   | **`BCN-25-106-K`**   | **`BCN-25-106-M`**   | **`BCN-25-106-MON`**  |
 
 ---
 
 | Alumne                     | Usuari GLPI   | Ordinador      | Teclat         | Ratolí         | Monitor         |
 |--------------------------|--------------|----------------|----------------|----------------|-----------------|
-| Joao Daniel De Paiva     | **`usr-daniel`**   | **`BCN-25-107-L`**   | **`BCN-25-107-K`**   | **`BCN-25-107-M`**   | **`BCN-25-107-MON`**  |
+| Joao Daniel De Paiva     | **`usr-daniel`**   | **`BCN-25-107-D`**   | **`BCN-25-107-K`**   | **`BCN-25-107-M`**   | **`BCN-25-107-MON`**  |
 
 ---
 
