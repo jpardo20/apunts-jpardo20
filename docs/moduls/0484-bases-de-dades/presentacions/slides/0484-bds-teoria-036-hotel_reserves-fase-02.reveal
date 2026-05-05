@@ -128,19 +128,19 @@ mysql>
 
 - No canviar els noms de secció
 - No afegir seccions noves
-- Utilitzar ```sql als blocs
+- Utilitzar **````sql`** als blocs
 - El nom de la taula ha de ser exacte
 - La sortida ha de ser real
-- Cada taula ha de tenir dues comandes: DESC i SELECT
+- Cada taula ha de tenir dues comandes: **`DESC`** i **`SELECT`**
 
 ---
 
 ## Taules a treballar
 
-- CLIENTS
-- RESERVES
-- HABITACIONS
-- PAGAMENTS
+- **`CLIENTS`**
+- **`RESERVES`**
+- **`HABITACIONS`**
+- **`PAGAMENTS`**
 
 ---
 
@@ -255,6 +255,77 @@ fi
 ```bash
 git add .
 git commit -m "Fase 2 - Exploració"
+git push
+```
+
+
+---
+
+## Ampliació Fase 2:
+
+Fer el mateix que haviem fet per les taules:
+
+- **`CLIENTS`**
+- **`RESERVES`**
+- **`HABITACIONS`**
+- **`PAGAMENTS`**
+
+Pero aquesta vegada per la resta de taules:
+
+- **`TIPUS_HABITACIONS `**
+- **`SERVEIS`**
+- **`TEMPORADES`**
+- **`RESERVA_SERVEIS`**
+
+---
+
+## Script de validació per l'ampliació de la Fase 2
+
+Crear el fitxer `check_fase2a.sh`:
+
+```bash
+#!/bin/bash
+
+FILE="sql/hotel_reserves/01-exploracio.md"
+
+ERRORS=0
+
+echo "Comprovant Fase 2 ampliació ..."
+
+if [ ! -f "$FILE" ]; then
+    echo "ERROR: No existeix el fitxer"
+    exit 1
+fi
+
+TABLES=("TIPUS_HABITACIONS" "SERVEIS" "TEMPORADES" "RESERVA_SERVEIS")
+
+for TABLE in "${TABLES[@]}"; do
+    grep -q "## Taula: $TABLE" "$FILE" || ERRORS=1
+done
+
+grep -q "### Comanda" "$FILE" || ERRORS=1
+grep -q "### Sortida" "$FILE" || ERRORS=1
+grep -q "### Interpretació" "$FILE" || ERRORS=1
+
+grep -q '```sql' "$FILE" || ERRORS=1
+
+grep -q "DESC CLIENTS;" "$FILE" || ERRORS=1
+
+if [ $ERRORS -eq 0 ]; then
+    echo "OK: Format correcte"
+else
+    echo "Hi ha errors. Revisa l'enunciat."
+fi
+```
+
+
+---
+
+## Entrega
+
+```bash
+git add .
+git commit -m "Fase 2 ampliació"
 git push
 ```
 
