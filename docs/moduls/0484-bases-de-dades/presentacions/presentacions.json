@@ -326,7 +326,7 @@
         },
         {
             "id": "0484-bds-teoria-037-vistes",
-            "title": "37. TEORIA: Vistes (VIEWs)",
+            "title": "37. TEORIA: Triggers",
             "description": "Una **vista** és una consulta SQL guardada amb nom.",
             "src": "slides/0484-bds-teoria-037-vistes.reveal",
             "theme": "white",
@@ -337,18 +337,33 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-036-hotel_reserves-fase-02",
-            "title": "38. Fase 3: Consolidació amb consultes",
-            "description": "Pràctica: Treballar amb les vistes creades per:<br><ul><li>consolidar SQL</li><li>entendre errors habituals</li><li>aplicar filtres correctament</li><li>interpretar dades reals</li></ul>",
-            "src": "slides/0484-bds-teoria-037-hotel_reserves-fase-03.reveal",
+            "id": "0484-bds-teoria-038-hotel_reserves-fase-03",
+            "title": "38. Pràctica: Sistema de reserves d'hotel",
+            "description": "Fase 3: Consolidació amb consultes",
+            "src": "slides/0484-bds-teoria-038-vistes.reveal",
             "theme": "white",
             "status": "active",
             "kind": "activity",
             "tags": [
                 "BBDD"
             ]
+        },
+        {
+            "id": "0484-bds-teoria-039-triggers",
+            "title": "39. Fase 4: Triggers",
+            "description": "Automatitzar accions dins la base de dades.",
+            "src": "slides/0484-bds-teoria-039-triggers.reveal",
+            "theme": "white",
+            "status": "active",
+            "kind": "theory",
+            "tags": [
+                "BBDD"
+            ]
         }
     ]
 }
+
+
+
 
 

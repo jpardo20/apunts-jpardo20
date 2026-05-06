@@ -1,0 +1,332 @@
+# Sistema de reserves d'hotel
+
+## Fase 4: Triggers
+
+---
+
+## Objectiu
+
+Automatitzar accions dins la base de dades.
+
+Aprendrem:
+
+- què és un trigger
+- quan s’executa
+- com automatitzar comportament
+
+---
+
+# Problema real
+
+Tenim pagaments:
+
+```sql
+INSERT INTO PAGAMENTS ...
+```
+
+Però...
+
+- qui recalcula imports?
+- qui comprova coherència?
+- qui actualitza dades?
+
+---
+
+## Problema
+
+Dependre del programador és perillós.
+
+Pot:
+
+- oblidar-se
+- equivocar-se
+- no executar una consulta
+
+---
+
+# Solució
+
+Utilitzar triggers.
+
+---
+
+# Què és un trigger?
+
+Un trigger és:
+
+- codi SQL automàtic
+- associat a una taula
+- que s’executa quan passa un esdeveniment
+
+---
+
+# Esdeveniments típics
+
+- INSERT
+- UPDATE
+- DELETE
+
+---
+
+# Exemple real
+
+Quan s’insereix un pagament:
+
+```sql
+INSERT INTO PAGAMENTS ...
+```
+
+volem executar automàticament:
+
+```sql
+UPDATE ...
+```
+
+---
+
+# Sintaxi bàsica
+
+```sql
+CREATE TRIGGER nom_trigger
+AFTER INSERT
+ON NOM_TAULA
+FOR EACH ROW
+BEGIN
+
+    ...
+
+END;
+```
+
+---
+
+# Explicació
+
+## AFTER INSERT
+
+S’executa:
+
+- DESPRÉS d’un INSERT
+
+---
+
+## FOR EACH ROW
+
+El trigger s’executa:
+
+- una vegada per cada fila nova
+
+---
+
+# Variables especials
+
+## NEW
+
+Representa:
+
+- la nova fila inserida
+
+---
+
+## Exemple
+
+```sql
+NEW.id_reserva
+```
+
+---
+
+# Primer trigger
+
+## Objectiu
+
+Quan es fa un pagament:
+
+- actualitzar automàticament l’import pendent
+
+---
+
+# Preparació
+
+Afegim un nou camp:
+
+```sql
+ALTER TABLE RESERVES
+ADD pendent_reserva DECIMAL(10,2) DEFAULT 0;
+```
+
+---
+
+# Inicialitzar dades
+
+```sql
+UPDATE RESERVES
+SET pendent_reserva = imp_tot_reserva;
+```
+
+---
+
+# Crear trigger
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER trg_pagament_insert
+AFTER INSERT ON PAGAMENTS
+FOR EACH ROW
+BEGIN
+
+    UPDATE RESERVES
+    SET pendent_reserva =
+        pendent_reserva - NEW.import_paga
+    WHERE id_reserva = NEW.id_reserva;
+
+END $$
+
+DELIMITER ;
+```
+
+---
+
+# Què fa?
+
+Quan hi ha:
+
+```sql
+INSERT INTO PAGAMENTS
+```
+
+automàticament:
+
+```sql
+UPDATE RESERVES
+```
+
+---
+
+# Prova real
+
+## Abans
+
+```sql
+SELECT
+    id_reserva,
+    pendent_reserva
+FROM RESERVES;
+```
+
+---
+
+# Inserir pagament
+
+```sql
+INSERT INTO PAGAMENTS (
+    id_reserva,
+    import_paga,
+    metode_paga
+)
+VALUES (
+    2,
+    100,
+    'bizum'
+);
+```
+
+---
+
+# Després
+
+```sql
+SELECT
+    id_reserva,
+    pendent_reserva
+FROM RESERVES;
+```
+
+---
+
+# Resultat esperat
+
+La reserva 2:
+
+- tenia pendent
+- ara té 100€ menys
+
+---
+
+# Avantatges
+
+- automatització
+- menys errors
+- coherència
+- menys feina repetitiva
+
+---
+
+# Riscos
+
+Els triggers també poden:
+
+- complicar depuració
+- ocultar comportament
+- crear efectes inesperats
+
+---
+
+# Bones pràctiques
+
+- triggers simples
+- noms clars
+- documentar
+- evitar massa lògica
+
+---
+
+# Exercici 1
+
+Crear un trigger que:
+
+- quan s’insereixi un pagament
+- mostri un log
+
+---
+
+# Exercici 2
+
+Crear un trigger que:
+
+- impedeixi pagaments negatius
+
+Pista:
+
+```sql
+BEFORE INSERT
+```
+
+---
+
+# Exercici 3
+
+Crear un trigger que:
+
+- actualitzi automàticament
+  l’estat de la reserva a:
+
+```text
+confirmada
+```
+
+quan:
+
+```text
+pendent_reserva = 0
+```
+
+---
+
+# Resum
+
+- un trigger = automatització
+- s’executa automàticament
+- útil per coherència
+- molt utilitzat en entorns reals
