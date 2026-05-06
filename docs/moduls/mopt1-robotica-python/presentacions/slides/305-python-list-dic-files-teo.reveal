@@ -1,0 +1,332 @@
+# TEORIA – Llistes, diccionaris i fitxers
+
+## Objectiu de la pràctica
+
+Avui desenvoluparem una **`Gestor d’inventari informàtic`** i treballarem:
+
+- llistes
+- diccionaris
+- fitxers
+- funcions
+- modularització
+- treball amb dades
+
+L’objectiu és començar a construir una petita aplicació de gestió d’inventari informàtic semblant a eines reals com GLPI.
+
+---
+
+# Què desenvoluparem?
+
+Crearem un programa capaç de:
+
+- afegir equips
+- mostrar equips
+- guardar dades
+- carregar dades des d’un fitxer
+
+---
+
+# Estructura del repositori
+
+Crea la carpeta:
+
+```bash
+pr005-inventari
+```
+
+I dins:
+
+```bash
+main.py
+inventari.py
+fitxers.py
+menu.py
+dades.txt
+respostes.md
+```
+
+---
+
+# PART 1 – Teoria: Llistes
+
+## Què és una llista?
+
+Una llista permet guardar múltiples dades dins d’una sola variable.
+
+Exemple:
+
+```python
+noms = ["Joan", "Anna", "Marc"]
+```
+
+---
+
+## Accedir a una posició
+
+```python
+print(noms[0])
+```
+
+Resultat:
+
+```bash
+Joan
+```
+
+---
+
+## Afegir elements
+
+```python
+noms.append("Laura")
+```
+
+---
+
+## Recórrer una llista
+
+```python
+for nom in noms:
+    print(nom)
+```
+
+---
+
+# PART 2 – Teoria: Diccionaris
+
+## Què és un diccionari?
+
+Un diccionari permet guardar informació associada a claus.
+
+Exemple:
+
+```python
+ordinador = {
+    "nom": "PC01",
+    "cpu": "i5",
+    "ram": 16
+}
+```
+
+---
+
+## Accedir a dades
+
+```python
+print(ordinador["nom"])
+```
+
+Resultat:
+
+```bash
+PC01
+```
+
+---
+
+## Modificar dades
+
+```python
+ordinador["ram"] = 32
+```
+
+---
+
+# PART 3 – Llista de diccionaris
+
+## Inventari complet
+
+El nostre inventari serà:
+
+```python
+inventari = []
+```
+
+I cada ordinador serà:
+
+```python
+ordinador = {
+    "nom": "PC01",
+    "cpu": "Ryzen 5",
+    "ram": 16
+}
+```
+
+Després l’afegirem:
+
+```python
+inventari.append(ordinador)
+```
+
+---
+
+# PART 4 – Teoria: Fitxers
+
+## Obrir un fitxer
+
+```python
+fitxer = open("dades.txt", "r")
+```
+
+---
+
+## Llegir dades
+
+```python
+contingut = fitxer.readlines()
+```
+
+---
+
+## Escriure dades
+
+```python
+fitxer = open("dades.txt", "w")
+
+fitxer.write("Hola")
+
+fitxer.close()
+```
+
+---
+
+# IMPORTANT
+
+Sempre que obrim un fitxer:
+- cal tancar-lo
+- cal vigilar el mode:
+  - `"r"` → lectura
+  - `"w"` → escriptura
+  - `"a"` → afegir
+
+---
+
+# PART 5 – Desenvolupament
+
+## Funcionalitats obligatòries
+
+El programa ha de permetre:
+
+1. Afegir ordinadors
+2. Mostrar inventari
+3. Guardar inventari a fitxer
+4. Carregar inventari des de fitxer
+5. Sortir
+
+---
+
+# Exemple d’ordinador
+
+```python
+{
+    "nom": "PC01",
+    "cpu": "i5",
+    "ram": 16
+}
+```
+
+---
+
+# Menú esperat
+
+```bash
+1. Afegir ordinador
+2. Mostrar inventari
+3. Guardar inventari
+4. Carregar inventari
+5. Sortir
+```
+
+---
+
+# PART 6 – Guardar dades
+
+Pots guardar cada ordinador així:
+
+```bash
+PC01;i5;16
+```
+
+Un ordinador per línia.
+
+---
+
+# Exemple de dades.txt
+
+```bash
+PC01;i5;16
+PC02;Ryzen 7;32
+PC03;i3;8
+```
+
+---
+
+# PART 7 – Mostrar inventari
+
+Quan mostris inventari:
+
+```bash
+Nom: PC01
+CPU: i5
+RAM: 16 GB
+```
+
+---
+
+# PART 8 – Explicació
+
+Al fitxer:
+
+```bash
+respostes.md
+```
+
+Respon:
+
+1. Quina diferència hi ha entre una llista i un diccionari?
+2. Per què utilitzem una llista de diccionaris?
+3. Què t’ha costat més?
+4. Com funciona el guardat a fitxer?
+
+---
+
+# IMPORTANT
+
+El programa ha de:
+
+- funcionar
+- no donar errors
+- tenir funcions separades
+- tenir codi net
+
+---
+
+# Què es valorarà
+
+- Funcionament
+- Estructura
+- Ús correcte de llistes
+- Ús correcte de diccionaris
+- Ús correcte de fitxers
+- Claredat del codi
+- Evolució dels commits
+
+---
+
+# Recomanació
+
+Comença per:
+
+1. Crear el menú
+2. Afegir ordinadors
+3. Mostrar inventari
+4. Guardar dades
+5. Carregar dades
+
+---
+
+# Missatge final
+
+Ara ja no només programem operacions.
+
+Ara comencem a gestionar dades reals.

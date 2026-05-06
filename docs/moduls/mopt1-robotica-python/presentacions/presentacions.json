@@ -104,8 +104,14 @@
       "description": "TEST: Cal que desnevolupar la funció <codijpc>esPrimer</codijpc>",
       "status": "active",
       "kind":"activity"
+    },
+    {
+      "order": 305,
+      "title": "305 - TEORIA - Llistes, diccionaris i fitxers",
+      "src": "slides/305-python-list-dic-files-teo.reveal",
+      "description": "Desenvolupar un Gestor d’inventari informàtic, fent servir: Llistes, diccionaris i fitxers",
+      "status": "active",
+        "kind": "theory"
     }
   ]
 }
-
-
