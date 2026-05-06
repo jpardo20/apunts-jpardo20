@@ -1,0 +1,327 @@
+---
+
+# Solució exercici 1
+
+## Només confirmar si estava pendent
+
+---
+
+# Objectiu
+
+Volem que el trigger:
+
+```text
+només canviï l'estat
+a "confirmada"
+```
+
+si abans estava:
+
+```text
+pendent
+```
+
+---
+
+# Solució
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER trg_confirmar_reserva
+AFTER INSERT
+ON PAGAMENTS
+FOR EACH ROW
+BEGIN
+
+    UPDATE RESERVES
+    SET en_estat_reserva = 'confirmada'
+    WHERE id_reserva = NEW.id_reserva
+    AND en_estat_reserva = 'pendent';
+
+END $$
+
+DELIMITER ;
+```
+
+---
+
+# Què hem afegit?
+
+```sql
+AND en_estat_reserva = 'pendent'
+```
+
+---
+
+# Avantatge
+
+Evitem modificar reserves que ja estan:
+
+- confirmades
+- checkout
+- cancel·lades
+
+---
+
+# Exercici 2
+
+## Impedir pagaments negatius
+
+---
+
+# Objectiu
+
+Evitar:
+
+```sql
+INSERT INTO PAGAMENTS (...)
+VALUES (..., -100, ...);
+```
+
+---
+
+# Necessitem
+
+Un trigger:
+
+```sql
+BEFORE INSERT
+```
+
+---
+
+# Per què BEFORE?
+
+Perquè volem:
+
+```text
+aturar l'INSERT
+ABANS que passi
+```
+
+---
+
+# Solució
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER trg_validar_import
+BEFORE INSERT
+ON PAGAMENTS
+FOR EACH ROW
+BEGIN
+
+    IF NEW.import_paga <= 0 THEN
+
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'L''import del pagament ha de ser positiu';
+
+    END IF;
+
+END $$
+
+DELIMITER ;
+```
+
+---
+
+# Què és SIGNAL?
+
+Serveix per:
+
+```text
+llançar un error manualment
+```
+
+---
+
+# Prova
+
+```sql
+INSERT INTO PAGAMENTS (
+    id_reserva,
+    import_paga,
+    metode_paga
+)
+VALUES (
+    2,
+    -100,
+    'bizum'
+);
+```
+
+---
+
+# Resultat esperat
+
+```sql
+ERROR 1644 (45000):
+L'import del pagament ha de ser positiu
+```
+
+---
+
+# Exercici 3
+
+## Guardar un log dels pagaments
+
+---
+
+# Objectiu
+
+Cada vegada que hi hagi un pagament:
+
+```text
+guardar informació
+en una taula LOG
+```
+
+---
+
+# Primer pas
+
+Crear la taula:
+
+```sql
+CREATE TABLE LOG_PAGAMENTS (
+
+    id_log INT AUTO_INCREMENT PRIMARY KEY,
+
+    id_reserva INT,
+    import_pagament DECIMAL(10,2),
+
+    data_log DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+    missatge VARCHAR(255)
+
+);
+```
+
+---
+
+# Ara crearem el trigger
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER trg_log_pagaments
+AFTER INSERT
+ON PAGAMENTS
+FOR EACH ROW
+BEGIN
+
+    INSERT INTO LOG_PAGAMENTS (
+
+        id_reserva,
+        import_pagament,
+        missatge
+
+    )
+    VALUES (
+
+        NEW.id_reserva,
+        NEW.import_paga,
+
+        CONCAT(
+            'Nou pagament registrat de ',
+            NEW.import_paga,
+            ' euros'
+        )
+
+    );
+
+END $$
+
+DELIMITER ;
+```
+
+---
+
+# Què fa?
+
+Quan hi ha un:
+
+```sql
+INSERT INTO PAGAMENTS
+```
+
+automàticament es fa:
+
+```sql
+INSERT INTO LOG_PAGAMENTS
+```
+
+---
+
+# Prova
+
+```sql
+INSERT INTO PAGAMENTS (
+    id_reserva,
+    import_paga,
+    metode_paga
+)
+VALUES (
+    2,
+    50,
+    'targeta'
+);
+```
+
+---
+
+# Comprovem el log
+
+```sql
+SELECT *
+FROM LOG_PAGAMENTS;
+```
+
+---
+
+# Resultat esperat
+
+```sql
++--------+-------------+-----------------+---------------------+--------------------------------------+
+| id_log | id_reserva  | import_pagament | data_log            | missatge                             |
++--------+-------------+-----------------+---------------------+--------------------------------------+
+|      1 |           2 |           50.00 | 2026-05-06 18:30:00 | Nou pagament registrat de 50 euros   |
++--------+-------------+-----------------+---------------------+--------------------------------------+
+```
+
+---
+
+# Què hem après?
+
+## AFTER INSERT
+
+- automatitza accions després d'inserir
+
+---
+
+## BEFORE INSERT
+
+- valida dades abans d'inserir
+
+---
+
+## NEW
+
+- accedeix a la nova fila
+
+---
+
+## SIGNAL
+
+- permet generar errors personalitzats
+
+---
+
+## Els triggers permeten
+
+- automatitzar
+- validar
+- registrar accions
+- garantir coherència
