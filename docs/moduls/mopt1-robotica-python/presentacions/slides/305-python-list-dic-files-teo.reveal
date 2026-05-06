@@ -1,15 +1,10 @@
 # TEORIA – Llistes, diccionaris i fitxers
 
-## Objectiu de la pràctica
-
 Avui desenvoluparem una **`Gestor d’inventari informàtic`** i treballarem:
 
-- llistes
-- diccionaris
-- fitxers
-- funcions
-- modularització
-- treball amb dades
+- llistes, diccionaris i fitxers,
+- treballarem amb dades,
+- farem servir funcions, i modularització
 
 L’objectiu és començar a construir una petita aplicació de gestió d’inventari informàtic semblant a eines reals com GLPI.
 
