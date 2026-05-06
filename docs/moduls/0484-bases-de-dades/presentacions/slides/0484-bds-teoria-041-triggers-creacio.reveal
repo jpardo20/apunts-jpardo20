@@ -1,0 +1,568 @@
+# Sistema de reserves d'hotel
+
+## Fase 4: Triggers (creacció)
+
+### Crearem el nostre primer trigger
+
+---
+
+# Objectiu
+
+Quan s'insereixi un pagament:
+
+```sql
+INSERT INTO PAGAMENTS
+```
+
+volem que MySQL faci automàticament:
+
+```sql
+UPDATE RESERVES
+```
+
+---
+
+# Què volem automatitzar?
+
+Quan un client paga:
+
+- la reserva ja NO és pendent
+- passa a:
+  
+```text
+confirmada
+```
+
+---
+
+# Ara mateix
+
+El programador ha de fer:
+
+```sql
+INSERT INTO PAGAMENTS
+```
+
+i DESPRÉS:
+
+```sql
+UPDATE RESERVES
+```
+
+---
+
+# Problema
+
+I si s'oblida?
+
+---
+
+# Solució
+
+Automatitzar-ho dins MySQL.
+
+---
+
+# Això és un trigger
+
+Un trigger és:
+
+- codi SQL automàtic
+- associat a una taula
+- que s'executa quan passa un esdeveniment
+
+---
+
+# En aquest cas
+
+L'esdeveniment serà:
+
+```sql
+INSERT INTO PAGAMENTS
+```
+
+---
+
+# I l'acció automàtica
+
+```sql
+UPDATE RESERVES
+SET en_estat_reserva = 'confirmada'
+```
+
+---
+
+# Sintaxi bàsica
+
+```sql
+CREATE TRIGGER nom_trigger
+AFTER INSERT
+ON NOM_TAULA
+FOR EACH ROW
+BEGIN
+
+    ...
+
+END;
+```
+
+---
+
+# Explicació
+
+## AFTER INSERT
+
+Vol dir:
+
+```text
+després d'un INSERT
+```
+
+---
+
+# Explicació
+
+## ON PAGAMENTS
+
+El trigger està associat a:
+
+```text
+la taula PAGAMENTS
+```
+
+---
+
+# Explicació
+
+## FOR EACH ROW
+
+Vol dir:
+
+```text
+executar el trigger
+per cada fila inserida
+```
+
+---
+
+# Variables especials
+
+## NEW
+
+Representa:
+
+```text
+la nova fila inserida
+```
+
+---
+
+# Exemple
+
+Si fem:
+
+```sql
+INSERT INTO PAGAMENTS (
+    id_reserva,
+    import_paga
+)
+VALUES (
+    2,
+    100
+);
+```
+
+---
+
+# Llavors
+
+```sql
+NEW.id_reserva
+```
+
+valdrà:
+
+```text
+2
+```
+
+---
+
+# I també
+
+```sql
+NEW.import_paga
+```
+
+valdrà:
+
+```text
+100
+```
+
+---
+
+# Crearem el trigger
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER trg_confirmar_reserva
+AFTER INSERT
+ON PAGAMENTS
+FOR EACH ROW
+BEGIN
+
+    UPDATE RESERVES
+    SET en_estat_reserva = 'confirmada'
+    WHERE id_reserva = NEW.id_reserva;
+
+END $$
+
+DELIMITER ;
+```
+
+---
+
+# Resultat
+
+```sql
+mysql> DELIMITER $$
+mysql> 
+mysql> CREATE TRIGGER trg_confirmar_reserva
+    -> AFTER INSERT
+    -> ON PAGAMENTS
+    -> FOR EACH ROW
+    -> BEGIN
+    -> 
+    ->     UPDATE RESERVES
+    ->     SET en_estat_reserva = 'confirmada'
+    ->     WHERE id_reserva = NEW.id_reserva;
+    -> 
+    -> END $$
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> 
+mysql> DELIMITER ;
+mysql> 
+```
+
+---
+
+# Què fa exactament?
+
+Quan es fa:
+
+```sql
+INSERT INTO PAGAMENTS
+```
+
+MySQL executa automàticament:
+
+```sql
+UPDATE RESERVES
+```
+
+---
+
+# Important
+
+El programador NO ha de fer:
+
+```sql
+UPDATE RESERVES ...
+```
+
+---
+
+# Ho farà MySQL automàticament
+
+Això evita:
+
+- oblits
+- incoherències
+- errors humans
+
+---
+
+# Provem-ho
+
+
+---
+
+# Abans cal tornar les taules al seu estat original
+
+Ara tenim:
+
+```sql
+mysql> SELECT *
+    -> FROM PAGAMENTS
+    -> WHERE id_reserva=2;
++---------+------------+---------------------+-------------+-------------+------------------+
+| id_paga | id_reserva | data_paga           | import_paga | metode_paga | concepte_paga    |
++---------+------------+---------------------+-------------+-------------+------------------+
+|       5 |          2 | 2026-05-06 16:17:45 |      100.00 | bizum       | Pagament parcial |
++---------+------------+---------------------+-------------+-------------+------------------+
+1 row in set (0.00 sec)
+
+mysql> 
+```
+
+---
+
+# Eliminem el pagament fet i tornem a deixar la reserva en estat `pendent`!
+
+```sql
+-- 1. Eliminar el pagament que hem inserit
+DELETE FROM PAGAMENTS
+WHERE id_paga = 5;
+
+-- 2. Tornar a deixar la reserva en estat 'pendent'
+UPDATE RESERVES
+SET en_estat_reserva = 'pendent'
+WHERE id_reserva = 2;
+```
+
+---
+
+# Sortida
+
+```sql
+mysql> -- 1. Eliminar el pagament que hem inserit
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> DELETE FROM PAGAMENTS
+    -> WHERE id_paga = 5;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> 
+mysql> -- 2. Tornar a deixar la reserva en estat 'pendent'
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> UPDATE RESERVES
+    -> SET en_estat_reserva = 'pendent'
+    -> WHERE id_reserva = 2;
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 1  Changed: 0  Warnings: 0
+
+mysql> 
+```
+
+---
+
+# Comprovació que està com a l'origen
+
+```sql
+mysql> SELECT *
+    -> FROM PAGAMENTS
+    -> WHERE id_reserva=2;
+Empty set (0.00 sec)
+
+mysql> SELECT
+    ->     id_reserva,
+    ->     en_estat_reserva
+    -> FROM RESERVES
+    -> WHERE id_reserva = 2;
++------------+------------------+
+| id_reserva | en_estat_reserva |
++------------+------------------+
+|          2 | pendent          |
++------------+------------------+
+1 row in set (0.01 sec)
+
+mysql> 
+```
+
+---
+
+# Ara si que podem provar-lo!
+
+## Ara inserim un pagament
+
+```sql
+INSERT INTO PAGAMENTS (
+    id_reserva,
+    import_paga,
+    metode_paga,
+    concepte_paga
+)
+VALUES (
+    2,
+    100,
+    'bizum',
+    'Pagament parcial'
+);
+```
+
+
+---
+
+# Sortida
+
+```sql
+mysql> INSERT INTO PAGAMENTS (
+    ->     id_reserva,
+    ->     import_paga,
+    ->     metode_paga,
+    ->     concepte_paga
+    -> )
+    -> VALUES (
+    ->     2,
+    ->     100,
+    ->     'bizum',
+    ->     'Pagament parcial'
+    -> );
+Query OK, 1 row affected (0.01 sec)
+
+mysql> 
+```
+
+---
+
+# IMPORTANT
+
+El programador NOMÉS fa:
+
+```sql
+INSERT INTO PAGAMENTS
+```
+
+---
+
+# Però el trigger...
+
+MySQL detecta automàticament:
+
+```sql
+INSERT INTO PAGAMENTS
+```
+
+i executa automàticament:
+
+```sql
+UPDATE RESERVES
+SET en_estat_reserva = 'confirmada'
+```
+
+---
+
+# Ho comprovem
+
+```sql
+SELECT
+    id_reserva,
+    en_estat_reserva
+FROM RESERVES
+WHERE id_reserva = 2;
+```
+
+---
+
+# Resultat
+
+```sql
+mysql> SELECT
+    ->     id_reserva,
+    ->     en_estat_reserva
+    -> FROM RESERVES
+    -> WHERE id_reserva = 2;
++------------+------------------+
+| id_reserva | en_estat_reserva |
++------------+------------------+
+|          2 | confirmada       |
++------------+------------------+
+1 row in set (0.00 sec)
+
+mysql> 
+```
+
+---
+
+# Funciona!
+
+Sense:
+
+- PHP
+- Java
+- scripts externs
+- consultes manuals
+
+---
+
+# Avantatges dels triggers
+
+- automatització
+- coherència
+- menys errors
+- centralitzar regles de negoci
+
+---
+
+# Però també tenen riscos
+
+- poden ser difícils de depurar
+- poden ocultar comportament
+- massa triggers = caos
+
+---
+
+# Bones pràctiques
+
+- triggers simples
+- noms clars
+- ben documentats
+- una responsabilitat concreta
+
+---
+
+# Exercici 1
+
+Modificar el trigger perquè:
+
+```text
+només confirmi
+si la reserva estava pendent
+```
+
+---
+
+# Exercici 2
+
+Crear un trigger:
+
+```sql
+BEFORE INSERT
+```
+
+que impedeixi:
+
+```text
+pagaments negatius
+```
+
+---
+
+# Exercici 3
+
+Crear un trigger que:
+
+```text
+guardi un log
+```
+
+cada vegada que es fa un pagament.
+
+---
+
+# Resum
+
+- un trigger és codi automàtic
+- s'executa dins MySQL
+- respon a esdeveniments
+- útil per automatitzar regles de negoci
+
+---
+
+# A continuació...
+
+## Triggers BEFORE vs AFTER

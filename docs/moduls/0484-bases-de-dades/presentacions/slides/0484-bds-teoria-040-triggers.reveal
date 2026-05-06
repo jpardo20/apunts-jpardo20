@@ -1,0 +1,424 @@
+# Sistema de reserves d'hotel
+
+## Fase 4: Triggers (introducció)
+
+---
+
+## Objectiu
+
+Automatitzar accions dins la base de dades.
+
+Aprendrem:
+
+- què és un **`trigger`**
+- quan s’executa
+- com automatitzar comportament
+
+---
+
+# Problema real
+
+## Quins són els passos que cal seguir per fer un pagament?
+
+---
+
+<img src="../img/0484-bases-de-dades/mer-parcial.png" alt="POST" />
+
+
+---
+
+# Estructura de de la taula **`RESERVES`**
+
+```sql
+mysql> DESC RESERVES;
++---------------------------+---------------------+------+-----+-  ...
+| Field                     | Type                | Null | Key |   ...
++---------------------------+---------------------+------+-----+-  ...
+| id_reserva                | int                 | NO   | PRI |   ...
+| id_client                 | int                 | NO   | MUL |   ...
+| id_habitacio              | int                 | NO   | MUL |   ...
+| data_entra_reserva        | date                | NO   |     |   ...
+| data_surt_reserva         | date                | NO   |     |   ...
+| adults_reserva            | int                 | NO   |     |   ...
+| menors_reserva            | int                 | NO   |     |   ...
+| en_estat_reserva          | enum(...)           | NO   |     |   ...
+| preu_nit_reserva          | decimal(10,2)       | YES  |     |   ...
+| quantitat_nits_reserva    | int                 | YES  |     |   ...
+| subtotal_estada_reserva   | decimal(10,2)       | YES  |     |   ...
+| per_dte_reserva           | int                 | NO   |     |   ...
+| imp_dte_reserva           | decimal(10,2)       | YES  |     |   ...
+| imp_servei                | decimal(10,2)       | NO   |     |   ...
+| per_iva_reserva           | int                 | NO   |     |   ...
+| imp_iva_reserva           | decimal(10,2)       | YES  |     |   ...
+| imp_tot_reserva           | decimal(10,2)       | YES  |     |   ...
+| data_crea_reserva         | datetime            | NO   |     |   ...
+| obser_reserva             | varchar(255)        | YES  |     |   ...
++---------------------------+---------------------+------+-----+-  ...
+19 rows in set (0.00 sec)
+```
+
+---
+
+Concretament:
+
+```sql
++------------------+---------------------------------+...+---------- ...
+| Field            | Type                            |...| Default   ...
++------------------+---------------------------------+...+---------- ...
+... 
+| en_estat_reserva | enum('pendent','confirmada',
+                           'checkin','checkout',
+                           'cancel_lada')            |...| pendent   ...
+...
+```
+
+Això vol dir que quan s'afegeix un registre a la taula **`RESERVES`**, al camp **`en_estat_reserva`** se li assigna el valor **`'pendent'`**.
+
+La idea és que la reserva no passa a estat **`'confirmada'`** fins que el client fa un pagament.
+
+---
+
+# Situació inicial
+
+Tenim una reserva amb estat:
+
+```text
+pendent
+```
+
+---
+
+# Ho podem comprovar
+
+```sql
+SELECT
+    id_reserva,
+    en_estat_reserva
+FROM RESERVES;
+```
+
+---
+
+# Resultat
+
+```sql
+mysql> SELECT
+    ->     id_reserva,
+    ->     en_estat_reserva
+    -> FROM RESERVES;
++------------+------------------+
+| id_reserva | en_estat_reserva |
++------------+------------------+
+|          1 | confirmada       |
+|          2 | pendent          |
+|          3 | confirmada       |
+|          4 | checkout         |
++------------+------------------+
+4 rows in set (0.00 sec)
+
+mysql> 
+```
+
+
+
+---
+
+# La reserva 2 <small>(**`id_reserva = 2`**)</small>
+
+Actualment el seu estat (**`en_estat_reserva`**) és **`pendent`**.
+
+---
+
+# Perque encara no té cap pagament.
+
+```
+mysql> SELECT id_reserva,import_paga, metode_paga
+    -> FROM PAGAMENTS
+    -> WHERE id_reserva = 2;
+Empty set (0.00 sec)
+
+mysql> 
+```
+
+---
+
+# Ara el client paga
+
+Per exemple:
+
+- 100€
+- amb Bizum
+
+---
+
+# Inserim el pagament
+
+```sql
+INSERT INTO PAGAMENTS (
+    id_reserva,
+    import_paga,
+    metode_paga,
+    concepte_paga
+)
+VALUES (
+    2,
+    100,
+    'bizum',
+    'Pagament parcial'
+);
+```
+
+---
+
+# Resultat
+
+
+```sql
+mysql> INSERT INTO PAGAMENTS (
+    ->     id_reserva,
+    ->     import_paga,
+    ->     metode_paga,
+    ->     concepte_paga
+    -> )
+    -> VALUES (
+    ->     2,
+    ->     100,
+    ->     'bizum',
+    ->     'Pagament parcial'
+    -> );
+Query OK, 1 row affected (0.07 sec)
+
+mysql> 
+```
+
+---
+
+# Efectivament la reserva ja té un pagament
+
+```sql
+mysql> SELECT id_reserva,import_paga, metode_paga
+    -> FROM PAGAMENTS
+    -> WHERE id_reserva = 2;
++------------+-------------+-------------+
+| id_reserva | import_paga | metode_paga |
++------------+-------------+-------------+
+|          2 |      100.00 | bizum       |
++------------+-------------+-------------+
+1 row in set (0.00 sec)
+
+mysql> 
+```
+
+---
+
+## Però...
+
+## Ja està?
+
+## La reserva ha canviat?
+
+---
+
+# Pensem-ho
+
+* Tenim un nou pagament de 100€, i
+
+* també tenim una reserva relacionada, que no ha canviat!
+
+---
+
+# Problema
+
+La reserva continua amb estat:
+
+```text
+pendent
+```
+
+---
+
+# Ho comprovem
+
+```sql
+SELECT
+    id_reserva,
+    en_estat_reserva
+FROM RESERVES
+WHERE id_reserva = 2;
+```
+
+---
+
+# Resultat
+
+```sql
+mysql> SELECT
+    ->     id_reserva,
+    ->     en_estat_reserva
+    -> FROM RESERVES
+    -> WHERE id_reserva = 2;
++------------+------------------+
+| id_reserva | en_estat_reserva |
++------------+------------------+
+|          2 | pendent          |
++------------+------------------+
+1 row in set (0.00 sec)
+
+mysql>
+```
+
+---
+
+# Però...
+
+## El client JA ha pagat
+
+Per tant:
+
+```text
+potser la reserva ja no hauria de ser "pendent"
+```
+
+---
+
+# Solució manual
+
+Després de cada pagament:
+
+```sql
+UPDATE RESERVES
+SET en_estat_reserva = 'confirmada'
+WHERE id_reserva = 2;
+```
+
+---
+
+# Ara sí
+
+```sql
+SELECT
+    id_reserva,
+    en_estat_reserva
+FROM RESERVES
+WHERE id_reserva = 2;
+```
+
+---
+
+# Resultat
+
+```sql
++------------+--------------------+
+| id_reserva | en_estat_reserva   |
++------------+--------------------+
+|          2 | confirmada         |
++------------+--------------------+
+```
+
+---
+
+# Problema real
+
+## I si el programador s'oblida?
+
+---
+
+# Exemple
+
+El programador fa:
+
+```sql
+INSERT INTO PAGAMENTS ...
+```
+
+però NO fa:
+
+```sql
+UPDATE RESERVES ...
+```
+
+---
+
+# Conseqüències
+
+- dades incoherents
+- reserves incorrectes
+- errors difícils de detectar
+
+---
+
+# Necessitem automatitzar això
+
+---
+
+# IDEA
+
+Quan passi això:
+
+```sql
+INSERT INTO PAGAMENTS
+```
+
+volem executar automàticament:
+
+```sql
+UPDATE RESERVES
+```
+
+---
+
+# Doncs això és...
+
+# UN TRIGGER
+
+---
+
+# Un **`trigger`** és:
+
+- codi **SQL** automàtic
+- associat a una taula
+- que s'executa quan passa un esdeveniment
+
+---
+
+# En aquest cas
+
+Quan es faci:
+
+```sql
+INSERT INTO PAGAMENTS
+```
+
+volem:
+
+```sql
+UPDATE RESERVES
+SET en_estat_reserva = 'confirmada'
+```
+
+---
+
+# Això ho farà MySQL automàticament
+
+Sense:
+
+- PHP
+- Java
+- el programador
+- executar consultes manuals
+
+---
+
+# Avantatge
+
+La base de dades:
+
+- controla coherència
+- automatitza comportament
+- evita errors humans
+
+---
+
+# A continuació...
+
+## Crearem el nostre primer trigger

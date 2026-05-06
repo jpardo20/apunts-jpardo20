@@ -10,9 +10,122 @@ Automatitzar accions dins la base de dades.
 
 Aprendrem:
 
-- què és un trigger
+- què és un **`trigger`**
 - quan s’executa
 - com automatitzar comportament
+
+---
+
+# Problema real
+
+### Quins són els passos que cal seguir per fer un pagament?
+
+![alt text](image.png)
+
+---
+
+Tenim la taula **`PAGAMENTS`** amb la següent estrucutura:
+
+```sql
+desc PAGAMENTS;
++---------------+-------------------+------+-----+- ...
+| Field         | Type              | Null | Key |  ...
++---------------+-------------------+------+-----+- ...
+| id_paga       | int               | NO   | PRI |  ...
+| id_reserva    | int               | NO   | MUL |  ...
+| data_paga     | datetime          | NO   |     |  ...
+| import_paga   | decimal(10,2)     | NO   |     |  ...
+| metode_paga   | enum('targeta'... | NO   |     |  ...
+| concepte_paga | varchar(120)      | NO   |     |  ...
++---------------+-------------------+------+-----+- ...
+6 rows in set (0.00 sec)
+```
+
+---
+
+Que ara mateix conté els següents registres:
+
+```sql
+SELECT *
+FROM PAGAMENTS;
++---------+------------+---------------------+-------------+---------------+--------------------+
+| id_paga | id_reserva | data_paga           | import_paga | metode_paga   | concepte_paga      |
++---------+------------+---------------------+-------------+---------------+--------------------+
+|       1 |          1 | 2026-04-29 09:58:40 |      100.00 | targeta       | Paga i senyal      |
+|       2 |          1 | 2026-04-29 09:58:40 |      206.90 | targeta       | Pagament final     |
+|       3 |          3 | 2026-04-29 09:58:40 |      300.00 | transferencia | Reserva confirmada |
+|       4 |          4 | 2026-04-29 09:58:40 |      143.00 | efectiu       | Pagament complet   |
++---------+------------+---------------------+-------------+---------------+--------------------+
+4 rows in set (0.00 sec)
+```
+
+---
+
+Aquests registres venen de la comanda que vàrem fer al principi:
+
+```sql
+INSERT INTO PAGAMENTS (id_reserva, import_paga, metode_paga, concepte_paga) VALUES
+(1, 100.00, 'targeta', 'Paga i senyal'),
+(1, 206.90, 'targeta', 'Pagament final'),
+(3, 300.00, 'transferencia', 'Reserva confirmada'),
+(4, 143.00, 'efectiu', 'Pagament complet');
+```
+
+---
+
+Per una altra banda tenim la taula **`RESERVES`**.
+
+```sql
+mysql> desc RESERVES;
++-------------------------+---------------------+------+-----+- ...
+| Field                   | Type                | Null | Key +- ...
++-------------------------+---------------------+------+-----+- ...
+| id_reserva              | int                 | NO   | PRI +- ...
+| id_client               | int                 | NO   | MUL +- ...
+| id_habitacio            | int                 | NO   | MUL +- ...
+| data_entra_reserva      | date                | NO   |     +- ...
+| data_surt_reserva       | date                | NO   |     +- ...
+| adults_reserva          | int                 | NO   |     +- ...
+| menors_reserva          | int                 | NO   |     +- ...
+| en_estat_reserva        | enum('pendent', ... | NO   |     +- ...
+| preu_nit_reserva        | decimal(10,2)       | YES  |     +- ...
+| quantitat_nits_reserva  | int                 | YES  |     +- ...
+| subtotal_estada_reserva | decimal(10,2)       | YES  |     +- ...
+| per_dte_reserva         | int                 | NO   |     +- ...
+| imp_dte_reserva         | decimal(10,2)       | YES  |     +- ...
+| imp_servei_reserva      | decimal(10,2)       | NO   |     +- ...
+| per_iva_reserva         | int                 | NO   |     +- ...
+| imp_iva_reserva         | decimal(10,2)       | YES  |     +- ...
+| imp_tot_reserva         | decimal(10,2)       | YES  |     +- ...
+| data_crea_reserva       | datetime            | NO   |     +- ...
+| obser_reserva           | varchar(255)        | YES  |     +- ...
++-------------------------+---------------------+------+-----+- ...
+19 rows in set (0.00 sec)
+```
+
+---
+
+```sql
+INSERT INTO PAGAMENTS (id_reserva, import_paga, metode_paga, concepte_paga) VALUES
+(XXXXX, YYYYY, 'targeta', 'Paga i senyal'),
+(1, 206.90, 'targeta', 'Pagament final'),
+(3, 300.00, 'transferencia', 'Reserva confirmada'),
+(4, 143.00, 'efectiu', 'Pagament complet');
+```
+
+on 
+* **`XXXXX`** serà l'identificador de la reserva (**`id_reserva`**), 
+* **`YYYYY`** serà l'import del pagament ('**`import_paga`**),
+
+I de moment, per fer-ho més fàcil, no tenim en compte el camp **`metode_paga`**, ni el camp **`concepte_paga`**.
+
+---
+
+Això vol dir que si volem afegir un pagament la taula **`PAGAMENTS`**, caldrà fer les següents comporvacions:
+
+1) Confirmar que l'identificador de la reserva **`XXXXX`**, existeix,
+2) Confirmar que l'import del pagament ('**`import_paga`**), és inferior a l'import pendent. 
+
 
 ---
 
@@ -46,13 +159,13 @@ Pot:
 
 # Solució
 
-Utilitzar triggers.
+Utilitzar **triggers**.
 
 ---
 
 # Què és un trigger?
 
-Un trigger és:
+Un **trigger** és:
 
 - codi SQL automàtic
 - associat a una taula
@@ -62,9 +175,9 @@ Un trigger és:
 
 # Esdeveniments típics
 
-- INSERT
-- UPDATE
-- DELETE
+- **`INSERT`**
+- **`UPDATE`**
+- **`DELETE`**
 
 ---
 
