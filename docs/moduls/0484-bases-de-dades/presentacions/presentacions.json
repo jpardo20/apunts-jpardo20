@@ -335,6 +335,18 @@
             "tags": [
                 "BBDD"
             ]
+        },
+        {
+            "id": "0484-bds-teoria-036-hotel_reserves-fase-02",
+            "title": "38. Fase 3: Consolidació amb consultes",
+            "description": "Pràctica: Treballar amb les vistes creades per:<br><ul><li>consolidar SQL</li><li>entendre errors habituals</li><li>aplicar filtres correctament</li><li>interpretar dades reals</li></ul>",
+            "src": "slides/0484-bds-teoria-037-hotel_reserves-fase-03.reveal",
+            "theme": "white",
+            "status": "active",
+            "kind": "activity",
+            "tags": [
+                "BBDD"
+            ]
         }
     ]
 }

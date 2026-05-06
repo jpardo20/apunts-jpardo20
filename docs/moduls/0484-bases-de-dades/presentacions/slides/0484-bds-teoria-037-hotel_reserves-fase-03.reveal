@@ -1,0 +1,384 @@
+# Sistema de reserves d'hotel
+
+## Fase 3: Consolidació amb consultes
+
+---
+
+## Objectiu
+
+Treballar amb les vistes creades per:
+
+- consolidar SQL
+- entendre errors habituals
+- aplicar filtres correctament
+- interpretar dades reals
+
+---
+
+## IMPORTANT
+
+Treballarem només amb:
+
+- <codijpc>v_resum_reserves</codijpc>
+- <codijpc>v_pagaments_reserva</codijpc>
+
+No cal modificar la base de dades.
+
+---
+
+## Recordatori
+
+```sql
+SELECT *
+FROM v_pagaments_reserva;
+```
+
+---
+
+# Sessió 1 (guiada)
+
+---
+
+## Tasca 1
+
+### Mostrar totes les reserves amb informació de pagament
+
+```sql
+SELECT *
+FROM v_pagaments_reserva;
+```
+
+### Preguntes
+
+- Quina reserva té més import total?
+- Hi ha reserves sense pagaments?
+
+---
+
+## Tasca 2
+
+### Mostrar només reserves amb pagaments pendents
+
+```sql
+SELECT *
+FROM v_pagaments_reserva
+WHERE pendent > 0;
+```
+
+### Què passa?
+
+- Dona error?
+
+---
+
+## Tasca 3
+
+### Solucionar l’error
+
+Substituir **`pendent`** per **``Pendent Pagament``**:
+
+```sql
+SELECT *
+FROM v_pagaments_reserva
+HAVING `Pendent Pagament` > 0;
+```
+
+⬇️
+
+----
+
+```sql
++------------+--------------------+-----------------+-------------+------------------+
+| id_reserva | Client             | imp_tot_reserva | Total pagat | Pendent Pagament |
++------------+--------------------+-----------------+-------------+------------------+
+|          2 | Marta Casals Riera |          763.13 |        0.00 |           763.13 |
+|          3 | Pau Vidal Costa    |          917.13 |      300.00 |           617.13 |
++------------+----------
+``
+
+---
+
+### Preguntes
+
+- Quines reserves tenen pendent?
+- Quin client apareix?
+
+---
+
+## Tasca 4
+
+### Mostrar només reserves completament pagades
+
+```sql
+SELECT *
+FROM v_pagaments_reserva
+HAVING `Pendent Pagament` > 0;
+```
+
+⬇️
+
+----
+
+```sql
++------------+------------------+-----------------+-------------+------------------+
+| id_reserva | Client           | imp_tot_reserva | Total pagat | Pendent Pagament |
++------------+------------------+-----------------+-------------+------------------+
+|          1 | Joan Serra Puig  |          306.90 |      306.90 |             0.00 |
+|          4 | Laia Roca Torres |          143.00 |      143.00 |             0.00 |
++------------+------------------+-----------------+-------------+------------------+
+```
+---
+
+## Tasca 5
+
+### Ordenar per import pendent (descendent)
+
+```sql
+SELECT *
+FROM v_pagaments_reserva
+HAVING `Pendent Pagament` > 0
+ORDER BY `Pendent Pagament` DESC;
+```
+
+⬇️
+
+----
+
+```sql
++------------+--------------------+-----------------+-------------+------------------+
+| id_reserva | Client             | imp_tot_reserva | Total pagat | Pendent Pagament |
++------------+--------------------+-----------------+-------------+------------------+
+|          2 | Marta Casals Riera |          763.13 |        0.00 |           763.13 |
+|          3 | Pau Vidal Costa    |          917.13 |      300.00 |           617.13 |
++------------+--------------------+-----------------+-------------+------------------+
+```
+
+---
+
+# Sessió 2 (autònoma)
+
+---
+
+## Tasca 6
+
+### Mostrar reserves confirmades amb pendent
+
+```sql
+SELECT *
+FROM v_pagaments_reserva
+WHERE ...
+HAVING ...
+```
+
+```sql
++------------+-----------------+-----------------+-------------+------------------+
+| id_reserva | Client          | imp_tot_reserva | Total pagat | Pendent Pagament |
++------------+-----------------+-----------------+-------------+------------------+
+|          3 | Pau Vidal Costa |          917.13 |      300.00 |           617.13 |
++------------+-----------------+-----------------+-------------+------------------+
+```
+
+### PISTA! Per què no podem filtrar per estat?
+
+⬇️
+
+----
+
+Partim del que ja tenim (Tasca 5):
+
+```sql
+SELECT *
+FROM v_pagaments_reserva
+HAVING `Pendent Pagament` > 0
+ORDER BY `Pendent Pagament` DESC;
+```
+
+- Ara afegim la condició: **`reserves confirmades`**
+- Però aquí hi ha un detall important:
+
+> **`v_pagaments_reserva`** NO té el camp **`estat`**.
+
+Cal fer **`JOIN`** amb **`RESERVES`**.
+
+---
+
+## Tasca 7
+
+### Mostrar el client que deu més diners
+
+- Ordenar
+- Limitar resultats
+
+```sql
++------------+--------------------+-----------------+-------------+------------------+
+| id_reserva | Client             | imp_tot_reserva | Total pagat | Pendent Pagament |
++------------+--------------------+-----------------+-------------+------------------+
+|          2 | Marta Casals Riera |          763.13 |        0.00 |           763.13 |
++------------+--------------------+-----------------+-------------+------------------+
+```
+
+---
+
+## Tasca 8
+
+### Mostrar reserves amb més de 3 nits
+
+Treballar amb **`v_resum_reserves`**
+
+```sql
++------------+--------------------+------------+----------------+------------+------------+--------+---------------+--------------+
+| id_reserva | Client             | Habitació | Tipus          | Data entr. | Data surt. | # nits | Estat reserva | Import total |
++------------+--------------------+------------+----------------+------------+------------+--------+---------------+--------------+
+|          2 | Marta Casals Riera | 201        | Doble superior | 2026-07-02 | 2026-07-07 |      5 | pendent       |       763.13 |
++------------+--------------------+------------+----------------+------------+------------+--------+---------------+--------------+
+```
+
+---
+
+## Tasca 9
+
+### Mostrar reserves en estat "pendent"
+
+```sql
+SELECT *
+FROM v_resum_reserves
+WHERE ???
+```
+
+```sql
++------------+--------------------+------------+----------------+------------+------------+--------+---------------+--------------+
+| id_reserva | Client             | Habitació | Tipus          | Data entr. | Data surt. | # nits | Estat reserva | Import total |
++------------+--------------------+------------+----------------+------------+------------+--------+---------------+--------------+
+|          2 | Marta Casals Riera | 201        | Doble superior | 2026-07-02 | 2026-07-07 |      5 | pendent       |       763.13 |
++------------+--------------------+------------+----------------+------------+------------+--------+---------------+--------------+
+```
+
+---
+
+## Tasca 10
+
+### Mostrar reserves amb import superior a 500€
+
+```sql
++------------+--------------------+------------+----------------+------------+------------+--------+---------------+--------------+
+| id_reserva | Client             | Habitació | Tipus          | Data entr. | Data surt. | # nits | Estat reserva | Import total |
++------------+--------------------+------------+----------------+------------+------------+--------+---------------+--------------+
+|          2 | Marta Casals Riera | 201        | Doble superior | 2026-07-02 | 2026-07-07 |      5 | pendent       |       763.13 |
+|          3 | Pau Vidal Costa    | 301        | Suite          | 2026-08-15 | 2026-08-18 |      3 | confirmada    |       917.13 |
++------------+--------------------+------------+----------------+------------+------------+--------+---------------+--------------+
+```
+
+
+---
+
+## Tasca 11
+
+### Mostrar totes les reserves ordenades per data d’entrada
+
+```sql
++------------+--------------------+------------+----------------+------------+------------+--------+---------------+--------------+
+| id_reserva | Client             | Habitació | Tipus          | Data entr. | Data surt. | # nits | Estat reserva | Import total |
++------------+--------------------+------------+----------------+------------+------------+--------+---------------+--------------+
+|          4 | Laia Roca Torres   | 101        | Individual     | 2026-04-28 | 2026-04-30 |      2 | checkout      |       143.00 |
+|          1 | Joan Serra Puig    | 102        | Doble          | 2026-05-10 | 2026-05-13 |      3 | confirmada    |       306.90 |
+|          2 | Marta Casals Riera | 201        | Doble superior | 2026-07-02 | 2026-07-07 |      5 | pendent       |       763.13 |
+|          3 | Pau Vidal Costa    | 301        | Suite          | 2026-08-15 | 2026-08-18 |      3 | confirmada    |       917.13 |
++------------+--------------------+------------+----------------+------------+------------+--------+---------------+--------------+
+```
+
+---
+
+## Tasca 12
+
+### Mostrar només el nom del client i el pendent
+
+```sql
++--------------------+------------------+
+| Client             | Pendent Pagament |
++--------------------+------------------+
+| Joan Serra Puig    |             0.00 |
+| Marta Casals Riera |           763.13 |
+| Pau Vidal Costa    |           617.13 |
+| Laia Roca Torres   |             0.00 |
++--------------------+------------------+
+```
+
+---
+
+## Tasca 13
+
+### Mostrar el total de reserves amb pendent
+
+```sql
++------------------------+
+| total_reserves_pendent |
++------------------------+
+|                      2 |
++------------------------+
+```
+
+---
+
+## Tasca 14
+
+### Mostrar el total de diners pendents (SUM)
+
+```sql
++---------------+
+| total_pendent |
++---------------+
+|       1380.26 |
++---------------+
+```
+
+---
+
+## Tasca 15 (repte)
+
+### Quin client ha pagat més diners en total?
+
+Pista:
+
+- **`SUM`**
+- **`GROUP BY`**
+- **`v_pagaments_reserva`**
+
+```sql
++-----------------+-------------+
+| Client          | total_pagat |
++-----------------+-------------+
+| Joan Serra Puig |      306.90 |
++-----------------+-------------+
+```
+
+---
+
+# Normes
+
+- Utilitzar SQL real
+- No modificar dades
+- No inventar columnes
+- Revisar noms exactes
+
+---
+
+# Errors habituals
+
+- **`WHERE`** amb camps calculats
+- noms incorrectes
+- no usar **`HAVING`**
+- oblidar **`ORDER BY`**
+
+---
+
+# Entrega
+
+Afegir les consultes a `sql/hotel_reserves/02-consultes.sql`
+
+---
+
+# Proper pas
+
+Triggers:
+
+automatitzar comportament de la base de dades
