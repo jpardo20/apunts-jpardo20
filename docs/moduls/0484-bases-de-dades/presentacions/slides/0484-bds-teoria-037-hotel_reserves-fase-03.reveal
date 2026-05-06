@@ -71,7 +71,7 @@ WHERE pendent > 0;
 
 ### Solucionar l’error
 
-Substituir **`pendent`** per **``Pendent Pagament``**:
+Substituir <codijpc>pendent</codijpc> per <codijpc>`Pendent Pagament`</codijpc>
 
 ```sql
 SELECT *
@@ -153,7 +153,9 @@ ORDER BY `Pendent Pagament` DESC;
 
 # Tasques a lliurar
 
-La resta de tasques cal pujueu l'enunciat, la comanda i el resultat al vostre repositori, dins del fitxer `sql/hotel_reserves/02-consultes.md`
+La resta de tasques cal pujueu l'**enunciat**, la **comanda** i la **sortida** de l'execució de la consulta, al vostre repositori,
+
+dins del fitxer <codijpc>sql/hotel_reserves/02-consultes.md</codijpc>
 
 ## Exemple
 
@@ -231,10 +233,10 @@ HAVING `Pendent Pagament` > 0
 ORDER BY `Pendent Pagament` DESC;
 ```
 
-- Ara afegim la condició: **`reserves confirmades`**
+- Ara afegim la condició: <codijpc>reserves confirmades</codijpc>
 - Però aquí hi ha un detall important:
 
-> **`v_pagaments_reserva`** NO té el camp **`estat`**.
+> <codijpc>v_pagaments_reserva</codijpc> NO té el camp <codijpc>estat</codijpc>.
 
 Cal fer **`JOIN`** amb **`RESERVES`**.
 
@@ -261,7 +263,7 @@ Cal fer **`JOIN`** amb **`RESERVES`**.
 
 ### Mostrar reserves amb més de 3 nits
 
-Treballar amb **`v_resum_reserves`**
+Treballar amb <codijpc>v_resum_reserves</codijpc>
 
 ```sql
 +------------+--------------------+------------+----------------+------------+------------+--------+---------------+--------------+
@@ -275,7 +277,7 @@ Treballar amb **`v_resum_reserves`**
 
 ## Tasca 9
 
-### Mostrar reserves en estat "pendent"
+### Mostrar reserves en estat <codijpc>pendent</codijpc>
 
 ```sql
 SELECT *
@@ -295,7 +297,7 @@ WHERE ???
 
 ## Tasca 10
 
-### Mostrar reserves amb import superior a 500€
+### Mostrar reserves amb import superior a `500€`
 
 ```sql
 +------------+--------------------+------------+----------------+------------+------------+--------+---------------+--------------+
