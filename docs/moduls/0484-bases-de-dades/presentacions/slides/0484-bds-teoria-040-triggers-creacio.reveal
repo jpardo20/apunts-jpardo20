@@ -1,12 +1,12 @@
 # Sistema de reserves d'hotel
 
-## Fase 4: Triggers (creacció)
+## Fase 4: <codijpc>Triggers</codijpc> (creacció)
 
-### Crearem el nostre primer trigger
+### Crearem el nostre primer **`trigger`**
 
 ---
 
-# Objectiu
+## Objectiu
 
 Quan s'insereixi un pagament:
 
@@ -14,7 +14,7 @@ Quan s'insereixi un pagament:
 INSERT INTO PAGAMENTS
 ```
 
-volem que MySQL faci automàticament:
+volem que **MySQL** faci automàticament:
 
 ```sql
 UPDATE RESERVES
@@ -22,20 +22,17 @@ UPDATE RESERVES
 
 ---
 
-# Què volem automatitzar?
+## Què volem automatitzar?
 
-Quan un client paga:
+Quan un **client** paga:
 
-- la reserva ja NO és pendent
-- passa a:
-  
-```text
-confirmada
-```
+- la **reserva** ja NO és <codijpc>pendent</codijpc>
+- passa a <codijpc>confirmada</codijpc>
+
 
 ---
 
-# Ara mateix
+## Ara mateix
 
 El programador ha de fer:
 
@@ -51,31 +48,31 @@ UPDATE RESERVES
 
 ---
 
-# Problema
+## Problema
 
-I si s'oblida?
-
----
-
-# Solució
-
-Automatitzar-ho dins MySQL.
+I si s'oblida de fer l'<codijpc>UPDATE</codijpc> a la taula <codijpc>RESERVES</codijpc>?
 
 ---
 
-# Això és un trigger
+## Solució
 
-Un trigger és:
-
-- codi SQL automàtic
-- associat a una taula
-- que s'executa quan passa un esdeveniment
+Automatitzar-ho dins **MySQL**.
 
 ---
 
-# En aquest cas
+## Això és un **`trigger`**
 
-L'esdeveniment serà:
+Un **`trigger`** és:
+
+- codi **SQL** automàtic
+- associat a una **taula**
+- que s'executa quan passa un **esdeveniment**
+
+---
+
+## En aquest cas
+
+L'**esdeveniment** serà:
 
 ```sql
 INSERT INTO PAGAMENTS
@@ -83,7 +80,7 @@ INSERT INTO PAGAMENTS
 
 ---
 
-# I l'acció automàtica
+## I l'acció automàtica
 
 ```sql
 UPDATE RESERVES
@@ -92,7 +89,7 @@ SET en_estat_reserva = 'confirmada'
 
 ---
 
-# Sintaxi bàsica
+## Sintaxi bàsica
 
 ```sql
 CREATE TRIGGER nom_trigger
@@ -108,56 +105,39 @@ END;
 
 ---
 
-# Explicació
+## Explicació
 
-## AFTER INSERT
+### <codijpc>AFTER INSERT</codijpc>
 
-Vol dir:
-
-```text
-després d'un INSERT
-```
+Vol dir que s'executraàr **després** d'un <codijpc>INSERT</codijpc>
 
 ---
 
-# Explicació
+## Explicació
 
-## ON PAGAMENTS
+### <codijpc>ON PAGAMENTS</codijpc>
 
-El trigger està associat a:
-
-```text
-la taula PAGAMENTS
-```
+El **`trigger`** està associat a la taula <codijpc>PAGAMENTS</codijpc>
 
 ---
 
-# Explicació
+## Explicació
 
-## FOR EACH ROW
+### <codijpc>FOR EACH ROW</codijpc>
 
-Vol dir:
-
-```text
-executar el trigger
-per cada fila inserida
-```
+Vol dir s'executarà el **`trigger`** **per cada fila** inserida.
 
 ---
 
-# Variables especials
+## Variables especials
 
-## NEW
+### <CODIJPC>NEW</CODIJPC>
 
-Representa:
-
-```text
-la nova fila inserida
-```
+Representa **la nova fila** inserida.
 
 ---
 
-# Exemple
+## Exemple
 
 Si fem:
 
@@ -174,49 +154,33 @@ VALUES (
 
 ---
 
-# Llavors
+## Llavors
 
 ```sql
-NEW.id_reserva
+NEW.id_reserva = 2
 ```
 
-valdrà:
+## I també
 
-```text
-2
+```sql
+NEW.import_paga = 100
 ```
 
 ---
 
-# I també
-
-```sql
-NEW.import_paga
-```
-
-valdrà:
-
-```text
-100
-```
-
----
-
-# Crearem el trigger
+## Crearem el **`trigger`**
 
 ```sql
 DELIMITER $$
 
-CREATE TRIGGER trg_confirmar_reserva
+CREATE TRIGGER trg_passa_reserva_a_confirma
 AFTER INSERT
 ON PAGAMENTS
 FOR EACH ROW
 BEGIN
-
     UPDATE RESERVES
     SET en_estat_reserva = 'confirmada'
     WHERE id_reserva = NEW.id_reserva;
-
 END $$
 
 DELIMITER ;
@@ -224,21 +188,19 @@ DELIMITER ;
 
 ---
 
-# Resultat
+## Resultat
 
 ```sql
 mysql> DELIMITER $$
 mysql> 
-mysql> CREATE TRIGGER trg_confirmar_reserva
+mysql> CREATE TRIGGER trg_passa_reserva_a_confirmada
     -> AFTER INSERT
     -> ON PAGAMENTS
     -> FOR EACH ROW
     -> BEGIN
-    -> 
     ->     UPDATE RESERVES
     ->     SET en_estat_reserva = 'confirmada'
     ->     WHERE id_reserva = NEW.id_reserva;
-    -> 
     -> END $$
 Query OK, 0 rows affected (0.01 sec)
 
@@ -249,7 +211,7 @@ mysql>
 
 ---
 
-# Què fa exactament?
+## Què fa exactament?
 
 Quan es fa:
 
@@ -257,7 +219,7 @@ Quan es fa:
 INSERT INTO PAGAMENTS
 ```
 
-MySQL executa automàticament:
+**MySQL** executa automàticament:
 
 ```sql
 UPDATE RESERVES
@@ -265,7 +227,7 @@ UPDATE RESERVES
 
 ---
 
-# Important
+## Important
 
 El programador NO ha de fer:
 
@@ -275,7 +237,7 @@ UPDATE RESERVES ...
 
 ---
 
-# Ho farà MySQL automàticament
+## Ho farà **MySQL** automàticament
 
 Això evita:
 
@@ -287,10 +249,9 @@ Això evita:
 
 # Provem-ho
 
-
 ---
 
-# Abans cal tornar les taules al seu estat original
+## Abans de provar-ho, cal tornar les taules al seu estat original
 
 Ara tenim:
 
@@ -310,7 +271,7 @@ mysql>
 
 ---
 
-# Eliminem el pagament fet i tornem a deixar la reserva en estat `pendent`!
+## Eliminem el pagament fet i tornem a deixar la reserva en estat <codijpc>pendent</codijpc>!
 
 ```sql
 -- 1. Eliminar el pagament que hem inserit
@@ -325,7 +286,7 @@ WHERE id_reserva = 2;
 
 ---
 
-# Sortida
+## Sortida
 
 ```sql
 mysql> -- 1. Eliminar el pagament que hem inserit
@@ -350,7 +311,7 @@ mysql>
 
 ---
 
-# Comprovació que està com a l'origen
+## Comprovació que està com a l'inici
 
 ```sql
 mysql> SELECT *
@@ -375,9 +336,9 @@ mysql>
 
 ---
 
-# Ara si que podem provar-lo!
+## Ara si que podem provar-lo!
 
-## Ara inserim un pagament
+### Ara inserim un pagament
 
 ```sql
 INSERT INTO PAGAMENTS (
@@ -397,7 +358,7 @@ VALUES (
 
 ---
 
-# Sortida
+## Sortida
 
 ```sql
 mysql> INSERT INTO PAGAMENTS (
@@ -419,7 +380,7 @@ mysql>
 
 ---
 
-# IMPORTANT
+## IMPORTANT
 
 El programador NOMÉS fa:
 
@@ -429,9 +390,9 @@ INSERT INTO PAGAMENTS
 
 ---
 
-# Però el trigger...
+## Però el **`trigger`**...
 
-MySQL detecta automàticament:
+**MySQL** detecta automàticament:
 
 ```sql
 INSERT INTO PAGAMENTS
@@ -446,7 +407,7 @@ SET en_estat_reserva = 'confirmada'
 
 ---
 
-# Ho comprovem
+## Ho comprovem
 
 ```sql
 SELECT
@@ -458,7 +419,7 @@ WHERE id_reserva = 2;
 
 ---
 
-# Resultat
+## Resultat
 
 ```sql
 mysql> SELECT
@@ -478,7 +439,7 @@ mysql>
 
 ---
 
-# Funciona!
+## Funciona!
 
 Sense:
 
@@ -489,7 +450,7 @@ Sense:
 
 ---
 
-# Avantatges dels triggers
+## Avantatges dels triggers
 
 - automatització
 - coherència
@@ -498,7 +459,7 @@ Sense:
 
 ---
 
-# Però també tenen riscos
+## Però també tenen riscos
 
 - poden ser difícils de depurar
 - poden ocultar comportament
@@ -506,7 +467,7 @@ Sense:
 
 ---
 
-# Bones pràctiques
+## Bones pràctiques
 
 - triggers simples
 - noms clars
@@ -515,54 +476,43 @@ Sense:
 
 ---
 
-# Exercici 1
+## Exercici 1
 
-Modificar el trigger perquè:
+A partir del **`trigger`** <codijpc>trg_passa_reserva_a_confirmada</codijpc>,
+crea el **`trigger`** <codijpc>trg_confirma_reserva_si_pendent</codijpc> que faci el mateix, però que:
 
-```text
-només confirmi
-si la reserva estava pendent
-```
+- Només canviï l'estat a <codijpc>confirmada</codijpc>
+- si la reserva estava <codijpc>pendent</codijpc>
 
 ---
 
-# Exercici 2
+## Exercici 2
 
-Crear un trigger:
+Crea el **`trigger`** <codijpc>trg_validar_import</codijpc> per què impedeixi fer pagaments negatius.
+
+Pista: **ABANS** de fer un <codijpc>INSERT</codijpc>
 
 ```sql
 BEFORE INSERT
 ```
 
-que impedeixi:
+---
 
-```text
-pagaments negatius
-```
+## Exercici 3
+
+Crea el **`trigger`** <codijpc>trg_log_pagaments</codijpc> per què guardi un **`log`** cada vegada que es faci un pagament.
 
 ---
 
-# Exercici 3
+## Resum
 
-Crear un trigger que:
-
-```text
-guardi un log
-```
-
-cada vegada que es fa un pagament.
-
----
-
-# Resum
-
-- un trigger és codi automàtic
-- s'executa dins MySQL
+- un **`trigger`** és codi automàtic
+- s'executa dins **MySQL**
 - respon a esdeveniments
 - útil per automatitzar regles de negoci
 
 ---
 
-# A continuació...
+## A continuació...
 
-## Triggers BEFORE vs AFTER
+### Triggers BEFORE vs AFTER

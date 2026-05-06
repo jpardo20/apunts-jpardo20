@@ -1,6 +1,6 @@
 # Sistema de reserves d'hotel
 
-## Fase 4: Triggers
+## Fase 4: **`Triggers`** (introducció)
 
 ---
 
@@ -18,428 +18,406 @@ Aprendrem:
 
 # Problema real
 
-### Quins són els passos que cal seguir per fer un pagament?
-
-![alt text](image.png)
+## Quins són els passos que cal seguir per fer un pagament?
 
 ---
 
-Tenim la taula **`PAGAMENTS`** amb la següent estrucutura:
+<img src="../img/0484-bases-de-dades/mer-parcial.png" alt="POST" />
 
-```sql
-desc PAGAMENTS;
-+---------------+-------------------+------+-----+- ...
-| Field         | Type              | Null | Key |  ...
-+---------------+-------------------+------+-----+- ...
-| id_paga       | int               | NO   | PRI |  ...
-| id_reserva    | int               | NO   | MUL |  ...
-| data_paga     | datetime          | NO   |     |  ...
-| import_paga   | decimal(10,2)     | NO   |     |  ...
-| metode_paga   | enum('targeta'... | NO   |     |  ...
-| concepte_paga | varchar(120)      | NO   |     |  ...
-+---------------+-------------------+------+-----+- ...
-6 rows in set (0.00 sec)
-```
 
 ---
 
-Que ara mateix conté els següents registres:
+# Estructura de de la taula <codijpc>RESERVES</codijpc>
 
 ```sql
-SELECT *
-FROM PAGAMENTS;
-+---------+------------+---------------------+-------------+---------------+--------------------+
-| id_paga | id_reserva | data_paga           | import_paga | metode_paga   | concepte_paga      |
-+---------+------------+---------------------+-------------+---------------+--------------------+
-|       1 |          1 | 2026-04-29 09:58:40 |      100.00 | targeta       | Paga i senyal      |
-|       2 |          1 | 2026-04-29 09:58:40 |      206.90 | targeta       | Pagament final     |
-|       3 |          3 | 2026-04-29 09:58:40 |      300.00 | transferencia | Reserva confirmada |
-|       4 |          4 | 2026-04-29 09:58:40 |      143.00 | efectiu       | Pagament complet   |
-+---------+------------+---------------------+-------------+---------------+--------------------+
-4 rows in set (0.00 sec)
-```
-
----
-
-Aquests registres venen de la comanda que vàrem fer al principi:
-
-```sql
-INSERT INTO PAGAMENTS (id_reserva, import_paga, metode_paga, concepte_paga) VALUES
-(1, 100.00, 'targeta', 'Paga i senyal'),
-(1, 206.90, 'targeta', 'Pagament final'),
-(3, 300.00, 'transferencia', 'Reserva confirmada'),
-(4, 143.00, 'efectiu', 'Pagament complet');
-```
-
----
-
-Per una altra banda tenim la taula **`RESERVES`**.
-
-```sql
-mysql> desc RESERVES;
-+-------------------------+---------------------+------+-----+- ...
-| Field                   | Type                | Null | Key +- ...
-+-------------------------+---------------------+------+-----+- ...
-| id_reserva              | int                 | NO   | PRI +- ...
-| id_client               | int                 | NO   | MUL +- ...
-| id_habitacio            | int                 | NO   | MUL +- ...
-| data_entra_reserva      | date                | NO   |     +- ...
-| data_surt_reserva       | date                | NO   |     +- ...
-| adults_reserva          | int                 | NO   |     +- ...
-| menors_reserva          | int                 | NO   |     +- ...
-| en_estat_reserva        | enum('pendent', ... | NO   |     +- ...
-| preu_nit_reserva        | decimal(10,2)       | YES  |     +- ...
-| quantitat_nits_reserva  | int                 | YES  |     +- ...
-| subtotal_estada_reserva | decimal(10,2)       | YES  |     +- ...
-| per_dte_reserva         | int                 | NO   |     +- ...
-| imp_dte_reserva         | decimal(10,2)       | YES  |     +- ...
-| imp_servei_reserva      | decimal(10,2)       | NO   |     +- ...
-| per_iva_reserva         | int                 | NO   |     +- ...
-| imp_iva_reserva         | decimal(10,2)       | YES  |     +- ...
-| imp_tot_reserva         | decimal(10,2)       | YES  |     +- ...
-| data_crea_reserva       | datetime            | NO   |     +- ...
-| obser_reserva           | varchar(255)        | YES  |     +- ...
-+-------------------------+---------------------+------+-----+- ...
+mysql> DESC RESERVES;
++---------------------------+---------------------+------+-----+-  ...
+| Field                     | Type                | Null | Key |   ...
++---------------------------+---------------------+------+-----+-  ...
+| id_reserva                | int                 | NO   | PRI |   ...
+| id_client                 | int                 | NO   | MUL |   ...
+| id_habitacio              | int                 | NO   | MUL |   ...
+| data_entra_reserva        | date                | NO   |     |   ...
+| data_surt_reserva         | date                | NO   |     |   ...
+| adults_reserva            | int                 | NO   |     |   ...
+| menors_reserva            | int                 | NO   |     |   ...
+| en_estat_reserva          | enum(...)           | NO   |     |   ...
+| preu_nit_reserva          | decimal(10,2)       | YES  |     |   ...
+| quantitat_nits_reserva    | int                 | YES  |     |   ...
+| subtotal_estada_reserva   | decimal(10,2)       | YES  |     |   ...
+| per_dte_reserva           | int                 | NO   |     |   ...
+| imp_dte_reserva           | decimal(10,2)       | YES  |     |   ...
+| imp_servei                | decimal(10,2)       | NO   |     |   ...
+| per_iva_reserva           | int                 | NO   |     |   ...
+| imp_iva_reserva           | decimal(10,2)       | YES  |     |   ...
+| imp_tot_reserva           | decimal(10,2)       | YES  |     |   ...
+| data_crea_reserva         | datetime            | NO   |     |   ...
+| obser_reserva             | varchar(255)        | YES  |     |   ...
++---------------------------+---------------------+------+-----+-  ...
 19 rows in set (0.00 sec)
 ```
 
 ---
 
-```sql
-INSERT INTO PAGAMENTS (id_reserva, import_paga, metode_paga, concepte_paga) VALUES
-(XXXXX, YYYYY, 'targeta', 'Paga i senyal'),
-(1, 206.90, 'targeta', 'Pagament final'),
-(3, 300.00, 'transferencia', 'Reserva confirmada'),
-(4, 143.00, 'efectiu', 'Pagament complet');
-```
-
-on 
-* **`XXXXX`** serà l'identificador de la reserva (**`id_reserva`**), 
-* **`YYYYY`** serà l'import del pagament ('**`import_paga`**),
-
-I de moment, per fer-ho més fàcil, no tenim en compte el camp **`metode_paga`**, ni el camp **`concepte_paga`**.
-
----
-
-Això vol dir que si volem afegir un pagament la taula **`PAGAMENTS`**, caldrà fer les següents comporvacions:
-
-1) Confirmar que l'identificador de la reserva **`XXXXX`**, existeix,
-2) Confirmar que l'import del pagament ('**`import_paga`**), és inferior a l'import pendent. 
-
-
----
-
-# Problema real
-
-Tenim pagaments:
+Concretament:
 
 ```sql
-INSERT INTO PAGAMENTS ...
++------------------+---------------------------------+...+---------- ...
+| Field            | Type                            |...| Default   ...
++------------------+---------------------------------+...+---------- ...
+... 
+| en_estat_reserva | enum('pendent','confirmada',
+                           'checkin','checkout',
+                           'cancel_lada')            |...| pendent   ...
+...
 ```
 
-Però...
+Això vol dir que quan s'afegeix un registre a la taula <codijpc>RESERVES</codijpc>, al camp <codijpc>en_estat_reserva</codijpc> se li assigna el valor <codijpc>'pendent'</codijpc>.
 
-- qui recalcula imports?
-- qui comprova coherència?
-- qui actualitza dades?
+La idea és que la reserva no passa a estat <codijpc>'confirmada'</codijpc> fins que el client fa un pagament.
 
 ---
 
-## Problema
+# Situació inicial
 
-Dependre del programador és perillós.
-
-Pot:
-
-- oblidar-se
-- equivocar-se
-- no executar una consulta
+Tenim una reserva amb estat <codijpc>'pendent'</codijpc>
 
 ---
 
-# Solució
-
-Utilitzar **triggers**.
-
----
-
-# Què és un trigger?
-
-Un **trigger** és:
-
-- codi SQL automàtic
-- associat a una taula
-- que s’executa quan passa un esdeveniment
-
----
-
-# Esdeveniments típics
-
-- **`INSERT`**
-- **`UPDATE`**
-- **`DELETE`**
-
----
-
-# Exemple real
-
-Quan s’insereix un pagament:
-
-```sql
-INSERT INTO PAGAMENTS ...
-```
-
-volem executar automàticament:
-
-```sql
-UPDATE ...
-```
-
----
-
-# Sintaxi bàsica
-
-```sql
-CREATE TRIGGER nom_trigger
-AFTER INSERT
-ON NOM_TAULA
-FOR EACH ROW
-BEGIN
-
-    ...
-
-END;
-```
-
----
-
-# Explicació
-
-## AFTER INSERT
-
-S’executa:
-
-- DESPRÉS d’un INSERT
-
----
-
-## FOR EACH ROW
-
-El trigger s’executa:
-
-- una vegada per cada fila nova
-
----
-
-# Variables especials
-
-## NEW
-
-Representa:
-
-- la nova fila inserida
-
----
-
-## Exemple
-
-```sql
-NEW.id_reserva
-```
-
----
-
-# Primer trigger
-
-## Objectiu
-
-Quan es fa un pagament:
-
-- actualitzar automàticament l’import pendent
-
----
-
-# Preparació
-
-Afegim un nou camp:
-
-```sql
-ALTER TABLE RESERVES
-ADD pendent_reserva DECIMAL(10,2) DEFAULT 0;
-```
-
----
-
-# Inicialitzar dades
-
-```sql
-UPDATE RESERVES
-SET pendent_reserva = imp_tot_reserva;
-```
-
----
-
-# Crear trigger
-
-```sql
-DELIMITER $$
-
-CREATE TRIGGER trg_pagament_insert
-AFTER INSERT ON PAGAMENTS
-FOR EACH ROW
-BEGIN
-
-    UPDATE RESERVES
-    SET pendent_reserva =
-        pendent_reserva - NEW.import_paga
-    WHERE id_reserva = NEW.id_reserva;
-
-END $$
-
-DELIMITER ;
-```
-
----
-
-# Què fa?
-
-Quan hi ha:
-
-```sql
-INSERT INTO PAGAMENTS
-```
-
-automàticament:
-
-```sql
-UPDATE RESERVES
-```
-
----
-
-# Prova real
-
-## Abans
+# Ho podem comprovar
 
 ```sql
 SELECT
     id_reserva,
-    pendent_reserva
+    en_estat_reserva
 FROM RESERVES;
 ```
 
 ---
 
-# Inserir pagament
+# Resultat
+
+```sql
+mysql> SELECT
+    ->     id_reserva,
+    ->     en_estat_reserva
+    -> FROM RESERVES;
++------------+------------------+
+| id_reserva | en_estat_reserva |
++------------+------------------+
+|          1 | confirmada       |
+|          2 | pendent          |
+|          3 | confirmada       |
+|          4 | checkout         |
++------------+------------------+
+4 rows in set (0.00 sec)
+
+mysql> 
+```
+
+---
+
+# La reserva 2 <small>(<codijpc>id_reserva = 2</codijpc>)</small>
+
+Actualment el seu estat (<codijpc>en_estat_reserva</codijpc>) és <codijpc>pendent</codijpc>.
+
+---
+
+# Perque encara no té cap pagament.
+
+```
+mysql> SELECT id_reserva,import_paga, metode_paga
+    -> FROM PAGAMENTS
+    -> WHERE id_reserva = 2;
+Empty set (0.00 sec)
+
+mysql> 
+```
+
+---
+
+# Ara el client paga
+
+Per exemple:
+
+- 100€
+- amb Bizum
+
+---
+
+# Inserim el pagament
 
 ```sql
 INSERT INTO PAGAMENTS (
     id_reserva,
     import_paga,
-    metode_paga
+    metode_paga,
+    concepte_paga
 )
 VALUES (
     2,
     100,
-    'bizum'
+    'bizum',
+    'Pagament parcial'
 );
 ```
 
 ---
 
-# Després
+# Resultat
+
+
+```sql
+mysql> INSERT INTO PAGAMENTS (
+    ->     id_reserva,
+    ->     import_paga,
+    ->     metode_paga,
+    ->     concepte_paga
+    -> )
+    -> VALUES (
+    ->     2,
+    ->     100,
+    ->     'bizum',
+    ->     'Pagament parcial'
+    -> );
+Query OK, 1 row affected (0.07 sec)
+
+mysql> 
+```
+
+---
+
+# Efectivament la reserva ja té un pagament
+
+```sql
+mysql> SELECT id_reserva,import_paga, metode_paga
+    -> FROM PAGAMENTS
+    -> WHERE id_reserva = 2;
++------------+-------------+-------------+
+| id_reserva | import_paga | metode_paga |
++------------+-------------+-------------+
+|          2 |      100.00 | bizum       |
++------------+-------------+-------------+
+1 row in set (0.00 sec)
+
+mysql> 
+```
+
+---
+
+## Però...
+
+## Ja està?
+
+## La reserva ha canviat?
+
+---
+
+# Pensem-ho
+
+* Tenim un nou **pagament** de **`100`€**, i
+
+* també tenim una **reserva relacionada**, que no ha canviat!
+
+---
+
+# Problema
+
+La reserva continua amb estat <codijpc>'pendent'</codijpc>
+
+---
+
+# Ho comprovem
 
 ```sql
 SELECT
     id_reserva,
-    pendent_reserva
-FROM RESERVES;
+    en_estat_reserva
+FROM RESERVES
+WHERE id_reserva = 2;
 ```
 
 ---
 
-# Resultat esperat
-
-La reserva 2:
-
-- tenia pendent
-- ara té 100€ menys
-
----
-
-# Avantatges
-
-- automatització
-- menys errors
-- coherència
-- menys feina repetitiva
-
----
-
-# Riscos
-
-Els triggers també poden:
-
-- complicar depuració
-- ocultar comportament
-- crear efectes inesperats
-
----
-
-# Bones pràctiques
-
-- triggers simples
-- noms clars
-- documentar
-- evitar massa lògica
-
----
-
-# Exercici 1
-
-Crear un trigger que:
-
-- quan s’insereixi un pagament
-- mostri un log
-
----
-
-# Exercici 2
-
-Crear un trigger que:
-
-- impedeixi pagaments negatius
-
-Pista:
+# Resultat
 
 ```sql
-BEFORE INSERT
+mysql> SELECT
+    ->     id_reserva,
+    ->     en_estat_reserva
+    -> FROM RESERVES
+    -> WHERE id_reserva = 2;
++------------+------------------+
+| id_reserva | en_estat_reserva |
++------------+------------------+
+|          2 | pendent          |
++------------+------------------+
+1 row in set (0.00 sec)
+
+mysql>
 ```
 
 ---
 
-# Exercici 3
+# Però...
 
-Crear un trigger que:
+## El client JA ha pagat
 
-- actualitzi automàticament
-  l’estat de la reserva a:
+Per tant, *potser* la **reserva** ja no hauria d'estar amb l'estat <codijpc>'pendent'</codijpc>?
 
-```text
-confirmada
-```
+---
 
-quan:
+# Solució manual
 
-```text
-pendent_reserva = 0
+Després de cada pagament:
+
+```sql
+UPDATE RESERVES
+SET en_estat_reserva = 'confirmada'
+WHERE id_reserva = 2;
 ```
 
 ---
 
-# Resum
+# Ara sí
 
-- un trigger = automatització
-- s’executa automàticament
-- útil per coherència
-- molt utilitzat en entorns reals
+```sql
+SELECT
+    id_reserva,
+    en_estat_reserva
+FROM RESERVES
+WHERE id_reserva = 2;
+```
+
+---
+
+# Resultat
+
+```sql
+mysql> SELECT *
+    -> FROM PAGAMENTS
+    -> WHERE id_reserva=2;
+Empty set (0.00 sec)
+
+mysql> SELECT
+    ->     id_reserva,
+    ->     en_estat_reserva
+    -> FROM RESERVES
+    -> WHERE id_reserva = 2;
++------------+------------------+
+| id_reserva | en_estat_reserva |
++------------+------------------+
+|          2 | pendent          |
++------------+------------------+
+1 row in set (0.01 sec)
+
+mysql> 
+```
+
+---
+
+# Problema real
+
+## I si el programador s'oblida?
+
+---
+
+# Exemple
+
+El programador fa:
+
+```sql
+INSERT INTO PAGAMENTS ...
+```
+
+però NO fa:
+
+```sql
+UPDATE RESERVES ...
+```
+
+---
+
+# Conseqüències
+
+- dades incoherents
+- reserves incorrectes
+- errors difícils de detectar
+
+---
+
+# Necessitem automatitzar això
+
+---
+
+# IDEA
+
+Quan passi això:
+
+```sql
+INSERT INTO PAGAMENTS
+```
+
+volem executar automàticament:
+
+```sql
+UPDATE RESERVES
+```
+
+---
+
+# Doncs això és...
+
+# UN **`TRIGGER`**
+
+---
+
+# Un **`trigger`** és:
+
+- codi **SQL** automàtic
+- associat a una **taula**
+- que s'executa quan passa un **esdeveniment**
+
+---
+
+# En aquest cas
+
+Quan es faci:
+
+```sql
+INSERT INTO PAGAMENTS
+```
+
+volem:
+
+```sql
+UPDATE RESERVES
+SET en_estat_reserva = 'confirmada'
+```
+
+---
+
+# Això ho farà **MySQL** automàticament
+
+Sense:
+
+- PHP
+- Java
+- el programador
+- executar consultes manuals
+
+---
+
+# Avantatge
+
+La base de dades:
+
+- controla coherència
+- automatitza comportament
+- evita errors humans
+
+---
+
+# A continuació...
+
+## Crearem el nostre primer trigger

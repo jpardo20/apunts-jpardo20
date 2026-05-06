@@ -349,10 +349,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-040-triggers",
-            "title": "40. Fase 4: Triggers (introducció)",
+            "id": "0484-bds-teoria-039-triggers",
+            "title": "39. Fase 4: Triggers (introducció)",
             "description": "Automatitzar accions dins la base de dades.",
-            "src": "slides/0484-bds-teoria-040-triggers.reveal",
+            "src": "slides/0484-bds-teoria-039-triggers.reveal",
             "theme": "white",
             "status": "active",
             "kind": "theory",
@@ -361,10 +361,22 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-041-triggers-creacio",
-            "title": "41. Fase 4: Triggers (creació)",
+            "id": "0484-bds-teoria-040-triggers-creacio",
+            "title": "40. Fase 4: Triggers (creació)",
             "description": "Crearem el nostre primer trigger.",
-            "src": "slides/0484-bds-teoria-041-triggers-creacio.reveal",
+            "src": "slides/0484-bds-teoria-040-triggers-creacio.reveal",
+            "theme": "white",
+            "status": "active",
+            "kind": "theory",
+            "tags": [
+                "BBDD"
+            ]
+        },
+        {
+            "id": "0484-bds-teoria-041-triggers-creacio-solucions",
+            "title": "41. Fase 4: Triggers (solucions)",
+            "description": "Solucions als exercicis anteriors.",
+            "src": "slides/0484-bds-teoria-041-triggers-creacio-solucions.reveal",
             "theme": "white",
             "status": "active",
             "kind": "theory",

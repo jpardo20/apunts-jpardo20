@@ -1,34 +1,19 @@
----
+# Exercici 1
 
-# Solució exercici 1
+A partir del **`trigger`** <codijpc>trg_passa_reserva_a_confirmada</codijpc>, crea 
+el **`trigger`** <codijpc>trg_confirma_reserva_si_pendent</codijpc> que faci el mateix, però que:
 
-## Només confirmar si estava pendent
-
----
-
-# Objectiu
-
-Volem que el trigger:
-
-```text
-només canviï l'estat
-a "confirmada"
-```
-
-si abans estava:
-
-```text
-pendent
-```
+- Només canviï l'estat a <codijpc>confirmada</codijpc>
+- si la reserva estava <codijpc>pendent</codijpc>
 
 ---
 
-# Solució
+# Solució Exercici 1
 
 ```sql
 DELIMITER $$
 
-CREATE TRIGGER trg_confirmar_reserva
+CREATE TRIGGER trg_confirma_reserva_si_pendent
 AFTER INSERT
 ON PAGAMENTS
 FOR EACH ROW
@@ -66,7 +51,13 @@ Evitem modificar reserves que ja estan:
 
 # Exercici 2
 
-## Impedir pagaments negatius
+Crea el **`trigger`** <codijpc>trg_validar_import</codijpc> per què impedeixi fer pagaments negatius.
+
+Pista: **ABANS** de fer un **`INSERT`**
+
+```sql
+BEFORE INSERT
+```
 
 ---
 
@@ -83,7 +74,7 @@ VALUES (..., -100, ...);
 
 # Necessitem
 
-Un trigger:
+Un **`trigger`**:
 
 ```sql
 BEFORE INSERT
@@ -93,12 +84,7 @@ BEFORE INSERT
 
 # Per què BEFORE?
 
-Perquè volem:
-
-```text
-aturar l'INSERT
-ABANS que passi
-```
+Perquè volem aturar l'**`INSERT`** **ABANS** de que es faci efectiu.
 
 ---
 
@@ -127,13 +113,9 @@ DELIMITER ;
 
 ---
 
-# Què és SIGNAL?
+# Recordem què és <codijpc>SIGNAL</codijpc>
 
-Serveix per:
-
-```text
-llançar un error manualment
-```
+Serveix per **llançar** un **error** manualment.
 
 ---
 
@@ -165,18 +147,13 @@ L'import del pagament ha de ser positiu
 
 # Exercici 3
 
-## Guardar un log dels pagaments
+Crea el **`trigger`** <codijpc>trg_log_pagaments</codijpc> per què guardi un **`log`** cada vegada que es faci un pagament.
 
 ---
 
 # Objectiu
 
-Cada vegada que hi hagi un pagament:
-
-```text
-guardar informació
-en una taula LOG
-```
+Cada vegada que hi hagi un pagament, cal **guardar informació** en una taula **`LOG`**.
 
 ---
 
@@ -186,22 +163,17 @@ Crear la taula:
 
 ```sql
 CREATE TABLE LOG_PAGAMENTS (
-
     id_log INT AUTO_INCREMENT PRIMARY KEY,
-
     id_reserva INT,
     import_pagament DECIMAL(10,2),
-
     data_log DATETIME DEFAULT CURRENT_TIMESTAMP,
-
     missatge VARCHAR(255)
-
 );
 ```
 
 ---
 
-# Ara crearem el trigger
+# Ara crearem el **`trigger`**
 
 ```sql
 DELIMITER $$
@@ -211,25 +183,19 @@ AFTER INSERT
 ON PAGAMENTS
 FOR EACH ROW
 BEGIN
-
     INSERT INTO LOG_PAGAMENTS (
-
         id_reserva,
         import_pagament,
         missatge
-
     )
     VALUES (
-
         NEW.id_reserva,
         NEW.import_paga,
-
         CONCAT(
             'Nou pagament registrat de ',
             NEW.import_paga,
             ' euros'
         )
-
     );
 
 END $$
@@ -295,31 +261,31 @@ FROM LOG_PAGAMENTS;
 
 # Què hem après?
 
-## AFTER INSERT
+## <codijpc>AFTER INSERT</codijpc>
 
-- automatitza accions després d'inserir
-
----
-
-## BEFORE INSERT
-
-- valida dades abans d'inserir
+- automatitza accions **després d'inserir** un registre a la taula.
 
 ---
 
-## NEW
+## <codijpc>BEFORE INSERT</codijpc>
+
+- valida un seguit de dades **abans d'inserir** un registre a la taula.
+
+---
+
+## <codijpc>NEW</codijpc>
 
 - accedeix a la nova fila
 
 ---
 
-## SIGNAL
+## <codijpc>SIGNAL</codijpc>
 
 - permet generar errors personalitzats
 
 ---
 
-## Els triggers permeten
+## Els **`triggers`** permeten
 
 - automatitzar
 - validar
