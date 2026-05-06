@@ -35,10 +35,6 @@ FROM v_pagaments_reserva;
 
 ---
 
-# Sessió 1 (guiada)
-
----
-
 ## Tasca 1
 
 ### Mostrar totes les reserves amb informació de pagament
@@ -94,7 +90,7 @@ HAVING `Pendent Pagament` > 0;
 |          2 | Marta Casals Riera |          763.13 |        0.00 |           763.13 |
 |          3 | Pau Vidal Costa    |          917.13 |      300.00 |           617.13 |
 +------------+----------
-``
+```
 
 ---
 
@@ -155,7 +151,43 @@ ORDER BY `Pendent Pagament` DESC;
 
 ---
 
-# Sessió 2 (autònoma)
+# Tasques a lliurar
+
+La resta de tasques cal pujueu l'enunciat, la comanda i el resultat al vostre repositori, dins del fitxer `sql/hotel_reserves/02-consultes.md`
+
+## Exemple
+
+⬇️
+
+----
+
+## Exemple
+
+````markdown
+## Tasca 4
+
+### Enunciat: Mostrar només reserves completament pagades
+
+### Comanda solució
+
+```sql
+SELECT *
+FROM v_pagaments_reserva
+HAVING `Pendent Pagament` > 0;
+```
+
+### Sortida
+
+```sql
++------------+------------------+-----------------+-------------+------------------+
+| id_reserva | Client           | imp_tot_reserva | Total pagat | Pendent Pagament |
++------------+------------------+-----------------+-------------+------------------+
+|          1 | Joan Serra Puig  |          306.90 |      306.90 |             0.00 |
+|          4 | Laia Roca Torres |          143.00 |      143.00 |             0.00 |
++------------+------------------+-----------------+-------------+------------------+
+```
+
+````
 
 ---
 
@@ -369,11 +401,6 @@ Pista:
 - no usar **`HAVING`**
 - oblidar **`ORDER BY`**
 
----
-
-# Entrega
-
-Afegir les consultes a `sql/hotel_reserves/02-consultes.sql`
 
 ---
 
