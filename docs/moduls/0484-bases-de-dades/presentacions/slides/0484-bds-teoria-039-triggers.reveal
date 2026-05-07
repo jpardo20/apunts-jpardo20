@@ -294,10 +294,15 @@ WHERE id_reserva = 2;
 # Resultat
 
 ```sql
-mysql> SELECT *
+mysql> SELECT id_reserva,import_paga, metode_paga
     -> FROM PAGAMENTS
-    -> WHERE id_reserva=2;
-Empty set (0.00 sec)
+    -> WHERE id_reserva = 2;
++------------+-------------+-------------+
+| id_reserva | import_paga | metode_paga |
++------------+-------------+-------------+
+|          2 |      100.00 | bizum       |
++------------+-------------+-------------+
+1 row in set (0.00 sec)
 
 mysql> SELECT
     ->     id_reserva,
@@ -307,7 +312,7 @@ mysql> SELECT
 +------------+------------------+
 | id_reserva | en_estat_reserva |
 +------------+------------------+
-|          2 | pendent          |
+|          2 | confirmada       |
 +------------+------------------+
 1 row in set (0.01 sec)
 
