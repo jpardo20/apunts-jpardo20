@@ -1,4 +1,6 @@
-# Exercici 1
+# Solucions als exercicis
+
+## Exercici 1
 
 A partir del **`trigger`** <codijpc>trg_passa_reserva_a_confirmada</codijpc>, crea 
 el **`trigger`** <codijpc>trg_confirma_reserva_si_pendent</codijpc> que faci el mateix, però que:
@@ -6,9 +8,53 @@ el **`trigger`** <codijpc>trg_confirma_reserva_si_pendent</codijpc> que faci el 
 - Només canviï l'estat a <codijpc>confirmada</codijpc>
 - si la reserva estava <codijpc>pendent</codijpc>
 
+
+## Solució 1 - Exercici 1
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER trg_confirma_reserva_si_pendent
+AFTER INSERT
+ON PAGAMENTS
+FOR EACH ROW
+BEGIN
+    DECLARE estat_reserva VARCHAR(20);
+
+    SELECT en_estat_reserva INTO estat_reserva
+    FROM RESERVES
+    WHERE id_reserva = NEW.id_reserva;
+
+    IF (estat_reserva = 'pendent') THEN
+        UPDATE RESERVES
+        SET en_estat_reserva = 'confirmada'
+        WHERE id_reserva = NEW.id_reserva;
+    END IF;
+
+END $$
+
+DELIMITER ;
+```
+
+---
+## Què hem afegit?
+
+```sql
+    DECLARE estat_reserva VARCHAR(20);
+
+    SELECT en_estat_reserva INTO estat_reserva
+    FROM RESERVES
+    WHERE id_reserva = NEW.id_reserva;
+...
+    IF (estat_reserva = 'pendent') THEN
+
+```
+
+Guardem l'estat de la reserva i si l'estat és <codijpc>pendent</codijpc>, llavors fem l'<codijpc>UPDATE</codijpc>
+
 ---
 
-# Solució Exercici 1
+## Solució 2 Exercici 1
 
 ```sql
 DELIMITER $$
@@ -31,7 +77,7 @@ DELIMITER ;
 
 ---
 
-# Què hem afegit?
+## Què hem afegit?
 
 ```sql
 AND en_estat_reserva = 'pendent'
@@ -39,17 +85,22 @@ AND en_estat_reserva = 'pendent'
 
 ---
 
-# Avantatge
+## Avantatge
 
 Evitem modificar reserves que ja estan:
 
-- confirmades
-- checkout
-- cancel·lades
+- <codijpc>confirmades</codijpc>
+- <codijpc>checkout</codijpc>
+- <codijpc>checkin</codijpc>
+- <codijpc>cancel_lades</codijpc>
 
 ---
 
-# Exercici 2
+
+---
+
+
+## Exercici 2
 
 Crea el **`trigger`** <codijpc>trg_validar_import</codijpc> per què impedeixi fer pagaments negatius.
 
@@ -61,7 +112,7 @@ BEFORE INSERT
 
 ---
 
-# Objectiu
+## Objectiu
 
 Evitar:
 
@@ -72,7 +123,7 @@ VALUES (..., -100, ...);
 
 ---
 
-# Necessitem
+## Necessitem
 
 Un **`trigger`**:
 
@@ -82,13 +133,13 @@ BEFORE INSERT
 
 ---
 
-# Per què BEFORE?
+## Per què BEFORE?
 
 Perquè volem aturar l'**`INSERT`** **ABANS** de que es faci efectiu.
 
 ---
 
-# Solució
+## Solució
 
 ```sql
 DELIMITER $$
@@ -98,14 +149,10 @@ BEFORE INSERT
 ON PAGAMENTS
 FOR EACH ROW
 BEGIN
-
     IF NEW.import_paga <= 0 THEN
-
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'L''import del pagament ha de ser positiu';
-
     END IF;
-
 END $$
 
 DELIMITER ;
@@ -113,13 +160,13 @@ DELIMITER ;
 
 ---
 
-# Recordem què és <codijpc>SIGNAL</codijpc>
+## Recordem què és <codijpc>SIGNAL</codijpc>
 
 Serveix per **llançar** un **error** manualment.
 
 ---
 
-# Prova
+## Prova
 
 ```sql
 INSERT INTO PAGAMENTS (
@@ -136,7 +183,7 @@ VALUES (
 
 ---
 
-# Resultat esperat
+## Resultat esperat
 
 ```sql
 ERROR 1644 (45000):
@@ -145,24 +192,24 @@ L'import del pagament ha de ser positiu
 
 ---
 
-# Exercici 3
+## Exercici 3
 
 Crea el **`trigger`** <codijpc>trg_log_pagaments</codijpc> per què guardi un **`log`** cada vegada que es faci un pagament.
 
 ---
 
-# Objectiu
+## Objectiu
 
 Cada vegada que hi hagi un pagament, cal **guardar informació** en una taula **`LOG`**.
 
 ---
 
-# Primer pas
+## Primer pas
 
 Crear la taula:
 
 ```sql
-CREATE TABLE LOG_PAGAMENTS (
+CREATE TABLE log_pagaments (
     id_log INT AUTO_INCREMENT PRIMARY KEY,
     id_reserva INT,
     import_pagament DECIMAL(10,2),
@@ -173,7 +220,7 @@ CREATE TABLE LOG_PAGAMENTS (
 
 ---
 
-# Ara crearem el **`trigger`**
+## Ara crearem el **`trigger`**
 
 ```sql
 DELIMITER $$
@@ -183,7 +230,7 @@ AFTER INSERT
 ON PAGAMENTS
 FOR EACH ROW
 BEGIN
-    INSERT INTO LOG_PAGAMENTS (
+    INSERT INTO log_pagaments (
         id_reserva,
         import_pagament,
         missatge
@@ -205,7 +252,7 @@ DELIMITER ;
 
 ---
 
-# Què fa?
+## Què fa?
 
 Quan hi ha un:
 
@@ -216,12 +263,12 @@ INSERT INTO PAGAMENTS
 automàticament es fa:
 
 ```sql
-INSERT INTO LOG_PAGAMENTS
+INSERT INTO log_pagaments
 ```
 
 ---
 
-# Prova
+## Prova
 
 ```sql
 INSERT INTO PAGAMENTS (
@@ -238,16 +285,16 @@ VALUES (
 
 ---
 
-# Comprovem el log
+## Comprovem el log
 
 ```sql
 SELECT *
-FROM LOG_PAGAMENTS;
+FROM log_pagaments;
 ```
 
 ---
 
-# Resultat esperat
+## Resultat esperat
 
 ```sql
 +--------+-------------+-----------------+---------------------+--------------------------------------+
@@ -259,7 +306,7 @@ FROM LOG_PAGAMENTS;
 
 ---
 
-# Què hem après?
+## Què hem après?
 
 ## <codijpc>AFTER INSERT</codijpc>
 
@@ -275,7 +322,7 @@ FROM LOG_PAGAMENTS;
 
 ## <codijpc>NEW</codijpc>
 
-- accedeix a la nova fila
+- obté els valors del registre que s'insertarà a la base de dades (**nou registre -> `NEW.<camp>`**)
 
 ---
 
