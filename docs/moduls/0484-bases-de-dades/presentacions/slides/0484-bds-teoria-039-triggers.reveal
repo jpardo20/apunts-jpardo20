@@ -363,7 +363,7 @@ Quan passi això:
 INSERT INTO PAGAMENTS
 ```
 
-volem executar automàticament:
+volem executar **automàticament**:
 
 ```sql
 UPDATE RESERVES

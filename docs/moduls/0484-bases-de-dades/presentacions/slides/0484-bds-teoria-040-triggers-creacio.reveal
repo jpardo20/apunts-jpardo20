@@ -14,7 +14,7 @@ Quan s'insereixi un pagament:
 INSERT INTO PAGAMENTS
 ```
 
-volem que **MySQL** faci automàticament:
+volem que **MySQL** faci **automàticament**:
 
 ```sql
 UPDATE RESERVES
@@ -60,9 +60,7 @@ Automatitzar-ho dins **MySQL**.
 
 ---
 
-## Això és un **`trigger`**
-
-Un **`trigger`** és:
+## Com deiem, un **`trigger`** és;
 
 - codi **SQL** automàtic
 - associat a una **taula**
@@ -105,40 +103,182 @@ END;
 
 ---
 
+## Crearem el **`trigger`**
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER trg_passa_reserva_a_confirma
+AFTER INSERT
+ON PAGAMENTS
+FOR EACH ROW
+BEGIN
+    UPDATE RESERVES
+    SET en_estat_reserva = 'confirmada'
+    WHERE id_reserva = NEW.id_reserva;
+END $$
+
+DELIMITER ;
+```
+
+
+---
+
 ## Explicació
 
 ### <codijpc>AFTER INSERT</codijpc>
 
-Vol dir que s'executraàr **després** d'un <codijpc>INSERT</codijpc>
+<div class="cols">
+<div class="col-left">
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER trg_passa_reserva_a_confirma
+AFTER INSERT
+ON PAGAMENTS
+FOR EACH ROW
+BEGIN
+    UPDATE RESERVES
+    SET en_estat_reserva = 'confirmada'
+    WHERE id_reserva = NEW.id_reserva;
+END $$
+
+DELIMITER ;
+```
+</div>
+<div class="col-right">
+
+Vol dir que s'executrarà **després** d'un <codijpc>INSERT</codijpc>
+</div>
+</div>
+
 
 ---
 
 ## Explicació
+
+
+<div class="cols">
+<div class="col-left">
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER trg_passa_reserva_a_confirma
+AFTER INSERT
+ON PAGAMENTS
+FOR EACH ROW
+BEGIN
+    UPDATE RESERVES
+    SET en_estat_reserva = 'confirmada'
+    WHERE id_reserva = NEW.id_reserva;
+END $$
+
+DELIMITER ;
+```
+
+</div>
+<div class="col-right">
 
 ### <codijpc>ON PAGAMENTS</codijpc>
 
 El **`trigger`** està associat a la taula <codijpc>PAGAMENTS</codijpc>
+</div>
+</div>
 
 ---
-
 ## Explicació
+
+<div class="cols">
+<div class="col-left">
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER trg_passa_reserva_a_confirma
+AFTER INSERT
+ON PAGAMENTS
+FOR EACH ROW
+BEGIN
+    UPDATE RESERVES
+    SET en_estat_reserva = 'confirmada'
+    WHERE id_reserva = NEW.id_reserva;
+END $$
+
+DELIMITER ;
+```
+
+</div>
+<div class="col-right">
 
 ### <codijpc>FOR EACH ROW</codijpc>
 
 Vol dir s'executarà el **`trigger`** **per cada fila** inserida.
 
+</div>
+</div>
+
+
 ---
+
+## Explicació
+
+<div class="cols">
+<div class="col-left">
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER trg_passa_reserva_a_confirma
+AFTER INSERT
+ON PAGAMENTS
+FOR EACH ROW
+BEGIN
+    UPDATE RESERVES
+    SET en_estat_reserva = 'confirmada'
+    WHERE id_reserva = NEW.id_reserva;
+END $$
+
+DELIMITER ;
+```
+
+</div>
+<div class="col-right">
 
 ## Variables especials
 
 ### <CODIJPC>NEW</CODIJPC>
 
 Representa **la nova fila** inserida.
+</div>
+</div>
 
 ---
 
 ## Exemple
 
+<div class="cols">
+<div class="col-left">
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER trg_passa_reserva_a_confirma
+AFTER INSERT
+ON PAGAMENTS
+FOR EACH ROW
+BEGIN
+    UPDATE RESERVES
+    SET en_estat_reserva = 'confirmada'
+    WHERE id_reserva = NEW.id_reserva;
+END $$
+
+DELIMITER ;
+```
+
+</div>
+<div class="col-right">
 Si fem:
 
 ```sql
@@ -151,24 +291,64 @@ VALUES (
     100
 );
 ```
-
----
-
-## Llavors
+Llavors
 
 ```sql
 NEW.id_reserva = 2
-```
-
-## I també
-
-```sql
 NEW.import_paga = 100
 ```
 
+
+</div>
+</div>
+
 ---
 
-## Crearem el **`trigger`**
+## Exemple
+
+<div class="cols">
+<div class="col-left">
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER trg_passa_reserva_a_confirma
+AFTER INSERT
+ON PAGAMENTS
+FOR EACH ROW
+BEGIN
+    UPDATE RESERVES
+    SET en_estat_reserva = 'confirmada'
+    WHERE id_reserva = NEW.id_reserva;
+END $$
+
+DELIMITER ;
+```
+
+</div>
+<div class="col-right">
+
+Si tenim:
+
+
+```sql
+NEW.id_reserva = 2
+NEW.import_paga = 100
+```
+Llavors
+
+```sql
+    UPDATE RESERVES
+    SET en_estat_reserva = 'confirmada'
+    WHERE id_reserva = 2;
+```
+
+</div>
+</div>
+
+---
+
+## Recordem el **`trigger`**
 
 ```sql
 DELIMITER $$
@@ -510,9 +690,3 @@ Crea el **`trigger`** <codijpc>trg_log_pagaments</codijpc> per què guardi un **
 - s'executa dins **MySQL**
 - respon a esdeveniments
 - útil per automatitzar regles de negoci
-
----
-
-## A continuació...
-
-### Triggers BEFORE vs AFTER
