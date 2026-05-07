@@ -112,6 +112,16 @@
       "description": "Desenvolupar un Gestor d’inventari informàtic, fent servir: Llistes, diccionaris i fitxers",
       "status": "active",
         "kind": "theory"
+    },
+    {
+      "order": 306,
+      "title": "306 - TEORIA - Llistes, diccionaris i fitxers",
+      "src": "slides/306-python-invent-files-teo.reveal",
+      "description": "Millorar el projecte d’el Gestor d’inventari informàtic",
+      "status": "active",
+        "kind": "theory"
     }
   ]
 }
+
+

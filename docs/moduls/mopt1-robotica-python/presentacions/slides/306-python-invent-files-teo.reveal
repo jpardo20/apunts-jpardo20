@@ -1,0 +1,794 @@
+# PR005 – Inventari informàtic
+
+## Objectiu de la sessió
+
+Avui millorarem el projecte d’inventari.
+
+Treballarem:
+
+- menú carregat des de fitxer
+- inventari carregat des de fitxer
+- mostrar inventari
+- afegir ordinador
+- guardar dades
+
+Note:
+Explica que avui no començaran un projecte nou. Continuaran millorant el que ja tenen. L’objectiu és entendre com un programa pot guardar i recuperar informació.
+
+---
+
+## Punt de partida
+
+Ja tenim un programa que:
+
+- mostra un menú
+- permet afegir ordinadors
+- guarda dades
+- mostra l’inventari
+
+Però encara volem millorar com treballem amb fitxers.
+
+Note:
+Recorda’ls que ara ja no estem fent només càlculs. Ara estem gestionant dades.
+
+---
+
+## Idea principal
+
+El programa treballarà amb dos fitxers:
+
+```bash
+menu.txt
+dades.txt
+```
+
+- <codijpc>menu.txt</codijpc> conté les opcions del menú
+- <codijpc>dades.txt</codijpc> conté els ordinadors
+
+Note:
+Insisteix que els fitxers són dades externes. El programa les llegeix i les converteix en estructures de Python.
+
+---
+
+## Fitxer <codijpc>menu.txt</codijpc>
+
+Exemple:
+
+```bash
+Sortida
+Afegir ordinador
+Mostrar inventari
+```
+
+Cada línia és una opció del menú.
+
+Note:
+Aquest és l’exemple senzill. No entris encara en IDs ni menús avançats. Mantén-ho simple.
+
+---
+
+## Objectiu 1
+
+Carregar el menú des del fitxer.
+
+Abans:
+
+```python
+opcionsMenu = [
+    "Sortida",
+    "Afegir ordinador",
+    "Mostrar inventari"
+]
+```
+
+Després:
+
+```python
+opcionsMenu = carregarMenu()
+```
+
+Note:
+Aquest és el primer objectiu. És una substitució molt visual i fàcil d’entendre.
+
+---
+
+## Funció <codijpc>carregarMenu</codijpc>
+
+```python
+def carregarMenu(fitxerAObrir="menu.txt"):
+    opcionsMenu = []
+
+    fitxer = open(fitxerAObrir, "r")
+    liniesFitxer = fitxer.readlines()
+    fitxer.close()
+
+    for liniaFitxer in liniesFitxer:
+        liniaFitxer = liniaFitxer.strip()
+        opcionsMenu.append(liniaFitxer)
+
+    return opcionsMenu
+```
+
+↓ (funció <codijpc>carregarMenu</codijpc> completa)
+
+Note:
+Explica línia per línia. Sobretot `readlines()`, `strip()` i `append()`.
+
+
+
+----
+
+
+```python
+def carregarMenu(fitxerAObrir="menu.txt"):
+    """
+    Carrega les opcions del menú des del fitxer rebut.
+
+    :param fitxerAObrir: és el nom del fitxer a obrir.
+        Tipus str
+        OPCIONAL, valor per defecte "menu.txt"
+
+    :return: retorna una llista amb totes les opcions del menú.
+        Tipus list
+    """
+    # Definició de variables
+    opcionsMenu = list()
+    liniesFitxer = list()
+    liniaFitxer = str()
+    fitxer = object()
+    # Inicialització de variables
+    opcionsMenu = []
+    # Obrir fitxer
+    fitxer = open(fitxerAObrir, "r")
+    # Llegir línies
+    liniesFitxer = fitxer.readlines()
+    # Tancar fitxer
+    fitxer.close()
+    # Recórrer línies
+    for liniaFitxer in liniesFitxer:
+        # Eliminar \n
+        liniaFitxer = liniaFitxer.strip()
+        # Afegir opció a la llista
+        opcionsMenu.append(liniaFitxer)
+    # Retornar llista
+    return opcionsMenu
+```
+
+---
+
+## Què fa readlines?
+
+```python
+liniesFitxer = fitxer.readlines()
+```
+
+Això llegeix totes les línies del fitxer.
+
+Exemple:
+
+```python
+[
+    "Sortida\n",
+    "Afegir ordinador\n",
+    "Mostrar inventari\n"
+]
+```
+
+Note:
+Mostra que el `\n` forma part de la línia. Això justifica el `strip()`.
+
+---
+
+## Què fa <codijpc>strip</codijpc>?
+
+```python
+liniaFitxer = liniaFitxer.strip()
+```
+
+Elimina espais i salts de línia (<codijpc>\n</codijpc>) del principi i del final.
+
+Exemple:
+
+```python
+"Sortida\n"
+```
+
+passa a:
+
+```python
+"Sortida"
+```
+
+Note:
+Aquest punt és clau. Si no ho entenen, després tindran problemes amb les comparacions i la visualització.
+
+---
+
+## Què fa <codijpc>append</codijpc>?
+
+```python
+opcionsMenu.append(liniaFitxer)
+```
+
+Afegeix una opció nova a la llista.
+
+Al final tindrem:
+
+```python
+["Sortida", "Afegir ordinador", "Mostrar inventari"]
+```
+
+Note:
+Relaciona-ho amb el que ja han fet amb l’inventari.
+
+---
+
+## Primer repte
+
+Comprova que el menú es carrega correctament.
+
+Al programa principal:
+
+```python
+opcionsMenu = carregarMenu()
+```
+
+I després:
+
+```python
+pintaMenu(opcionsMenu, "Inventari")
+```
+
+Note:
+Deixa uns minuts perquè ho provin. Si falla, revisa el nom del fitxer i la ubicació.
+
+---
+
+## Fitxer <codijpc>dades.txt</codijpc>
+
+Ara treballarem amb ordinadors.
+
+Exemple:
+
+```bash
+PC001;i5;16
+PC002;i7;32
+PC003;Ryzen 5;16
+```
+
+Cada línia representa un ordinador.
+
+Note:
+Explica que ara cada línia té més d’una dada. Per això necessitem separar-la.
+
+---
+
+## Objectiu 2
+
+Carregar l’inventari des del fitxer.
+
+Volem passar de text:
+
+```bash
+PC001;i5;16
+```
+
+a un diccionari:
+
+```python
+{
+    "nom": "PC001",
+    "cpu": "i5",
+    "ram": 16
+}
+```
+
+Note:
+Aquest és el moment més important de la sessió. Text → dades estructurades.
+
+---
+
+## La funció <codijpc>split</codijpc>
+
+```python
+liniaFitxer = "PC001;i5;16"
+
+dadesOrdinador = liniaFitxer.split(";")
+```
+
+Resultat:
+
+```python
+["PC001", "i5", "16"]
+```
+
+Note:
+Fes que ho provin a la consola o en un fitxer petit. És el concepte clau del dia.
+
+---
+
+## Accedir a les dades
+
+```python
+dadesOrdinador[0]  # PC001
+dadesOrdinador[1]  # i5
+dadesOrdinador[2]  # 16
+```
+
+Amb això podem crear el diccionari.
+
+Note:
+Recorda el concepte de posicions de llista.
+
+---
+
+## Crear el diccionari
+
+```python
+ordinador = {
+    "nom": dadesOrdinador[0],
+    "cpu": dadesOrdinador[1],
+    "ram": int(dadesOrdinador[2])
+}
+```
+
+La RAM es converteix a enter amb:
+
+```python
+int()
+```
+
+Note:
+Pregunta per què cal fer `int()`. Que vegin que del fitxer tot arriba com a text.
+
+---
+
+## Afegir a l’inventari
+
+```python
+inventari.append(ordinador)
+```
+
+Ara l’inventari és una llista de diccionaris.
+
+```python
+[
+    {"nom": "PC001", "cpu": "i5", "ram": 16},
+    {"nom": "PC002", "cpu": "i7", "ram": 32}
+]
+```
+
+Note:
+Aquest és el gran objectiu conceptual de la sessió.
+
+---
+
+## Funció <codijpc>carregaDades</codijpc>
+
+```python
+def carregaDades(fitxerAObrir="dades.txt"):
+    inventari = []
+
+    fitxer = open(fitxerAObrir, "r")
+    liniesFitxer = fitxer.readlines()
+    fitxer.close()
+
+    for liniaFitxer in liniesFitxer:
+        liniaFitxer = liniaFitxer.strip()
+        dadesOrdinador = liniaFitxer.split(";")
+
+        ordinador = {
+            "nom": dadesOrdinador[0],
+            "cpu": dadesOrdinador[1],
+            "ram": int(dadesOrdinador[2])
+        }
+
+        inventari.append(ordinador)
+
+    return inventari
+```
+
+↓ (funció <codijpc>carregaDades</codijpc> completa)
+
+Note:
+No cal que la copiïn sense pensar. Fes que l’entenguin comparant-la amb `carregarMenu()`.
+
+----
+
+```python
+def carregaDades(fitxerAObrir="dades.txt"):
+    """
+    Carrega els ordinadors des del fitxer rebut.
+
+    :param fitxerAObrir: és el nom del fitxer a obrir.
+        Tipus str
+        OPCIONAL, valor per defecte "dades.txt"
+
+    :return: retorna una llista de diccionaris amb els ordinadors.
+        Tipus list
+    """
+    # Definició de variables
+    inventari = list()
+    fitxer = object()
+    liniesFitxer = list()
+    liniaFitxer = str()
+    dadesOrdinador = list()
+    ordinador = dict()
+    # Inicialització de variables
+    inventari = []
+    # Obrir fitxer
+    fitxer = open(fitxerAObrir, "r")
+    # Llegir línies
+    liniesFitxer = fitxer.readlines()
+    # Tancar fitxer
+    fitxer.close()
+    # Recórrer línies del fitxer
+    for liniaFitxer in liniesFitxer:
+        # Eliminar \n
+        liniaFitxer = liniaFitxer.strip()
+        # Separar dades
+        dadesOrdinador = liniaFitxer.split(";")
+        # Crear diccionari
+        ordinador = {
+            "nom": dadesOrdinador[0],
+            "cpu": dadesOrdinador[1],
+            "ram": int(dadesOrdinador[2])
+        }
+        # Afegir ordinador a l'inventari
+        inventari.append(ordinador)
+    # Retornar inventari
+    return inventari
+```
+
+---
+
+## Comparació important
+
+<codijpc>carregarMenu()</codijpc>:
+
+```python
+fitxer -> línies (opcions del menú)-> llista
+```
+
+<codijpc>carregaDades()</codijpc>:
+
+```python
+fitxer -> línies de text -> <codijpc>split</codijpc> per accedir a cada camp -> llista
+```
+
+Note:
+Aquesta comparació els ajuda molt. És el mateix patró, però més elaborat.
+
+---
+
+## Objectiu 3
+
+Inicialitzar l’inventari carregant el fitxer.
+
+Abans:
+
+```python
+inventari = []
+```
+
+Després:
+
+```python
+inventari = carregaDades()
+```
+
+Note:
+Explica que ara el programa no comença buit. Comença amb les dades guardades.
+
+---
+
+## Objectiu 4
+
+Mostrar l’inventari per pantalla.
+
+Exemple de sortida:
+
+```bash
+Ordinador #1
+------------------------------
+Nom: PC001
+CPU: i5
+RAM: 16 GB
+------------------------------
+```
+
+Note:
+Això reforça l’accés a diccionaris amb claus.
+
+---
+
+## Funció <codijpc>mostrarInventari</codijpc>
+
+```python
+def mostrarInventari(inventari):
+    i = 1
+
+    if len(inventari) == 0:
+        print("No hi ha ordinadors a l'inventari.")
+    else:
+        for ordinador in inventari:
+            print("------------------------------")
+            print(f"Ordinador #{i}")
+            print(f"Nom: {ordinador['nom']}")
+            print(f"CPU: {ordinador['cpu']}")
+            print(f"RAM: {ordinador['ram']} GB")
+            print("------------------------------")
+            i = i + 1
+```
+
+↓ (funció <codijpc>mostrarInventari</codijpc> completa)
+
+
+Note:
+Recorda que dins d’un f-string és millor fer servir cometes simples per accedir a les claus.
+
+----
+
+```python
+def mostrarInventari(inventari):
+    """
+    Mostra tots els ordinadors de l'inventari.
+
+    :param inventari: és la llista de diccionaris amb els ordinadors.
+        Tipus list
+
+    :return: no retorna res.
+    """
+    # Definició de variables
+    i = int()
+    ordinador = dict()
+    # Inicialització de variables
+    i = 1
+    # Comprovar si l'inventari està buit
+    if len(inventari) == 0:
+        print("No hi ha ordinadors a l'inventari.")
+    else:
+        # Recórrer inventari
+        for ordinador in inventari:
+            print("------------------------------")
+            print(f"Ordinador #{i}")
+            print(f"Nom: {ordinador['nom']}")
+            print(f"CPU: {ordinador['cpu']}")
+            print(f"RAM: {ordinador['ram']} GB")
+            print("------------------------------")
+            # Incrementar comptador
+            i = i + 1
+```
+
+---
+
+## Objectiu 5
+
+Afegir un ordinador nou.
+
+Cal demanar:
+
+- Nom de l'ordinador,
+- CPU de l'ordinador, i
+- RAM de l'ordinador
+
+I crear:
+
+```python
+ordinador = {
+    "nom": nomOrdinador,
+    "cpu": cpuOrdinador,
+    "ram": ramOrdinador
+}
+```
+
+Note:
+Aquesta part ja l’han treballada. Aquí haurien de començar a ser més autònoms.
+
+---
+
+## Afegir a la llista
+
+```python
+inventari.append(ordinador)
+```
+
+El nou ordinador queda afegit a l’inventari mentre el programa està obert.
+
+Note:
+Pregunta: què passarà si tanquem sense guardar? Això porta al següent pas.
+
+---
+
+## Objectiu 6
+
+Guardar l’inventari al fitxer quan l’usuari surt.
+
+Quan l’usuari tria sortir:
+
+```python
+guardaDades(inventari)
+```
+
+Note:
+Explica que guardar al sortir evita escriure al fitxer cada vegada que fem un canvi.
+
+---
+
+## Funció <codijpc>guardaDades</codijpc>
+
+```python
+def guardaDades(inventari, fitxerAGuardar="dades.txt"):
+    fitxer = open(fitxerAGuardar, "w")
+
+    for ordinador in inventari:
+        fitxer.write(
+            f"{ordinador['nom']};"
+            f"{ordinador['cpu']};"
+            f"{ordinador['ram']}\n"
+        )
+
+    fitxer.close()
+```
+
+- mode <codijpc>w</codijpc> (**write**) sobreescriu TOT el contingut del fitxer, i si el fitxer no existeix, el crea.
+
+- mode <codijpc>a</codijpc> (**append**) afegeix al final del contingut del fitxer
+
+
+Note:
+Explica la diferència entre mode `w` i mode `a`.
+
+---
+
+## Mode <codijpc>w</codijpc>
+
+```python
+open("dades.txt", "w")
+```
+
+**Sobreescriu** el fitxer.
+
+És útil quan volem guardar l’**estat complet de l’inventari**.
+
+Note:
+Aclareix que no és un error que esborri el contingut anterior: és el que volem si guardem tot l’inventari.
+
+---
+
+## Mode <codijpc>a</codijpc>
+
+```python
+open("dades.txt", "a")
+```
+
+Afegeix al final del fitxer.
+
+És útil quan només volem afegir una línia nova.
+
+Note:
+Pots comparar-ho amb un registre d’esdeveniments.
+
+---
+
+## Quan guardar?
+
+En aquesta pràctica guardarem quan l’usuari surti.
+
+```python
+case 0:
+    guardaDades(inventari)
+    volSeguir = False
+```
+
+Note:
+Això reforça el flux del programa.
+
+---
+
+## Treball autònom
+
+Ara heu de tenir:
+
+- menú carregat des de <codijpc>menu.txt</codijpc>
+- inventari carregat des de <codijpc>dades.txt</codijpc>
+- inventari mostrat correctament
+- ordinadors afegits a la llista
+- inventari guardat en sortir
+
+Note:
+A partir d’aquí deixa’ls treballar. Tu només desbloqueja errors.
+
+---
+
+## Errors típics
+
+- oblidar <codijpc>strip()</codijpc>
+- oblidar <codijpc>split(";")</codijpc>
+- no convertir la **RAM** a <codijpc>int</codijpc>
+- escriure malament les **claus** del diccionari
+- obrir un fitxer que no existeix
+- no tancar el fitxer
+
+Note:
+Aquesta diapositiva és molt útil per fer debugging conjunt.
+
+---
+
+## Preguntes de comprovació
+
+Respon mentalment:
+
+- Què retorna <codijpc>carregarMenu()</codijpc>?
+- Què retorna <codijpc>carregaDades()</codijpc>?
+- Per què fem servir </codijpc>split(";")</codijpc>?
+- Per què la **RAM** s’ha de convertir a enter?
+- Quan es guarda el fitxer?
+
+Note:
+Fes-les oralment abans de tancar la classe.
+
+---
+
+## FLUX
+
+<div style="text-align:center; font-size: 1.4em; line-height: 1.8;">
+El fitxer <codijpc>dades.txt</codijpc> conté
+<br>
+un <strong>ordinador</strong> a cada una de les <strong>línies de text</strong>
+<br>
+cal fer <codijpc>split</codijpc> per obtenir els components d'un <strong>ordinador</strong>
+</div>
+↓
+
+----
+
+<div style="text-align:center; font-size: 1.4em; line-height: 1.8;">
+Cada línia del fitxer es converteix en un <strong>diccionari</strong>.
+<br>
+Cada <strong>diccionari</strong> representa un ordinador.
+<br>
+L'<strong>inventari</strong> és una llista de diccionaris.
+</div>
+↓
+
+----
+
+<div style="text-align:center; font-size: 1.4em; line-height: 1.8;">
+execució del programa i<br>al final del programa
+</div>
+
+↓
+
+----
+
+
+<div style="text-align:center; font-size: 1.4em; line-height: 1.8;">
+<br>
+tenim l'<strong>inventari</strong> (<strong>diccionaris</strong>)
+cada element de l'<strong>inventari</strong> és un <strong>ordinador</strong>
+<br>
+i <br>cal guardar-lo a una línia del fitxer <codijpc>dades.txt</codijpc>
+</div>
+
+
+Note:
+Aquesta és la idea central de tota la sessió.
+
+---
+
+## Missatge final
+
+Ara el programa ja no només mostra dades.
+
+Ara:
+
+- llegeix dades
+- transforma dades
+- treballa amb dades
+- guarda dades
+
+Això és una aplicació real.
+
+Note:
+Tanca connectant-ho amb inventaris reals, GLPI o aplicacions de gestió.
