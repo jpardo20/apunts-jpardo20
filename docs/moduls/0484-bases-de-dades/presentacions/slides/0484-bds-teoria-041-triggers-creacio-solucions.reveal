@@ -8,6 +8,7 @@ el **`trigger`** <codijpc>trg_confirma_reserva_si_pendent</codijpc> que faci el 
 - Només canviï l'estat a <codijpc>confirmada</codijpc>
 - si la reserva estava <codijpc>pendent</codijpc>
 
+---
 
 ## Solució 1 - Exercici 1
 
