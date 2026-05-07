@@ -682,6 +682,20 @@ BEFORE INSERT
 
 Crea el **`trigger`** <codijpc>trg_log_pagaments</codijpc> per què guardi un **`log`** cada vegada que es faci un pagament.
 
+## Primer pas
+
+Crear la taula:
+
+```sql
+CREATE TABLE log_pagaments (
+    id_log INT AUTO_INCREMENT PRIMARY KEY,
+    id_reserva INT,
+    import_pagament DECIMAL(10,2),
+    data_log DATETIME DEFAULT CURRENT_TIMESTAMP,
+    missatge VARCHAR(255)
+);
+```
+
 ---
 
 ## Resum
