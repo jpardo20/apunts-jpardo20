@@ -342,7 +342,7 @@ docker-compose up -d
 docker ps
 ```
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0001.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0001.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
 Han d’aparèixer:
@@ -363,7 +363,7 @@ Presionem <kbd>Go to install page</kbd> per inicair la instal·lació de **`GLPI
 </div>
 <div class="col-right">
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0002.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0002.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
 </div>
@@ -377,7 +377,7 @@ A la finestra "GLPI setup" escollim l'idioma en que volem instal·lar-lo.
 </div>
 <div class="col-right">
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0003.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0003.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
 </div>
@@ -394,7 +394,7 @@ Presionem <kbd>Continuar > </kbd> per acceptar la llicència.
 </div>
 <div class="col-right">
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0004.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0004.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
 
@@ -413,7 +413,7 @@ Escollim 'Instalar' per continuar amb la instal·lació
 </div>
 <div class="col-right">
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0005.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0005.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
 
@@ -432,7 +432,7 @@ Presionem <kbd>Continuar > </kbd> per confirmamr que s'han validat tots els requ
 </div>
 <div class="col-right">
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0006.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0006.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
 </div>
@@ -458,7 +458,7 @@ Presionem <kbd>Continuar > </kbd> per seguir amb la instal·lació.
 </div>
 <div class="col-right">
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0007.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0007.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 </div>
 
@@ -475,7 +475,7 @@ Presionem <kbd>Ok</kbd> per indicar que ho hem entès!
 </div>
 <div class="col-right">
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0008.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0008.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 </div>
 
@@ -492,7 +492,7 @@ Podeu fer el que creieu convenient.
 </div>
 <div class="col-right">
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0009.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0009.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
 </div>
@@ -518,7 +518,7 @@ Pitjem <kbd>Continuar > </kbd> per tirar endavant la instal·lació.
 </div>
 <div class="col-right">
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0010.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0010.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 </div>
 
@@ -533,7 +533,7 @@ La finestra "Configuración de GLPI - Paso 3" durant la instal·lació
 </div>
 <div class="col-right">
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0011.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0011.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
 </div>
@@ -549,7 +549,7 @@ La finestra "Configuración de GLPI - Paso 3" gaire bé al final de la instal·l
 <div class="col-right">
 
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0012.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0012.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 </div>
 
@@ -565,7 +565,7 @@ Presionem <kbd>Continuar > </kbd> per seguir amb la instal·lació.
 </div>
 <div class="col-right">
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0013.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0013.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
 </div>
@@ -583,7 +583,7 @@ Pitjem <kbd>Continuar > </kbd> per seguir endavant.
 </div>
 <div class="col-right">
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0014.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0014.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 </div>
 
@@ -598,7 +598,7 @@ Tornem a pitjar <kbd>Continuar > </kbd> per acabar la instal·lació.
 <div class="col-right">
 
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0016.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0016.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
 </div>
@@ -614,7 +614,7 @@ Tornem a pitjar <kbd>Utilizar GLPI</kbd> per començar a fer servir el programa.
 </div>
 <div class="col-right">
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0017.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0017.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
 </div>
@@ -642,7 +642,7 @@ MYSQL_PASSWORD: glpi
 ```
 </div>
 <div class="col-right">
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0018.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0018.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
 </div>
@@ -662,7 +662,7 @@ Però de moment la deixem.
 </div>
 <div class="col-right">
 
-<img src="../img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0019.png" 
+<img src="/apunts-jpardo20/assets/img/0225-xarxes-locals/xlo-3r-trim-glpi-docker-image-0019.png" 
      alt="xlo-3r-trim-glpi-docker-image-00XXX.png"></img>
 
 </div>

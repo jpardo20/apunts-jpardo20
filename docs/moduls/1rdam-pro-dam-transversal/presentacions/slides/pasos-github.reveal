@@ -52,7 +52,7 @@ $
 * VS Code amb terminal integrat
 
 <p align="center">
-  <img src="../img/pasos-github/pasos-github-image-0.png">pasos-github-image-0.png</img>
+  <img src="/apunts-jpardo20/assets/img/pasos-github/pasos-github-image-0.png">pasos-github-image-0.png</img>
 </p>
 
 
@@ -61,27 +61,27 @@ $
 
 ----
 
-![alt text](../img/pasos-github/pasos-github-image-1.png)
+![alt text](/apunts-jpardo20/assets/img/pasos-github/pasos-github-image-1.png)
 
 ⬇️
 
 ----
 
-![alt text](../img/pasos-github/pasos-github-image-2.png)
-
-⬇️
-
-----
-
-
-![alt text](../img/pasos-github/pasos-github-image-3.png)
+![alt text](/apunts-jpardo20/assets/img/pasos-github/pasos-github-image-2.png)
 
 ⬇️
 
 ----
 
 
-![alt text](../img/pasos-github/pasos-github-image-4.png)
+![alt text](/apunts-jpardo20/assets/img/pasos-github/pasos-github-image-3.png)
+
+⬇️
+
+----
+
+
+![alt text](/apunts-jpardo20/assets/img/pasos-github/pasos-github-image-4.png)
 
 ---
 
@@ -421,7 +421,7 @@ gh pr comment <number> --body "QA review failed:
 
 El PR queda **obert** fins que l’alumne responsable el corregeixi.
 
-![alt text](../img/1rdam-pro-dam-transversal/gh-pr-comment-example.png)
+![alt text](/apunts-jpardo20/assets/img/1rdam-pro-dam-transversal/gh-pr-comment-example.png)
 
 ---
 

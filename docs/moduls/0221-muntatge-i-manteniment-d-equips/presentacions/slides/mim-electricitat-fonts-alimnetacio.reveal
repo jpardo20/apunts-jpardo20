@@ -5,7 +5,7 @@
 
 * La font d'alimentació (ﬁgura 1.8) és un aparell encarregat de transformar la tensió alterna de la xarxa elèctrica en una tensió contínua.
 
-<img src="../img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p26_block257_524.png" height="300">
+<img src="/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p26_block257_524.png" height="300">
 
 >  **Figura 1.8**: Font d'alimentació per a laboratori d'electrònica
 
@@ -36,7 +36,7 @@
 
 ----
 
-![fp_smx_m01_u1_pdfindex_p27_block133_281.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p27_block133_281.png)
+![fp_smx_m01_u1_pdfindex_p27_block133_281.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p27_block133_281.png)
 
 > Figura 1.9: Font d'alimentació d'un ordinador
 
@@ -44,9 +44,9 @@
 
 |||
 |----|----|
-|Interior d'una font d'alimentació|<img src="../img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p27_block439_285.png" height="150">|
-|Detall del ventilador|<img src="../img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p27_block439_399.png" height="150">|
-|Cables d'alimentació d'una font AT|<img src="../img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p27_block439_496.png" height="150">|
+|Interior d'una font d'alimentació|<img src="/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p27_block439_285.png" height="150">|
+|Detall del ventilador|<img src="/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p27_block439_399.png" height="150">|
+|Cables d'alimentació d'una font AT|<img src="/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p27_block439_496.png" height="150">|
 |||
 
 ----
@@ -91,11 +91,11 @@ Els connectors que vénen inclosos en la font d'alimentació estan normalitzats 
 
 De manera més detallada, els connectors són els següents:
 
-![fp_smx_m01_u1_pdfindex_p28_block42_376.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p28_block42_376.png) Connector P9
+![fp_smx_m01_u1_pdfindex_p28_block42_376.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p28_block42_376.png) Connector P9
 
-![fp_smx_m01_u1_pdfindex_p28_block42_503.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p28_block42_503.png) Conector d'alimentació ATX
+![fp_smx_m01_u1_pdfindex_p28_block42_503.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p28_block42_503.png) Conector d'alimentació ATX
 
-![fp_smx_m01_u1_pdfindex_p28_block42_645.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p28_block42_645.png) ATX 12 V
+![fp_smx_m01_u1_pdfindex_p28_block42_645.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p28_block42_645.png) ATX 12 V
 
 * Connector d'alimentació principal del PC (normalment anomenat P1).
 
@@ -174,15 +174,15 @@ d'alimentació a la xarxa elèctrica local.
 
 Connector P8
 
-![fp_smx_m01_u1_pdfindex_p29_block439_182.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p29_block439_182.png) Connector Molex IDE
+![fp_smx_m01_u1_pdfindex_p29_block439_182.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p29_block439_182.png) Connector Molex IDE
 
-![fp_smx_m01_u1_pdfindex_p29_block439_321.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p29_block439_321.png) Connector disquetera
+![fp_smx_m01_u1_pdfindex_p29_block439_321.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p29_block439_321.png) Connector disquetera
 
 Figura 1.10.
 
 * Connectors P8 i P9 d'una font d'alimentació AT
 
-![fp_smx_m01_u1_pdfindex_p29_block121_425.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p29_block121_425.png) La resta dels connectors que surten de la font d'alimentació són de quatre contactes i serveixen per a alimentar les unitats del disc o qualsevol altra part del dispositiu que instal·lem a l'ordinador.
+![fp_smx_m01_u1_pdfindex_p29_block121_425.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p29_block121_425.png) La resta dels connectors que surten de la font d'alimentació són de quatre contactes i serveixen per a alimentar les unitats del disc o qualsevol altra part del dispositiu que instal·lem a l'ordinador.
 
 * D'aquests connectors n'hi ha un de més petit que solament és vàlid per a alimentar les disqueteres de 3 1/2”.
 
@@ -192,13 +192,13 @@ Figura 1.11.
 
 * Connector d'alimentació d'una font ATX
 
-![fp_smx_m01_u1_pdfindex_p30_block234_72.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p30_block234_72.png) Figura 1.12.
+![fp_smx_m01_u1_pdfindex_p30_block234_72.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p30_block234_72.png) Figura 1.12.
 
 * Connectors Molex d'alimentació de disc dur i disquetera.
 
 * Connector d'alimentació SATA
 
-![fp_smx_m01_u1_pdfindex_p30_block234_274.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p30_block234_274.png) En les següents taules s'indiquen els colors dels ﬁls d'aquests connectors i el voltatge associat a cada un.
+![fp_smx_m01_u1_pdfindex_p30_block234_274.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p30_block234_274.png) En les següents taules s'indiquen els colors dels ﬁls d'aquests connectors i el voltatge associat a cada un.
 
 Taula 1.7 - Connectors de la font d'alimentació
 
@@ -386,7 +386,7 @@ Diagnosi de la font
 
 Per a començar la diagnosi de la font, cal assegurar-se que està desendollada de la xarxa elèctrica i que la posició del selector de voltatge posterior, si en té, està a 220 V.
 
-![fp_smx_m01_u1_pdfindex_p33_block439_137.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p33_block439_137.png) Assegureu-vos que la font està ajustada a 220 V.
+![fp_smx_m01_u1_pdfindex_p33_block439_137.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p33_block439_137.png) Assegureu-vos que la font està ajustada a 220 V.
 
 Seguidament, si el ventilador de la font es troba en funcionament, no hi ha dubte que l'alimentació de la font és correcta.
 
@@ -398,7 +398,7 @@ Figura 1.13.
 
 * Comprovació de la connexió a la xarxa elèctrica
 
-![fp_smx_m01_u1_pdfindex_p33_block96_249.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p33_block96_249.png) Si l'endoll està subministrant la potència adequada, podem passar a fer un test de continuïtat al cable d'alimentació, com es mostra en la ﬁgura 1.14.
+![fp_smx_m01_u1_pdfindex_p33_block96_249.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p33_block96_249.png) Si l'endoll està subministrant la potència adequada, podem passar a fer un test de continuïtat al cable d'alimentació, com es mostra en la ﬁgura 1.14.
 
 * Si tant l'endoll com el cable funcionen, podem aﬁrmar que el ventilador no funciona i, per tant, caldrà substituïr la font d'alimentació.
 
@@ -410,7 +410,7 @@ Figura 1.14.
 
 * Feu un test de continuïtat al cable d'alimentació.
 
-![fp_smx_m01_u1_pdfindex_p33_block96_575.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p33_block96_575.png) 34
+![fp_smx_m01_u1_pdfindex_p33_block96_575.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p33_block96_575.png) 34
 
 Vegeu el sub-subapartat “Els connectors” en aquesta unitat.
 
@@ -459,7 +459,7 @@ La presència d'un clip al connector P1 fa que això resulti més fàcil del que
 
 * D'aquesta manera és més fàcil trobar la situació de la resta de pins.
 
-![fp_smx_m01_u1_pdfindex_p34_block42_465.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p34_block42_465.png)
+![fp_smx_m01_u1_pdfindex_p34_block42_465.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p34_block42_465.png)
 2.
 
 * Si mesurem amb el multímetre una font ATX, el pin 9 ha de donar un valor de 5
@@ -496,10 +496,10 @@ Figura 1.15.
 
 * Connecteu la sonda roja a cada cable de color i la negra a un cable negre.
 
-![fp_smx_m01_u1_pdfindex_p35_block96_81.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p35_block96_81.png)
-![fp_smx_m01_u1_pdfindex_p35_block439_80.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p35_block439_80.png) Diagrama d'un connector P1Disseny del connector d'una font ATX
+![fp_smx_m01_u1_pdfindex_p35_block96_81.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p35_block96_81.png)
+![fp_smx_m01_u1_pdfindex_p35_block439_80.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p35_block439_80.png) Diagrama d'un connector P1Disseny del connector d'una font ATX
 
-![fp_smx_m01_u1_pdfindex_p35_block439_307.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p35_block439_307.png)
+![fp_smx_m01_u1_pdfindex_p35_block439_307.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p35_block439_307.png)
 4.
 
 * Un cop els mesuradors estan connectats, el multímetre hauria d'indicar un

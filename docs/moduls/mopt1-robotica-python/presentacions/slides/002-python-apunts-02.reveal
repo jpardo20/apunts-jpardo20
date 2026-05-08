@@ -44,7 +44,7 @@ nota = float()  # float -> Decimals (número amb decimals)
 
 Ajuda que mostra **VSC** de  <kbd class="minus codi">print()</kbd>
 
-![alt text](../../../assets/img/info-vsc-python-print.png)
+![alt text](/apunts-jpardo20/assets/img/info-vsc-python-print.png)
 
 - Què retorna?
 
@@ -56,7 +56,7 @@ Ajuda que mostra **VSC** de  <kbd class="minus codi">print()</kbd>
 
 Ajuda que mostra **VSC** de  <kbd class="minus codi">print()</kbd>
 
-![alt text](../../../assets/img/info-vsc-python-print.png)
+![alt text](/apunts-jpardo20/assets/img/info-vsc-python-print.png)
 
 - Quins arguments té?
 
@@ -80,7 +80,7 @@ Ajuda que mostra **VSC** de  <kbd class="minus codi">print()</kbd>
 
 Ajuda que mostra **VSC** de  <kbd class="minus codi">input()</kbd>
 
-![alt text](../../../assets/img/info-vsc-python-input.png)
+![alt text](/apunts-jpardo20/assets/img/info-vsc-python-input.png)
 
 - Què retorna?
 
@@ -92,7 +92,7 @@ Ajuda que mostra **VSC** de  <kbd class="minus codi">input()</kbd>
 
 Ajuda que mostra **VSC** de  <kbd class="minus codi">input()</kbd>
 
-![alt text](../../../assets/img/info-vsc-python-strip.png)
+![alt text](/apunts-jpardo20/assets/img/info-vsc-python-strip.png)
 
 - Per què ho fem així?
     ```python

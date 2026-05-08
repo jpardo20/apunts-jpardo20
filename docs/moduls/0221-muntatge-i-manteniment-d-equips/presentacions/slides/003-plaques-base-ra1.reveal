@@ -9,7 +9,7 @@
 
 ## Elements de la placa
 
-![alt text](../../../assets/img/elements-de-la-placa-base.png)
+![alt text](/apunts-jpardo20/assets/img/elements-de-la-placa-base.png)
 
 ---
 ##### Components d’un equip microinformàtic
@@ -17,7 +17,7 @@
 
 ## Placa Base
 
-![alt text](../../../assets/img/placa-base.png)
+![alt text](/apunts-jpardo20/assets/img/placa-base.png)
 
 ---
 
@@ -93,7 +93,7 @@
 
   - ZIF: El micro porta els pins, que es connecten al socket foradat.
 
-  ![alt text](../../../assets/img/socket-zif.png)
+  ![alt text](/apunts-jpardo20/assets/img/socket-zif.png)
 
 ----
 ##### Components d’un equip microinformàtic
@@ -104,7 +104,7 @@
   - LGA: El socket porta els pins en comptes del micro.
     - Millor sistema de distribució d’energia i majors velocitats de bus.
 
-  ![alt text](../../../assets/img/socket-lga.png)
+  ![alt text](/apunts-jpardo20/assets/img/socket-lga.png)
 ---
 ##### Components d’un equip microinformàtic
 #### Plaques Base
@@ -133,7 +133,7 @@
 
 ## Ranures de memòria (3/4)
 
-![alt text](../../../assets/img/ranures-de-memoria.png)
+![alt text](/apunts-jpardo20/assets/img/ranures-de-memoria.png)
 
 ----
 
@@ -215,7 +215,7 @@
 
 ### **Northbridge (Pont Nord)**
 
-![alt text](../../../assets/img/northbridge-Pont-Nord.png)
+![alt text](/apunts-jpardo20/assets/img/northbridge-Pont-Nord.png)
 
 ----
 
@@ -243,7 +243,7 @@
 
 ### **Southbridge (Pont Sud)**
 
-![alt text](../../../assets/img/southbridge-pont-sud.png)
+![alt text](/apunts-jpardo20/assets/img/southbridge-pont-sud.png)
 
 ----
 

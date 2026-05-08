@@ -341,11 +341,11 @@ http://192.168.56.101:8000/login.php
 
 </div>
  <div style="flex:3; text-align:left;">
-    <img src="../img/1rdam-pro-dam-transversal/creacio-base-dades-usuaris-image001.png" height="450" width="auto">
+    <img src="/apunts-jpardo20/assets/img/1rdam-pro-dam-transversal/creacio-base-dades-usuaris-image001.png" height="450" width="auto">
   </div>
 </div>
 
-<!-- ![alt text](../img/1rdam-pro-dam-transversal/creacio-base-dades-usuaris-image001.png) -->
+<!-- ![alt text](/apunts-jpardo20/assets/img/1rdam-pro-dam-transversal/creacio-base-dades-usuaris-image001.png) -->
 
 ⬇️
 
@@ -364,7 +364,7 @@ Si tot està bé → **`Login correcte!`**
 
 </div>
  <div style="flex:3; text-align:left;">
-    <img src="../img/1rdam-pro-dam-transversal/creacio-base-dades-usuaris-image002.png" height="450" width="auto">
+    <img src="/apunts-jpardo20/assets/img/1rdam-pro-dam-transversal/creacio-base-dades-usuaris-image002.png" height="450" width="auto">
   </div>
 </div>
 

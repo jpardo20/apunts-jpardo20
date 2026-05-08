@@ -34,7 +34,7 @@ Una relació també **pot tenir atributs**.
 
     * de les operacions ens interessa la **data**.
 
-![alt text](../../../assets/img/./exemples-relacions.png)
+![alt text](/apunts-jpardo20/assets/img/exemples-relacions.png)
 
 ---
 
@@ -61,7 +61,7 @@ Només participa una entitat, també s’anomena reflexiva.
 
 -> **`(1,1)`**
 
-![alt text](../../../assets/img/exemple-reflexiva.png)
+![alt text](/apunts-jpardo20/assets/img/exemple-reflexiva.png)
 
 ---
 
@@ -79,7 +79,7 @@ Relació un a un (1:1): A cada element de la 1a entitat li correspon un i solame
 
 -> **`(1,n)`**
 
-![alt text](../../../assets/img/exemple-binaria.png)
+![alt text](/apunts-jpardo20/assets/img/exemple-binaria.png)
 
 ---
 
@@ -98,7 +98,7 @@ Relació d'un a molts (1:N): A cada element de 1a entitat li correspon un o més
 
 -> **`(1,1)`**
 
-![alt text](../../../assets/img/exemple-binaria-1-a-n.png)
+![alt text](/apunts-jpardo20/assets/img/exemple-binaria-1-a-n.png)
 ---
 
 ## Relació de grau dos (binària)
@@ -117,7 +117,7 @@ Relació de **molts a molts** **`(N:M)`**: A cada element de la **1a entitat** l
 -> **`(1,m)`**
 
 
-![alt text](../../../assets/img/exemple-binaria-n-a-m.png)
+![alt text](/apunts-jpardo20/assets/img/exemple-binaria-n-a-m.png)
 
 ---
 

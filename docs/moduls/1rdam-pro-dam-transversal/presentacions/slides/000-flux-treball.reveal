@@ -13,7 +13,7 @@
 
   </div>
   <div style="flex:1;">
-    <img src="../img/1rdam-pro-dam-transversal/000-flux-treball-001-new-item.png" height="450" width="auto">
+    <img src="/apunts-jpardo20/assets/img/1rdam-pro-dam-transversal/000-flux-treball-001-new-item.png" height="450" width="auto">
   </div>
 </div>
 
@@ -30,7 +30,7 @@
     </ul>
   </div>
   <div style="flex:1;">
-    <img src="../img/1rdam-pro-dam-transversal/000-flux-treball-002-nom-item.png" height="450" width="auto">
+    <img src="/apunts-jpardo20/assets/img/1rdam-pro-dam-transversal/000-flux-treball-002-nom-item.png" height="450" width="auto">
   </div>
 </div>
 
@@ -46,7 +46,7 @@
     </ul>
   </div>
   <div style="flex:1;">
-    <img src="../img/1rdam-pro-dam-transversal/000-flux-treball-003-blank-issue.png" height="450" width="auto">
+    <img src="/apunts-jpardo20/assets/img/1rdam-pro-dam-transversal/000-flux-treball-003-blank-issue.png" height="450" width="auto">
   </div>
 </div>
    
@@ -62,7 +62,7 @@
     </ul>
   </div>
   <div style="flex:1;">
-    <img src="../img/1rdam-pro-dam-transversal/000-flux-treball-004-add-comment.png" height="450" width="auto">
+    <img src="/apunts-jpardo20/assets/img/1rdam-pro-dam-transversal/000-flux-treball-004-add-comment.png" height="450" width="auto">
   </div>
 </div>
 
@@ -80,7 +80,7 @@
     </ul>
   </div>
   <div style="flex:1;">
-    <img src="../img/1rdam-pro-dam-transversal/000-flux-treball-006-task-link.png" height="450" width="auto">
+    <img src="/apunts-jpardo20/assets/img/1rdam-pro-dam-transversal/000-flux-treball-006-task-link.png" height="450" width="auto">
   </div>
 </div>
 
@@ -95,7 +95,7 @@
     </ul>
   </div>
   <div style="flex:1;">
-    <img src="../img/1rdam-pro-dam-transversal/000-flux-treball-007-task-assign-yourself.png" height="450" width="auto">
+    <img src="/apunts-jpardo20/assets/img/1rdam-pro-dam-transversal/000-flux-treball-007-task-assign-yourself.png" height="450" width="auto">
   </div>
 </div>
 
@@ -106,7 +106,7 @@
 
 Automàticament ja apareixerà com assingada a nosaltres.
 
-![alt text](../img/1rdam-pro-dam-transversal/000-flux-treball-008-task-assigned-yourself.png)
+![alt text](/apunts-jpardo20/assets/img/1rdam-pro-dam-transversal/000-flux-treball-008-task-assigned-yourself.png)
 
 
 ---
@@ -121,7 +121,7 @@ Automàticament ja apareixerà com assingada a nosaltres.
      ⬇️
   </div>
   <div style="flex:1;">
-    <img src="../img/1rdam-pro-dam-transversal/000-flux-treball-009-create-branch.png" height="450" width="auto">
+    <img src="/apunts-jpardo20/assets/img/1rdam-pro-dam-transversal/000-flux-treball-009-create-branch.png" height="450" width="auto">
   </div>
 </div>
 
@@ -143,14 +143,14 @@ l'opció <b>What's next?</b> tenim sel·leccionat <b>Checkout locally</b>.
  ⬇️
   </div>
   <div style="flex:1;">
-    <img src="../img/1rdam-pro-dam-transversal/000-flux-treball-010-create-branch-confirm.png" height="550" width="auto">
+    <img src="/apunts-jpardo20/assets/img/1rdam-pro-dam-transversal/000-flux-treball-010-create-branch-confirm.png" height="550" width="auto">
   </div>
 </div>
 Un cop tot és correcte, ja podem pitjar el botó <codijpc>Create branch</codijpc>, per crear-la.
 
 ----
 
-![alt text](../img/1rdam-pro-dam-transversal/000-flux-treball-011-create-branch-commands.png)
+![alt text](/apunts-jpardo20/assets/img/1rdam-pro-dam-transversal/000-flux-treball-011-create-branch-commands.png)
 
 Aquestes son les comandes que cal que exefcutis al teu repositori local per poder treballar sobre aquesta branca.
 
@@ -169,7 +169,7 @@ Tot seguit, <u>**abans de començar a treballar**</u>, a la nova branca, des del
 
 Per actualitzar la informació dels elements que hi ha al repositori remot.
 
-![alt text](../img/1rdam-pro-dam-transversal/000-flux-treball-012-git-fetch-origin.png)
+![alt text](/apunts-jpardo20/assets/img/1rdam-pro-dam-transversal/000-flux-treball-012-git-fetch-origin.png)
 
 
 ⬇️
@@ -178,7 +178,7 @@ Per actualitzar la informació dels elements que hi ha al repositori remot.
 
 <codijpc>git checkout 11-titol-que-volem-que-tingui-la-tascca</codijpc>
 
-![alt text](../img/1rdam-pro-dam-transversal/000-flux-treball-013-git-checkout-11.png)
+![alt text](/apunts-jpardo20/assets/img/1rdam-pro-dam-transversal/000-flux-treball-013-git-checkout-11.png)
 
 Per desplaçar-nos a la branca que acabem de crear per dur a terme la feina.
 

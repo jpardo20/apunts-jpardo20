@@ -35,7 +35,7 @@ Con el repositorio remoto, clonado, debes de seguir los pasos que se detallan a 
 
 Antes de empezar, instala en tu sistema <a href="https://okular.kde.org/es/" target="blank">**`Okular`**</a> un lector y editor sencillo (pero potente) de PDF.
 
-![alt text](../../../assets/img/logo-okular.png)
+![alt text](/apunts-jpardo20/assets/img/logo-okular.png)
 
 [okular-release_25.08-6777-windows-cl-msvc2022-x86_64.exe](https://cdn.kde.org/ci-builds/graphics/okular/release-25.08/windows/okular-release_25.08-6777-windows-cl-msvc2022-x86_64.exe)
 

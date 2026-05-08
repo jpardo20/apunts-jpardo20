@@ -38,7 +38,7 @@ Penseu-ho com una **cadena**, no com peces soltes.
 </div>
 <div class="col-right">
 
-<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--la-primera-espurna.png" alt="Power Good" />
+<img src="/apunts-jpardo20/assets/img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--la-primera-espurna.png" alt="Power Good" />
 
 </div>
 </div>
@@ -82,7 +82,7 @@ Frase tranquil·litzadora:
 </div>
 <div class="col-right">
 
-<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--el-chequeig-matinal.png" alt="POST" />
+<img src="/apunts-jpardo20/assets/img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--el-chequeig-matinal.png" alt="POST" />
 
 </div>
 </div>
@@ -126,7 +126,7 @@ Resposta:
 </div>
 <div class="col-right">
 
-<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--on-es-el-mapa.png" alt="Boot sector" />
+<img src="/apunts-jpardo20/assets/img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--on-es-el-mapa.png" alt="Boot sector" />
 
 </div>
 </div>
@@ -169,7 +169,7 @@ Analogia:
 </div>
 <div class="col-right">
 
-<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--l-anatomia-del-vell-mapa.png" alt="MBR" />
+<img src="/apunts-jpardo20/assets/img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--l-anatomia-del-vell-mapa.png" alt="MBR" />
 
 </div>
 </div>
@@ -199,11 +199,11 @@ L’MBR **no és dolent**, però **ja no és suficient** per als sistemes actual
 
 <div class="cols">
   <div class="col-left img-compare">
-    <img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--evolucio-gpt.png" alt="GPT" />
+    <img src="/apunts-jpardo20/assets/img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--evolucio-gpt.png" alt="GPT" />
   </div>
 
   <div class="col-right img-compare">
-    <img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--evolucio-mbr.png" alt="MBR" />
+    <img src="/apunts-jpardo20/assets/img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--evolucio-mbr.png" alt="MBR" />
   </div>
 </div>
 
@@ -267,7 +267,7 @@ el més normal és UEFI + GPT.”
 </div>
 <div class="col-right">
 
-<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--el-director-d-orquestra.png" alt="Bootloader" />
+<img src="/apunts-jpardo20/assets/img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--el-director-d-orquestra.png" alt="Bootloader" />
 
 </div>
 </div>
@@ -304,7 +304,7 @@ Sense gestor d’arrencada, el kernel **no s’executa**.
 </div>
 <div class="col-right">
 
-<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--l-arrencada-a-windows.png" alt="BCD" />
+<img src="/apunts-jpardo20/assets/img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--l-arrencada-a-windows.png" alt="BCD" />
 
 </div>
 </div>
@@ -342,7 +342,7 @@ sudo update-grub
 </div>
 <div class="col-right">
 
-<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--l-arrencada-a-linux.png" alt="GRUB" />
+<img src="/apunts-jpardo20/assets/img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--l-arrencada-a-linux.png" alt="GRUB" />
 
 </div>
 </div>
@@ -363,7 +363,7 @@ Aquí connectem teoria amb pràctica real.”
 <!-- .slide: class="full-img" -->
 
 **El sistema està despert.**
-<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--el-nucli-pren-el-comandament.png" width="900px" alt="Kernel"  />
+<img src="/apunts-jpardo20/assets/img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--el-nucli-pren-el-comandament.png" width="900px" alt="Kernel"  />
 
 Note:
 Temps: 2 minuts  
@@ -383,7 +383,7 @@ Ara mana el kernel.”
 És una **cadena de confiança**:
 cada pas cedeix el control al següent.
 
-<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--resum-del-viatge-de-l-arrencada.png" alt="Resum" />
+<img src="/apunts-jpardo20/assets/img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--resum-del-viatge-de-l-arrencada.png" alt="Resum" />
 
 Note:
 Temps: 3 minuts  
@@ -403,7 +403,7 @@ i només fa xiulets…**
 
 En quina fase del viatge creus que s’ha quedat encallat?
 
-<img src="../img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--resum-del-viatge-de-l-arrencada.png" alt="Resum" />
+<img src="/apunts-jpardo20/assets/img/0483-sistemes-informatics/trim-02-el-despertar-del-sistema--resum-del-viatge-de-l-arrencada.png" alt="Resum" />
 
 Note:
 Temps: 2 minuts  

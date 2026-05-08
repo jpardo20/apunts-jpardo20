@@ -61,7 +61,7 @@ type(2.)    # <class 'float'>
 
 * **`type()`**: ens mostra de quin tipus és l'objecte que li passem com argument.
 
-![alt text](../../../assets/img/info-vsc-python-type.png)
+![alt text](/apunts-jpardo20/assets/img/info-vsc-python-type.png)
 
 Més informació de [**`type()`**](https://docs.python.org/3/reference/simple_stmts.html#type)
 

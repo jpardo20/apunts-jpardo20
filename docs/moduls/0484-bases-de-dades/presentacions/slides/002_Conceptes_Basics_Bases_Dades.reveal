@@ -4,7 +4,7 @@
 <br>
 UD01 - Introducció a les Bases de Dades
 
-![data-base.png](../img/0484-bases-de-dades/data-base.png)
+![data-base.png](/apunts-jpardo20/assets/img/0484-bases-de-dades/data-base.png)
 ---
 
 ## Definició
@@ -17,7 +17,7 @@ UD01 - Introducció a les Bases de Dades
 
 ----
 
-![alt text](../img/0484-bases-de-dades/representacio-dades.png)
+![alt text](/apunts-jpardo20/assets/img/representacio-dades.png)
 
 ---
 
@@ -62,7 +62,7 @@ Finalment, aquests **atributs** adoptaran uns valors concrets com ara, i respect
 
 ## Exemple d'entitat, **atributs** i valors <span class="petit">(3/5)</span>
 
-![alt text](../img/0484-bases-de-dades/exemple-entitat-atribut-valor.png)
+![alt text](/apunts-jpardo20/assets/img/exemple-entitat-atribut-valor.png)
 
 font [imdb.com](https://www.imdb.com/)
 
@@ -82,7 +82,7 @@ font [imdb.com](https://www.imdb.com/)
 
 ## Exemple d'entitat, **atributs** i valors <span class="petit">(5/5)</span>
 
-![alt text](../img/0484-bases-de-dades/exemple-entitat-atribut-valor-amb-buits.png)
+![alt text](/apunts-jpardo20/assets/img/exemple-entitat-atribut-valor-amb-buits.png)
 
 font [imdb.com](https://www.imdb.com/)
 
@@ -96,7 +96,7 @@ font [imdb.com](https://www.imdb.com/)
 
 ----
 
-![alt text](../img/0484-bases-de-dades/entitat-tipus.png)
+![alt text](/apunts-jpardo20/assets/img/entitat-tipus.png)
 
 ---
 
@@ -122,7 +122,7 @@ Podem considerar els nombres enters com un tipus de dada (diferent d'altres tipu
 
 ## Exemple de domini <span class="petit">(2/2)</span>
 
-![alt text](../img/0484-bases-de-dades/exemple-domini.png)
+![alt text](/apunts-jpardo20/assets/img/exemple-domini.png)
 
 ---
 
@@ -151,7 +151,7 @@ No confondre valor nul amb el zero, o amb l'espai en blanc.
 
 ## Exemple de valor <kbd class="codi">`null`</kbd> <span class="petit">(3/3)</span>
 
-![alt text](../img/0484-bases-de-dades/exemple-valor-null.png)
+![alt text](/apunts-jpardo20/assets/img/exemple-valor-null.png)
 
 ---
 
@@ -181,7 +181,7 @@ L'**atribut** dni pot servir molt bé per identificar les instàncies d'una **en
 
 ## Exemple d'**atribut** identificador <span class="petit">(4/6)</span>
 
-![alt text](../img/0484-bases-de-dades/exemple-atribut-identificador.png)
+![alt text](/apunts-jpardo20/assets/img/exemple-atribut-identificador.png)
 
 
 ----
@@ -194,7 +194,7 @@ Per tal de diferenciar les instàncies d'una **entitat** que vol reflectir les n
 
 ## Exemple d'Atributs identificadors (<span class="minus">clau primària</span> <kbd class="codi">PK</kbd>) <span class="petit">(6/6)</span>
 
-![alt text](../img/0484-bases-de-dades/exemple-atribut-identificadors-2.png)
+![alt text](/apunts-jpardo20/assets/img/exemple-atribut-identificadors-2.png)
 
 ---
 
@@ -223,11 +223,11 @@ Les informacions són conceptualitzacions obtingudes a partir de l'observació d
 
 ## Representacions tabulars i la seva implementació <span class="petit">(2/3)</span>
 
-![alt text](../img/0484-bases-de-dades/representacions-tabulars.png)
+![alt text](/apunts-jpardo20/assets/img/representacions-tabulars.png)
 
 
 ----
 
 ## Representacions tabulars i la seva implementació <span class="petit">(3/3)</span>
 
-![representacions-tabulars-2.png](../img/0484-bases-de-dades/representacions-tabulars-2.png)
+![representacions-tabulars-2.png](/apunts-jpardo20/assets/img/representacions-tabulars-2.png)

@@ -96,7 +96,7 @@ Figura 2.1.
 
 * Possibles alteracions d'un senyal elèctric
 
-![fp_smx_m01_u1_pdfindex_p39_block83_72.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p39_block83_72.png) Hi ha tres gràﬁques.
+![fp_smx_m01_u1_pdfindex_p39_block83_72.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p39_block83_72.png) Hi ha tres gràﬁques.
 
 * La primera gràﬁca és una ona sinusoïdal perfecta.
 
@@ -180,7 +180,7 @@ Són SAI que incorporen més funcionalitats que un SAI fora de línia, com la su
 
 Un circuit SAI fora de línia és el circuit en què veiem com el corrent elèctric ﬂueix per la línia contínua, directament del senyal de la xarxa elèctrica; i, en cas d'alguna interrupció en el subministrament de corrent, la bateria i l'ondulador s'activen per a generar senyal elèctric.
 
-![fp_smx_m01_u1_pdfindex_p41_block439_159.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p41_block439_159.png) Alguns models de SAI fora de línia
+![fp_smx_m01_u1_pdfindex_p41_block439_159.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p41_block439_159.png) Alguns models de SAI fora de línia
 
 En aquests tipus de SAI, el senyal elèctric arriba directament des de la xarxa elèctrica.
 
@@ -190,7 +190,7 @@ Figura 2.2.
 
 * Esquema de SAI fora de línia
 
-![fp_smx_m01_u1_pdfindex_p41_block56_298.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p41_block56_298.png) Durant els moments (mil·lisegons) en què es fa el canvi entre el senyal elèctric provinent de la xarxa elèctrica i el senyal provinent de la bateria, es produeix una alteració en el senyal que el SAI subministra.
+![fp_smx_m01_u1_pdfindex_p41_block56_298.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p41_block56_298.png) Durant els moments (mil·lisegons) en què es fa el canvi entre el senyal elèctric provinent de la xarxa elèctrica i el senyal provinent de la bateria, es produeix una alteració en el senyal que el SAI subministra.
 
 * Aquest és el desavantatge més gran d'aquests tipus de SAI.
 
@@ -240,7 +240,7 @@ Com podem veure en la ﬁgura 2.3, l'alimentació que dóna el SAI prové de les
 
 * Així evitarà danys al SAI.
 
-![fp_smx_m01_u1_pdfindex_p42_block42_318.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p42_block42_318.png) Exemple de SAI en línia
+![fp_smx_m01_u1_pdfindex_p42_block42_318.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p42_block42_318.png) Exemple de SAI en línia
 
 Els SAI en línia donen un senyal elèctric ﬁable sense alteracions en el moment en què hi ha un tall de corrent.
 
@@ -250,7 +250,7 @@ Figura 2.3.
 
 * Esquema de SAI en línia
 
-![fp_smx_m01_u1_pdfindex_p42_block170_441.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p42_block170_441.png) Els SAI en línia, però, també tenen alguns desavantatges: com que el seu disseny és més complex, són més cars i, per a donar permanentment senyal de la seva bateria i transformar-lo amb l'ondulador, aquests dispositius han de consumir més energia, i generen més calor.
+![fp_smx_m01_u1_pdfindex_p42_block170_441.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p42_block170_441.png) Els SAI en línia, però, també tenen alguns desavantatges: com que el seu disseny és més complex, són més cars i, per a donar permanentment senyal de la seva bateria i transformar-lo amb l'ondulador, aquests dispositius han de consumir més energia, i generen més calor.
 
 2.3 Dimensionament i càlcul dels SAI
 
@@ -421,7 +421,7 @@ Les connexions elèctriques connecten el SAI a la xarxa elèctrica (connector d'
 
 Figura 2.4 - Connectors del SAI
 
-![fp_smx_m01_u1_pdfindex_p45_block56_439.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p45_block56_439.png) Els SAI tenen tres tipus de connexió: connexions elèctriques, connexions per a xarxa i connexions per a consola (de control).
+![fp_smx_m01_u1_pdfindex_p45_block56_439.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p45_block56_439.png) Els SAI tenen tres tipus de connexió: connexions elèctriques, connexions per a xarxa i connexions per a consola (de control).
 
 Hi ha alguns dispositius d'entrada/sortida, com ara impressores o escàners, que no necessiten una protecció d'alimentació ininterrompuda.
 
@@ -590,7 +590,7 @@ La majoria de SAI porten uns indicadors lluminosos a la part frontal, i són cap
 
 Figura 2.5 - Indicadors visuals d'un SAI
 
-![fp_smx_m01_u1_pdfindex_p48_block272_608.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p48_block272_608.png) 49
+![fp_smx_m01_u1_pdfindex_p48_block272_608.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p48_block272_608.png) 49
 
 En un SAI hi ha diferents indicadors.
 
@@ -768,7 +768,7 @@ Tots aquests aspectes positius repercuteixen favorablement en la salut dels treb
 
 3.1.2 Aspectes negatius del treball
 
-![fp_smx_m01_u1_pdfindex_p52_block42_262.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p52_block42_262.png) Operari treballant en una bomba de vapor a una central elèctrica (1920)
+![fp_smx_m01_u1_pdfindex_p52_block42_262.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p52_block42_262.png) Operari treballant en una bomba de vapor a una central elèctrica (1920)
 
 Malgrat els aspectes innegablement positius de la realització del treball per part dels éssers humans, veurem que les conseqüències negatives d'aquest també són innegables.
 
@@ -790,8 +790,8 @@ La llei estableix un enfocament preventiu bàsic que inclou no solament la impla
 
 Figura 3.1 - Motius per a la prevenció
 
-![fp_smx_m01_u1_pdfindex_p53_block96_72.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p53_block96_72.png)
-![fp_smx_m01_u1_pdfindex_p53_block439_241.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p53_block439_241.png) Microbiòleg treballant en condicions ambientals amb risc de contaminació
+![fp_smx_m01_u1_pdfindex_p53_block96_72.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p53_block96_72.png)
+![fp_smx_m01_u1_pdfindex_p53_block439_241.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p53_block439_241.png) Microbiòleg treballant en condicions ambientals amb risc de contaminació
 
 La prevenció centra el seu objectiu en el risc, bé per eliminar-lo o bé per controlarlo adequadament.
 
@@ -852,7 +852,7 @@ en la generació dels riscos esmentats.
 * Totes les altres característiques del treball, incloent-hi les relatives a l'orga-
 nització i ordenació que inﬂueixin en la magnitud dels riscos a què estigui exposat el treballador.
 
-![fp_smx_m01_u1_pdfindex_p54_block42_228.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p54_block42_228.png) La salut s'identiﬁca amb l'absència de malalties: una persona sana és una persona que no està malalta.
+![fp_smx_m01_u1_pdfindex_p54_block42_228.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p54_block42_228.png) La salut s'identiﬁca amb l'absència de malalties: una persona sana és una persona que no està malalta.
 
 * Malgrat aquesta interpretació generalitzada del concepte de salut, des de ja fa molt temps es considera que la salut supera el simple concepte negatiu de no estar malament per a transformar-se en una consideració positiva.
 
@@ -911,7 +911,7 @@ Una situació especial de risc és el que s'anomena risc laboral greu i imminent
 
 En cas d'exposició a agents susceptibles de causar danys greus en la salut dels treballadors, s'ha de considerar que hi ha un risc greu i imminent quan sigui probable racionalment que es materialitzi en un futur immediat una exposició a aquests agents de la qual es puguin derivar danys greus per a la salut encara que aquests no es manifestin de manera immediata.
 
-![fp_smx_m01_u1_pdfindex_p55_block439_645.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p55_block439_645.png) El sector de la construcció comporta una sèrie de factors de risc derivats de les condicions de seguretat.
+![fp_smx_m01_u1_pdfindex_p55_block439_645.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p55_block439_645.png) El sector de la construcció comporta una sèrie de factors de risc derivats de les condicions de seguretat.
 
 Es coneix com a factor de risc qualsevol variable relacionada amb el treball que sigui susceptible d'inﬂuir negativament en la salut dels treballadors.
 
@@ -967,7 +967,7 @@ Es poden obtenir dades estadístiques sobre accidents i malalties professionals 
 
 Figura 3.2 - Classiﬁcació del tipus de danys
 
-![fp_smx_m01_u1_pdfindex_p57_block56_72.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p57_block56_72.png) Accident de treball
+![fp_smx_m01_u1_pdfindex_p57_block56_72.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p57_block56_72.png) Accident de treball
 
 S'entén per accident de treball tota lesió corporal que el treballador pateixi en ocasió o com a conseqüència del treball que executi per compte d'altri.
 
@@ -1297,7 +1297,7 @@ Per facilitar la tasca d'identiﬁcació i avaluació de riscos laborals, el Dep
 
 La planiﬁcació de l'activitat preventiva és un procés dirigit a concretar l'actuació de l'empresa en matèria preventiva a partir del coneixement dels riscos detectats per mitjà de l'avaluació.
 
-![fp_smx_m01_u1_pdfindex_p61_block439_227.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p61_block439_227.png) L'objectiu de la planiﬁcació és la concreció del conjunt d'activitats dirigides a l'eliminació, reducció o control dels riscos detectats en l'empresa, els terminis en què es duran a terme, les persones responsables de la seva execució i els recursos materials i humans que l'empresa aportarà.
+![fp_smx_m01_u1_pdfindex_p61_block439_227.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p61_block439_227.png) L'objectiu de la planiﬁcació és la concreció del conjunt d'activitats dirigides a l'eliminació, reducció o control dels riscos detectats en l'empresa, els terminis en què es duran a terme, les persones responsables de la seva execució i els recursos materials i humans que l'empresa aportarà.
 
 La planiﬁcació de l'activitat preventiva ha d'incloure necessàriament:
 
@@ -1357,7 +1357,7 @@ Hi ha moltes proteccions col·lectives.
 
 Figura 3.3 - La senyalització és un tipus de protecció col·lectiva.
 
-![fp_smx_m01_u1_pdfindex_p62_block172_536.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p62_block172_536.png) Algunes de les proteccions col·lectives existents són:
+![fp_smx_m01_u1_pdfindex_p62_block172_536.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p62_block172_536.png) Algunes de les proteccions col·lectives existents són:
 
 * Proteccions col·lectives en màquines: resguards, pòrtics de seguretat, siste-
 mes de protecció del soroll.
@@ -1396,7 +1396,7 @@ Els equips de protecció individual per si sols no eliminen ni corregeixen el fa
 
 Un equip de protecció individual (EPI) és qualsevol equip destinat a ser dut o subjectat pel treballador perquè el protegeixi d'un o diversos riscos que en puguin amenaçar la seguretat o salut, com també qualsevol complement o accessori destinat a aquesta ﬁnalitat.
 
-![fp_smx_m01_u1_pdfindex_p63_block439_527.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p63_block439_527.png) L'article 2.2 del RD 773/1997 de 30 de maig exclou de la deﬁnició d'EPI els casos següents:
+![fp_smx_m01_u1_pdfindex_p63_block439_527.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p63_block439_527.png) L'article 2.2 del RD 773/1997 de 30 de maig exclou de la deﬁnició d'EPI els casos següents:
 
 * La roba de treball corrent i els uniformes que no estiguin especíﬁcament
 destinats a protegir la salut o integritat física del treballador.
@@ -1471,9 +1471,9 @@ En la ﬁgura 3.4 veiem un exemple d'equips de protecció en l'àmbit de la info
 
 Figura 3.4 - Treballadors fabricant ﬁbra òptica en una “clean room”
 
-![fp_smx_m01_u1_pdfindex_p65_block83_162.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p65_block83_162.png) 3.2.4 Prevenció en el muntatge i manteniment d'ordinadors
+![fp_smx_m01_u1_pdfindex_p65_block83_162.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p65_block83_162.png) 3.2.4 Prevenció en el muntatge i manteniment d'ordinadors
 
-![fp_smx_m01_u1_pdfindex_p65_block439_403.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p65_block439_403.png) Al nostre país el teixit industrial no compta amb fàbriques que es dediquin a la fabricació de semiconductors o a l'assemblatge de plaques base o d'ampliacions.
+![fp_smx_m01_u1_pdfindex_p65_block439_403.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p65_block439_403.png) Al nostre país el teixit industrial no compta amb fàbriques que es dediquin a la fabricació de semiconductors o a l'assemblatge de plaques base o d'ampliacions.
 
 * En canvi si que podem trobar empreses que es dediquen a l'assemblatge d'ordinadors a partir de components fabricats en altres països.
 
@@ -1530,7 +1530,7 @@ En una reparació d'ordinadors els riscos només seran els que tenen a veure amb
 
 * Els riscos elèctrics es tractaran mitjançant la utilització de diferencials i amb un calçat adequat.
 
-![fp_smx_m01_u1_pdfindex_p66_block42_608.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p66_block42_608.png) La pulsera antiestàtica no protegeix el treballador sinó els components electrònics
+![fp_smx_m01_u1_pdfindex_p66_block42_608.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p66_block42_608.png) La pulsera antiestàtica no protegeix el treballador sinó els components electrònics
 
 El procés de reparació tindrà a veure amb la comprovació i substitució eventual de components:
 
@@ -1645,7 +1645,7 @@ Entre les mesures de prevenció que cal prendre, podem fer una divisió en tècn
 
 Figura 3.5 - Tècniques de prevenció de riscos
 
-![fp_smx_m01_u1_pdfindex_p69_block83_407.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p69_block83_407.png) Higiene industrial
+![fp_smx_m01_u1_pdfindex_p69_block83_407.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p69_block83_407.png) Higiene industrial
 
 La higiene industrial és la tècnica no mèdica de prevenció de les malalties professionals mitjançant l'estudi, reconeixement i avaluació, dels agents contaminants que es troben en el medi laboral.
 
@@ -1705,7 +1705,7 @@ Els residus i subproductes derivats de la fabricació de targetes de cablejat im
 
 * En l'actualitat, l'incentiu de controlar l'empremta mediambiental dels processos electrònics s'ha traslladat en gran mesura de l'accent mediambiental a l'àmbit econòmic.
 
-![fp_smx_m01_u1_pdfindex_p71_block439_353.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p71_block439_353.png) Els CFC s'han prohibit.
+![fp_smx_m01_u1_pdfindex_p71_block439_353.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p71_block439_353.png) Els CFC s'han prohibit.
 
 A causa dels costos i responsabilitats associats a residus i emissions perilloses, el sector de l'electrònica ha implantat i desenvolupat controls ambientals estrictes que han reduït en gran mesura els efectes dels seus subproductes i residus.
 
@@ -1823,7 +1823,7 @@ En un lloc de treball com un taller de manteniment d'ordinadors cal esmentar de 
 
 Figura 3.6 - Exemple d'organització dels recanvis en un taller
 
-![fp_smx_m01_u1_pdfindex_p74_block197_72.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p74_block197_72.png) Una bona classiﬁcació de les eines i equips a reparar millorarà l'eﬁciència del servei tècnic.
+![fp_smx_m01_u1_pdfindex_p74_block197_72.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p74_block197_72.png) Una bona classiﬁcació de les eines i equips a reparar millorarà l'eﬁciència del servei tècnic.
 
 Neteja al treball.
 
@@ -1879,13 +1879,13 @@ La recollida selectiva consisteix a recollir diferenciadament fraccions dels res
 
 * La recollida selectiva i el reciclatge permeten estalviar recursos escassos i part de l'energia necessària per a la fabricació dels productes a partir de matèries primeres verges.
 
-![fp_smx_m01_u1_pdfindex_p75_block439_89.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p75_block439_89.png) La informàtica domèstica genera grans quantitats de residus que cal recollir de manera adequada.
+![fp_smx_m01_u1_pdfindex_p75_block439_89.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p75_block439_89.png) La informàtica domèstica genera grans quantitats de residus que cal recollir de manera adequada.
 
 L'aspecte bàsic de la recollida selectiva és la selecció que els ciutadans i els comerços fan dels productes recuperables i que, posteriorment, l'Administració s'encarrega de gestionar.
 
 En el cas dels ciutadans i petits tallers recullen, per exemple, materials reciclables com petits electrodomèstics i aparells d'informàtica, ferralla domèstica de petites dimensions (paelles, cassoles, etc.), cartrons de grans dimensions, metalls diversos (alumini, acer inoxidable, plom, llautó...), oli de cuina, radiograﬁes.
 
-![fp_smx_m01_u1_pdfindex_p75_block439_285.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p75_block439_285.png) Punt verd de reciclatge
+![fp_smx_m01_u1_pdfindex_p75_block439_285.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p75_block439_285.png) Punt verd de reciclatge
 
 Els punts verds de zona són instal·lacions mediambientals on es poden portar determinats residus perquè siguin distribuïts a les plantes de tractament especíﬁc, per a reciclar-los o per a evitar que contaminin.
 
@@ -2052,7 +2052,7 @@ L'energia es genera en una central aproﬁtant un salt d'aigua, amb energia tèr
 
 Figura 3.7 - Representació de l'esquema de distribució de l'energia elèctrica
 
-![fp_smx_m01_u1_pdfindex_p78_block209_496.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p78_block209_496.png) 3.4.2 Efectes en el cos del pas del corrent
+![fp_smx_m01_u1_pdfindex_p78_block209_496.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p78_block209_496.png) 3.4.2 Efectes en el cos del pas del corrent
 
 Podem diferenciar els efectes que produeix el corrent segons el moment en els tipus següents:
 
@@ -2151,7 +2151,7 @@ de multitud de factors, entre els quals podem esmentar:
 
 Figura 3.8 - Resistència que oposa el cos al pas del corrent.
 
-![fp_smx_m01_u1_pdfindex_p80_block262_553.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p80_block262_553.png)
+![fp_smx_m01_u1_pdfindex_p80_block262_553.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p80_block262_553.png)
 * R3 o resistència del punt de sortida.
 
 * Inclou la resistència del calçat i del
@@ -2207,7 +2207,7 @@ En tocar dos conductors o peces que estiguin a diferent potencial, l'accidentat 
 
 Figura 3.9 - Circuits possibles de pas del corrent pel cos humà
 
-![fp_smx_m01_u1_pdfindex_p82_block284_81.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p82_block284_81.png) Com es mostra en la ﬁgura 3.9, hi ha diferents circuits de pas de corrent, i són:
+![fp_smx_m01_u1_pdfindex_p82_block284_81.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p82_block284_81.png) Com es mostra en la ﬁgura 3.9, hi ha diferents circuits de pas de corrent, i són:
 
 * Mà peu contrari
 
@@ -2268,17 +2268,17 @@ entre dues fases, una de les quals està col·locada a terra per avaria.
 
 Figura 3.10 - Circuit entre dues fases o conductors actius
 
-![fp_smx_m01_u1_pdfindex_p83_block121_500.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p83_block121_500.png)
+![fp_smx_m01_u1_pdfindex_p83_block121_500.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p83_block121_500.png)
 
 Figura 3.11 - Contacte directe entre fase i neutre
 
-![fp_smx_m01_u1_pdfindex_p83_block121_666.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p83_block121_666.png) 84
+![fp_smx_m01_u1_pdfindex_p83_block121_666.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p83_block121_666.png) 84
 
 Una de les fases està connectada a la carcassa de la màquina i produeix el pas del corrent per l'accidentat.
 
 Figura 3.12 - Fase col·locada a terra per avaria
 
-![fp_smx_m01_u1_pdfindex_p84_block234_72.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p84_block234_72.png) Contactes elèctrics indirectes
+![fp_smx_m01_u1_pdfindex_p84_block234_72.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p84_block234_72.png) Contactes elèctrics indirectes
 
 En els contactes elèctrics indirectes la persona entra en contacte amb masses col·locades accidentalment sota tensió com es mostra en la ﬁgura 3.13.
 
@@ -2288,7 +2288,7 @@ En els contactes elèctrics indirectes la persona entra en contacte amb masses c
 
 Figura 3.13 - Contactes elèctrics indirectes
 
-![fp_smx_m01_u1_pdfindex_p84_block234_340.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p84_block234_340.png)
+![fp_smx_m01_u1_pdfindex_p84_block234_340.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p84_block234_340.png)
 * Un defecte d'aïllament intern
 
 * Un defecte d'origen extern
@@ -2360,7 +2360,7 @@ El quadre privat de comandament i protecció (QPCP) és un conjunt d'aparells si
 
 Figura 3.14 - Quadre privat de comandament i protecció
 
-![fp_smx_m01_u1_pdfindex_p86_block234_179.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p86_block234_179.png)
+![fp_smx_m01_u1_pdfindex_p86_block234_179.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p86_block234_179.png)
 * Interruptor automàtic de tall omnipolar (ICP-M): estarà calibrat d'acord
 amb la potència contractada.
 
@@ -2446,7 +2446,7 @@ Els conductors emprats en instal·lacions interiors sempre han de ser de coure i
 
 Figura 3.15 - Color d'identiﬁcació dels cables
 
-![fp_smx_m01_u1_pdfindex_p88_block197_163.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p88_block197_163.png) Han de tenir la secció adequada a la utilitat; serà més gran com més gran sigui la potència de l'aparell que s'instal·la.
+![fp_smx_m01_u1_pdfindex_p88_block197_163.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p88_block197_163.png) Han de tenir la secció adequada a la utilitat; serà més gran com més gran sigui la potència de l'aparell que s'instal·la.
 
 A més, la secció vindrà imposada per la caiguda de tensió des de l'origen de la instal·lació interior als punts d'utilització.
 
@@ -2486,7 +2486,7 @@ Mecanismes
 
 Entenem per mecanismes els elements que permeten accionar un circuit senzill -anomenats interruptorso els elements que permeten tenir accés a un punt de corrent -anomenats preses de corrent.
 
-![fp_smx_m01_u1_pdfindex_p89_block439_245.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p89_block439_245.png) Presa de corrent
+![fp_smx_m01_u1_pdfindex_p89_block439_245.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p89_block439_245.png) Presa de corrent
 
 * Preses de corrent.
 
@@ -2510,7 +2510,7 @@ es considerin ﬁxos com termos, calefactors, etc.
 
 Figura 3.16 - Interruptor unipolar i interruptor bipolar
 
-![fp_smx_m01_u1_pdfindex_p89_block83_487.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p89_block83_487.png) 3.4.5 Disposicions mínimes de seguretat
+![fp_smx_m01_u1_pdfindex_p89_block83_487.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p89_block83_487.png) 3.4.5 Disposicions mínimes de seguretat
 
 La prevenció de riscos laborals en temes elèctrics afecta una gran quantitat de situacions d'índole molt diversa i de característiques molt diferents.
 
@@ -2690,7 +2690,7 @@ residual
 
 Figura 3.17 - Contactes elèctrics directes
 
-![fp_smx_m01_u1_pdfindex_p93_block96_331.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p93_block96_331.png) Protecció contra contactes indirectes
+![fp_smx_m01_u1_pdfindex_p93_block96_331.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p93_block96_331.png) Protecció contra contactes indirectes
 
 La protecció contra contactes indirectes consisteix a prendre mesures destinades a protegir les persones contra els perills que es poden derivar d'un contacte amb les parts que es troben sota tensió com a resultat d'una fallada de l'aïllament.
 
@@ -2716,7 +2716,7 @@ No hem d'oblidar que, tal com ens mostra l'ITCBT-08 del Reglament electrotècnic
 
 Figura 3.18 - Esquema de distribució de corrent amb el neutre i conductor de protecció a terra.
 
-![fp_smx_m01_u1_pdfindex_p94_block209_221.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p94_block209_221.png) En aquesta distribució de corrent la companyia col·loca el neutre a terra, i en la instal·lació el conductor de protecció també està posat a terra (N = neutre; R, S i T = fases del corrent trifàsic, desfasades 120°)
+![fp_smx_m01_u1_pdfindex_p94_block209_221.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p94_block209_221.png) En aquesta distribució de corrent la companyia col·loca el neutre a terra, i en la instal·lació el conductor de protecció també està posat a terra (N = neutre; R, S i T = fases del corrent trifàsic, desfasades 120°)
 
 3.5 Les radiacions no ionitzants.
 
@@ -2754,7 +2754,7 @@ Els camps electromagnètics són radiacions no ionitzants i l'energia que poden 
 
 Figura 3.19 - Els CEM en l'espectre electromagnètic
 
-![fp_smx_m01_u1_pdfindex_p95_block96_359.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p95_block96_359.png) Dintre del grup dels camps electromagnètics s'inclouen els camps elèctrics i magnètics estàtics, les radiacions de baixa (LF), molt baixa (VLF) o extremament baixa freqüència (ELF), i les microones i ones de ràdio.
+![fp_smx_m01_u1_pdfindex_p95_block96_359.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p95_block96_359.png) Dintre del grup dels camps electromagnètics s'inclouen els camps elèctrics i magnètics estàtics, les radiacions de baixa (LF), molt baixa (VLF) o extremament baixa freqüència (ELF), i les microones i ones de ràdio.
 
 * Corresponen a la zona de l'espectre marcada en la ﬁgura 3.19.
 
@@ -2791,7 +2791,7 @@ Cal observar que els límits entre aquestes regions no són línies estretes, si
 
 Figura 3.20 - Representació de l'espectre de les radiacions òptiques
 
-![fp_smx_m01_u1_pdfindex_p96_block209_457.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p96_block209_457.png) No hi ha una única nomenclatura per a les radiacions òptiques.
+![fp_smx_m01_u1_pdfindex_p96_block209_457.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p96_block209_457.png) No hi ha una única nomenclatura per a les radiacions òptiques.
 
 * En la prevenció de riscos laborals se segueix el criteri de la Comissió Internacional de l'Enllumenat, denominada internacionalment per les seves sigles en francès CIE (Commission International d'Eclairage).
 
@@ -2807,7 +2807,7 @@ El desenvolupament de la indústria i de les comunicacions ha estat determinant 
 
 Figura 3.21 - Fonts d'exposició a radiacions electromagnètiques
 
-![fp_smx_m01_u1_pdfindex_p97_block88_289.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p97_block88_289.png) Fonts d'exposició professional a camps electromagnètics o CEM
+![fp_smx_m01_u1_pdfindex_p97_block88_289.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p97_block88_289.png) Fonts d'exposició professional a camps electromagnètics o CEM
 
 La utilització generalitzada i indispensable de l'energia elèctrica i les telecomunicacions comporta necessàriament la generació de CEM.
 
@@ -2873,7 +2873,7 @@ En la indústria, la màxima exposició a camps estàtics es produeix en els tre
 
 * L'exposició a camps magnètics estàtics és un dels riscos associats a l'RMN.
 
-![fp_smx_m01_u1_pdfindex_p98_block42_679.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p98_block42_679.png) La unitat d'RMN tradicional és un gran tub de forma cilíndrica envoltat per un imant circular.
+![fp_smx_m01_u1_pdfindex_p98_block42_679.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p98_block42_679.png) La unitat d'RMN tradicional és un gran tub de forma cilíndrica envoltat per un imant circular.
 
 2)Processos electrolítics.
 
@@ -2921,7 +2921,7 @@ Qualsevol equip que utilitzi corrent elèctric genera camps elèctrics i magnèt
 
 Figura 3.22 - Valors d'inducció magnètica (T) mesurats a 1 m sobre el terra en les proximitats d'una línia de transport elèctric
 
-![fp_smx_m01_u1_pdfindex_p99_block96_540.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p99_block96_540.png) En la ﬁgura 3.22 s'observa com els valors de la inducció magnètica (B) es redueixen signiﬁcativament en augmentar la distància a la línia.
+![fp_smx_m01_u1_pdfindex_p99_block96_540.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p99_block96_540.png) En la ﬁgura 3.22 s'observa com els valors de la inducció magnètica (B) es redueixen signiﬁcativament en augmentar la distància a la línia.
 
 * Així, en la vertical
 
@@ -2973,7 +2973,7 @@ Les radiofreqüències (RF) i microones (MO) s'han utilitzat tradicionalment en 
 
 * En l'actualitat les seves aplicacions són nombroses i s'han ampliat a processos industrials, activitats mèdiques i cientíﬁques, i ﬁns i tot domèstiques.
 
-![fp_smx_m01_u1_pdfindex_p100_block42_526.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p100_block42_526.png) Les estacions base de telefonia mòbil són la font d'RF més nombrosa a les ciutats.
+![fp_smx_m01_u1_pdfindex_p100_block42_526.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p100_block42_526.png) Les estacions base de telefonia mòbil són la font d'RF més nombrosa a les ciutats.
 
 Algunes aplicacions de les radiofreqüències són les antenes de radiodifusió, freqüència modulada, radiodifusió AM, antenes de radioafeccionats, antenes d'estacions de televisió, els sistemes antirobatori, etc.
 
@@ -3109,7 +3109,7 @@ En la ﬁgura 3.23, podeu veure un resum dels mètodes generals per al control d
 
 Figura 3.23 - Mesures generals per al control de radiacions no ionitzants
 
-![fp_smx_m01_u1_pdfindex_p103_block83_417.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p103_block83_417.png) Accions sobre la font
+![fp_smx_m01_u1_pdfindex_p103_block83_417.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p103_block83_417.png) Accions sobre la font
 
 L'objectiu de les accions sobre la font és evitar la presència de radiacions no ionitzants en l'ambient o, en cas que aquestes es produeixin, evitar-ne la propagació.
 
@@ -3192,7 +3192,7 @@ La radiació electromagnètica compleix la llei de la inversa del quadrat, és a
 
 Figura 3.24 - Senyals per a radiacions no ionitzants
 
-![fp_smx_m01_u1_pdfindex_p105_block96_72.png](../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p105_block96_72.png) Accions sobre l'organització del treball
+![fp_smx_m01_u1_pdfindex_p105_block96_72.png](/apunts-jpardo20/assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p105_block96_72.png) Accions sobre l'organització del treball
 
 Quan el risc no està controlat perquè les radiacions s'han d'utilitzar en àrea oberta o per altres motius, s'hi ha d'aplicar un programa de mesures organitzatives sobre el lloc de treball per a reduir-ne l'exposició.
 
