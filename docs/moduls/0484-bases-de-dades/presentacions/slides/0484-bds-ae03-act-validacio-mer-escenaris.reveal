@@ -23,7 +23,7 @@ cal que per a cada escenari, indiqueu:
 
     En aquest apartat podeu pujar una captura del MER facilitat,
 
-<img src="../../../assets/img/escenari-001.png" height="300" ></img>
+<img src="../img/escenari-001.png" height="300" ></img>
 
    o bé indicar-ho amb un text,
 
@@ -71,7 +71,7 @@ Lliuramnent des del formulari HTML, **genereu el vostre JSON** i pugeu-lo al cam
 
 2) **On** ho representaríeu (entitats/relacions).  
 
-<img src="../../../assets/img/escenari-001.png" height="400" ></img>
+<img src="../img/escenari-001.png" height="400" ></img>
 
 ----
 

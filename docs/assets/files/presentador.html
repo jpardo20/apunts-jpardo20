@@ -13,13 +13,34 @@
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/plugin/highlight/monokai.css">
 
     <link rel="stylesheet" href="../css/estils-per-reveal.css">
-    
+    <link rel="stylesheet" href="../css/header.css">
 </head>
+
+<style>
+
+  body {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  #header-container {
+    height: var(--jp-header-h, 68px);
+  }
+
+  .reveal {
+    height: calc(100vh - var(--jp-header-h, 68px)) !important;
+  }
+
+  .reveal .slides {
+    height: 100%;
+  }
+
+</style>
 
 <body>
 
     <!-- Barra superior -->
-    <div class="topbar">
+    <!-- <div class="topbar">
         <a href="javascript:history.back()">← Tornar a Presentacions</a>
         <span id="topbar-title">Presentació</span>
         <img
@@ -27,30 +48,73 @@
             alt="DigiTech"
             class="logo"
             height="70">
-    </div>
+    </div> -->
 
+    <!-- HEADER -->
+    <div id="header-container"></div>
+
+    <script>
+        fetch("../components/header/header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header-container").innerHTML = html;
+
+                const base = window.location.pathname.includes('/apunts-jpardo20')
+                    ? '/apunts-jpardo20'
+                    : '';
+
+                // LOGO
+                const logo = document.getElementById('logo');
+                if (logo) {
+                    logo.src = base + '/assets/img/VERT-01-SIN-CAJA-BLANCO-RGB@2x-768x593.png';
+                }
+
+                // BOTÓ BACK
+                const backBtn = document.getElementById('back-button');
+
+                if (backBtn) {
+                    backBtn.style.display = 'inline';
+                    backBtn.href = 'javascript:history.back()';
+                    backBtn.textContent = '← Presentacions';
+                }
+
+                // TITLE DES DE QUERYSTRING
+                const params = new URLSearchParams(window.location.search);
+                const title = params.get('title');
+
+                // CANVIAR TÍTOL HEADER
+                const titleEl = document.querySelector('.jp-title');
+
+                if (titleEl && title) {
+                    titleEl.textContent = decodeURIComponent(title);
+                }
+
+                // CANVIAR TITLE HTML
+                if (title) {
+                    document.title = decodeURIComponent(title);
+                }
+            });
+    </script>
     <!-- Reveal -->
     <div class="reveal">
         <div class="slides">
-            <section id="md-section"
-                data-separator="^---$"
-                data-separator-vertical="^----$"
-                data-separator-notes="^Note:"
-                data-charset="utf-8">
+            <section id="md-section" data-separator="^---$" data-separator-vertical="^----$"
+                data-separator-notes="^Note:" data-charset="utf-8">
             </section>
         </div>
     </div>
 
-<!-- Reveal JS -->
-<script src="https://unpkg.com/reveal.js@4.5.0/dist/reveal.js"></script>
+    <!-- Reveal JS -->
+    <script src="https://unpkg.com/reveal.js@4.5.0/dist/reveal.js"></script>
 
-<!-- Plugins -->
-<script src="https://unpkg.com/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
-<script src="https://unpkg.com/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
-<script src="https://unpkg.com/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    <!-- Plugins -->
+    <script src="https://unpkg.com/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.5.0/plugin/notes/notes.js"></script>
 
-<!-- Script propi -->
-<script src="../js/presentador.js"></script>
+    <!-- Script propi -->
+    <script src="../js/presentador.js"></script>
 
 </body>
+
 </html>

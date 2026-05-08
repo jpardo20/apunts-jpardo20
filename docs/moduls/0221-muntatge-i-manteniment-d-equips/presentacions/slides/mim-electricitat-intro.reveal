@@ -447,12 +447,12 @@ En el sistema internacional de mesures:
 
    #### Solució
 
-   <img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/formula-llei-de-coulomb.png" height="100">
+   <img src="../img/0221-muntatge-i-manteniment-d-equips/formula-llei-de-coulomb.png" height="100">
 
 
 * Així
 
-   <img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/devel-forca-exercida-pel-proto-sobre-l-electro-01.png" height="200">
+   <img src="../img/0221-muntatge-i-manteniment-d-equips/devel-forca-exercida-pel-proto-sobre-l-electro-01.png" height="200">
 
 
 ----
@@ -560,7 +560,7 @@ En el sistema internacional de mesures:
 
 ##### El circuit elèctric
 
-<img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p15_block439_537.png" height="400">
+<img src="../img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p15_block439_537.png" height="400">
 
 > **Figura 6A**: El circuit elèctric es pot veure com a circuit hidràulic
 
@@ -570,7 +570,7 @@ En el sistema internacional de mesures:
 
 Començarem fent un símil amb un circuit hidràulic.
 
-<img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p15_block439_537.png" height="200">
+<img src="../img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p15_block439_537.png" height="200">
 
 * Com que els dos dipòsits estan a diferent nivell (hi ha una **diferència de potencial**) s'estableix un corrent d'aigua des del **dipòsit A** ﬁns al **dipòsit B** ﬁns que tots dos estiguin al **mateix nivell**.
 
@@ -586,7 +586,7 @@ Començarem fent un símil amb un circuit hidràulic.
 
 ##### El circuit elèctric
 
-<img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p15_block439_652.png" height="400">
+<img src="../img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p15_block439_652.png" height="400">
 
 > **Figura 6B**: La ***bomba hidràulica*** representa el generador elèctric
 
@@ -594,7 +594,7 @@ Començarem fent un símil amb un circuit hidràulic.
 
 ##### El circuit elèctric
 
-<img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p15_block439_652.png" height="200">
+<img src="../img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p15_block439_652.png" height="200">
 
 * Aquest element, que podria ser una **bomba**, també el podríem anomenar **generador de diferència de potencial**.
 
@@ -717,7 +717,7 @@ Començarem fent un símil amb un circuit hidràulic.
 
 * Si tornem al circuit hidràulic de la **ﬁgura 6**, la bomba tenia per objecte establir una diferència de pressió entre tots dos dipòsits perquè l'aigua pogués circular en el sentit de més pressió (dipòsit A) a menys pressió (dipòsit B).
 
-<img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p15_block439_537.png" height="400">
+<img src="../img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p15_block439_537.png" height="400">
 
 ----
 
@@ -766,7 +766,7 @@ Començarem fent un símil amb un circuit hidràulic.
 
 ##### Tensió elèctrica
 
-> <img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p18_block42_330.png" height="400">
+> <img src="../img/0221-muntatge-i-manteniment-d-equips/../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p18_block42_330.png" height="400">
 >
 > La diferència de tensió entre el **punts a** i el **punt b** s'anomena **voltatge**.
 
@@ -816,7 +816,7 @@ A la taula 1.2 podeu consultar els valors equivalents en volts d'aquests múltip
 
 ##### Intensitat del corrent
 
-> <img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p19_block439_82.png" height="400">
+> <img src="../img/0221-muntatge-i-manteniment-d-equips/../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p19_block439_82.png" height="400">
 >
 > La intensitat per al conductor 2 és més gran que per al conductor 1
 
@@ -841,7 +841,7 @@ A la taula 1.2 podeu consultar els valors equivalents en volts d'aquests múltip
 
 * La intensitat del corrent elèctric en un circuit que no tingui bifurcacions és sempre la mateixa en qualsevol punt del circuit, ja que el nombre d'electrons que passen en un segon per un punt del circuit serà el mateix si els mesurem en un altre punt del mateix circuit. Així, en la següent ﬁgura, el corrent en el **`punt A`** i en el **`punt B`** és el mateix.
 
-> <img src="../../../assets/img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p19_block439_197.png" height="350">
+> <img src="../img/0221-muntatge-i-manteniment-d-equips/fp_smx_m01_u1_pdfindex_p19_block439_197.png" height="350">
 
 ----
 

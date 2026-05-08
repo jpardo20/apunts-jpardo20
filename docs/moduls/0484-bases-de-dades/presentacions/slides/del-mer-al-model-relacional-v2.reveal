@@ -82,7 +82,7 @@ Note:
 
 <kbd style="padding:5px; background-color:lightgrey; color:blue">CLIENTS(**<u>id_client</u>** <kbd style="padding:5px; background-color:lightgrey; color:blue">PK</kbd>, nom_client, email_client)</kbd>
 
-<img src="../../../assets/img/0484-bases-de-dades/entitat-forta.png" alt="0484-bases-de-dades/entitat-forta.png" class="logo" height="200" width="auto">
+<img src="../img/0484-bases-de-dades/entitat-forta.png" alt="0484-bases-de-dades/entitat-forta.png" class="logo" height="200" width="auto">
 
 ----
 
@@ -102,11 +102,11 @@ Del MER de **`CLIENTS`**:
 
 - **MER**: ***entitat*** **`CLIENTS`** <br> amb ***atributs*** <u>**`id_client`**</u>, **`nom_client`**, **`email_client`**.
 
-<img src="../../../assets/img/0484-bases-de-dades/entitat-forta.png" alt="0484-bases-de-dades/entitat-forta.png" class="logo" height="150" width="auto">
+<img src="../img/0484-bases-de-dades/entitat-forta.png" alt="0484-bases-de-dades/entitat-forta.png" class="logo" height="150" width="auto">
 
 - **Taula**: <kbd style="padding:5px; background-color:lightgrey; color:blue">CLIENTS(**<u>id_client</u>** <kbd style="padding:5px; background-color:lightgrey; color:blue">PK</kbd>, nom_client, email_client)</kbd>
 
-<img src="../../../assets/img/0484-bases-de-dades/taula-client-relacional.png" alt="0484-bases-de-dades/taula-client-relacional.png" class="logo" height="175" width="auto">
+<img src="../img/0484-bases-de-dades/taula-client-relacional.png" alt="0484-bases-de-dades/taula-client-relacional.png" class="logo" height="175" width="auto">
 
 
 ![../../../assets/img/0484-bases-de-dades/taula-client-relacional.png](../../../assets/img/0484-bases-de-dades/taula-client-relacional.png)
@@ -134,7 +134,7 @@ Note:
 
 > Cada **línia** d'una comanda depèn d'una **comanda**. Sense una comanda. una línia de comanda no té sentit.
 
-<img src="../../../assets/img/0484-bases-de-dades/entitat-feble.png" alt="0484-bases-de-dades/entitat-feble.png" class="logo" height="200" width="auto">
+<img src="../img/0484-bases-de-dades/entitat-feble.png" alt="0484-bases-de-dades/entitat-feble.png" class="logo" height="200" width="auto">
 
 
 Note:
@@ -164,14 +164,14 @@ Note:
 
 ----
 
-<img src="../../../assets/img/0484-bases-de-dades/entitat-feble-colors.png" alt="0484-bases-de-dades/entitat-feble-colors.png" class="logo" height="140" width="auto">
+<img src="../img/0484-bases-de-dades/entitat-feble-colors.png" alt="0484-bases-de-dades/entitat-feble-colors.png" class="logo" height="140" width="auto">
 
 
 * <kbd style="padding:5px; background-color:lightgrey; color:blue">COMANDES(**<u>id_comanda</u>** <kbd style="padding:5px; background-color:lightgrey; color:blue">PK</kbd>, data_comanda)</kbd>
 
 * <kbd style="padding:5px; background-color:lightgrey; color:blue">LINIES_COMANDA(<u>**num_linia**</u> <kbd style="padding:5px; background-color:lightgrey; color:blue">PK</kbd>, **<u>id_comanda</u>** <kbd style="padding:5px; background-color:lightgrey; color:blue">PK</kbd> i <kbd style="padding:5px; background-color:lightgrey; color:blue">FK</kbd><small>(**PK** de COMANDES)</small>, producte, quantitat)</kbd>
 
-<img src="../../../assets/img/0484-bases-de-dades/COMANDES-LINIESCOMANDA.png" alt="0484-bases-de-dades/COMANDES-LINIESCOMANDA.png" class="logo" height="250" width="auto">
+<img src="../img/0484-bases-de-dades/COMANDES-LINIESCOMANDA.png" alt="0484-bases-de-dades/COMANDES-LINIESCOMANDA.png" class="logo" height="250" width="auto">
 
 
 
@@ -184,7 +184,7 @@ Note:
 
 - Un **registre** de l'**entitat B** <u>pertany</u> **a un sol registre** de l'**entitat A**
 
-<img src="../../../assets/img/0484-bases-de-dades/relacio-1N-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-client-comanda.png" class="logo" height="150" width="auto">
+<img src="../img/0484-bases-de-dades/relacio-1N-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-client-comanda.png" class="logo" height="150" width="auto">
 
 Note:
 - Obre `exemple-relacio-1N-client-comanda.xml`.
@@ -200,11 +200,11 @@ Note:
 
 **Exemple CLIENT–COMANDA**
 
-<img src="../../../assets/img/0484-bases-de-dades/relacio-1N-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-client-comanda.png" class="logo" height="150" width="auto">
+<img src="../img/0484-bases-de-dades/relacio-1N-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-client-comanda.png" class="logo" height="150" width="auto">
 
 ----
 
-<img src="../../../assets/img/0484-bases-de-dades/relacio-1N-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-client-comanda.png" class="logo" height="150" width="auto">
+<img src="../img/0484-bases-de-dades/relacio-1N-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-client-comanda.png" class="logo" height="150" width="auto">
 
 * <kbd style="padding:5px; background-color:lightgrey; color:blue">CLIENTS(**<u>id_client</u>** <kbd style="padding:5px; background-color:lightgrey; color:blue">PK</kbd>, nom_client, email_client)</kbd>
 
@@ -220,7 +220,7 @@ Note:
 
 * <kbd style="padding:5px; background-color:lightgrey; color:blue">COMANDES(**<u>id_comanda</u>** <kbd style="padding:5px; background-color:lightgrey; color:blue">PK</kbd>, **<u>id_client</u>** <kbd style="padding:5px; background-color:lightgrey; color:blue">PK</kbd> i FK<small>(**PK** de CLIENTS)</small>, data_comanda)</kbd>
 
-<img src="../../../assets/img/0484-bases-de-dades/CLIENTS-fa-COMANDES.png" alt="0484-bases-de-dades/CLIENTS-fa-COMANDES.png" class="logo" height="250" width="auto">
+<img src="../img/0484-bases-de-dades/CLIENTS-fa-COMANDES.png" alt="0484-bases-de-dades/CLIENTS-fa-COMANDES.png" class="logo" height="250" width="auto">
 
 Note:
 - Demana: “On afegiríeu el camp id_client?”
@@ -236,7 +236,7 @@ Note:
 
 - La relació del **registre** de l'**entitat B** <u>amb</u> **el registre** de l'**entitat A**, conté **atributs**.
 
-<img src="../../../assets/img/0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" class="logo" height="200" width="auto">
+<img src="../img/0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" class="logo" height="200" width="auto">
 
 Note:
 - Obre el fitxer `exemple-relacio-1N-amb-atributs-client-comanda.xml`.
@@ -254,18 +254,18 @@ Note:
   - FK al costat <kbd style="padding:5px; background-color:lightgrey; color:blue">N</kbd>.
   - Atributs de la relació → també a la taula del costat <kbd style="padding:5px; background-color:lightgrey; color:blue">N</kbd>.
 
-<img src="../../../assets/img/0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" class="logo" height="200" width="auto">
+<img src="../img/0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" class="logo" height="200" width="auto">
 
 ----
 
-<img src="../../../assets/img/0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" class="logo" height="150" width="auto">
+<img src="../img/0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" alt="0484-bases-de-dades/relacio-1N-amb-atributs-client-comanda.png" class="logo" height="150" width="auto">
 
 * <kbd style="padding:5px; background-color:lightgrey; color:blue">CLIENTS(**<u>id_client</u>** <kbd style="padding:5px; background-color:lightgrey; color:blue">PK</kbd>, nom_client, email_client)</kbd>
 
 * <kbd style="padding:5px; background-color:lightgrey; color:blue">COMANDES(**<u>id_comanda</u>** <kbd style="padding:5px; background-color:lightgrey; color:blue">PK</kbd>, **<u>id_client</u>** <kbd style="padding:5px; background-color:lightgrey; color:blue">PK</kbd> i <kbd style="padding:5px; background-color:lightgrey; color:blue">FK</kbd><small>(**PK** de CLIENTS)</small>, data_comanda, descompte)</kbd>
 
 
-<img src="../../../assets/img/0484-bases-de-dades/CLIENTS-fa-COMANDES-atribut.png" alt="0484-bases-de-dades/CLIENTS-fa-COMANDES-atribut.png.png" class="logo" height="200" width="auto">
+<img src="../img/0484-bases-de-dades/CLIENTS-fa-COMANDES-atribut.png" alt="0484-bases-de-dades/CLIENTS-fa-COMANDES-atribut.png.png" class="logo" height="200" width="auto">
 
 
 Note:
@@ -281,7 +281,7 @@ Note:
 
 - Un **registre** de l'**entitat B** <u>va amb</u> **un sol registre** de l'**entitat A**.
 
-<img src="../../../assets/img/0484-bases-de-dades/relacio-11-persona-passaport.png" alt="0484-bases-de-dades/relacio-11-persona-passaport.png" class="logo" height="150" width="auto">
+<img src="../img/0484-bases-de-dades/relacio-11-persona-passaport.png" alt="0484-bases-de-dades/relacio-11-persona-passaport.png" class="logo" height="150" width="auto">
 
 Note:
 - Obre `exemple-relacio-11-persona-passaport.xml`.
@@ -298,12 +298,12 @@ Note:
 
 - Alternativa: **fusionar** les dues entitats en una sola taula (si té sentit).
 
-<img src="../../../assets/img/0484-bases-de-dades/relacio-11-persona-passaport.png" alt="0484-bases-de-dades/relacio-11-persona-passaport.png" class="logo" height="150" width="auto">
+<img src="../img/0484-bases-de-dades/relacio-11-persona-passaport.png" alt="0484-bases-de-dades/relacio-11-persona-passaport.png" class="logo" height="150" width="auto">
 
 
 ----
 
-<img src="../../../assets/img/0484-bases-de-dades/relacio-11-persona-passaport.png" alt="0484-bases-de-dades/relacio-11-persona-passaport.png" class="logo" height="100" width="auto">
+<img src="../img/0484-bases-de-dades/relacio-11-persona-passaport.png" alt="0484-bases-de-dades/relacio-11-persona-passaport.png" class="logo" height="100" width="auto">
 
 
 
@@ -311,7 +311,7 @@ Note:
 
 * <kbd style="padding:5px; background-color:lightgrey; color:blue">PASSAPORTS(**<u>num_passaport</u>** <kbd style="padding:5px; background-color:lightgrey; color:blue">PK</kbd>, **<u>id_persona</u>** <kbd style="padding:5px; background-color:lightgrey; color:blue">PK i FK</kbd><small>(**PK** de PERSONES)</small>, data_caducitat)</kbd>
 
-<img src="../../../assets/img/0484-bases-de-dades/PERSONES-PASSAPORTS.png" alt="0484-bases-de-dades/PERSONES-PASSAPORTS.png" class="logo" height="250" width="auto">
+<img src="../img/0484-bases-de-dades/PERSONES-PASSAPORTS.png" alt="0484-bases-de-dades/PERSONES-PASSAPORTS.png" class="logo" height="250" width="auto">
 
 
 
@@ -329,7 +329,7 @@ Note:
 
 - Molts **registres** de l'**entitat B** <u>es relacionen amb</u> **molts registres** de l'**entitat A**.
 
-<img src="../../../assets/img/0484-bases-de-dades/relacio-NM-alumne-assignatura.png" alt="0484-bases-de-dades/relacio-NM-alumne-assignatura.png" class="logo" height="200" width="auto">
+<img src="../img/0484-bases-de-dades/relacio-NM-alumne-assignatura.png" alt="0484-bases-de-dades/relacio-NM-alumne-assignatura.png" class="logo" height="200" width="auto">
 
 
 
@@ -361,7 +361,7 @@ Note:
 
 * <kbd style="padding:5px; background-color:lightgrey; color:blue">MATRICULES(**<u>id_alumne</u>** <kbd style="padding:5px; background-color:lightgrey; color:blue">PK</kbd> i <kbd style="padding:5px; background-color:lightgrey; color:blue">FK</kbd><small>(**PK** de ALUMNES)</small>, **<u>id_assig</u>** <kbd style="padding:5px; background-color:lightgrey; color:blue">PK</kbd> i <kbd style="padding:5px; background-color:lightgrey; color:blue">FK</kbd><small>(**PK** de ASSIGNATURES)</small>, nota)</kbd>
 
-<img src="../../../assets/img/0484-bases-de-dades/relacio-NM-alumne-assignatura.png" alt="0484-bases-de-dades/relacio-NM-alumne-assignatura.png" class="logo" height="200" width="auto">
+<img src="../img/0484-bases-de-dades/relacio-NM-alumne-assignatura.png" alt="0484-bases-de-dades/relacio-NM-alumne-assignatura.png" class="logo" height="200" width="auto">
 
 ----
 **Exemple ALUMNE–ASSIGNATURA** (**model relacional**)
@@ -374,7 +374,7 @@ Note:
 
  
 
-<img src="../../../assets/img/0484-bases-de-dades/ALUMNE–ASSIGNATURA.png" alt="0484-bases-de-dades/ALUMNE–ASSIGNATURA.png" class="logo" height="300" width="auto">
+<img src="../img/0484-bases-de-dades/ALUMNE–ASSIGNATURA.png" alt="0484-bases-de-dades/ALUMNE–ASSIGNATURA.png" class="logo" height="300" width="auto">
 
 Note:
 - Subratlla que la relació “MATRICULA” es converteix en una taula normal.
@@ -405,7 +405,7 @@ En grups de 2:
 
 1. A partir del MER que us facilito.
 
-<img src="../../../assets/img/0484-bases-de-dades/mer-CLIENT-COMANDA-PRODUCTE.png" alt="0484-bases-de-dades/mer-CLIENT-COMANDA-PRODUCTE.png" class="logo" height="300" width="auto">
+<img src="../img/0484-bases-de-dades/mer-CLIENT-COMANDA-PRODUCTE.png" alt="0484-bases-de-dades/mer-CLIENT-COMANDA-PRODUCTE.png" class="logo" height="300" width="auto">
 
 ----
 
