@@ -97,6 +97,7 @@ Aquest és el primer objectiu. És una substitució molt visual i fàcil d’ent
 ```python
 def carregarMenu(fitxerAObrir="menu.txt"):
     opcionsMenu = []
+    liniesFitxer = list()
 
     fitxer = open(fitxerAObrir, "r")
     liniesFitxer = fitxer.readlines()
@@ -113,8 +114,6 @@ def carregarMenu(fitxerAObrir="menu.txt"):
 
 Note:
 Explica línia per línia. Sobretot `readlines()`, `strip()` i `append()`.
-
-
 
 ----
 
@@ -162,16 +161,38 @@ def carregarMenu(fitxerAObrir="menu.txt"):
 liniesFitxer = fitxer.readlines()
 ```
 
-Això llegeix totes les línies del fitxer.
+```python
+(method) def readlines(
+    hint: int = -1,
+    /
+) -> list[str]
+Return a list of lines from the stream.
+```
 
-Exemple:
+<details>
+  <summary><small>Mostra tot el text de l'ajuda de VSC</small></summary>
 
 ```python
-[
-    "Sortida\n",
-    "Afegir ordinador\n",
-    "Mostrar inventari\n"
-]
+hint can be specified to control the number of lines read: no more
+lines will be read if the total4 size (in bytes/characters) of all
+lines so far exceeds hint.
+```
+</details>
+
+> La funció **`def readlines()`** llegeix totes les línies del fitxer, les guarda dins d’una **llista**, i **retorna aquesta llista** <small>(cada **línia** té un **salt de línia** **`\n`** que forma part de la línia)</small>. 
+
+↓ Exemple:
+
+----
+
+### Exemple:
+
+```python
+liniesFitxer=[
+        "Sortida\n",
+        "Afegir ordinador\n",
+        "Mostrar inventari\n"
+    ]
 ```
 
 Note:
@@ -185,19 +206,19 @@ Mostra que el `\n` forma part de la línia. Això justifica el `strip()`.
 liniaFitxer = liniaFitxer.strip()
 ```
 
-Elimina espais i salts de línia (<codijpc>\n</codijpc>) del principi i del final.
-
-Exemple:
-
 ```python
-"Sortida\n"
+(method) def strip(
+    chars: str | None = None,
+    /
+) -> str
+Return a copy of the string with leading and trailing whitespace removed.
+If chars is given and not None, remove characters in chars instead.
 ```
 
-passa a:
+Elimina **espais** i **salts de línia** (<codijpc>\n</codijpc>) del principi i del final del text, i retorna la cadena "**neta**", és a dir, sense **espais** i **salts de línia** (<codijpc>\n</codijpc>), als extrems.
 
-```python
-"Sortida"
-```
+Exemple de <codijpc>"Sortida\n"</codijpc> passa a <codijpc>"Sortida"</codijpc>
+
 
 Note:
 Aquest punt és clau. Si no ho entenen, després tindran problemes amb les comparacions i la visualització.
@@ -209,13 +230,24 @@ Aquest punt és clau. Si no ho entenen, després tindran problemes amb les compa
 ```python
 opcionsMenu.append(liniaFitxer)
 ```
+```python
+(method) def append(
+    object: Any,
+    /
+) -> None
+Append object to the end of the list.
+```
 
-Afegeix una opció nova a la llista.
+Afegeix un objecte al final de la llista.
 
 Al final tindrem:
 
 ```python
-["Sortida", "Afegir ordinador", "Mostrar inventari"]
+opcionsMenu = [
+    "Sortida",
+    "Afegir ordinador",
+    "Mostrar inventari"
+]
 ```
 
 Note:
@@ -288,7 +320,65 @@ Aquest és el moment més important de la sessió. Text → dades estructurades.
 
 ---
 
+## 1r pas 
+
+amb:
+
+```python
+liniesFitxer = fitxer.readlines()
+```
+
+
+```python
+liniesFitxer = [
+    "PC001;i5;16",
+    "PC002;i7;32",
+    "PC003;Ryzen 5;16"
+]
+```
+
+Per tant ara cal separar cada <codijpc>liniaFitxer</codijpc> en les **parts d'un ordinador**.
+
+Fixeu-vos que a cada línia (<codijpc>"PC001;i5;16"</codijpc>), les parts estàn separades pe un **punt i coma** (<codijpc>;</codijpc>).
+
+---
+
 ## La funció <codijpc>split</codijpc>
+
+```python
+(method) def split(
+    sep: str | None = None,
+    maxsplit: SupportsIndex = -1
+) -> list[str]
+Return a list of the substrings in the string, using sep as the separator string.
+```
+
+<details>
+  <summary>Mostra tot el text de l'ajuda de **VSC**</summary>
+
+```python
+sep
+    The separator used to split the string.
+
+    When set to None (the default value), will split on any whitespace
+    character (including \n \r \t \f and spaces) and will discard
+    empty strings from the result.
+maxsplit
+    Maximum number of splits.
+    -1 (the default value) means no limit.
+
+Splitting starts at the front of the string and works to the end.
+
+Note, str.split() is mainly useful for data that has been intentionally
+delimited. With natural text that includes punctuation, consider using
+the regular expression module.
+```
+
+</details>
+
+
+La funció <codijpc>split</codijpc> separa un text en parts utilitzant un separador.
+
 
 ```python
 liniaFitxer = "PC001;i5;16"
@@ -593,7 +683,7 @@ Aquesta part ja l’han treballada. Aquí haurien de començar a ser més autòn
 inventari.append(ordinador)
 ```
 
-El nou ordinador queda afegit a l’inventari mentre el programa està obert.
+El nou ordinador queda afegit a l’inventari **mentre el programa està executant-se**.
 
 Note:
 Pregunta: què passarà si tanquem sense guardar? Això porta al següent pas.
