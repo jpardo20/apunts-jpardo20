@@ -85,6 +85,14 @@
             "kind": "activity"
         },
         {
+            "order": "012",
+            "title": "012 - Qüestionari - Introducció a l'electricitat - 0221-ae-002",
+            "src": "slides/m0221-ae-002.reveal",
+            "description": "Activitat 2. Qüestionari - Introducció a l'electricitat - 0221-ae-002",
+            "status": "inactive",
+            "kind": "activity"
+        },
+        {
             "order": "010",
             "title": "010 - Avaluació activitat 1. Presentacions mim-ud01-ae01",
             "src": "slides/avaluacio-presentacions.reveal",
@@ -132,15 +140,8 @@
             "status": "active",
             "kind": "activity"
         }
-    ],
-    "comentari" : [
-        {
-            "order": "012",
-            "title": "012 - Qüestionari - Introducció a l'electricitat - 0221-ae-002",
-            "src": "slides/m0221-ae-002.reveal",
-            "description": "Activitat 2. Qüestionari - Introducció a l'electricitat - 0221-ae-002",
-            "status": "active",
-            "kind": "activity"
-        }
     ]
 }
+
+
+
