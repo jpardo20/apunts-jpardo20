@@ -726,8 +726,49 @@ def guardaDades(inventari, fitxerAGuardar="dades.txt"):
 - mode <codijpc>a</codijpc> (**append**) afegeix al final del contingut del fitxer
 
 
+↓ (funció <codijpc>guardaDades</codijpc> completa)
+
+
 Note:
 Explica la diferència entre mode `w` i mode `a`.
+
+----
+
+```python
+def guardaDades(inventari, fitxerAGuardar="dades.txt"):
+    """
+    Guarda l'inventari al fitxer rebut.
+
+    :param inventari: és la llista de diccionaris amb els ordinadors.
+        Tipus list
+
+    :param fitxerAGuardar: és el nom del fitxer a guardar.
+        Tipus str
+        OPCIONAL, valor per defecte "dades.txt"
+
+    :return: no retorna res.
+    """
+
+    # Definició de variables
+    fitxer = object()
+    ordinador = dict()
+
+    # Obrir fitxer en mode escriptura
+    fitxer = open(fitxerAGuardar, "w")
+
+    # Recórrer inventari
+    for ordinador in inventari:
+
+        # Guardar ordinador al fitxer
+        fitxer.write(
+            f"{ordinador['nom']};"
+            f"{ordinador['cpu']};"
+            f"{ordinador['ram']}\n"
+        )
+
+    # Tancar fitxer
+    fitxer.close()
+```
 
 ---
 
