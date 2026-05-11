@@ -144,7 +144,7 @@
             "order": "302",
             "title": "302 - Pràctica: Detecció d'errors a un servidor",
             "src": "slides/0221-3rTrim-302-deteccio-errors-servidor.reveal",
-            "description": "L'objectiu és explicar **com funciona un ordinador de sobretaula** d'una manera clara, entenedora i pràctica.",
+            "description": "L'objectiu és intentar possar en marxa un servidor - Detecció d'errors a un servidor",
             "status": "active",
             "kind": "activity"
         }
