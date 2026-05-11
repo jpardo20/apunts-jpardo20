@@ -98,7 +98,7 @@
       "src": "slides/xlo-3r-trim-glpi-docker-act000.reveal",
       "description": "<strong>GLPI</strong> + <strong>Docker</strong>: Gestió d’incidències i execució amb contenidors<br><strong>3r trimestre</strong>",
       "status": "active",
-      "kind":"activity"
+      "kind":"theory"
     },
     {
       "order": "301",
@@ -106,7 +106,7 @@
       "src": "slides/xlo-3r-trim-glpi-docker-act001.reveal",
       "description": "<strong>GLPI</strong>: PRÀCTICA — ÚS DE GLPI<br><strong>3r trimestre</strong>",
       "status": "active",
-      "kind":"activity"
+      "kind":"theory"
     },
     {
       "order": "302",
@@ -118,7 +118,7 @@
     },
     {
       "order": "303",
-      "title": "303. Exemple de KB a GLPI",
+      "title": "303. Pràctica GLPI - Simulació real de servei tècnic",
       "src": "slides/xlo-3r-trim-glpi-docker-act003-exemple-de-kb.reveal",
       "description": "Com documentar correctament una incidència",
       "status": "active",
@@ -126,7 +126,7 @@
     },
     {
       "order": "304",
-      "title": "304. Pràctica GLPI  (<codijpc>0225-xlo-ae031</codijpc>) ",
+      "title": "304. Pràctica GLPI - Crear i utilitzar una KB (<codijpc>0225-xlo-ae031</codijpc>) ",
       "src": "slides/xlo-3r-trim-glpi-docker-act004-0225-xlo-ae031.reveal",
       "description": "Crear i utilitzar una KB",
       "status": "active",
