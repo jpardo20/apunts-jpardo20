@@ -135,13 +135,23 @@
         {
             "order": "301",
             "title": "301 - Pràctica avaluable – Divulgació de maquinari",
-            "src": "slides/0221-3rTrim-divulgacio-de-maquinari.reveal",
+            "src": "slides/0221-3rTrim-301-divulgacio-de-maquinari.reveal",
+            "description": "L'objectiu és explicar **com funciona un ordinador de sobretaula** d'una manera clara, entenedora i pràctica.",
+            "status": "active",
+            "kind": "activity"
+        },
+        {
+            "order": "302",
+            "title": "302 - Pràctica: Detecció d'errors a un servidor",
+            "src": "slides/0221-3rTrim-302-deteccio-errors-servidor.reveal",
             "description": "L'objectiu és explicar **com funciona un ordinador de sobretaula** d'una manera clara, entenedora i pràctica.",
             "status": "active",
             "kind": "activity"
         }
     ]
 }
+
+
 
 
 
