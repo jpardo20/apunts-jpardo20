@@ -8,9 +8,9 @@
 ### Grup A
 
 - Grup A (https://github.com/SMX-2025-2027/0221-divulgacio-de-maquinari-smx-grup-a)
-    - Pau Díaz (**`Paudiazlopez`**)
-    - Clemente Ramos (**`clemente825`**)
-    - Merouan Kiass (**`merouan208`**)
+    - Pau Díaz (<codijpc>Paudiazlopez</codijpc>)
+    - Clemente Ramos (<codijpc>clemente825</codijpc>)
+    - Merouan Kiass (<codijpc>merouan208</codijpc>)
 
 ⬇️
 
@@ -19,8 +19,8 @@
 ### Grup b
 
 - Grup B (https://github.com/SMX-2025-2027/0221-divulgacio-de-maquinari-smx-grup-b)
-    - Lorena Cracana (**`Lorena639`**)
-    - Kristina Velkovska (**`kristina-2008`**)
+    - Lorena Cracana (<codijpc>Lorena639</codijpc>)
+    - Kristina Velkovska (<codijpc>kristina-2008</codijpc>)
 
 ⬇️
 
@@ -30,18 +30,18 @@
 
 - Grup C (https://github.com/SMX-2025-2027/0221-divulgacio-de-maquinari-smx-grup-c)
 
-    - Marc López (**`marcl-3`**)
-    - Daniel De Paiva  (**`jdanioliv`**)
+    - Marc López (<codijpc>marcl-3</codijpc>)
+    - Daniel De Paiva  (<codijpc>jdanioliv</codijpc>)
 
 ---
 
 
 ## Què heu de fer
 
-La sesssió d'avui ha estat **`Intentar possar en marxa un servidor - Detecció d'errors a un servidor`**
+La sesssió d'avui ha estat <codijpc>Intentar possar en marxa un servidor - Detecció d'errors a un servidor</codijpc>
 
-- Crear la carpeta **`pr001-servidor`**
-- Dins d'aquesta carpeta crear el fitxer **`README.md`**
+- Crear la carpeta <codijpc>pr001-servidor</codijpc>
+- Dins d'aquesta carpeta crear el fitxer <codijpc>README.md</codijpc>
 - Explicar tot el que heu fet durant la sessió d'avui
 - No cal donar detalls tècnics del components del servidor, però sí els detalls conceptuals
 
@@ -54,7 +54,7 @@ Per exemple ⬇️
 
 Per exemple
 
-El fitxer del grup B cal que tingui el següent contiongut:
+El fitxer <codijpc>pr001-servidor/README.md</codijpc> del **grup B** cal que tingui el següent contingut:
 
 ```markdown
 ## Alumne: Lorena Cracana
