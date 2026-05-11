@@ -5,14 +5,28 @@
 
 ## Grups
 
+### Grup A
+
 - Grup A (https://github.com/SMX-2025-2027/0221-divulgacio-de-maquinari-smx-grup-a)
     - Pau Díaz (**`Paudiazlopez`**)
     - Clemente Ramos (**`clemente825`**)
     - Merouan Kiass (**`merouan208`**)
 
+⬇️
+
+----
+
+### Grup b
+
 - Grup B (https://github.com/SMX-2025-2027/0221-divulgacio-de-maquinari-smx-grup-b)
     - Lorena Cracana (**`Lorena639`**)
     - Kristina Velkovska (**`kristina-2008`**)
+
+⬇️
+
+----
+
+### Grup C
 
 - Grup C (https://github.com/SMX-2025-2027/0221-divulgacio-de-maquinari-smx-grup-c)
 
@@ -30,6 +44,29 @@ La sesssió d'avui ha estat **`Intentar possar en marxa un servidor - Detecció 
 - Dins d'aquesta carpeta crear el fitxer **`README.md`**
 - Explicar tot el que heu fet durant la sessió d'avui
 - No cal donar detalls tècnics del components del servidor, però sí els detalls conceptuals
+
+### Cal que cada alumnes faci la seva explicació a sota d'un títol amb el seu nom.
+
+
+Per exemple ⬇️
+
+----
+
+Per exemple
+
+El fitxer del grup B cal que tingui el següent contiongut:
+
+```markdown
+## Alumne: Lorena Cracana
+
+Bla, bla, bla ...
+
+
+## Alumne: Kristina Velkovska
+
+Bla, bla, bla ...
+
+```
 
 ---
 
