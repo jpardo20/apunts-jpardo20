@@ -179,10 +179,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-008-del-model-relacional-asql-ddl",
+            "id": "0484-bds-008-teoria-del-model-relacional-asql-ddl",
             "title": "15. TEORIA: Del model relacional a SQL (DDL)",
             "description": "TEORIA: Del model relacional a SQL (DDL)",
-            "src": "slides/0484-bds-teoria-008-del-model-relacional-asql-ddl.reveal",
+            "src": "slides/0484-bds-008-teoria-del-model-relacional-asql-ddl.reveal",
             "theme": "white",
             "status": "active",
             "kind": "theory",
@@ -204,10 +204,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-009-alter-table-duplicats",
+            "id": "0484-bds-009-teoria-alter-table-duplicats",
             "title": "17. TEORIA: ALTER TABLE, duplicats i dades compartides",
             "description": "TEORIA: ALTER TABLE, duplicats i dades compartides",
-            "src": "slides/0484-bds-teoria-009-alter-table-duplicats.reveal",
+            "src": "slides/0484-bds-009-teoria-alter-table-duplicats.reveal",
             "theme": "white",
             "status": "active",
             "kind": "theory",
@@ -216,10 +216,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-010-gestio-escape-rooms",
+            "id": "0484-bds-010-teoria-gestio-escape-rooms",
             "title": "18. TEORIA: Plataforma de gestió d’Escape Rooms i experiències immersives",
             "description": "TEORIA: Plataforma de gestió d’Escape Rooms i experiències immersives",
-            "src": "slides/0484-bds-teoria-010-gestio-escape-rooms.reveal",
+            "src": "slides/0484-bds-010-teoria-gestio-escape-rooms.reveal",
             "theme": "white",
             "status": "active",
             "kind": "theory",
@@ -228,10 +228,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-011-millores-gestio-escape-rooms",
+            "id": "0484-bds-011-teoria-millores-gestio-escape-rooms",
             "title": "19. TEORIA: Propostes de millora de seguretat i integritat de dades",
             "description": "TEORIA: Propostes de millora de seguretat i integritat de dades",
-            "src": "slides/0484-bds-teoria-011-millores-gestio-escape-rooms.reveal",
+            "src": "slides/0484-bds-011-teoria-millores-gestio-escape-rooms.reveal",
             "theme": "white",
             "status": "active",
             "kind": "theory",
@@ -240,10 +240,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-012-0484-bds-ae12",
+            "id": "0484-bds-012-activitat-0484-bds-ae12",
             "title": "20. Activitat 12: Fitxer SQL per afegir registres a la base de dades <codiae>0484-bds-ae12</codiae>",
             "description": "generar un fitxer SQL d’inserció de dades (<codijpc>INSERT INTO</codijpc>)<br>- que respecti tota l’estructura i restriccions de la base de dades <codijpc>escape_rooms</codijpc><br>- i que permeti provar el funcionament real del sistema.",
-            "src": "slides/0484-bds-teoria-012-0484-bds-ae12.reveal",
+            "src": "slides/0484-bds-012-activitat-0484-bds-ae12.reveal",
             "theme": "white",
             "kind": "activity",
             "status": "active",
@@ -253,10 +253,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-031-stored-procedures",
+            "id": "0484-bds-031-teoria-stored-procedures",
             "title": "30. TEORIA: Stored Procedure",
             "description": "TEORIA: Stored Procedure",
-            "src": "slides/0484-bds-teoria-031-stored-procedures.reveal",
+            "src": "slides/0484-bds-031-teoria-stored-procedures.reveal",
             "theme": "white",
             "status": "active",
             "kind": "theory",
@@ -265,10 +265,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-032-stored-procedures-2",
+            "id": "0484-bds-032-teoria-stored-procedures-2",
             "title": "31. TEORIA: Stored Procedure II",
             "description": "TEORIA: Stored Procedure II",
-            "src": "slides/0484-bds-teoria-032-stored-procedures-2.reveal",
+            "src": "slides/0484-bds-032-teoria-stored-procedures-2.reveal",
             "theme": "white",
             "status": "active",
             "kind": "theory",
@@ -277,10 +277,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-033-stored-procedures-3",
+            "id": "0484-bds-033-teoria-stored-procedures-3",
             "title": "32. TEORIA: Stored Procedure III",
             "description": "TEORIA: Stored Procedure III",
-            "src": "slides/0484-bds-teoria-033-stored-procedures-3.reveal",
+            "src": "slides/0484-bds-033-teoria-stored-procedures-3.reveal",
             "theme": "white",
             "status": "active",
             "kind": "theory",
@@ -289,10 +289,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-034-function",
+            "id": "0484-bds-034-teoria-function",
             "title": "33. TEORIA: Functions",
             "description": "TEORIA: Stored Procedure III",
-            "src": "slides/0484-bds-teoria-034-function.reveal",
+            "src": "slides/0484-bds-034-teoria-function.reveal",
             "theme": "white",
             "status": "active",
             "kind": "theory",
@@ -301,10 +301,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-035-hotel_reserves-fase-01",
+            "id": "0484-bds-035-activitat-hotel_reserves-fase-01",
             "title": "35. Pràctica: Sistema de reserves d'hotel",
             "description": "Pràctica: Sistema de reserves d'hotel<br>Fase 1: Preparació",
-            "src": "slides/0484-bds-teoria-035-hotel_reserves-fase-01.reveal",
+            "src": "slides/0484-bds-035-activitat-hotel_reserves-fase-01.reveal",
             "theme": "white",
             "status": "active",
             "kind": "activity",
@@ -313,10 +313,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-036-hotel_reserves-fase-02",
+            "id": "0484-bds-036-activitat-hotel_reserves-fase-02",
             "title": "36. Pràctica: Sistema de reserves d'hotel",
             "description": "Pràctica: Sistema de reserves d'hotel<br>Fase 2: Exploració",
-            "src": "slides/0484-bds-teoria-036-hotel_reserves-fase-02.reveal",
+            "src": "slides/0484-bds-036-activitat-hotel_reserves-fase-02.reveal",
             "theme": "white",
             "status": "active",
             "kind": "activity",
@@ -325,10 +325,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-037-vistes",
+            "id": "0484-bds-037-teoria-vistes",
             "title": "37. TEORIA: Triggers",
             "description": "Una **vista** és una consulta SQL guardada amb nom.",
-            "src": "slides/0484-bds-teoria-037-vistes.reveal",
+            "src": "slides/0484-bds-037-teoria-vistes.reveal",
             "theme": "white",
             "status": "active",
             "kind": "theory",
@@ -337,10 +337,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-038-hotel_reserves-fase-03",
+            "id": "0484-bds-038-activitat-hotel_reserves-fase-03",
             "title": "38. Pràctica: Sistema de reserves d'hotel",
             "description": "Fase 3: Consolidació amb consultes",
-            "src": "slides/0484-bds-teoria-038-hotel_reserves-fase-03.reveal",
+            "src": "slides/0484-bds-038-activitat-hotel_reserves-fase-03.reveal",
             "theme": "white",
             "status": "active",
             "kind": "activity",
@@ -349,10 +349,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-039-triggers",
+            "id": "0484-bds-039-teoria-triggers",
             "title": "39. Fase 4: Triggers (introducció)",
             "description": "Automatitzar accions dins la base de dades.",
-            "src": "slides/0484-bds-teoria-039-triggers.reveal",
+            "src": "slides/0484-bds-039-teoria-triggers.reveal",
             "theme": "white",
             "status": "active",
             "kind": "theory",
@@ -361,10 +361,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-040-triggers-creacio",
+            "id": "0484-bds-040-teoria-triggers-creacio",
             "title": "40. Fase 4: Triggers (creació)",
             "description": "Crearem el nostre primer trigger.",
-            "src": "slides/0484-bds-teoria-040-triggers-creacio.reveal",
+            "src": "slides/0484-bds-040-teoria-triggers-creacio.reveal",
             "theme": "white",
             "status": "active",
             "kind": "theory",
@@ -373,10 +373,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-041-triggers-creacio-solucions",
+            "id": "0484-bds-041-teoria-triggers-creacio-solucions",
             "title": "41. Fase 4: Triggers (solucions)",
             "description": "Solucions als exercicis anteriors.",
-            "src": "slides/0484-bds-teoria-041-triggers-creacio-solucions.reveal",
+            "src": "slides/0484-bds-041-teoria-triggers-creacio-solucions.reveal",
             "theme": "white",
             "status": "active",
             "kind": "theory",
@@ -385,10 +385,10 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-042-triggers-creacio",
+            "id": "0484-bds-042-activitat-triggers-creacio",
             "title": "42. Fase 4: Triggers: Consolidació de Triggers",
             "description": "Consolidació de Triggers",
-            "src": "slides/0484-bds-teoria-042-triggers-creacio.reveal",
+            "src": "slides/0484-bds-042-activitat-triggers-creacio.reveal",
             "theme": "white",
             "status": "active",
             "kind": "activity",
@@ -398,8 +398,3 @@
         }
     ]
 }
-
-
-
-
-
