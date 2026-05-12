@@ -1,0 +1,158 @@
+# Sistema de reserves d'hotel
+
+## Consolidació de **`Triggers`**
+
+---
+
+## Objectiu
+
+Demostrar que s'han entés la creació i execució dels Triggers, vistos a la teoria.
+
+- <codijpc>trg_passa_reserva_a_confirma</codijpc>
+
+- <codijpc>trg_confirma_reserva_si_pendent</codijpc>
+
+- <codijpc>trg_validar_import</codijpc>
+
+- <codijpc>trg_log_pagaments</codijpc>
+
+---
+
+## Lliurament
+
+Cal crear el fitxer:
+
+`sql/hotel_reserves/03-triggers-teoria.md`
+
+i demostrar que heu creat cada trigger a la vostra base de dades, executar les consultes SQL necessaries per mostrar que el trigger ha funcionat correctament.
+
+---
+
+## Especificació de format
+
+El document ha de seguir **EXACTAMENT AQUESTA ESTRUCTURA**:
+
+````markdown
+
+## Trigger: `trg_passa_reserva_a_confirma`
+
+### Explicació de què fa el trigger `trg_passa_reserva_a_confirma`
+
+El trigger `trg_passa_reserva_a_confirma` ...
+
+### Comanda creació trigger
+```sql
+CREATE TRIGGER
+ ...
+
+```
+### Sortida de la comanda `CREATE TRIGGER`
+```sql
+(sortida real de MySQL)
+```
+
+### Demostració de que el trigger `trg_passa_reserva_a_confirma` funciona
+
+(text explicatiu)
+
+[**per exemple**]
+
+Per demostrar que el trigger `trg_passa_reserva_a_confirma` funciona, executaré una comanda inicial per veure l'estat de les taules abans de que el trigger `trg_passa_reserva_a_confirma` s'executi ...
+
+### Comanda a executar
+
+```sql
+SELECT *
+FROM ...
+...
+```
+### Sortida de la comanda executada
+
+```sql
+(sortida real de MySQL)
+```
+
+### Comanda a executar per activar el trigger `trg_passa_reserva_a_confirma`
+
+(text explicatiu)
+
+[**per exemple**]
+
+Com que el trigger `trg_passa_reserva_a_confirma` s'activa en fer un **`INSERT`** a la taula ...
+
+### Comanda a executar
+
+```sql
+INSERT ??
+INTO  ...
+...
+```
+
+### Sortida de la comanda executada
+
+```sql
+(sortida real de MySQL)
+```
+
+### Comanda a executar per veure que s'activat el trigger `trg_passa_reserva_a_confirma`
+
+(text explicatiu)
+
+[**per exemple**]
+
+Com que s'ha fet un **`INSERT`** a la taula ...
+
+
+
+### Comanda a executar
+
+```sql
+INSERT ??
+INTO  ...
+...
+```
+
+### Sortida de la comanda executada
+
+```sql
+(sortida real de MySQL)
+```
+
+````
+
+---
+
+## Tasca 1
+
+### Trigger <codijpc>trg_passa_reserva_a_confirma</codijpc>
+
+Cal que feu, una demostració de que el trigger <codijpc>trg_passa_reserva_a_confirma</codijpc> funciona.
+Seguint els passos descrits a [**Especificació de format**](#especificació-de-format)
+
+---
+
+## Tasca 2
+
+### Trigger <codijpc>trg_confirma_reserva_si_pendent</codijpc>
+
+Cal que feu, una demostració de que el trigger <codijpc>trg_confirma_reserva_si_pendent</codijpc> funciona.
+Seguint els passos descrits a [**Especificació de format**](#especificació-de-format)
+
+---
+
+## Tasca 3
+
+### Trigger <codijpc>trg_validar_import</codijpc>
+
+Cal que feu, una demostració de que el trigger <codijpc>trg_validar_import</codijpc> funciona.
+Seguint els passos descrits a [**Especificació de format**](#especificació-de-format)
+
+
+---
+
+## Tasca 4
+
+### Trigger <codijpc>trg_log_pagaments</codijpc>
+
+Cal que feu, una demostració de que el trigger <codijpc>trg_log_pagaments</codijpc> funciona.
+Seguint els passos descrits a [**Especificació de format**](#especificació-de-format)

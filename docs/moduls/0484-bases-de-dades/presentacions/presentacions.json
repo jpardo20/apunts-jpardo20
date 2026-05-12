@@ -383,6 +383,18 @@
             "tags": [
                 "BBDD"
             ]
+        },
+        {
+            "id": "0484-bds-teoria-041-triggers-creacio-solucions",
+            "title": "42. Fase 4: Triggers: Consolidació de Triggers",
+            "description": "Consolidació de Triggers",
+            "src": "slides/0484-bds-teoria-042-triggers-creacio.reveal",
+            "theme": "white",
+            "status": "active",
+            "kind": "activity",
+            "tags": [
+                "BBDD"
+            ]
         }
     ]
 }
