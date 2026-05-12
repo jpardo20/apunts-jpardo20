@@ -1,0 +1,381 @@
+# PR006 Examen Python
+
+### Inventari d'ordinadors
+
+## Data: 13/05/2026
+
+---
+
+# Normes
+
+- Examen individual
+- Sense Internet
+- No es poden compartir fitxers
+- Només es pot utilitzar:
+  - VSCode
+  - Python
+  - terminal
+  - documentació local
+
+---
+
+# Fitxers del projecte
+
+L'aplicació està formada per:
+
+- <codijpc>main.py</codijpc>
+
+- <codijpc>inventari.py</codijpc>
+
+- <codijpc>menu.py</codijpc>
+
+- <codijpc>dades.txt</codijpc>
+
+- <codijpc>menu.txt</codijpc>
+
+
+---
+
+# Funcionament
+
+L'aplicació permet:
+
+- carregar dades
+- mostrar inventari
+- afegir ordinadors
+- guardar dades
+
+---
+
+# Format dades
+
+```bash
+PC001;i5;16
+PC002;i7;32
+```
+
+Cada ordinador té:
+
+- <codijpc>nom</codijpc>
+- <codijpc>cpu</codijpc>
+- <codijpc>ram</codijpc>
+
+---
+
+# Estructures
+
+## Inventari
+
+Llista de diccionaris:
+
+```python
+inventari = [
+    {
+        "nom": "PC001",
+        "cpu": "i5",
+        "ram": 16
+    }
+]
+```
+
+---
+
+# PART 1
+
+# Comprensió del codi
+
+## 4 punts
+
+---
+
+# 1.1 <codijpc>strip()</codijpc>
+
+Explica què fa aquesta línia:
+
+```python
+liniaFitxer = liniaFitxer.strip()
+```
+
+---
+
+# 1.2 <codijpc>split()</codijpc>
+
+Explica què retorna:
+
+```python
+dadesOrdinador = liniaFitxer.split(";")
+```
+
+Posa un exemple concret.
+
+---
+
+# 1.3 Llista vs diccionari
+
+Explica la diferència entre:
+
+- una llista
+- un diccionari
+
+---
+
+# 1.4 <codijpc>int()</codijpc>
+
+Per què fem això?
+
+```python
+"ram": int(dadesOrdinador[2])
+```
+
+Què passaria si no ho féssim?
+
+---
+
+# 1.5 <codijpc>readlines()</codijpc>
+
+Explica què fa:
+
+```python
+fitxer.readlines()
+```
+
+---
+
+# 1.6 <codijpc>open()</codijpc>
+
+Quina diferència hi ha entre:
+
+```python
+open("fitxer.txt", "w")
+```
+
+i
+
+```python
+open("fitxer.txt", "a")
+```
+
+---
+
+# 1.7 <codijpc>append()</codijpc>
+
+Explica què fa:
+
+```python
+append()
+```
+
+---
+
+# 1.8 <codijpc>append</codijpc> ordinador
+
+Explica aquest codi:
+
+```python
+inventari.append(ordinador)
+```
+
+---
+
+# PART 2
+
+# Modificació del programa
+
+## 3 punts
+
+---
+
+# 2.1 Afegir <codijpc>Disc dur</codijpc>
+
+Modifica el programa perquè cada ordinador també tingui <codijpc>disc dur</codijpc>
+
+Exemple:
+
+```txt
+PC001;i5;16;1TB
+```
+
+---
+
+# Afegir <codijpc>disc dur</codijpc>
+
+Cal modificar:
+
+- càrrega de dades
+- afegir ordinador
+- mostrar inventari
+- guardar fitxer
+
+---
+
+# 2.2 Total ordinadors
+
+Crea una nova opció de menú que mostri:
+
+- nombre total d'ordinadors
+
+---
+
+# 2.3 Filtrar <codijpc>RAM</codijpc>
+
+Crea una nova opció de menú que mostri:
+
+- només ordinadors amb <codijpc>RAM >= 16</codijpc>
+
+---
+
+# PART 3
+
+# Debugging
+
+## 2 punts
+
+---
+
+# 3.1 Error en afegir ordinador
+
+Un alumne executa el programa.
+
+Quan el programa demana la RAM, escriu:
+
+```txt
+setze
+```
+
+El programa mostra:
+
+```txt
+ERROR! Cal introduir un número.
+```
+
+Però després el programa falla.
+
+---
+
+# Codi relacionat
+
+```python
+try:
+    print(f"Entra la RAM de l'ordinador: ", end="")
+    ramOrdinador = int(input())
+except ValueError:
+    print("\tERROR! Cal introduir un número.")
+
+ordinador={
+    "nom": nomOrdinador,
+    "cpu": cpuOrdinador,
+    "ram": ramOrdinador
+}
+```
+
+---
+
+# Preguntes
+
+- Quin error es pot produir?
+- Per què passa?
+- En quin moment falla?
+- Com ho solucionaries?
+
+---
+
+# 3.2 Problema llegint fitxer
+
+Un alumne modifica el programa i escriu aquest codi:
+
+```python
+dades = linia.split(",")
+
+ordinador = {
+    "nom": dades[0],
+    "ram": dades[2]
+}
+```
+
+El fitxer original és:
+
+```txt
+PC001;i5;16
+```
+
+---
+
+# Preguntes
+
+- Quin problema hi ha amb <codijpc>split(",")</codijpc>?
+- Què contindrà la variable <codijpc>dades</codijpc>?
+- Quin error podria aparèixer?
+- Com ho solucionaries?
+
+---
+
+# PART 4
+
+# Preguntes curtes
+
+## 1 punt
+
+---
+
+# 4.1 <codijpc>input()</codijpc>
+
+Quin tipus retorna:
+
+```python
+input()
+```
+
+---
+
+# 4.2 <codijpc>len()</codijpc>
+
+Què fa:
+
+```python
+len()
+```
+
+---
+
+# 4.3 <codijpc>match-case</codijpc>
+
+Per a què serveix:
+
+```python
+match-case
+```
+
+---
+
+# 4.4 Inventari buit
+
+Explica:
+
+```python
+if len(inventari) == 0:
+```
+
+---
+
+# Entrega
+
+Cal entregar:
+
+- tots els fitxers modificats
+- el programa funcionant
+- respostes completes
+
+---
+
+# Criteris d'avaluació
+
+| Apartat | Pes |
+|---|---|
+| Comprensió | 40% |
+| Modificació | 30% |
+| Debugging | 20% |
+| Claredat | 10% |
+
+---
+
+# Bona sort!

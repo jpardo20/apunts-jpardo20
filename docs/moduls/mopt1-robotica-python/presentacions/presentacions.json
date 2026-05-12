@@ -120,6 +120,14 @@
       "description": "Millorar el projecte d’el Gestor d’inventari informàtic",
       "status": "active",
         "kind": "theory"
+    },
+    {
+      "order": 307,
+      "title": "307 - Examen - Llistes, diccionaris i fitxers",
+      "src": "slides/307-python- examen.reveal",
+      "description": "Examen Python - PR006 - Inventari d'ordinadors data 13/05/2026",
+      "status": "active",
+        "kind": "activity"
     }
   ]
 }
