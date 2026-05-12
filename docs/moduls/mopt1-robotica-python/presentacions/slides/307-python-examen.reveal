@@ -6,6 +6,106 @@
 
 ---
 
+# Preparació examen
+
+## Abans de començar
+
+TOTS els alumnes han de:
+
+1. **Actualitzar** el seu repositori local, <codijpc>git pull</codijpc> amb els canvis del seu repositori remot.
+
+2. **Comprovar** que veuen l'enunciat <codijpc>pr006-examen/enunciat.md</codijpc>.
+
+3. **Activar** el <codijpc>mode avió</codijpc>
+
+4. **Activar** únicament la **WiFi**
+
+5. Connectar-se a la xarxa:
+
+| Configuració | Valor        |
+| ------------ | ------------ |
+| **`SSID`**         |  <codijpc>SMX-EXAMEN</codijpc> |
+| **`Contrasenya`**     | <codijpc>smxexamen2026</codijpc>    |
+
+---
+
+# Documentació i apunts
+
+Per consultar:
+- apunts
+- documentació
+- enunciat
+
+Accediu a:
+
+```txt
+http://10.42.0.1:8000/apunts-jpardo20
+```
+
+---
+
+# IMPORTANT
+
+## No hi ha Internet
+
+La xarxa <codijpc>SMX-EXAMEN</codijpc>
+
+només permet:
+- accés local
+- documentació
+- apunts
+
+No permet:
+- Google
+- ChatGPT
+- GitHub
+- cercadors
+- webs externes
+
+---
+
+# Commits obligatoris
+
+Durant l'examen cal fer:
+
+```bash
+git add .
+git commit -m "commit de les 10.00 hores"
+```
+
+mínim cada <codijpc>10 minuts</codijpc>
+
+---
+
+# Objectiu dels <codijpc>commits</codijpc>
+
+Els <codijpc>commits</codijpc> serveixen per:
+
+- guardar el progrés
+- evitar pèrdua de feina
+- mostrar evolució del treball
+- facilitar l'entrega final
+
+Cal que un cop acaveu l'examen el darrer <codijpc>commit</codijpc> sigui:
+
+```bash
+git commit -m "Lliurament final"
+```
+
+---
+
+# IMPORTANT
+
+No cal fer <codijpc>git push</codijpc> durant l'examen.
+
+Si no teniu internet, no podeu enviar res al vostre repositori remot.
+
+El <codijpc>git push</codijpc> es farà únicament:
+- al final
+- quan el professor ho indiqui.
+
+---
+
 # Normes
 
 - Examen individual
