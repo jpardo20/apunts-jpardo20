@@ -20,11 +20,9 @@ Demostrar que s'han entés la creació i execució dels Triggers, vistos a la te
 
 ## Lliurament
 
-Cal crear el fitxer:
+Cal crear el fitxer <codijpc>sql/hotel_reserves/03-triggers-teoria.md</codijpc>
 
-`sql/hotel_reserves/03-triggers-teoria.md`
-
-i demostrar que heu creat cada trigger a la vostra base de dades, executar les consultes SQL necessaries per mostrar que el trigger ha funcionat correctament.
+I cal demostrar que heu creat i enteś cadascún dels **`triggers`** a la vostra base de dades, explicant i executant les consultes SQL necessaries per mostrar que el **`trigger`** ha funcionat correctament.
 
 ---
 
