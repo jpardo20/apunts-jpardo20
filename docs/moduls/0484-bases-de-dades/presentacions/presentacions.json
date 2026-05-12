@@ -77,7 +77,7 @@
             ]
         },
         {
-            "id": "0484-bds-activitat-validacio-mer-escenaris.reveal",
+            "id": "0484-bds-activitat-validacio-mer-escenaris",
             "title": "07. 0484-bds-activitat-validacio-mer-escenaris.reveal",
             "description": "Enunciats: Model Entitat-Relació (MER)",
             "src": "slides/0484-bds-activitat-validacio-mer-escenaris.reveal",
@@ -89,7 +89,7 @@
             ]
         },
         {
-            "id": "8 del-mer-al-model-relacional-v2.",
+            "id": "8 del-mer-al-model-relacional-v2",
             "title": "08. TEORIA: Del MER al model relacional",
             "description": "TEORIA: Del MER al model relacional",
             "src": "slides/del-mer-al-model-relacional-v2.reveal",
@@ -166,7 +166,7 @@
             ]
         },
         {
-            "id": "14. 0484-bds-teoria-007-tornada-de-nadal",
+            "id": "0484-bds-01-teoria-007-tornada-de-nadal",
             "title": "14. Teoria 7: Tornant de Nadal",
             "description": "Teoria 7: Tornant de Nadal",
             "src": "slides/0484-bds-01-teoria-007-tornada-de-nadal.reveal",
@@ -179,7 +179,7 @@
             ]
         },
         {
-            "id": "dedel-model-relacional-asql-ddl.",
+            "id": "0484-bds-teoria-008-del-model-relacional-asql-ddl",
             "title": "15. TEORIA: Del model relacional a SQL (DDL)",
             "description": "TEORIA: Del model relacional a SQL (DDL)",
             "src": "slides/0484-bds-teoria-008-del-model-relacional-asql-ddl.reveal",
@@ -240,7 +240,7 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-012-0484-bds-ae12.reveal",
+            "id": "0484-bds-teoria-012-0484-bds-ae12",
             "title": "20. Activitat 12: Fitxer SQL per afegir registres a la base de dades <codiae>0484-bds-ae12</codiae>",
             "description": "generar un fitxer SQL d’inserció de dades (<codijpc>INSERT INTO</codijpc>)<br>- que respecti tota l’estructura i restriccions de la base de dades <codijpc>escape_rooms</codijpc><br>- i que permeti provar el funcionament real del sistema.",
             "src": "slides/0484-bds-teoria-012-0484-bds-ae12.reveal",
@@ -289,7 +289,7 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-034-funtion",
+            "id": "0484-bds-teoria-034-function",
             "title": "33. TEORIA: Functions",
             "description": "TEORIA: Stored Procedure III",
             "src": "slides/0484-bds-teoria-034-function.reveal",
@@ -385,7 +385,7 @@
             ]
         },
         {
-            "id": "0484-bds-teoria-041-triggers-creacio-solucions",
+            "id": "0484-bds-teoria-042-triggers-creacio",
             "title": "42. Fase 4: Triggers: Consolidació de Triggers",
             "description": "Consolidació de Triggers",
             "src": "slides/0484-bds-teoria-042-triggers-creacio.reveal",
