@@ -8,17 +8,21 @@
 
 # Preparació examen
 
-## Abans de començar
+## Abans de començar TOTS els alumnes han de:
 
-TOTS els alumnes han de:
-
-1. **Actualitzar** el seu repositori local, <codijpc>git pull</codijpc> amb els canvis del seu repositori remot.
+1. **Actualitzar** el seu repositori local, <codijpc>git pull</codijpc> amb els canvis.
 
 2. **Comprovar** que veuen l'enunciat <codijpc>pr006-examen/enunciat.md</codijpc>.
 
 3. **Activar** el <codijpc>mode avió</codijpc>
 
 4. **Activar** únicament la **WiFi**
+
+5. Connectar-se a la xarxa:
+
+⬇️
+
+----
 
 5. Connectar-se a la xarxa:
 
@@ -62,6 +66,12 @@ només permet:
 - accés local
 - documentació
 - apunts
+
+No permet:
+
+⬇️
+
+----
 
 No permet:
 - Google
