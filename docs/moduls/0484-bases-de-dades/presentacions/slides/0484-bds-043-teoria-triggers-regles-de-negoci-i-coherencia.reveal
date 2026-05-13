@@ -8,12 +8,12 @@
 
 Fins ara hem après:
 
-- consultes SQL
-- JOINs
-- GROUP BY
-- HAVING
+- consultes **`SQL`**
+- <codijpc>JOINs</codijpc>
+- <codijpc>GROUP BY</codijpc>
+- <codijpc>HAVING</codijpc>
 - vistes
-- triggers
+- <codijpc>triggers</codijpc>
 
 Ara farem un pas més.
 
@@ -40,21 +40,21 @@ Per exemple:
 
 - una habitació no es pot reservar dues vegades
 - no es poden fer pagaments negatius
-- una reserva no pot passar a `checkout` si encara té imports pendents
+- una reserva no pot passar a <codijpc>checkout</codijpc> si encara **té imports pendents**
 
 ---
 
 # Objectiu d'aquesta fase
 
-Convertir la base de dades `hotel_reserves` en un sistema més realista.
+Convertir la base de dades <codijpc>hotel_reserves</codijpc> en un sistema més realista.
 
 Utilitzarem:
 
-- triggers
+- <codijpc>triggers</codijpc>
 - validacions
-- consultes SQL
-- SIGNAL
-- BEFORE / AFTER
+- consultes **`SQL`**
+- <codijpc>SIGNAL</codijpc>
+- <codijpc>BEFORE</codijpc> / <codijpc>AFTER</codijpc>
 
 ---
 
@@ -77,11 +77,9 @@ Cal demostrar:
 
 # Lliurament
 
-Cal crear el fitxer:
+Cal crear el fitxer
 
-```text
-sql/hotel_reserves/04-regles-negoci-i-coherencia.md
-```
+<codijpc>sql/hotel_reserves/04-regles-negoci-i-coherencia.md</codijpc>
 
 ---
 
@@ -90,7 +88,7 @@ sql/hotel_reserves/04-regles-negoci-i-coherencia.md
 Per cada tasca cal mostrar:
 
 - explicació del problema
-- trigger creat
+- <codijpc>trigger</codijpc> creat
 - consultes executades
 - sortida real de MySQL
 - demostració que funciona
@@ -99,7 +97,7 @@ Per cada tasca cal mostrar:
 
 # Tasca 1
 
-# Impedir overbooking
+# Impedir <codijpc>overbooking</codijpc>
 
 ⬇️
 
@@ -107,7 +105,7 @@ Per cada tasca cal mostrar:
 
 ## Problema
 
-Actualment es poden inserir dues reserves:
+Actualment es poden inserir dues **reserves**:
 
 - per la mateixa habitació
 - en les mateixes dates
@@ -121,7 +119,7 @@ Això és incorrecte.
 
 # Objectiu
 
-Crear un trigger que impedeixi:
+Crear un <codijpc>trigger</codijpc> que impedeixi:
 
 ```text
 dues reserves simultànies
@@ -150,9 +148,9 @@ BEFORE INSERT
 
 Cal comprovar:
 
-- `id_habitacio`
-- dates d'entrada
-- dates de sortida
+- <codijpc>id_habitacio</codijpc>
+- <codijpc>dates d'entrada</codijpc>
+- <codijpc>dates de sortida</codijpc>
 
 ⬇️
 
@@ -172,7 +170,7 @@ SIGNAL SQLSTATE '45000'
 
 ## Exemple de què és el que s'espera
 
-# Tasca 1 — Impedir overbooking
+# Tasca 1 — Impedir <codijpc>overbooking</codijpc>
 
 ## Objectiu
 
@@ -187,7 +185,7 @@ Evitar que una mateixa habitació tingui dues reserves que coincideixen en dates
 
 Actualment podríem fer una reserva nova per una habitació que ja està reservada en aquelles dates.
 
-Això provocaria un overbooking.
+Això provocaria un <codijpc>overbooking</codijpc>.
 
 
 ⬇️
@@ -322,9 +320,9 @@ Aquesta sí que es podria permetre, perquè comença el mateix dia que acaba l�
 
 ----
 
-## Trigger que cal crear
+## <codijpc>Trigger</codijpc> que cal crear
 
-El trigger ha de ser:
+El <codijpc>trigger</codijpc> ha de ser:
 
 ```sql
 BEFORE INSERT
@@ -389,7 +387,7 @@ S’executa abans d’inserir una nova reserva.
 ON RESERVES
 ```
 
-El trigger està associat a la taula `RESERVES`.
+El <codijpc>trigger</codijpc> està associat a la taula `RESERVES`.
 
 
 ⬇️
@@ -582,7 +580,7 @@ WHERE id_habitacio = 2;
 
 ## Important
 
-Aquest trigger evita overbooking en inserir reserves noves.
+Aquest <codijpc>trigger</codijpc> evita <codijpc>overbooking</codijpc> en inserir reserves noves.
 
 Però encara NO controla:
 
@@ -607,7 +605,7 @@ BEFORE UPDATE
 ON RESERVES
 ```
 
-per evitar que algú modifiqui una reserva i provoqui overbooking.
+per evitar que algú modifiqui una reserva i provoqui <codijpc>overbooking</codijpc>.
 
 
 ⬇️
@@ -616,7 +614,7 @@ per evitar que algú modifiqui una reserva i provoqui overbooking.
 
 ## Resum
 
-Aquest trigger serveix per garantir que:
+Aquest <codijpc>trigger</codijpc> serveix per garantir que:
 
 - una habitació no es reserva dues vegades
 - les dates no se solapen
