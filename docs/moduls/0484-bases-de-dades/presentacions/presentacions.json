@@ -91,7 +91,7 @@
         {
             "id": "8 del-mer-al-model-relacional-v2",
             "title": "08: Del MER al model relacional",
-            "description": "TEORIA: Del MER al model relacional",
+            "description": "Del MER al model relacional",
             "src": "slides/del-mer-al-model-relacional-v2.reveal",
             "theme": "white",
             "status": "active",
@@ -181,7 +181,7 @@
         {
             "id": "0484-bds-008-teoria-del-model-relacional-asql-ddl",
             "title": "15: Del model relacional a SQL (DDL)",
-            "description": "TEORIA: Del model relacional a SQL (DDL)",
+            "description": "Del model relacional a SQL (DDL)",
             "src": "slides/0484-bds-008-teoria-del-model-relacional-asql-ddl.reveal",
             "theme": "white",
             "status": "active",
@@ -206,7 +206,7 @@
         {
             "id": "0484-bds-009-teoria-alter-table-duplicats",
             "title": "17: ALTER TABLE, duplicats i dades compartides",
-            "description": "TEORIA: ALTER TABLE, duplicats i dades compartides",
+            "description": "ALTER TABLE, duplicats i dades compartides",
             "src": "slides/0484-bds-009-teoria-alter-table-duplicats.reveal",
             "theme": "white",
             "status": "active",
@@ -218,7 +218,7 @@
         {
             "id": "0484-bds-010-teoria-gestio-escape-rooms",
             "title": "18: Plataforma de gestió d’Escape Rooms i experiències immersives",
-            "description": "TEORIA: Plataforma de gestió d’Escape Rooms i experiències immersives",
+            "description": "Plataforma de gestió d’Escape Rooms i experiències immersives",
             "src": "slides/0484-bds-010-teoria-gestio-escape-rooms.reveal",
             "theme": "white",
             "status": "active",
@@ -230,7 +230,7 @@
         {
             "id": "0484-bds-011-teoria-millores-gestio-escape-rooms",
             "title": "19: Propostes de millora de seguretat i integritat de dades",
-            "description": "TEORIA: Propostes de millora de seguretat i integritat de dades",
+            "description": "Propostes de millora de seguretat i integritat de dades",
             "src": "slides/0484-bds-011-teoria-millores-gestio-escape-rooms.reveal",
             "theme": "white",
             "status": "active",
@@ -255,7 +255,7 @@
         {
             "id": "0484-bds-031-teoria-stored-procedures",
             "title": "30: Stored Procedure",
-            "description": "TEORIA: Stored Procedure",
+            "description": "Stored Procedure",
             "src": "slides/0484-bds-031-teoria-stored-procedures.reveal",
             "theme": "white",
             "status": "active",
@@ -267,7 +267,7 @@
         {
             "id": "0484-bds-032-teoria-stored-procedures-2",
             "title": "31: Stored Procedure II",
-            "description": "TEORIA: Stored Procedure II",
+            "description": "Stored Procedure II",
             "src": "slides/0484-bds-032-teoria-stored-procedures-2.reveal",
             "theme": "white",
             "status": "active",
@@ -279,7 +279,7 @@
         {
             "id": "0484-bds-033-teoria-stored-procedures-3",
             "title": "32: Stored Procedure III",
-            "description": "TEORIA: Stored Procedure III",
+            "description": "Stored Procedure III",
             "src": "slides/0484-bds-033-teoria-stored-procedures-3.reveal",
             "theme": "white",
             "status": "active",
@@ -291,7 +291,7 @@
         {
             "id": "0484-bds-034-teoria-function",
             "title": "33: Functions",
-            "description": "TEORIA: Stored Procedure III",
+            "description": "Stored Procedure III",
             "src": "slides/0484-bds-034-teoria-function.reveal",
             "theme": "white",
             "status": "active",
