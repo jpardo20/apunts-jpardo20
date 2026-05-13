@@ -1,0 +1,274 @@
+# FASE 1 — Linux + Setup inicial
+
+### Objectiu
+
+Preparar el nostre entorn de treball real.
+
+---
+
+# Què aconseguirem?
+
+Al final d’aquesta fase tindrem:
+
+- una màquina virtual funcional
+- Ubuntu Server instal·lat
+- accés SSH
+- Git configurat
+- connexió amb GitHub
+- el repositori del projecte preparat
+
+---
+
+# Important
+
+Aquesta fase és la base de TOT el projecte.
+
+Si això funciona:
+
+- Docker funcionarà
+- la xarxa funcionarà
+- la monitorització funcionarà
+- l’automatització funcionarà
+
+---
+
+# No és només “instal·lar Ubuntu”
+
+En aquesta fase treballarem:
+
+- virtualització
+- discos i particions
+- xarxa
+- SSH
+- Git
+- GitHub
+- terminal Linux
+
+És un entorn real.
+
+---
+
+# Arquitectura de la màquina virtual
+
+La MV tindrà:
+
+- 2 CPU
+- 4 GB RAM
+- 4 discos
+- 3 targetes de xarxa
+
+---
+
+# Discos
+
+## Disc 1
+
+Sistema operatiu:
+
+- `/`
+- `swap`
+
+---
+
+# Discos
+
+## Disc 2, 3 i 4
+
+De moment:
+
+- NO s’utilitzen
+- NO es toquen
+
+Més endavant:
+- RAID 5
+- monitorització
+- automatització
+
+---
+
+# Xarxa
+
+## NIC 1 → NAT
+
+Sortida a Internet.
+
+---
+
+# Xarxa
+
+## NIC 2 → Host-only
+
+Comunicació:
+
+PC ↔ MV
+
+Necessària per SSH.
+
+---
+
+# Xarxa
+
+## NIC 3 → Bridge
+
+De moment NO s’utilitza.
+
+Més endavant servirà per:
+- monitorització
+- serveis
+- comunicació real de xarxa
+
+---
+
+# Què és SSH?
+
+SSH permet controlar el servidor remotament.
+
+Exemple:
+
+```bash
+ssh administrador@192.168.56.X
+```
+
+---
+
+# Important
+
+A partir d’ara:
+
+- moltes coses es faran des del terminal
+- treballarem com administradors reals
+
+---
+
+# Git i GitHub
+
+El projecte NO es guarda només dins la MV.
+
+Tot es puja a GitHub:
+
+- configuracions
+- scripts
+- evidències
+- documentació
+
+---
+
+# Workflow real
+
+Treballareu així:
+
+```text
+Linux → fitxers → Git → GitHub
+```
+
+Exactament igual que en equips reals.
+
+---
+
+# Evidències
+
+NO volem captures aleatòries.
+
+Volem:
+
+- comandes reals
+- sortides reals
+- documentació tècnica
+
+---
+
+# Exemple
+
+```bash
+lsblk > evidencies/fase-1/lsblk.txt
+```
+
+La sortida de Linux queda guardada directament.
+
+---
+
+# Què aprendrem sense adonar-nos-en?
+
+- Linux
+- troubleshooting
+- Git
+- documentació tècnica
+- administració de sistemes
+- metodologia real
+
+---
+
+# Problemes normals
+
+És NORMAL:
+
+- equivocar-se amb discos
+- tenir problemes SSH
+- bloquejar-se amb Git
+- perdre connexions
+
+Forma part del procés.
+
+---
+
+# Git real
+
+A vegades Git mostrarà errors com:
+
+```bash
+Your branch and origin/main have diverged
+```
+
+No passa res.
+
+Forma part del treball real amb repositoris.
+
+---
+
+# Important
+
+Abans de començar qualsevol fase:
+
+```bash
+git pull --rebase
+```
+
+---
+
+# Objectiu final de la fase
+
+Al final haureu de tenir:
+
+- Ubuntu funcional
+- SSH funcionant
+- Git funcionant
+- repositori sincronitzat
+- evidències pujades
+
+---
+
+# Resultat final esperat
+
+La vostra MV serà:
+
+- accessible
+- reutilitzable
+- ampliable
+- preparada per Docker
+
+---
+
+# Després d’aquesta fase...
+
+Ja podrem començar:
+
+- serveis
+- Docker
+- monitorització
+- automatització
+
+Ara construïm la base.
+
+---
+
+# Comencem

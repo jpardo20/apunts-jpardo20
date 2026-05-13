@@ -141,6 +141,14 @@
             "description": "Desplegament d’un servidor Linux amb Docker",
             "status": "active",
             "kind": "theory"
+        },
+        {
+            "order": 303,
+            "title": "303 - Projecte 0483 - Sistemes Informàtics - Fase 1",
+            "src": "slides/trim-03-004-srv-0483-sistemes-fase-1.reveal",
+            "description": "FASE 1 — Linux + Setup inicial",
+            "status": "active",
+            "kind": "theory"
         }
     ]
 }
