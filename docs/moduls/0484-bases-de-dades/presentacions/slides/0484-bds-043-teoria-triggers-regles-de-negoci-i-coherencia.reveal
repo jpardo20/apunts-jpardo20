@@ -148,9 +148,9 @@ BEFORE INSERT
 
 Cal comprovar:
 
-- <codijpc>id_habitacio</codijpc>
-- <codijpc>dates d'entrada</codijpc>
-- <codijpc>dates de sortida</codijpc>
+- **codi de l'habitació** <codijpc>id_habitacio</codijpc>
+- **dates d'entrada** (<codijpc>data_entra_reserva</codijpc>)
+- **dates de sortida** (<codijpc>data_surt_reserva</codijpc>)
 
 ⬇️
 
@@ -206,6 +206,35 @@ SELECT
 FROM RESERVES;
 ```
 
+### Sortida de la comanda `SELECT`
+
+```sql
+mysql> SELECT
+    ->     id_reserva,
+    ->     id_habitacio,
+    ->     data_entra_reserva,
+    ->     data_surt_reserva,
+    ->     en_estat_reserva
+    -> FROM RESERVES;
++------------+--------------+--------------------+-------------------+------------------+
+| id_reserva | id_habitacio | data_entra_reserva | data_surt_reserva | en_estat_reserva |
++------------+--------------+--------------------+-------------------+------------------+
+|          1 |            2 | 2026-05-10         | 2026-05-13        | confirmada       |
+|          2 |            4 | 2026-07-02         | 2026-07-07        | confirmada       |
+|          3 |            6 | 2026-08-15         | 2026-08-18        | confirmada       |
+|          4 |            1 | 2026-04-28         | 2026-04-30        | checkout         |
++------------+--------------+--------------------+-------------------+------------------+
+4 rows in set (0.01 sec)
+
+mysql> 
+```
+
+Exemple:
+
+⬇️
+
+----
+
 Exemple:
 
 ```text
@@ -217,6 +246,10 @@ en_estat_reserva = confirmada
 ```
 
 Això vol dir que l’habitació 2 està reservada del 10 al 13 de maig.
+
+<codijpc>id_habitacio=2</codijpc>
+<codijpc>data_entra_reserva = 2026-05-10</codijpc>
+<codijpc>data_surt_reserva = 2026-05-13</codijpc>
 
 
 ⬇️
@@ -249,6 +282,50 @@ VALUES (
 ```
 
 Aquesta reserva NO s’hauria de permetre perquè coincideix amb una reserva existent.
+
+⬇️
+
+----
+
+### Sortida de les comandes
+
+```sql
+mysql> INSERT INTO RESERVES (
+    ->     id_client,
+    ->     id_habitacio,
+    ->     data_entra_reserva,
+    ->     data_surt_reserva,
+    ->     adults_reserva,
+    ->     menors_reserva,
+    ->     en_estat_reserva
+    -> )
+    -> VALUES (
+    ->     2,
+    ->     2,
+    ->     '2026-05-11',
+    ->     '2026-05-12',
+    ->     2,
+    ->     0,
+    ->     'pendent'
+    -> );
+Query OK, 1 row affected (0.03 sec)
+
+mysql> SELECT
+    ->     id_reserva,
+    ->     id_habitacio,
+    ->     data_entra_reserva,
+    ->     data_surt_reserva,
+    ->     en_estat_reserva
+    -> FROM RESERVES
+    -> WHERE id_habitacio=2;
++------------+--------------+--------------------+-------------------+------------------+
+| id_reserva | id_habitacio | data_entra_reserva | data_surt_reserva | en_estat_reserva |
++------------+--------------+--------------------+-------------------+------------------+
+|          1 |            2 | 2026-05-10         | 2026-05-13        | confirmada       |
+|          5 |            2 | 2026-05-11         | 2026-05-12        | pendent          |
++------------+--------------+--------------------+-------------------+------------------+
+2 rows in set (0.00 sec)
+```
 
 
 ⬇️
@@ -363,8 +440,46 @@ BEGIN
 END $$
 
 DELIMITER ;
+
 ```
 
+
+⬇️
+
+----
+
+### Sortida de la comanda <codijpc>CREATE TRIGGER</codijpc>
+
+```sql
+mysql> DELIMITER $$
+mysql> 
+mysql> CREATE TRIGGER trg_evitar_overbooking
+    -> BEFORE INSERT
+    -> ON RESERVES
+    -> FOR EACH ROW
+    -> BEGIN
+    -> 
+    ->     IF EXISTS (
+    ->         SELECT 1
+    ->         FROM RESERVES
+    ->         WHERE id_habitacio = NEW.id_habitacio
+    ->           AND en_estat_reserva IN ('pendent', 'confirmada', 'checkin')
+    ->           AND NEW.data_entra_reserva < data_surt_reserva
+    ->           AND NEW.data_surt_reserva > data_entra_reserva
+    ->     ) THEN
+    -> 
+    ->         SIGNAL SQLSTATE '45000'
+    ->         SET MESSAGE_TEXT = 'No es pot crear la reserva: habitacio ocupada en aquestes dates';
+    -> 
+    ->     END IF;
+    -> 
+    -> END $$
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> 
+mysql> DELIMITER ;
+mysql> 
+```
 
 ⬇️
 
@@ -387,7 +502,7 @@ S’executa abans d’inserir una nova reserva.
 ON RESERVES
 ```
 
-El <codijpc>trigger</codijpc> està associat a la taula `RESERVES`.
+El <codijpc>trigger</codijpc> està associat a la taula <codijpc>RESERVES</codijpc>.
 
 
 ⬇️
@@ -444,7 +559,7 @@ Fa referència a la data de sortida de la nova reserva.
 en_estat_reserva IN ('pendent', 'confirmada', 'checkin')
 ```
 
-Només considerem reserves actives.
+Només considerem **reserves actives**.
 
 No tindria sentit bloquejar una habitació per una reserva:
 
@@ -474,6 +589,32 @@ FROM RESERVES
 WHERE id_habitacio = 2;
 ```
 
+⬇️
+
+----
+
+### Sortida de la comanda
+
+```sql
+mysql> SELECT
+    ->     id_reserva,
+    ->     id_habitacio,
+    ->     data_entra_reserva,
+    ->     data_surt_reserva,
+    ->     en_estat_reserva
+    -> FROM RESERVES
+    -> WHERE id_habitacio = 2;
++------------+--------------+--------------------+-------------------+------------------+
+| id_reserva | id_habitacio | data_entra_reserva | data_surt_reserva | en_estat_reserva |
++------------+--------------+--------------------+-------------------+------------------+
+|          1 |            2 | 2026-05-10         | 2026-05-13        | confirmada       |
+|          5 |            2 | 2026-05-11         | 2026-05-12        | pendent          |
++------------+--------------+--------------------+-------------------+------------------+
+2 rows in set (0.00 sec)
+
+mysql> 
+```
+
 
 ⬇️
 
@@ -488,8 +629,7 @@ INSERT INTO RESERVES (
     data_entra_reserva,
     data_surt_reserva,
     adults_reserva,
-    menors_reserva,
-    en_estat_reserva
+    menors_reserva
 )
 VALUES (
     2,
@@ -497,11 +637,36 @@ VALUES (
     '2026-05-11',
     '2026-05-12',
     2,
-    0,
-    'pendent'
+    0
 );
 ```
 
+⬇️
+
+----
+
+### Sortida de la comanda
+
+```sql
+mysql> INSERT INTO RESERVES (
+    ->     id_client,
+    ->     id_habitacio,
+    ->     data_entra_reserva,
+    ->     data_surt_reserva,
+    ->     adults_reserva,
+    ->     menors_reserva
+    -> )
+    -> VALUES (
+    ->     2,
+    ->     2,
+    ->     '2026-05-11',
+    ->     '2026-05-12',
+    ->     2,
+    ->     0
+    -> );
+ERROR 1644 (45000): No es pot crear la reserva: habitacio ocupada en aquestes dates
+mysql> 
+```
 
 ⬇️
 
@@ -513,12 +678,11 @@ VALUES (
 ERROR 1644 (45000): No es pot crear la reserva: habitacio ocupada en aquestes dates
 ```
 
-
 ⬇️
 
 ----
 
-## Com provar que deixa inserir una reserva correcta
+## Per comprovar que deixa inserir una reserva correcta
 
 Ara provem una reserva que NO se solapa:
 
@@ -529,8 +693,7 @@ INSERT INTO RESERVES (
     data_entra_reserva,
     data_surt_reserva,
     adults_reserva,
-    menors_reserva,
-    en_estat_reserva
+    menors_reserva
 )
 VALUES (
     2,
@@ -538,11 +701,37 @@ VALUES (
     '2026-05-13',
     '2026-05-15',
     2,
-    0,
-    'pendent'
+    0
 );
 ```
 
+⬇️
+
+----
+
+### Sortida de la comanda
+
+```sql
+mysql> INSERT INTO RESERVES (
+    ->     id_client,
+    ->     id_habitacio,
+    ->     data_entra_reserva,
+    ->     data_surt_reserva,
+    ->     adults_reserva,
+    ->     menors_reserva
+    -> )
+    -> VALUES (
+    ->     2,
+    ->     2,
+    ->     '2026-05-13',
+    ->     '2026-05-15',
+    ->     2,
+    ->     0
+    -> );
+Query OK, 1 row affected (0.01 sec)
+
+mysql> 
+```
 
 ⬇️
 
@@ -573,6 +762,32 @@ FROM RESERVES
 WHERE id_habitacio = 2;
 ```
 
+⬇️
+
+----
+
+### Sortida de la comanda
+
+```sql
+mysql> SELECT
+    ->     id_reserva,
+    ->     id_habitacio,
+    ->     data_entra_reserva,
+    ->     data_surt_reserva,
+    ->     en_estat_reserva
+    -> FROM RESERVES
+    -> WHERE id_habitacio = 2;
++------------+--------------+--------------------+-------------------+------------------+
+| id_reserva | id_habitacio | data_entra_reserva | data_surt_reserva | en_estat_reserva |
++------------+--------------+--------------------+-------------------+------------------+
+|          1 |            2 | 2026-05-10         | 2026-05-13        | confirmada       |
+|          5 |            2 | 2026-05-11         | 2026-05-12        | pendent          |
+|          6 |            2 | 2026-05-13         | 2026-05-15        | pendent          |
++------------+--------------+--------------------+-------------------+------------------+
+3 rows in set (0.00 sec)
+
+mysql> 
+```
 
 ⬇️
 
@@ -605,7 +820,7 @@ BEFORE UPDATE
 ON RESERVES
 ```
 
-per evitar que algú modifiqui una reserva i provoqui <codijpc>overbooking</codijpc>.
+per evitar que algú **modifiqui una reserva** i provoqui <codijpc>overbooking</codijpc>.
 
 
 ⬇️
@@ -620,8 +835,6 @@ Aquest <codijpc>trigger</codijpc> serveix per garantir que:
 - les dates no se solapen
 - la base de dades protegeix la coherència
 - no depenem només del programador
-
-
 
 ---
 
