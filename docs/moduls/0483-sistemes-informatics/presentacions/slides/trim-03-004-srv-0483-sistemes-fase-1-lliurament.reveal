@@ -1,0 +1,47 @@
+# Lliurament d'evidències de la FASE 1 - Linux + Setup inicial 
+
+Ara que ja tens:
+
+- la màquina virtual creada,
+- Ubuntu Server instal·lat,
+- Git configurat,
+- accés SSH funcional,
+
+és moment de demostrar que el sistema funciona correctament.
+
+---
+
+## Activitat de la fase 1
+
+A continuació cal completar el **lliurament de la fase 1**:
+
+Trovareu tot el que heu de dur a terme al document **`docs/fase-1-linux-enunciat.md`** del vostre repositori.
+
+
+En aquest document trobaràs:
+
+- les evidències que has de generar,
+- els fitxers que has d'entregar,
+- les comandes que hauràs d'executar,
+- i el procés final de lliurament amb Git.
+
+---
+
+## Objectiu del lliurament
+
+Has de demostrar que:
+
+- el servidor funciona,
+- la configuració és correcta,
+- entens les comandes utilitzades,
+- i ets capaç de documentar tècnicament el sistema.
+
+---
+
+## Important
+
+Tot el lliurament s'ha de fer:
+
+- des de terminal,
+- dins del repositori Git,
+- i fent **`git add`**, **`git commit`** i **`git push`**.

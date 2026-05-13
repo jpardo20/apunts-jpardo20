@@ -36,14 +36,25 @@ Si això funciona:
 
 En aquesta fase treballarem:
 
+
+<div class="cols">
+<div class="col-left" style="width: 50%;">
+
 - virtualització
 - discos i particions
 - xarxa
 - SSH
+
+</div>
+<div class="col-right" style="width: 50%;">
+
 - Git
 - GitHub
 - terminal Linux
 
+</div>
+
+</div>
 És un entorn real.
 
 ---
@@ -187,7 +198,7 @@ La sortida de Linux queda guardada directament.
 
 ---
 
-# Què aprendrem sense adonar-nos-en?
+# Què aprendrem sense<br>adonar-nos-en?
 
 - Linux
 - troubleshooting
