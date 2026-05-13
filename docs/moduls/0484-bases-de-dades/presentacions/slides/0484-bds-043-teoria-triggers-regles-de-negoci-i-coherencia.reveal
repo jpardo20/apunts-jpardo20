@@ -1,0 +1,887 @@
+# Sistema de reserves d'hotel
+
+# FASE 5 → Regles de negoci i coherència
+
+---
+
+# Objectiu
+
+Fins ara hem après:
+
+- consultes SQL
+- JOINs
+- GROUP BY
+- HAVING
+- vistes
+- triggers
+
+Ara farem un pas més.
+
+---
+
+# Nova idea
+
+Una base de dades no només guarda dades.
+
+També:
+
+- controla coherència
+- evita errors
+- aplica regles de negoci
+- automatitza comportament
+
+---
+
+# Què són les regles de negoci?
+
+Són normes que el sistema ha de complir.
+
+Per exemple:
+
+- una habitació no es pot reservar dues vegades
+- no es poden fer pagaments negatius
+- una reserva no pot passar a `checkout` si encara té imports pendents
+
+---
+
+# Objectiu d'aquesta fase
+
+Convertir la base de dades `hotel_reserves` en un sistema més realista.
+
+Utilitzarem:
+
+- triggers
+- validacions
+- consultes SQL
+- SIGNAL
+- BEFORE / AFTER
+
+---
+
+# Important
+
+No n'hi ha prou amb:
+
+```sql
+CREATE TRIGGER ...
+```
+
+Cal demostrar:
+
+- què intenta evitar
+- quin problema resol
+- com es comporta abans
+- com es comporta després
+
+---
+
+# Lliurament
+
+Cal crear el fitxer:
+
+```text
+sql/hotel_reserves/04-regles-negoci-i-coherencia.md
+```
+
+---
+
+# Format obligatori
+
+Per cada tasca cal mostrar:
+
+- explicació del problema
+- trigger creat
+- consultes executades
+- sortida real de MySQL
+- demostració que funciona
+
+---
+
+# Tasca 1
+
+# Impedir overbooking
+
+⬇️
+
+----
+
+## Problema
+
+Actualment es poden inserir dues reserves:
+
+- per la mateixa habitació
+- en les mateixes dates
+
+Això és incorrecte.
+
+⬇️
+
+----
+
+
+# Objectiu
+
+Crear un trigger que impedeixi:
+
+```text
+dues reserves simultànies
+per la mateixa habitació
+```
+
+⬇️
+
+----
+
+
+# Pista
+
+Caldrà utilitzar:
+
+```sql
+BEFORE INSERT
+```
+
+⬇️
+
+----
+
+
+# Pista 2
+
+Cal comprovar:
+
+- `id_habitacio`
+- dates d'entrada
+- dates de sortida
+
+⬇️
+
+----
+
+
+# Comportament esperat
+
+Si hi ha conflicte:
+
+```sql
+SIGNAL SQLSTATE '45000'
+```
+
+
+---
+
+## Exemple de què és el que s'espera
+
+# Tasca 1 — Impedir overbooking
+
+## Objectiu
+
+Evitar que una mateixa habitació tingui dues reserves que coincideixen en dates.
+
+
+⬇️
+
+----
+
+## Problema
+
+Actualment podríem fer una reserva nova per una habitació que ja està reservada en aquelles dates.
+
+Això provocaria un overbooking.
+
+
+⬇️
+
+----
+
+## Exemple del problema
+
+Tenim aquesta reserva:
+
+```sql
+SELECT
+    id_reserva,
+    id_habitacio,
+    data_entra_reserva,
+    data_surt_reserva,
+    en_estat_reserva
+FROM RESERVES;
+```
+
+Exemple:
+
+```text
+id_reserva = 1
+id_habitacio = 2
+data_entra_reserva = 2026-05-10
+data_surt_reserva = 2026-05-13
+en_estat_reserva = confirmada
+```
+
+Això vol dir que l’habitació 2 està reservada del 10 al 13 de maig.
+
+
+⬇️
+
+----
+
+## Cas incorrecte
+
+Ara intentem inserir una altra reserva per la mateixa habitació:
+
+```sql
+INSERT INTO RESERVES (
+    id_client,
+    id_habitacio,
+    data_entra_reserva,
+    data_surt_reserva,
+    adults_reserva,
+    menors_reserva,
+    en_estat_reserva
+)
+VALUES (
+    2,
+    2,
+    '2026-05-11',
+    '2026-05-12',
+    2,
+    0,
+    'pendent'
+);
+```
+
+Aquesta reserva NO s’hauria de permetre perquè coincideix amb una reserva existent.
+
+
+⬇️
+
+----
+
+## Quan hi ha solapament de dates?
+
+Dues reserves se solapen quan:
+
+```sql
+nova_data_entrada < data_surt_reserva
+AND
+nova_data_sortida > data_entra_reserva
+```
+
+És a dir:
+
+```sql
+NEW.data_entra_reserva < data_surt_reserva
+AND
+NEW.data_surt_reserva > data_entra_reserva
+```
+
+
+⬇️
+
+----
+
+## Exemple visual
+
+Reserva existent:
+
+```text
+2026-05-10 -------- 2026-05-13
+```
+
+Nova reserva:
+
+```text
+        2026-05-11 -- 2026-05-12
+```
+
+Coincideixen.
+
+
+⬇️
+
+----
+
+## Cas que NO se solapa
+
+Reserva existent:
+
+```text
+2026-05-10 -------- 2026-05-13
+```
+
+Nova reserva:
+
+```text
+2026-05-13 -------- 2026-05-15
+```
+
+Aquesta sí que es podria permetre, perquè comença el mateix dia que acaba l’altra.
+
+
+⬇️
+
+----
+
+## Trigger que cal crear
+
+El trigger ha de ser:
+
+```sql
+BEFORE INSERT
+```
+
+Perquè volem impedir la reserva abans que s’insereixi.
+
+
+⬇️
+
+----
+
+## Codi del trigger
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER trg_evitar_overbooking
+BEFORE INSERT
+ON RESERVES
+FOR EACH ROW
+BEGIN
+
+    IF EXISTS (
+        SELECT 1
+        FROM RESERVES
+        WHERE id_habitacio = NEW.id_habitacio
+          AND en_estat_reserva IN ('pendent', 'confirmada', 'checkin')
+          AND NEW.data_entra_reserva < data_surt_reserva
+          AND NEW.data_surt_reserva > data_entra_reserva
+    ) THEN
+
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'No es pot crear la reserva: habitacio ocupada en aquestes dates';
+
+    END IF;
+
+END $$
+
+DELIMITER ;
+```
+
+
+⬇️
+
+----
+
+## Explicació del trigger
+
+```sql
+BEFORE INSERT
+```
+
+S’executa abans d’inserir una nova reserva.
+
+
+⬇️
+
+----
+
+```sql
+ON RESERVES
+```
+
+El trigger està associat a la taula `RESERVES`.
+
+
+⬇️
+
+----
+
+```sql
+FOR EACH ROW
+```
+
+S’executa una vegada per cada reserva nova que s’intenta inserir.
+
+
+⬇️
+
+----
+
+```sql
+NEW.id_habitacio
+```
+
+Fa referència a l’habitació de la nova reserva.
+
+
+⬇️
+
+----
+
+```sql
+NEW.data_entra_reserva
+```
+
+Fa referència a la data d’entrada de la nova reserva.
+
+
+⬇️
+
+----
+
+```sql
+NEW.data_surt_reserva
+```
+
+Fa referència a la data de sortida de la nova reserva.
+
+
+⬇️
+
+----
+
+## Per què filtrem per estat?
+
+```sql
+en_estat_reserva IN ('pendent', 'confirmada', 'checkin')
+```
+
+Només considerem reserves actives.
+
+No tindria sentit bloquejar una habitació per una reserva:
+
+```text
+cancel_lada
+```
+
+o ja acabada.
+
+
+⬇️
+
+----
+
+## Com provar que funciona
+
+### 1. Comprovar reserves existents
+
+```sql
+SELECT
+    id_reserva,
+    id_habitacio,
+    data_entra_reserva,
+    data_surt_reserva,
+    en_estat_reserva
+FROM RESERVES
+WHERE id_habitacio = 2;
+```
+
+
+⬇️
+
+----
+
+### 2. Intentar inserir una reserva que se solapa
+
+```sql
+INSERT INTO RESERVES (
+    id_client,
+    id_habitacio,
+    data_entra_reserva,
+    data_surt_reserva,
+    adults_reserva,
+    menors_reserva,
+    en_estat_reserva
+)
+VALUES (
+    2,
+    2,
+    '2026-05-11',
+    '2026-05-12',
+    2,
+    0,
+    'pendent'
+);
+```
+
+
+⬇️
+
+----
+
+### 3. Resultat esperat
+
+```sql
+ERROR 1644 (45000): No es pot crear la reserva: habitacio ocupada en aquestes dates
+```
+
+
+⬇️
+
+----
+
+## Com provar que deixa inserir una reserva correcta
+
+Ara provem una reserva que NO se solapa:
+
+```sql
+INSERT INTO RESERVES (
+    id_client,
+    id_habitacio,
+    data_entra_reserva,
+    data_surt_reserva,
+    adults_reserva,
+    menors_reserva,
+    en_estat_reserva
+)
+VALUES (
+    2,
+    2,
+    '2026-05-13',
+    '2026-05-15',
+    2,
+    0,
+    'pendent'
+);
+```
+
+
+⬇️
+
+----
+
+## Resultat esperat
+
+```sql
+Query OK, 1 row affected
+```
+
+
+⬇️
+
+----
+
+## Comprovar que s'ha inserit
+
+```sql
+SELECT
+    id_reserva,
+    id_client,
+    id_habitacio,
+    data_entra_reserva,
+    data_surt_reserva,
+    en_estat_reserva
+FROM RESERVES
+WHERE id_habitacio = 2;
+```
+
+
+⬇️
+
+----
+
+## Important
+
+Aquest trigger evita overbooking en inserir reserves noves.
+
+Però encara NO controla:
+
+- canvis de dates amb `UPDATE`
+- canvis d’habitació amb `UPDATE`
+- reserves cancel·lades correctament
+- disponibilitat segons manteniment de l’habitació
+
+Això podria ser una millora posterior.
+
+
+⬇️
+
+----
+
+## Versió millorada futura
+
+Més endavant podríem crear també:
+
+```sql
+BEFORE UPDATE
+ON RESERVES
+```
+
+per evitar que algú modifiqui una reserva i provoqui overbooking.
+
+
+⬇️
+
+----
+
+## Resum
+
+Aquest trigger serveix per garantir que:
+
+- una habitació no es reserva dues vegades
+- les dates no se solapen
+- la base de dades protegeix la coherència
+- no depenem només del programador
+
+
+
+---
+
+# Tasca 2
+
+# Impedir pagaments superiors al total pendent
+
+⬇️
+
+----
+
+
+## Problema
+
+Actualment es pot inserir:
+
+```sql
+INSERT INTO PAGAMENTS (...)
+VALUES (..., 999999, ...)
+```
+
+Encara que la reserva només tingui pendent:
+
+```text
+100€
+```
+
+⬇️
+
+----
+
+
+# Objectiu
+
+Evitar pagaments superiors a:
+
+```text
+imp_tot_reserva
+```
+
+⬇️
+
+----
+
+
+# Pista
+
+Caldrà:
+
+- consultar `RESERVES`
+- comparar imports
+- utilitzar `BEFORE INSERT`
+
+---
+
+# Tasca 3
+
+# Bloquejar checkout si hi ha imports pendents
+
+⬇️
+
+----
+
+
+## Problema
+
+Una reserva podria passar a:
+
+```text
+checkout
+```
+
+encara que encara hi hagi imports pendents.
+
+⬇️
+
+----
+
+
+# Objectiu
+
+Impedir:
+
+```sql
+UPDATE RESERVES
+SET en_estat_reserva = 'checkout'
+```
+
+si encara no està totalment pagada.
+
+⬇️
+
+----
+
+
+# Pista
+
+Caldrà:
+
+```sql
+BEFORE UPDATE
+```
+
+⬇️
+
+----
+
+
+# Pista 2
+
+Caldrà calcular:
+
+```text
+total reserva - total pagaments
+```
+
+---
+
+# Tasca 4
+
+# Crear un log de canvis d'estat
+
+⬇️
+
+----
+
+
+# Objectiu
+
+Cada vegada que una reserva canviï d'estat:
+
+```text
+pendent → confirmada
+confirmada → checkout
+...
+```
+
+guardar un registre automàticament.
+
+⬇️
+
+----
+
+
+# Cal guardar
+
+- id_reserva
+- estat anterior
+- estat nou
+- data del canvi
+
+⬇️
+
+----
+
+
+# Pista
+
+Necessitareu:
+
+```sql
+OLD
+```
+
+i:
+
+```sql
+NEW
+```
+
+---
+
+# Tasca 5
+
+# Detectar modificacions sospitoses
+
+⬇️
+
+----
+
+
+# Objectiu
+
+Guardar un log quan:
+
+```text
+un pagament sigui modificat
+```
+
+⬇️
+
+----
+
+
+# Exemple
+
+Si algú fa:
+
+```sql
+UPDATE PAGAMENTS
+SET import_paga = ...
+```
+
+volem registrar-ho.
+
+⬇️
+
+----
+
+
+# Pista
+
+Utilitzeu:
+
+```sql
+AFTER UPDATE
+```
+
+⬇️
+
+----
+
+
+# Important
+
+En aquesta activitat es valorarà:
+
+- comprensió
+- coherència
+- qualitat de les proves
+- explicacions
+- demostracions
+
+Més que no pas:
+
+```text
+copiar i enganxar codi
+```
+
+---
+
+# Recomanació
+
+Per cada trigger:
+
+1. Mostrar situació inicial
+2. Executar acció
+3. Mostrar resultat
+4. Explicar què ha passat
+
+---
+
+# Objectiu final
+
+Entendre que una base de dades:
+
+- no és només guardar dades
+- també controla el negoci
+- valida informació
+- automatitza processos
+- evita incoherències
