@@ -1,0 +1,273 @@
+# Activitat final<br>Quin equip recomanaries?
+
+Després de les exposicions, toc aplicar els coneixements treballats.
+
+Per cada situació, haureu de decidir:
+- quin tipus d’equip és el més adequat,
+- quines característiques hauria de tenir,
+- i justificar tècnicament la vostra decisió.
+
+IMPORTANT:
+No hi ha una única resposta correcta.
+El més important és la justificació tècnica.
+
+---
+
+# Situació 1<br>Aula d’informàtica
+
+Una escola necessita renovar una aula amb 25 ordinadors.
+
+Necessitats:
+- baix cost,
+- baix consum,
+- poc soroll,
+- fàcil manteniment,
+- ús d’ofimàtica i navegació web.
+
+----
+
+Preguntes:
+- Quin tipus d’equip recomanaries?
+- Torre gran? Mini-PC? Barebone?
+- Quins avantatges tindria?
+
+---
+
+# Situació 2<br>Streamer i creador de contingut
+
+Una persona vol començar a fer:
+- Twitch,
+- YouTube,
+- edició de vídeo,
+- streaming de videojocs.
+
+Necessitats:
+- alt rendiment,
+- bona refrigeració,
+- diversos monitors,
+- espai per ampliar components.
+
+----
+
+Preguntes:
+- Quin tipus d’equip recomanaries?
+- Compacte o torre gran?
+- És important la refrigeració?
+
+---
+
+# Situació 3<br>Recepció d’un hotel
+
+Un hotel necessita ordinadors per la recepció.
+
+Necessitats:
+- ocupin poc espai,
+- silenciosos,
+- fiables,
+- consum reduït.
+
+----
+
+Preguntes:
+- Quin tipus d’equip encaixa millor?
+- Mini-PC? SFF?
+- Per què?
+
+---
+
+# Situació 4<br>Equip per viatjar
+
+Un comercial treballa constantment fora de l’oficina.
+
+Necessitats:
+- molta autonomia,
+- poc pes,
+- connexió mòbil,
+- transport fàcil.
+
+----
+
+Preguntes:
+- Quin tipus d’equip recomanaries?
+- ARM? Ultrabook?
+- Per què la bateria és important?
+
+---
+
+# Situació 5<br>Ordinador multimèdia pel menjador
+
+Una família vol un equip per:
+- veure pel·lícules,
+- Netflix,
+- música,
+- emmagatzemar vídeos,
+- connectar-lo a la televisió.
+
+Necessitats:
+- silenciós,
+- petit,
+- baix consum.
+
+----
+
+Preguntes:
+- Quin tipus d’equip recomanaries?
+- HTPC?
+- Quins avantatges té respecte una torre convencional?
+
+---
+
+# Situació 6<br>Gamer amb poc espai
+
+Un estudiant vol un ordinador gaming però viu en una habitació petita.
+
+Necessitats:
+- bon rendiment,
+- mida reduïda,
+- aspecte modern,
+- bona ventilació.
+
+----
+
+Preguntes:
+- Quin tipus d’equip recomanaries?
+- MiniITX?
+- Quins problemes pot tenir un equip compacte?
+
+---
+
+# Situació 7<br>Empresa amb molts ordinadors
+
+Una empresa necessita desplegar 100 equips nous.
+
+Necessitats:
+- fàcil manteniment,
+- baix consum,
+- espai reduït,
+- baix cost,
+- fàcil substitució.
+
+----
+
+Preguntes:
+- Barebones?
+- Mini-PC?
+- Equips tradicionals?
+- Quin sistema facilitaria el manteniment?
+
+---
+
+# Situació 8<br>Equip per edició 3D
+
+Un estudi de disseny treballa amb:
+- Blender,
+- AutoCAD,
+- renderitzat 3D.
+
+Necessitats:
+- molta RAM,
+- GPU potent,
+- bona refrigeració,
+- estabilitat.
+
+----
+
+Preguntes:
+- Quin tipus d’equip recomanaries?
+- És bona idea fer-lo compacte?
+- Per què?
+
+---
+
+# Situació 9<br>Ordinador “modding”
+
+Una persona vol un ordinador:
+- visualment espectacular,
+- amb RGB,
+- refrigeració líquida,
+- panells transparents.
+
+Necessitats:
+- personalització,
+- estètica,
+- rendiment gaming.
+
+----
+
+Preguntes:
+- Què és el modding?
+- Quins avantatges i inconvenients té?
+- És només estètica?
+
+---
+
+# Situació 10<br>Mini-PC per oficina
+
+Una petita empresa només utilitza:
+- correu electrònic,
+- navegador,
+- fulls de càlcul,
+- ERP online.
+
+Necessitats:
+- baix consum,
+- mida reduïda,
+- silenciós,
+- econòmic.
+
+----
+
+Preguntes:
+- Té sentit utilitzar Mini-PC?
+- Quins avantatges tindria?
+- Hi ha inconvenients?
+
+---
+
+# Què heu d’entregar?
+
+Dins de carpeta (**`0221-tendencies-actuals`**) i en un fitxer amb el nom **`respostes.md`** cal que
+
+per cada situació indiqueu:
+- tipus d’equip recomanat,
+- justificació tècnica,
+- avantatges,
+- possibles inconvenients.
+
+Es pot respondre:
+- en text,
+- en taula,
+- o en esquema.
+
+---
+
+# Exemple de format de resposta
+
+Per cada sitaució:
+
+| Situació | Equip recomanat | Justificació |
+|---|---|---|
+| Aula d’informàtica | Bla, bla, bla... | Bla, bla, bla... |
+
+
+| Pregunta | Resposta |
+|---|---|
+|Quin tipus d’equip recomanaries?|Bla, bla, bla...|
+|Torre gran? Mini-PC? Barebone?|Bla, bla, bla...|
+|Quins avantatges tindria?|Bla, bla, bla...|
+
+----
+
+IMPORTANT:
+No hi ha una única resposta correcta.
+L’important és justificar tècnicament la decisió:
+- mida,
+- consum,
+- rendiment,
+- mobilitat,
+- refrigeració,
+- ampliació,
+- manteniment,
+- cost,
+- etc.
+
