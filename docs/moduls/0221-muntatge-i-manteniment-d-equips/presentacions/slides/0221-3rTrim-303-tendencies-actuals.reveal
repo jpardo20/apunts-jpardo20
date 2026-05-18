@@ -1,33 +1,34 @@
-# Activitat RA6 — Tendències actuals en equips microinformàtics
+# Activitat RA6<br>Tendències actuals en equips microinformàtics
 
-## Resultat d’aprenentatge
-RA6 — Reconeix noves tendències en l’acoblament d’equips microinformàtics descrivint-ne els avantatges i adaptant-les a les característiques d’ús dels equips.
+## Resultat d'aprenentatge
+
+RA6: Reconeix noves tendències en l'acoblament d'equips microinformàtics descrivint-ne els avantatges i adaptant-les a les característiques d'ús dels equips.
 
 ---
 
-# Objectiu de l’activitat
+# Objectiu de l'activitat
 
-L’objectiu d’aquesta activitat és:
+L'objectiu d'aquesta activitat és:
 - conèixer tendències actuals del maquinari informàtic,
-- entendre per què existeixen diferents tipus d’equips,
+- entendre per què existeixen diferents tipus d'equips,
 - identificar avantatges i inconvenients,
-- i saber recomanar un equip segons les necessitats d’ús.
+- i saber recomanar un equip segons les necessitats d'ús.
 
-Cada alumne es convertirà en “expert” d’un tema concret i després compartirà els coneixements amb la resta de companys.
+Cada alumne es convertirà en "expert" d'un tema concret i després compartirà els coneixements amb la resta de companys.
 
 ---
 
 # Durada
 
-## Sessió 1 — Investigació i preparació
+## Sessió 1<br>Investigació i preparació
 Durada: 3 hores
 
-## Sessió 2 — Exposicions i activitat pràctica
+## Sessió 2<br>Exposicions i activitat pràctica
 Durada: 2 hores
 
 ---
 
-# Funcionament de l’activitat
+# Funcionament de l'activitat
 
 Cada alumne investigarà un tema diferent relacionat amb les noves tendències del maquinari actual.
 
@@ -81,9 +82,9 @@ IMPORTANT:
 
 ---
 
-# Què heu d’investigar?
+# Què heu d'investigar?
 
-Heu de preparar una fitxa resum o petita presentació amb la següent informació:
+Heu de preparar una fitxa tècnica i una breu presentació amb la següent informació:
 
 ---
 
@@ -108,7 +109,7 @@ Exemples:
 
 ## 3. Avantatges
 
-Quins beneficis aporta aquest tipus d’equip?
+Quins beneficis aporta aquest tipus d'equip?
 
 ---
 
@@ -120,7 +121,7 @@ Quines limitacions o problemes té?
 
 ## 5. Usos habituals
 
-En quins entorns o situacions s’utilitza?
+En quins entorns o situacions s'utilitza?
 
 Exemples:
 - oficina,
@@ -154,48 +155,41 @@ Mínim 5 línies.
 
 ---
 
-# Format d’entrega
+# Format d'entrega
 
-Crear dins dels vostre repositori de glpi (**`0225-glpi`**):
-
-- Una carpeta (**`0221-tendencies-actuals`**) amb:
-- en el fitxer **`README.md`** cal que apregui tota la informació, i
-- la presentació.
+Crear dins dels vostre repositori de glpi (**`0225-glpi`**) una carpeta (**`0221-tendencies-actuals`**) amb el fitxer **`README.md`** cal que aparegui la resposta a totes els apartats demanats, **`1. Què és?`**, **`2. Característiques principals`**, etc., i la presentació.
 
 IMPORTANT:
 - El treball ha de ser visual.
 - Ha de contenir imatges.
-- No es tracta de copiar informació literalment d’internet.
+- No es tracta de copiar informació literalment d'internet.
 - Cal resumir i explicar amb les vostres paraules.
 
 ---
 
-# Sessió 1 — Investigació i preparació
+# Sessió 1<br>Investigació i preparació
 
-Durant la primera sessió haureu de:
-- investigar el vostre tema,
-- preparar el resum,
-- seleccionar exemples reals,
-- i preparar l’exposició.
-
+Durant la primera sessió haureu d'investigar el vostre tema, preparar el resum, seleccionar exemples reals, i preparar l'exposició.
 
 Cal que aneu fent **`git commit`** i **`git push`** sovint per què el professor pugui fer seguiment de la vostra evolució.
 
+Es valorarà positivament:
+- fer commits regulars,
+- documentar l'evolució del treball,
+- i mantenir el repositori ordenat.
+
 ---
 
-# Sessió 2 — Exposicions
+# Sessió 2<br>Exposicions
 
 Cada alumne farà una explicació breu, d'una durada màxima de 5 minuts.
-- Es pot utilitzar diapositives, document o presentació.
 
-L’objectiu és explicar:
+L'objectiu és explicar:
 - què és,
 - per a què serveix,
 - i per què és interessant actualment.
 
-IMPORTANT:
-- Les exposicions han de ser clares i resumides.
-- Cal demostrar comprensió del tema.
+## IMPORTANT: Les exposicions han de ser clares i resumides i cal demostrar comprensió del tema.
 
 ---
 
@@ -203,29 +197,30 @@ IMPORTANT:
 
 Després de les exposicions, fareu una activitat pràctica:
 
-## “Quin equip recomanaries?”
+----
 
-Haureu de decidir quin tipus d’equip és més adequat segons diferents casos reals:
+## "Quin equip recomanaries?"
+
+Haureu de decidir quin tipus d'equip és més adequat segons diferents casos reals:
 - oficina,
 - gaming,
 - streamer,
 - empresa,
 - estudiants,
-
-----
-
 - recepció,
 - multimèdia,
 - mobilitat.
 
+----
+
 Haureu de justificar tècnicament:
-- el tipus d’equip,
+- el tipus d'equip,
 - els avantatges,
 - i per què és adequat per aquell ús.
 
 ---
 
-# Criteris d’avaluació
+# Criteris d'avaluació
 
 | Aspecte | Pes |
 |---|---|
@@ -244,15 +239,15 @@ Haureu de justificar tècnicament:
 - Feu servir imatges i esquemes.
 - Intenteu entendre el concepte, no memoritzar-lo.
 - Penseu sempre:
-  “Per què existeix aquest tipus d’equip?”
+  "Per què existeix aquest tipus d'equip?"
 
 ---
 
 # Objectiu final
 
-Al final de l’activitat hauríeu de ser capaços de:
+Al final de l'activitat hauríeu de ser capaços de:
 - reconèixer tendències actuals del maquinari,
-- diferenciar tipus d’equips,
+- diferenciar tipus d'equips,
 - entendre els seus avantatges,
 - i recomanar equips segons necessitats reals.
 
