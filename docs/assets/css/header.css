@@ -103,3 +103,29 @@
   opacity: 1;
   text-decoration: underline;
 }
+
+
+
+/* Amagar cercador Material MkDocs */
+
+.md-search {
+    display: none !important;
+}
+
+/* Header com a flex container */
+.md-header__inner {
+    display: flex;
+    align-items: center;
+}
+
+/* Mou el logo a la dreta */
+.md-logo {
+    order: 999;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+/* Opcional: separar una mica del marge dret */
+.md-header__button.md-logo {
+    padding-right: 1rem;
+}

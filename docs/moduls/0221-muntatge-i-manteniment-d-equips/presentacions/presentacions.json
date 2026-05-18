@@ -147,6 +147,14 @@
             "description": "L'objectiu és intentar possar en marxa un servidor - Detecció d'errors a un servidor",
             "status": "active",
             "kind": "activity"
+        },
+        {
+            "order": "303",
+            "title": "303 - Activitat RA6 — Tendències actuals en equips microinformàtics",
+            "src": "slides/0221-3rTrim-303-tendencies-actuals.reveal",
+            "description": "L'objectiu és conèixer tendències actuals del maquinari informàtic,",
+            "status": "active",
+            "kind": "activity"
         }
     ]
 }

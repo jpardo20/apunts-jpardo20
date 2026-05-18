@@ -1,0 +1,257 @@
+# Activitat RA6 — Tendències actuals en equips microinformàtics
+
+## Resultat d’aprenentatge
+RA6 — Reconeix noves tendències en l’acoblament d’equips microinformàtics descrivint-ne els avantatges i adaptant-les a les característiques d’ús dels equips.
+
+---
+
+# Objectiu de l’activitat
+
+L’objectiu d’aquesta activitat és:
+- conèixer tendències actuals del maquinari informàtic,
+- entendre per què existeixen diferents tipus d’equips,
+- identificar avantatges i inconvenients,
+- i saber recomanar un equip segons les necessitats d’ús.
+
+Cada alumne es convertirà en “expert” d’un tema concret i després compartirà els coneixements amb la resta de companys.
+
+---
+
+# Durada
+
+## Sessió 1 — Investigació i preparació
+Durada: 3 hores
+
+## Sessió 2 — Exposicions i activitat pràctica
+Durada: 2 hores
+
+---
+
+# Funcionament de l’activitat
+
+Cada alumne investigarà un tema diferent relacionat amb les noves tendències del maquinari actual.
+
+A la segona sessió:
+1. Cada alumne farà una petita exposició.
+2. Compartireu coneixement amb la resta del grup.
+3. Fareu una activitat pràctica aplicant els conceptes treballats.
+
+---
+
+# Temes assignats
+
+| Alumne | Tema |
+|---|---|
+| Alumne 1 | MiniITX / SFF |
+| Alumne 2 | Barebones |
+| Alumne 3 | HTPC |
+| Alumne 4 | Informàtica mòbil / ARM |
+| Alumne 5 | Modding |
+| Alumne 6 | Gaming compacte |
+| Alumne 7 | Mini-PC empresarials / Intel NUC |
+
+
+
+----
+
+IMPORTANT:
+- Si algun alumne no assisteix, el tema pot quedar sense exposar o es tractarà breument a classe.
+- Cada tema forma part del conjunt de coneixements del RA6.
+
+---
+
+# Descripció ràpida dels temes (1/2)
+
+| Tema | Idees clau |
+|---|---|
+| MiniITX / SFF | Ordinadors petits i eficients |
+| Barebones | Equips semi-muntats i compactes |
+| HTPC | Equips multimèdia per televisió o streaming |
+| Informàtica mòbil / ARM | Autonomia, mobilitat i baix consum |
+
+----
+
+# Descripció ràpida dels temes  (2/2)
+
+| Tema | Idees clau |
+|---|---|
+| Modding | Personalització i modificació estètica o tècnica |
+| Gaming compacte | Alt rendiment en poc espai |
+| Mini-PC empresarials / Intel NUC | Equips petits orientats a oficina i empresa |
+
+---
+
+# Què heu d’investigar?
+
+Heu de preparar una fitxa resum o petita presentació amb la següent informació:
+
+---
+
+## 1. Què és?
+
+Explicació breu i clara del concepte.
+
+---
+
+## 2. Característiques principals
+
+Exemples:
+- mida,
+- consum,
+- mobilitat,
+- expansió,
+- soroll,
+- rendiment,
+- refrigeració.
+
+---
+
+## 3. Avantatges
+
+Quins beneficis aporta aquest tipus d’equip?
+
+---
+
+## 4. Inconvenients
+
+Quines limitacions o problemes té?
+
+---
+
+## 5. Usos habituals
+
+En quins entorns o situacions s’utilitza?
+
+Exemples:
+- oficina,
+- gaming,
+- multimèdia,
+- empresa,
+- mobilitat,
+- educació,
+- servidor.
+
+---
+
+## 6. Exemple real actual
+
+Busqueu un model real actual i indiqueu:
+- marca,
+- model,
+- imatge,
+- característiques bàsiques.
+
+---
+
+## 7. Opinió personal
+
+Responeu:
+- Creieu que aquesta tecnologia té futur?
+- La faríeu servir?
+- En quin context?
+
+Mínim 5 línies.
+
+---
+
+# Format d’entrega
+
+Crear dins dels vostre repositori de glpi (**`0225-glpi`**):
+
+- Una carpeta (**`0221-tendencies-actuals`**) amb:
+- la presentació, i 
+- si us cal podeu afegir més informació en el fitxer **`README.md`**
+
+IMPORTANT:
+- El treball ha de ser visual.
+- Ha de contenir imatges.
+- No es tracta de copiar informació literalment d’internet.
+- Cal resumir i explicar amb les vostres paraules.
+
+---
+
+# Sessió 1 — Investigació i preparació
+
+Durant la primera sessió haureu de:
+- investigar el vostre tema,
+- preparar el resum,
+- seleccionar exemples reals,
+- i preparar l’exposició.
+
+
+Cal que aneu fent **`git commit`** i **`git push`** sovint per què el professor pugui fer seguiment de la vostra evolució.
+
+---
+
+# Sessió 2 — Exposicions
+
+Cada alumne farà una explicació breu, d'una durada màxima de 5 minuts.
+- Es pot utilitzar diapositives, document o presentació.
+
+L’objectiu és explicar:
+- què és,
+- per a què serveix,
+- i per què és interessant actualment.
+
+IMPORTANT:
+- Les exposicions han de ser clares i resumides.
+- Cal demostrar comprensió del tema.
+
+---
+
+# Activitat pràctica final
+
+Després de les exposicions, fareu una activitat pràctica:
+
+## “Quin equip recomanaries?”
+
+Haureu de decidir quin tipus d’equip és més adequat segons diferents casos reals:
+- oficina,
+- gaming,
+- streamer,
+- empresa,
+- estudiants,
+
+----
+
+- recepció,
+- multimèdia,
+- mobilitat.
+
+Haureu de justificar tècnicament:
+- el tipus d’equip,
+- els avantatges,
+- i per què és adequat per aquell ús.
+
+---
+
+# Criteris d’avaluació
+
+| Aspecte | Pes |
+|---|---|
+| Comprensió del tema | 35% |
+| Capacitat de síntesi | 20% |
+| Justificació tècnica | 25% |
+| Exposició oral | 10% |
+| Presentació i estructura | 10% |
+
+---
+
+# Recomanacions
+
+- Utilitzeu fonts fiables.
+- Busqueu exemples actuals.
+- Feu servir imatges i esquemes.
+- Intenteu entendre el concepte, no memoritzar-lo.
+- Penseu sempre:
+  “Per què existeix aquest tipus d’equip?”
+
+---
+
+# Objectiu final
+
+Al final de l’activitat hauríeu de ser capaços de:
+- reconèixer tendències actuals del maquinari,
+- diferenciar tipus d’equips,
+- entendre els seus avantatges,
+- i recomanar equips segons necessitats reals.

@@ -58,13 +58,14 @@ theme:
   custom_dir: overrides
   logo: assets/img/VERT-01-SIN-CAJA-BLANCO-RGB@2x-768x593.png
   favicon: assets/img/cropped-cropped-VERT-01-BLANCO-RGB-copia-150x150.png
-  features:
-    - navigation.indexes
-    - navigation.sections
-    
+
   revealjs:
     history: true
     slideNumber: true
+
+plugins:
+  - search:
+      enabled: false
 
 extra_css:
   - assets/css/styles.css
@@ -83,3 +84,4 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+
