@@ -159,7 +159,7 @@
         {
             "order": "303",
             "title": "304 - Activitat evaluable: Tendències actuals en equips microinformàtics",
-            "src": "slides/0221-3rTrim-304-tendencies-actuals-exercici.reveal",
+            "src": "slides/0221-3rTrim-304-tendencies-actuals-exercici .reveal",
             "description": "Després de les exposicions, haureu d’aplicar els coneixements treballats durant l’activitat.",
             "status": "active",
             "kind": "activity"

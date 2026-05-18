@@ -16,6 +16,8 @@ El més important és la justificació tècnica.
 # Situació 1<br>Aula d’informàtica
 
 Una escola necessita renovar una aula amb 25 ordinadors.
+<div class="cols">
+<div class="col-left">
 
 Necessitats:
 - baix cost,
@@ -24,12 +26,16 @@ Necessitats:
 - fàcil manteniment,
 - ús d’ofimàtica i navegació web.
 
-----
+</div>
+<div class="col-right">
+
 
 Preguntes:
 - Quin tipus d’equip recomanaries?
 - Torre gran? Mini-PC? Barebone?
 - Quins avantatges tindria?
+</div>
+
 
 ---
 
@@ -41,18 +47,27 @@ Una persona vol començar a fer:
 - edició de vídeo,
 - streaming de videojocs.
 
+----
+
+<div class="cols">
+<div class="col-left">
+
 Necessitats:
 - alt rendiment,
 - bona refrigeració,
 - diversos monitors,
 - espai per ampliar components.
 
-----
+</div>
+<div class="col-right">
+
 
 Preguntes:
 - Quin tipus d’equip recomanaries?
 - Compacte o torre gran?
 - És important la refrigeració?
+</div>
+
 
 ---
 
@@ -60,18 +75,25 @@ Preguntes:
 
 Un hotel necessita ordinadors per la recepció.
 
+
+<div class="cols">
+<div class="col-left">
+
 Necessitats:
 - ocupin poc espai,
 - silenciosos,
 - fiables,
 - consum reduït.
 
-----
+</div>
+<div class="col-right">
 
 Preguntes:
 - Quin tipus d’equip encaixa millor?
 - Mini-PC? SFF?
 - Per què?
+
+</div>
 
 ---
 
@@ -79,41 +101,52 @@ Preguntes:
 
 Un comercial treballa constantment fora de l’oficina.
 
+<div class="cols">
+<div class="col-left">
+
 Necessitats:
 - molta autonomia,
 - poc pes,
 - connexió mòbil,
 - transport fàcil.
 
-----
+</div>
+<div class="col-right">
 
 Preguntes:
 - Quin tipus d’equip recomanaries?
 - ARM? Ultrabook?
 - Per què la bateria és important?
+</div>
 
 ---
 
 # Situació 5<br>Ordinador multimèdia pel menjador
 
 Una família vol un equip per:
-- veure pel·lícules,
-- Netflix,
+- veure pel·lícules, Netflix,
 - música,
 - emmagatzemar vídeos,
 - connectar-lo a la televisió.
+
+----
+
+<div class="cols">
+<div class="col-left">
 
 Necessitats:
 - silenciós,
 - petit,
 - baix consum.
 
-----
+</div>
+<div class="col-right">
 
 Preguntes:
 - Quin tipus d’equip recomanaries?
 - HTPC?
 - Quins avantatges té respecte una torre convencional?
+</div>
 
 ---
 
@@ -121,24 +154,34 @@ Preguntes:
 
 Un estudiant vol un ordinador gaming però viu en una habitació petita.
 
+<div class="cols">
+<div class="col-left">
+
 Necessitats:
 - bon rendiment,
 - mida reduïda,
 - aspecte modern,
 - bona ventilació.
 
-----
+</div>
+<div class="col-right">
 
 Preguntes:
 - Quin tipus d’equip recomanaries?
 - MiniITX?
 - Quins problemes pot tenir un equip compacte?
+</div>
 
 ---
 
 # Situació 7<br>Empresa amb molts ordinadors
 
 Una empresa necessita desplegar 100 equips nous.
+
+----
+
+<div class="cols">
+<div class="col-left">
 
 Necessitats:
 - fàcil manteniment,
@@ -147,13 +190,15 @@ Necessitats:
 - baix cost,
 - fàcil substitució.
 
-----
+</div>
+<div class="col-right">
 
 Preguntes:
 - Barebones?
 - Mini-PC?
 - Equips tradicionals?
 - Quin sistema facilitaria el manteniment?
+</div>
 
 ---
 
@@ -164,18 +209,25 @@ Un estudi de disseny treballa amb:
 - AutoCAD,
 - renderitzat 3D.
 
+----
+
+<div class="cols">
+<div class="col-left">
+
 Necessitats:
 - molta RAM,
 - GPU potent,
 - bona refrigeració,
 - estabilitat.
 
-----
+</div>
+<div class="col-right">
 
 Preguntes:
 - Quin tipus d’equip recomanaries?
 - És bona idea fer-lo compacte?
 - Per què?
+</div>
 
 ---
 
@@ -187,17 +239,24 @@ Una persona vol un ordinador:
 - refrigeració líquida,
 - panells transparents.
 
+----
+
+<div class="cols">
+<div class="col-left">
+
 Necessitats:
 - personalització,
 - estètica,
 - rendiment gaming.
 
-----
+</div>
+<div class="col-right">
 
 Preguntes:
 - Què és el modding?
 - Quins avantatges i inconvenients té?
 - És només estètica?
+</div>
 
 ---
 
@@ -209,18 +268,25 @@ Una petita empresa només utilitza:
 - fulls de càlcul,
 - ERP online.
 
+----
+
+<div class="cols">
+<div class="col-left">
+
 Necessitats:
 - baix consum,
 - mida reduïda,
 - silenciós,
 - econòmic.
 
-----
+</div>
+<div class="col-right">
 
 Preguntes:
 - Té sentit utilitzar Mini-PC?
 - Quins avantatges tindria?
 - Hi ha inconvenients?
+</div>
 
 ---
 
@@ -234,6 +300,8 @@ per cada situació indiqueu:
 - avantatges,
 - possibles inconvenients.
 
+----
+
 Es pot respondre:
 - en text,
 - en taula,
@@ -243,12 +311,13 @@ Es pot respondre:
 
 # Exemple de format de resposta
 
-Per cada sitaució:
+Per cada situació:
 
 | Situació | Equip recomanat | Justificació |
 |---|---|---|
 | Aula d’informàtica | Bla, bla, bla... | Bla, bla, bla... |
 
+També podeu respondre en format pregunta-resposta:
 
 | Pregunta | Resposta |
 |---|---|
@@ -260,7 +329,8 @@ Per cada sitaució:
 
 IMPORTANT:
 No hi ha una única resposta correcta.
-L’important és justificar tècnicament la decisió:
+
+L’important és justificar tècnicament la decisió tenint en compte aspectes com:
 - mida,
 - consum,
 - rendiment,
@@ -269,5 +339,7 @@ L’important és justificar tècnicament la decisió:
 - ampliació,
 - manteniment,
 - cost,
-- etc.
+- soroll,
+- eficiència,
+- o necessitats de l’usuari.
 
