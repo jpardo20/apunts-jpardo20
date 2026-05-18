@@ -159,8 +159,8 @@ Mínim 5 línies.
 Crear dins dels vostre repositori de glpi (**`0225-glpi`**):
 
 - Una carpeta (**`0221-tendencies-actuals`**) amb:
-- la presentació, i 
-- si us cal podeu afegir més informació en el fitxer **`README.md`**
+- en el fitxer **`README.md`** cal que apregui tota la informació, i
+- la presentació.
 
 IMPORTANT:
 - El treball ha de ser visual.
