@@ -55,11 +55,34 @@ els tickets existents.
 
 # Lliurament
 
-Cada membre del grup crearà al seu repositori, dins de la carpeta **`lliuraments`**, un fitxer amb el nom:
+Cada membre del grup crearà al seu repositori, dins de la carpeta **`lliuraments`**, un fitxer amb el nom **`0225-xlo-ap033.md`**
 
-```text
-0225-xlo-ap033.md
+Per començar cal definir una taula amb els membres del grup:
+
+```markdown
+
+## Membres del grup X
+
+|Alumnes|
+|----|
+|Nom i cognoms alumne 1|
+|Nom i cognoms alumne 2|
 ```
+
+A on **`X`** és el número de grup.
+
+----
+
+## Distribució dels grups
+
+### Grup 1
+Lorena i Marc
+
+### Grup 2
+Krisitna, Pau i Clemente
+
+### Grup 3
+Dani, Merouan
 
 ----
 
