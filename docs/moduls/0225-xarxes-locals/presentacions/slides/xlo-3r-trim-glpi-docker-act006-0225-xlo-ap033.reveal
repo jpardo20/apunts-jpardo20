@@ -1,0 +1,363 @@
+# Activitat pràctica - Auditoria i professionalització del sistema Helpdesk (<codijpc>0225-xlo-ap033</codijpc>)
+
+## Context
+
+L’empresa ha detectat que el sistema de suport tècnic (Helpdesk) presenta diversos problemes de qualitat documental.
+
+----
+
+Actualment existeixen:
+- tickets amb poca informació
+- diagnòstics poc clars
+- resolucions massa genèriques
+- incidències repetitives
+- manca de documentació reutilitzable (KB)
+
+El vostre objectiu serà actuar com un equip tècnic encarregat de revisar i professionalitzar el sistema.
+
+Treballareu directament sobre el servidor GLPI de l’aula.
+
+---
+
+# Objectius de l’activitat
+
+Heu de ser capaços de:
+- analitzar tickets existents
+- detectar problemes de documentació
+- millorar resolucions tècniques
+- documentar correctament incidències
+- crear KB reutilitzables
+- treballar com un equip helpdesk professional
+
+---
+
+# Organització
+
+Treballareu:
+- en parelles o grups de 3
+
+Cada grup rebrà:
+- una sèrie de tickets ja existents al sistema
+
+NO heu de crear tickets nous des de zero.
+
+----
+
+L’objectiu és:
+- revisar
+- completar
+- millorar
+- professionalitzar
+
+els tickets existents.
+
+---
+
+# Lliurament
+
+Cada membre del grup crearà al seu repositori, dins de la carpeta **`lliuraments`**, un fitxer amb el nom:
+
+```text
+0225-xlo-ap033.md
+```
+
+----
+
+En aquest document caldrà indicar:
+
+- el llistat de tickets treballats
+- quins tickets ha revisat personalment
+- quines modificacions ha realitzat
+- quins followups ha afegit
+- quines KB ha creat o modificat
+- quins problemes ha detectat
+- quines millores ha aplicat
+
+----
+
+# El document ha d’incloure
+
+## 1. Informació general
+
+```markdown
+# Activitat AP033 – Auditoria Helpdesk
+
+Nom:
+Cognoms:
+Grup:
+```
+
+----
+
+## 2. Tickets treballats
+
+| Ticket | Tipus problema | Modificacions realitzades |
+|---|---|---|
+| #1035 | Problema login | Millora diagnòstic i verificació |
+| #1015 | No Internet | Afegit followup tècnic |
+| #1044 | No arrenca | Revisió prioritat i resolució |
+
+----
+
+## 3. Followups afegits
+
+Per cada ticket modificat:
+- indicar el followup afegit
+- justificar per què millora la documentació
+
+Exemple:
+
+```markdown
+## Ticket #1015
+
+Followup afegit:
+- revisió cablejat
+- comprovació IP
+- verificació DNS
+
+Justificació:
+El ticket original no indicava quines comprovacions s’havien realitzat.
+```
+
+----
+
+## 4. KB creades o modificades
+
+| KB | Acció realitzada |
+|---|---|
+| Problema login | Creació |
+| No Internet | Millora documentació |
+
+----
+
+## 5. Problemes detectats al sistema
+
+Explicar:
+- quins errors de documentació s’han detectat
+- quins patrons repetitius existeixen
+- quins tickets són massa genèrics
+- quines KB falten
+
+----
+
+## 6. Reflexió final
+
+Explicar breument:
+- què heu après
+- què ha estat més difícil
+- què milloraria del sistema GLPI actual
+- què considereu important en un helpdesk professional
+
+---
+
+# Important
+
+NO es valorarà:
+- escriure molt
+- copiar informació d’Internet
+- afegir text innecessari
+
+----
+
+Es valorarà:
+- claredat
+- coherència tècnica
+- professionalitat
+- capacitat de diagnòstic
+- qualitat de la documentació
+
+
+---
+
+# Part 1: Revisió de tickets
+
+Heu d’analitzar els tickets assignats i detectar problemes com:
+
+- títols massa genèrics
+- diagnòstics poc clars
+- resolucions insuficients
+- manca de verificació final
+- incidències repetitives
+- falta d’informació tècnica
+
+---
+
+# Part 2: Millora dels tickets
+
+Per cada ticket treballat haureu de:
+
+## Afegir informació útil
+
+Per exemple:
+- què s’ha comprovat
+- quines eines s’han utilitzat
+- quin diagnòstic s’ha realitzat
+- quina acció s’ha aplicat
+- com s’ha verificat la resolució
+
+----
+
+# Exemple
+
+## Poc professional
+
+```text
+Resolució aplicada
+```
+
+## Professional
+
+```text
+Es comprova la connectivitat de xarxa de l’equip.
+
+Accions realitzades:
+- revisió del cablejat
+- renovació de la configuració IP
+- comprovació DNS
+
+Es detecta configuració IP incorrecta.
+
+Després de corregir la configuració, l’equip recupera connectivitat.
+
+L’usuari confirma el funcionament correcte.
+```
+
+---
+
+# Part 3: Detecció d’incidències repetitives
+
+Heu de detectar:
+- incidències que es repeteixen
+- problemes recurrents
+- tickets que es podrien resoldre amb una KB
+
+----
+
+Per exemple:
+- Problema login
+- No Internet
+- PC lent
+
+---
+
+# Part 4: Creació de KB
+
+A partir d’alguns tickets haureu de crear articles de Knowledge Base (KB).
+
+Les KB han de contenir:
+
+- descripció del problema
+- diagnòstic
+- passos de resolució
+- verificació final
+
+----
+
+La KB ha de ser:
+- clara
+- útil
+- reutilitzable
+- professional
+
+---
+
+# Important
+
+NO es tracta de copiar informació d’Internet.
+
+L’objectiu és:
+- documentar actuacions tècniques reals
+- deixar traçabilitat
+- permetre que un altre tècnic pugui entendre què s’ha fet
+
+---
+
+# Què es valorarà
+
+| Aspecte | Pes |
+|---|---|
+| Qualitat de la documentació | 35% |
+| Diagnòstic tècnic | 25% |
+| Professionalitat dels followups | 20% |
+| Qualitat de les KB creades | 10% |
+| Organització i coherència | 10% |
+
+---
+
+# Recomanacions
+
+- Sigueu clars i concrets
+- Eviteu textos massa genèrics
+- Eviteu copiar tutorials complets
+- Documenteu només allò rellevant
+- Penseu que un altre tècnic haurà de reutilitzar la vostra informació
+
+---
+
+# Objectiu final
+
+Convertir el sistema GLPI actual en un sistema:
+- més professional
+- més útil
+- més reutilitzable
+- millor documentat
+
+---
+
+# Repartiment de tickets
+
+## Grup 1
+
+Tickets assignats:
+- #1035 – Problema login
+- #1015 – No Internet
+- #1044 – No arrenca
+- #1020 – PC lent
+- #1345 – Ordenador va lento
+
+----
+
+## Grup 2
+
+Tickets assignats:
+- #1045 – Problema login
+- #1017 – Error DNS
+- #1054 – No arrenca
+- #1016 – PC lent
+- #1065 – Problema login
+
+----
+
+## Grup 3
+
+Tickets assignats:
+- #1055 – Problema login
+- #1019 – No Internet
+- #1064 – No arrenca
+- #1013 – Error DNS
+- #1075 – Problema login
+
+---
+
+# Important
+
+Cada grup:
+- només modificarà els tickets assignats
+- haurà de justificar les modificacions realitzades
+- haurà de mantenir coherència tècnica
+
+---
+
+# Recomanació
+
+- Abans de modificar un ticket:
+
+    - llegiu-lo completament
+    - reviseu els followups existents
+    - penseu quina informació faltaria perquè un altre tècnic pugui continuar la incidència
+
+- L’objectiu NO és escriure molt. L’objectiu és:
+
+    - documentar correctament
+    - deixar traçabilitat tècnica
+    - facilitar futures intervencions.

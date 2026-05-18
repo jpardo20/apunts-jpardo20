@@ -1,0 +1,184 @@
+========================================
+ANALISI GLPI
+========================================
+
+
+========================================
+RESUM GENERAL
+========================================
+tipus	total
+USUARIS	24
+TICKETS	261
+ORDINADORS	86
+MONITORS	4
+PERIFERICS	68
+KB	4
+
+
+========================================
+ULTIMS TICKETS
+========================================
+id	name	status	date	users_id_recipient	users_id_lastupdater
+1345	Ordenador va lento	5	2026-04-21 07:53:02	120	135
+1331	Problema software	6	2025-08-23 00:00:00	128	128
+1330	Error hardware	5	2025-07-05 00:00:00	127	127
+1329	Incidència xarxa	5	2025-09-02 00:00:00	135	135
+1328	Error usuari	5	2025-05-19 00:00:00	132	132
+1327	Problema software	6	2025-11-19 00:00:00	131	131
+1326	Error hardware	6	2025-04-25 00:00:00	130	130
+1325	Incidència xarxa	6	2025-09-02 00:00:00	129	129
+1324	Error usuari	6	2025-09-05 00:00:00	128	128
+1323	Problema software	6	2025-04-14 00:00:00	127	127
+1322	Error hardware	6	2025-06-26 00:00:00	135	135
+1321	Incidència xarxa	6	2025-07-11 00:00:00	132	132
+1320	Error usuari	5	2025-11-17 00:00:00	131	131
+1319	Problema software	5	2025-04-27 00:00:00	130	130
+1318	Error hardware	5	2025-09-25 00:00:00	129	129
+1317	Incidència xarxa	6	2025-11-04 00:00:00	128	128
+1316	Error usuari	6	2025-08-08 00:00:00	127	127
+1315	Problema software	6	2025-06-11 00:00:00	135	135
+1314	Error hardware	6	2025-04-03 00:00:00	132	132
+1313	Incidència xarxa	6	2025-07-10 00:00:00	131	131
+1312	Error usuari	6	2025-11-15 00:00:00	130	130
+1311	Problema software	6	2025-07-08 00:00:00	129	129
+1310	Error hardware	5	2025-04-28 00:00:00	128	128
+1309	Incidència xarxa	5	2025-07-22 00:00:00	127	127
+1308	Error usuari	5	2025-05-08 00:00:00	135	135
+1307	Problema software	6	2025-09-04 00:00:00	132	132
+1306	Error hardware	6	2025-08-01 00:00:00	131	131
+1305	Incidència xarxa	6	2025-09-06 00:00:00	130	130
+1304	Error usuari	6	2025-08-01 00:00:00	129	129
+1303	Problema software	6	2025-07-20 00:00:00	128	128
+
+
+========================================
+ESTAT TICKETS
+========================================
+status	total
+1	20
+2	21
+5	58
+6	162
+
+
+========================================
+KB EXISTENTS
+========================================
+id	name	resum	date_creation
+1	Solució No Internet	<p>Comprovar cablejat, reiniciar router i verificar IP.</p>	2026-04-19 15:29:22
+6	 Ordinador que va lent	<p>Temes a mirar:</p>
+\n<h3 style="box-sizing: inherit; -webkit-tap-highlight-color: transparent; margin: 40px auto 0px; font-family: 'open sans', open-sans, sans-serif; font-size: 20px; font-weight: bold; line-height: 28px; color: #333333; font-style: normal; font-variant-ligatures: normal; font-var	2026-04-21 08:02:27
+7	Problema resolt - Error de login (Ticket 1155)	<p><strong>Descripció del problema:</strong><br>L’usuari no podia iniciar sessió al sistema.</p>
+\n<p><strong>Diagnòstic:</strong><br>Es detecta un error d’autenticació relacionat amb credencials incorrectes o bloqueig del compte.</p>
+\n<p><strong>Solució aplicada:</strong><br>- Revisió de l’estat del	2026-05-11 10:40:18
+8	Veure KB: Problema resolt - Error d’autenticació (Ticket 1135)	<p><strong>Descripció del problema:</strong><br>L’usuari no pot iniciar sessió al sistema.</p>
+\n<p><strong>Diagnòstic:</strong><br>Possible error de credencials o bloqueig del compte.</p>
+\n<p><strong>Solució proposada:</strong><br>1. Comprovar estat del compte d’usuari<br>2. Verificar si hi ha bloqu	2026-05-11 10:54:48
+
+
+========================================
+FOLLOWUPS
+========================================
+items_id	resum
+1135	<p><strong>Descripció del problema:</strong><br>L’usuari no podía iniciar sessió al sistema.</p>
+\n<p><strong>Diagnòstic:</strong><br>Possible error de
+1226	Resolució aplicada
+1224	Revisió inicial
+1222	Diagnòstic completat
+1220	Resolució aplicada
+1218	Revisió inicial
+1216	Diagnòstic completat
+1214	Resolució aplicada
+1212	Revisió inicial
+1210	Diagnòstic completat
+1208	Resolució aplicada
+1206	Revisió inicial
+1204	Diagnòstic completat
+1202	Resolució aplicada
+1200	Revisió inicial
+1198	Diagnòstic completat
+1196	Resolució aplicada
+1194	Revisió inicial
+1192	Diagnòstic completat
+1190	Resolució aplicada
+1188	Revisió inicial
+1186	Diagnòstic completat
+1184	Resolució aplicada
+1182	Revisió inicial
+1180	Diagnòstic completat
+1178	Resolució aplicada
+1176	Revisió inicial
+1174	Diagnòstic completat
+1172	Resolució aplicada
+1170	Revisió inicial
+
+
+========================================
+USUARIS AMB MES TICKETS
+========================================
+name	tickets
+tec-merouan	46
+tec-clemente	36
+tec-kristina	36
+tec-lorena	36
+tec-pau	36
+tec-daniel	35
+tec-joan	35
+usr-marc	1
+
+
+========================================
+ORDINADORS
+========================================
+id	name	users_id
+201	BCN-25-001-L	0
+202	BCN-25-002-L	0
+203	BCN-25-003-L	0
+204	BCN-25-004-L	0
+205	BCN-25-005-L	0
+206	BCN-25-006-L	0
+207	BCN-25-007-L	0
+208	BCN-25-008-L	0
+209	BCN-25-009-L	0
+210	BCN-25-010-L	0
+211	BCN-25-011-L	0
+212	BCN-25-012-L	0
+213	BCN-25-013-L	0
+214	BCN-25-014-L	0
+215	BCN-25-015-L	0
+216	BCN-25-016-L	0
+217	BCN-25-017-L	0
+218	BCN-25-018-L	0
+219	BCN-25-019-L	0
+220	BCN-25-020-L	0
+221	BCN-25-001-K	0
+222	BCN-25-002-K	0
+223	BCN-25-003-K	0
+224	BCN-25-004-K	0
+225	BCN-25-005-K	0
+226	BCN-25-006-K	0
+227	BCN-25-007-K	0
+228	BCN-25-008-K	0
+229	BCN-25-009-K	0
+230	BCN-25-010-K	0
+231	BCN-25-011-K	0
+232	BCN-25-012-K	0
+233	BCN-25-013-K	0
+234	BCN-25-014-K	0
+235	BCN-25-015-K	0
+236	BCN-25-016-K	0
+237	BCN-25-017-K	0
+238	BCN-25-018-K	0
+239	BCN-25-019-K	0
+240	BCN-25-020-K	0
+252	BCN-25-001-M	0
+253	BCN-25-002-M	0
+254	BCN-25-003-M	0
+255	BCN-25-004-M	0
+256	BCN-25-005-M	0
+257	BCN-25-006-M	0
+258	BCN-25-007-M	0
+259	BCN-25-008-M	0
+260	BCN-25-009-M	0
+261	BCN-25-010-M	0
+
