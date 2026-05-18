@@ -1,0 +1,233 @@
+# Activitat pràctica - Auditoria final i validació del sistema GLPI
+
+## Context
+
+Després de la sessió anterior, el sistema GLPI ha estat modificat per diferents equips tècnics.
+
+----
+
+S’han:
+- millorat tickets
+- afegit followups
+- creat KB
+- documentat incidències
+- aplicat correccions
+
+Ara cal realitzar una auditoria final del sistema per validar:
+- la qualitat de la documentació
+- la coherència tècnica
+- la reutilització de la informació
+- la professionalitat del helpdesk
+
+Treballareu com un equip auditor extern encarregat de revisar el sistema.
+
+---
+
+# Objectius de l’activitat
+
+Heu de ser capaços de:
+- revisar documentació tècnica
+- detectar errors o incoherències
+- validar tickets i KB
+- proposar millores
+- justificar tècnicament les vostres decisions
+- treballar amb criteri professional
+
+---
+
+# Organització
+
+Cada grup revisarà la feina d’un altre grup.
+
+| Grup | Revisarà |
+|---|---|
+| Grup 1 | Grup 2 |
+| Grup 2 | Grup 1 |
+| Grup 3 | Grup 3 |
+
+---
+
+# Part 1 - Auditoria de tickets
+
+<div class="cols">
+    <div class="col-left">
+
+Heu de revisar:
+- tickets modificats
+- followups afegits
+- resolucions documentades
+
+    </div>
+    <div class="col-right">
+
+Cal detectar:
+- informació insuficient
+- diagnòstics poc clars
+- verificacions inexistents
+- resolucions massa genèriques
+- informació innecessària
+- incoherències tècniques
+
+    </div>
+</div>
+
+---
+
+# Part 2 - Revisió de KB
+
+Heu de revisar les KB creades o modificades.
+
+Per cada KB cal indicar:
+- si és reutilitzable
+- si és clara
+- si és massa genèrica
+- si falta informació
+- si permetria a un altre tècnic resoldre la incidència
+
+---
+
+# Part 3 - Informe d’auditoria
+
+Cada grup crearà un petit informe indicant:
+
+- problemes detectats
+- punts forts
+- aspectes millorables
+- KB útils
+- followups correctes
+- exemples de documentació poc professional
+
+---
+
+# Exemple de comentari d’auditoria
+
+```text
+El ticket #1045 inclou una resolució correcta però manca indicar:
+- quines comprovacions s’han realitzat
+- com s’ha verificat la resolució
+- quin era el problema exacte detectat
+```
+
+---
+
+# Part 4 - Correccions finals
+
+Després de rebre el feedback:
+- cada grup podrà corregir els seus tickets
+- millorar KB
+- completar documentació
+- revisar followups
+
+---
+
+# Lliurament
+
+Cada membre del grup crearà al seu repositori, dins de la carpeta **`lliuraments`**,
+
+un fitxer amb el nom **`0225-xlo-ae034.md`**.
+
+---
+
+# El document ha d’incloure
+
+## 1. Informació general
+
+Sota els títols:
+
+```markdown
+# Activitat AP034 - Auditoria final GLPI
+
+## 1. Informació general
+```
+
+Una taula amb la informació
+
+```markdown
+| Nom | Cognoms | Grup |
+|---|---|---|
+| El teu nom | Els teus cognoms | El teu grup |
+```
+
+----
+
+## 2. Tickets revisats
+
+Sota el títol:
+
+```markdown
+## Tickets revisats
+```
+
+Una taula amb un resum del que heu fet, com per exemple:
+
+```markdown
+| Ticket | Problema detectat | Proposta de millora |
+|---|---|---|
+| #1045 | Diagnòstic massa genèric | Afegir comprovacions |
+| #1015 | Sense verificació final | Confirmar funcionament |
+```
+
+Cal indicar únicament els tickets que realment heu revisat o modificat.
+
+----
+
+## 3. KB revisades
+
+Sota el títol:
+
+```markdown
+## KB revisades
+```
+
+Una taula amb un resum de les KB que heu revisat, com per exemple:
+
+```markdown
+| KB | Valoració | Millora proposada |
+|---|---|---|
+| Problema login | Bona estructura | Afegir verificació |
+| No Internet | Massa genèrica | Afegir diagnòstic |
+```
+
+----
+
+## 4. Reflexió final
+
+Sota el títol:
+
+```markdown
+## Reflexió final
+```
+
+Explicar:
+
+- què heu après
+- què considereu important en un helpdesk professional
+- quins errors són més habituals
+- què milloraríeu del sistema GLPI
+
+
+---
+
+# Què es valorarà
+
+| Aspecte | Pes |
+|---|---|
+| Capacitat d’anàlisi | 30% |
+| Qualitat tècnica de l’auditoria | 30% |
+| Justificació de les decisions | 20% |
+| Professionalitat del feedback | 10% |
+| Organització i claredat | 10% |
+
+---
+
+# Important
+
+L’objectiu NO és criticar altres grups.
+
+L’objectiu és actuar com un equip tècnic professional que revisa i valida documentació abans de donar una incidència per correctament resolta.
+
+L’objectiu és:
+- detectar problemes reals
+- millorar el sistema
+- deixar documentació útil
+- actuar com un equip tècnic professional
