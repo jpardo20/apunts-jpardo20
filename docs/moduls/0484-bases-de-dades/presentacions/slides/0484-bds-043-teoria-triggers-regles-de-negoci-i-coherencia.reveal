@@ -1,4 +1,4 @@
-# Sistema de reserves d'hotel
+# <codijpc>Sistema de reserves d'hotel</codijpc>
 
 # FASE 5 → Regles de negoci i coherència
 
@@ -95,13 +95,13 @@ Per cada tasca cal mostrar:
 
 ---
 
-# Tasca 1
-
-# Impedir <codijpc>overbooking</codijpc>
+# <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ⬇️
 
 ----
+
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## Problema
 
@@ -116,22 +116,22 @@ Això és incorrecte.
 
 ----
 
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
-# Objectiu
+## Objectiu
 
 Crear un <codijpc>trigger</codijpc> que impedeixi:
 
-```text
-dues reserves simultànies
-per la mateixa habitació
-```
+- **dues reserves simultànies**
+- **per la mateixa habitació**
 
 ⬇️
 
 ----
 
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
-# Pista
+## Pista 1
 
 Caldrà utilitzar:
 
@@ -143,8 +143,9 @@ BEFORE INSERT
 
 ----
 
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
-# Pista 2
+## Pista 2
 
 Cal comprovar:
 
@@ -156,8 +157,9 @@ Cal comprovar:
 
 ----
 
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
-# Comportament esperat
+## Comportament esperat
 
 Si hi ha conflicte:
 
@@ -170,7 +172,7 @@ SIGNAL SQLSTATE '45000'
 
 ## Exemple de què és el que s'espera
 
-# Tasca 1 — Impedir <codijpc>overbooking</codijpc>
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## Objectiu
 
@@ -180,6 +182,8 @@ Evitar que una mateixa habitació tingui dues reserves que coincideixen en dates
 ⬇️
 
 ----
+
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## Problema
 
@@ -191,6 +195,8 @@ Això provocaria un <codijpc>overbooking</codijpc>.
 ⬇️
 
 ----
+
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## Exemple del problema
 
@@ -206,7 +212,11 @@ SELECT
 FROM RESERVES;
 ```
 
-### Sortida de la comanda `SELECT`
+----
+
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
+## Sortida de la comanda `SELECT`
 
 ```sql
 mysql> SELECT
@@ -235,9 +245,11 @@ Exemple:
 
 ----
 
-Exemple:
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
-```text
+## Exemple:
+
+```sql
 id_reserva = 1
 id_habitacio = 2
 data_entra_reserva = 2026-05-10
@@ -247,18 +259,18 @@ en_estat_reserva = confirmada
 
 Això vol dir que l’habitació 2 està reservada del 10 al 13 de maig.
 
-<codijpc>id_habitacio=2</codijpc>
-<codijpc>data_entra_reserva = 2026-05-10</codijpc>
-<codijpc>data_surt_reserva = 2026-05-13</codijpc>
+- <codijpc>id_habitacio=2</codijpc>
+- <codijpc>data_entra_reserva = 2026-05-10</codijpc>
+- <codijpc>data_surt_reserva = 2026-05-13</codijpc>
 
 
 ⬇️
 
 ----
 
-## Cas incorrecte
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
-Ara intentem inserir una altra reserva per la mateixa habitació:
+**Cas incorrecte**: Ara intentem inserir una altra reserva per la mateixa habitació:
 
 ```sql
 INSERT INTO RESERVES (
@@ -287,7 +299,9 @@ Aquesta reserva NO s’hauria de permetre perquè coincideix amb una reserva exi
 
 ----
 
-### Sortida de les comandes
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
+## Sortida de les comandes
 
 ```sql
 mysql> INSERT INTO RESERVES (
@@ -332,6 +346,8 @@ mysql> SELECT
 
 ----
 
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
 ## Quan hi ha solapament de dates?
 
 Dues reserves se solapen quan:
@@ -355,19 +371,29 @@ NEW.data_surt_reserva > data_entra_reserva
 
 ----
 
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
 ## Exemple visual
 
 Reserva existent:
 
-```text
-2026-05-10 -------- 2026-05-13
-```
+Del 2026-05-10 al 2026-05-13
+
+
+|2026-05-10|2026-05-11|2026-05-12|2026-05-13|
+|:---------|:---------:|:---------:|:---------:|
+|>========|=========|=========|========<|
+
 
 Nova reserva:
 
-```text
-        2026-05-11 -- 2026-05-12
-```
+Del 2026-05-10 al 2026-05-11
+
+
+|2026-05-10|2026-05-11|2026-05-12|2026-05-13|
+|:---------:|:---------:|:---------:|:---------:|
+||>========|========<||
+
 
 Coincideixen.
 
@@ -376,19 +402,27 @@ Coincideixen.
 
 ----
 
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
 ## Cas que NO se solapa
 
 Reserva existent:
 
-```text
-2026-05-10 -------- 2026-05-13
-```
+Del 2026-05-10 al 2026-05-13
+
+|2026-05-10|2026-05-11|2026-05-12|2026-05-13|2026-05-14|2026-05-15|
+|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
+|>========|=========|=========|========<|||
+
 
 Nova reserva:
 
-```text
-2026-05-13 -------- 2026-05-15
-```
+Del 2026-05-13 al 2026-05-14
+
+
+|2026-05-10|2026-05-11|2026-05-12|2026-05-13|2026-05-14|2026-05-15|
+|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
+||||>========|=========|========<|
 
 Aquesta sí que es podria permetre, perquè comença el mateix dia que acaba l’altra.
 
@@ -396,6 +430,8 @@ Aquesta sí que es podria permetre, perquè comença el mateix dia que acaba l�
 ⬇️
 
 ----
+
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## <codijpc>Trigger</codijpc> que cal crear
 
@@ -411,6 +447,8 @@ Perquè volem impedir la reserva abans que s’insereixi.
 ⬇️
 
 ----
+
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## Codi del trigger
 
@@ -448,7 +486,9 @@ DELIMITER ;
 
 ----
 
-### Sortida de la comanda <codijpc>CREATE TRIGGER</codijpc>
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
+## Sortida de la comanda <codijpc>CREATE TRIGGER</codijpc>
 
 ```sql
 mysql> DELIMITER $$
@@ -485,6 +525,8 @@ mysql>
 
 ----
 
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
 ## Explicació del trigger
 
 ```sql
@@ -494,20 +536,11 @@ BEFORE INSERT
 S’executa abans d’inserir una nova reserva.
 
 
-⬇️
-
-----
-
 ```sql
 ON RESERVES
 ```
 
 El <codijpc>trigger</codijpc> està associat a la taula <codijpc>RESERVES</codijpc>.
-
-
-⬇️
-
-----
 
 ```sql
 FOR EACH ROW
@@ -515,21 +548,19 @@ FOR EACH ROW
 
 S’executa una vegada per cada reserva nova que s’intenta inserir.
 
-
-⬇️
-
-----
-
 ```sql
 NEW.id_habitacio
 ```
 
 Fa referència a l’habitació de la nova reserva.
 
-
 ⬇️
 
 ----
+
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
+
 
 ```sql
 NEW.data_entra_reserva
@@ -537,23 +568,18 @@ NEW.data_entra_reserva
 
 Fa referència a la data d’entrada de la nova reserva.
 
-
-⬇️
-
-----
-
 ```sql
 NEW.data_surt_reserva
 ```
 
 Fa referència a la data de sortida de la nova reserva.
 
-
 ⬇️
 
 ----
 
-## Per què filtrem per estat?
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+# Per què filtrem per estat?
 
 ```sql
 en_estat_reserva IN ('pendent', 'confirmada', 'checkin')
@@ -569,14 +595,15 @@ cancel_lada
 
 o ja acabada.
 
-
 ⬇️
 
 ----
 
-## Com provar que funciona
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
-### 1. Comprovar reserves existents
+# Com provar que funciona
+
+## 1. Comprovar reserves existents
 
 ```sql
 SELECT
@@ -593,7 +620,9 @@ WHERE id_habitacio = 2;
 
 ----
 
-### Sortida de la comanda
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
+## Sortida de la comanda
 
 ```sql
 mysql> SELECT
@@ -615,12 +644,13 @@ mysql> SELECT
 mysql> 
 ```
 
-
 ⬇️
 
 ----
 
-### 2. Intentar inserir una reserva que se solapa
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
+## 2. Intentar inserir una reserva que se solapa
 
 ```sql
 INSERT INTO RESERVES (
@@ -645,7 +675,8 @@ VALUES (
 
 ----
 
-### Sortida de la comanda
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+## Sortida de la comanda
 
 ```sql
 mysql> INSERT INTO RESERVES (
@@ -668,10 +699,6 @@ ERROR 1644 (45000): No es pot crear la reserva: habitacio ocupada en aquestes da
 mysql> 
 ```
 
-⬇️
-
-----
-
 ### 3. Resultat esperat
 
 ```sql
@@ -682,7 +709,13 @@ ERROR 1644 (45000): No es pot crear la reserva: habitacio ocupada en aquestes da
 
 ----
 
-## Per comprovar que deixa inserir una reserva correcta
+⬇️
+
+----
+
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
+## Comprova que deixa inserir una reserva correcta
 
 Ara provem una reserva que NO se solapa:
 
@@ -709,7 +742,9 @@ VALUES (
 
 ----
 
-### Sortida de la comanda
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
+## Sortida de la comanda
 
 ```sql
 mysql> INSERT INTO RESERVES (
@@ -733,20 +768,17 @@ Query OK, 1 row affected (0.01 sec)
 mysql> 
 ```
 
-⬇️
-
-----
-
 ## Resultat esperat
 
 ```sql
 Query OK, 1 row affected
 ```
 
-
 ⬇️
 
 ----
+
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## Comprovar que s'ha inserit
 
@@ -766,7 +798,9 @@ WHERE id_habitacio = 2;
 
 ----
 
-### Sortida de la comanda
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
+## Sortida de la comanda
 
 ```sql
 mysql> SELECT
@@ -793,6 +827,8 @@ mysql>
 
 ----
 
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
 ## Important
 
 Aquest <codijpc>trigger</codijpc> evita <codijpc>overbooking</codijpc> en inserir reserves noves.
@@ -811,6 +847,8 @@ Això podria ser una millora posterior.
 
 ----
 
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
 ## Versió millorada futura
 
 Més endavant podríem crear també:
@@ -822,10 +860,11 @@ ON RESERVES
 
 per evitar que algú **modifiqui una reserva** i provoqui <codijpc>overbooking</codijpc>.
 
-
 ⬇️
 
 ----
+
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## Resum
 
@@ -838,14 +877,13 @@ Aquest <codijpc>trigger</codijpc> serveix per garantir que:
 
 ---
 
-# Tasca 2
-
-# Impedir pagaments superiors al total pendent
+# <u>Tasca 2</u>: Impedir pagaments superiors al total pendent
 
 ⬇️
 
 ----
 
+### <u>Tasca 2</u>: Impedir pagaments superiors al total pendent
 
 ## Problema
 
@@ -866,8 +904,9 @@ Encara que la reserva només tingui pendent:
 
 ----
 
+### <u>Tasca 2</u>: Impedir pagaments superiors al total pendent
 
-# Objectiu
+## Objectiu
 
 Evitar pagaments superiors a:
 
@@ -875,12 +914,14 @@ Evitar pagaments superiors a:
 imp_tot_reserva
 ```
 
+
 ⬇️
 
 ----
 
+### <u>Tasca 2</u>: Impedir pagaments superiors al total pendent
 
-# Pista
+## Pista
 
 Caldrà:
 
@@ -890,14 +931,13 @@ Caldrà:
 
 ---
 
-# Tasca 3
-
-# Bloquejar checkout si hi ha imports pendents
+# <u>Tasca 3</u>: Bloquejar checkout si hi ha imports pendents
 
 ⬇️
 
 ----
 
+### <u>Tasca 3</u>: Bloquejar checkout si hi ha imports pendents
 
 ## Problema
 
@@ -914,7 +954,9 @@ encara que encara hi hagi imports pendents.
 ----
 
 
-# Objectiu
+### <u>Tasca 3</u>: Bloquejar checkout si hi ha imports pendents
+
+## Objectiu
 
 Impedir:
 
@@ -930,7 +972,9 @@ si encara no està totalment pagada.
 ----
 
 
-# Pista
+### <u>Tasca 3</u>: Bloquejar checkout si hi ha imports pendents
+
+## Pista 1
 
 Caldrà:
 
@@ -943,26 +987,28 @@ BEFORE UPDATE
 ----
 
 
-# Pista 2
+### <u>Tasca 3</u>: Bloquejar checkout si hi ha imports pendents
+
+## Pista 2
 
 Caldrà calcular:
 
 ```text
-total reserva - total pagaments
+total reserva: total pagaments
 ```
 
 ---
 
-# Tasca 4
-
-# Crear un log de canvis d'estat
+# <u>Tasca 4</u>: Crear un log de canvis d'estat
 
 ⬇️
 
 ----
 
 
-# Objectiu
+### <u>Tasca 4</u>: Crear un log de canvis d'estat
+
+## Objectiu
 
 Cada vegada que una reserva canviï d'estat:
 
@@ -979,7 +1025,9 @@ guardar un registre automàticament.
 ----
 
 
-# Cal guardar
+### <u>Tasca 4</u>: Crear un log de canvis d'estat
+
+## Cal guardar
 
 - id_reserva
 - estat anterior
@@ -991,7 +1039,9 @@ guardar un registre automàticament.
 ----
 
 
-# Pista
+### <u>Tasca 4</u>: Crear un log de canvis d'estat
+
+## Pista
 
 Necessitareu:
 
@@ -1007,16 +1057,15 @@ NEW
 
 ---
 
-# Tasca 5
-
-# Detectar modificacions sospitoses
+# <u>Tasca 5</u>: Detectar modificacions sospitoses
 
 ⬇️
 
 ----
 
+### <u>Tasca 5</u>: Detectar modificacions sospitoses
 
-# Objectiu
+## Objectiu
 
 Guardar un log quan:
 
@@ -1028,8 +1077,9 @@ un pagament sigui modificat
 
 ----
 
+### <u>Tasca 5</u>: Detectar modificacions sospitoses
 
-# Exemple
+## Exemple
 
 Si algú fa:
 
@@ -1045,7 +1095,9 @@ volem registrar-ho.
 ----
 
 
-# Pista
+### <u>Tasca 5</u>: Detectar modificacions sospitoses
+
+## Pista
 
 Utilitzeu:
 
@@ -1057,8 +1109,9 @@ AFTER UPDATE
 
 ----
 
+### <u>Tasca 5</u>: Detectar modificacions sospitoses
 
-# Important
+## Important
 
 En aquesta activitat es valorarà:
 
@@ -1076,7 +1129,7 @@ copiar i enganxar codi
 
 ---
 
-# Recomanació
+## Recomanació
 
 Per cada trigger:
 
@@ -1087,7 +1140,7 @@ Per cada trigger:
 
 ---
 
-# Objectiu final
+## Objectiu final
 
 Entendre que una base de dades:
 
