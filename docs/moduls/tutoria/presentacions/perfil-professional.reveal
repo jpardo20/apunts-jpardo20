@@ -1,4 +1,4 @@
-# Tutoria<br>Perfil professional digital
+# Tutoria<br><codijpc><u>perfil professional digital</u></codijpc>
 
 ---
 
@@ -8,28 +8,28 @@ Quan una empresa busca informació sobre una persona del sector tecnològic...
 
 ## què creieu que mira primer?
 
-- El CV?
-- GitHub?
-- LinkedIn?
-- Instagram?
-- Els projectes?
-- El correu electrònic?
+- El <codijpc>CV</codijpc>?
+- <codijpc>GitHub</codijpc>?
+- <codijpc>LinkedIn</codijpc>?
+- <codijpc>Instagram</codijpc>?
+- Els <codijpc>projectes</codijpc>?
+- El <codijpc>correu electrònic</codijpc>?
 - Tot plegat?
 
 Note:
 No busquis una resposta correcta.
-L’objectiu és que comencin a pensar que avui dia el CV no viu sol.
+L'objectiu és que comencin a pensar que avui dia el CV no viu sol.
 Especialment en informàtica.
 
 ---
 
 ## El problema
 
-Molts CVs del sector tecnològic...
+Molts <codijpc>CV</codijpc>s del sector tecnològic...
 
-- semblen fets només per “complir”
+- semblen fets només per "complir"
 - no demostren res
-- tenen GitHub buit
+- tenen <codijpc>GitHub</codijpc> buit
 - no tenen projectes visibles
 - o transmeten poca professionalitat
 
@@ -39,27 +39,32 @@ Molts CVs del sector tecnològic...
 
 Quan algú us busca:
 
-- veu el vostre GitHub
+- veu el vostre <codijpc>GitHub</codijpc>
 - veu com organitzeu coses
-- veu els README
+- veu els <codijpc>README.md</codijpc>
 - veu si hi ha projectes
 - veu si cuideu els detalls
 
+<br>
+<br>
+<hr>
+
 ## El vostre entorn digital també parla de vosaltres
+<hr>
 
 Note:
 Aquí pots posar exemples reals:
-“Quan jo miro algú tècnic, el primer que faig és obrir el GitHub.”
-“No espero un projecte increïble, però sí ordre i coherència.”
+"Quan jo miro algú tècnic, el primer que faig és obrir el GitHub."
+"No espero un projecte increïble, però sí ordre i coherència."
 
 ---
 
-## A les properes sessions, construirem una base de perfil professional digital
+## A les properes sessions, construirem la base del vostre <u>perfil professional digital</u>
 
 Treballarem:
-- CV
-- GitHub
-- README
+- <codijpc>CV</codijpc>
+- <codijpc>GitHub</codijpc>
+- <codijpc>README</codijpc>
 - projectes
 - presentació
 - errors habituals
@@ -67,16 +72,37 @@ Treballarem:
 
 ---
 
-## Sessió d’avui
-
-## Objectiu
+## Sessió d'avui - Objectiu
 
 Preparar el vostre repositori:
 
-- `portafoli-smx`
-- `portafoli-dam`
+- <codijpc>portafoli-smx</codijpc>
+- <codijpc>portafoli-dam</codijpc>
 
 perquè pugui funcionar com una primera carta de presentació professional.
+
+---
+
+## <codijpc>README.md</codijpc> ≠ <u>perfil professional digital</u>
+
+### <codijpc>README.md</codijpc>
+
+- què és el repositori
+- què conté
+- com està organitzat
+
+### <u>perfil professional digital</u>
+
+- qui ets
+- què saps fer
+- què vols mostrar professionalment
+
+Note:
+És important separar:
+- repositori acadèmic, i
+- <u>perfil professional digital</u>
+
+Això és molt més realista i professional.
 
 ---
 
@@ -91,43 +117,74 @@ Comproveu:
 
 ---
 
-## 2. Crear una estructura mínima
+## 2. Revisar o modificar el <codijpc>README.md</codijpc> principal
+
+El <codijpc>README.md</codijpc> principal hauria de tenir una estructura semblant a aquesta:
+
+```markdown
+# Portafoli digital de 1r DAM
+
+## Dades
+
+NOM: Nom Cognoms
+
+Curs: 1r DAM/SMX
+
+Centre: Digitechfp Barcelona
+
+## <u>perfil professional digital</u>
+
+[Accedir al <u>perfil professional digital</u>](./perfil-professional/)
+```
+
+Note:
+No cal copiar exactament aquest text.
+Però sí mantenir una estructura clara i ordenada.
+
+---
+
+## 3. Crear la carpeta del <u>perfil professional digital</u>
+
+Crear la carpeta del <u>perfil professional digital</u> amb el nom <codijpc>perfil-professional/</codijpc>
+
+---
+
+## 4. Crear una estructura mínima
+
+Dins de <codijpc>perfil-professional/</codijpc> ha d'existir com a mínim:
 
 ```text
-cv/
-captures/
-projectes/
+perfil-professional/
+│
+├── README.md
+├── cv/
+├── captures/
+└── projectes/
 ```
 
 Note:
 No importa si després canvia.
-L’objectiu és començar a ordenar.
+L'objectiu és començar a ordenar.
 
 ---
 
-## 3. Afegir el vostre CV actual
+## 5. Afegir el vostre CV actual
 
-Afegiu dins de:
-
-```text
-cv/
-```
+Afegiu dins de <codijpc>perfil-professional/cv/</codijpc>
 
 el vostre CV actual en PDF.
 
 ## Encara que no sigui definitiu.
 
-Nom recomanat:
-
-```text
-cv.pdf
-```
+Nom recomanat <codijpc>cv.pdf</codijpc>
 
 ---
 
-## 4. Revisar el README.md
+## 6. Crear el <codijpc>README.md</codijpc><br>del <u>perfil professional digital</u>
 
-Hauria d’incloure mínimament:
+Dins del fitxer  <codijpc>perfil-professional/README.md</codijpc>
+
+hauria d'aparèixer, com a mínim:
 
 - nom
 - estudis actuals
@@ -141,17 +198,17 @@ Hauria d’incloure mínimament:
 
 No cal que sigui perfecte.
 
-## L’objectiu avui és:
+## L'objectiu avui és:
 
-- començar
-- ordenar
-- i tenir una primera versió funcional
+- començar,
+- ordenar, i
+- tenir una primera versió funcional
 
 ---
 
-## 5. Commit i push
+## 7. <codijpc>commit</codijpc> i <codijpc>push</codijpc>
 
-Quan acabeu:
+Quan acabeu, cal que executeu les següents comandes:
 
 ```bash
 git add .
@@ -167,10 +224,10 @@ Analitzarem:
 - què transmet un perfil
 - errors típics
 - coses que generen confiança
-- GitHubs reals
-- README
-- CVs
-- portfolios
+- <codijpc>GitHubs</codijpc> reals
+- <codijpc>README.md</codijpc>
+- <codijpc>CV</codijpc>s
+- <codijpc>portfolios</codijpc>
 
 ## Sense exposar públicament ningú
 
@@ -180,14 +237,11 @@ Baixa molt la tensió.
 
 ---
 
-## Idea final
+## Avui dia...
 
-Avui dia...
-
-## un perfil professional no és només un PDF.
+## un <u>perfil professional digital</u><br>no és només un PDF
 
 És també:
-- el que construeixes
-- el que publiques
-- i com ho presentes.
-
+- el que construeixes,
+- el que publiques, i 
+- com ho presentes.
