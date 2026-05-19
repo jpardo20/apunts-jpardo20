@@ -1,0 +1,193 @@
+# Tutoria<br>Perfil professional digital
+
+---
+
+## Una pregunta ràpida
+
+Quan una empresa busca informació sobre una persona del sector tecnològic...
+
+## què creieu que mira primer?
+
+- El CV?
+- GitHub?
+- LinkedIn?
+- Instagram?
+- Els projectes?
+- El correu electrònic?
+- Tot plegat?
+
+Note:
+No busquis una resposta correcta.
+L’objectiu és que comencin a pensar que avui dia el CV no viu sol.
+Especialment en informàtica.
+
+---
+
+## El problema
+
+Molts CVs del sector tecnològic...
+
+- semblen fets només per “complir”
+- no demostren res
+- tenen GitHub buit
+- no tenen projectes visibles
+- o transmeten poca professionalitat
+
+---
+
+## I això és important perquè...
+
+Quan algú us busca:
+
+- veu el vostre GitHub
+- veu com organitzeu coses
+- veu els README
+- veu si hi ha projectes
+- veu si cuideu els detalls
+
+## El vostre entorn digital també parla de vosaltres
+
+Note:
+Aquí pots posar exemples reals:
+“Quan jo miro algú tècnic, el primer que faig és obrir el GitHub.”
+“No espero un projecte increïble, però sí ordre i coherència.”
+
+---
+
+## A les properes sessions, construirem una base de perfil professional digital
+
+Treballarem:
+- CV
+- GitHub
+- README
+- projectes
+- presentació
+- errors habituals
+- què transmet confiança
+
+---
+
+## Sessió d’avui
+
+## Objectiu
+
+Preparar el vostre repositori:
+
+- `portafoli-smx`
+- `portafoli-dam`
+
+perquè pugui funcionar com una primera carta de presentació professional.
+
+---
+
+## Què heu de fer avui?
+
+### 1. Revisar el repositori
+
+Comproveu:
+- que existeix
+- que el podeu modificar
+- que està sincronitzat amb GitHub
+
+---
+
+## 2. Crear una estructura mínima
+
+```text
+cv/
+captures/
+projectes/
+```
+
+Note:
+No importa si després canvia.
+L’objectiu és començar a ordenar.
+
+---
+
+## 3. Afegir el vostre CV actual
+
+Afegiu dins de:
+
+```text
+cv/
+```
+
+el vostre CV actual en PDF.
+
+## Encara que no sigui definitiu.
+
+Nom recomanat:
+
+```text
+cv.pdf
+```
+
+---
+
+## 4. Revisar el README.md
+
+Hauria d’incloure mínimament:
+
+- nom
+- estudis actuals
+- interessos tècnics
+- tecnologies treballades
+- algun projecte destacable
+
+---
+
+## Important
+
+No cal que sigui perfecte.
+
+## L’objectiu avui és:
+
+- començar
+- ordenar
+- i tenir una primera versió funcional
+
+---
+
+## 5. Commit i push
+
+Quan acabeu:
+
+```bash
+git add .
+git commit -m "feat: add professional profile structure"
+git push
+```
+
+---
+
+## I les properes sessions?
+
+Analitzarem:
+- què transmet un perfil
+- errors típics
+- coses que generen confiança
+- GitHubs reals
+- README
+- CVs
+- portfolios
+
+## Sense exposar públicament ningú
+
+Note:
+Això és important dir-ho explícitament.
+Baixa molt la tensió.
+
+---
+
+## Idea final
+
+Avui dia...
+
+## un perfil professional no és només un PDF.
+
+És també:
+- el que construeixes
+- el que publiques
+- i com ho presentes.
+

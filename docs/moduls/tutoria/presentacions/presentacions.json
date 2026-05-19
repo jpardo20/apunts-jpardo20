@@ -93,6 +93,15 @@
             "theme": "white",
             "status": "active",
             "kind": "theory"
+        },
+        {
+            "id": "10",
+            "title": "10 | Tutoria: Perfil professional digital",
+            "description": "Perfil professional digital",
+            "src": "perfil-professional.reveal",
+            "theme": "white",
+            "status": "active",
+            "kind": "theory"
         }
     ]
 }
