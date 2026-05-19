@@ -55,7 +55,7 @@
 
             const badgeKind = isActivity
                 ? `<span class="badge badge--activity">Activitat</span>`
-                : `<span class="badge badge--theory">Teoria</span>`;
+                : `<span class="badge badge--theory">Apunts</span>`;
 
             let button;
             if (status === 'inactive') {

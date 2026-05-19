@@ -8,6 +8,7 @@
     padding: 8px 16px;
     position: relative;
     font-family: sans-serif;
+    font-size: 1.2rem;
     padding: 14px 24px;
     font-family: var(--md-text-font, sans-serif);
     /* abans 8px 16px */
@@ -29,7 +30,9 @@
 
 /* TÍTOL CENTRAT */
 .jp-center {
-    
+    max-width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 1.2rem;
     font-weight: 600;
     white-space: nowrap;
@@ -37,7 +40,6 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-
     letter-spacing: 0.3px;
 }
 
@@ -48,10 +50,17 @@
     gap: 10px;
     color: white;
     text-decoration: none;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 1rem;
+}
+.jp-header a.jp-back {
+    padding: 10px;
+    box-shadow: 10px 10px 10px #009de000;
+    border-radius: 20px;
+    
 }
 
 .jp-header a:hover {
+    font-size: 1.4rem;
     opacity: 0.85;
 }
 
@@ -72,11 +81,6 @@
 }
 
 
-.jp-center {
-    max-width: 60%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 
 @media (max-width: 768px) {
     .jp-center {
