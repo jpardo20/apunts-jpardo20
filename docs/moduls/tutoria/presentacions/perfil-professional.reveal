@@ -85,13 +85,13 @@ perquè pugui funcionar com una primera carta de presentació professional.
 
 ## <codijpc>README.md</codijpc> ≠ <u>perfil professional digital</u>
 
-### <codijpc>README.md</codijpc>
+### El fitxer <codijpc>README.md</codijpc> diu:
 
 - què és el repositori
 - què conté
 - com està organitzat
 
-### <u>perfil professional digital</u>
+### El teu <u>perfil professional digital</u> diu:
 
 - qui ets
 - què saps fer
@@ -119,10 +119,10 @@ Comproveu:
 
 ## 2. Revisar o modificar el <codijpc>README.md</codijpc> principal
 
-El <codijpc>README.md</codijpc> principal hauria de tenir una estructura semblant a aquesta:
+El <codijpc>README.md</codijpc> **principal** ha de començar, de **manera obligatòria** amb la següent estructura:
 
 ```markdown
-# Portafoli digital de 1r DAM
+# Portafoli digital de 1r DAM/SMX
 
 ## Dades
 
@@ -132,10 +132,12 @@ Curs: 1r DAM/SMX
 
 Centre: Digitechfp Barcelona
 
-## <u>perfil professional digital</u>
+## <u>Perfil professional digital</u>
 
-[Accedir al <u>perfil professional digital</u>](./perfil-professional/)
+[Accedir al meu <u>**perfil professional digital**</u>](./perfil-professional/)
 ```
+
+## Evidentment, no han d'apareixer les dues opcions **DAM/SMX**, sino que només heu de deixar una, la que correspongui al vostre cas.
 
 Note:
 No cal copiar exactament aquest text.

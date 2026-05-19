@@ -925,9 +925,9 @@ imp_tot_reserva
 
 Caldrà:
 
-- consultar `RESERVES`
+- consultar <codijpc>RESERVES</codijpc>
 - comparar imports
-- utilitzar `BEFORE INSERT`
+- utilitzar <codijpc>BEFORE INSERT</codijpc>
 
 ---
 
