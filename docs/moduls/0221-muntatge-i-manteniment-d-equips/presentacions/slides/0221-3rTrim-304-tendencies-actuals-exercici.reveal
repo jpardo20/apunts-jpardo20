@@ -1,9 +1,10 @@
 # Activitat final<br>Quin equip recomanaries?
 
-Després de les exposicions, toc aplicar els coneixements treballats.
+Després de les exposicions, toca aplicar els coneixements treballats.
 
-Per cada situació, haureu de decidir:
-- quin tipus d’equip és el més adequat,
+Ara us presentarem un seguit de situacions diferents, i per cada situació, haureu de decidir:
+
+- quin tipus d'equip és el més adequat,
 - quines característiques hauria de tenir,
 - i justificar tècnicament la vostra decisió.
 
@@ -13,7 +14,63 @@ El més important és la justificació tècnica.
 
 ---
 
-# Situació 1<br>Aula d’informàtica
+# Què heu de lliurar?
+
+Dins de carpeta (**`0221-tendencies-actuals`**) i en un fitxer amb el nom **`respostes.md`** cal que
+
+per cada situació indiqueu:
+- tipus d'equip recomanat,
+- justificació tècnica,
+- avantatges,
+- possibles inconvenients.
+
+----
+
+Es pot respondre:
+- en text,
+- en taula,
+- o en esquema.
+
+---
+
+# Exemple de format de resposta
+
+Per cada situació:
+
+| Situació | Equip recomanat | Justificació |
+|---|---|---|
+| Aula d'informàtica | Bla, bla, bla... | Bla, bla, bla... |
+
+També podeu respondre en format pregunta-resposta:
+
+| Pregunta | Resposta |
+|---|---|
+|Quin tipus d'equip recomanaries?|Bla, bla, bla...|
+|Torre gran? Mini-PC? Barebone?|Bla, bla, bla...|
+|Quins avantatges tindria?|Bla, bla, bla...|
+
+----
+
+IMPORTANT:
+No hi ha una única resposta correcta.
+
+L'important és justificar tècnicament la decisió tenint en compte aspectes com:
+- mida,
+- consum,
+- rendiment,
+- mobilitat,
+- refrigeració,
+- ampliació,
+- manteniment,
+- cost,
+- soroll,
+- eficiència,
+- o necessitats de l'usuari.
+
+
+---
+
+# Situació 1<br>Aula d'informàtica
 
 Una escola necessita renovar una aula amb 25 ordinadors.
 <div class="cols">
@@ -24,14 +81,14 @@ Necessitats:
 - baix consum,
 - poc soroll,
 - fàcil manteniment,
-- ús d’ofimàtica i navegació web.
+- ús d'ofimàtica i navegació web.
 
 </div>
 <div class="col-right">
 
 
 Preguntes:
-- Quin tipus d’equip recomanaries?
+- Quin tipus d'equip recomanaries?
 - Torre gran? Mini-PC? Barebone?
 - Quins avantatges tindria?
 </div>
@@ -63,7 +120,7 @@ Necessitats:
 
 
 Preguntes:
-- Quin tipus d’equip recomanaries?
+- Quin tipus d'equip recomanaries?
 - Compacte o torre gran?
 - És important la refrigeració?
 </div>
@@ -71,7 +128,7 @@ Preguntes:
 
 ---
 
-# Situació 3<br>Recepció d’un hotel
+# Situació 3<br>Recepció d'un hotel
 
 Un hotel necessita ordinadors per la recepció.
 
@@ -89,7 +146,7 @@ Necessitats:
 <div class="col-right">
 
 Preguntes:
-- Quin tipus d’equip encaixa millor?
+- Quin tipus d'equip encaixa millor?
 - Mini-PC? SFF?
 - Per què?
 
@@ -99,7 +156,7 @@ Preguntes:
 
 # Situació 4<br>Equip per viatjar
 
-Un comercial treballa constantment fora de l’oficina.
+Un comercial treballa constantment fora de l'oficina.
 
 <div class="cols">
 <div class="col-left">
@@ -114,7 +171,7 @@ Necessitats:
 <div class="col-right">
 
 Preguntes:
-- Quin tipus d’equip recomanaries?
+- Quin tipus d'equip recomanaries?
 - ARM? Ultrabook?
 - Per què la bateria és important?
 </div>
@@ -143,7 +200,7 @@ Necessitats:
 <div class="col-right">
 
 Preguntes:
-- Quin tipus d’equip recomanaries?
+- Quin tipus d'equip recomanaries?
 - HTPC?
 - Quins avantatges té respecte una torre convencional?
 </div>
@@ -167,7 +224,7 @@ Necessitats:
 <div class="col-right">
 
 Preguntes:
-- Quin tipus d’equip recomanaries?
+- Quin tipus d'equip recomanaries?
 - MiniITX?
 - Quins problemes pot tenir un equip compacte?
 </div>
@@ -224,7 +281,7 @@ Necessitats:
 <div class="col-right">
 
 Preguntes:
-- Quin tipus d’equip recomanaries?
+- Quin tipus d'equip recomanaries?
 - És bona idea fer-lo compacte?
 - Per què?
 </div>
@@ -287,59 +344,4 @@ Preguntes:
 - Quins avantatges tindria?
 - Hi ha inconvenients?
 </div>
-
----
-
-# Què heu d’entregar?
-
-Dins de carpeta (**`0221-tendencies-actuals`**) i en un fitxer amb el nom **`respostes.md`** cal que
-
-per cada situació indiqueu:
-- tipus d’equip recomanat,
-- justificació tècnica,
-- avantatges,
-- possibles inconvenients.
-
-----
-
-Es pot respondre:
-- en text,
-- en taula,
-- o en esquema.
-
----
-
-# Exemple de format de resposta
-
-Per cada situació:
-
-| Situació | Equip recomanat | Justificació |
-|---|---|---|
-| Aula d’informàtica | Bla, bla, bla... | Bla, bla, bla... |
-
-També podeu respondre en format pregunta-resposta:
-
-| Pregunta | Resposta |
-|---|---|
-|Quin tipus d’equip recomanaries?|Bla, bla, bla...|
-|Torre gran? Mini-PC? Barebone?|Bla, bla, bla...|
-|Quins avantatges tindria?|Bla, bla, bla...|
-
-----
-
-IMPORTANT:
-No hi ha una única resposta correcta.
-
-L’important és justificar tècnicament la decisió tenint en compte aspectes com:
-- mida,
-- consum,
-- rendiment,
-- mobilitat,
-- refrigeració,
-- ampliació,
-- manteniment,
-- cost,
-- soroll,
-- eficiència,
-- o necessitats de l’usuari.
 
