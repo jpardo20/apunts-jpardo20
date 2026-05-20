@@ -14,45 +14,19 @@
 
     <link rel="stylesheet" href="../css/estils-per-reveal.css">
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/presentador.css">
+
 </head>
 
+
 <style>
-
-  body {
-    margin: 0;
-    overflow: hidden;
-  }
-
-  #header-container {
-    height: var(--jp-header-h, 68px);
-  }
-
-  .reveal {
-    height: calc(100vh - var(--jp-header-h, 68px)) !important;
-  }
-
-  .reveal .slides {
-    height: 100%;
-  }
 
 </style>
 
 <body>
-
-    <!-- Barra superior -->
-    <!-- <div class="topbar">
-        <a href="javascript:history.back()">← Tornar a Presentacions</a>
-        <span id="topbar-title">Presentació</span>
-        <img
-            src="../img/Logo_DIGIQTECH_343x99.png"
-            alt="DigiTech"
-            class="logo"
-            height="70">
-    </div> -->
-
     <!-- HEADER -->
+    <h1>hola</h1>
     <div id="header-container"></div>
-
     <script>
         fetch("../components/header/header.html")
             .then(res => res.text())

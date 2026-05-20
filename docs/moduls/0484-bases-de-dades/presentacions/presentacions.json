@@ -78,7 +78,7 @@
         },
         {
             "id": "0484-bds-activitat-validacio-mer-escenaris",
-            "title": "07: Activitat: Validació d’un MER a partir d’un enunciat",
+            "title": "07: Validació d’un MER a partir d’un enunciat",
             "description": "Enunciats: Model Entitat-Relació (MER)",
             "src": "slides/0484-bds-ae03-act-validacio-mer-escenaris.reveal",
             "theme": "white",
@@ -102,7 +102,7 @@
         },
         {
             "id": "9-0484-bds-ae01",
-            "title": "09: Activitat: Informació caòtica (0484-bds-ae01)",
+            "title": "09: Informació caòtica (0484-bds-ae01)",
             "description": "Codi d'activitat 0484-bds-ae01",
             "src": "slides/0484-bds-ae01.reveal",
             "theme": "white",
@@ -115,7 +115,7 @@
         },
         {
             "id": "10 - 0484-bds-ae02",
-            "title": "10: Activitat: Treballem les JOIN 0484-bds-ae02",
+            "title": "10: Treballem les JOIN 0484-bds-ae02",
             "description": "Codi d'activitat 0484-bds-ae02",
             "src": "slides/0484-bds-ae02.reveal",
             "theme": "white",
@@ -128,7 +128,7 @@
         },
         {
             "id": "0484-bds-ae03",
-            "title": "11: Activitat: Validació d’un MER Agència de viatges 0484-bds-ae03",
+            "title": "11: Validació d’un MER Agència de viatges 0484-bds-ae03",
             "description": "Codi d'activitat 0484-bds-ae03",
             "src": "slides/0484-bds-ae03-act-validacio-mer-escenaris.reveal",
             "theme": "white",
@@ -167,8 +167,8 @@
         },
         {
             "id": "0484-bds-01-teoria-007-tornada-de-nadal",
-            "title": "14: Teoria 7: Tornant de Nadal",
-            "description": "Teoria 7: Tornant de Nadal",
+            "title": "14: Tornant de Nadal",
+            "description": "Tornant de Nadal",
             "src": "slides/0484-bds-01-teoria-007-tornada-de-nadal.reveal",
             "theme": "white",
             "kind": "activity",
@@ -192,7 +192,7 @@
         },
         {
             "id": "0484-bds-ae08",
-            "title": "16: Activitat 8: Inserció de dades a la base de dades <code><b>videojoc_online</b></code> (<code><b>0484-bds-ae08</b></code>)",
+            "title": "16: Inserció de dades a la base de dades <code><b>videojoc_online</b></code><br><kbd>0484-bds-ae08</kbd>",
             "description": "Practicar l’ús de les comandes <code><b>INSERT INTO</b></code> en una base de dades relacional.",
             "src": "slides/0484-bds-ae08.reveal",
             "theme": "white",
@@ -327,7 +327,7 @@
         {
             "id": "0484-bds-037-teoria-vistes",
             "title": "37: Triggers",
-            "description": "Una **vista** és una consulta SQL guardada amb nom.",
+            "description": "Una vista és una consulta SQL guardada amb nom.",
             "src": "slides/0484-bds-037-teoria-vistes.reveal",
             "theme": "white",
             "status": "active",
