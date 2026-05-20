@@ -136,12 +136,31 @@ Cal explicar:
 
 - **`evidencies/fase-2/ping-host-only.txt`**
 
-
 ## Comanda a executar
 
+**1)** Obrir la línia de comandes **`cmd`** **DES DEL HOST**.
+
+Per defecte estareu ubicats a la vostra carpeta **`HOME`** de **Windows**
+
+**2)** Executar la comanda **`ping <IP_HOST_ONLY_MV> > ping-host-only.txt`** **DES DEL HOST**
+
 ```bash
-ping -c 4 <IP_HOST_ONLY_MV> > evidencies/fase-2/ping-host-only.txt
+ping <IP_HOST_ONLY_MV> > ping-host-only.txt
 ```
+
+**3)** Obrir el fitxer generat amb el **Bloc de notas** (**`notepad.exe`**) **DES DEL HOST**
+
+**4)** Copiar el contingut del fitxer **`ping-host-only.txt`** al fitxer **`evidencies/fase-2/ping-host-only.txt`** de la vostra MV.
+
+<pre>
+Microsoft Windows [Verslon 10.0.17763.55]
+(c) 2018 Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\joan> ping <IP_HOST_ONLY_MV> > ping-host-only.txt
+
+C:\Users\joan> notepad ping-host-only.txt
+
+</pre>
 
 ---
 
@@ -409,29 +428,17 @@ Quan tot estigui completat:
 
 ```bash
 git status --untracked-files=all
-```
 
-És recomanable sincronitzar primer el repositori:
-
-```bash
+# És recomanable sincronitzar primer el repositori:
 git pull --rebase
-```
 
-Afegir els fitxers:
-
-```bash
+# Afegir els fitxers:
 git add evidencies/fase-2/
-```
 
-Crear el commit:
-
-```bash
+# Crear el commit:
 git commit -m "Lliurament fase 2"
-```
 
-Pujar-lo a GitHub:
-
-```bash
+# Pujar-lo a GitHub:
 git push
 ```
 
