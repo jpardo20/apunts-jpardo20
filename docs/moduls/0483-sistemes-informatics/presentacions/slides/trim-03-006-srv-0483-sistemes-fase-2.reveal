@@ -1,0 +1,368 @@
+# Lliurament d'evidències — FASE 2
+
+## Objectiu
+
+L'objectiu d'aquest lliurament és demostrar que:
+
+- la xarxa del servidor funciona correctament
+- les interfícies de xarxa estan ben configurades
+- el servidor és accessible des de la xarxa
+- enteneu el funcionament dels ports i serveis
+- sou capaços de diagnosticar connectivitat
+
+---
+
+# Carpeta de lliurament
+
+Entrar a la carpeta del repositori:
+
+```bash
+cd ~/projecte-sistemes-0483-<github_user>
+```
+
+Cal crear la carpeta:
+
+```bash
+mkdir -p evidencies/fase-2/
+```
+
+---
+
+# Evidència 1 — Configuració de xarxa
+
+## Objectiu
+
+Mostrar totes les interfícies de xarxa i les IPs configurades.
+
+## Comanda a explicar `ip a`
+
+Cal explicar dins de:
+
+```text
+evidencies/fase-2/lliurament.md
+```
+
+què fa aquesta comanda i quina informació mostra.
+
+---
+
+## Fitxer a generar
+
+```text
+evidencies/fase-2/ip-a.txt
+```
+
+## Comanda a executar
+
+```bash
+ip a > evidencies/fase-2/ip-a.txt
+```
+
+---
+
+# Evidència 2 — Taula de rutes
+
+## Objectiu
+
+Mostrar com el sistema decideix per quina xarxa envia el trànsit.
+
+## Comanda a explicar `ip route`
+
+---
+
+## Fitxer a generar
+
+```text
+evidencies/fase-2/ip-route.txt
+```
+
+## Comanda a executar
+
+```bash
+ip route > evidencies/fase-2/ip-route.txt
+```
+
+---
+
+# Evidència 3 — Connectivitat a Internet
+
+## Objectiu
+
+Demostrar que el servidor té connexió a Internet.
+
+## Comanda a explicar `ping`
+
+---
+
+## Fitxer a generar
+
+```text
+evidencies/fase-2/ping-google.txt
+```
+
+## Comanda a executar
+
+```bash
+ping -c 4 google.com > evidencies/fase-2/ping-google.txt
+```
+
+---
+
+# Evidència 4 — Connectivitat Host ↔ MV
+
+## Objectiu
+
+Demostrar que el PC host pot comunicar-se amb la màquina virtual.
+
+## Comanda a explicar `ping`
+
+Aquesta comanda s'ha d'executar DES DEL HOST.
+
+---
+
+## Fitxer a generar
+
+```text
+evidencies/fase-2/ping-host-only.txt
+```
+
+## Comanda a executar
+
+```bash
+ping -c 4 <IP_HOST_ONLY_MV> > evidencies/fase-2/ping-host-only.txt
+```
+
+---
+
+# Evidència 5 — Ports i serveis
+
+## Objectiu
+
+Mostrar quins serveis estan escoltant ports al servidor.
+
+## Comanda a explicar `ss -tulpn`
+
+---
+
+## Fitxer a generar
+
+```text
+evidencies/fase-2/ss-tulpn.txt
+```
+
+## Comanda a executar
+
+```bash
+sudo ss -tulpn > evidencies/fase-2/ss-tulpn.txt
+```
+
+---
+
+# Instal·lació de Python
+
+## Objectiu
+
+Instal·lar Python 3 al servidor per poder executar serveis simples i scripts.
+
+## Comanda a explicar `apt install`
+
+```bash
+sudo apt install python3 -y
+```
+
+## Verificació
+
+```bash
+python3 --version
+```
+
+---
+
+
+# Evidència 6 — Crear un servei web simple
+
+## Objectiu
+
+Executar un petit servei HTTP accessible des del host.
+
+---
+
+## Comanda a explicar
+
+```bash
+python3 -m http.server 8080
+```
+
+Cal explicar:
+
+- què fa
+- quin port utilitza
+- perquè és accessible des del navegador
+
+---
+
+## Execució
+
+Crear una carpeta temporal:
+
+```bash
+mkdir -p ~/web-test
+cd ~/web-test
+```
+
+Crear un fitxer HTML:
+
+```bash
+echo "<h1>Servidor OK</h1>" > index.html
+```
+
+Iniciar el servidor web:
+
+```bash
+python3 -m http.server 8080
+```
+
+---
+
+# Evidència 7 — Accés web des del host
+
+## Objectiu
+
+Demostrar que el servei web és accessible des del navegador del host.
+
+---
+
+## Fitxer a generar
+
+```text
+evidencies/fase-2/curl-web.txt
+```
+
+## Comanda a executar DES DEL HOST
+
+```bash
+curl http://<IP_HOST_ONLY_MV>:8080 > evidencies/fase-2/curl-web.txt
+```
+
+El fitxer ha de contenir:
+
+```html
+<h1>Servidor OK</h1>
+```
+
+---
+
+# Evidència 8 — Historial de comandes
+
+## Objectiu
+
+Guardar totes les comandes utilitzades durant la fase.
+
+## Comanda a explicar `history`
+
+---
+
+## Fitxer a generar
+
+```text
+evidencies/fase-2/history.txt
+```
+
+## Comanda a executar
+
+```bash
+history > evidencies/fase-2/history.txt
+```
+
+---
+
+# Evidència 9 — Resum tècnic
+
+## Objectiu
+
+Demostrar que enteneu:
+
+- xarxes
+- IPs
+- ports
+- serveis
+- connectivitat
+
+---
+
+## Fitxer a generar
+
+```text
+evidencies/fase-2/lliurament.md
+```
+
+---
+
+## Contingut mínim
+
+Explicar:
+
+- què fa cada comanda
+- diferència entre NAT i Host-only
+- què és un port
+- què és un servei
+- problemes trobats
+- com s'han solucionat
+
+---
+
+# Estructura final esperada
+
+```bash
+evidencies/
+└── fase-2
+    ├── curl-web.txt
+    ├── history.txt
+    ├── ip-a.txt
+    ├── ip-route.txt
+    ├── lliurament.md
+    ├── ping-google.txt
+    ├── ping-host-only.txt
+    └── ss-tulpn.txt
+```
+
+---
+
+# Lliurament final
+
+Quan tot estigui completat:
+
+```bash
+git status --untracked-files=all
+```
+
+Afegir els fitxers:
+
+```bash
+git add evidencies/fase-2/
+```
+
+Crear el commit:
+
+```bash
+git commit -m "Lliurament fase 2"
+```
+
+Pujar-lo a GitHub:
+
+```bash
+git push
+```
+
+---
+
+# Resultat esperat
+
+Al final de la fase cal tenir:
+
+- xarxa funcional
+- connectivitat correcta
+- servidor accessible
+- serveis funcionant
+- coneixement bàsic de ports i xarxa
+- evidències pujades al repositori
