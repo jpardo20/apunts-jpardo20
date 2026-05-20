@@ -31,23 +31,27 @@ Es pot respondre:
 - en taula,
 - o en esquema.
 
----
+----
 
 # Exemple de format de resposta
 
-Per cada situació:
+Per cada situació, podeu respondre en format **taula**
 
+```markdown
 | Situació | Equip recomanat | Justificació |
 |---|---|---|
 | Aula d'informàtica | Bla, bla, bla... | Bla, bla, bla... |
+```
 
-També podeu respondre en format pregunta-resposta:
+o també podeu respondre en format **pregunta-resposta**:
 
+```markdown
 | Pregunta | Resposta |
 |---|---|
 |Quin tipus d'equip recomanaries?|Bla, bla, bla...|
 |Torre gran? Mini-PC? Barebone?|Bla, bla, bla...|
 |Quins avantatges tindria?|Bla, bla, bla...|
+```
 
 ----
 
