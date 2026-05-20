@@ -1,4 +1,4 @@
-# FASE 2: Xarxa + serveis + ports
+# FASE 2<br>Xarxa + serveis + ports
 
 ## Objectiu
 
@@ -14,9 +14,11 @@ L'objectiu d'aquest lliurament és demostrar que:
 
 # Carpeta de lliurament
 
-Entrar a la carpeta del repositori **`cd ~/projecte-sistemes-0483-<github_user>`**
+- Entrar a la carpeta del repositori
 
-Cal crear la carpeta **`evidencies/fase-2/`**:
+<codijpc>cd ~/projecte-sistemes-0483-&lt;github_user></codijpc>
+
+- Cal crear la carpeta <codijpc>evidencies/fase-2/</codijpc>:
 
 ```bash
 mkdir -p evidencies/fase-2/
@@ -24,7 +26,7 @@ mkdir -p evidencies/fase-2/
 
 ---
 
-# Evidència 1: Configuració de xarxa
+# Evidència 1:<br>Configuració de xarxa
 
 ## Objectiu
 
@@ -32,16 +34,18 @@ Mostrar totes les interfícies de xarxa i les IPs configurades.
 
 ----
 
-## Comanda a explicar `ip a`
+## Comanda a explicar <codijpc>ip a</codijpc>
 
-Cal explicar dins de **`evidencies/fase-2/lliurament.md`**, què fa aquesta comanda i quina informació mostra.
+Cal explicar dins de <codijpc>evidencies/fase-2/lliurament.md</codijpc>, què fa aquesta comanda i quina informació mostra.
 
 ----
 
 ## Fitxer a generar
 
-- **`evidencies/fase-2/ip-a.txt`**
+- <codijpc>evidencies/fase-2/ip-a.txt</codijpc>
 
+
+<br><hr>
 
 ## Comanda a executar
 
@@ -51,7 +55,7 @@ ip a > evidencies/fase-2/ip-a.txt
 
 ---
 
-# Evidència 2: Taula de rutes
+# Evidència 2<br>Taula de rutes
 
 ## Objectiu
 
@@ -59,20 +63,22 @@ Mostrar com el sistema decideix per quina xarxa envia el trànsit.
 
 ----
 
-## Comanda a explicar **`ip route`**
+## Comanda a explicar <codijpc>ip route</codijpc>
 
 Cal explicar:
 
-- què és una ruta
-- què és la gateway per defecte
-- per què és important la taula de rutes
+- què és una **ruta**
+- què és la **`gateway` per defecte**
+- per què és important la **taula de rutes**
 
 ----
 
 ## Fitxer a generar
 
-- **`evidencies/fase-2/ip-route.txt`**
+- <codijpc>evidencies/fase-2/ip-route.txt</codijpc>
 
+
+<br><hr>
 
 ## Comanda a executar
 
@@ -82,7 +88,7 @@ ip route > evidencies/fase-2/ip-route.txt
 
 ---
 
-# Evidència 3: Connectivitat a Internet
+# Evidència 3<br>Connectivitat a Internet
 
 ## Objectiu
 
@@ -90,20 +96,22 @@ Demostrar que el servidor té connexió a Internet.
 
 ----
 
-## Comanda a explicar `ping`
+## Comanda a explicar <codijpc>ping</codijpc>
 
 Cal explicar:
 
-- què comprova **`ping`**
-- què és **`ICMP`**
+- què comprova <codijpc>ping</codijpc>
+- què és <codijpc>ICMP</codijpc>
 - què significa que un host respongui
 
 ----
 
 ## Fitxer a generar
 
-- **`evidencies/fase-2/ping-google.txt`**
+- <codijpc>evidencies/fase-2/ping-google.txt</codijpc>
 
+
+<br><hr>
 
 ## Comanda a executar
 
@@ -113,7 +121,7 @@ ping -c 4 google.com > evidencies/fase-2/ping-google.txt
 
 ---
 
-# Evidència 4: Connectivitat **`Host <==> MV`**
+# Evidència 4<br>Connectivitat <codijpc>Host <==> MV</codijpc>
 
 ## Objectiu
 
@@ -121,36 +129,36 @@ Demostrar que el **PC host** pot comunicar-se amb la **màquina virtual**.
 
 ----
 
-## Comanda a explicar **`ping`**
+## Comanda a explicar <codijpc>ping</codijpc>
 
-#### Aquesta comanda s'ha d'executar **DES DEL HOST**.
+#### Aquesta comanda s'ha d'executar <u class="text-important-jpc">**DES DEL HOST**</u>.
 
 Cal explicar:
 
-- què és una xarxa **`Host-only`**
+- què és una xarxa <codijpc>Host-only</codijpc>
 - per què permet comunicar host i màquina virtual
 
 ----
 
 ## Fitxer a generar
 
-- **`evidencies/fase-2/ping-host-only.txt`**
+- <codijpc>evidencies/fase-2/ping-host-only.txt</codijpc>
+
+----
 
 ## Comanda a executar
 
-**1)** Obrir la línia de comandes **`cmd`** **DES DEL HOST**.
+1. Obrir la línia de comandes <codijpc>cmd</codijpc> <u class="text-important-jpc">**DES DEL HOST**</u>.
 
-Per defecte estareu ubicats a la vostra carpeta **`HOME`** de **Windows**
+1. Executar <codijpc>ping <IP_HOST_ONLY_MV> > ping-host-only.txt</codijpc>
 
-**2)** Executar la comanda **`ping <IP_HOST_ONLY_MV> > ping-host-only.txt`** **DES DEL HOST**
+    ```bash
+    ping <IP_HOST_ONLY_MV> > ping-host-only.txt
+    ```
 
-```bash
-ping <IP_HOST_ONLY_MV> > ping-host-only.txt
-```
+1. Obrir el fitxer creat amb el **Bloc de notas** (<codijpc>notepad.exe</codijpc>) <u class="text-important-jpc">**DES DEL HOST**</u>
 
-**3)** Obrir el fitxer generat amb el **Bloc de notas** (**`notepad.exe`**) **DES DEL HOST**
-
-**4)** Copiar el contingut del fitxer **`ping-host-only.txt`** al fitxer **`evidencies/fase-2/ping-host-only.txt`** de la vostra MV.
+1. Copiar el contingut del fitxer <codijpc>ping-host-only.txt</codijpc> al fitxer <codijpc>evidencies/fase-2/ping-host-only.txt</codijpc> de la vostra MV.
 
 <pre>
 Microsoft Windows [Verslon 10.0.17763.55]
@@ -164,7 +172,7 @@ C:\Users\joan> notepad ping-host-only.txt
 
 ---
 
-# Evidència 5: Ports i serveis
+# Evidència 5<br>Ports i serveis
 
 ## Objectiu
 
@@ -172,19 +180,21 @@ Mostrar quins serveis estan escoltant ports al servidor.
 
 ----
 
-## Comanda a explicar **`ss -tulpn`**
+## Comanda a explicar <codijpc>ss -tulpn</codijpc>
 
 Cal explicar:
 
 - què és un **port**
-- què significa **`LISTEN`**
+- què significa <codijpc>LISTEN</codijpc>
 - diferència entre **TCP** i **UDP**
 
 ----
 
 ## Fitxer a generar
 
-- **`evidencies/fase-2/ss-tulpn.txt`**
+- <codijpc>evidencies/fase-2/ss-tulpn.txt</codijpc>
+
+<br><hr>
 
 ## Comanda a executar
 
@@ -202,7 +212,7 @@ Instal·lar **Python 3** al servidor per poder executar serveis simples i script
 
 ----
 
-## Comanda a explicar **``apt install``**
+## Comanda a explicar <codijpc>`apt install`</codijpc>
 
 ```bash
 sudo apt install python3 -y
@@ -210,8 +220,8 @@ sudo apt install python3 -y
 
 Cal explicar:
 
-- què fa **`apt`**
-- què significa **`-y`**
+- què fa <codijpc>apt</codijpc>
+- què significa <codijpc>-y</codijpc>
 - per què Python no sempre està instal·lat
 
 ----
@@ -224,13 +234,13 @@ python3 --version
 
 ---
 
-# Evidència 6: Crear un servei web simple
+# Crear un servei web simple
 
 ## Objectiu
 
 Executar un petit servei **HTTP** accessible des del host.
 
----
+----
 
 ## Comanda a explicar
 
@@ -244,7 +254,7 @@ Cal explicar:
 - quin port utilitza
 - perquè és accessible des del navegador
 
----
+----
 
 ## IMPORTANT
 
@@ -252,10 +262,10 @@ Aquesta comanda deixa el terminal ocupat mentre el servidor està en execució.
 
 Per continuar treballant podeu:
 
-- obrir una altra terminal **`SSH`**
-- o aturar el servidor amb **`CTRL`** + **`C`**
+- obrir una altra terminal <codijpc>SSH</codijpc>
+- o aturar el servidor amb <codijpc>CTRL</codijpc> + <codijpc>C</codijpc>
 
----
+----
 
 ## Execució
 
@@ -280,11 +290,11 @@ python3 -m http.server 8080
 
 ---
 
-# Evidència 6.1: Verificar el port 8080
+# Evidència 6<br>Verificar el port <codijpc>8080</codijpc>
 
 ## Objectiu
 
-Comprovar que el servei web està escoltant correctament al port 8080.
+Comprovar que el servei web està escoltant correctament al **port** <codijpc>8080</codijpc>.
 
 ----
 
@@ -296,15 +306,17 @@ sudo ss -tulpn | grep 8080
 
 Cal explicar:
 
-- què significa que un port estigui escoltant
-- què fa `grep`
-- per què apareix el procés Python
+- què significa que un **port** estigui escoltant
+- què fa <codijpc>grep</codijpc>
+- per què apareix el procés **Python**
 
 ----
 
 ## Fitxer a generar
 
-- **`evidencies/fase-2/port-8080.txt`**
+- <codijpc>evidencies/fase-2/port-8080.txt</codijpc>
+
+<br><hr>
 
 ## Comanda a executar
 
@@ -314,7 +326,7 @@ sudo ss -tulpn | grep 8080 > evidencies/fase-2/port-8080.txt
 
 ---
 
-# Evidència 7: Accés web des del host
+# Evidència 7<br>Accés web des del host
 
 ## Objectiu
 
@@ -324,9 +336,9 @@ Demostrar que el servei web respon correctament des del host.
 
 ## Fitxer a generar
 
-- **`evidencies/fase-2/curl-web.txt`**
+- <codijpc>evidencies/fase-2/curl-web.txt</codijpc>
 
-## Comanda a executar <u>DES DEL HOST</u>
+## Comanda a executar <u class="text-important-jpc">**DES DEL HOST**</u>
 
 ```bash
 curl http://<IP_HOST_ONLY_MV>:8080 > evidencies/fase-2/curl-web.txt
@@ -340,7 +352,7 @@ El fitxer ha de contenir:
 
 ---
 
-# Evidència 8: Historial de comandes
+# Evidència 8<br>Historial de comandes
 
 ## Objectiu
 
@@ -348,19 +360,11 @@ Guardar totes les comandes utilitzades durant la fase.
 
 ----
 
-## Comanda a explicar **`history`**
-
-Cal explicar:
-
-- què guarda l'historial
-- per què és útil en administració de sistemes
-- com ajuda a reproduir processos
-
-----
-
 ## Fitxer a generar
 
-- **`evidencies/fase-2/history.txt`**
+- <codijpc>evidencies/fase-2/history.txt</codijpc>
+
+<br><hr>
 
 ## Comanda a executar
 
@@ -370,7 +374,7 @@ history > evidencies/fase-2/history.txt
 
 ---
 
-# Evidència 9: Resum tècnic
+# Evidència 9<br>Resum tècnic
 
 ## Objectiu
 
@@ -386,7 +390,7 @@ Demostrar que enteneu:
 
 ## Fitxer a generar
 
-- **`evidencies/fase-2/lliurament.md`**
+- <codijpc>evidencies/fase-2/lliurament.md</codijpc>
 
 ---
 
