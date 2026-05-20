@@ -99,7 +99,6 @@ Per cada tasca cal mostrar:
 
 Cal pujar les dades de la vostra base de dades, és a dir, crear un backup de la base dades i pujar-la al vostre repositori remot.
 
-
 Per fer-ho cal executar el fitxer **`export.sh`** que teniu a la carpeta **`~/dam/projecte-botiga-<githubUser>`**.
 
 <pre>
@@ -118,7 +117,6 @@ cd ~/dam/projecte-botiga-<githubUser>
 ```
 
 Un cop executat l'script **`export.sh`**, s'hauràn creat o actualitzat els fitxers 
-
 
 <pre>profe@docker-sxm:~/dam/projecte-botiga-jpardo20$ git status
 On branch main
@@ -163,12 +161,15 @@ Es generaran dos fitxers:
 
 ---
 
+<!-- .slide: data-transition="none" -->
 
 # <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
@@ -185,6 +186,8 @@ Això és incorrecte.
 
 ----
 
+<!-- .slide: data-transition="none" -->
+
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## Objectiu
@@ -197,6 +200,8 @@ Crear un <codijpc>trigger</codijpc> que impedeixi:
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
@@ -212,6 +217,8 @@ BEFORE INSERT
 
 ----
 
+<!-- .slide: data-transition="none" -->
+
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## Pista 2
@@ -226,6 +233,8 @@ Cal comprovar:
 
 ----
 
+<!-- .slide: data-transition="none" -->
+
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## Comportament esperat
@@ -236,21 +245,25 @@ Si hi ha conflicte:
 SIGNAL SQLSTATE '45000'
 ```
 
+⬇️
 
----
+----
 
-## Exemple de què és el que s'espera
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
+## Exemple de què és el que s'espera
 
 ## Objectiu
 
 Evitar que una mateixa habitació tingui dues reserves que coincideixen en dates.
 
-
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
@@ -260,10 +273,11 @@ Actualment podríem fer una reserva nova per una habitació que ja està reserva
 
 Això provocaria un <codijpc>overbooking</codijpc>.
 
-
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
@@ -281,7 +295,11 @@ SELECT
 FROM RESERVES;
 ```
 
+⬇️
+
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
@@ -314,6 +332,8 @@ Exemple:
 
 ----
 
+<!-- .slide: data-transition="none" -->
+
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## Exemple:
@@ -332,10 +352,11 @@ Això vol dir que l’habitació 2 està reservada del 10 al 13 de maig.
 - <codijpc>data_entra_reserva = 2026-05-10</codijpc>
 - <codijpc>data_surt_reserva = 2026-05-13</codijpc>
 
-
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
@@ -367,6 +388,8 @@ Aquesta reserva NO s’hauria de permetre perquè coincideix amb una reserva exi
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
@@ -410,10 +433,11 @@ mysql> SELECT
 2 rows in set (0.00 sec)
 ```
 
-
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
@@ -435,70 +459,55 @@ AND
 NEW.data_surt_reserva > data_entra_reserva
 ```
 
-
 ⬇️
 
 ----
 
-### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+<!-- .slide: data-transition="none" -->
 
-## Exemple visual
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc> ------ Exemple visual
 
-Reserva existent:
-
-Del 2026-05-10 al 2026-05-13
-
+Reserva existent: **del `2026-05-10` al `2026-05-13`**
 
 |2026-05-10|2026-05-11|2026-05-12|2026-05-13|
 |:---------|:---------:|:---------:|:---------:|
 |>========|=========|=========|========<|
 
-
-Nova reserva:
-
-Del 2026-05-10 al 2026-05-11
-
+Nova reserva: **del `2026-05-10` al `2026-05-11`**
 
 |2026-05-10|2026-05-11|2026-05-12|2026-05-13|
 |:---------:|:---------:|:---------:|:---------:|
 ||>========|========<||
 
-
 Coincideixen.
 
+⬇️
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc> ------ Exemple cas que NO se solapa
+
+Reserva existent: **del `2026-05-10` al `2026-05-13`**
+
+|2026-05-10|2026-05-11|2026-05-12|2026-05-13|2026-05-14|
+|:---------:|:---------:|:---------:|:---------:|:---------:|
+|>========|=========|=========|========<||
+
+Nova reserva: **del `2026-05-13` al `2026-05-14`**
+
+|2026-05-10|2026-05-11|2026-05-12|2026-05-13|2026-05-14|
+|:---------:|:---------:|:---------:|:---------:|:---------:|
+||||>========|========<|
+
+**SÍ que es podria permetre**, perquè comença el mateix dia que acaba l’altra.
 
 ⬇️
 
 ----
 
-### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
-
-## Cas que NO se solapa
-
-Reserva existent:
-
-Del 2026-05-10 al 2026-05-13
-
-|2026-05-10|2026-05-11|2026-05-12|2026-05-13|2026-05-14|2026-05-15|
-|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
-|>========|=========|=========|========<|||
-
-
-Nova reserva:
-
-Del 2026-05-13 al 2026-05-14
-
-
-|2026-05-10|2026-05-11|2026-05-12|2026-05-13|2026-05-14|2026-05-15|
-|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
-||||>========|=========|========<|
-
-Aquesta sí que es podria permetre, perquè comença el mateix dia que acaba l’altra.
-
-
-⬇️
-
-----
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
@@ -512,10 +521,11 @@ BEFORE INSERT
 
 Perquè volem impedir la reserva abans que s’insereixi.
 
-
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
@@ -550,10 +560,11 @@ DELIMITER ;
 
 ```
 
-
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
@@ -594,6 +605,8 @@ mysql>
 
 ----
 
+<!-- .slide: data-transition="none" -->
+
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## Explicació del trigger
@@ -603,7 +616,6 @@ BEFORE INSERT
 ```
 
 S’executa abans d’inserir una nova reserva.
-
 
 ```sql
 ON RESERVES
@@ -627,9 +639,9 @@ Fa referència a l’habitació de la nova reserva.
 
 ----
 
+<!-- .slide: data-transition="none" -->
+
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
-
-
 
 ```sql
 NEW.data_entra_reserva
@@ -646,6 +658,8 @@ Fa referència a la data de sortida de la nova reserva.
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 # Per què filtrem per estat?
@@ -668,6 +682,8 @@ o ja acabada.
 
 ----
 
+<!-- .slide: data-transition="none" -->
+
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 # Com provar que funciona
@@ -688,6 +704,8 @@ WHERE id_habitacio = 2;
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
@@ -717,6 +735,8 @@ mysql>
 
 ----
 
+<!-- .slide: data-transition="none" -->
+
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## 2. Intentar inserir una reserva que se solapa
@@ -744,7 +764,10 @@ VALUES (
 
 ----
 
+<!-- .slide: data-transition="none" -->
+
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
 ## Sortida de la comanda
 
 ```sql
@@ -767,8 +790,15 @@ mysql> INSERT INTO RESERVES (
 ERROR 1644 (45000): No es pot crear la reserva: habitacio ocupada en aquestes dates
 mysql> 
 ```
+⬇️
 
-### 3. Resultat esperat
+----
+
+<!-- .slide: data-transition="none" -->
+
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
+## 3. Resultat esperat
 
 ```sql
 ERROR 1644 (45000): No es pot crear la reserva: habitacio ocupada en aquestes dates
@@ -778,9 +808,7 @@ ERROR 1644 (45000): No es pot crear la reserva: habitacio ocupada en aquestes da
 
 ----
 
-⬇️
-
-----
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
@@ -811,6 +839,8 @@ VALUES (
 
 ----
 
+<!-- .slide: data-transition="none" -->
+
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## Sortida de la comanda
@@ -837,6 +867,14 @@ Query OK, 1 row affected (0.01 sec)
 mysql> 
 ```
 
+⬇️
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
+
 ## Resultat esperat
 
 ```sql
@@ -846,6 +884,8 @@ Query OK, 1 row affected
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
@@ -866,6 +906,8 @@ WHERE id_habitacio = 2;
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
@@ -896,6 +938,8 @@ mysql>
 
 ----
 
+<!-- .slide: data-transition="none" -->
+
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## Important
@@ -904,17 +948,18 @@ Aquest <codijpc>trigger</codijpc> evita <codijpc>overbooking</codijpc> en inseri
 
 Però encara NO controla:
 
-- canvis de dates amb `UPDATE`
-- canvis d’habitació amb `UPDATE`
+- canvis de dates amb <codijpc>UPDATE</codijpc>
+- canvis d’habitació amb <codijpc>UPDATE</codijpc>
 - reserves cancel·lades correctament
 - disponibilitat segons manteniment de l’habitació
 
 Això podria ser una millora posterior.
 
-
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
@@ -933,6 +978,8 @@ per evitar que algú **modifiqui una reserva** i provoqui <codijpc>overbooking</
 
 ----
 
+<!-- .slide: data-transition="none" -->
+
 ### <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ## Resum
@@ -946,11 +993,15 @@ Aquest <codijpc>trigger</codijpc> serveix per garantir que:
 
 ---
 
+<!-- .slide: data-transition="none" -->
+
 # <u>Tasca 2</u>: Impedir pagaments superiors al total pendent
 
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 2</u>: Impedir pagaments superiors al total pendent
 
@@ -973,6 +1024,8 @@ Encara que la reserva només tingui pendent:
 
 ----
 
+<!-- .slide: data-transition="none" -->
+
 ### <u>Tasca 2</u>: Impedir pagaments superiors al total pendent
 
 ## Objectiu
@@ -983,13 +1036,13 @@ Evitar pagaments superiors a:
 imp_tot_reserva
 ```
 
-
 ⬇️
 
 ----
 
-### <u>Tasca 2</u>: Impedir pagaments superiors al total pendent
+<!-- .slide: data-transition="none" -->
 
+### <u>Tasca 2</u>: Impedir pagaments superiors al total pendent
 ## Pista
 
 Caldrà:
@@ -1000,14 +1053,17 @@ Caldrà:
 
 ---
 
+<!-- .slide: data-transition="none" -->
+
 # <u>Tasca 3</u>: Bloquejar checkout si hi ha imports pendents
 
 ⬇️
 
 ----
 
-### <u>Tasca 3</u>: Bloquejar checkout si hi ha imports pendents
+<!-- .slide: data-transition="none" -->
 
+### <u>Tasca 3</u>: Bloquejar checkout si hi ha imports pendents
 ## Problema
 
 Una reserva podria passar a:
@@ -1022,6 +1078,7 @@ encara que encara hi hagi imports pendents.
 
 ----
 
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 3</u>: Bloquejar checkout si hi ha imports pendents
 
@@ -1040,6 +1097,7 @@ si encara no està totalment pagada.
 
 ----
 
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 3</u>: Bloquejar checkout si hi ha imports pendents
 
@@ -1055,6 +1113,7 @@ BEFORE UPDATE
 
 ----
 
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 3</u>: Bloquejar checkout si hi ha imports pendents
 
@@ -1068,12 +1127,15 @@ total reserva: total pagaments
 
 ---
 
+<!-- .slide: data-transition="none" -->
+
 # <u>Tasca 4</u>: Crear un log de canvis d'estat
 
 ⬇️
 
 ----
 
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 4</u>: Crear un log de canvis d'estat
 
@@ -1093,6 +1155,7 @@ guardar un registre automàticament.
 
 ----
 
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 4</u>: Crear un log de canvis d'estat
 
@@ -1107,6 +1170,7 @@ guardar un registre automàticament.
 
 ----
 
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 4</u>: Crear un log de canvis d'estat
 
@@ -1126,11 +1190,15 @@ NEW
 
 ---
 
+<!-- .slide: data-transition="none" -->
+
 # <u>Tasca 5</u>: Detectar modificacions sospitoses
 
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 5</u>: Detectar modificacions sospitoses
 
@@ -1145,6 +1213,8 @@ un pagament sigui modificat
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 5</u>: Detectar modificacions sospitoses
 
@@ -1163,6 +1233,7 @@ volem registrar-ho.
 
 ----
 
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 5</u>: Detectar modificacions sospitoses
 
@@ -1177,6 +1248,8 @@ AFTER UPDATE
 ⬇️
 
 ----
+
+<!-- .slide: data-transition="none" -->
 
 ### <u>Tasca 5</u>: Detectar modificacions sospitoses
 
