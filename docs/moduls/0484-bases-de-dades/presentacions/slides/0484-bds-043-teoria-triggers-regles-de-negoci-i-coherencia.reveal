@@ -95,6 +95,75 @@ Per cada tasca cal mostrar:
 
 ---
 
+## Executar l’exportació
+
+Cal pujar les dades de la vostra base de dades, és a dir, crear un backup de la base dades i pujar-la al vostre repositori remot.
+
+
+Per fer-ho cal executar el fitxer **`export.sh`** que teniu a la carpeta **`~/dam/projecte-botiga-<githubUser>`**.
+
+<pre>
+profe@docker-sxm:~/dam/projecte-botiga-jpardo20$ ls -l export.sh 
+-rwxrwxr-x 1 profe profe 492 Apr 21 11:22 export.sh
+profe@docker-sxm:~/dam/projecte-botiga-jpardo20$ 
+</pre>
+
+----
+
+Per executar-lo cal executar **`export.sh`**, a la vostra MV:
+
+```bash
+cd ~/dam/projecte-botiga-<githubUser>
+./export.sh
+```
+
+Un cop executat l'script **`export.sh`**, s'hauràn creat o actualitzat els fitxers 
+
+
+<pre>profe@docker-sxm:~/dam/projecte-botiga-jpardo20$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sql/export/botiga_dump.sql
+        modified:   sql/hotel_reserves/01-exploracio.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+profe@docker-sxm:~/dam/projecte-botiga-jpardo20$
+</pre>
+
+----
+
+### Guardar els fitxers al repositori
+
+```bash
+git add .
+git commit -m "Export procedures i base de dades"
+git push
+```
+
+----
+
+### Resultat
+
+Es generaran dos fitxers:
+
+- `sql/export/procedures.sql` → fitxer principal de correcció
+- `sql/export/botiga_dump.sql` → fitxer de suport
+
+----
+
+### Important
+
+- El fitxer **procedures.sql** és el que s’utilitzarà principalment per corregir
+- El fitxer **botiga_dump.sql** només s’utilitzarà si cal revisar el context complet
+- Cal executar l’script cada vegada que es modifiquin els procedures
+
+---
+
+
 # <u>Tasca 1</u>: Impedir <codijpc>overbooking</codijpc>
 
 ⬇️
