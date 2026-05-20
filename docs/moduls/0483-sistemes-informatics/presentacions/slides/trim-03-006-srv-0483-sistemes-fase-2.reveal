@@ -14,13 +14,9 @@ L'objectiu d'aquest lliurament és demostrar que:
 
 # Carpeta de lliurament
 
-Entrar a la carpeta del repositori:
+Entrar a la carpeta del repositori **`cd ~/projecte-sistemes-0483-<github_user>`**
 
-```bash
-cd ~/projecte-sistemes-0483-<github_user>
-```
-
-Cal crear la carpeta:
+Cal crear la carpeta **`evidencies/fase-2/`**:
 
 ```bash
 mkdir -p evidencies/fase-2/
@@ -28,7 +24,7 @@ mkdir -p evidencies/fase-2/
 
 ---
 
-# Evidència 1:  Configuració de xarxa
+# Evidència 1: Configuració de xarxa
 
 ## Objectiu
 
@@ -38,22 +34,14 @@ Mostrar totes les interfícies de xarxa i les IPs configurades.
 
 ## Comanda a explicar `ip a`
 
-Cal explicar dins de:
+Cal explicar dins de **`evidencies/fase-2/lliurament.md`**, què fa aquesta comanda i quina informació mostra.
 
-```text
-evidencies/fase-2/lliurament.md
-```
-
-què fa aquesta comanda i quina informació mostra.
-
--
 ----
 
 ## Fitxer a generar
 
-```text
-evidencies/fase-2/ip-a.txt
-```
+- **`evidencies/fase-2/ip-a.txt`**
+
 
 ## Comanda a executar
 
@@ -63,22 +51,28 @@ ip a > evidencies/fase-2/ip-a.txt
 
 ---
 
-# Evidència 2:  Taula de rutes
+# Evidència 2: Taula de rutes
 
 ## Objectiu
 
 Mostrar com el sistema decideix per quina xarxa envia el trànsit.
 
-## Comanda a explicar `ip route`
+----
 
--
+## Comanda a explicar **`ip route`**
+
+Cal explicar:
+
+- què és una ruta
+- què és la gateway per defecte
+- per què és important la taula de rutes
+
 ----
 
 ## Fitxer a generar
 
-```text
-evidencies/fase-2/ip-route.txt
-```
+- **`evidencies/fase-2/ip-route.txt`**
+
 
 ## Comanda a executar
 
@@ -88,22 +82,28 @@ ip route > evidencies/fase-2/ip-route.txt
 
 ---
 
-# Evidència 3:  Connectivitat a Internet
+# Evidència 3: Connectivitat a Internet
 
 ## Objectiu
 
 Demostrar que el servidor té connexió a Internet.
 
+----
+
 ## Comanda a explicar `ping`
 
+Cal explicar:
+
+- què comprova **`ping`**
+- què és **`ICMP`**
+- què significa que un host respongui
 
 ----
 
 ## Fitxer a generar
 
-```text
-evidencies/fase-2/ping-google.txt
-```
+- **`evidencies/fase-2/ping-google.txt`**
+
 
 ## Comanda a executar
 
@@ -113,24 +113,29 @@ ping -c 4 google.com > evidencies/fase-2/ping-google.txt
 
 ---
 
-# Evidència 4:  Connectivitat Host ↔ MV
+# Evidència 4: Connectivitat **`Host <==> MV`**
 
 ## Objectiu
 
-Demostrar que el PC host pot comunicar-se amb la màquina virtual.
+Demostrar que el **PC host** pot comunicar-se amb la **màquina virtual**.
 
-## Comanda a explicar `ping`
+----
 
-Aquesta comanda s'ha d'executar DES DEL HOST.
+## Comanda a explicar **`ping`**
 
+#### Aquesta comanda s'ha d'executar **DES DEL HOST**.
+
+Cal explicar:
+
+- què és una xarxa **`Host-only`**
+- per què permet comunicar host i màquina virtual
 
 ----
 
 ## Fitxer a generar
 
-```text
-evidencies/fase-2/ping-host-only.txt
-```
+- **`evidencies/fase-2/ping-host-only.txt`**
+
 
 ## Comanda a executar
 
@@ -140,22 +145,27 @@ ping -c 4 <IP_HOST_ONLY_MV> > evidencies/fase-2/ping-host-only.txt
 
 ---
 
-# Evidència 5:  Ports i serveis
+# Evidència 5: Ports i serveis
 
 ## Objectiu
 
 Mostrar quins serveis estan escoltant ports al servidor.
 
-## Comanda a explicar `ss -tulpn`
+----
 
+## Comanda a explicar **`ss -tulpn`**
+
+Cal explicar:
+
+- què és un **port**
+- què significa **`LISTEN`**
+- diferència entre **TCP** i **UDP**
 
 ----
 
 ## Fitxer a generar
 
-```text
-evidencies/fase-2/ss-tulpn.txt
-```
+- **`evidencies/fase-2/ss-tulpn.txt`**
 
 ## Comanda a executar
 
@@ -169,13 +179,23 @@ sudo ss -tulpn > evidencies/fase-2/ss-tulpn.txt
 
 ## Objectiu
 
-Instal·lar Python 3 al servidor per poder executar serveis simples i scripts.
+Instal·lar **Python 3** al servidor per poder executar serveis simples i scripts.
 
-## Comanda a explicar `apt install`
+----
+
+## Comanda a explicar **``apt install``**
 
 ```bash
 sudo apt install python3 -y
 ```
+
+Cal explicar:
+
+- què fa **`apt`**
+- què significa **`-y`**
+- per què Python no sempre està instal·lat
+
+----
 
 ## Verificació
 
@@ -185,12 +205,11 @@ python3 --version
 
 ---
 
-
-# Evidència 6:  Crear un servei web simple
+# Evidència 6: Crear un servei web simple
 
 ## Objectiu
 
-Executar un petit servei HTTP accessible des del host.
+Executar un petit servei **HTTP** accessible des del host.
 
 ---
 
@@ -205,6 +224,17 @@ Cal explicar:
 - què fa
 - quin port utilitza
 - perquè és accessible des del navegador
+
+---
+
+## IMPORTANT
+
+Aquesta comanda deixa el terminal ocupat mentre el servidor està en execució.
+
+Per continuar treballant podeu:
+
+- obrir una altra terminal **`SSH`**
+- o aturar el servidor amb **`CTRL`** + **`C`**
 
 ---
 
@@ -231,22 +261,53 @@ python3 -m http.server 8080
 
 ---
 
-# Evidència 7:  Accés web des del host
+# Evidència 6.1: Verificar el port 8080
 
 ## Objectiu
 
-Demostrar que el servei web és accessible des del navegador del host.
+Comprovar que el servei web està escoltant correctament al port 8080.
 
+----
+
+## Comanda a explicar
+
+```bash
+sudo ss -tulpn | grep 8080
+```
+
+Cal explicar:
+
+- què significa que un port estigui escoltant
+- què fa `grep`
+- per què apareix el procés Python
 
 ----
 
 ## Fitxer a generar
 
-```text
-evidencies/fase-2/curl-web.txt
+- **`evidencies/fase-2/port-8080.txt`**
+
+## Comanda a executar
+
+```bash
+sudo ss -tulpn | grep 8080 > evidencies/fase-2/port-8080.txt
 ```
 
-## Comanda a executar DES DEL HOST
+---
+
+# Evidència 7: Accés web des del host
+
+## Objectiu
+
+Demostrar que el servei web respon correctament des del host.
+
+----
+
+## Fitxer a generar
+
+- **`evidencies/fase-2/curl-web.txt`**
+
+## Comanda a executar <u>DES DEL HOST</u>
 
 ```bash
 curl http://<IP_HOST_ONLY_MV>:8080 > evidencies/fase-2/curl-web.txt
@@ -260,22 +321,27 @@ El fitxer ha de contenir:
 
 ---
 
-# Evidència 8:  Historial de comandes
+# Evidència 8: Historial de comandes
 
 ## Objectiu
 
 Guardar totes les comandes utilitzades durant la fase.
 
-## Comanda a explicar `history`
+----
 
+## Comanda a explicar **`history`**
+
+Cal explicar:
+
+- què guarda l'historial
+- per què és útil en administració de sistemes
+- com ajuda a reproduir processos
 
 ----
 
 ## Fitxer a generar
 
-```text
-evidencies/fase-2/history.txt
-```
+- **`evidencies/fase-2/history.txt`**
 
 ## Comanda a executar
 
@@ -285,7 +351,7 @@ history > evidencies/fase-2/history.txt
 
 ---
 
-# Evidència 9:  Resum tècnic
+# Evidència 9: Resum tècnic
 
 ## Objectiu
 
@@ -297,14 +363,11 @@ Demostrar que enteneu:
 - serveis
 - connectivitat
 
-
 ----
 
 ## Fitxer a generar
 
-```text
-evidencies/fase-2/lliurament.md
-```
+- **`evidencies/fase-2/lliurament.md`**
 
 ---
 
@@ -313,9 +376,10 @@ evidencies/fase-2/lliurament.md
 Explicar:
 
 - què fa cada comanda
-- diferència entre NAT i Host-only
-- què és un port
-- què és un servei
+- diferència entre **NAT** i **Host-only**
+- què és un **port**
+- què és un **servei**
+- què és un **procés escoltant**
 - problemes trobats
 - com s'han solucionat
 
@@ -333,6 +397,7 @@ evidencies/
     ├── lliurament.md
     ├── ping-google.txt
     ├── ping-host-only.txt
+    ├── port-8080.txt
     └── ss-tulpn.txt
 ```
 
@@ -344,6 +409,12 @@ Quan tot estigui completat:
 
 ```bash
 git status --untracked-files=all
+```
+
+És recomanable sincronitzar primer el repositori:
+
+```bash
+git pull --rebase
 ```
 
 Afegir els fitxers:
@@ -363,6 +434,20 @@ Pujar-lo a GitHub:
 ```bash
 git push
 ```
+
+---
+
+# Problemes normals
+
+És normal trobar-se problemes com:
+
+- **ports** ocupats
+- **IP**s incorrectes
+- errors **SSH**
+- problemes amb **Git**
+- problemes de connectivitat
+
+Forma part del treball real d'administració de sistemes.
 
 ---
 
