@@ -1,0 +1,124 @@
+
+# Rúbrica d'avaluació entre companys — RA6
+
+## Mòdul
+0221 — Muntatge i manteniment d'equips
+
+## Activitat
+Tendències actuals en equips microinformàtics
+
+---
+
+# Instruccions
+
+Cada alumne haurà d'avaluar les exposicions dels seus companys.
+
+Per cada exposició:
+- llegiu atentament els criteris,
+- poseu una puntuació,
+- i afegiu un petit comentari constructiu.
+
+IMPORTANT:
+- Sigueu respectuosos i professionals.
+- L'objectiu és ajudar els companys a millorar.
+- No es tracta de “posar nota als amics”.
+- Cal justificar les valoracions.
+
+---
+
+# Escala de puntuació
+
+| Puntuació | Significat |
+|---|---|
+| 1 | Molt insuficient |
+| 2 | Insuficient |
+| 3 | Correcte |
+| 4 | Bé |
+| 5 | Molt bé |
+
+---
+
+# Taula de temes
+
+| Alumne | Tema |
+|---|---|
+| Marc | MiniITX / SFF |
+| Kristina | HTPC |
+| Clemente | Gaming compacte |
+| Pau | Mini-PC empresarials / Intel NUC |
+| Lorena | Modding |
+| Pendent | Informàtica mòbil |
+| Pendent | Barebones |
+
+---
+
+```markdwon
+
+# Rúbrica d'avaluació
+
+## Alumne avaluat: ___________________________________
+
+## Tema: ___________________________________
+
+| Criteri | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| Explica clarament què és el tema |  |  |  |  |  |
+| Demostra comprendre el tema |  |  |  |  |  |
+| Justifica bé els avantatges i inconvenients |  |  |  |  |  |
+| Relaciona el tema amb usos reals |  |  |  |  |  |
+| L'exposició és clara i entenedora |  |  |  |  |  |
+| Utilitza exemples o imatges útils |  |  |  |  |  |
+| Mostra seguretat i domini del tema |  |  |  |  |  |
+
+# Comentari constructiu
+
+## Què t'ha agradat més de l'exposició?
+
+__________________________________________________
+
+__________________________________________________
+
+
+## Què podria millorar?
+
+__________________________________________________
+
+__________________________________________________
+
+# Valoració final
+
+| Valoració global | Marca |
+|---|---|
+| Molt insuficient |  |
+| Insuficient |  |
+| Correcte |  |
+| Bé |  |
+| Molt bé |  |
+
+```
+
+
+---
+
+# Entrega
+
+Cada alumne haurà de:
+1. Afegir aquesta rúbrica al seu repositori.
+2. Omplir-la durant les exposicions.
+3. Fer commit dels canvis al repositori.
+
+Dins dels vostre repositori de glpi (**`0225-glpi`**) i de la carpeta (**`0221-tendencies-actuals`**) cal crear el fitxer **`rubriques.md`**, amb la rúbrica de cada presentació.
+
+---
+
+# Actualitzar el vostre repositori remot
+
+Com sempre cal que tots els fitxer que heu modificat estiguin al vostre repositori remot.
+
+Cal que executeu:
+
+```bash
+git add .
+git commit -m "Afegida rúbrica d'avaluació de companys"
+git push
+```

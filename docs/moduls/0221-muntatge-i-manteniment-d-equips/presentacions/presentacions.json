@@ -163,6 +163,14 @@
             "description": "Després de les exposicions, haureu d’aplicar els coneixements treballats durant l’activitat.",
             "status": "active",
             "kind": "activity"
+        },
+        {
+            "order": "305",
+            "title": "305- Activitat: Tendències actuals en equips microinformàtics - Rúbrica",
+            "src": "slides/0221-3rTrim-305-tendencies-actuals-rubrica.reveal",
+            "description": "Rúbrica d'avaluació entre companys — RA6",
+            "status": "active",
+            "kind": "activity"
         }
     ]
 }
