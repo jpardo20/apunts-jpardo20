@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#header-container {
+    height: var(--jp-header-h, 68px);
+}
+
+.reveal {
+    height: calc(100vh - var(--jp-header-h, 68px)) !important;
+}
+
+.reveal .slides {
+    height: 100%;
+}

@@ -8,26 +8,32 @@
 
 # Objectiu
 
-Aplicar tots els coneixements treballats fins ara en un únic projecte SQL coherent i funcional.
+Aplicar tots els coneixements treballats fins ara en un únic projecte SQL coherent i funcional. Caldrà demostrar que sabeu utilitzar:
 
-Caldrà demostrar que sabeu utilitzar:
+<div class="cols">
+<div class="col-left">
 
 - consultes SQL avançades
 - JOIN
 - GROUP BY
 - HAVING
 - vistes
+
+</div>
+<div class="col-right">
+
 - triggers
 - procedures
 - regles de negoci
 - validacions
 - automatització
+</div>
 
 ---
 
 # Context
 
-Disposem d’un sistema de reserves d’hotel amb:
+### Disposem d’un sistema de reserves d’hotel amb:
 
 - clients
 - habitacions
@@ -36,7 +42,9 @@ Disposem d’un sistema de reserves d’hotel amb:
 - serveis
 - temporades
 
-Durant les fases anteriors hem creat:
+----
+
+### Durant les fases anteriors hem creat:
 
 - vistes
 - triggers
@@ -44,6 +52,7 @@ Durant les fases anteriors hem creat:
 - automatitzacions
 
 Ara cal integrar-ho tot dins un sistema coherent.
+
 
 ---
 

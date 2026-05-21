@@ -15,13 +15,7 @@
     <link rel="stylesheet" href="../css/estils-per-reveal.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/presentador.css">
-
 </head>
-
-
-<style>
-
-</style>
 
 <body>
     <!-- HEADER -->
@@ -32,6 +26,15 @@
             .then(html => {
                 document.getElementById("header-container").innerHTML = html;
 
+                requestAnimationFrame(() => {
+                    const header = document.querySelector(".jp-header");
+                    const h = header ? header.offsetHeight : 68;
+                    document.documentElement.style.setProperty("--jp-header-h", h + "px");
+
+                    if (window.Reveal) {
+                        Reveal.layout();
+                    }
+                });
                 const base = window.location.pathname.includes('/apunts-jpardo20')
                     ? '/apunts-jpardo20'
                     : '';
