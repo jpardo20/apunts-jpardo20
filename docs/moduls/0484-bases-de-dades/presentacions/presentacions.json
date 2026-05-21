@@ -407,6 +407,18 @@
             "tags": [
                 "BBDD"
             ]
+        },
+        {
+            "id": "0484-bds-044-activitat-mini-projecte-final",
+            "title": "44: FASE 6: Mini projecte final SQL",
+            "description": "Aplicar tots els coneixements treballats fins ara en un únic projecte SQL coherent i funcional.",
+            "src": "slides/0484-bds-044-activitat-mini-projecte-final.reveal",
+            "theme": "white",
+            "status": "active",
+            "kind": "activity",
+            "tags": [
+                "BBDD"
+            ]
         }
     ]
 }

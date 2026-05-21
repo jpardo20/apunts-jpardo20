@@ -1,0 +1,427 @@
+# <codijpc>Sistema de reserves d'hotel</codijpc>
+
+# FASE 6: Mini projecte final SQL
+
+## Vistes + Triggers + Procedures + Regles de negoci
+
+---
+
+# Objectiu
+
+Aplicar tots els coneixements treballats fins ara en un únic projecte SQL coherent i funcional.
+
+Caldrà demostrar que sabeu utilitzar:
+
+- consultes SQL avançades
+- JOIN
+- GROUP BY
+- HAVING
+- vistes
+- triggers
+- procedures
+- regles de negoci
+- validacions
+- automatització
+
+---
+
+# Context
+
+Disposem d’un sistema de reserves d’hotel amb:
+
+- clients
+- habitacions
+- reserves
+- pagaments
+- serveis
+- temporades
+
+Durant les fases anteriors hem creat:
+
+- vistes
+- triggers
+- validacions
+- automatitzacions
+
+Ara cal integrar-ho tot dins un sistema coherent.
+
+---
+
+# IMPORTANT
+
+Aquest mini projecte NO consisteix només en escriure SQL.
+
+L’objectiu és demostrar que:
+
+```text
+penseu el sistema com una aplicació real
+```
+
+---
+
+# Lliurament
+
+Cal crear el fitxer:
+
+```text
+sql/hotel_reserves/05-mini-projecte-final.md
+```
+
+---
+
+# Estructura obligatòria
+
+El document ha d’estar separat en:
+
+```text
+1. Consultes avançades
+2. Vistes
+3. Triggers
+4. Procedures
+5. Reflexió final
+```
+
+---
+
+# IMPORTANT
+
+TOTES les parts han de contenir:
+
+- explicació
+- codi SQL
+- execució real
+- sortida real de MySQL
+
+---
+
+# PART 1: Consultes avançades
+
+## Objectiu
+
+Demostrar domini de:
+
+- JOIN
+- GROUP BY
+- HAVING
+- ORDER BY
+- funcions d’agregació
+
+---
+
+# Tasca 1
+
+Mostrar:
+
+- reserves
+- client
+- import total
+- total pagat
+- import pendent
+
+Ordenat per:
+
+```text
+import pendent descendent
+```
+
+---
+
+# Tasca 2
+
+Mostrar:
+
+- habitacions
+- nombre total de reserves
+
+Incloent:
+
+- habitacions sense reserves
+
+---
+
+# Tasca 3
+
+Mostrar:
+
+- clients
+- total gastat
+
+Només clients que hagin gastat més de:
+
+```text
+500€
+```
+
+---
+
+# PART 2: Vistes
+
+## Objectiu
+
+Crear consultes reutilitzables.
+
+---
+
+# Tasca 4
+
+Crear la vista:
+
+```sql
+v_reserves_pendents
+```
+
+Ha de mostrar:
+
+- client
+- habitació
+- estat
+- import pendent
+
+Només reserves amb imports pendents.
+
+---
+
+# Tasca 5
+
+Crear la vista:
+
+```sql
+v_resum_clients
+```
+
+Ha de mostrar:
+
+- client
+- nombre reserves
+- total pagat
+- import pendent acumulat
+
+---
+
+# IMPORTANT
+
+Cal demostrar:
+
+```sql
+SELECT * FROM ...
+```
+
+i mostrar la sortida real.
+
+---
+
+# PART 3: Triggers
+
+## Objectiu
+
+Automatitzar comportament dins MySQL.
+
+---
+
+# Tasca 6
+
+Crear un trigger que:
+
+```text
+impedeixi overbooking
+```
+
+---
+
+# Tasca 7
+
+Crear un trigger que:
+
+```text
+impedeixi pagaments superiors
+a l'import pendent
+```
+
+Utilitzant:
+
+```sql
+SIGNAL SQLSTATE
+```
+
+---
+
+# Tasca 8
+
+Crear un trigger que:
+
+```text
+guardi un log
+quan canvia l'estat d'una reserva
+```
+
+---
+
+# IMPORTANT
+
+Cal demostrar:
+
+- abans
+- execució
+- després
+- error generat si existeix
+
+---
+
+# PART 4: Procedures
+
+## Objectiu
+
+Automatitzar operacions complexes.
+
+---
+
+# Tasca 9
+
+Crear el procedure:
+
+```sql
+sp_afegir_pagament
+```
+
+Ha de:
+
+- inserir pagament
+- validar imports
+- actualitzar reserva si cal
+
+---
+
+# Exemple d'ús
+
+```sql
+CALL sp_afegir_pagament(
+    2,
+    100,
+    'bizum',
+    'Pagament parcial'
+);
+```
+
+---
+
+# Tasca 10
+
+Crear el procedure:
+
+```sql
+sp_checkout_reserva
+```
+
+Ha de:
+
+- comprovar pagaments
+- impedir checkout si hi ha pendent
+- canviar estat a:
+
+```text
+checkout
+```
+
+---
+
+# IMPORTANT
+
+Cal demostrar:
+
+- execució correcta
+- errors
+- resultats finals
+
+---
+
+# PART 5: Reflexió final
+
+## Explicar:
+
+### Què heu après sobre:
+
+- triggers
+- procedures
+- automatització SQL
+- regles de negoci
+
+---
+
+# També cal explicar
+
+## Quina diferència hi ha entre:
+
+```text
+trigger
+```
+
+i
+
+```text
+procedure
+```
+
+---
+
+# IMPORTANT
+
+No s'acceptaran documents que:
+
+- només copiïn teoria
+- no mostrin proves reals
+- no mostrin sortides de MySQL
+- no expliquin el funcionament
+
+---
+
+# Es valorarà especialment
+
+- coherència SQL
+- qualitat de les proves
+- automatització
+- validacions
+- ús correcte de `OLD` i `NEW`
+- ús correcte de `SIGNAL`
+- qualitat de les regles de negoci
+- capacitat de pensar el sistema com una aplicació real
+
+---
+
+# Recomanació
+
+Executeu:
+
+```sql
+SELECT ...
+```
+
+abans i després de cada prova.
+
+---
+
+# IMPORTANT
+
+Aquest mini projecte serà considerat:
+
+```text
+activitat global de consolidació SQL
+```
+
+i integrarà continguts de:
+
+- consultes avançades
+- vistes
+- triggers
+- procedures
+
+---
+
+# Objectiu final
+
+Que sigueu capaços de construir:
+
+```text
+un sistema SQL coherent i automatitzat
+```
+
+semblant a un entorn real.
