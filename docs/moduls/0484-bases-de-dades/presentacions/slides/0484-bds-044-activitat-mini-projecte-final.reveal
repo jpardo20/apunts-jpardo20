@@ -8,22 +8,22 @@
 
 # Objectiu
 
-Aplicar tots els coneixements treballats fins ara en un únic projecte SQL coherent i funcional. Caldrà demostrar que sabeu utilitzar:
+Aplicar tots els coneixements treballats fins ara en un únic projecte **SQL** coherent i funcional. Caldrà demostrar que sabeu utilitzar:
 
 <div class="cols">
 <div class="col-left">
 
-- consultes SQL avançades
-- JOIN
-- GROUP BY
-- HAVING
+- consultes **SQL** avançades
+- <codijpc>JOIN</codijpc>
+- <codijpc>GROUP BY</codijpc>
+- <codijpc>HAVING</codijpc>
 - vistes
 
 </div>
 <div class="col-right">
 
-- triggers
-- procedures
+- **Triggers**
+- **Procedures**
 - regles de negoci
 - validacions
 - automatització
@@ -33,7 +33,7 @@ Aplicar tots els coneixements treballats fins ara en un únic projecte SQL coher
 
 # Context
 
-### Disposem d’un sistema de reserves d’hotel amb:
+### Disposem d'un sistema de reserves d'hotel amb:
 
 - clients
 - habitacions
@@ -46,10 +46,10 @@ Aplicar tots els coneixements treballats fins ara en un únic projecte SQL coher
 
 ### Durant les fases anteriors hem creat:
 
-- vistes
-- triggers
-- validacions
-- automatitzacions
+- **Vistes**
+- **Triggers**
+- **validacions**
+- **automatitzacions**
 
 Ara cal integrar-ho tot dins un sistema coherent.
 
@@ -58,9 +58,9 @@ Ara cal integrar-ho tot dins un sistema coherent.
 
 # IMPORTANT
 
-Aquest mini projecte NO consisteix només en escriure SQL.
+Aquest mini projecte NO consisteix només en escriure **SQL**.
 
-L’objectiu és demostrar que:
+L'objectiu és demostrar que:
 
 ```text
 penseu el sistema com una aplicació real
@@ -70,36 +70,39 @@ penseu el sistema com una aplicació real
 
 # Lliurament
 
-Cal crear el fitxer:
-
-```text
-sql/hotel_reserves/05-mini-projecte-final.md
-```
+Cal crear el fitxer <codijpc>sql/hotel_reserves/05-mini-projecte-final.md</codijpc>
 
 ---
 
 # Estructura obligatòria
 
-El document ha d’estar separat en:
+El document ha d'estar separat en:
 
-```text
-1. Consultes avançades
-2. Vistes
-3. Triggers
-4. Procedures
-5. Reflexió final
+```markdown
+## 1. Consultes avançades
+
+## 2. Vistes
+
+## 3. Triggers
+
+## 4. Procedures
+
+## 5. Reflexió final
+
 ```
 
 ---
 
 # IMPORTANT
 
-TOTES les parts han de contenir:
+**TOTES** les parts han de contenir:
 
 - explicació
-- codi SQL
+- codi **SQL**
 - execució real
-- sortida real de MySQL
+- sortida real de **MySQL**
+
+Com hem estat fent durant les anteriors ocasions.
 
 ---
 
@@ -109,11 +112,11 @@ TOTES les parts han de contenir:
 
 Demostrar domini de:
 
-- JOIN
-- GROUP BY
-- HAVING
-- ORDER BY
-- funcions d’agregació
+- <codijpc>JOIN</codijpc>
+- <codijpc>GROUP BY</codijpc>
+- <codijpc>HAVING</codijpc>
+- <codijpc>ORDER BY</codijpc>
+- funcions d'agregació
 
 ---
 
@@ -127,11 +130,7 @@ Mostrar:
 - total pagat
 - import pendent
 
-Ordenat per:
-
-```text
-import pendent descendent
-```
+Ordenat per **`import pendent descendent`**
 
 ---
 
@@ -155,11 +154,7 @@ Mostrar:
 - clients
 - total gastat
 
-Només clients que hagin gastat més de:
-
-```text
-500€
-```
+Només clients que hagin gastat més de <codijpc>500€</codijpc>
 
 ---
 
@@ -167,17 +162,13 @@ Només clients que hagin gastat més de:
 
 ## Objectiu
 
-Crear consultes reutilitzables.
+Crear consultes (**`vistes`**) reutilitzables.
 
 ---
 
 # Tasca 4
 
-Crear la vista:
-
-```sql
-v_reserves_pendents
-```
+Crear la vista <codijpc>v_reserves_pendents</codijpc>
 
 Ha de mostrar:
 
@@ -192,11 +183,7 @@ Només reserves amb imports pendents.
 
 # Tasca 5
 
-Crear la vista:
-
-```sql
-v_resum_clients
-```
+Crear la vista <codijpc>v_resum_clients</codijpc>
 
 Ha de mostrar:
 
@@ -212,7 +199,9 @@ Ha de mostrar:
 Cal demostrar:
 
 ```sql
-SELECT * FROM ...
+SELECT *
+FROM ...
+...
 ```
 
 i mostrar la sortida real.
@@ -223,28 +212,22 @@ i mostrar la sortida real.
 
 ## Objectiu
 
-Automatitzar comportament dins MySQL.
+Automatitzar comportament dins **MySQL**.
 
 ---
 
 # Tasca 6
 
-Crear un trigger que:
-
-```text
-impedeixi overbooking
-```
+Crear un <codijpc>Trigger</codijpc> que <codijpc>impedeixi overbooking</codijpc>
 
 ---
 
 # Tasca 7
 
-Crear un trigger que:
+Crear un <codijpc>Trigger</codijpc> que
 
-```text
-impedeixi pagaments superiors
-a l'import pendent
-```
+- <codijpc>impedeixi pagaments superiors a l'import pendent</codijpc>
+
 
 Utilitzant:
 
@@ -256,12 +239,9 @@ SIGNAL SQLSTATE
 
 # Tasca 8
 
-Crear un trigger que:
+Crear un <codijpc>Trigger</codijpc> que:
 
-```text
-guardi un log
-quan canvia l'estat d'una reserva
-```
+- <codijpc>guardi un log quan canvia l'estat d'una reserva</codijpc>
 
 ---
 
@@ -286,13 +266,7 @@ Automatitzar operacions complexes.
 
 # Tasca 9
 
-Crear el procedure:
-
-```sql
-sp_afegir_pagament
-```
-
-Ha de:
+Crear el <codijpc>Procedure</codijpc> amb el nom <codijpc>sp_afegir_pagament</codijpc> que ha de:
 
 - inserir pagament
 - validar imports
@@ -315,21 +289,11 @@ CALL sp_afegir_pagament(
 
 # Tasca 10
 
-Crear el procedure:
+Crear el <codijpc>Procedure</codijpc> amb el nom <codijpc>sp_checkout_reserva</codijpc> que ha de:
 
-```sql
-sp_checkout_reserva
-```
-
-Ha de:
-
-- comprovar pagaments
-- impedir checkout si hi ha pendent
-- canviar estat a:
-
-```text
-checkout
-```
+- comprovar pagaments,
+- impedir checkout si hi ha pendent, i 
+- canviar estat a <codijpc>checkout</codijpc>
 
 ---
 
@@ -349,9 +313,9 @@ Cal demostrar:
 
 ### Què heu après sobre:
 
-- triggers
-- procedures
-- automatització SQL
+- <codijpc>Triggers</codijpc>
+- <codijpc>Procedures</codijpc>
+- automatització **SQL**
 - regles de negoci
 
 ---
@@ -360,15 +324,7 @@ Cal demostrar:
 
 ## Quina diferència hi ha entre:
 
-```text
-trigger
-```
-
-i
-
-```text
-procedure
-```
+<codijpc>Trigger</codijpc> i <codijpc>Procedure</codijpc>
 
 ---
 
@@ -385,12 +341,12 @@ No s'acceptaran documents que:
 
 # Es valorarà especialment
 
-- coherència SQL
+- coherència **SQL**
 - qualitat de les proves
 - automatització
 - validacions
-- ús correcte de `OLD` i `NEW`
-- ús correcte de `SIGNAL`
+- ús correcte de <codijpc>OLD</codijpc> i <codijpc>NEW</codijpc>
+- ús correcte de <codijpc>SIGNAL</codijpc>
 - qualitat de les regles de negoci
 - capacitat de pensar el sistema com una aplicació real
 
@@ -410,27 +366,17 @@ abans i després de cada prova.
 
 # IMPORTANT
 
-Aquest mini projecte serà considerat:
-
-```text
-activitat global de consolidació SQL
-```
+Aquest mini projecte serà considerat <codijpc>activitat global de consolidació SQL</codijpc>
 
 i integrarà continguts de:
 
 - consultes avançades
-- vistes
-- triggers
-- procedures
+- <codijpc>Procedures</codijpc>
+- <codijpc>Triggers</codijpc>
+- <codijpc>Vistes</codijpc>
 
 ---
 
 # Objectiu final
 
-Que sigueu capaços de construir:
-
-```text
-un sistema SQL coherent i automatitzat
-```
-
-semblant a un entorn real.
+Que sigueu capaços de construir <codijpc>un sistema SQL coherent i automatitzat</codijpc>, semblant a un entorn real.
