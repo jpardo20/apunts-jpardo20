@@ -53,7 +53,6 @@ Aplicar tots els coneixements treballats fins ara en un únic projecte **SQL** c
 
 Ara cal integrar-ho tot dins un sistema coherent.
 
-
 ---
 
 # IMPORTANT
@@ -71,6 +70,10 @@ penseu el sistema com una aplicació real
 # Lliurament
 
 Cal crear el fitxer <codijpc>sql/hotel_reserves/05-mini-projecte-final.md</codijpc>
+
+No us oblideu d'executar l'export per poder pujar el contingut de la base de dades al vostre repositori remot.
+
+Teniu les instruccions a la secció **Comandes per dur a terme l’exportació de les dades** al final d'aquest mateix document.
 
 ---
 
@@ -380,3 +383,72 @@ i integrarà continguts de:
 # Objectiu final
 
 Que sigueu capaços de construir <codijpc>un sistema SQL coherent i automatitzat</codijpc>, semblant a un entorn real.
+
+---
+
+### Comandes per dur a terme l’exportació de les dades
+
+Per pujar les dades de la vostra base de dades, cal crear una còpia de seguretat (**backup**) de la base dades i pujar-la al vostre repositori remot.
+
+Executant el fitxer **`export.sh`** que teniu a la carpeta **`~/dam/projecte-botiga-<githubUser>`**, es crearà la còpia de seguretat (**backup**) de la base dades, a la carpeta **`sql/export/`**, del vostre repositori.
+
+<pre>
+profe@docker-sxm:~/dam/projecte-botiga-jpardo20$ ls -l export.sh 
+-rwxrwxr-x 1 profe profe 492 Apr 21 11:22 export.sh
+profe@docker-sxm:~/dam/projecte-botiga-jpardo20$ 
+</pre>
+
+----
+
+Per executar-lo cal executar **`export.sh`**, a la vostra MV:
+
+```bash
+cd ~/dam/projecte-botiga-<githubUser>
+./export.sh
+```
+
+Un cop executat l'script **`export.sh`**, s'hauràn creat o actualitzat els fitxers de la còpia de seguretat.
+
+<pre>profe@docker-sxm:~/dam/projecte-botiga-jpardo20$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sql/export/botiga_dump.sql
+        modified:   sql/hotel_reserves/01-exploracio.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+profe@docker-sxm:~/dam/projecte-botiga-jpardo20$
+</pre>
+
+----
+
+### Pujar els fitxers al repositori
+
+Ara ja només queda afegir aquests fitxers al següent **`commit`**, crear el **`commit`** i pujar els canvis al repositori remot, com sempre.
+
+```bash
+git add sql/export/.
+git commit -m "Export procedures i base de dades"
+git push
+```
+
+----
+
+### Resultat
+
+Es generaran dos fitxers:
+
+- `sql/export/procedures.sql` → fitxer principal de correcció
+- `sql/export/botiga_dump.sql` → fitxer de suport amb la còpia de seguretat
+
+----
+
+### Important
+
+- El fitxer **procedures.sql** conté els **`Procedures`**, mentre que
+- el fitxer **botiga_dump.sql** només s’utilitzarà si cal revisar el context complet
+- Cal executar l’script cada vegada que es modifiquin els procedures
+
