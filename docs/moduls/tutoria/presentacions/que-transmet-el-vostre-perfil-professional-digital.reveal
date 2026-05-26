@@ -48,7 +48,7 @@ Però també importa:
 - els noms
 - la claredat
 - les captures
-- els README
+- els <codijpc>README.md</codijpc>
 - la documentació
 - la sensació general
 
@@ -56,12 +56,16 @@ Però també importa:
 
 ## Exemple real
 
-```text
-Documento2 (1).pdf
-final-final.zip
-asd.md
-Nueva carpeta (2)
-```
+
+- <codijpc>Documento2 (1).pdf</codijpc>
+
+- <codijpc>final-final.zip</codijpc>
+
+- <codijpc>asd.md</codijpc>
+
+- <codijpc>Nueva carpeta (2)</codijpc>
+
+
 
 ## Pregunta
 
@@ -95,11 +99,13 @@ Encara que no hi hagi text personal.
 - tecnologies concretes
 - enllaços
 - captures
-- README treballat
+- <codijpc>README.md</codijpc> treballat
 
 ----
 
-![alt text](../img/tutoria/que-transmet-aquest-perfil.png)
+<p align="center">
+  <img src="../img/tutoria/que-transmet-aquest-perfil.png" alt="../img/tutoria/que-transmet-aquest-perfil.png" width="750">
+</p>
 
 ----
 
@@ -144,7 +150,9 @@ Aquest perfil NO diu:
 
 ----
 
-![alt text](../img/tutoria/que-transmet-aquest-perfil-2.png)
+<p align="center">
+  <img src="../img/tutoria/que-transmet-aquest-perfil-2.png" alt="../img/tutoria/que-transmet-aquest-perfil-2.png" width="750">
+</p>
 
 ----
 
@@ -159,8 +167,6 @@ La idea és que aparegui:
 - "està bé però no destaca tant"
 
 ---
-
-## Idea clau
 
 # Perfil acadèmic
 
@@ -194,7 +200,7 @@ Transmet:
 
 ## Què genera confiança?
 
-- README clar
+- <codijpc>README.md</codijpc> clar
 - estructura coherent
 - projectes visibles
 - captures útils
@@ -210,7 +216,7 @@ Transmet:
 - zips dins zips
 - carpetes sense sentit
 - captures sense context
-- README buits
+- <codijpc>README.md</codijpc> buits
 - fitxers random
 
 ---
@@ -234,7 +240,7 @@ Transmet:
 
 - noms de fitxers
 - estructura
-- README
+- <codijpc>README.md</codijpc>
 - projectes destacats
 - captures
 - ordre general
@@ -252,8 +258,6 @@ No cal fer debat llarg.
 La idea és que acabin la sessió pensant-hi mentre arreglen coses.
 
 ---
-
-## Idea final
 
 Avui dia...
 
