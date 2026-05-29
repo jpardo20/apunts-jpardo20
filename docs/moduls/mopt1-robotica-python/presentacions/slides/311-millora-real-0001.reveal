@@ -1,0 +1,823 @@
+# Primera millora real del projecte
+
+## El programa detecta errors, però continua guardant dades incorrectes
+
+Note:
+IMPORTANT:
+Aquesta sessió:
+- treballa UN únic problema real
+- detectat al projecte real
+- i la seva solució real
+
+Objectiu:
+- entendre el problema
+- detectar-lo
+- analitzar-lo
+- i solucionar-lo correctament
+
+---
+
+## Quin problema investigarem?
+
+Quan l'usuari escriu **`hola`** a la RAM...
+
+```text
+Entra el nom de l'ordinador: PC1000
+Entra la CPU de l'ordinador: i7 1165G7
+Entra la RAM de l'ordinador: hola
+        ERROR! Cal introduir un número.
+Entra la mida del disc dur de l'ordinador: 1TB
+```
+
+
+el programa:
+- mostra error
+- i demana la mida del disc dur
+- ...
+
+
+----
+
+- però realment guarda un **`0`**!
+
+```text
+...
+==================================================
+                                      Ordinador #7
+--------------------------------------------------
+Nom: PC1000             CPU: i7 1165G7
+RAM: 0 GB               Disc dur: 1TB
+==================================================
+S'han mostrat 7 ordinadors
+```
+
+- s'inventa una dada!
+
+```text
+RAM: 0 GB
+```
+
+
+
+Note:
+IMPORTANT:
+No explicar encara per què.
+
+Primer:
+que vegin el comportament.
+
+---
+
+<section style="background-color: ivory;">
+
+## Conservar versions de cada millora
+
+Volem conservar una versió del programa de cada millora.
+
+Per això, abans de començar, copiarem el fitxer actual <codijpc>main.py</codijpc>
+
+amb el nom <codijpc>main-00.py</codijpc>.
+
+```bash
+cp main.py main-00.py
+```
+
+Quan acabem aquesta primera millora,<br>guardarem una nova versió <codijpc>main-01.py</codijpc>
+
+I així anirem conservant l'evolució del projecte.
+
+Note:
+IMPORTANT:
+Això permet:
+- comparar versions
+- recuperar versions anteriors
+- veure l'evolució real del programa
+- detectar errors introduïts més endavant
+
+</section>
+
+---
+
+<!-- .slide: data-transition="none" -->
+
+## Execució real del programa
+
+```bash
+python3 main.py
+```
+
+Note:
+IMPORTANT:
+Ara veurem:
+- una execució REAL
+- del projecte REAL
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Execució real del programa
+
+### Afegim un ordinador
+
+```text
+Escull una opció: 1
+
+Entra el nom de l'ordinador: PC1000
+Entra la CPU de l'ordinador: i7 1165G7
+Entra la RAM de l'ordinador: hola
+```
+
+Note:
+Preguntar:
+Què creieu que passarà?
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Execució real del programa
+
+### El programa detecta error
+
+```text
+ERROR! Cal introduir un número.
+```
+
+Note:
+Pregunta important:
+
+Perfecte?
+Ja està solucionat?
+
+La majoria diran:
+sí.
+
+NO confirmar encara.
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Execució real del programa
+
+### Però el programa continua...
+
+```text
+Entra la mida del disc dur de l'ordinador: 1TB
+```
+
+Note:
+Pregunta:
+Hauria de continuar?
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Execució real del programa
+
+### Mostrem inventari
+
+```text
+Escull una opció: 2
+```
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Execució real del programa
+
+### Resultat final
+
+```text
+Nom: PC1000
+CPU: i7 1165G7
+RAM: 0 GB
+Disc dur: 1TB
+```
+
+Note:
+BOOM.
+
+Aquí és on han de veure:
+el problema REAL.
+
+Preguntar:
+- Qui ha posat 0?
+- L'usuari?
+- El programa?
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Execució real del programa
+
+### Diagnòstic
+
+El programa:
+- detecta l'error
+- però continua igualment
+- i inventa dades incorrectes
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Execució real del programa
+
+### Conseqüència real
+
+Ara l'inventari:
+- és incorrecte
+- deixa de ser fiable
+- conté dades falses
+
+Note:
+Relacionar amb:
+- bases de dades
+- empreses
+- software real
+
+---
+
+<!-- .slide: data-transition="none" -->
+
+## Ara sí...
+# Busquem el problema al codi
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Busquem el problema al codi
+
+### Fragment real del projecte
+
+```python
+try:
+    print(f"Entra la RAM de l'ordinador: ", end="")
+    ramOrdinador = int(input())
+except ValueError:
+    print("\tERROR! Cal introduir un número.")
+    ramOrdinador = 0
+```
+
+Note:
+IMPORTANT:
+Ara ja tenen context.
+
+Ara sí:
+analitzem.
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Busquem el problema al codi
+
+### On està el problema?
+
+```python
+ramOrdinador = 0
+```
+
+Note:
+IMPORTANT:
+Aquí està la decisió incorrecta.
+
+El programa:
+- inventa un valor
+- i continua treballant
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Busquem el problema al codi
+
+### Problema de disseny
+
+El programa està fent això:
+
+```text
+"Com que hi ha error...
+invento una RAM."
+```
+
+I això:
+- és incorrecte
+- és perillós
+- genera dades falses
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Busquem el problema al codi
+
+### Primera conclusió
+
+Detectar errors:
+- NO és suficient
+
+També cal:
+- gestionar-los correctament
+
+Note:
+Aquesta és la idea més important de tota la sessió.
+
+---
+
+<!-- .slide: data-transition="none" -->
+
+## Què hauria de fer REALMENT?
+
+Opcions:
+
+1. posar 0  <codijpc><- és l'opció que tenim desenvolupada!</codijpc>
+2. sortir del programa
+3. cancel·lar ordinador
+4. tornar a preguntar
+
+Note:
+Fer petit debat.
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Què hauria de fer REALMENT?
+
+### La nostra decisió
+
+Volem això:
+
+- preguntar
+- si falla → tornar a preguntar
+- si falla → tornar a preguntar
+- si falla → tornar a preguntar
+
+fins que sigui correcte
+
+NO això:
+
+```text
+hola → 0 GB
+```
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Què hauria de fer REALMENT?
+
+### Objectiu tècnic
+
+Necessitem:
+- repetir pregunta
+- fins que sigui correcta
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Què hauria de fer REALMENT?
+
+### Estratègia
+
+Farem:
+- un <codijpc>while</codijpc>
+- amb <codijpc>try/except</codijpc>
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Què hauria de fer REALMENT?
+
+### Exemple simplificat
+
+```python
+ramCorrecta = False
+
+while not(ramCorrecta):
+```
+
+Note:
+Explicar:
+El bucle:
+- repetirà la pregunta
+- fins que la RAM sigui correcta
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Què hauria de fer REALMENT?
+
+### Dins del <codijpc>while</codijpc>
+
+```python
+try:
+    ramOrdinador = int(input())
+    ramCorrecta = True
+except ValueError:
+    print("ERROR")
+```
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Què hauria de fer REALMENT?
+
+### Flux correcte ara
+
+#### Cas incorrecte
+
+Usuari:
+
+```text
+hola
+```
+
+Resultat:
+- mostra error
+- torna a preguntar
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Què hauria de fer REALMENT?
+
+### Flux correcte ara
+
+#### Cas correcte
+
+Usuari:
+
+```text
+32
+```
+
+Resultat:
+- guarda 32
+- continua programa
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Què hauria de fer REALMENT?
+
+### Avantatge real
+
+Ara:
+- no inventem dades
+- l'inventari és coherent
+- el programa és més robust
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Què hauria de fer REALMENT?
+
+### Comparació final
+
+#### Abans
+
+```text
+hola → 0 GB
+```
+
+#### Després
+
+```text
+hola → ERROR → tornar a preguntar
+```
+
+
+---
+
+<!-- .slide: data-transition="none" -->
+
+## Què hem après realment?
+
+No hem après només:
+
+**`while`**
+**`try`**
+**`except`**
+
+Hem après que:
+
+- Detectar un error NO és suficient.
+
+- Cal decidir què fer quan apareix.
+
+---
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Crear fitxer
+
+Crear el <codijpc>pr007-millores/millora-001.md</codijpc>
+
+
+````markdown
+# Millora 1 - Validació de RAM
+
+````
+
+> <hr>
+>
+> ## IMPORTANT: Heu de copiar EXACTAMENT els textos dels títols.
+> <hr>
+
+
+Note:
+No resumir.
+No modificar.
+
+Això permetrà:
+- correcció automàtica
+- validació automàtica
+- seguiment de canvis
+
+---
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Pas 1
+
+#### Reproduir el problema
+
+Executar programa original.
+
+Introduir:
+```text
+hola
+```
+
+a la RAM.
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Pas 1
+
+Després:
+mostrar inventari.
+
+Anotar:
+- què passa
+- quin és el problema
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Pas 1
+
+Afegiu a <codijpc>pr007-millores/millora-001.md</codijpc> exactament:
+
+````markdown
+
+### Pas 1
+
+#### Què passa
+
+#### Quin és el problema
+
+````
+
+---
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Pas 2
+
+#### Detectar fragment problemàtic
+
+Buscar al projecte:
+
+```python
+ramOrdinador = 0
+```
+
+Respondre:
+- per què existeix?
+- quin problema provoca?
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Pas 2
+
+Afegiu a <codijpc>pr007-millores/millora-001.md</codijpc> exactament:
+
+````markdown
+
+### Pas 2
+
+#### Per què existeix?
+
+#### Quin problema provoca?
+
+````
+
+---
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Pas 3
+
+#### Crear el <codijpc>while</codijpc>
+
+Crear:
+
+```python
+ramCorrecta = False
+
+while not(ramCorrecta):
+```
+
+Sense <codijpc>try</codijpc> encara.
+
+Objectiu:
+entendre el bucle.
+
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Pas 3
+
+Afegiu a <codijpc>pr007-millores/millora-001.md</codijpc> exactament:
+
+````markdown
+
+### Pas 3
+
+#### Tros de codi que crear el while
+
+```python
+ramCorrecta = False
+
+while not(ramCorrecta):
+```
+
+#### Explicació del tros de codi que crear el while
+
+````
+
+---
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Pas 4
+
+#### Afegir <codijpc>try</codijpc>/<codijpc>except</codijpc>
+
+Dins del <codijpc>while</codijpc>:
+
+```python
+try:
+except:
+```
+
+Objectiu:
+- controlar error
+- repetir pregunta
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Pas 4
+
+Afegiu a <codijpc>pr007-millores/millora-001.md</codijpc> exactament:
+
+````markdown
+
+### Pas 4
+
+#### Tros de codi per afegir `try`/`except`
+
+```python
+try:
+except:
+```
+
+#### Explicació del tros de codi per afegir `try`/`except`
+
+````
+
+---
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Pas 5
+
+#### Validar resultat final
+
+Comprovar:
+- ja NO apareix `0 GB`
+- només es guarden enters correctes
+
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Pas 5
+
+Afegiu a <codijpc>pr007-millores/millora-001.md</codijpc> exactament:
+
+````markdown
+
+### Pas 5
+
+#### Comprovació de que ja NO apareix `0 GB`
+
+
+#### Mostrar que només es guarden enters correctes
+
+
+````
+
+---
+
+<section style="background-color: ivory;">
+
+## Conservar versions de cada millora
+
+Com ja hem comentat, volem conservar una versió del programa de cada millora.
+
+Per això, un cop acabada la primera millora, copiarem el fitxer actual <codijpc>main.py</codijpc>
+
+amb el nom <codijpc>main-01.py</codijpc>.
+
+```bash
+cp main.py main-01.py
+```
+
+</section>
+
+---
+
+<!-- .slide: data-transition="none" -->
+
+## Commit obligatori
+
+### Pas 5
+
+```bash
+git add .
+git commit -m "Millora 1 - El programa detecta errors, però continua guardant dades incorrectes"
+```
+
+---
+
+## Idea final
+
+Programació professional NO és:
+- només evitar errors
+
+També és:
+- evitar dades incorrectes
+- mantenir coherència
+- protegir informació
+

@@ -1,0 +1,808 @@
+# Segona millora real del projecte
+
+### Deixar de repetir validacions
+
+---
+
+## Recordem
+
+El programa:
+- detectava errors
+- mostrava missatges
+
+però...
+
+guardava:
+```text
+RAM: 0 GB
+```
+
+encara que l’usuari hagués escrit:
+```text
+hola
+```
+
+---
+
+## Què vam aprendre?
+
+La validació:
+- és important
+- evita dades incorrectes
+- protegeix el programa
+
+---
+
+## Però ara tenim un altre problema
+
+El codi de validació:
+- es repeteix
+- és llarg
+- és difícil de mantenir
+
+---
+
+## Exemple real
+
+```python
+try:
+    ram = int(input("RAM: "))
+except:
+    print("ERROR")
+```
+
+Aquest codi acaba apareixent:
+- al menú
+- a la RAM
+- als filtres
+- a opcions
+
+una vegada i una altra.
+
+---
+
+## Investiguem
+
+Busqueu al projecte:
+
+**`input(`**
+
+i compteu:
+
+- quantes vegades apareix
+- quantes són iguals
+- quantes podríem reutilitzar
+
+Això ens ajudarà a descobrir el problema.
+
+---
+
+## Problema real
+
+Quan repetim codi:
+- augmenten errors
+- costa modificar-lo
+- costa mantenir-lo
+- el programa es torna fràgil
+
+---
+
+## Diagnòstic
+
+Hem investigat el projecte.
+
+Hem vist que:
+
+- apareixen molts `input()`
+- alguns fan exactament el mateix
+- alguns només canvien el missatge
+
+Això és un senyal clar de:
+
+```text
+CODI DUPLICAT
+```
+
+---
+
+## Per què és un problema?
+
+Imaginem que volem canviar la manera de llegir dades.
+
+Si tenim **`input(...)`** repartits per tot el programa...
+
+haurem de modificar-los un per un a:
+- menú
+- inventari
+- filtres
+- opcions
+
+## Això és lent i genera errors i dificil de mantenir
+
+---
+
+## Solució professional
+
+Crear funcions reutilitzables.
+
+---
+
+## Nova idea
+
+En lloc de fer això:
+
+```python
+print(f"Entra el nom de l'ordinador: ", end="")
+nomOrdinador = input()
+
+print(f"Entra la CPU de l'ordinador: ", end="")
+cpuOrdinador = input()
+```
+
+farem això:
+
+```python
+nomOrdinador = tornaCadena(
+    f"Entra el nom de l'ordinador: "
+)
+
+cpuOrdinador = tornaCadena(
+    f"Entra la CPU de l'ordinador: "
+)
+```
+
+---
+
+## Avantatge enorme
+
+Ara:
+- la validació estarà centralitzada
+- el programa serà més net
+- podrem reutilitzar codi
+
+---
+
+## Nova estructura del projecte
+
+```text
+projecte/
+│
+├── main.py
+├── inventari.py
+├── menu.py
+└── llegirDades.py
+```
+
+---
+
+## Objectiu de `llegirDades.py`
+
+Aquest fitxer serà responsable de:
+- llegir dades
+- validar dades
+- mostrar errors
+
+---
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Crear fitxer
+
+Crear el <codijpc>pr007-millores/millora-002.md</codijpc>
+
+````markdown
+# Millora 2- Deixar de repetir validacions
+
+````
+
+> <hr>
+>
+> ## IMPORTANT: Heu de copiar EXACTAMENT els textos dels títols.
+> <hr>
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Pas 1
+
+Localitza dues zones del projecte on es repeteixi codi de lectura de dades.
+
+Anota:
+
+- fitxer
+- línia aproximada
+- per què es podria convertir en una funció
+
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Pas 1
+
+Afegiu a <codijpc>pr007-millores/millora-002.md</codijpc> exactament:
+
+````markdown
+
+### Pas 1
+
+#### A quin fitxer
+
+`main.py`
+
+#### Tros de codi
+
+```python
+print(f"Entra el nom de l'ordinador: ", end="")
+nomOrdinador = input()
+print(f"Entra la CPU de l'ordinador: ", end="")
+cpuOrdinador = input()
+```
+
+#### Per què es podria convertir en una funció
+
+````
+
+---
+
+## Posada en comú
+
+Preguntes:
+
+- Quins fragments es repeteixen?
+- Realment fan el mateix?
+- Què canvia?
+- Què es manté igual?
+
+---
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Pas 2
+
+Afegiu a <codijpc>pr007-millores/millora-002.md</codijpc> exactament:
+
+````markdown
+
+### Pas 2
+
+Amb les teves paraules, respon a les preguntes:
+
+#### Quins fragments es repeteixen?
+
+#### Realment fan el mateix?
+
+#### Què canvia?
+
+#### Què es manté igual?
+
+````
+
+---
+
+## Primera funció
+
+```python
+def tornaCadena(missatge):
+    print(missatge, end="")
+    return input()
+```
+----
+
+<!-- .slide: data-transition="none" -->
+
+## Evidència obligatòria
+
+### Pas 3
+
+Afegiu a <codijpc>pr007-millores/millora-002.md</codijpc> exactament:
+
+````markdown
+
+## Què fa?
+
+```python
+nom = tornaCadena("Nom: ")
+```
+
+Amb les teves paraules, respon a les preguntes:
+
+#### Quin missatge mostra?
+
+#### Quin text llegeix?
+
+#### Què retorna la cadena?
+````
+
+---
+
+## Què acabem de fer?
+
+No hem creat una funció perquè sí.
+
+Hem creat una eina reutilitzable.
+
+Ara podem fer:
+
+```python
+tornaCadena(...)
+```
+
+tantes vegades com vulguem.
+
+Sense copiar codi.
+
+---
+
+## Segona funció
+
+```python
+def tornaEnter(...):
+```
+
+Ara crearem una funció molt més potent.
+
+---
+
+## Objectius de `tornaEnter()`
+
+Ha de ser capaç de:
+- validar enters
+- detectar errors
+- controlar rangs
+- controlar opcions
+- limitar intents
+
+---
+
+## Com pensem la solució?
+
+Necessitem:
+
+```text
+preguntar
+si falla → tornar a preguntar
+si falla → tornar a preguntar
+si falla → tornar a preguntar
+```
+
+fins que la dada sigui correcta.
+
+---
+
+## Pregunta
+
+Quina estructura de Python permet repetir accions?
+
+---
+
+## Primer pas
+
+Convertir el text a enter:
+
+```python
+enterLlegit = int(input(missatge))
+```
+
+---
+
+## Problema real
+
+Què passa si l’usuari escriu:
+
+```text
+hola
+```
+
+?
+
+---
+
+## Solució
+
+Utilitzar:
+
+```python
+try:
+```
+
+i
+
+```python
+except:
+```
+
+---
+
+## Exemple
+
+```python
+try:
+    enterLlegit = int(input(missatge))
+except ValueError:
+    print("ERROR")
+```
+
+---
+
+## Ara el programa és més robust
+
+Si l’usuari escriu:
+
+```text
+hola
+```
+
+el programa:
+- NO es trenca
+- mostra error
+- torna a demanar el valor
+
+---
+
+## Però volem més
+
+No volem qualsevol enter.
+
+Exemple:
+- la RAM no pot ser negativa
+- el menú només té opcions vàlides
+
+---
+
+## Modes de funcionament
+
+```python
+# mode = 0 -> qualsevol enter
+# mode = 1 -> només positius
+# mode = 2 -> entre minim i maxim
+# mode = 3 -> valors d'una llista
+```
+
+---
+
+## Mode 1
+
+Només valors positius.
+
+```python
+ram = tornaEnter(
+    "RAM: ",
+    mode=1
+)
+```
+
+---
+
+## Exemple
+
+Si l’usuari escriu:
+
+```text
+-8
+```
+
+el programa mostra:
+
+```text
+ERROR! No pot ser negatiu!
+```
+
+---
+
+## Mode 2
+
+Validar rangs.
+
+```python
+opcio = tornaEnter(
+    "Opció: ",
+    mode=2,
+    minim=1,
+    maxim=5
+)
+```
+
+---
+
+## Exemple
+
+Només acceptarà:
+
+```text
+1
+2
+3
+4
+5
+```
+
+---
+
+## Mode 3
+
+Validar opcions específiques.
+
+```python
+ram = tornaEnter(
+    "RAM: ",
+    mode=3,
+    opcions=[1, 2, 4, 8, 16, 32, 64, 128]
+)
+```
+
+---
+
+## Exemple
+
+Si escriu:
+
+```text
+7
+```
+
+mostrarà:
+
+```text
+ERROR! Ha de ser un valor d'entre [1, 2, 4, 8, 16, 32, 64, 128]
+```
+
+---
+
+## Limitació d’intents
+
+També podem limitar intents.
+
+```python
+tornaEnter(
+    "Opció: ",
+    intents=3
+)
+```
+
+---
+
+## Exemple real
+
+```text
+Et queden 2 intents!
+```
+
+---
+
+## Darrer intent
+
+```text
+És el darrer intent!
+```
+
+---
+
+## Si supera els intents
+
+```text
+ERROR! Has superat el nombre màxim d'intents.
+```
+
+---
+
+## Valor retornat
+
+Quan falla:
+
+```python
+return None
+```
+
+---
+
+## Per què és important?
+
+Ara el programa pot detectar:
+
+```python
+if ram is None:
+```
+
+i decidir què fer.
+
+---
+
+## Avantatge real
+
+Ara:
+- reutilitzem codi
+- validem millor
+- mantenim millor
+- professionalitzem el projecte
+
+---
+
+## Canvi important
+
+ABANS:
+
+```python
+ram = int(input("RAM: "))
+```
+
+---
+
+## ARA
+
+```python
+ram = tornaEnter(
+    "RAM: ",
+    mode=3,
+    opcions=[1, 2, 4, 8, 16, 32, 64, 128]
+)
+```
+
+---
+
+## Resultat final
+
+El programa:
+- és més robust
+- és més net
+- és més modular
+- és més professional
+
+---
+
+## Evidència 2
+
+Substitueix una lectura real del projecte.
+
+Abans:
+
+```python
+valor = int(input(...))
+```
+
+Després:
+
+```python
+valor = tornaEnter(...)
+```
+
+Comprova que continua funcionant.
+
+---
+
+## A partir d’ara
+
+Sempre que necessitem:
+- enters
+- validacions
+- rangs
+- opcions
+
+utilitzarem:
+
+```python
+tornaEnter()
+```
+
+---
+
+## Objectiu real
+
+No estem aprenent només Python.
+
+Estem aprenent:
+- a dissenyar programes
+- a reutilitzar codi
+- a mantenir aplicacions reals
+
+---
+
+## Proper pas
+
+Integrar:
+
+```python
+tornaEnter()
+```
+
+a tot el projecte d’inventari.
+
+---
+
+## Còpia de seguretat
+
+Abans de continuar...
+
+Guarda una còpia de l'estat actual:
+
+```bash
+cp main.py main-02.py
+```
+
+---
+
+## Commit obligatori
+
+```bash
+git add .
+git commit -m "Millora 2 - Deixar de repetir validacions"
+```
+
+Note:
+IMPORTANT:
+També podràs corregir:
+- commits
+- cronologia
+- evolució
+
+---
+
+## Idea final
+
+Programació professional NO és:
+- només evitar errors
+
+També és:
+- evitar dades incorrectes
+- mantenir coherència
+- protegir informació
+
+---
+
+## Què hem après realment?
+
+No hem après només:
+
+```python
+def
+return
+while
+try
+except
+```
+
+---
+
+## Hem fet una altra cosa
+
+Hem detectat:
+
+```text
+codi duplicat
+```
+
+i hem creat:
+
+```text
+una eina reutilitzable
+```
+
+per solucionar-lo.
+
+---
+
+## Això és programació professional
+
+1. Detectar un problema
+2. Analitzar-lo
+3. Dissenyar una solució
+4. Reutilitzar-la
+
+---
+
+## Millores completades
+
+✓ Millora 1  
+Detectar errors i evitar dades incorrectes
+
+✓ Millora 2  
+Eliminar codi duplicat i reutilitzar validacions
+

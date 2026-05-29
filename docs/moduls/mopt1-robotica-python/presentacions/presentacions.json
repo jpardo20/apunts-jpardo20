@@ -128,6 +128,22 @@
       "description": "Examen Python - PR006 - Inventari d'ordinadors data 13/05/2026",
       "status": "active",
         "kind": "activity"
+    },
+    {
+      "order": 311,
+      "title": "311 - Control d'errors amb int(input())",
+      "src": "slides/311-millora-real-0001.reveal",
+      "description": "Control d'errors amb `int(input())`",
+      "status": "active",
+        "kind": "activity"
+    },
+    {
+      "order": 312,
+      "title": "312 - Deixar de repetir validacions",
+      "src": "slides/312-millora-real-0002.reveal",
+      "description": "Deixar de repetir validacions",
+      "status": "active",
+        "kind": "activity"
     }
   ]
 }
