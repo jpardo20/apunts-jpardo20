@@ -63,9 +63,7 @@ una vegada i una altra.
 
 ## Investiguem
 
-Busqueu al projecte:
-
-**`input(`**
+Busqueu al projecte <codijpc>input(</codijpc>
 
 i compteu:
 
@@ -93,7 +91,7 @@ Hem investigat el projecte.
 
 Hem vist que:
 
-- apareixen molts `input()`
+- apareixen molts <codijpc>input()</codijpc>
 - alguns fan exactament el mateix
 - alguns només canvien el missatge
 
@@ -109,7 +107,7 @@ CODI DUPLICAT
 
 Imaginem que volem canviar la manera de llegir dades.
 
-Si tenim **`input(...)`** repartits per tot el programa...
+Si tenim <codijpc>input(...)</codijpc> repartits per tot el programa...
 
 haurem de modificar-los un per un a:
 - menú
@@ -234,7 +232,7 @@ Afegiu a <codijpc>pr007-millores/millora-002.md</codijpc> exactament:
 
 #### A quin fitxer
 
-`main.py`
+**`main.py`**
 
 #### Tros de codi
 
@@ -243,6 +241,9 @@ print(f"Entra el nom de l'ordinador: ", end="")
 nomOrdinador = input()
 print(f"Entra la CPU de l'ordinador: ", end="")
 cpuOrdinador = input()
+...
+print(f"Entra la mida del disc dur de l'ordinador: ", end="")
+discDurOrdinador = input()
 ```
 
 #### Per què es podria convertir en una funció
@@ -250,19 +251,6 @@ cpuOrdinador = input()
 ````
 
 ---
-
-## Posada en comú
-
-Preguntes:
-
-- Quins fragments es repeteixen?
-- Realment fan el mateix?
-- Què canvia?
-- Què es manté igual?
-
----
-
-<!-- .slide: data-transition="none" -->
 
 ## Evidència obligatòria
 
@@ -310,7 +298,7 @@ Afegiu a <codijpc>pr007-millores/millora-002.md</codijpc> exactament:
 ## Què fa?
 
 ```python
-nom = tornaCadena("Nom: ")
+nom = tornaCadena("Entra el nom de l'ordinador: ")
 ```
 
 Amb les teves paraules, respon a les preguntes:
@@ -320,6 +308,7 @@ Amb les teves paraules, respon a les preguntes:
 #### Quin text llegeix?
 
 #### Què retorna la cadena?
+
 ````
 
 ---
@@ -330,11 +319,7 @@ No hem creat una funció perquè sí.
 
 Hem creat una eina reutilitzable.
 
-Ara podem fer:
-
-```python
-tornaCadena(...)
-```
+Ara podem fer <codijpc>tornaCadena(...)</codijpc>
 
 tantes vegades com vulguem.
 
