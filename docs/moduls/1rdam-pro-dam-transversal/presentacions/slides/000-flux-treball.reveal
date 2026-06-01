@@ -199,7 +199,7 @@ Un cop heu modificat tots els fitxers necessaris cal fer:
 
 Sabreu que heu afegit tots els fitxers necessaris, quan <codijpc>git status</codijpc> us mostri tots els fitxers que heu modificat de color verd.
 
-Si encara hi ha algun fitxer de color vermell, cal afegir-lo amb la comanda <codijpc>git add &gt;NomDelFitxerVermell></codijpc>.
+Si encara hi ha algun fitxer de color vermell, cal afegir-lo amb la comanda <codijpc>git add &lt;NomDelFitxerVermell></codijpc>.
 
 
 ⬇️
