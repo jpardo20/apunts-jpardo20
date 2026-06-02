@@ -107,7 +107,16 @@
             "id": "11",
             "title": "11 | Tutoria: Què transmet el vostre perfil professional digital?",
             "description": "Tutoria: Què transmet el vostre perfil professional digital?",
-            "src": "que-transmet-el-vostre-perfil-professional-digital.reveal",
+            "src": "que-transmet-el-vostre-perfil-professional-digital-01.reveal",
+            "theme": "white",
+            "status": "active",
+            "kind": "theory"
+        },
+        {
+            "id": "12",
+            "title": "12 | Tutoria: Com puc fer que el meu perfil destaqui?",
+            "description": "Tutoria: Com puc fer que el meu perfil destaqui?",
+            "src": "que-transmet-el-vostre-perfil-professional-digital-02-destaqui.reveal",
             "theme": "white",
             "status": "active",
             "kind": "theory"
