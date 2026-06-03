@@ -419,7 +419,24 @@
             "tags": [
                 "BBDD"
             ]
+        },
+        {
+            "id": "0484-bds-045-activitat-ampliacio.reveal",
+            "title": "45: Ampliació: Mini projecte final SQL - Reptes avançats SQL",
+            "description": "Els alumnes que ja han finalitzat la FASE 6 han d'escollir un dels reptes d'ampliació proposats.",
+            "src": "slides/0484-bds-045-activitat-ampliacio.reveal",
+            "theme": "white",
+            "status": "active",
+            "kind": "activity",
+            "tags": [
+                "BBDD"
+            ]
         }
+
+
+
+
+        
     ]
 }
 

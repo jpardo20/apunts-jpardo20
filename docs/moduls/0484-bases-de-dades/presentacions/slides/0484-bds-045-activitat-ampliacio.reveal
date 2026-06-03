@@ -1,0 +1,306 @@
+# <codijpc>Sistema de reserves d'hotel</codijpc>
+
+# Ampliació: Mini projecte final SQL
+
+## Reptes avançats SQL
+
+---
+
+# Objectiu
+
+Els alumnes que ja han finalitzat la **FASE 6** poden escollir un dels següents reptes d'ampliació.
+
+L'objectiu NO és fer més quantitat de SQL.
+
+L'objectiu és demostrar capacitat de:
+
+* disseny
+* automatització
+* pensament crític
+* modelatge de regles de negoci
+
+---
+
+# IMPORTANT
+
+Només cal escollir:
+
+# UNA OPCIÓ
+
+---
+
+# Lliurament
+
+Cal crear el fitxer:
+
+<codijpc>sql/hotel_reserves/06-ampliacio-voluntaria.md</codijpc>
+
+---
+
+# IMPORTANT
+
+El document ha de seguir el mateix criteri de qualitat utilitzat a la FASE 6.
+
+Per cada tasca cal incloure:
+
+* explicació
+* codi SQL
+* execució real
+* sortida real de MySQL
+* demostració abans/després
+
+---
+
+# OPCIÓ A
+
+# Functions
+
+## Objectiu
+
+Crear funcions reutilitzables.
+
+----
+
+# Tasca A1
+
+Crear la funció:
+
+```sql
+fn_total_pagat(id_reserva)
+```
+
+Ha de retornar:
+
+```text
+total pagat per una reserva
+```
+
+----
+
+# Tasca A2
+
+Crear la funció:
+
+```sql
+fn_import_pendent(id_reserva)
+```
+
+Ha de retornar:
+
+```text
+import pendent de la reserva
+```
+
+----
+
+# Tasca A3
+
+Crear una consulta que utilitzi les funcions creades.
+
+Per exemple:
+
+```sql
+SELECT
+    id_reserva,
+    fn_total_pagat(id_reserva),
+    fn_import_pendent(id_reserva)
+FROM RESERVES;
+```
+
+----
+
+# IMPORTANT
+
+Cal demostrar:
+
+* creació
+* execució
+* resultats
+
+---
+
+# OPCIÓ B
+
+# Procedure avançat
+
+## Objectiu
+
+Crear una operació completa de negoci.
+
+----
+
+# Tasca B1
+
+Crear el procedure:
+
+```sql
+sp_crear_reserva
+```
+
+----
+
+# Ha de:
+
+* validar dates
+* comprovar overbooking
+* calcular nits
+* crear la reserva
+
+----
+
+# Exemple
+
+```sql
+CALL sp_crear_reserva(
+    ...
+);
+```
+
+----
+
+# IMPORTANT
+
+Cal demostrar:
+
+* cas correcte
+* cas incorrecte
+* missatges d'error
+
+---
+
+# OPCIÓ C
+
+# Auditoria avançada
+
+## Objectiu
+
+Millorar la traçabilitat del sistema.
+
+----
+
+# Tasca C1
+
+Crear una taula:
+
+```sql
+LOG_AUDITORIA
+```
+
+----
+
+# Ha de guardar:
+
+* taula afectada
+* registre afectat
+* valor anterior
+* valor nou
+* data
+
+----
+
+# Tasca C2
+
+Crear triggers que omplin automàticament aquesta taula.
+
+----
+
+# IMPORTANT
+
+Cal demostrar:
+
+* inserció
+* modificació
+* registre automàtic
+
+---
+
+# OPCIÓ D
+
+# Nova regla de negoci
+
+## Objectiu
+
+Proposar una millora real al sistema.
+
+----
+
+# Exemples
+
+* impedir reserves en habitacions en manteniment
+* límit de persones segons capacitat
+* descompte per clients habituals
+* penalització per cancel·lació tardana
+* checkin només si la reserva està confirmada
+
+----
+
+# IMPORTANT
+
+També podeu proposar una regla pròpia.
+
+----
+
+# Tasca D1
+
+Explicar:
+
+```text
+quin problema resol
+```
+
+----
+
+# Tasca D2
+
+Implementar-la amb:
+
+* triggers
+* procedures
+* funcions
+* consultes
+
+segons convingui.
+
+----
+
+# Tasca D3
+
+Demostrar-ne el funcionament.
+
+---
+
+
+# Reflexió final
+
+Sugui quina sigui l'opició escollida, cal que expliqueu:
+
+* què s'ha implementat
+* dificultats trobades
+* possibles millores futures
+
+---
+
+# IMPORTANT
+
+No s'acceptaran documents que:
+
+* només continguin teoria
+* no mostrin proves reals
+* no mostrin sortides de MySQL
+* no demostrin el funcionament
+
+---
+
+# Es valorarà especialment
+
+* creativitat
+* qualitat tècnica
+* coherència SQL
+* automatització
+* capacitat de pensar el sistema com una aplicació real
+
+---
+
+# Objectiu final
+
+Demostrar que sou capaços de millorar un sistema existent aplicant criteris propis de desenvolupament i administració de bases de dades.
