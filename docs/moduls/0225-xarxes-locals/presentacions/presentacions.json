@@ -151,7 +151,7 @@
     {
       "order": "307",
       "title": "307. Activitat pràctica - Auditoria i professionalització del sistema Helpdesk (<codijpc>0225-xlo-ae034</codijpc>)",
-      "src": "slides/xlo-3r-trim-glpi-docker-act007-0225-xlo-ae034 .reveal",
+      "src": "slides/xlo-3r-trim-glpi-docker-act007-0225-xlo-ae034.reveal",
       "description": "Treballareu com un equip auditor extern encarregat de revisar el sistema.",
       "status": "active",
       "kind":"activity"
