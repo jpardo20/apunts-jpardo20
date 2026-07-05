@@ -397,10 +397,10 @@
             ]
         },
         {
-            "id": "0484-bds-043-teoria-triggers-regles-de-negoci-i-coherencia",
+            "id": "0484-bds-043-activitat-triggers-regles-de-negoci-i-coherencia",
             "title": "43: FASE 5: Regles de negoci i coherència",
             "description": "Una base de dades no només guarda dades.",
-            "src": "slides/0484-bds-043-teoria-triggers-regles-de-negoci-i-coherencia.reveal",
+            "src": "slides/0484-bds-043-activitat-triggers-regles-de-negoci-i-coherencia.reveal",
             "theme": "white",
             "status": "active",
             "kind": "activity",
