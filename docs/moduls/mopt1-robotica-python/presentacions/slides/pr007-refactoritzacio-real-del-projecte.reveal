@@ -1,0 +1,738 @@
+
+# PR007
+## Refactorització real del projecte
+
+### Evolució real del programa
+
+Note:
+Aquesta presentació està basada:
+- exclusivament en els dos ZIP
+- en els canvis reals
+- en el projecte real
+
+Objectiu:
+- entendre problemes reals
+- entendre decisions de disseny
+- entendre refactorització
+- entendre manteniment de codi
+
+---
+
+# Punt de partida
+
+Programa inicial:
+- funcional
+- usable
+- correcte per començar
+
+Però...
+- poca robustesa
+- validacions inexistents
+- codi repetit
+- moltes responsabilitats a `main.py`
+
+Note:
+IMPORTANT:
+No dir:
+"el programa estava mal fet"
+
+Dir:
+"era una primera versió"
+
+Primer:
+- fem que funcioni
+
+Després:
+- el millorem
+
+---
+
+# Primer canvi real
+
+## Problema detectat
+
+Exemple inicial:
+
+```python
+ramOrdinador = int(input("RAM: "))
+```
+
+Note:
+Preguntar:
+Què passa si escrivim:
+- hola
+- buit
+- abc
+- 3.14
+
+Fer demostració real.
+
+---
+
+# Resultat real
+
+```python
+ValueError
+```
+
+El programa:
+- falla
+- es tanca
+- perd control
+
+Note:
+Explicar:
+Això és completament normal.
+
+Els usuaris:
+- s'equivoquen
+- escriuen dades incorrectes
+
+---
+
+# Problema de disseny
+
+El projecte tenia:
+- molts `input()`
+- molts `int(input())`
+- validacions repetides
+- control d'errors inexistent
+
+Note:
+Explicar:
+Quan el codi es repeteix:
+- els errors també
+
+---
+
+# Decisió de disseny
+
+## Centralitzar lectura de dades
+
+Nova idea:
+- totes les lectures passen per funcions reutilitzables
+
+---
+
+# Nou fitxer creat
+
+## `llegirDades.py`
+
+Noves funcions:
+- `tornaCadena()`
+- `tornaEnter()`
+
+Note:
+Això és:
+- modularització real
+- separació responsabilitats
+- reutilització
+
+---
+
+# Comparació real
+
+## Abans
+
+```python
+nom = input("Nom: ")
+ram = int(input("RAM: "))
+```
+
+---
+
+# Comparació real
+
+## Després
+
+```python
+nom = tornaCadena()
+ram = tornaEnter()
+```
+
+Note:
+Ara:
+- el codi és més net
+- reutilitzable
+- mantenible
+
+---
+
+# Avantatge important
+
+Ara:
+si volem millorar validacions
+
+Només canviem:
+- `tornaEnter()`
+
+NO:
+- tots els inputs del projecte
+
+Note:
+Relacionar amb:
+- manteniment real
+- projectes grans
+- empreses
+
+----
+
+# Exercici 1
+
+## Detectar problemes reals
+
+Buscar al projecte inicial:
+- tots els `input()`
+- tots els `int(input())`
+
+Anotar:
+- quins poden fallar
+- quins necessiten validació
+
+Temps:
+10 minuts
+
+---
+
+# Exercici 2
+
+## Refactorització real
+
+Substituir:
+- `input()`
+- `int(input())`
+
+per:
+- `tornaCadena()`
+- `tornaEnter()`
+
+Note:
+Molts:
+- oblidaran imports
+- tindran NameError
+
+És normal.
+
+---
+
+# Segon canvi real
+
+# Validació de RAM
+
+---
+
+# Problema detectat
+
+El programa acceptava:
+
+```python
+-200
+999999
+123456
+```
+
+com a RAM.
+
+Note:
+Preguntar:
+Té sentit?
+No.
+
+---
+
+# Decisió de disseny
+
+## Crear valors vàlids
+
+Nova estructura:
+
+```python
+opcionsRam = []
+```
+
+i després:
+
+```python
+[1, 2, 4, 8, 16, 32, 64, 128]
+```
+
+Note:
+Explicar:
+Ara controlem:
+- coherència
+- qualitat dades
+- errors
+
+---
+
+# Comparació real
+
+## Abans
+
+Qualsevol enter era correcte.
+
+---
+
+# Comparació real
+
+## Després
+
+```python
+if ramOrdinador in opcionsRam:
+```
+
+Note:
+Relacionar amb:
+- formularis
+- configuracions reals
+- validacions professionals
+
+---
+
+# Exercici 3
+
+## Millorar validacions
+
+Modificar:
+`tornaEnter()`
+
+Afegir:
+- mínim
+- màxim
+- missatge error
+
+---
+
+# Exercici 4
+
+## Validació real
+
+Fer que:
+- només accepti RAM vàlida
+- mostri opcions correctes
+- torni a preguntar
+
+---
+
+# Tercer canvi real
+
+# Separació de responsabilitats
+
+---
+
+# Problema detectat
+
+`main.py`
+feia massa coses:
+- menú
+- validacions
+- lectura
+- inventari
+- fitxers
+
+Note:
+Explicar:
+Quan un fitxer creix:
+- costa mantenir
+- costa trobar errors
+
+---
+
+# Decisió de disseny
+
+## Crear nous fitxers
+
+Nous fitxers:
+- `fitxers.py`
+- `llegirDades.py`
+
+---
+
+# Nou fitxer
+
+## `fitxers.py`
+
+Objectiu:
+- centralitzar lectura de fitxers
+
+Note:
+Important:
+Cada fitxer:
+una responsabilitat.
+
+---
+
+# Comparació real
+
+## Abans
+
+```python
+fitxer = open(...)
+linies = fitxer.readlines()
+fitxer.close()
+```
+
+repetit a diferents llocs.
+
+---
+
+# Comparació real
+
+## Després
+
+```python
+llegirLiniesFitxer()
+```
+
+Note:
+Avantatge:
+- reutilització
+- menys errors
+- manteniment
+
+---
+
+# Decisió important
+
+## Evitar repetir codi
+
+Problema:
+mateix codi:
+- moltes vegades
+- difícil mantenir
+
+Solució:
+- funció reutilitzable
+
+---
+
+# Exercici 5
+
+## Detectar codi duplicat
+
+Buscar:
+- lectures de fitxer repetides
+- inputs repetits
+- validacions repetides
+
+Anotar:
+- quines es poden reutilitzar
+
+---
+
+# Exercici 6
+
+## Crear funció reutilitzable
+
+Crear:
+
+```python
+def llegirLiniesFitxer():
+```
+
+Ha de:
+- obrir fitxer
+- retornar línies
+- tancar fitxer
+
+---
+
+# Quart canvi real
+
+# Control d'errors
+
+---
+
+# Problema detectat
+
+Què passa si:
+- el fitxer està mal format?
+- falten dades?
+- hi ha errors?
+
+Abans:
+- el programa podia fallar
+
+---
+
+# Solució aplicada
+
+## try / except
+
+Ara:
+
+```python
+try:
+```
+
+i
+
+```python
+except:
+```
+
+controlen errors.
+
+Note:
+IMPORTANT:
+Això consumirà temps.
+
+Fer demostracions reals.
+
+---
+
+# Comparació real
+
+## Abans
+
+Errors:
+- tancaven programa
+
+---
+
+# Comparació real
+
+## Després
+
+El programa:
+- detecta error
+- mostra missatge
+- continua funcionant
+
+---
+
+# Canvi real aplicat
+
+Controlats:
+- `ValueError`
+- `IndexError`
+
+Note:
+Explicar:
+Errors reals detectats als fitxers.
+
+---
+
+# Exemple real
+
+Ara:
+
+```python
+ERROR! Línia incorrecta
+```
+
+Note:
+Explicar:
+Abans:
+Python explotava.
+
+Ara:
+el programa controla situació.
+
+---
+
+# Exercici 7
+
+## Provocar errors reals
+
+Modificar:
+`dades.txt`
+
+Afegir:
+- línies incorrectes
+- RAM no numèrica
+- dades incompletes
+
+Veure:
+- què passa
+
+---
+
+# Exercici 8
+
+## Millorar control errors
+
+Fer que:
+- mostri quin error hi ha
+- indiqui línia incorrecta
+
+---
+
+# Cinquè canvi real
+
+# Millora del menú
+
+---
+
+# Problema detectat
+
+El menú:
+- acceptava opcions incorrectes
+- tenia validacions poc robustes
+
+---
+
+# Solució aplicada
+
+Ara:
+- valida mínim
+- valida màxim
+- reutilitza `tornaEnter()`
+
+---
+
+# Comparació real
+
+## Abans
+
+```python
+if not(opcioEscollida >= 0 and opcioEscollida < qtatOpcions):
+```
+
+---
+
+# Comparació real
+
+## Després
+
+La validació:
+- queda integrada
+- més neta
+- reutilitzable
+
+Note:
+Explicar:
+El codi:
+ara és més llegible.
+
+---
+
+# Exercici 9
+
+## Refactoritzar menú
+
+Millorar:
+- validacions
+- missatges error
+- reutilització
+
+---
+
+# Sisè canvi real
+
+# Millores de qualitat
+
+---
+
+# Problema detectat
+
+Noms poc clars:
+- variables
+- conceptes
+
+---
+
+# Exemple real
+
+## Abans
+
+```python
+ramMaximaAMostrar
+```
+
+---
+
+# Exemple real
+
+## Després
+
+```python
+ramMinimaAMostrar
+```
+
+Note:
+Explicar:
+Els noms:
+han d'explicar intenció.
+
+---
+
+# Altres millores reals
+
+- missatges més clars
+- menys codi repetit
+- estructura més neta
+- millor mantenibilitat
+
+---
+
+# Refactorització
+
+## Què hem fet realment?
+
+Hem:
+- millorat estructura
+- controlat errors
+- separat responsabilitats
+- reutilitzat funcionalitat
+
+Sense canviar:
+- objectiu principal programa
+
+Note:
+Introduir:
+"refactorització"
+
+---
+
+# Programació professional
+
+Gran part del temps:
+- NO és crear programes nous
+
+És:
+- mantenir
+- corregir
+- millorar
+- refactoritzar
+
+---
+
+# Exercici final
+
+## Refactorització real
+
+Agafar:
+- una part antiga del projecte
+
+Millorar:
+- validacions
+- estructura
+- reutilització
+- control errors
+
+Sense canviar funcionalitat final.
+
+---
+
+# Reflexió final
+
+Què hem après?
+
+- programació real
+- manteniment
+- robustesa
+- reutilització
+- modularització
+- refactorització
+
+---
+
+# Idea final
+
+Un programa professional:
+- controla errors
+- reutilitza codi
+- és mantenible
+- està organitzat
+- és robust
